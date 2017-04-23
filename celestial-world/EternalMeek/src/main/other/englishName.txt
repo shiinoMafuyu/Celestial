@@ -1,0 +1,33 @@
+基础职业：
+Warrior官方译名：战士
+Archer官方译名：弓箭手
+Cleric官方译名：牧师
+Sorceress官方译名：魔法师
+一转职业：
+Swordmaster 官方译名：剑圣
+Mercenary 官方译名：战神
+Bowmaster 官方译名：箭神
+Acrobat 官方译名：游侠
+ElementLord 官方译名：元素师
+ForceUser 官方译名：魔导师
+Paladin 官方译名：贤者
+Priest 官方译名：祭司
+二转职业：
+Gladiator 官方译名：剑皇
+Moonlord 官方译名：月之领主
+Barbarian 官方译名：狂战士
+Destroyer 官方译名：毁灭者
+Sniper 官方译名：狙翎
+Artillery 官方译名：魔羽
+Tempest 官方译名：影舞者
+Wind Walker 官方译名：风行者
+Selena Ana (Saleana) 官方译名：火舞
+Elaine Strachan (Elestra) 官方译名：冰灵
+Majesty 官方译名：黑暗女王
+Saint 官方译名：圣徒
+Inquisitor 官方译名：雷神
+Guardian 官方译名：圣骑士
+Crusader 官方译名：十字军
+Smasher 官方译名：时空领主
+九月新职业：
+Scholar官方译名：未知（估计就是学者）

@@ -1,0 +1,96 @@
+.frame-div-00{
+	position:relative;
+	width:30rem;
+	margin:0rem 25% 0rem 25%;
+}
+.frame-div-01{
+	height:100%;
+	border: 0.1rem solid #cecece;
+	margin:0 auto;
+	padding: 5rem;
+}
+
+.choose-show-container{
+	height:40rem;
+}
+.choose-show{
+	position: absolute;
+    top: 0rem;
+    /* right:-6rem; */
+	left: -15rem;
+}
+.choose{
+    width: 15rem;
+    height: 8rem;
+    border: 0.1rem solid #cecece;
+}
+.selectList{
+	padding-left:1rem;
+	width: 14rem;
+    height: 6.5rem;
+    border: 0.1rem solid #cecece;
+    overflow: scroll;
+}
+.selectList-goods-name{
+	width:98%;
+	height:1.3rem;
+	border: 0.1rem solid #cecece;
+}
+.showProperties{
+	width: 15rem;
+    height: 6.5rem;
+    border: solid #cecece;
+    
+}
+.showProperties-basic,.showProperties-strengthen{
+	height: 6.5rem;
+	float: left;
+	width:48%;
+	overflow: scroll;
+}
+
+.mainContainer{
+	border: 0.1rem solid #cecece;
+}
+.equipmentContainer{
+	padding: 0.5rem;
+	border: 1px solid #cecece;
+	margin:1rem 0rem 0rem 0rem;
+}
+.aEquipment{
+	position:relative;
+}
+
+
+.inner-text{
+	width:7.5rem;
+	height:1rem;
+	overflow: hidden;
+}
+
+.show-obj-container{
+    width: 15rem;
+    height: 15rem;
+    border: 0.1rem solid #cecece;
+    
+    
+    position: fixed;
+    left:30%;
+    top:10%;
+}
+
+.show-obj{
+	width: 8rem;
+    height: 12rem;
+    border: 0.1rem solid #cecece;
+}
+
+.calculate-button{
+	display: block;
+	
+	width: 4rem;
+	height:1.5rem;
+	position: fixed;
+	top:33%;
+	left:0%;
+}

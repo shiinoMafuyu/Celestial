@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<title>template_title</title>
+	<!-- auto import start-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link href="css/sweetalert.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="css/elegant.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/bass.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/sweetalert.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/store+json2.min.js"></script>
+	<script src="js/underscore-min.js"></script>
+	<script src="js/common/com.wolfgang.toolMethod.js"></script>
+	<script src="js/common/com.wolfgang.math.js"></script>
+	<!-- auto import end-->
+	
+	<script src="js/angular-1.0.1.min.js"></script>
+	<script type="text/javascript">
+		function equipmentListCtrl($scope) {
+		  $scope.equipment = store.get("equipment")["009300040002"];
+		  $scope.equipment2 = store.get("equipment")["009300040001"];
+		}
+	</script>
+</head>
+<body ng-controller="equipmentListCtrl">
+	Search: <input ng-model="query">
+	<select ng-model="theval" class="qaq">
+		<option ng-repeat="ie in equipment | filter:query" value={{ie.id}}>{{ie.name}}</option>
+	</select>
+	<!-- <input ng-repeat="ie in equipment2"  type="txt" value={{ie.name}}> -->
+	<p>{{theval}}</p>
+	<select>
+		<option selected = "selected">请选择</option>
+	</select>
+</body>
+</html>

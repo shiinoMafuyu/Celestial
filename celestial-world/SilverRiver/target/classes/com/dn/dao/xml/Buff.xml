@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 
+	需要替换的：
+	full_dao_name :接口全名
+	full_class_name:实体类全名
+	insert_sql:插入sql
+	select_sql:查询sql
+	select_sql_vague：模糊查询sql
+	update_sql:修改sql
+	delete_sql:删除sql
+	
+ -->
+
+<mapper namespace="com.dn.dao.QueryBuffDao">
+	
+	<insert id="insert" 
+			 parameterType="com.dn.entity.Buff"
+			 useGeneratedKeys="true" keyProperty="id">
+		insert into buff(representId,suitId,name,level,goodslevel,buffKind,search,li,min,zhi,ti,wg,yz,xy,xyDK,zm,zmDK,mg,mf,hp,wf,yzDK,gg,hg,sg,ag,gf,hf,sf,af,zz,zmsh,ydsd,mphf,li_,min_,zhi_,ti_,wg_,yz_,xy_,xyDK_,zm_,zmDK_,mg_,mf_,hp_,wf_,yzDK_,zz_,zmsh_,ydsd_,mphf_) values (#{representId},#{suitId},#{name},#{level},#{goodslevel},#{buffKind},#{search},#{li},#{min},#{zhi},#{ti},#{wg},#{yz},#{xy},#{xyDK},#{zm},#{zmDK},#{mg},#{mf},#{hp},#{wf},#{yzDK},#{gg},#{hg},#{sg},#{ag},#{gf},#{hf},#{sf},#{af},#{zz},#{zmsh},#{ydsd},#{mphf},#{li_},#{min_},#{zhi_},#{ti_},#{wg_},#{yz_},#{xy_},#{xyDK_},#{zm_},#{zmDK_},#{mg_},#{mf_},#{hp_},#{wf_},#{yzDK_},#{zz_},#{zmsh_},#{ydsd_},#{mphf_})
+	</insert>
+	
+	<select id="selectByCondition"
+			parameterType="com.dn.entity.Buff" resultMap="buffResultMap">
+				select t00.id id00,t00.representId representId00,t00.suitId suitId00,t00.name name00,t00.level level00,t00.goodslevel goodslevel00,t00.buffKind buffKind00,t00.search search00,t00.li li00,t00.min min00,t00.zhi zhi00,t00.ti ti00,t00.wg wg00,t00.yz yz00,t00.xy xy00,t00.xyDK xyDK00,t00.zm zm00,t00.zmDK zmDK00,t00.mg mg00,t00.mf mf00,t00.hp hp00,t00.wf wf00,t00.yzDK yzDK00,t00.gg gg00,t00.hg hg00,t00.sg sg00,t00.ag ag00,t00.gf gf00,t00.hf hf00,t00.sf sf00,t00.af af00,t00.zz zz00,t00.zmsh zmsh00,t00.ydsd ydsd00,t00.mphf mphf00,t00.li_ li_00,t00.min_ min_00,t00.zhi_ zhi_00,t00.ti_ ti_00,t00.wg_ wg_00,t00.yz_ yz_00,t00.xy_ xy_00,t00.xyDK_ xyDK_00,t00.zm_ zm_00,t00.zmDK_ zmDK_00,t00.mg_ mg_00,t00.mf_ mf_00,t00.hp_ hp_00,t00.wf_ wf_00,t00.yzDK_ yzDK_00,t00.zz_ zz_00,t00.zmsh_ zmsh_00,t00.ydsd_ ydsd_00,t00.mphf_ mphf_00  from buff t00 where 1=1
+ 		<trim prefix="" suffixOverrides="">
+
+			<if test="id != null"> and t00.id=#{id}</if>
+			<if test="representId != null"> and t00.representId=#{representId}</if>
+			<if test="suitId != null"> and t00.suitId=#{suitId}</if>
+			<if test="name != null"> and t00.name=#{name}</if>
+			<if test="level != null"> and t00.level=#{level}</if>
+			<if test="goodslevel != null"> and t00.goodslevel=#{goodslevel}</if>
+
+			<if test="buffKind != null"> and t00.buffKind=#{buffKind}</if>
+			<if test="search != null"> and t00.search=#{search}</if>
+
+			<if test="li != null"> and t00.li=#{li}</if>
+			<if test="min != null"> and t00.min=#{min}</if>
+			<if test="zhi != null"> and t00.zhi=#{zhi}</if>
+			<if test="ti != null"> and t00.ti=#{ti}</if>
+
+			<if test="wg != null"> and t00.wg=#{wg}</if>
+			<if test="yz != null"> and t00.yz=#{yz}</if>
+			<if test="xy != null"> and t00.xy=#{xy}</if>
+			<if test="xyDK != null"> and t00.xyDK=#{xyDK}</if>
+			<if test="zm != null"> and t00.zm=#{zm}</if>
+			<if test="zmDK != null"> and t00.zmDK=#{zmDK}</if>
+
+			<if test="mg != null"> and t00.mg=#{mg}</if>
+			<if test="mf != null"> and t00.mf=#{mf}</if>
+			<if test="hp != null"> and t00.hp=#{hp}</if>
+			<if test="wf != null"> and t00.wf=#{wf}</if>
+			<if test="yzDK != null"> and t00.yzDK=#{yzDK}</if>
+
+			<if test="gg != null"> and t00.gg=#{gg}</if>
+			<if test="hg != null"> and t00.hg=#{hg}</if>
+			<if test="sg != null"> and t00.sg=#{sg}</if>
+			<if test="ag != null"> and t00.ag=#{ag}</if>
+
+			<if test="gf != null"> and t00.gf=#{gf}</if>
+			<if test="hf != null"> and t00.hf=#{hf}</if>
+			<if test="sf != null"> and t00.sf=#{sf}</if>
+			<if test="af != null"> and t00.af=#{af}</if>
+
+			<if test="zz != null"> and t00.zz=#{zz}</if>
+			<if test="zmsh != null"> and t00.zmsh=#{zmsh}</if>
+			<if test="ydsd != null"> and t00.ydsd=#{ydsd}</if>
+			<if test="mphf != null"> and t00.mphf=#{mphf}</if>
+
+
+			<if test="li_ != null"> and t00.li_=#{li_}</if>
+			<if test="min_ != null"> and t00.min_=#{min_}</if>
+			<if test="zhi_ != null"> and t00.zhi_=#{zhi_}</if>
+			<if test="ti_ != null"> and t00.ti_=#{ti_}</if>
+
+			<if test="wg_ != null"> and t00.wg_=#{wg_}</if>
+			<if test="yz_ != null"> and t00.yz_=#{yz_}</if>
+			<if test="xy_ != null"> and t00.xy_=#{xy_}</if>
+			<if test="xyDK_ != null"> and t00.xyDK_=#{xyDK_}</if>
+			<if test="zm_ != null"> and t00.zm_=#{zm_}</if>
+			<if test="zmDK_ != null"> and t00.zmDK_=#{zmDK_}</if>
+
+			<if test="mg_ != null"> and t00.mg_=#{mg_}</if>
+			<if test="mf_ != null"> and t00.mf_=#{mf_}</if>
+			<if test="hp_ != null"> and t00.hp_=#{hp_}</if>
+			<if test="wf_ != null"> and t00.wf_=#{wf_}</if>
+			<if test="yzDK_ != null"> and t00.yzDK_=#{yzDK_}</if>
+
+			<if test="zz_ != null"> and t00.zz_=#{zz_}</if>
+			<if test="zmsh_ != null"> and t00.zmsh_=#{zmsh_}</if>
+			<if test="ydsd_ != null"> and t00.ydsd_=#{ydsd_}</if>
+			<if test="mphf_ != null"> and t00.mphf_=#{mphf_}</if>
+		</trim>
+
+	</select>
+	
+	<select id="selectByVague"
+			parameterType="com.dn.entity.Buff" resultMap="buffResultMap">
+				select t00.id id00,t00.representId representId00,t00.suitId suitId00,t00.name name00,t00.level level00,t00.goodslevel goodslevel00,t00.buffKind buffKind00,t00.search search00,t00.li li00,t00.min min00,t00.zhi zhi00,t00.ti ti00,t00.wg wg00,t00.yz yz00,t00.xy xy00,t00.xyDK xyDK00,t00.zm zm00,t00.zmDK zmDK00,t00.mg mg00,t00.mf mf00,t00.hp hp00,t00.wf wf00,t00.yzDK yzDK00,t00.gg gg00,t00.hg hg00,t00.sg sg00,t00.ag ag00,t00.gf gf00,t00.hf hf00,t00.sf sf00,t00.af af00,t00.zz zz00,t00.zmsh zmsh00,t00.ydsd ydsd00,t00.mphf mphf00,t00.li_ li_00,t00.min_ min_00,t00.zhi_ zhi_00,t00.ti_ ti_00,t00.wg_ wg_00,t00.yz_ yz_00,t00.xy_ xy_00,t00.xyDK_ xyDK_00,t00.zm_ zm_00,t00.zmDK_ zmDK_00,t00.mg_ mg_00,t00.mf_ mf_00,t00.hp_ hp_00,t00.wf_ wf_00,t00.yzDK_ yzDK_00,t00.zz_ zz_00,t00.zmsh_ zmsh_00,t00.ydsd_ ydsd_00,t00.mphf_ mphf_00  from buff t00 where 1=1
+ 		<trim prefix="" suffixOverrides="">
+
+			<if test="id != null"> and t00.id like CONCAT('%',#{id},'%') </if>
+			<if test="representId != null"> and t00.representId like CONCAT('%',#{representId},'%') </if>
+			<if test="suitId != null"> and t00.suitId like CONCAT('%',#{suitId},'%') </if>
+			<if test="name != null"> and t00.name like CONCAT('%',#{name},'%') </if>
+			<if test="level != null"> and t00.level like CONCAT('%',#{level},'%') </if>
+			<if test="goodslevel != null"> and t00.goodslevel like CONCAT('%',#{goodslevel},'%') </if>
+
+			<if test="buffKind != null"> and t00.buffKind like CONCAT('%',#{buffKind},'%') </if>
+			<if test="search != null"> and t00.search like CONCAT('%',#{search},'%') </if>
+
+			<if test="li != null"> and t00.li like CONCAT('%',#{li},'%') </if>
+			<if test="min != null"> and t00.min like CONCAT('%',#{min},'%') </if>
+			<if test="zhi != null"> and t00.zhi like CONCAT('%',#{zhi},'%') </if>
+			<if test="ti != null"> and t00.ti like CONCAT('%',#{ti},'%') </if>
+
+			<if test="wg != null"> and t00.wg like CONCAT('%',#{wg},'%') </if>
+			<if test="yz != null"> and t00.yz like CONCAT('%',#{yz},'%') </if>
+			<if test="xy != null"> and t00.xy like CONCAT('%',#{xy},'%') </if>
+			<if test="xyDK != null"> and t00.xyDK like CONCAT('%',#{xyDK},'%') </if>
+			<if test="zm != null"> and t00.zm like CONCAT('%',#{zm},'%') </if>
+			<if test="zmDK != null"> and t00.zmDK like CONCAT('%',#{zmDK},'%') </if>
+
+			<if test="mg != null"> and t00.mg like CONCAT('%',#{mg},'%') </if>
+			<if test="mf != null"> and t00.mf like CONCAT('%',#{mf},'%') </if>
+			<if test="hp != null"> and t00.hp like CONCAT('%',#{hp},'%') </if>
+			<if test="wf != null"> and t00.wf like CONCAT('%',#{wf},'%') </if>
+			<if test="yzDK != null"> and t00.yzDK like CONCAT('%',#{yzDK},'%') </if>
+
+			<if test="gg != null"> and t00.gg like CONCAT('%',#{gg},'%') </if>
+			<if test="hg != null"> and t00.hg like CONCAT('%',#{hg},'%') </if>
+			<if test="sg != null"> and t00.sg like CONCAT('%',#{sg},'%') </if>
+			<if test="ag != null"> and t00.ag like CONCAT('%',#{ag},'%') </if>
+
+			<if test="gf != null"> and t00.gf like CONCAT('%',#{gf},'%') </if>
+			<if test="hf != null"> and t00.hf like CONCAT('%',#{hf},'%') </if>
+			<if test="sf != null"> and t00.sf like CONCAT('%',#{sf},'%') </if>
+			<if test="af != null"> and t00.af like CONCAT('%',#{af},'%') </if>
+
+			<if test="zz != null"> and t00.zz like CONCAT('%',#{zz},'%') </if>
+			<if test="zmsh != null"> and t00.zmsh like CONCAT('%',#{zmsh},'%') </if>
+			<if test="ydsd != null"> and t00.ydsd like CONCAT('%',#{ydsd},'%') </if>
+			<if test="mphf != null"> and t00.mphf like CONCAT('%',#{mphf},'%') </if>
+
+
+			<if test="li_ != null"> and t00.li_ like CONCAT('%',#{li_},'%') </if>
+			<if test="min_ != null"> and t00.min_ like CONCAT('%',#{min_},'%') </if>
+			<if test="zhi_ != null"> and t00.zhi_ like CONCAT('%',#{zhi_},'%') </if>
+			<if test="ti_ != null"> and t00.ti_ like CONCAT('%',#{ti_},'%') </if>
+
+			<if test="wg_ != null"> and t00.wg_ like CONCAT('%',#{wg_},'%') </if>
+			<if test="yz_ != null"> and t00.yz_ like CONCAT('%',#{yz_},'%') </if>
+			<if test="xy_ != null"> and t00.xy_ like CONCAT('%',#{xy_},'%') </if>
+			<if test="xyDK_ != null"> and t00.xyDK_ like CONCAT('%',#{xyDK_},'%') </if>
+			<if test="zm_ != null"> and t00.zm_ like CONCAT('%',#{zm_},'%') </if>
+			<if test="zmDK_ != null"> and t00.zmDK_ like CONCAT('%',#{zmDK_},'%') </if>
+
+			<if test="mg_ != null"> and t00.mg_ like CONCAT('%',#{mg_},'%') </if>
+			<if test="mf_ != null"> and t00.mf_ like CONCAT('%',#{mf_},'%') </if>
+			<if test="hp_ != null"> and t00.hp_ like CONCAT('%',#{hp_},'%') </if>
+			<if test="wf_ != null"> and t00.wf_ like CONCAT('%',#{wf_},'%') </if>
+			<if test="yzDK_ != null"> and t00.yzDK_ like CONCAT('%',#{yzDK_},'%') </if>
+
+			<if test="zz_ != null"> and t00.zz_ like CONCAT('%',#{zz_},'%') </if>
+			<if test="zmsh_ != null"> and t00.zmsh_ like CONCAT('%',#{zmsh_},'%') </if>
+			<if test="ydsd_ != null"> and t00.ydsd_ like CONCAT('%',#{ydsd_},'%') </if>
+			<if test="mphf_ != null"> and t00.mphf_ like CONCAT('%',#{mphf_},'%') </if>
+		</trim>
+
+	</select>
+	
+	<update id="update"
+			parameterType="com.dn.entity.Buff">
+		update buff 
+		<trim prefix="set" suffixOverrides=",">
+
+			<if test="representId != null">representId=#{representId},</if>
+			<if test="suitId != null">suitId=#{suitId},</if>
+			<if test="name != null">name=#{name},</if>
+			<if test="level != null">level=#{level},</if>
+			<if test="goodslevel != null">goodslevel=#{goodslevel},</if>
+
+			<if test="buffKind != null">buffKind=#{buffKind},</if>
+			<if test="search != null">search=#{search},</if>
+
+			<if test="li != null">li=#{li},</if>
+			<if test="min != null">min=#{min},</if>
+			<if test="zhi != null">zhi=#{zhi},</if>
+			<if test="ti != null">ti=#{ti},</if>
+
+			<if test="wg != null">wg=#{wg},</if>
+			<if test="yz != null">yz=#{yz},</if>
+			<if test="xy != null">xy=#{xy},</if>
+			<if test="xyDK != null">xyDK=#{xyDK},</if>
+			<if test="zm != null">zm=#{zm},</if>
+			<if test="zmDK != null">zmDK=#{zmDK},</if>
+
+			<if test="mg != null">mg=#{mg},</if>
+			<if test="mf != null">mf=#{mf},</if>
+			<if test="hp != null">hp=#{hp},</if>
+			<if test="wf != null">wf=#{wf},</if>
+			<if test="yzDK != null">yzDK=#{yzDK},</if>
+
+			<if test="gg != null">gg=#{gg},</if>
+			<if test="hg != null">hg=#{hg},</if>
+			<if test="sg != null">sg=#{sg},</if>
+			<if test="ag != null">ag=#{ag},</if>
+
+			<if test="gf != null">gf=#{gf},</if>
+			<if test="hf != null">hf=#{hf},</if>
+			<if test="sf != null">sf=#{sf},</if>
+			<if test="af != null">af=#{af},</if>
+
+			<if test="zz != null">zz=#{zz},</if>
+			<if test="zmsh != null">zmsh=#{zmsh},</if>
+			<if test="ydsd != null">ydsd=#{ydsd},</if>
+			<if test="mphf != null">mphf=#{mphf},</if>
+
+
+			<if test="li_ != null">li_=#{li_},</if>
+			<if test="min_ != null">min_=#{min_},</if>
+			<if test="zhi_ != null">zhi_=#{zhi_},</if>
+			<if test="ti_ != null">ti_=#{ti_},</if>
+
+			<if test="wg_ != null">wg_=#{wg_},</if>
+			<if test="yz_ != null">yz_=#{yz_},</if>
+			<if test="xy_ != null">xy_=#{xy_},</if>
+			<if test="xyDK_ != null">xyDK_=#{xyDK_},</if>
+			<if test="zm_ != null">zm_=#{zm_},</if>
+			<if test="zmDK_ != null">zmDK_=#{zmDK_},</if>
+
+			<if test="mg_ != null">mg_=#{mg_},</if>
+			<if test="mf_ != null">mf_=#{mf_},</if>
+			<if test="hp_ != null">hp_=#{hp_},</if>
+			<if test="wf_ != null">wf_=#{wf_},</if>
+			<if test="yzDK_ != null">yzDK_=#{yzDK_},</if>
+
+			<if test="zz_ != null">zz_=#{zz_},</if>
+			<if test="zmsh_ != null">zmsh_=#{zmsh_},</if>
+			<if test="ydsd_ != null">ydsd_=#{ydsd_},</if>
+			<if test="mphf_ != null">mphf_=#{mphf_},</if>
+		</trim>
+ 
+		where id=#{id}
+	</update>
+	
+	<delete id="deleteById" 
+			parameterType="int">
+		delete from buff where id=#{id}
+	</delete>
+	
+	<resultMap id="buffResultMap" type="com.dn.entity.Buff">
+				
+		<result column="id00" property="id"/>
+		<result column="representId00" property="representId"/>
+		<result column="suitId00" property="suitId"/>
+		<result column="name00" property="name"/>
+		<result column="level00" property="level"/>
+		<result column="goodslevel00" property="goodslevel"/>
+		
+		<result column="buffKind00" property="buffKind"/>
+		<result column="search00" property="search"/>
+		
+		<result column="li00" property="li"/>
+		<result column="min00" property="min"/>
+		<result column="zhi00" property="zhi"/>
+		<result column="ti00" property="ti"/>
+		
+		<result column="wg00" property="wg"/>
+		<result column="yz00" property="yz"/>
+		<result column="xy00" property="xy"/>
+		<result column="xyDK00" property="xyDK"/>
+		<result column="zm00" property="zm"/>
+		<result column="zmDK00" property="zmDK"/>
+		
+		<result column="mg00" property="mg"/>
+		<result column="mf00" property="mf"/>
+		<result column="hp00" property="hp"/>
+		<result column="wf00" property="wf"/>
+		<result column="yzDK00" property="yzDK"/>
+		
+		<result column="gg00" property="gg"/>
+		<result column="hg00" property="hg"/>
+		<result column="sg00" property="sg"/>
+		<result column="ag00" property="ag"/>
+		
+		<result column="gf00" property="gf"/>
+		<result column="hf00" property="hf"/>
+		<result column="sf00" property="sf"/>
+		<result column="af00" property="af"/>
+		
+		<result column="zz00" property="zz"/>
+		<result column="zmsh00" property="zmsh"/>
+		<result column="ydsd00" property="ydsd"/>
+		<result column="mphf00" property="mphf"/>
+		
+		
+		<result column="li_00" property="li_"/>
+		<result column="min_00" property="min_"/>
+		<result column="zhi_00" property="zhi_"/>
+		<result column="ti_00" property="ti_"/>
+		
+		<result column="wg_00" property="wg_"/>
+		<result column="yz_00" property="yz_"/>
+		<result column="xy_00" property="xy_"/>
+		<result column="xyDK_00" property="xyDK_"/>
+		<result column="zm_00" property="zm_"/>
+		<result column="zmDK_00" property="zmDK_"/>
+		
+		<result column="mg_00" property="mg_"/>
+		<result column="mf_00" property="mf_"/>
+		<result column="hp_00" property="hp_"/>
+		<result column="wf_00" property="wf_"/>
+		<result column="yzDK_00" property="yzDK_"/>
+		
+		<result column="zz_00" property="zz_"/>
+		<result column="zmsh_00" property="zmsh_"/>
+		<result column="ydsd_00" property="ydsd_"/>
+		<result column="mphf_00" property="mphf_"/>
+
+	</resultMap>
+	
+</mapper>
+

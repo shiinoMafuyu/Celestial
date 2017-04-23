@@ -45,3 +45,7 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# java's binary file and so on
+*.class
+/target/

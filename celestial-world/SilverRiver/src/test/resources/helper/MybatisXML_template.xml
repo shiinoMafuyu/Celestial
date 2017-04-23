@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 
+	需要替换的：
+	full_dao_name :接口全名
+	full_class_name:实体类全名
+	insert_sql:插入sql
+	select_sql:查询sql
+	select_sql_vague：模糊查询sql
+	update_sql:修改sql
+	delete_sql:删除sql
+	
+ -->
+
+<mapper namespace="--full_dao_name--">
+	
+	<insert id="insert" 
+			 parameterType="--full_class_name--"
+			 useGeneratedKeys="true" keyProperty="id">
+		--insert_sql--
+	</insert>
+	
+	<select id="selectByCondition"
+			parameterType="--full_class_name--" resultMap="--resultMapName--">
+		--select_sql--
+	</select>
+	
+	<select id="selectByVague"
+			parameterType="--full_class_name--" resultMap="--resultMapName--">
+		--select_sql_vague--
+	</select>
+	
+	<update id="update"
+			parameterType="--full_class_name--">
+		--update_sql--
+	</update>
+	
+	<delete id="deleteById" 
+			parameterType="int">
+		--delete_sql--
+	</delete>
+	
+	<resultMap id="--resultMapName--" type="--full_class_name--">
+		--resultMap--
+	</resultMap>
+	
+</mapper>

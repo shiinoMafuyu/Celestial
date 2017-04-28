@@ -3,6 +3,7 @@
 	<name>SilverRiver</name>
 	<comment></comment>
 	<projects>
+		<project>ForestBlaze</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

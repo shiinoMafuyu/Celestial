@@ -342,9 +342,8 @@ public class Util_Collection {
 	 * @param ListRep
 	 * @return
 	 */
-	@SuppressWarnings({ "rawtypes", "unchecked" })
-	public static List replaceList(List listOrigin,int start,int end,List ListRep){
-		List l = new ArrayList();
+	public static <T> List<T> replaceList(List<T> listOrigin,int start,int end,List<T> ListRep){
+		List<T> l = new ArrayList<T>();
 		l.addAll(listOrigin.subList(0, start+1));
 		l.addAll(ListRep);
 		l.addAll(listOrigin.subList(end, listOrigin.size()));
@@ -424,6 +423,43 @@ public class Util_Collection {
 			sArr[i] = l.get(i);
 		}
 		return sArr;
+	}
+
+	/**
+	 * 从list中移除positions中位置所指的元素。
+	 * @param list
+	 * @param positions
+	 * @return
+	 */
+	public static <T> List<T> listRemoveElem(List<T> list, Integer... positions) {
+		List<T> reList = new ArrayList<T>();
+		for(int i =0 ;i < list.size();i++){
+			if(!Util_Collection.isIn(positions,i))
+				reList.add(list.get(i));
+		}
+		return reList;
+	}
+
+	/**
+	 * 判断elem是否在arr中。
+	 * @param arr
+	 * @param elem
+	 * @return
+	 */
+	public static boolean isIn(Object[] arr, Object elem) {
+		boolean isIn = false;
+		for(Object obj :arr){
+			
+			if(null == obj && null == elem){
+				isIn = true;
+				break;
+			}
+			if(null != obj && obj.equals(elem)){
+				isIn = true;
+				break;
+			}
+		}
+		return isIn;
 	}
 
 	

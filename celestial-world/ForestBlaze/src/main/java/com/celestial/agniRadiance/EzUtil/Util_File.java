@@ -27,6 +27,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Properties;
 
+import com.celestial.agniRadiance.abstracte.RecursiveDealFile;
+
 public class Util_File {
 	/**
 	 * 拷贝文件 <br/>
@@ -715,6 +717,29 @@ public class Util_File {
 			throw new RuntimeException("读取properties文件失败:" + propertiesFile.getAbsolutePath());
 		}
 		return m;
+	}
+
+	/**
+	 * 递归删除文件。
+	 * @param file
+	 */
+	public static void deleteFile(File file) {
+		if(file.exists()){
+			RecursiveDealFile rd = new RecursiveDealFile(file) {
+				@Override
+				public void doWork(File file) {
+					file.delete();
+//					System.out.println("删除"+file.getAbsolutePath());
+				}
+				public void doDirectoryWork(File directory){
+					directory.delete();
+//					System.out.println("删除"+directory.getAbsolutePath());
+				}
+			};
+		rd.start();
+		}
+			
+			
 	}
 
 }

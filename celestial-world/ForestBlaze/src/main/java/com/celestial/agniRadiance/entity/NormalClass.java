@@ -162,7 +162,7 @@ public class NormalClass {
 	 * </ul>
 	 * @return
 	 */
-	private Collection<? extends String> createExtra1() {
+	private List<String> createExtra1() {
 		List<String> l =new ArrayList<String>();
 		l.add("");
 		l.add("/** –Ú¡–∫≈ */");

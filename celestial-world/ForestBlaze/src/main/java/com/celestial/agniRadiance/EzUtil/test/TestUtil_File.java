@@ -103,7 +103,12 @@ public class TestUtil_File{
 		assert(m.size()>=14);
 	}
 	
-	
+	@Test
+	public void testDeleteFile(){
+		String path2 = "D:/workspace_final/02MyEclipse2013/liquidation/depository-extract-tradedata-m6-issue/src/gnnt/MEBS6/depository/extract/tradedata/issue";
+		Util_File.deleteFile(new File(path2));
+		System.out.println("É¾³ýÍê³É");
+	}
 	
 	
 	

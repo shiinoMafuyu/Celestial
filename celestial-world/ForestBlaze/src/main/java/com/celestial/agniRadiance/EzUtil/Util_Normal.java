@@ -30,22 +30,16 @@ public class Util_Normal {
 	 * @param i
 	 * @return
 	 */
-	public static Collection<? extends String> table(
-			Collection<? extends String> stringList, int n) {
+	public static Collection<? extends String> table(Collection<? extends String> stringList, int n) {
 		List<String> l = new ArrayList<String>();
-		String s = "";
-		for(int i = 0 ; i< n ; i++){
-			s += "\t";
-		}
+		String s = Util_String.__nstr("\t",n);
 		for(String si : stringList){
 			l.add(s+si);
 		}
-		stringList = null;
 		return l;
 	}
 
-	public static Collection<? extends String> table(
-			Collection<? extends String> stringList) {
+	public static Collection<? extends String> table(Collection<? extends String> stringList) {
 		return table(stringList,1);
 	}
 	

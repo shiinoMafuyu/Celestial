@@ -21,6 +21,7 @@ public abstract class RecursiveDealFile {
 			for(File fi : fArr){
 				recursiveFile(fi);
 			}
+			doDirectoryWork(file);
 		}else{
 			doWork(file);
 		}
@@ -40,5 +41,11 @@ public abstract class RecursiveDealFile {
 	 */
 	public abstract void doWork(File file);
 	
+	/**
+	 * 目录处理方式。
+	 * @param file
+	 */
+	public void doDirectoryWork(File directory){
+	}
 	
 }

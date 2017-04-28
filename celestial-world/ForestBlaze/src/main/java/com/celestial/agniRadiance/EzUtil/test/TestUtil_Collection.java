@@ -65,6 +65,19 @@ public class TestUtil_Collection {
 		
 	}
 	
+	@Test
+	public void _03_isIn(){
+		String[] sArr = new String[]{"minori","kurise",null,"yuki"};
+		Assert.assertTrue(Util_Collection.isIn(sArr,"yuki"));
+		Assert.assertTrue(Util_Collection.isIn(sArr,null));
+		Assert.assertFalse(Util_Collection.isIn(sArr,"lingos"));
+	}
 	
+	@Test
+	public void _04_listRemoveElem(){
+		List<String> list = Arrays.asList(new String[]{"minori","kurise",null,"yuki"});
+		List<String> l2 = Util_Collection.listRemoveElem(list, 0,2);
+		Assert.assertTrue("kurise".equals(l2.get(0)) && "yuki".equals(l2.get(1)));
+	}
 	
 }

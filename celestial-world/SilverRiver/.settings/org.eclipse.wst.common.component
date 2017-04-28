@@ -3,6 +3,9 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <wb-resource deploy-path="/" source-path="/src/WebContent"/>
+        <dependent-module archiveName="ForestBlaze.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ForestBlaze/ForestBlaze">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="SilverRiver"/>
         <property name="java-output-path" value="/SilverRiver/target/classes"/>
     </wb-module>

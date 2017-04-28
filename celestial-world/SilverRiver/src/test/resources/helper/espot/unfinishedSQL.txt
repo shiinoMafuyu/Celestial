@@ -1,0 +1,208 @@
+
+--1.OrderVO 下委托(C)
+select 
+ tradeDay, --交易日YYYYMMDD格式
+ systemID, --系统编号
+ orderNo, --委托号
+ customerID, --客户编码
+
+ customerName, --客户名称
+ commodityID, --商品编码
+ bsflag, --买卖标志
+ ocflag, --开平仓类型
+
+ price, --委托价格
+ quantity, --委托数量
+ orderType, --委托类型1普通2申购
+ status, --状态1已委托（默认）2已撤单3部分成交后撤单4全部成交
+
+ tradeQty, --已成交数量
+ marginWay, --保证金方式0.仓单1.保证金
+ marginRatio, --保证金是否比例0.固定1.比例
+ marginRate, --保证金比率
+
+ frozenFunds, --冻结资金(保证金)
+ frozenFee, --冻结手续费
+ orderTime, --委托时间
+ orderIP, --委托IP
+
+from ES_Order t
+
+
+--2.WithdrawsDAO 撤单(C)
+ tradeDay, --交易日YYYYMMDD格式
+ systemID, --系统编号
+ withdrawNo, --撤单号
+ beWithdrawedNo, --被撤委托号
+
+ customerID, --客户编码
+ customerName, --客户名称
+ commodityID, --商品编码
+ bsflag, --买卖标志
+
+ price, --委托价
+ fee, --手续费
+ orderTime, --委托时间
+ orderIP, --委托IP
+
+ orderQuantity, --委托数量
+ withdrawQuantity, --撤单数量
+ orderType, --撤单类型1-正常2-申购
+ unfrozenFunds, --解冻资金
+
+ unfrozenFee, --解冻手续费
+ withdrawTime, --撤单时间
+ withdrawerID, --撤单员编码
+
+from ES_Order t
+where t.Status = 
+
+
+
+--t.Status = 0：未成交 1：部分成交 2：全部成交 3：已下架 11：待后台管理员审核
+--或者 WithdrawTime notNull来查?
+
+
+3.TradeVo(B)
+
+ tradeDay, --交易日YYYYMMDD格式
+ systemID, --系统编号
+ tradeNo, --成交号
+ orderNo, --委托单号
+
+ commodityID, --商品编码
+ customerID, --客户编码
+ fundAcctount, --资金账户
+ customerName, --客户名称
+
+ tradeTime, --成交时间
+ bsflag, --买卖标志
+ ocflag, --开平仓类型
+ price, --成交价
+
+ quantity, --成交数量
+ unfrozenFunds, --解冻资金
+ unfrozenFee, --解冻手续费
+ tradeMargin, --保证金(发售填货款)
+
+ tradeFee, --交易手续费
+ close_PL, --平仓盈亏
+ closeAddedTax, --平仓增值税
+ tradeType, --成交类型1普通2申购
+
+ o_customerID, --对手客户编码
+ holdNo, --持仓单号
+ openPrice, --被平持仓的开仓价
+ o_holdNo, --对手持仓单号
+
+ matchNo, --撮合成交号
+ matchNo_opp, --对手方撮合成交号
+ o_tradeNo, --对手成交号
+ o_orderNo, --对手委托单号
+
+
+4.略
+
+5.
+ tradeDay, --交易日YYYYMMDD格式
+ systemID, --系统编号
+ commodityID, --商品编码
+ commodityName, --商品名称
+
+ lastPrice, --收盘价
+ balancePrice, --结算价
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

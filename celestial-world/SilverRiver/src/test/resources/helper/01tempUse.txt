@@ -1,7 +1,59 @@
-单词：
-コンピューター
-第一课：
-1）わたし　は　びしょうねん　です。
-2）まふゆ　は　がくせい　じゃ　ありません。
-3）みなつ　は　かいしゃいん　ですか。
-4）みなつ　も　かいしゃいん　です。
+select t.DeliveryDay tradeDay, --交易日YYYYMMDD格式  --父委托
+       'SYSTEMID' systemID, --系统编号
+       concat(t.OrderID,'') orderNo, --委托号
+       t.belonger customerID, --客户编码
+       
+       null      customerName, --客户名称
+       t.BREEDID commodityID, --商品编码
+       t.BSFlag  bsflag, --买卖标志
+       t.BSFlag  ocflag, --开平仓类型
+       
+       t.Price    price, --委托价格
+       (t.Quantity - (select nvl(sum(s.Quantity),0) from ES_SubOrder s where s.OrderID = t.OrderID and s.Status = 1)) quantity, --委托数量
+       1          orderType, --委托类型1普通2申购
+       t.Status   status, --状态1已委托（默认）2已撤单3部分成交后撤单4全部成交
+       
+       (t.TradedQty -(select nvl(sum(s.Quantity),0) from ES_SubOrder s where s.OrderID = t.OrderID and s.Status = 1) ) tradeQty, --已成交数量
+       1           marginWay, --保证金方式0.仓单1.保证金
+       0           marginRatio, --保证金是否比例0.固定1.比例
+       0           marginRate, --保证金比率
+       
+       t.initfrozenmargin frozenFunds, --冻结资金(保证金)
+       0 frozenFee, --冻结手续费
+       t.EffectOfTime orderTime, --委托时间
+       '--' orderIP --委托IP
+
+  from ES_Order t 
+ where t.EffectOfTime >= ? and t.EffectOfTime < ? 
+ 
+union
+
+select 
+      o.DeliveryDay tradeDay, --交易日YYYYMMDD格式   --子委托
+      'SYSTEMID' systemID, --系统编号
+      concat(concat(t.OrderID,'U'),t.SubOrderID) orderNo, --委托号
+      o.belonger customerID, --客户编码
+       
+      null customerName, --客户名称
+      o.BREEDID commodityID, --商品编码
+      o.BSFlag  bsflag, --买卖标志
+      o.BSFlag  ocflag, --开平仓类型
+
+      t.Price price, --委托价格
+      t.Quantity quantity, --委托数量
+      1 orderType, --委托类型1普通2申购
+      4 status, --状态1已委托（默认）2已撤单3部分成交后撤单4全部成交
+
+      t.Quantity tradeQty, --已成交数量
+      1 marginWay, --保证金方式0.仓单1.保证金
+      0 marginRatio, --保证金是否比例0.固定1.比例
+      0 marginRate, --保证金比率
+
+      t.initfrozenmargin frozenFunds, --冻结资金(保证金)
+      0 frozenFee, --冻结手续费
+      t.CreateTime orderTime, --委托时间
+      '--' orderIP --委托IP
+
+ from ES_SubOrder t , ES_Order o 
+where o.orderid = t.orderid 
+  and t.CreateTime >= ? and t.CreateTime < ? 

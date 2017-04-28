@@ -112,7 +112,7 @@ public class FileReader {
 		this.filePath = filePath;
 		File f = new File(filePath);
 		if(!(f.exists() && f.isFile()))
-			throw new RuntimeException("指定文件不存在或不是文件!");
+			throw new RuntimeException("指定文件不存在或不是文件!" + filePath);
 		lineList = Util_File.readFileLineToList(filePath,charset,isTrim);
 		this.fileName = filePath.substring(filePath.lastIndexOf("/")+1);
 		
@@ -529,6 +529,30 @@ public class FileReader {
 		else
 			return null;
 	}
+	
+	/**
+	 * <b>方法说明：</b>
+	 * <ul>
+	 * 以选中行生成一个新的FileReader对象.<br/>
+	 * 不包含首尾。
+	 * </ul>
+	 * @param headRegex 起始行匹配
+	 * @param tailRegex 终结行匹配
+	 * @return
+	 */
+	public FileReader selectAllLineBetweenRegex2_removeHeadTail(String headRegex,
+			String tailRegex) {
+		List<List<String>> l = selectAllLineBetweenRegexList(headRegex,tailRegex);
+		
+		if(l !=null && l.size() > 0){
+			List<String> backList = l.get(0);
+			if(backList.size() >= 2){
+				return new FileReader(Util_Collection.listRemoveElem(backList,0,backList.size()-1));
+			}
+		}
+		
+		return new FileReader(new ArrayList<String>());
+	}
 
 	/**
 	 * <b>方法说明：</b>
@@ -578,6 +602,29 @@ public class FileReader {
 			l.add(si);
 		}
 		return new FileReader(l);
+	}
+
+	/**
+	 * 将实例中的lineList中start和end之间的部分替换为lineListRep中的内容，返回一个新建FileReader<br/>
+	 * 注：不影响当前实例<br/>
+	 * @param start
+	 * @param end
+	 * @param lineListRep
+	 * @return
+	 */
+	public FileReader replaceList(int start, int end, List<String> lineListRep) {
+		return new FileReader(Util_Collection.replaceList(this.lineList, start, end, lineListRep));
+	}
+
+	/**
+	 * 打印当前实例的lineList内容。<br/>
+	 * 打印完后指针调回起始处。
+	 */
+	public void printAll() {
+		while(this.hasNext()){
+			System.out.println(this.readLine());
+		}
+		this.setIndex(0);
 	}
 	
 }

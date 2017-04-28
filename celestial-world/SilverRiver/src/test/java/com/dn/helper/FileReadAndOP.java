@@ -2,7 +2,8 @@ package com.dn.helper;
 
 import com.celestial.agniRadiance.EzUtil.Util_String;
 import com.celestial.agniRadiance.entity.FileReader;
-import com.shortterm.japanese.Util_Japanese;
+import com.celestial.agniRadiance.map.JavaToRS;
+import com.celestial.butterflystorm.zaza.espotSysn.Util_sepotSysn;
 
 @SuppressWarnings("unused")
 public class FileReadAndOP {
@@ -17,10 +18,17 @@ public class FileReadAndOP {
 	public static void main(String[] args) {
 //		_01_();
 //		_02_();
-		_03_();
+//		readVariable();
+//		createSetVariable();
+		createAppend();
 //		_04_();
 //		_05_();
 		
+	}
+
+	private static void createAppend() {
+		FileReader f = new FileReader("src/test/resources/helper/01tempUse.txt",false,"gbk");
+		System.out.println(Util_sepotSysn.createAppend(f.getLineList()));
 	}
 
 	//l.add("");
@@ -56,15 +64,55 @@ public class FileReadAndOP {
 	}
 
 	//
-	private static void _03_() {
-		FileReader f = new FileReader("src/test/resources/helper/01tempUse.txt",false,"gbk");
+	private static void readVariable() {
+		FileReader f = new FileReader("src/test/resources/helper/01tempUse.txt",true,"gbk");
 		String s="";
-		FileReader f2 = f.selectLineExcludeRegex("--.*");
+		int n = 0;
 		while(f.hasNext()){
 			s = f.readLine();
-			System.out.println(s);
-			System.out.println(Util_Japanese.wordTransToRoman(s));
+			if(s.startsWith("private ") && !s.contains("static")){
+				n++;
+				String[] arr = s.replaceAll(";", "").replaceAll("\\s+", " ").split(" ");
+				String type = arr[1];
+				s = " " + arr[2]+",";
+				
+				String zs = f.readBeforeLine1(2).replaceAll("\\*", "").replaceAll("/", "").replaceAll("\\s+", "");
+				
+				
+//				s = "tradeVO.set"+Util_String.__transHeadToUpperCase(s)+"("+JavaToDB.MAP.get(type)+");";
+				System.out.println(s+" --"+zs);
+				if(n%4 == 0)
+					System.out.println();
+			}
+			
 		}
+		System.out.println("共计：" +n);
+	}
+	
+	private static void createSetVariable() {
+		FileReader f = new FileReader("src/test/resources/helper/01tempUse.txt",true,"gbk");
+		String s="";
+		int n = 0;
+		while(f.hasNext()){
+			s = f.readLine();
+			if(s.startsWith("private ") && !s.contains("static")){
+				n++;
+				String[] arr = s.replaceAll(";", "").replaceAll("\\s+", " ").split(" ");
+				String type = arr[1];
+				s = arr[2];
+				String param = s;
+				
+				String zs = f.readBeforeLine1(2).replaceAll("\\*", "").replaceAll("/", "").replaceAll("\\s+", "");
+				
+				
+				s = "orderVO.set"+Util_String.__transHeadToUpperCase(s)+"("+JavaToRS.MAP.get(type).replaceAll("ARG", param)+");";
+				System.out.println(s);
+				if(n%4 == 0)
+					System.out.println();
+			}
+			
+		}
+		System.out.println("共计：" +n);
 	}
 
 	//json串

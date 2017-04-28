@@ -416,5 +416,19 @@ public class Util_String {
 	public static String fmtPathStr(String path) {
 		return path.replaceAll("\\\\", "/");
 	}
+
+	/**
+	 * 创建n个重复的str，合并为一个字符串。
+	 * @param str
+	 * @param n
+	 * @return
+	 */
+	public static String __nstr(String str, int n) {
+		StringBuffer sb = new StringBuffer();
+		for(int i = 0 ; i< n ; i++){
+			sb.append(str);
+		}
+		return sb.toString();
+	}
 	
 }

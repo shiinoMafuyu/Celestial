@@ -3,12 +3,12 @@
  * 让calculator只接受一个json数组，进行计算。
  * 屏蔽其他差异。
  */
-$.memory_calculator = {};
+$.calculator.depend = {};
 
 /**
  * @func 获取装备数据.
  */
-$.memory_calculator.getOrinalData = function(){
+$.calculator.depend.getOrinalData = function(){
 	var orinalDataArr = [];
 	var positionMemory = store.get("positionMemory");
 	
@@ -27,14 +27,14 @@ $.memory_calculator.getOrinalData = function(){
 /**
  * @func 获取buff数据。
  */
-$.memory_calculator.getBuffData = function(){
+$.calculator.depend.getBuffData = function(){
 	
 };
 
 /**
  * @func 生成初级属性到二级属性的转换对应数据。
  */
-$.memory_calculator.getTransMap = function(){
+$.calculator.depend.getTransMap = function(){
 	//遍历数据结构
 	//{"wg":[{"li":0.25},{"min":0.75}],.....}
 	var d1 = $.field.charactor[0];

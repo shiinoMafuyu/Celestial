@@ -549,6 +549,8 @@ public class Util_File {
 	 * <b>方法说明：</b>
 	 * <ul>
 	 * 获取filePath路径下,匹配正则式regex的全部目录.
+	 * <br/>
+	 * 不递归
 	 * </ul>
 	 * @param filePath
 	 * @param regex
@@ -582,7 +584,7 @@ public class Util_File {
 					}
 				});
 			}else{
-				throw new RuntimeException("指定位置不存在或者不是目录.");
+				throw new RuntimeException("指定位置不存在或者不是目录." + filePath);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -595,6 +597,8 @@ public class Util_File {
 	 * <b>方法说明：</b>
 	 * <ul>
 	 * 获取filePath路径下,匹配正则式regex的全部文件.
+	 * <br/>
+	 * 不递归
 	 * </ul>
 	 * @param filePath
 	 * @param regex

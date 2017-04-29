@@ -1,17 +1,22 @@
 /**
  * 计算核心类。
  * @author wangzg
- * 这个计算过程算式普适的，有闲心的时候，可以把$.impl.cal2()改为，传入回调函数来的。
+ * 这个计算过程算式普适的，有闲心的时候，可以把$.calculator.impl.cal2()改为，传入回调函数来的。
  * 
  * 这样的话，其实算起来，一切事物都能表示为过程！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
  * おまいが！碉堡了！
  * 2017年3月14日17:21:01
  * 
+ * 依赖：
+ * com.wolfgang.toolMethod.js
+ * com.wolfgang.math.js
+ * 
  */
-$.impl = {};
+$.calculator = {};
+$.calculator.impl = {};
 
 
-$.impl.calComplex = function(str,param){
+$.calculator.impl.calComplex = function(str,param){
 	//去掉所有空格
 	str = str.replace(/ /g, "");
 //	var resSigma = 
@@ -32,16 +37,16 @@ $.impl.calComplex = function(str,param){
  * @param param json参数 用于替换字符串中的。
  * 
  * 
- * $.impl.calStr("s1 + s2 * (s3 + s4)",{"s1":"1~4","s2":2,"s3":3,"s4":"2~4"})
+ * $.calculator.impl.calStr("s1 + s2 * (s3 + s4)",{"s1":"1~4","s2":2,"s3":3,"s4":"2~4"})
  * ==> "11~18"
  */
-$.impl.calArithmetic = function(str,param){
+$.calculator.impl.calArithmetic = function(str,param){
 	//去掉所有空格
 	str = str.replace(/ /g, "");
 	for(var p in param){
 		str = $.stringutil.replaceAll(str,p,param[p]);
 	}
-	var impl = {"cal2":$.impl.cal2};
+	var impl = {"cal2":$.calculator.impl.cal2};
 	return $.math.calParenthesis(str,impl);
 };
 
@@ -58,14 +63,14 @@ $.impl.calArithmetic = function(str,param){
  * $.math.cal2("2~4*3~5")
  * ==> "6~20"
  */
-$.impl.cal2 = function(str){
+$.calculator.impl.cal2 = function(str){
 	if(str.indexOf("+") > 0){
 		var arr = str.split("+");
-		return $.impl.add(arr[0],arr[1]);
+		return $.calculator.impl.add(arr[0],arr[1]);
 	}else if(str.indexOf("-") >0){
 	}else if(str.indexOf("*") >0){
 		var arr = str.split("*");
-		return $.impl.mul(arr[0],arr[1]);
+		return $.calculator.impl.mul(arr[0],arr[1]);
 	}else if(str.indexOf("/") >0){
 	}
 	throw("二元字符串有误，或未实现"+str);
@@ -78,10 +83,10 @@ $.impl.cal2 = function(str){
  * 若果v1=5~9;v2=3~7;则返回 8~16；
  * 
  */
-$.impl.add = function(v1,v2){
+$.calculator.impl.add = function(v1,v2){
 	if((v1+"").indexOf("~")>=0 || (v2+"").indexOf("~")>=0){
-		var arr1 = $.impl.transToArr(v1);
-		var arr2 = $.impl.transToArr(v2);
+		var arr1 = $.calculator.impl.transToArr(v1);
+		var arr2 = $.calculator.impl.transToArr(v2);
 		return (parseFloat(arr1[0])+parseFloat(arr2[0]))+"~"+(parseFloat(arr1[1])+parseFloat(arr2[1]));
 	}else{
 		return parseFloat(v1)+parseFloat(v2);
@@ -90,25 +95,24 @@ $.impl.add = function(v1,v2){
 
 /**
  * @func 进行相乘。
- * 规则参加加。(虽然有点怪，但现在mul还没有"~"前后不一致的)
  */
-$.impl.mul = function(val,mul){
+$.calculator.impl.mul = function(val,mul){
 	if((val+"").indexOf("~") >= 0 || (mul+"").indexOf("~") >= 0){
-		var arr1 = $.impl.transToArr(val);
-		var arr2 = $.impl.transToArr(mul);
+		var arr1 = $.calculator.impl.transToArr(val);
+		var arr2 = $.calculator.impl.transToArr(mul);
 		return (parseFloat(arr1[0])*parseFloat(arr2[0]))+"~"+(parseFloat(arr1[1])*parseFloat(arr2[1]));
 	}else{
-		var arr2 = $.impl.transToArr(mul);
+		var arr2 = $.calculator.impl.transToArr(mul);
 		return parseFloat(val)*arr2[0];
 	}
 	
 };
 /**
  * @带"~"的字符转为数字
- * $.impl.transToArr("5~6")
- * ==>[5,6]
+ * $.calculator.impl.transToArr("5~6")
+ * ==>["5","6"]
  */
-$.impl.transToArr = function(param){
+$.calculator.impl.transToArr = function(param){
 	if((param+"").indexOf("~")>=0 )
 		return param.split("~");
 	else

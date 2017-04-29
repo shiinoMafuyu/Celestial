@@ -11,6 +11,7 @@
  *<p>
  *
  *</p>
+ * 依赖：com.wolfgang.toolMethod.js
  */
 $.math = {};
 
@@ -124,8 +125,7 @@ $.math.calSigma2 = function(str,dataArr){
  * @param impl 2元计算实现包，实现方法impl.cal2(str) 没有的话调用默认实现(目前是区间加、乘法 不能计算减除)。
  */
 $.math.calParenthesis = function(str,impl){
-	if($.isNull(impl))
-		impl = $.impliment;
+	impl = $.math.checkCal2(impl);
 	if(str.indexOf("(") >= 0){
 		var indexArr = $.stringutil.getCenterIndex(str,"(",")");
 		//把最里面不带括号的1个算式拿出来计算，用结果替换掉()和算式。
@@ -157,8 +157,7 @@ $.math.calParenthesis = function(str,impl){
  * 然后，以后你喜欢可以自定义运算符和顺序。写入配置文件即可。
  */
 $.math.calN = function(str,impl){
-	if($.isNull)
-		impl = {"cal2":$.impliment.cal2};
+	impl = $.math.checkCal2(impl);
 	str = str + "";
 	var indexLighter = str.replace(/-/g, "+").replace(/\*/g, "+").replace(/\//g, "+");
 	if(indexLighter.indexOf("+") > 0){
@@ -188,6 +187,14 @@ $.math.calN = function(str,impl){
 				impl);
 	}else
 		return str;
+};
+/**
+ * @func 检查二元实现是否为空，为空则使用默认值。
+ */
+$.math.checkCal2 = function(impl){
+	if($.isNull(impl))
+		impl = {"cal2":$.impliment.cal2};
+	return impl;
 };
 
 $.impliment = {};

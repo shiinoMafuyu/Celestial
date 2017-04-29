@@ -22,7 +22,7 @@ public class JsPackageImporter {
 	public static void main(String[] args) {
 		
 		lineList = new FileReader(srcFile,false,"utf-8").getLineList();
-		allFileAddImport(Util_File.fileAll("src/main/webapp", ".*html"));
+		allFileAddImport(Util_File.fileAll("src/WebContent", ".*html"));
 	}
 	
 	/**
@@ -33,8 +33,7 @@ public class JsPackageImporter {
 	 * @param fArr
 	 */
 	private static void allFileAddImport(File[] fileArr) {
-		File[] fArr = Util_File.fileAll("src/main/webapp", ".*html");
-		for(File file:fArr){
+		for(File file:fileArr){
 			addImport(new FileReader(file.getAbsolutePath(),false,"utf-8"));
 		}
 	}

@@ -2,7 +2,11 @@ package com.celestial.hydrogenousProminence.fileReplace;
 
 import java.util.HashMap;
 import java.util.Map;
-
+/**
+ * 文件替换依赖对象。
+ * @author Administrator
+ *
+ */
 public class RepDependency {
 	
 	/**

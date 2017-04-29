@@ -7,16 +7,27 @@ $.calculator = {};
  * 初级属性到二级属性的转换map
  */
 $.calculator.transMap = {};
+$.calculator.resMap = {"li":0,"min":0,"zhi":0,"ti":0,
+		"wg":0,"yz":0,"xy":0,"xyDK":0,"zm":0,"zmDK":0,
+		"mg":0,"mf":0,"hp":0,"wf":0,"yzDK":0,
+		"gg":0,"hg":0,"sg":0,"ag":0,
+		"gf":0,"hf":0,"sf":0,"af":0,
+		"zz":0,"zmsh":0,"ydsd":0,"mphf":0,
+		
+		"li_":0,"min_":0,"zhi_":0,"ti_":0,
+		"wg_":0,"yz_":0,"xy_":0,"xyDK_":0,"zm_":0,"zmDK_":0,
+		"mg_":0,"mf_":0,"hp_":0,"wf_":0,"yzDK_":0,
+		"zz_":0,"zmsh_":0,"ydsd_":0,"mphf_":0};
 
 /**
  * @func 调用接口，数据分类，然后调用计算式。
  */
-$.calculator.adapterHandler = function(){
-	var dataArrOriginal = $.memory_calculator.getOrinalData();
+/*$.calculator.adapterHandler = function(){
+	var dataArrOriginal = $.calculator.depend.getOrinalData();
 	
-	var dataArrBuff = $.memory_calculator.getBuffData();
+	var dataArrBuff = $.calculator.depend.getBuffData();
 	
-	$.calculator.transMap = $.memory_calculator.getTransMap();
+	$.calculator.transMap = $.calculator.depend.getTransMap();
 	
 	//同层复合
 	var original = $.calculator.unified(dataArrOriginal);
@@ -26,27 +37,17 @@ $.calculator.adapterHandler = function(){
 	//多层叠加
 	var finalData = $.calculator.caculateTotal(original,original);
 	
-};
+};*/
 
 /**
  * @func 把一个json数组中的相同属性统一到一起。
  */
 $.calculator.unified = function(jsonArr){
-	var ans ={"li":0,"min":0,"zhi":0,"ti":0,
-			"wg":0,"yz":0,"xy":0,"xyDK":0,"zm":0,"zmDK":0,
-			"mg":0,"mf":0,"hp":0,"wf":0,"yzDK":0,
-			"gg":0,"hg":0,"sg":0,"ag":0,
-			"gf":0,"hf":0,"sf":0,"af":0,
-			"zz":0,"zmsh":0,"ydsd":0,"mphf":0,
-			
-			"li_":0,"min_":0,"zhi_":0,"ti_":0,
-			"wg_":0,"yz_":0,"xy_":0,"xyDK_":0,"zm_":0,"zmDK_":0,
-			"mg_":0,"mf_":0,"hp_":0,"wf_":0,"yzDK_":0,
-			"zz_":0,"zmsh_":0,"ydsd_":0,"mphf_":0};
+	var ans = $.jsonUtil.deepCopy($.calculator.resMap);
 	
 	_.each(jsonArr,function(elem){
 		for(var key in ans){
-			ans[key] = $.impl.add($.jsonUtil.getFromJson(elem,key,0),$.jsonUtil.getFromJson(ans,key,0));
+			ans[key] = $.calculator.impl.add($.jsonUtil.getFromJson(elem,key,0),$.jsonUtil.getFromJson(ans,key,0));
 		}
 	});
 	return ans;
@@ -56,17 +57,7 @@ $.calculator.unified = function(jsonArr){
  * @func 计算总和
  */
 $.calculator.caculateTotal = function(original,buff){
-	var ans ={"li":0,"min":0,"zhi":0,"ti":0,
-			"wg":0,"yz":0,"xy":0,"xyDK":0,"zm":0,"zmDK":0,
-			"mg":0,"mf":0,"hp":0,"wf":0,"yzDK":0,
-			"gg":0,"hg":0,"sg":0,"ag":0,
-			"gf":0,"hf":0,"sf":0,"af":0,
-			"zz":0,"zmsh":0,"ydsd":0,"mphf":0,
-			
-			"li_":0,"min_":0,"zhi_":0,"ti_":0,
-			"wg_":0,"yz_":0,"xy_":0,"xyDK_":0,"zm_":0,"zmDK_":0,
-			"mg_":0,"mf_":0,"hp_":0,"wf_":0,"yzDK_":0,
-			"zz_":0,"zmsh_":0,"ydsd_":0,"mphf_":0};
+	var ans = $.jsonUtil.deepCopy($.calculator.resMap);
 	
 	var p1 = {"li":0,"min":0,"zhi":0,"ti":0};
 	
@@ -98,7 +89,7 @@ $.calculator.caculateTotal = function(original,buff){
 						"buffLv1"  : $.jsonUtil.getFromJson(buff,key,0),
 						"buff_Lv1_" : $.jsonUtil.getFromJson(buff,key+"_",0)
 					};
-		var total = $.impl.calArithmetic(lv1_Arit,param);
+		var total = $.calculator.impl.calArithmetic(lv1_Arit,param);
 		ans[key] = total;
 	}
 	
@@ -124,7 +115,7 @@ $.calculator.caculateTotal = function(original,buff){
 				"buffLv2"  : $.jsonUtil.getFromJson(buff,key,0),
 				"buff_Lv2_" : $.jsonUtil.getFromJson(buff,key+"_",0)
 			};
-		$.impl.calComplex(lv1_Arit,param);
+		$.calculator.impl.calComplex(lv1_Arit,param);
 	}
 	
 	console.log(ans);

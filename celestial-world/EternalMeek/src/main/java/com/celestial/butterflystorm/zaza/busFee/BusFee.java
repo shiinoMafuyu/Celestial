@@ -13,7 +13,7 @@ public class BusFee {
 	 * @param args 
 	 */
 	public static void main(String[] args) {
-		String[] msg = new String[]{"参数错误,","请输入如下形式参数:\n  (int year, int month)\n  (int year, int month, int percent)\n  (int year, int month,double price, int percent)"};
+		String[] msg = new String[]{"参数错误,","请输入如下形式参数:\n  (int year, int month)\n  (int year, int month, int percent)\n  (int year, int month, int percent , double price)"};
 		
 		boolean isContinue = true;
 		Scanner sc = new Scanner(System.in);

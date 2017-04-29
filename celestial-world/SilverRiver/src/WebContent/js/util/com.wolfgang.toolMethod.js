@@ -10,6 +10,9 @@
  *<p>
  *
  *</p>
+ * 依赖：
+ * 基础包。(jQuery,underscore,..)
+ * 
  */
 (function ($) {
 	
@@ -540,7 +543,7 @@
      * 没有默认值返回空字符串。
      */
     $.jsonUtil.getFromJson = function(json,key,defaultVal){
-    	value = json[key];
+    	var value = json[key];
     	if(typeof(value) == "undefined"){
     		if(!$.isNull(defaultVal))
     			return defaultVal;
@@ -576,6 +579,16 @@
     	}
     	return arr;
     }
+    
+    /**
+     * @func 把json转为字符串。
+     * 常见的有两种。
+     * toJSONString()
+     * JSON.stringify()
+     */
+    $.jsonUtil.toJsonString = function(json){
+    	return JSON.stringify(json);
+    };
     
     
     /**stringutil----------------------------------------------------------------------------------------------------*/

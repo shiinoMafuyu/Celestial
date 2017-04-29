@@ -31,7 +31,7 @@ public class TestUtil_Japnese {
 		String re2 = Util_Japanese.wordTransToRoman("1£©¤ï¤¿¤·¡¡¤Ï¡¡¤Ó¤·¤ç¤¦¤Í¤ó¡¡¤Ç¤¹¡£");
 		System.out.println(re2);
 		Assert.assertEquals(re2, "1 £© wa ta shi ¡¡ ha ¡¡ bi sho u ne n ¡¡ de su ¡£ ");
-
+		System.out.println(Util_Japanese.wordTransToRoman("¤­¤Ç¤¯¤À¤µ¤¤¤¤"));
 	}
 	
 	

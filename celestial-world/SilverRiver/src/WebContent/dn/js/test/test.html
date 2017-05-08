@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+<!-- 
+	localhost:8080/SilverRiver/dn/js/test/test.html
+-->
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
@@ -7,27 +10,40 @@
   <link rel="stylesheet" href="../../../plugins/qunit/css/qunit-2.3.2.css">
 </head>
 <body>
-  <div id="qunit"></div>
-  <div id="qunit-fixture"></div>
-  <script src="../../../plugins/qunit/js/qunit-2.3.2.js"></script>
-  
-  <!-- 必须依赖包 -->
-  <script src="../../../common/js/jquery-2.1.4.min.js"></script>
-  <script src="../../../common/js/jquery-2.1.4.min.js"></script>
-  <script src="../../../common/js/underscore-min.js"></script>
-  <script src="../../../common/js/store+json2.min.js"></script>
-  <script src="../../../common/js/underscore-min.js"></script>
-  
-  <!-- 依赖包 -->
-  <script src="../../../common/util/com.wolfgang.toolMethod.js"></script>
-  <script src="../../../common/util/com.wolfgang.math.js"></script>
-  
-  <!-- 测试包 -->
-  <script src="../interface/impl/dn.calculator.impl.js"></script>
-  
-  <script src="dn.calculatorTest.js"></script>
-  <script src="dn.calculator.implTest.js"></script>
-  
-  
+	<div id="qunit"></div>
+	<div id="qunit-fixture"></div>
+	<script src="../../../plugins/qunit/js/qunit-2.3.2.js"></script>
+	
+	<!-- 必须依赖包 -->
+	<script src="../../../common/js/jquery-2.1.4.min.js"></script>
+	<script src="../../../common/js/jquery-2.1.4.min.js"></script>
+	<script src="../../../common/js/underscore-min.js"></script>
+	<script src="../../../common/js/store+json2.min.js"></script>
+	<script src="../../../common/js/underscore-min.js"></script>
+	
+	<!-- 依赖包 -->
+	<script src="../../../common/util/com.wolfgang.toolMethod.js"></script>
+	<script src="../../../common/util/com.wolfgang.math.js"></script>
+	
+	<!-- 测试包 -->
+	<!-- 注意依赖顺序 -->
+	<!-- 测试 calculator相关 start-->
+	<script src="../interface/depend/dn.calculator.depend.js"></script>
+	<script src="../interface/impl/dn.calculator.impl.js"></script>
+	<script src="../interface/dn.calculator.js"></script>
+	
+	<script src="dn.calculator.dependTest.js"></script>
+	<script src="dn.calculator.implTest.js"></script>
+	<script src="dn.calculatorTest.js"></script>
+	
+	<!-- 测试 calculator相关 end-->
+	
+	
+	
+	
+	
+	
+	
+	
 </body>
 </html>

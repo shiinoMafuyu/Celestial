@@ -7,13 +7,13 @@ import com.celestial.agniRadiance.EzUtil.Util_String;
 import com.celestial.agniRadiance.abstracte.RecursiveDealFile;
 import com.celestial.agniRadiance.entity.FileReader;
 
-public class Synchronous {
+public class Synchronous_reverse {
 
 	public static void main(String[] args) {
-		String path1 = "D:/workspace_final/02MyEclipse2013/liquidation/depository-extract-tradedata-m6-sale/src/gnnt/MEBS6/depository/extract/tradedata/sale";
-		String path2 = "D:/workspace_final/02MyEclipse2013/liquidation/depository-extract-tradedata-m6-issue/src/gnnt/MEBS6/depository/extract/tradedata/issue";
+		String path1 = "D:/workspace_final/02MyEclipse2013/liquidation/depository-extract-tradedata-m6-issue/src/gnnt/MEBS6/depository/extract/tradedata/issue";
+		String path2 = "D:/workspace_final/02MyEclipse2013/liquidation/depository-extract-tradedata-m6-sale/src/gnnt/MEBS6/depository/extract/tradedata/sale";
 //		String path2 = "C:/Users/Administrator/Desktop/a";
-		Synchronous syn = new Synchronous();
+		Synchronous_reverse syn = new Synchronous_reverse();
 		syn.doSynchronous(path1,path2);
 		
 	}
@@ -29,11 +29,11 @@ public class Synchronous {
 					sb.append(f.readLine()).append("\n");
 				}
 				String send = Util_String.subStringLastChar(sb.toString(), "\n");
-				send =  send.replaceAll("gnnt.MEBS6.depository.extract.tradedata.sale", "gnnt.MEBS6.depository.extract.tradedata.issue")
-							.replaceAll("sa_", "su_")
-							.replaceAll("sA_", "su_")
-							.replaceAll("Sa_", "su_")
-							.replaceAll("SA_", "su_");
+				send =  send.replaceAll("gnnt.MEBS6.depository.extract.tradedata.issue","gnnt.MEBS6.depository.extract.tradedata.sale")
+							.replaceAll("su_", "sa_")
+							.replaceAll("sA_", "sa_")
+							.replaceAll("SU_", "sa_")
+							.replaceAll("Su_", "sa_");
 				Util_File.printFile(send, path2 + Util_String.fmtPathStr(file.getAbsolutePath()).substring(path1.length()),"gbk");
 				System.out.println("修改保存完成：" + file.getName());
 			}

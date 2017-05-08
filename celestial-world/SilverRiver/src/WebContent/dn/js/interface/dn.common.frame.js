@@ -21,7 +21,7 @@ $.frame.separateData = function(jsonArr){
 	//将装备数据按representId分类
 	var tempContainer = $.jsonUtil.separateData(jsonArr,"representId");
 	//缓存中数据进行整合。
-	var combineData = $.jsonUtil.combineJsonArr(store.get("equipment"),tempContainer,"id")
+	var combineData = $.jsonUtil.combineJsonArr(store.get("equipment"),tempContainer,"id");
 	store.set("equipment",combineData);
 };
 

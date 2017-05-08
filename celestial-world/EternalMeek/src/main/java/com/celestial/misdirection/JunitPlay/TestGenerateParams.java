@@ -1,4 +1,4 @@
-package com.dn.junitUsage.test;
+package com.celestial.misdirection.JunitPlay;
 
 import java.util.Arrays;
 import java.util.List;

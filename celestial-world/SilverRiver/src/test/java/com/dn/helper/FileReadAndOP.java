@@ -18,9 +18,9 @@ public class FileReadAndOP {
 	public static void main(String[] args) {
 //		_01_();
 //		_02_();
-//		readVariable();
+		readVariable();
 //		createSetVariable();
-		createAppend();
+//		createAppend();
 //		_04_();
 //		_05_();
 		

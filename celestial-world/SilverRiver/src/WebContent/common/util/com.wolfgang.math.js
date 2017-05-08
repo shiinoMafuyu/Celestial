@@ -17,10 +17,13 @@ $.math = {};
 
 /**
  * @func 计算str的全部∑算式。
- * 
+ * 不支持计算嵌套∑式子。
+ * @pram str 要计算的字符串。
+ * @pram param 参数
+ * @pram impl 没有则默认为普通数学加减乘除运算。
  * 
  */
-$.math.calAllSigma = function(str,param){
+$.math.calAllSigma = function(str,param,impl){
 	while(str.indexOf("∑") >=0){
 		var index = str.indexOf("∑");
 		var arr = $.stringutil.getMatchPairindex(str,index,"(",")");
@@ -28,10 +31,10 @@ $.math.calAllSigma = function(str,param){
 		
 		var realParam = $.math.getRealParam(arith,param);
 		
-		var resSima = $.math.calSigma(arith,realParam);
+		var resSima = $.math.calSigma(arith,realParam,impl);
 		str =str.substring(0,index) + resSima + str.substring(arr[1]+1);
 	}
-	return str;
+	return $.math.calArithmetic(str,param,impl);
 };
 //js替换多个空格为一个
 //var str ="yu  ki   no ye!";
@@ -46,7 +49,7 @@ $.math.getRealParam = function(arith,param){
 	return realParam;
 };
 
-$.math.mathSymbol = ['+','-','*','/','∑'];
+$.math.mathSymbol = ['+','-','*','/','∑','(',')'];
 /**
  * @func 获取参数。
  */
@@ -56,7 +59,7 @@ $.math.getParamNameArr = function(str){
 		str = $.stringutil.replaceAll(str,e," ");
 	});
 	//把所有多空格替换为一个
-	str = str.replace(/\s{2,}/g, " ");
+	str = str.trim().replace(/\s{2,}/g, " ");
 	return str.split(" ");
 };
 
@@ -66,8 +69,9 @@ $.math.getParamNameArr = function(str){
  * 里面参数必须为数组长度需一致。
  *  $.math.calSigma("∑(arg0 * arg1 + argx)",{"arg0":[1,2,3],"arg1":[2,3,4],"argx":[3,4,5]})
  *  ==> "32"
+ *  @param impl 没有默认为普通数学计算
  */
-$.math.calSigma = function(str,jsonArr){
+$.math.calSigma = function(str,jsonArr,impl){
 	var res = 0;
 	var length =0;
 	for(var key in jsonArr){
@@ -80,42 +84,38 @@ $.math.calSigma = function(str,jsonArr){
 		for(var key in jsonArr){
 			applyArit = $.stringutil.replaceAll(applyArit,key,jsonArr[key][index]);
 		}
-		res = $.math.calParenthesis(res+"+" + applyArit);
+		res = $.math.calParenthesis(res+"+" + applyArit,impl);
 	}
 	return res;
 };
 
 /**
- * @func 计算形如 ∑(lv1s * transs)的算式。
+ * @func 递归计算字符串.
  * 
- * 里面参数必须为arg0 arg1 arg2 ...形式且和数组对应。
- *  $.math.calSigma2("∑(arg0 * arg1)",[[1,2],[3,4],[5,6]])
- *  ==> "44"
+ * 也可以计算其他的，但是需要自己写cal2()的实现。
+ * 
+ * 这是一个通用的过程计算方法，凡事有优先级，计算结果能量化的都可以使用此过程。
+ * 另：
+ * 可以进一步抽象计算过程，根据事物的内含，调整计算顺序和法则。
+ * 
+ * 过程公式化设置！！！
+ * 
+ * @param str
+ * @param param json参数 用于替换字符串中的。
+ * @param impl 计算实现没有则默认普通4则运算
+ * 
  */
-$.math.calSigma2 = function(str,dataArr){
-	var res = 0;
-	var arit = str.substring(str.indexOf("(")+1,str.lastIndexOf(")"));
-	_.each(dataArr,function(elem){
-		var applyArit = arit.concat();
-		_.each(elem,function(e,i){
-			applyArit = $.stringutil.replaceAll(applyArit,"arg"+i,e);
-		});
-		res = $.math.calParenthesis(res+"+" + applyArit);
-	});
-	return res;
+$.math.calArithmetic = function(str,param,impl){
+	for(var p in param){
+		str = $.stringutil.replaceAll(str,p,param[p]);
+	}
+	return $.math.calParenthesis(str,impl);
 };
+
+
 
 /**
  * @func 计算带括号的
- * 
- * $.math.calParenthesis("(3+4)*2+3*((2+4/2)+5)")
- * ==> 异常
- * 
- * $.math.calParenthesis("(3+4)*2+3*((2+4*2)+5)")
- * ==> "59"
- * 
- * $.math.calParenthesis("(3~4+4)*2+3*((2+4*2)+5)")
- * ==> "59~61";
  * 
  * 抽象出来了。调用此$.math.calParenthesis方法需要自己实现impl.cal2()方法。
  * 
@@ -125,7 +125,6 @@ $.math.calSigma2 = function(str,dataArr){
  * @param impl 2元计算实现包，实现方法impl.cal2(str) 没有的话调用默认实现(目前是区间加、乘法 不能计算减除)。
  */
 $.math.calParenthesis = function(str,impl){
-	impl = $.math.checkCal2(impl);
 	if(str.indexOf("(") >= 0){
 		var indexArr = $.stringutil.getCenterIndex(str,"(",")");
 		//把最里面不带括号的1个算式拿出来计算，用结果替换掉()和算式。
@@ -139,18 +138,6 @@ $.math.calParenthesis = function(str,impl){
 
 /**
  * @func 计算N元 无括号。
- * 
- * $.math.calN("5+6*3/1.5")
- * ==> "41"
- * 
- * $.math.calN("5+6*3")
- * ==> "23"
- * 
- * $.math.calN("5+6*3~4")
- * ==> "23~29"
- * 
- * $.math.calN("3~4+1~2*3~3")
- * ==> "6~10"
  * 
  * 注意：四则运算规则中优先级： 除 > 乘 > 加 = 减
  * 
@@ -188,6 +175,7 @@ $.math.calN = function(str,impl){
 	}else
 		return str;
 };
+
 /**
  * @func 检查二元实现是否为空，为空则使用默认值。
  */
@@ -204,6 +192,8 @@ $.impliment = {};
  * 一个普通实现。
  */
 $.impliment.cal2 = function(str){
+	//去掉所有空格
+	str = $.stringutil.replaceAll(str," ","");
 	var paramArr = str.replace(/-/g, "+").replace(/\*/g, "+").replace(/\//g, "+").split("+");
 	if(str.indexOf("+") > 0){
 		return parseFloat(paramArr[0]) + parseFloat(paramArr[1]);

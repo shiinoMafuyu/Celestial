@@ -29,18 +29,7 @@ $.operate.html = 	"<input type='text' class='operate-choose-control'  value='' /
 					"</div>" ;
 
 $.operate.equipmentListHtml = "<span class='selectList-goods-name' id='arg_id'>arg_name</span>";
-/**
- * 顺序。以此顺序取json里的数据，进行显示。
- */
-$.operate.orderList_废弃 = ['li','min','zhi','ti',
-                       'wg','yz','xy','xyDK','zm','zmDK',
-                       'mg','mf','hp','wf','yzDK',
-                       'gg','hg','sg','ag',
-                       'zz','zmsh','ydsd',
-                       'li_','min_','zhi_','ti_',
-                       'wg_','yz_','xy_','xyDK_','zm_','zmDK_',
-                       'mg_','mf_','hp_','wf_','yzDK_',
-                       'zz_','zmsh_','ydsd_',];
+
 /**
  * 顺序。以此顺序取json里的数据，进行显示。
  */

@@ -1,4 +1,4 @@
-package com.dn.junitUsage.test;
+package com.celestial.misdirection.JunitPlay;
 
 import org.junit.AfterClass;
 import org.junit.Assert;
@@ -7,7 +7,7 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
-import com.dn.entity.Equipment;
+import com.celestial.misdirection.JunitPlay.entity.Equipment;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class TestVariable {

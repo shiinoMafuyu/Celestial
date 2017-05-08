@@ -14,7 +14,7 @@ $.showFrame.init = function(){
 	$(".choose-operator").attr("onchange","$.operate.chooseOperator(this)");//面板区装备筛选；绑定：过滤装备。
 	
 	//填充强化框。。由于没有全面的数据所以就不能1~15随便选啦~~
-	$(".choose-strengthenLevel").attr("onclick","$.operate.strengthenLevel(this)");//绑定：强化显示方法。
+	//$(".choose-strengthenLevel").attr("onclick","$.operate.strengthenLevel(this)");//绑定：强化显示方法。
 	
 	
 };

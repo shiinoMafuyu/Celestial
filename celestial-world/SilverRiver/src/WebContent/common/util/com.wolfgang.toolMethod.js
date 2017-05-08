@@ -590,6 +590,35 @@
     	return JSON.stringify(json);
     };
     
+    /**
+     * @func 移除json中值为空的，包括0、undefined、null、""、[]
+     */
+    $.jsonUtil.removeEmpty = function(json){
+    	for(var key in json){
+    		var val = json[key];
+    		if($.isNull(val) || val === 0 || val === "0" || val === [])
+    			delete json[key];
+    	}
+    	return json;
+    };
+    
+    /**
+     * @func 验证json1中的值是否在json2中都存在，且是一样的。
+     */
+    $.jsonUtil.equal = function(json1,json2){
+    	if($.isNull(json1)){
+    		if($.isNull(json2))
+    			return true;
+    		else
+    			return false;
+    	}else{
+    		for(var key in json1){
+    			if(json1[key] !== json2[key])
+    				return false;
+    		}
+    		return true;
+    	}
+    };
     
     /**stringutil----------------------------------------------------------------------------------------------------*/
     $.stringutil = {};
@@ -709,5 +738,5 @@
     	return [index1,index2];
     };
     
-	
+    
 })(jQuery);	

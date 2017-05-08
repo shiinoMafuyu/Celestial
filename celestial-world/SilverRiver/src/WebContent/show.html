@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
+<!-- 
+http://localhost:8080/SilverRiver/show.html
+ -->
 <head>
 	<title>属性计算</title>
 	<!-- auto import start-->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
-	<link href="css/common/bass.css" rel="stylesheet">
-	<link href="css/dn/style.css" rel="stylesheet">
+	<link href="common/css/bass.css" rel="stylesheet">
+	<link href="dn/css/style.css" rel="stylesheet">
 	
-	<script src="js/common/jquery-2.1.4.min.js"></script>
-	<script src="js/common/store+json2.min.js"></script>
-	<script src="js/common/underscore-min.js"></script>
+	<script src="common/js/jquery-2.1.4.min.js"></script>
+	<script src="common/js/store+json2.min.js"></script>
+	<script src="common/js/underscore-min.js"></script>
 	
 	<!-- plugins start -->
 	<link href="plugins/sweetAlert/css/sweetalert.css" rel="stylesheet">
@@ -19,19 +22,20 @@
 	
 	<!-- plugins end -->
 	
-	<script src="js/util/com.wolfgang.toolMethod.js"></script>
-	<script src="js/util/com.wolfgang.math.js"></script>
+	<script src="common/util/com.wolfgang.toolMethod.js"></script>
+	<script src="common/util/com.wolfgang.math.js"></script>
 	<!-- auto import end-->
-	<script src="dn/util/dn.util.filed.js"></script>
+	<script src="dn/js/util/dn.util.filed.js"></script>
 	
-	<script src="dn/common/dn.common.calculator.js"></script>
-	<script src="dn/common/dn.common.frame.js"></script>
 	
-	<script src="dn/entity/dn.entity.operate.js"></script>
+	<script src="dn/js/interface/depend/dn.calculator.depend.js"></script>
+	<script src="dn/js/interface/impl/dn.calculator.impl.js"></script>
 	
-	<script src="dn/plugins/dn.plugins.operate.js"></script>
-	<script src="dn/plugins/dn.plugins.showFrame.js"></script>
-	
+	<script src="dn/js/interface/dn.plugins.showFrame.js"></script>
+	<script src="dn/js/interface/dn.calculator.js"></script>
+	<script src="dn/js/interface/dn.common.frame.js"></script>
+	<script src="dn/js/interface/dn.plugins.operate.js"></script>
+	<script src="dn/js/interface/dn.plugins.show.js"></script>
 	
 </head>
 <body><div class="frame-div-00">
@@ -242,6 +246,7 @@ $(function(){
 	
 	//职业select下拉选初始化
 	$.showFrame.init();
+	$.show.init();
 	
 	
 	

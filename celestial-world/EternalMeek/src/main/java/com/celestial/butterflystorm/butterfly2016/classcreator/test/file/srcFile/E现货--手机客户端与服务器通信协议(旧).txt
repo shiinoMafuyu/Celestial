@@ -1,0 +1,1790 @@
+
+
+
+E现货--手机客户端与服务器通信协议
+
+
+
+
+北京金网安泰信息技术有限公司
+密级：绝密□机密■秘密□公开□
+作者：赵东超
+版本号：1.0
+创建时间：2016年06月07日
+ 
+修改记录
+版本	修改日期	修改标记	修改人	审核
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+ 
+总述
+交易客户端与服务器端的通讯基于http、https协议进行数据传输，数据通过XML进行组织。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. 用户登录
+请求包
+<?xmlversion="1.0"encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="user_login">
+				<U>登陆用户ID</U>
+				<PASSWORD>口令</PASSWORD>
+<IC>加密字符串</IC>
+<RANDOM_KEY>随机串<RANDOM_KEY/>
+		</REQ>
+	</MEBS_MOBILE>
+
+返回包
+<?xmlversion="1.0"encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="user_login">
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					>0成功即SessionID, 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容(错误登录剩余次数)</MESSAGE>
+<MODULE_ID>模块ID</MODULE_ID>
+<LAST_TIME>上次登陆时间</LAST_TIME>
+<LAST_IP>上次登陆IP</LAST_IP>
+<CHG_PWD>是否需要修改密码；1：是；2：否；</CHG_PWD>
+<NAME>登陆用户名称</NAME>
+<RANDOM_KEY>随机串<RANDOM_KEY/>
+			</RESULT>
+		</REP>
+	</MEBS_MOBILE>
+2. 用户注销
+请求包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="user_logoff">
+<U>登陆用户ID</U>
+<SI>SESSION_ID<SI>
+		</REQ>
+	</MEBS_MOBILE>
+
+返回包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="user_logoff">
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					=0成功, 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容</MESSAGE>	
+			</RESULT>
+		</REP>
+	</MEBS_MOBILE>
+
+3. 用户验证
+请求包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="check_user">
+<U>登陆用户ID</U>
+<SI>SESSION_ID<SI>
+<MODULE_ID>原模块ID</MODULE_ID>
+		</REQ>
+	</MEBS_MOBILE>
+
+返回包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="check_user">
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					>0成功即SessionID, 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容</MESSAGE>	
+<MODULE_ID>目标模块ID</MODULE_ID>
+			</RESULT>
+		</REP>
+	</MEBS_MOBILE>
+
+4. 修改密码
+请求包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="change_password">
+<U>登陆用户ID</U>
+<OLD_PASSWORD>旧口令</OLD_PASSWORD>
+<NEW_PASSWORD>新口令</NEW_PASSWORD>
+<SI>SESSION_ID<SI>
+		</REQ>
+	</MEBS_MOBILE>
+
+返回包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="change_password">
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					=0成功, 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容</MESSAGE>	
+			</RESULT>
+		</REP>
+	</MEBS_MOBILE>
+
+5. 用户绑定验证登录
+请求包
+<?xmlversion="1.0"encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="check_user_login">
+				<U>登陆用户ID</U>
+				<PASSWORD>口令</PASSWORD>
+<IC>加密字符串</IC>
+		</REQ>
+	</MEBS_MOBILE>
+
+返回包
+<?xmlversion="1.0"encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="check_user_login">
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					=0成功, 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容</MESSAGE>
+			</RESULT>
+		</REP>
+	</MEBS_MOBILE>
+
+6. 用户绑定验证登录_查询经济会员
+请求包
+<?xmlversion="1.0"encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="check_user_login_broke">
+				<U>登陆用户ID</U>
+				<PASSWORD>口令</PASSWORD>
+<IC>加密字符串</IC>
+		</REQ>
+	</MEBS_MOBILE>
+
+返回包
+<?xmlversion="1.0"encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="check_user_login_broke">
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					=0成功, 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容</MESSAGE>
+<BID>经济会员ID</BID>
+			</RESULT>
+		</REP>
+	</MEBS_MOBILE>
+
+
+
+
+7. 交易时间查询
+请求包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="sys_time_query">
+<U>登陆用户ID</U>
+<SI>SESSION_ID</SI>
+<N>是否刚登陆  0：不是；  1：是  </N>
+		</REQ>
+	</MEBS_MOBILE>
+返回包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="sys_time_query">
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					=0成功, 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容</MESSAGE>	
+				<T>当前时间</T>	
+<D>当前日期</D>	
+				<U>微妙</U>	
+<Y>交易日(格式: dd )</Y>
+			</RESULT>
+		</REP>
+	</MEBS_MOBILE>
+8. 系统信息查询
+请求包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="sys_info"> SysInfoRequestVO
+<U>登陆用户ID</U>
+<SI>SESSION_ID</SI>
+		</REQ>
+	</MEBS_MOBILE>
+
+返回包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="sys_info">SysInfoResponseVO
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					=0成功, 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容</MESSAGE>
+				<D>当前交易日（yyyy-MM-dd）</D>
+		</RESULT>
+<RESULTLIST>
+				<WARS>(交收仓库)
+					<WAR>
+<WI>仓库ID</WI>
+<WN>仓库名称</WN>
+	</WAR>
+</WARS>
+ (系统参数)
+<LSP>最低风险金</LSP>
+<TPT>默认保证金支付期限(小时)</TPT>
+<DPT>默认交收准备期限(小时)</DPT>
+
+<OVT>默认委托有效期限(小时)</OVT>
+<OTM>单笔诚信保障金</OTM>
+<TMM>诚信保障金放大率</TMM>
+
+<FPR>首款比例</FPR>
+<SPR>第二笔货款比例</SPR>
+<OFS>溢短比例</OFS>
+
+<TFM>交易手续费模式： 1：固定值； 2：百分比</TFM>
+<TFR>交易手续费率</TFR>
+<DFM>交收手续费模式： 1：固定值； 2：百分比</DFM>
+
+<DFR>交收手续费率</DFR>
+<DMM>交收保证金模式： 1：固定值； 2：百分比</DMM>
+<DMR>交收保证金率</DMR>
+
+<PTS>付款次数，只能为2、3</PTS>
+<OAB>买挂牌是否需要审核： 0：需要； 1：不需要</OAB>
+<OAS>卖挂牌是否需要审核： 0：需要； 1：不需要</OAS>
+
+<PAS>卖仓单是否需要审核： 0：需要； 1：不需要</PAS>
+</RESULTLIST>
+</REP>
+	</MEBS_MOBILE>
+9. 商铺查询
+请求包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="shop_query"> shopQuery
+<SP>商铺查询条件：商家编号、商铺名称 </SP>
+<PN>当前页码</PN>
+<PS>每页显示条数</PS>
+		</REQ>
+	</MEBS_MOBILE>
+
+返回包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="shop_query">
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					=0成功, 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容</MESSAGE>	
+<TTLREC>总记录数</TTLREC>
+<PN>当前页码</PN>
+<PS>每页显示条数</PS>
+			</RESULT>
+<RESULTLIST>	
+				  <REC>
+<SPI>商家编号</SPI>	
+<SPN>商铺名称</SPN>	
+<SPD>商铺描述</SPD>
+<CM>联系人</CM>
+<PH>联系方式</PH>
+</REC>
+			</RESULTLIST>
+		</REP>
+	</MEBS_MOBILE>
+
+10. 商品委托查询
+请求包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="cmd_order_query" ie="商品委托查询类,额" pkg = "gnnt.MEBS.MobileServer.vo.micro.trade">
+<B ref="BreedId" type="Long">品种代码</B>
+<C ref="CommodityId" type="Long">品名代码</C>
+<X ref="MaxPrice" type="Double">最高价</X>
+
+<I ref="MinPrice" type="Double">最低价</I>
+<M ref="TradeMode" type="Integer">交易模式  1保证金 2诚信保障金 3或为空 所有</M>
+<R ref="SortType" type="String">排序方式   
+time  asc 时间升序 time desc 时间降序
+price asc 价格升序 price desc 价格降序
+qty asc 数量升序 qty desc 数量降序
+type asc 类型升序 type desc 类型降序 
+</R>
+
+<T ref="CommodityTitle" type="String">商品标题</T>
+<N ref="NewOrderID" type="Long">最新委托单号</N>
+<S ref="Size" type="Integer">查询条数  大于零 查询大于最新委托号的N条数据  小于零 查询小于最新委托号的N条数据</S>
+
+<BS ref="BsFlag" type="Integer">查询买卖委托标志： 1：买委托 2：卖委托 3: 所有委托</BS>
+<PROS>商品属性列表
+	<PRO>商品属性
+		<BP ref="BreedProperty" type="String">品种属性代码</BP>
+		<CP ref="CommodityPropertyValue" type="String">商品属性值</CP>
+	</PRO>
+</PROS>
+		</REQ>
+	</MEBS_MOBILE>
+
+返回包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="cmd_order_query">
+			<RESULT>
+				<RETCODE ref="" type="">返回码</RETCODE>
+					=0成功, 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE ref="" type="">返回的提示消息内容</MESSAGE>	
+
+<TTLREC ref="" type="">总记录数</TTLREC>
+<S>查询条数  
+大于零 查询大于最新委托号的N条数据  
+	小于零 查询小于最新委托号的N条数据
+</S>
+			</RESULT>
+<RESULTLIST>	
+				<REC>
+					  <PID ref="" type="">图片唯一标识</PID>
+<ORI ref="" type="">委托单号</OI>	
+<ORT ref="" type="">委托标题</OT>	
+
+<BN ref="" type="">品名</BN>
+<TM ref="" type="">品种交易模式:  1: 诚信保障金模式；2：保证金模式
+</TM>		
+<BS ref="" type="">买卖方向: 1: 买；2：卖</BS>	
+						
+<PRI ref="" type="">单位价格</PRI>
+<QTY ref="" type="">商品数量</QTY>
+<TQ ref="" type="">已成交数量</TQ>
+<U ref="" type="">商品单位</U>	
+
+
+<TU ref="" type="">交易单位</TU>?	
+<SQ ref="" type="">起订数量</SQ>?
+<OT ref="" type="">委托时间</OT>
+<TY ref="" type="">交收类型:    0: 协议交收  1：自主交收</TY>
+<TR ref="" type="">发布交易商ID<TR/>
+</REC>
+			</RESULTLIST>
+		</REP>
+	</MEBS_MOBILE>
+	
+	上划操作： 查询大于最新委托号N的 S条数据
+	下拉操作： 查询小于最新委托号N的 S条数据
+11. 商品委托详情查询
+请求包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="cmd_order_info_query"> CmdOrderInfoQuery
+<U ref="" type="">登陆用户ID</U>
+<SI ref="" type="">SESSION_ID<SI>
+
+<ORI ref="" type="">委托单号</ORI>
+		</REQ>
+	</MEBS_MOBILE>
+
+返回包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="cmd_order_info_query" ie="模板详情查询请求类,额,嗯是啦嘛!" pkg = "gnnt.MEBS.MobileServer.vo.micro.trade"> CmdOrderInfoQuery
+			<RESULT>
+				<RETCODE ref="RETCODE" type="Long">返回码</RETCODE>
+					=0成功, 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE ref="MESSAGE" type="String">返回的提示消息内容</MESSAGE>	
+
+<ORI ref="OrderID" type="Long">委托单号</ORI>	
+<ORT ref="OrderTitle" type="String">委托商品标题</ORT>	
+<BN ref="BreedName" type="String">品种名称</BN>
+	
+<BCN ref="BreedCmdName" type="String">品名名称</BCN>		
+<BS ref="BsFlag" type="String">买卖方向:  1: 买；2：卖 </BS>	
+<PRI ref="Price" type="Double">单位价格</PRI>
+
+<QTY ref="QTY" type="Double">商品数量</QTY>
+<TQ ref="TradeQty" type="Double">已成交数量</TQ>
+<U ref="Unit" type="String">商品单位</U>	
+
+
+
+<OT ref="OrderTime" type="Date">委托时间</OT>
+<ET ref="EffectiveTime" type="Date">生效时间，为空显示"--"</ET>
+<RMK ref="Remark" type="String">附加条款</RMK>
+<VH ref="ValidateHours" type="Integer">信息有效期（单位：小时）：-1：长期有效；其他值整数小时</VH>
+
+<TF ref="TradeFlag" type="Integer">成交方式：1：直接成交；2：可议价成交；3：必须议价成交 </TF>
+<TPH ref="MarginDeadLine" type="Integer">保证金支付期限(小时)，限制条件显示,品种交易模式：（1）诚信保障金模式 </TPH>
+<TMB ref="TradeMarginBuyer" type="Double">买方诚信保障金 限制条件显示,品种交易模式：（1）诚信保障金模式</TMB>
+
+
+<TMS ref="TradeMarginSeller" type="Double">卖方诚信保障金 限制条件显示,品种交易模式：（1）诚信保障金模式</TMS>
+<IPM ref="IsPayMargin" type="String">是否已支付履约保证金： Y:是；N:否 限制条件显示,品种交易模式（1）诚信保障金模式 </IPM>
+<PF ref="PayFlag" type="Integer">是否卖仓单：0：否；1：是 </PF>
+<STI ref="StockId" type="String">卖仓单号 限制条件显示，是否卖仓单：（1）是 </STI>
+<OWI ref="OrderWithdrawTraderId" type="String">撤单人 限制条件显示，委托状态：（3）已下架 </OWI>
+<OWT ref="OrderWithdrawTime" type="Date">撤单时间 限制条件显示，委托状态：（3）已下架</OWT>
+<MTQ ref="MinTradeQty" type="Double">最小交易数量</MTQ>
+<TU ref="TradeUnit" type="Double">交易单位</TU>
+起订量： 
+1.00(份)，超出部分按 1.00(份)整数倍递增 
+<DET ref="DeliveryType" type="String">交收地类型：1：指定仓库；2：指定交收地</DET>
+<DWI ref="DeliveryWarehouseId" type="String">交收仓库号，为空显示"--"限制条件显示，交收地类型：（1）指定仓库</DWI>
+<DEA ref="DeliveryAddress" type="String">交收地，为空显示"--"限制条件显示，交收地类型：（2）指定交收地</DEA>
+<DMB ref="BuyerPerformMargin" type="Double">买方履约保证金</DMB>
+<DMS ref="SellerPerformMargin" type="Double">卖方履约保证金</DMS>
+<TY ref="SettleType" type="Integer">交收类型: 0: 协议交收； 1：自主交收</TY>
+<PT ref="PayType" type="Integer">付款类型：0：先款后货；1：先货后款；2：无限制限制条件显示，交收类型：（1）自主交收</PT>
+<DDT ref="DeliveryDateType" type="Integer">交收日类型：0：指定期限；1：指定日期</DDT>
+<DPH ref="DeliveryTime" type="Integer">交货期限（单位：小时）限制条件显示，交收日类型：（0）指定期限</DPH>
+<DD ref="DeliveryDate" type="Date">交货日期  限制条件显示，交收日类型：（1）指定日期</DD>备款/备货期限： 指定期限： 成交后顺延5个小时交货；  指定日期：指定2016年06月18日为交货日期；
+</RESULT>
+<RESULTLIST>
+				<REC>通用集合类
+					  <PID ref="PictrueID" type="String">图片唯一标识</PID>
+<ORI ref="OrderID" type="String">委托单号</ORI>	
+<ORT ref="OrderTitle" type="String">委托标题</ORT>	
+
+<BN ref="BreedName" type="String">品名</BN>
+<TM ref="TradeModel" type="Integer">品种交易模式: 1: 诚信保障金模式； 2：保证金模式 </TM>		
+<BS ref="BsFlag" type="Integer">买卖方向: 1: 买；2：卖 </BS>	
+
+<STA ref="Status" type="Integer">委托状态：0：未成交1：部分成交2：全部成交3：已下架11：待管理员审核</STA>
+<PRI ref="Price" type="Double">单位价格</PRI>
+<QTY ref="Qty" type="Double">商品数量</QTY>
+<TQ ref="TradedQty" type="Double">已成交数量</TQ>
+<U ref="Unit" type="String">商品单位</U>	
+<OT ref="OrderTime" type="Date">委托时间</OT>
+
+
+<TY ref="TradeType" type="Integer">交收类型:  0: 协议交收   1：自主交收</TY>
+</REC>
+   <PRS>集合类
+		<PRO>信息类
+			<PT ref="PropertyType" type="String">属性类型 （基本属性 质量指标）</PT>
+			<PN ref="PropertyName" type="String">品种属性名称</PN>
+			<PV ref="PropertyValue" type="String">品名属性值</PV>
+		</PRO>
+	</PRS>
+	<ORP>图片集合类
+		<PCS>图片信息类
+			<PI ref="PictureId" type="String">委托商品图片ID</PI>
+		</PCS>
+	</ORP>
+</RESULTLIST>
+		</REP>
+	</MEBS_MOBILE>
+
+
+
+12. 个人委托查询
+请求包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="order_query"> orderQuery
+	<U>登陆用户ID</U>
+<SI>SESSION_ID<SI>
+
+<B>品种代码</B>
+<C>品名代码</C>
+<X>最高价</X>
+
+<I>最低价</I>
+<M>交易模式</M>
+<R>排序方式</R>
+
+<T>商品标题</T>
+<N>最新委托单号</N>
+<S>查询条数  大于零 查询大于最新委托号的N条数据 	小于零 查询小于最新委托号的N条数据</S>
+
+<BS>查询买卖委托标志：     1：买委托    2：卖委托	 3：所有委托</BS>
+<STA>委托状态： 0：未成交 1：部分成交 2：全部成交 3：已下架 11：待管理员审核</STA>
+<PROS>
+<PRO>商品属性
+<BP>品种属性代码</BP>
+<CP>商品属性值</CP>
+</PRO>
+</PROS>
+		</REQ>
+	</MEBS_MOBILE>
+
+返回包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="order_query">
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					=0成功, 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容</MESSAGE>	
+
+<TTLREC>总记录数</TTLREC>
+<S>查询条数  大于零 查询大于最新委托号的N条数据  	小于零 查询小于最新委托号的N条数据</S>
+			</RESULT>
+<RESULTLIST>	
+				<REC>
+					  <PID>图片唯一标识</PID>
+<ORI>委托单号</OI>	
+<ORT>委托标题</OT>	
+
+<BN>品名</BN>
+<TM>品种交易模式: 1: 诚信保障金模式； 2：保证金模式 </TM>		
+<BS>买卖方向: 1: 买；2：卖 </BS>	
+
+<STA>委托状态：0：未成交1：部分成交2：全部成交3：已下架11：待管理员审核</STA>
+<PRI>单位价格</PRI>
+<QTY>商品数量</QTY>
+<TQ>已成交数量</TQ>
+<U>商品单位</U>	
+<OT>委托时间</OT>
+
+
+<TY>交收类型:  0: 协议交收   1：自主交收</TY>
+</REC>
+			</RESULTLIST>
+		</REP>
+	</MEBS_MOBILE>
+
+	只查询客户本人的所有委托
+上划操作： 查询大于最新委托号N的 S条数据
+	下拉操作： 查询小于最新委托号N的 S条数据
+当委托状态：0（未成交）、1（部分成交），才可做"撤销委托"操作
+13. 个人委托详情查询
+请求包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="order_info_query"> orderInfoQuery
+<U>登陆用户ID</U>
+<SI>SESSION_ID<SI>
+
+<ORI>委托单号</ORI>
+		</REQ>
+	</MEBS_MOBILE>
+
+返回包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="order_info_query"> OrderInfoQuery
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					=0成功, 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容</MESSAGE>	
+
+<ORI>委托单号</ORI>	
+<ORT>委托商品标题</ORT>	=============================
+<BN>品种名称</BN>	
+
+<BCN>品名名称</BCN>		
+<BS>买卖方向:  1: 买；2：卖</BS>	
+<STA>委托状态：0：未成交1：部分成交2：全部成交3：已下架11：待管理员审核</STA>
+
+<PRI>单位价格</PRI>
+<QTY>商品数量</QTY>
+<TQ>已成交数量</TQ>
+
+<U>商品单位</U>	
+<OT>委托时间</OT>=====================================
+<ET>生效时间，为空显示"--"</ET>
+
+<RMK>附加条款</RMK>
+<VH>信息有效期（单位：小时）：
+-1：长期有效；其他值整数小时
+</VH>
+
+<TF>成交方式：1：直接成交；2：可议价成交；3：必须议价成交</TF>
+
+<TPH>保证金支付期限(小时)，限制条件显示,品种交易模式：（1）诚信保障金模式</TPH>
+<TMB>买方诚信保障金 限制条件显示,品种交易模式：（1）诚信保障金模式</TMB>
+<TMS>卖方诚信保障金 限制条件显示,品种交易模式：（1）诚信保障金模式 </TMS>
+<IPM>是否已支付履约保证金： Y:是；N:否 限制条件显示,品种交易模式：（1）诚信保障金模式 </IPM>
+
+<PF>是否卖仓单：0：否；1：是</PF>
+
+<STI>卖仓单号 限制条件显示，是否卖仓单：（1）是</STI>
+<OWI>撤单人 限制条件显示，委托状态：（3）已下架</OWI>
+<OWT>撤单时间 限制条件显示，委托状态：（3）已下架 </OWT>
+<MTQ>最小交易数量</MTQ>
+<TU>交易单位</TU> 起订量：  1.00(份)，超出部分按 1.00(份)整数倍递增 
+</DET>交收地类型：1：指定仓库；2：指定交收地 </DET>
+<DWI>交收仓库号，为空显示"--" 限制条件显示，交收地类型：（1）指定仓库</DWI>
+<DEA>交收地，为空显示"--"
+限制条件显示，交收地类型：（2）指定交收地
+</DEA>
+<DMB>买方履约保证金</DMB>
+<DMS>卖方履约保证金</DMS>
+<TY>交收类型: 0: 协议交收； 1：自主交收 </TY>
+<PT>付款类型： 0：先款后货；1：先货后款；2：无限制 限制条件显示，交收类型：（1）自主交收</PT>
+<DDT>交收日类型：0：指定期限；1：指定日期 </DDT>
+<DPH>交货期限（单位：小时）限制条件显示，交收日类型：（0）指定期限</DPH>
+<DD>交货日期 限制条件显示，交收日类型：（1）指定日期</DD>
+备款/备货期限： 
+指定期限： 成交后顺延5个小时交货；
+指定日期：指定2016年06月18日为交货日期；
+<RESULTLIST>	
+   <PRS>
+				  		<PRO>
+<PT>属性类型 （基本属性 质量指标）</PT>
+<PN>品种属性名称</PN>
+<PV>品名属性值</PV>
+</PRO>
+</PRS>
+<ORP>
+<PI>委托商品图片ID</PI>
+</ORP>
+</RESULTLIST>
+</RESULT>
+		</REP>
+	</MEBS_MOBILE>
+
+    只查询客户本人的所有委托
+当委托状态：0（未成交）、1（部分成交），才可做"撤销委托"操作
+
+14. 发布委托
+请求包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="order_submit"> OrderSubmit
+<U>登陆用户ID</U>
+<SI>SESSION_ID<SI>
+（基本信息）
+
+<BS>买卖方向:
+1: 买；2：卖
+</BS>	
+<PF>是否卖仓单：
+0：否；1：是
+</PF>
+<ORT>委托商品标题</ORT>
+
+<CI>所属分类ID</CI>
+<BI>品种ID</BI>	
+<B>关联仓单ID</B>
+<PROS>
+<PR> 商品属性
+		<T>属性类别 (基本属性、质量指标) </T>
+		<P>品种属性代码</P>
+		<N>商品属性代码/名称</N>
+</PR>
+</PROS>
+<PICS>
+	<PIC>
+		<B>图片base64码<B>
+	</PIC>
+</PICS>
+（交易信息）
+
+<PRI>委托价格</PRI>
+<QTY>委托数量</QTY>
+<MTQ>最小交易数量</MTQ>
+
+<TU>交易单位</TU>
+<TF>成交方式：
+1：直接成交；2：可议价成交；3：必须议价成交
+</TF>
+<VH>信息有效期（单位：小时）：
+-1：长期有效；其他值整数小时
+</VH>
+
+<MT>履约保证金支付方式  1支付  2不支付 </MT>
+（交收信息）
+<TY>交收类型:
+0: 协议交收； 1：自主交收
+</TY>
+<PT>付款类型：
+0：先款后货；1：先货后款；2：无限制
+</PT>
+
+</DET>交收地类型：
+1：指定仓库；2：指定交收地
+</DET>
+<DWI>交收仓库号</DWI>
+<DEA>交收地</DEA>
+
+<DDT>交收日类型：
+0：指定期限；1：指定日期
+</DDT>
+<DPH>交货期限（单位：小时）</DPH>
+<DD>交货日期</DD>
+<DMB>买方履约保证金</DMB>
+<DMS>卖方履约保证金</DMS>
+<RMK>附加条款</RMK>
+		</REQ>
+	</MEBS_MOBILE>
+返回包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="order_submit">
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					=0成功, 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容</MESSAGE>	
+			</RESULT>
+		</REP>
+	</MEBS_MOBILE>
+15. 撤销委托
+请求包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="order_cancel">
+<U>登陆用户ID</U>
+<SI>SESSION_ID<SI>
+
+<ORI>委托单号</ORI>
+		</REQ>
+	</MEBS_MOBILE>
+返回包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="order_cancel">
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					=0成功, 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容</MESSAGE>	
+			</RESULT>
+		</REP>
+	</MEBS_MOBILE>
+16. 摘牌
+请求包
+<?xmlversion="1.0"encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="pickoff_order">
+				<U>登陆用户ID</U>
+<SI>SESSION_ID<SI>
+
+<ORI>委托单号</ORI>
+<Q>购买数量</Q>
+<M>是否同时支付保证金  1是  2否</M>
+		</REQ>
+	</MEBS_MOBILE>
+
+返回包
+<?xmlversion="1.0"encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="pickoff_order">
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					=0成功, 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容</MESSAGE>
+			</RESULT>
+		</REP>
+	</MEBS_MOBILE>
+
+17. 议价委托查询
+请求包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="suborder_query">
+<U>登陆用户ID</U>
+<SI>SESSION_ID<SI>
+<CHF> 当前历史查询标志
+0：当前记录;
+1: 历史记录
+</CHF>
+（当前查询条件）
+
+<UT>最大更新时间,微妙表示</UT>
+（历史查询条件）
+<PN>当前页码</PN>
+<PS>每页显示条数</PS>
+<T>交易商委托议价的类型标志：
+     1：发起的议价
+     2：接受的议价
+</T>
+
+<STA>委托议价状态：
+    -1：全部
+0：等待答复 
+1：委托方接受 
+2：委托方拒绝 
+3：议价方撤单 
+4：系统自动撤单 
+5: 管理员撤单
+</STA>
+		</REQ>
+	</MEBS_MOBILE>
+
+返回包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="suborder_query">
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					=0成功, 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容</MESSAGE>	
+
+<TTLREC>总记录数</TTLREC>
+<PN>当前页码</PN>
+<PS>每页显示条数</PS>
+
+			</RESULT>
+<RESULTLIST>	
+				<REC>
+<SI>议价委托单号</SI>	
+<ORT>委托标题</ORT>	
+<PRI>单价</PRI>
+
+<QTY>数量</QTY>		
+<U>商品单位</U>	
+<T>交收类型:
+    0: 协议交收
+    1：自主交收
+</T>	
+
+<STA>委托议价状态：
+0：等待答复 
+1：委托方接受 
+2：委托方拒绝 
+3：议价方撤单 
+4：系统自动撤单 
+5: 管理员撤单
+</STA>
+<SFI>议价交易商ID</SFI>
+<CT>议价提出时间</CT>
+</REC>
+			</RESULTLIST>
+		</REP>
+	</MEBS_MOBILE>
+操作：
+ 》 "撤销议价"，限制条件：
+（2）当议价委托状态：0（等待答复）
+（2）当前登录交易商ID与议价交易商ID相等
+》 "同意"、"拒绝"，限制条件：
+（1）当议价委托状态：0（等待答复）
+（2）当前登录交易商ID与议价交易商ID不相等
+18. 议价委托详情查询
+请求包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="suborder_info_query">
+<U>登陆用户ID</U>
+<SI>SESSION_ID<SI>
+<CHF> 当前历史查询标志
+0：当前记录;
+1: 历史记录
+</CHF>
+<SOI>议价委托单号</SOI>
+		</REQ>
+	</MEBS_MOBILE>
+
+返回包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="suborder_info_query">
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					=0成功, 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容</MESSAGE>	
+<CHF> 当前历史查询标志
+0：当前记录;
+1: 历史记录
+</CHF>
+
+<SOI>议价委托单号</SOI>	
+（议价信息）
+<STA>委托议价状态：
+0：等待答复 
+1：委托方接受 
+2：委托方拒绝 
+3：议价方撤单 
+4：系统自动撤单 
+5: 管理员撤单
+</STA>
+
+<PRI>价格</PRI>
+<QTY>议价数量</QTY>
+<U>商品单位</U>
+
+<WHI>交收仓库</WHI>
+<CT>提出时间</CT>
+
+<RT>答复时间</RT>
+<RM>答复信息</RM>
+<DMB>买方履约保证金</DMB>
+
+<DMS>卖方履约保证金</DMS>
+<DDT>交收日类型：
+0：指定期限；1：指定日期
+</DDT>
+<DPH>交货期限（单位：小时）
+限制条件显示，交收日类型：（0）指定期限
+</DPH>
+<DD>交货日期
+限制条件显示，交收日类型：（1）指定日期
+</DD>
+备款/备货期限： 
+指定期限： 成交后顺延5个小时交货；
+指定日期：指定2016年06月18日为交货日期；
+
+<RMK>附加条款</RMK>
+（委托方信息）
+委托交易商信息，查询交易商信息协议
+限制显示条件：当前登录交易商ID与议价交易商ID相等
+（议价方信息）
+议价委托交易商信息，查询交易商信息协议
+当前登录交易商ID与议价交易商ID不相等
+<SFI>议价委托交易商ID</SFI>
+<OFI>委托交易商ID</OFI>
+（委托信息）
+根据委托单号，查询委托详情协议
+
+<ORI>委托单号</ORI>
+</RESULT>
+		</REP>
+	</MEBS_MOBILE>
+操作：
+ 》 "撤销议价"，限制条件：
+（2）当议价委托状态：0（等待答复）
+（2）当前登录交易商ID与议价交易商ID相等
+》 "同意"、"拒绝"，限制条件：
+（1）当议价委托状态：0（等待答复）
+（2）当前登录交易商ID与议价交易商ID不相等
+19. 交易商信息
+请求包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="firm_info">
+<U>登陆用户ID</U>
+<SI>SESSION_ID<SI>
+		</REQ>
+	</MEBS_MOBILE>
+
+返回包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="firm_info">
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					=0成功, 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容</MESSAGE>
+<TI>交易员ID</TI>
+<UI>用户名</UI>
+<TN>交易员名称</TN>
+
+<FI>交易商ID</FI>
+<FN>交易商名称</FN>
+<FT>交易商类型</FT>
+
+<AD>交易商地址</AD>
+<CM>联系人</CM>
+<PH>联系人电话</PH>
+
+<MO>手机号</MO>
+<FAX>传真</FAX>
+<PC>邮编</PC>
+
+<EM>电子邮箱</EM>
+<CT>创建时间</CT>
+<MT>修改时间</MT>
+		</RESULT>
+</REP>
+	</MEBS_MOBILE>
+
+20. 诚信保障金查询
+请求包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="subscription_query">
+<U>登陆用户ID</U>
+<SI>SESSION_ID<SI>
+<T>诚信保障金流水类型查询标志
+ 1:出入金流水；2：赔付流水
+</T>
+<PN>当前页码</PN>
+<PS>每页显示条数</PS>
+		</REQ>
+	</MEBS_MOBILE>
+
+返回包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="subscription_query">
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					=0成功, 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容</MESSAGE>	
+<TTLREC>总记录数</TTLREC>	
+<PN>当前页码</PN>
+<PS>每页显示条数</PS>
+			</RESULT>
+<RESULTLIST>	
+				<REC>
+<FFI>流水号</FFI>		
+<ON>业务名称</ON>	
+<PRI>发生额</PRI>	
+<BAL>资金余额</BAL>		
+<CT>发生时间</CT>
+</REC>
+			</RESULTLIST>
+		</REP>
+	</MEBS_MOBILE>
+
+21. 转入/转出诚信保障金
+请求包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="change_subscription">
+<U>登陆用户ID</U>
+<SI>SESSION_ID<SI>
+<T>转入/转出操作标志
+ 	1:转入；2：转出
+</T>
+<IA>输入的金额</IA>
+		</REQ>
+	</MEBS_MOBILE>
+
+返回包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="change_subscription">
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					=0成功, 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容</MESSAGE>
+		</RESULT>
+</REP>
+	</MEBS_MOBILE>
+
+22. 交易商资金信息查询
+请求包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="firm_funds">
+<U>登陆用户ID</U>
+<SI>SESSION_ID<SI>
+		</REQ>
+	</MEBS_MOBILE>
+
+返回包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="firm_funds">
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					=0成功, 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容</MESSAGE>
+<FI>交易商ID</FI>
+<BAL>资金余额</BAL>
+<FRF>冻结资金</FRF>
+<UF>当前可用资金</UF>
+<MAR>履约保证金</MAR>
+<GM>占用货款</GM>
+<SUB>诚信保障金</SUB>
+<ORF>交易冻结资金</ORF>
+<SR>系统权益</SR>
+<FR>综合权益</FR>
+		</RESULT>
+</REP>
+	</MEBS_MOBILE>
+
+
+23. 资金流水查询
+请求包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="fundflow_query">
+<U>登陆用户ID</U>
+<SI>SESSION_ID<SI>
+<CHF> 当前历史查询标志
+0：当前记录;
+1: 历史记录
+</CHF>
+（当前查询条件）
+<LFI>最后流水ID(第一次填0)</LFI>
+<REW>要多少条记录
+	大于0向上查最新的流水
+	小于0向下查之前的流水
+</REW>
+（历史查询条件）
+<PN>当前页码</PN>
+<PS>每页显示条数</PS>
+<CON>合同号</CON>
+<SU_N>业务编号</SU_N>
+		</REQ>
+	</MEBS_MOBILE>
+
+返回包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="fundflow_query">
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					=0成功, 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容</MESSAGE>	
+<TTLREC>总记录数</TTLREC>
+<REW>查询方向
+	大于0向上查最新的流水
+	小于0向下查之前的流水
+</REW>
+			</RESULT>
+<RESULTLIST>	
+				<REC>
+<FFI>流水号</FFI>	
+<CON>合同号</CON>		
+<SUN>业务编号</SUN>	
+<PRI>发生额</PRI>	
+<BAL>资金余额</BAL>		
+<CT>发生时间</CT>
+<BD>财务结算日期</BD>	
+</REC>
+			</RESULTLIST>
+		</REP>
+	</MEBS_MOBILE>
+
+查询历史，只查询30天内资金流水
+
+24. 商品查询
+请求包
+<?xmlversion="1.0"encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="breed_commodity_query"> BreedCommodityQuery
+		</REQ>
+	</MEBS_MOBILE>
+
+返回包
+<?xmlversion="1.0"encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="breed_commodity_query"> BreedCommodityQuery
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					=0成功 , 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容(错误登录剩余次数)</MESSAGE>
+			</RESULT>
+			<RESULTLIST>
+				<REC>
+					<B>品种代码</B>
+					<N>品种名称</N>
+					<BLS>
+						<L>下属商品
+							<C>商品代码</C>
+							<K>商品名称</K>
+						</L>
+					 </BLS>
+				</REC>
+			</RESULTLIST>
+		</REP>
+	</MEBS_MOBILE>
+
+
+25. 商品属性查询
+请求包
+<?xmlversion="1.0"encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="commodity_prop_query">
+				<B>品种代码</B>
+				<C>商品代码</C>
+		</REQ>
+	</MEBS_MOBILE>
+
+返回包
+<?xmlversion="1.0"encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="commodity_prop_query"> commodityPropQuery
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					=0成功 , 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容(错误登录剩余次数)</MESSAGE>
+			</RESULT>
+			<RESULTLIST>
+				<REC>
+					<PT>属性类型（基本属性 质量指标）</PT>
+					<BPI>品种属性代码</BPI>
+					<BPN>品种属性名称</BPN>
+					<CPS>商品属性列表
+						<CP>							
+<CPI>属性代码</CPI>
+							<CPN>属性名称</CPN>
+</CP>
+</CPS>
+				</REC>
+			</RESULTLIST>
+		</REP>
+	</MEBS_MOBILE>
+
+
+26. 发起议价
+请求包
+<?xmlversion="1.0"encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="bargain">
+				<U>用户代码</U>
+<SI>sessionId</SI>
+				<P>议价价格</P>
+				<Q>数量</Q>
+				<T>交收指定方式  1指定仓库 2指定交收地点</T>
+				<W>交收仓库ID</W>
+				<A>交收地址</A>
+				<H>顺延小时数</H>
+				<D>指定交货日期</D>
+				<SM>卖方履约保证金</SM>
+				<BM>买方履约保证金</BM>
+				<F>附加条款</F>
+		</REQ>
+	</MEBS_MOBILE>
+
+返回包
+<?xmlversion="1.0"encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="bargain">
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					=0成功 , 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容(错误登录剩余次数)</MESSAGE>
+			</RESULT>
+		</REP>
+	</MEBS_MOBILE>
+
+27. 撤销议价功能
+请求包
+<?xmlversion="1.0"encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="bargain_cancel">
+				<U>用户代码</U>
+<SI>sessionId</SI>
+<B>议价单ID</B>
+		</REQ>
+	</MEBS_MOBILE>
+
+返回包
+<?xmlversion="1.0"encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="bargain_cancel">
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					=0成功 , 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容(错误登录剩余次数)</MESSAGE>
+			</RESULT>
+		</REP>
+	</MEBS_MOBILE>
+
+28. 仓单信息查询
+请求包
+<?xmlversion="1.0"encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="bill_query">
+				<U>用户代码</U>
+<SI>sessionId</SI>
+<B>仓单ID（为空查询所有）</B>
+<W>仓库ID（为空查询所有）</W>
+<PN>当前页码</PN>
+<PS>每页显示条数</PS>
+		</REQ>
+	</MEBS_MOBILE>
+
+返回包
+<?xmlversion="1.0"encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="bill_query">
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					=0成功 , 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容(错误登录剩余次数)</MESSAGE>
+				<TRD>总记录数</TRD>
+			</RESULT>
+			<RESULTLIST>
+				<REC>
+					<I>仓单代码</I>
+					<B>品种代码</B>
+					<C>商品代码</C>
+<Q>仓储量</Q>
+					<P>仓储价格</P>
+				</REC>
+			</RESULTLIST>
+
+		</REP>
+	</MEBS_MOBILE>
+
+
+29. 添加/更新模板
+请求包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="template_submit"> templateSubmit
+<U>登陆用户ID</U>
+<SI>SESSION_ID<SI>
+（基本信息）
+<BS>买卖方向:
+1: 买；2：卖
+</BS>	
+<PF>是否卖仓单：
+0：否；1：是
+</PF>
+<ORT>委托商品标题</ORT>
+<CI>所属分类ID</CI>
+<BI>品种ID</BI>	
+<B>关联仓单ID</B>
+<PROS>
+<PR> 商品属性
+		<T>属性类别 (基本属性、质量指标) </T>
+		<P>品种属性代码</P>
+		<N>商品属性代码/名称</N>
+</PR>
+</PROS>
+（交易信息）
+<PRI>委托价格</PRI>
+<QTY>委托数量</QTY>
+<MTQ>最小交易数量</MTQ>
+<TU>交易单位</TU>
+<TF>成交方式：
+1：直接成交；2：可议价成交；3：必须议价成交
+</TF>
+<VH>信息有效期（单位：小时）：
+-1：长期有效；其他值整数小时
+</VH>
+<MT>履约保证金支付方式  1支付  2不支付 </MT>
+（交收信息）
+<TY>交收类型:
+0: 协议交收； 1：自主交收
+</TY>
+<PT>付款类型：
+0：先款后货；1：先货后款；2：无限制
+</PT>
+</DET>交收地类型：
+1：指定仓库；2：指定交收地
+</DET>
+<DWI>交收仓库号</DWI>
+<DEA>交收地</DEA>
+<DDT>交收日类型：
+0：指定期限；1：指定日期
+</DDT>
+<DPH>交货期限（单位：小时）</DPH>
+<DD>交货日期</DD>
+<DMB>买方履约保证金</DMB>
+<DMS>卖方履约保证金</DMS>
+<RMK>附加条款</RMK>
+<M>模板号
+	如果模板号为空，则进行添加操作	
+如果模板号不为空，则将修改保持到模板
+</M>
+		</REQ>
+	</MEBS_MOBILE>
+返回包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="template_submit">
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					=0成功, 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容</MESSAGE>	
+			</RESULT>
+		</REP>
+	</MEBS_MOBILE>
+
+
+30. 模板信息查询
+请求包
+<?xmlversion="1.0"encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="template_query"> templateQuery
+				<U>用户代码</U>
+<SI>sessionId</SI>
+<PN>当前页码</PN>
+<PS>每页显示条数</PS>
+<T>模板类型  1系统模板 2自定义模板  3系统模板+自定义模板</T>
+		</REQ>
+	</MEBS_MOBILE>
+
+返回包
+<?xmlversion="1.0"encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="template_query">
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					=0成功 , 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容(错误登录剩余次数)</MESSAGE>
+				<TRD>总记录数</TRD>
+			</RESULT>
+			<RESULTLIST>
+				<REC>
+					<I>模板代码</I>
+					<N>商品标题</N>
+					<B>分类代码</B>
+					<C>品名</C>
+<Q>数量</Q>
+					<P>价格</P>
+					<PER>有效期限</PER>
+					<BS>买卖方向</BS>
+					<T>交收类型</T>
+				</REC>
+			</RESULTLIST>
+		</REP>
+	</MEBS_MOBILE>
+
+
+
+
+31. 模板详情查询
+请求包
+<?xmlversion="1.0"encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="template_detail_query"> templateDetailQuery
+				<U>用户代码</U>
+<SI>sessionId</SI>
+<N>模板ID</N>
+		</REQ>
+	</MEBS_MOBILE>
+
+返回包
+<?xmlversion="1.0"encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="template_detail_query"> TemplateDetailQuery
+				<RESULT>
+				  <RETCODE>返回码</RETCODE>
+					=0成功 , 其他为失败，错误描述在MESSAGE 中
+				  <MESSAGE>返回的提示消息内容(错误登录剩余次数)</MESSAGE>
+
+<ORI>委托单号</ORI>	
+<ORT>委托商品标题</ORT>	
+<BN>品种名称</BN>	
+
+<BCN>所属分类名称</BCN>		
+<BS>买卖方向:
+  1: 买；2：卖
+</BS>	
+<T>模板类型 
+1系统模板 2自定义模板 3系统模板+自定义模板
+</T>
+
+<STA>委托状态：
+0：未成交
+1：部分成交
+2：全部成交
+3：已下架
+11：待管理员审核
+</STA>
+<PRI>单位价格</PRI>
+<QTY>商品数量</QTY>
+
+<TQ>已成交数量</TQ>
+<U>商品单位</U>	
+<OT>委托时间</OT>
+
+<ET>生效时间，为空显示"--"</ET>
+<RMK>附加条款</RMK>
+<VH>信息有效期（单位：小时）：
+-1：长期有效；其他值整数小时
+</VH>
+
+<TF>成交方式：
+1：直接成交；2：可议价成交；3：必须议价成交
+</TF>
+<TPH>保证金支付期限(小时)，
+限制条件显示,品种交易模式：（1）诚信保障金模式
+</TPH>
+<TMB>买方诚信保障金
+限制条件显示,品种交易模式：（1）诚信保障金模式
+</TMB>
+
+<TMS>卖方诚信保障金
+限制条件显示,品种交易模式：（1）诚信保障金模式
+</TMS>
+<IPM>是否已支付履约保证金：
+  Y:是；N:否
+限制条件显示,品种交易模式：（1）诚信保障金模式
+</IPM>
+<PF>是否卖仓单：
+0：否；1：是
+</PF>
+
+<STI>卖仓单号
+限制条件显示，是否卖仓单：（1）是
+</STI>
+<OWI>撤单人
+限制条件显示，委托状态：（3）已下架
+</OWI>
+<OWT>撤单时间
+限制条件显示，委托状态：（3）已下架
+</OWT>
+
+<MTQ>最小交易数量</MTQ>
+<TU>交易单位</TU>
+起订量： 
+1.00(份)，超出部分按 1.00(份)整数倍递增 
+</DET>交收地类型：
+1：指定仓库；2：指定交收地
+</DET>
+
+<DWI>交收仓库号，为空显示"--"
+限制条件显示，交收地类型：（1）指定仓库
+</DWI>
+<DEA>交收地，为空显示"--"
+限制条件显示，交收地类型：（2）指定交收地
+</DEA>
+<DMB>买方履约保证金</DMB>
+
+<DMS>卖方履约保证金</DMS>
+<TY>交收类型:
+  0: 协议交收； 1：自主交收
+</TY>
+<PT>付款类型：
+0：先款后货；1：先货后款；2：无限制
+限制条件显示，交收类型：（1）自主交收
+</PT>
+
+<DDT>交收日类型：
+0：指定期限；1：指定日期
+</DDT>
+<DPH>交货期限（单位：小时）
+限制条件显示，交收日类型：（0）指定期限
+</DPH>
+<DD>交货日期
+限制条件显示，交收日类型：（1）指定日期
+</DD>
+
+</RESULT>
+<RESULTLIST>	
+		<REC>
+<PRS>
+				  		    <PRO>
+<PT>属性类型 （基本属性 质量指标）</PT>
+<PN>品种属性名称</PN>
+<PV>品名属性值</PV>
+
+</PRO>
+</PRS>
+<REC>
+</RESULTLIST>
+		</REP>
+	</MEBS_MOBILE>
+32. 撤销模板
+请求包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="template_cancel">
+<U>登陆用户ID</U>
+<SI>SESSION_ID<SI>
+<N>模板号</N>
+		</REQ>
+	</MEBS_MOBILE>
+返回包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="template_cancel">
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					=0成功, 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容</MESSAGE>	
+			</RESULT>
+		</REP>
+	</MEBS_MOBILE>
+
+33. 仓单详细信息
+请求包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE> orderdetails
+		<REQ name="bill_detail_query"> BillDetailQuery
+<U>登陆用户ID</U>
+<SI>SESSION_ID<SI>
+
+<N>仓单号</N>
+		</REQ>
+	</MEBS_MOBILE>
+返回包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="bill_detail_query"> BillDetailQuery
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					=0成功, 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容</MESSAGE>
+	
+				<B>分类代码</B>
+				<C>品名代码</C>
+				<T>商品标题</T>
+
+				<Q>数量</Q>
+				<P>价格</P>
+				<S>起顶量</S>
+
+				<U>交易单位</U>
+				<W>交收仓库代码</W>
+
+			</RESULT>
+<RESULTLIST>	
+	<REC>
+   <PRS>PropertyList
+				  		<PRO>
+<PT>属性类型 （基本属性 质量指标）</PT>
+<PN>品种属性名称</PN>
+<PV>品名属性值</PV>
+
+</PRO>
+</PRS>
+				</REC>
+			</RESULTLIST>
+		</REP>
+	</MEBS_MOBILE>
+
+34.  商家信息查询
+请求包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE> http://172.18.3.10:61234/espot_front/front/app/mgr/display/firmDetail.action?entity.firmID=jiling001
+		<REQ name="traders_info" ref="">
+<T>交易商代码</T>
+<ORI>委托单号</ORI>
+		</REQ>
+	</MEBS_MOBILE>
+
+返回包
+<?xml version="1.0" encoding = "GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="firm_info" ref="">
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					=0成功, 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容</MESSAGE>
+<FI sub="FirmId">交易商ID</FI>
+<FN sub="FirmName">交易商名称</FN>
+<FT sub="FirmType">交易商类型</FT>
+<AD sub="Address">交易商地址</AD>
+<CM sub="ContactMan">联系人</CM>
+<PH sub="Phone">联系人电话</PH>
+<MO sub="Mobile">手机号</MO>
+<FAX sub="Fax">传真</FAX>
+<PC sub="PostCode">邮编</PC>
+<EM sub="Email">电子邮箱</EM>
+		</RESULT>
+</REP>
+	</MEBS_MOBILE>
+
+注意：根据交易商代码获取对应的交易商信息
+	   根据委托单号获取对应的交易商信息
+35. 图片获取（网页地址下载）
+请求参数
+Arg 1 key type : value (图片类型   1委托图片 2 品名图片 )
+Arg 2 key limit : value (图片限制大小  /  长*宽 )
+Arg 3 key id : value (图片编号 / 品名代码 )
+Arg 4 key oid : value (委托流水号)
+
+36. 图片上传（二进制）
+请求类型：application/octet-stream 
+提交包
+short (协议号) 0x15
+String（交易员代码）
+long (SESSION_ID) 
+int(图片限制大小)
+long(委托流水号)
+long(图片byte大小)
+byte[](图片二进制流)
+返回包
+short  (协议号) 0x15
+long (返回码 >0 成功 即图片唯一标识码 ，其他失败)
+String(返回的提示消息内容)
+
+
+
+
+返回码信息对照表
+协议	错误代码（RETCODE）	错误信息描述（MESSAGE）	说明	建议处理方法
+用户登陆	-1	交易用户不存在		
+	-2	口令不正确		
+	-3	禁止登陆		
+	-4	Key盘验证错误		
+	-5	其它异常		
+	-6	交易板块被禁止		
+	-203	未知异常		
+	-204	下单服务器已关闭		
+				
+断开连接	-203	未知异常		
+	-204	下单服务器已关闭		
+				
+修改密码	-203	未知异常		
+	-201	身份不合法，请重新登陆		
+	-2	旧密码错误		
+	-204	下单服务器已关闭		
+				
+入委托单	0	成功		
+	1	身份不合法		
+	2	市场未启用		
+	3	不是开市时间		
+	4	不是代为委托员交易时间		
+	5	交易员和代为委托员不能同时存在		
+	10	商品处于禁止交易状态		
+	11	商品不在交易时间范围内		
+	12	委托价格超出涨幅上限		
+	13	委托价格低于跌幅下限		
+	14	委托价格不在此商品最小价位变动范围内		
+	15	不存在此商品		
+	30	此交易员不存在		
+	31	此交易员没有操作该客户的权限		
+	32	此交易客户不存在		
+	33	此交易客户为禁止交易状态		
+	34	此交易商不存在		
+	35	此交易商为禁止交易状态		
+	36	此交易商所在组为禁止交易状态		
+	37	此代为委托员没有操作该交易商的权限		
+	38	此代为委托员不存在		
+	200	代码异常而失败		
+	-1	资金余额不足		
+	-2	超过交易商对此商品的最大订货量		
+	-3	超过客户总的最大订货量		
+	-4	超过品种最大订货量		
+	-5	超过商品最大订货量		
+	-6	超过交易商对此商品的最大净订货量		
+	-11	此委托已处于正在撤单状态		
+	-12	此委托已全部成交了		
+	-13	此委托已完成撤单了		
+	-21	持仓不足		
+	-22	指定仓不足		
+	-99	执行存储时未找到相关数据		
+	-100	执行存储失败		
+	-204	下单服务器已关闭		
+	-206	委托信息不能为空		
+撤委托单	与入委托单相同			
+				
+其他所有查询	-203	未知异常		
+	-201	身份不合法，请重新登陆		
+	-202	记录未找到		
+	-204	下单服务器已关闭		
+				
+				
+

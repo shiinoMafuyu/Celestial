@@ -1,0 +1,313 @@
+package gnnt.MEBS.MobileServer.vo.micro.trade;
+
+import gnnt.MEBS.MobileServer.vo.RequestVO;
+import gnnt.MEBS.MobileServer.vo.ResponseVO;
+
+import gnnt.util.string.StringUtil;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+import java.util.List;
+import java.util.ArrayList;
+
+
+
+/**
+ * 
+ * <b>修改记录：</b> 
+ * <p>
+ * <li>
+ * 
+ *                        ---- wangzg  2017-05-08
+ * </li>
+ * </p>
+ * 
+ * <b>类说明：商品委托查询类,额</b>
+ * <p> 
+ * 
+ * </p>
+ */
+public class CmdOrderQueryRequestVO extends RequestVO{
+	/**
+	 * 品种代码
+	 */
+	private String B ;
+	/**
+	 * 品名代码
+	 */
+	private String C ;
+	/**
+	 * 最高价
+	 */
+	private String X ;
+	/**
+	 * 最低价
+	 */
+	private String I ;
+	/**
+	 * 交易模式  1保证金 2诚信保障金 3或为空 所有
+	 */
+	private String M ;
+	/**
+	 * 排序方式time  asc 时间升序 time desc 时间降序price asc 价格升序 price desc 价格降序qty asc 数量升序 qty desc 数量降序type asc 类型升序 type desc 类型降序
+	 */
+	private String R ;
+	/**
+	 * 商品标题
+	 */
+	private String T ;
+	/**
+	 * 最新委托单号
+	 */
+	private String N ;
+	/**
+	 * 查询条数  大于零 查询大于最新委托号的N条数据  小于零 查询小于最新委托号的N条数据
+	 */
+	private String S ;
+	/**
+	 * 查询买卖委托标志： 1：买委托 2：卖委托 3: 所有委托
+	 */
+	private String BS ;
+	
+	/**
+	 * <b>方法说明：</b>
+	 * <ul>
+	 * 获取商品属性列表列表
+	 * </ul>
+	 * @return
+	 */
+	public PropertyList getPropertyList() {
+		return PROS;
+	}
+	/**
+	 * 商品属性列表
+	 */ 
+	private PropertyList PROS = new PropertyList();
+	
+	/**
+	 * <b>构造方法</b>
+	 * <br/>
+	 */
+	public CmdOrderQueryRequestVO() {
+		super();
+	}
+	
+	@Override
+	public String getUserID() {
+		return null;
+	}
+	
+	@Override
+	public long getSessionID() {
+		return StringUtil.strToLong(null,0);
+	}
+	
+	@Override
+	public ResponseVO getResponseVO() {
+		return new CmdOrderQueryResponseVO();
+	}
+	
+	/**
+	 * <b>方法说明：</b>
+	 * <ul>
+	 * 获取品种代码
+	 * </ul>
+	 * @return
+	 */
+	public Long getBreedId(){
+		return StringUtil.strToLong(B,0);
+	}
+	
+	/**
+	 * <b>方法说明：</b>
+	 * <ul>
+	 * 获取品名代码
+	 * </ul>
+	 * @return
+	 */
+	public Long getCommodityId(){
+		return StringUtil.strToLong(C,0);
+	}
+	
+	/**
+	 * <b>方法说明：</b>
+	 * <ul>
+	 * 获取最高价
+	 * </ul>
+	 * @return
+	 */
+	public Double getMaxPrice(){
+		return StringUtil.strToDouble(X,0.0);
+	}
+	
+	/**
+	 * <b>方法说明：</b>
+	 * <ul>
+	 * 获取最低价
+	 * </ul>
+	 * @return
+	 */
+	public Double getMinPrice(){
+		return StringUtil.strToDouble(I,0.0);
+	}
+	
+	/**
+	 * <b>方法说明：</b>
+	 * <ul>
+	 * 获取交易模式  1保证金 2诚信保障金 3或为空 所有
+	 * </ul>
+	 * @return
+	 */
+	public Integer getTradeMode(){
+		return StringUtil.strToInt(M, 0);
+	}
+	
+	/**
+	 * <b>方法说明：</b>
+	 * <ul>
+	 * 获取排序方式time  asc 时间升序 time desc 时间降序price asc 价格升序 price desc 价格降序qty asc 数量升序 qty desc 数量降序type asc 类型升序 type desc 类型降序
+	 * </ul>
+	 * @return
+	 */
+	public String getSortType(){
+		return R;
+	}
+	
+	/**
+	 * <b>方法说明：</b>
+	 * <ul>
+	 * 获取商品标题
+	 * </ul>
+	 * @return
+	 */
+	public String getCommodityTitle(){
+		return T;
+	}
+	
+	/**
+	 * <b>方法说明：</b>
+	 * <ul>
+	 * 获取最新委托单号
+	 * </ul>
+	 * @return
+	 */
+	public Long getNewOrderID(){
+		return StringUtil.strToLong(N,0);
+	}
+	
+	/**
+	 * <b>方法说明：</b>
+	 * <ul>
+	 * 获取查询条数  大于零 查询大于最新委托号的N条数据  小于零 查询小于最新委托号的N条数据
+	 * </ul>
+	 * @return
+	 */
+	public Integer getSize(){
+		return StringUtil.strToInt(S, 0);
+	}
+	
+	/**
+	 * <b>方法说明：</b>
+	 * <ul>
+	 * 获取查询买卖委托标志： 1：买委托 2：卖委托 3: 所有委托
+	 * </ul>
+	 * @return
+	 */
+	public Integer getBsFlag(){
+		return StringUtil.strToInt(BS, 0);
+	}
+	
+	/**
+	 * 集合类
+	 */
+	public class PropertyList {
+		/**
+		 * 商品属性
+		 */
+		private List<PropertyObj> PRO = new ArrayList<PropertyObj>();
+		
+		/**
+		* <b>方法说明：</b>
+		* <ul>
+		* 设置商品属性
+		* </ul>
+		* @param list
+		*/
+		public void setList(ArrayList<PropertyObj> list) {
+			PRO = list;
+		}
+		
+		/**
+		* <b>方法说明：</b>
+		* <ul>
+		* 获取商品属性
+		* </ul>
+		* @return
+		*/
+		public List<PropertyObj> getList() {
+			return PRO;
+		}
+		
+		/**
+		 * 属性类
+		 */
+		public class PropertyObj {
+			/**
+			 * 品种属性代码
+			 */
+			private String BP ;
+			/**
+			 * 商品属性值
+			 */
+			private String CP ;
+			
+			/**
+			* <b>构造方法</b>
+			* <br/>
+			*/
+			public PropertyObj() {
+				super();
+			}
+			
+			/**
+			 * <b>方法说明：</b>
+			 * <ul>
+			 * 获取品种属性代码
+			 * </ul>
+			 * @return
+			 */
+			public String getBreedProperty(){
+				return BP;
+			}
+			
+			/**
+			 * <b>方法说明：</b>
+			 * <ul>
+			 * 获取商品属性值
+			 * </ul>
+			 * @return
+			 */
+			public String getCommodityPropertyValue(){
+				return CP;
+			}
+			
+			@Override
+			public String toString() {
+				return ToStringBuilder.reflectionToString(this, ToStringStyle.SIMPLE_STYLE);
+			}
+			
+		}
+		
+		@Override
+		public String toString() {
+			return ToStringBuilder.reflectionToString(this, ToStringStyle.SIMPLE_STYLE);
+		}
+		
+	}
+	
+	@Override
+	public String toString() {
+		return ToStringBuilder.reflectionToString(this, ToStringStyle.SIMPLE_STYLE);
+	}
+	
+}
+

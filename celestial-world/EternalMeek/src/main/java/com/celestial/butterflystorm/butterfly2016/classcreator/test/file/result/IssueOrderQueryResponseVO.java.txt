@@ -1,0 +1,319 @@
+package gnnt.MEBS.MobileServer;
+
+import gnnt.MEBS.MobileServer.vo.ResponseVO;
+
+import java.util.List;
+import java.util.ArrayList;
+import gnnt.util.number.NUMFormat;
+import gnnt.util.date.DateFormat;
+import java.util.Date;
+
+
+
+/**
+ * 
+ * <b>修改记录：</b> 
+ * <p>
+ * <li>
+ * 
+ *                        ---- wangzg  2017-05-08
+ * </li>
+ * </p>
+ * 
+ * <b>类说明：申购委托查询返回类</b>
+ * <p> 
+ * 
+ * </p>
+ */
+@SuppressWarnings("unused")
+public class IssueOrderQueryResponseVO extends ResponseVO{
+	
+	/** 集合类 */
+	private IssueOrderQueryList RESULTLIST;
+	
+	/**
+	 * 获取集合类
+	 * <br/><br/>
+	 * @return
+	 */
+	public IssueOrderQueryList getResultList(){
+		return RESULTLIST;
+	}
+	
+	/**
+	 * 设置集合类
+	 * <br/><br/>
+	 * @param resultList
+	 */
+	public void setResultList(IssueOrderQueryList resultList){
+		RESULTLIST = resultList;
+	}
+	
+	/**
+	 * 核心集合类
+	 */
+	public class IssueOrderQueryList{
+		/** 信息类集合 */
+		private List<IssueOrderQueryObj> REC;
+	
+		/**
+		 * 获取信息集合
+		 * <br/><br/>
+		 * @return
+		 */
+		public List<IssueOrderQueryObj> getList(){
+			return REC;
+		}
+		
+		/**
+		 * 设置信息集合
+		 * <br/><br/>
+		 * @param list
+		 */
+		public void setList(List<IssueOrderQueryObj> list){
+			REC = list;
+		}
+		
+	}
+	
+	/**
+	 * 返回结果信息类
+	 */
+	public class IssueOrderQueryResultVO extends ResultVO{
+		/**
+		 * 总记录数
+		 */
+		private String TTLREC ;
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置总记录数
+		 * </ul>
+		 * @param
+		 */
+		public void setTotalRecords(Integer totalRecords) {
+			TTLREC = totalRecords.toString();
+		}
+		
+	}
+	
+	/**
+	 * 主要集合类
+	 */
+	public class IssueOrderQueryObj{
+		/**
+		 * 委托单号
+		 */
+		private String OR_N ;
+		/**
+		 * 商品代码
+		 */
+		private String CO_I ;
+		/**
+		 * 商品名称
+		 */
+		private String CO_N ;
+		/**
+		 * 状态：1:已委托2:部分成交3:全部成交5:全部撤单6:部分成交后撤单
+		 */
+		private String STA ;
+		/**
+		 * 委托价格
+		 */
+		private String PRI ;
+		/**
+		 * 委托数量
+		 */
+		private String QTY ;
+		/**
+		 * 申购金额
+		 */
+		private String IC ;
+		/**
+		 * 退还申购金额
+		 */
+		private String BACK_IC ;
+		/**
+		 * 预扣发行服务费
+		 */
+		private String ICF ;
+		/**
+		 * 预退还发行服务费
+		 */
+		private String BACK_ICF ;
+		/**
+		 * 委托时间
+		 */
+		private String TIME ;
+		/**
+		 * 结算日期
+		 */
+		private String B_D ;
+		/**
+		 * 开始序号
+		 */
+		private String S_N ;
+		/**
+		 * 结束序号
+		 */
+		private String E_N ;
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置委托单号
+		 * </ul>
+		 * @param
+		 */
+		public void setOrderNum(String orderNum) {
+			OR_N = orderNum;
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置商品代码
+		 * </ul>
+		 * @param
+		 */
+		public void setCommodityID(String commodityID) {
+			CO_I = commodityID;
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置商品名称
+		 * </ul>
+		 * @param
+		 */
+		public void setCommodityName(String commodityName) {
+			CO_N = commodityName;
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置状态：1:已委托2:部分成交3:全部成交5:全部撤单6:部分成交后撤单
+		 * </ul>
+		 * @param
+		 */
+		public void setStatus(Integer status) {
+			STA = status.toString();
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置委托价格
+		 * </ul>
+		 * @param
+		 */
+		public void setPrice(Double price) {
+			PRI = NUMFormat.fmtDouble2(price);
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置委托数量
+		 * </ul>
+		 * @param
+		 */
+		public void setQty(Double qty) {
+			QTY = NUMFormat.fmtDouble2(qty);
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置申购金额
+		 * </ul>
+		 * @param
+		 */
+		public void setImplyCash(Double implyCash) {
+			IC = NUMFormat.fmtDouble2(implyCash);
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置退还申购金额
+		 * </ul>
+		 * @param
+		 */
+		public void setBackImplyCash(Double backImplyCash) {
+			BACK_IC = NUMFormat.fmtDouble2(backImplyCash);
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置预扣发行服务费
+		 * </ul>
+		 * @param
+		 */
+		public void setIntendDeductFee(Double intendDeductFee) {
+			ICF = NUMFormat.fmtDouble2(intendDeductFee);
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置预退还发行服务费
+		 * </ul>
+		 * @param
+		 */
+		public void setBackIntendDeductFee(String backIntendDeductFee) {
+			BACK_ICF = backIntendDeductFee;
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置委托时间
+		 * </ul>
+		 * @param
+		 */
+		public void setDelegationTime(Date delegationTime) {
+			TIME = DateFormat.fmtTime(delegationTime);
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置结算日期
+		 * </ul>
+		 * @param
+		 */
+		public void setClearDate(Date clearDate) {
+			B_D = DateFormat.fmtTime(clearDate);
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置开始序号
+		 * </ul>
+		 * @param
+		 */
+		public void setStartNumber(Long startNumber) {
+			S_N = startNumber.toString();
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置结束序号
+		 * </ul>
+		 * @param
+		 */
+		public void setEndNumber(Long endNumber) {
+			E_N = endNumber.toString();
+		}
+		
+	}
+	
+}
+

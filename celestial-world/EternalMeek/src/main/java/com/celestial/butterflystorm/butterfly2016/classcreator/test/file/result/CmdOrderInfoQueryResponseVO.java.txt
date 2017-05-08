@@ -1,0 +1,970 @@
+package gnnt.MEBS.MobileServer.vo.micro.trade;
+
+import gnnt.MEBS.MobileServer.vo.ResponseVO;
+
+import java.util.List;
+import java.util.ArrayList;
+import gnnt.util.number.NUMFormat;
+import gnnt.util.date.DateFormat;
+import java.util.Date;
+
+
+
+/**
+ * 
+ * <b>修改记录：</b> 
+ * <p>
+ * <li>
+ * 
+ *                        ---- wangzg  2017-05-08
+ * </li>
+ * </p>
+ * 
+ * <b>类说明：模板详情查询请求类,额,嗯是啦嘛!</b>
+ * <p> 
+ * 
+ * </p>
+ */
+@SuppressWarnings("unused")
+public class CmdOrderInfoQueryResponseVO extends ResponseVO{
+	
+	/** 集合类 */
+	private CmdOrderInfoQueryList RESULTLIST;
+	
+	/**
+	 * 获取集合类
+	 * <br/><br/>
+	 * @return
+	 */
+	public CmdOrderInfoQueryList getResultList(){
+		return RESULTLIST;
+	}
+	
+	/**
+	 * 设置集合类
+	 * <br/><br/>
+	 * @param resultList
+	 */
+	public void setResultList(CmdOrderInfoQueryList resultList){
+		RESULTLIST = resultList;
+	}
+	
+	/**
+	 * 核心集合类
+	 */
+	public class CmdOrderInfoQueryList{
+		/** 集合类 */
+		private PropertyList PRS;
+		/** 图片集合类 */
+		private OrderPictureList ORP;
+		
+		/** 信息类集合 */
+		private List<CmdOrderInfoQueryObj> REC;
+	
+		/**
+		 * 获取集合类
+		 * <br/><br/>
+		 * @return
+		 */
+		public PropertyList getPropertyList(){
+			return PRS;
+		}
+		
+		/**
+		 * 设置集合类
+		 * <br/><br/>
+		 * @param resultList
+		 */
+		public void setPropertyList(PropertyList resultList){
+			PRS = resultList;
+		}
+		
+		/**
+		 * 获取图片集合类
+		 * <br/><br/>
+		 * @return
+		 */
+		public OrderPictureList getOrderPictureList(){
+			return ORP;
+		}
+		
+		/**
+		 * 设置图片集合类
+		 * <br/><br/>
+		 * @param resultList
+		 */
+		public void setOrderPictureList(OrderPictureList resultList){
+			ORP = resultList;
+		}
+		
+		/**
+		 * 获取信息集合
+		 * <br/><br/>
+		 * @return
+		 */
+		public List<CmdOrderInfoQueryObj> getList(){
+			return REC;
+		}
+		
+		/**
+		 * 设置信息集合
+		 * <br/><br/>
+		 * @param list
+		 */
+		public void setList(List<CmdOrderInfoQueryObj> list){
+			REC = list;
+		}
+		
+	}
+	
+	/**
+	 * 返回结果信息类
+	 */
+	public class CmdOrderInfoQueryResultVO extends ResultVO{
+		/**
+		 * 委托单号
+		 */
+		private String ORI ;
+		/**
+		 * 委托商品标题
+		 */
+		private String ORT ;
+		/**
+		 * 品种名称
+		 */
+		private String BN ;
+		/**
+		 * 品名名称
+		 */
+		private String BCN ;
+		/**
+		 * 买卖方向:  1: 买；2：卖 
+		 */
+		private String BS ;
+		/**
+		 * 单位价格
+		 */
+		private String PRI ;
+		/**
+		 * 商品数量
+		 */
+		private String QTY ;
+		/**
+		 * 已成交数量
+		 */
+		private String TQ ;
+		/**
+		 * 商品单位
+		 */
+		private String U ;
+		/**
+		 * 委托时间
+		 */
+		private String OT ;
+		/**
+		 * 生效时间，为空显示"--"
+		 */
+		private String ET ;
+		/**
+		 * 附加条款
+		 */
+		private String RMK ;
+		/**
+		 * 信息有效期（单位：小时）：-1：长期有效；其他值整数小时
+		 */
+		private String VH ;
+		/**
+		 * 成交方式：1：直接成交；2：可议价成交；3：必须议价成交 
+		 */
+		private String TF ;
+		/**
+		 * 保证金支付期限(小时)，限制条件显示,品种交易模式：（1）诚信保障金模式 
+		 */
+		private String TPH ;
+		/**
+		 * 买方诚信保障金 限制条件显示,品种交易模式：（1）诚信保障金模式
+		 */
+		private String TMB ;
+		/**
+		 * 卖方诚信保障金 限制条件显示,品种交易模式：（1）诚信保障金模式
+		 */
+		private String TMS ;
+		/**
+		 * 是否已支付履约保证金： Y:是；N:否 限制条件显示,品种交易模式（1）诚信保障金模式 
+		 */
+		private String IPM ;
+		/**
+		 * 是否卖仓单：0：否；1：是 
+		 */
+		private String PF ;
+		/**
+		 * 卖仓单号 限制条件显示，是否卖仓单：（1）是 
+		 */
+		private String STI ;
+		/**
+		 * 撤单人 限制条件显示，委托状态：（3）已下架 
+		 */
+		private String OWI ;
+		/**
+		 * 撤单时间 限制条件显示，委托状态：（3）已下架
+		 */
+		private String OWT ;
+		/**
+		 * 最小交易数量
+		 */
+		private String MTQ ;
+		/**
+		 * 交易单位
+		 */
+		private String TU ;
+		/**
+		 * 交收地类型：1：指定仓库；2：指定交收地
+		 */
+		private String DET ;
+		/**
+		 * 交收仓库号，为空显示"--"限制条件显示，交收地类型：（1）指定仓库
+		 */
+		private String DWI ;
+		/**
+		 * 交收地，为空显示"--"限制条件显示，交收地类型：（2）指定交收地
+		 */
+		private String DEA ;
+		/**
+		 * 买方履约保证金
+		 */
+		private String DMB ;
+		/**
+		 * 卖方履约保证金
+		 */
+		private String DMS ;
+		/**
+		 * 交收类型: 0: 协议交收； 1：自主交收
+		 */
+		private String TY ;
+		/**
+		 * 付款类型：0：先款后货；1：先货后款；2：无限制限制条件显示，交收类型：（1）自主交收
+		 */
+		private String PT ;
+		/**
+		 * 交收日类型：0：指定期限；1：指定日期
+		 */
+		private String DDT ;
+		/**
+		 * 交货期限（单位：小时）限制条件显示，交收日类型：（0）指定期限
+		 */
+		private String DPH ;
+		/**
+		 * 交货日期  限制条件显示，交收日类型：（1）指定日期
+		 */
+		private String DD ;
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置委托单号
+		 * </ul>
+		 * @param
+		 */
+		public void setOrderID(Long orderID) {
+			ORI = orderID.toString();
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置委托商品标题
+		 * </ul>
+		 * @param
+		 */
+		public void setOrderTitle(String orderTitle) {
+			ORT = orderTitle;
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置品种名称
+		 * </ul>
+		 * @param
+		 */
+		public void setBreedName(String breedName) {
+			BN = breedName;
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置品名名称
+		 * </ul>
+		 * @param
+		 */
+		public void setBreedCmdName(String breedCmdName) {
+			BCN = breedCmdName;
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置买卖方向:  1: 买；2：卖 
+		 * </ul>
+		 * @param
+		 */
+		public void setBsFlag(String bsFlag) {
+			BS = bsFlag;
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置单位价格
+		 * </ul>
+		 * @param
+		 */
+		public void setPrice(Double price) {
+			PRI = NUMFormat.fmtDouble2(price);
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置商品数量
+		 * </ul>
+		 * @param
+		 */
+		public void setQTY(Double qTY) {
+			QTY = NUMFormat.fmtDouble2(qTY);
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置已成交数量
+		 * </ul>
+		 * @param
+		 */
+		public void setTradeQty(Double tradeQty) {
+			TQ = NUMFormat.fmtDouble2(tradeQty);
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置商品单位
+		 * </ul>
+		 * @param
+		 */
+		public void setUnit(String unit) {
+			U = unit;
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置委托时间
+		 * </ul>
+		 * @param
+		 */
+		public void setOrderTime(Date orderTime) {
+			OT = DateFormat.fmtTime(orderTime);
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置生效时间，为空显示"--"
+		 * </ul>
+		 * @param
+		 */
+		public void setEffectiveTime(Date effectiveTime) {
+			ET = DateFormat.fmtTime(effectiveTime);
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置附加条款
+		 * </ul>
+		 * @param
+		 */
+		public void setRemark(String remark) {
+			RMK = remark;
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置信息有效期（单位：小时）：-1：长期有效；其他值整数小时
+		 * </ul>
+		 * @param
+		 */
+		public void setValidateHours(Integer validateHours) {
+			VH = validateHours.toString();
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置成交方式：1：直接成交；2：可议价成交；3：必须议价成交 
+		 * </ul>
+		 * @param
+		 */
+		public void setTradeFlag(Integer tradeFlag) {
+			TF = tradeFlag.toString();
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置保证金支付期限(小时)，限制条件显示,品种交易模式：（1）诚信保障金模式 
+		 * </ul>
+		 * @param
+		 */
+		public void setMarginDeadLine(Integer marginDeadLine) {
+			TPH = marginDeadLine.toString();
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置买方诚信保障金 限制条件显示,品种交易模式：（1）诚信保障金模式
+		 * </ul>
+		 * @param
+		 */
+		public void setTradeMarginBuyer(Double tradeMarginBuyer) {
+			TMB = NUMFormat.fmtDouble2(tradeMarginBuyer);
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置卖方诚信保障金 限制条件显示,品种交易模式：（1）诚信保障金模式
+		 * </ul>
+		 * @param
+		 */
+		public void setTradeMarginSeller(Double tradeMarginSeller) {
+			TMS = NUMFormat.fmtDouble2(tradeMarginSeller);
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置是否已支付履约保证金： Y:是；N:否 限制条件显示,品种交易模式（1）诚信保障金模式 
+		 * </ul>
+		 * @param
+		 */
+		public void setIsPayMargin(String isPayMargin) {
+			IPM = isPayMargin;
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置是否卖仓单：0：否；1：是 
+		 * </ul>
+		 * @param
+		 */
+		public void setPayFlag(Integer payFlag) {
+			PF = payFlag.toString();
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置卖仓单号 限制条件显示，是否卖仓单：（1）是 
+		 * </ul>
+		 * @param
+		 */
+		public void setStockId(String stockId) {
+			STI = stockId;
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置撤单人 限制条件显示，委托状态：（3）已下架 
+		 * </ul>
+		 * @param
+		 */
+		public void setOrderWithdrawTraderId(String orderWithdrawTraderId) {
+			OWI = orderWithdrawTraderId;
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置撤单时间 限制条件显示，委托状态：（3）已下架
+		 * </ul>
+		 * @param
+		 */
+		public void setOrderWithdrawTime(Date orderWithdrawTime) {
+			OWT = DateFormat.fmtTime(orderWithdrawTime);
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置最小交易数量
+		 * </ul>
+		 * @param
+		 */
+		public void setMinTradeQty(Double minTradeQty) {
+			MTQ = NUMFormat.fmtDouble2(minTradeQty);
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置交易单位
+		 * </ul>
+		 * @param
+		 */
+		public void setTradeUnit(Double tradeUnit) {
+			TU = NUMFormat.fmtDouble2(tradeUnit);
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置交收地类型：1：指定仓库；2：指定交收地
+		 * </ul>
+		 * @param
+		 */
+		public void setDeliveryType(String deliveryType) {
+			DET = deliveryType;
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置交收仓库号，为空显示"--"限制条件显示，交收地类型：（1）指定仓库
+		 * </ul>
+		 * @param
+		 */
+		public void setDeliveryWarehouseId(String deliveryWarehouseId) {
+			DWI = deliveryWarehouseId;
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置交收地，为空显示"--"限制条件显示，交收地类型：（2）指定交收地
+		 * </ul>
+		 * @param
+		 */
+		public void setDeliveryAddress(String deliveryAddress) {
+			DEA = deliveryAddress;
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置买方履约保证金
+		 * </ul>
+		 * @param
+		 */
+		public void setBuyerPerformMargin(Double buyerPerformMargin) {
+			DMB = NUMFormat.fmtDouble2(buyerPerformMargin);
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置卖方履约保证金
+		 * </ul>
+		 * @param
+		 */
+		public void setSellerPerformMargin(Double sellerPerformMargin) {
+			DMS = NUMFormat.fmtDouble2(sellerPerformMargin);
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置交收类型: 0: 协议交收； 1：自主交收
+		 * </ul>
+		 * @param
+		 */
+		public void setSettleType(Integer settleType) {
+			TY = settleType.toString();
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置付款类型：0：先款后货；1：先货后款；2：无限制限制条件显示，交收类型：（1）自主交收
+		 * </ul>
+		 * @param
+		 */
+		public void setPayType(Integer payType) {
+			PT = payType.toString();
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置交收日类型：0：指定期限；1：指定日期
+		 * </ul>
+		 * @param
+		 */
+		public void setDeliveryDateType(Integer deliveryDateType) {
+			DDT = deliveryDateType.toString();
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置交货期限（单位：小时）限制条件显示，交收日类型：（0）指定期限
+		 * </ul>
+		 * @param
+		 */
+		public void setDeliveryTime(Integer deliveryTime) {
+			DPH = deliveryTime.toString();
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置交货日期  限制条件显示，交收日类型：（1）指定日期
+		 * </ul>
+		 * @param
+		 */
+		public void setDeliveryDate(Date deliveryDate) {
+			DD = DateFormat.fmtTime(deliveryDate);
+		}
+		
+	}
+	
+	/**
+	 * 集合类
+	 */
+	public class PropertyList{
+		/** 信息集合 */
+		private List<PropertyList> PRS;
+	
+		/**
+		 * 
+		 * 获取信息集合
+		 * <br/><br/>
+		 * @return
+		 */
+		public List<PropertyList> getList(){
+			return PRS;
+		}
+	
+		/**
+		 * 
+		 * 设置信息集合
+		 * <br/><br/>
+		 * @param list
+		 */
+		public void setList(List<PropertyList> list){
+			PRS = list;
+		}
+	}
+	
+	/**
+	 * 图片集合类
+	 */
+	public class OrderPictureList{
+		/** 信息集合 */
+		private List<OrderPictureList> ORP;
+	
+		/**
+		 * 
+		 * 获取信息集合
+		 * <br/><br/>
+		 * @return
+		 */
+		public List<OrderPictureList> getList(){
+			return ORP;
+		}
+	
+		/**
+		 * 
+		 * 设置信息集合
+		 * <br/><br/>
+		 * @param list
+		 */
+		public void setList(List<OrderPictureList> list){
+			ORP = list;
+		}
+	}
+	
+	/**
+	 * 通用集合类
+	 */
+	public class CmdOrderInfoQueryObj{
+		/**
+		 * 图片唯一标识
+		 */
+		private String PID ;
+		/**
+		 * 委托单号
+		 */
+		private String ORI ;
+		/**
+		 * 委托标题
+		 */
+		private String ORT ;
+		/**
+		 * 品名
+		 */
+		private String BN ;
+		/**
+		 * 品种交易模式: 1: 诚信保障金模式； 2：保证金模式 
+		 */
+		private String TM ;
+		/**
+		 * 买卖方向: 1: 买；2：卖 
+		 */
+		private String BS ;
+		/**
+		 * 委托状态：0：未成交1：部分成交2：全部成交3：已下架11：待管理员审核
+		 */
+		private String STA ;
+		/**
+		 * 单位价格
+		 */
+		private String PRI ;
+		/**
+		 * 商品数量
+		 */
+		private String QTY ;
+		/**
+		 * 已成交数量
+		 */
+		private String TQ ;
+		/**
+		 * 商品单位
+		 */
+		private String U ;
+		/**
+		 * 委托时间
+		 */
+		private String OT ;
+		/**
+		 * 交收类型:  0: 协议交收   1：自主交收
+		 */
+		private String TY ;
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置图片唯一标识
+		 * </ul>
+		 * @param
+		 */
+		public void setPictrueID(String pictrueID) {
+			PID = pictrueID;
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置委托单号
+		 * </ul>
+		 * @param
+		 */
+		public void setOrderID(String orderID) {
+			ORI = orderID;
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置委托标题
+		 * </ul>
+		 * @param
+		 */
+		public void setOrderTitle(String orderTitle) {
+			ORT = orderTitle;
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置品名
+		 * </ul>
+		 * @param
+		 */
+		public void setBreedName(String breedName) {
+			BN = breedName;
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置品种交易模式: 1: 诚信保障金模式； 2：保证金模式 
+		 * </ul>
+		 * @param
+		 */
+		public void setTradeModel(Integer tradeModel) {
+			TM = tradeModel.toString();
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置买卖方向: 1: 买；2：卖 
+		 * </ul>
+		 * @param
+		 */
+		public void setBsFlag(Integer bsFlag) {
+			BS = bsFlag.toString();
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置委托状态：0：未成交1：部分成交2：全部成交3：已下架11：待管理员审核
+		 * </ul>
+		 * @param
+		 */
+		public void setStatus(Integer status) {
+			STA = status.toString();
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置单位价格
+		 * </ul>
+		 * @param
+		 */
+		public void setPrice(Double price) {
+			PRI = NUMFormat.fmtDouble2(price);
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置商品数量
+		 * </ul>
+		 * @param
+		 */
+		public void setQty(Double qty) {
+			QTY = NUMFormat.fmtDouble2(qty);
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置已成交数量
+		 * </ul>
+		 * @param
+		 */
+		public void setTradedQty(Double tradedQty) {
+			TQ = NUMFormat.fmtDouble2(tradedQty);
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置商品单位
+		 * </ul>
+		 * @param
+		 */
+		public void setUnit(String unit) {
+			U = unit;
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置委托时间
+		 * </ul>
+		 * @param
+		 */
+		public void setOrderTime(Date orderTime) {
+			OT = DateFormat.fmtTime(orderTime);
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置交收类型:  0: 协议交收   1：自主交收
+		 * </ul>
+		 * @param
+		 */
+		public void setTradeType(Integer tradeType) {
+			TY = tradeType.toString();
+		}
+		
+	}
+	
+	/**
+	 * 信息类
+	 */
+	public class PropertyObj{
+		/**
+		 * 属性类型 （基本属性 质量指标）
+		 */
+		private String PT ;
+		/**
+		 * 品种属性名称
+		 */
+		private String PN ;
+		/**
+		 * 品名属性值
+		 */
+		private String PV ;
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置属性类型 （基本属性 质量指标）
+		 * </ul>
+		 * @param
+		 */
+		public void setPropertyType(String propertyType) {
+			PT = propertyType;
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置品种属性名称
+		 * </ul>
+		 * @param
+		 */
+		public void setPropertyName(String propertyName) {
+			PN = propertyName;
+		}
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置品名属性值
+		 * </ul>
+		 * @param
+		 */
+		public void setPropertyValue(String propertyValue) {
+			PV = propertyValue;
+		}
+		
+	}
+	
+	/**
+	 * 图片信息类
+	 */
+	public class PictureObj{
+		/**
+		 * 委托商品图片ID
+		 */
+		private String PI ;
+		
+		/**
+		 * <b>方法说明：</b>
+		 * <ul>
+		 * 设置委托商品图片ID
+		 * </ul>
+		 * @param
+		 */
+		public void setPictureId(String pictureId) {
+			PI = pictureId;
+		}
+		
+	}
+	
+}
+

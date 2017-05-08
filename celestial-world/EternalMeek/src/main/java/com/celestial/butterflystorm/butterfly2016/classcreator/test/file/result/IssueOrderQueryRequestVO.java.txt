@@ -1,0 +1,113 @@
+package gnnt.MEBS.MobileServer;
+
+import gnnt.MEBS.MobileServer.vo.RequestVO;
+import gnnt.MEBS.MobileServer.vo.ResponseVO;
+
+import gnnt.util.string.StringUtil;
+import java.util.Date;
+
+
+
+/**
+ * 
+ * <b>修改记录：</b> 
+ * <p>
+ * <li>
+ * 
+ *                        ---- wangzg  2017-05-08
+ * </li>
+ * </p>
+ * 
+ * <b>类说明：申购委托查询请求类</b>
+ * <p> 
+ * 
+ * </p>
+ */
+public class IssueOrderQueryRequestVO extends RequestVO{
+	/**
+	 * 登陆用户ID
+	 */
+	private String U ;
+	/**
+	 * 开始日期
+	 */
+	private String S_D ;
+	/**
+	 * 结束日期
+	 */
+	private String E_D ;
+	/**
+	 * SESSION_ID
+	 */
+	private String S_I ;
+	
+	/**
+	 * <b>构造方法</b>
+	 * <br/>
+	 */
+	public IssueOrderQueryRequestVO() {
+		super();
+	}
+	
+	/**
+	 * <b>构造方法</b>
+	 * <br/>
+	 * @param userID
+	 * @param sessionID
+	 */
+	public IssueOrderQueryRequestVO(String userID, String sessionID) {
+		super();
+		U = userID;
+		SI = sessionID;
+	}
+	
+	@Override
+	public String getUserID() {
+		return U;
+	}
+	
+	@Override
+	public ResponseVO getResponseVO() {
+		return new IssueOrderQueryResponseVO();
+	}
+	
+	/**
+	 * <b>方法说明：</b>
+	 * <ul>
+	 * 获取开始日期
+	 * </ul>
+	 * @return
+	 */
+	public Date getStartDate(){
+		return StringUtil.strToDate(S_D);
+	}
+	
+	/**
+	 * <b>方法说明：</b>
+	 * <ul>
+	 * 获取结束日期
+	 * </ul>
+	 * @return
+	 */
+	public Date getEndDate(){
+		return StringUtil.strToDate(E_D);
+	}
+	
+	/**
+	 * <b>方法说明：</b>
+	 * <ul>
+	 * 获取SESSION_ID
+	 * </ul>
+	 * @return
+	 */
+	public Long getSessionID(){
+		return StringUtil.strToLong(S_I,0);
+	}
+	
+	@Override
+	public String toString() {
+		return ToStringBuilder.reflectionToString(this, ToStringStyle.SIMPLE_STYLE);
+	}
+	
+}
+

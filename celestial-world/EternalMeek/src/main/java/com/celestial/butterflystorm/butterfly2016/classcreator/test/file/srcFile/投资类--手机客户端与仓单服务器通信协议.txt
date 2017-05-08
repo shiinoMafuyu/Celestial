@@ -1,0 +1,389 @@
+
+
+手机客户端与服务器申购协议
+版本：Mobile 1.0
+
+北京金网安泰信息技术有限公司大宗商品电子交易系统采用的是多层架构模式。
+交易客户端与服务器端的通讯基于http、https协议进行数据传输，数据通过XML进行组织。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+目录
+
+手机客户端与服务器申购协议	1
+1.发行商品查询	3
+提交包	3
+返回包	3
+2.发行商品详情	4
+提交包	4
+返回包	4
+3.申购商品	5
+提交包	5
+返回包	6
+4.申购委托查询	6
+提交包	6
+返回包	6
+5.申购成交查询	8
+提交包	8
+返回包	8
+6.历史增发配售	9
+提交包	9
+返回包	10
+7.当前增发配售	11
+提交包	11
+返回包	11
+8.获取增发配售参考数量	12
+提交包	12
+返回包	13
+9.增发配售确认	13
+提交包	13
+返回包	14
+10.附录错误代码	14
+xml中RetCode的错误代码	14
+
+
+
+修改说明
+编号	日期	修改人	说明
+1	2014-4-18	刘振兴	协议 2 发行商品详情 返回包中去掉
+<TTLREC>总记录数</TTLREC>
+返回信息
+
+2	2014-4-22	倪建文	协议4　申购委托查询,返回包添加
+<S_N>开始序号</S_N>
+<E_N>结束序号</E_N>
+3	2016-9-21
+刘双超	去掉 8.获取增发配售参考数量 协议
+			
+
+
+
+
+
+
+
+1.发行商品查询
+提交包
+<?xml version="1.0" encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="issue_commodity">
+<U>登陆用户ID</U>
+<C_I>商品代码（空表示所有）</C_I>
+<S_I>SESSION_ID</S_I>
+		</REQ>
+	</MEBS_MOBILE>
+返回包
+<?xml version="1.0" encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="issue_commodity">
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					=0成功, 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容</MESSAGE>
+				<TTLREC>总记录数</TTLREC>
+			</RESULT>
+<RESULTLIST>	
+<REC>
+					<CO_I>商品代码</CO_I>
+<CO_N>商品名称</CO_N>
+<BR>所属发行会员</BR>
+<PRC>发行价格</PRC>
+<QTY>发行数量</QTY>
+<S_D>发行开始日期</S_D>
+<E_D>发行结束日期</E_D>
+</REC>
+			</RESULTLIST>
+		</REP>
+	</MEBS_MOBILE>
+2.发行商品详情
+提交包
+<?xml version="1.0" encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="issue_commodity_detail">
+<U>登陆用户ID</U>
+<C_I>商品代码</C_I>
+<S_I>SESSION_ID</S_I>
+		</REQ>
+	</MEBS_MOBILE>
+返回包
+<?xml version="1.0" encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="issue_commodity_detail">
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					=0成功, 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容</MESSAGE>
+				<CO_I>商品代码</CO_I>
+<CO_N>商品名称</CO_N>
+<PRC>发行价格</PRC>
+<QTY>发行数量</QTY>
+<MIN_A>最小申购数量</MIN_A>
+<MAX_A>最大申购数量</MAX_A>
+<CH_A>最小变动量</CH_A>
+<S_D>发行开始日期</S_D>
+<E_D>发行结束日期</E_D>
+<MAX_CA>最大可申购量</MAX_CA>
+</RESULT>
+		</REP>
+	</MEBS_MOBILE>
+3.申购商品
+提交包
+<?xml version="1.0" encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="issue_order">
+<U>登陆用户ID</U>
+<C_I>商品代码</C_I>
+<I_QTY>申购数量</I_QTY>
+<S_I>SESSION_ID</S_I>
+		</REQ>
+	</MEBS_MOBILE>
+返回包
+<?xml version="1.0" encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="issue_order">
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					=0成功, 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容</MESSAGE>	
+			</RESULT>
+		</REP>
+	</MEBS_MOBILE>
+4.申购委托查询
+提交包
+<?xml version="1.0" encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="issue_order_query" ie="申购委托查询请求类" pkg="gnnt.MEBS.MobileServer">
+<U ref="UserID" type="String">登陆用户ID</U>
+<S_D ref="StartDate" type="Date">开始日期</ S_D>
+<E_D ref="EndDate" type="Date">结束日期</E_D>
+<S_I ref="SessionID" type="Long">SESSION_ID</S_I>
+		</REQ>
+	</MEBS_MOBILE>
+返回包
+<?xml version="1.0" encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="issue_order_query" ie="申购委托查询返回类" pkg="gnnt.MEBS.MobileServer">
+			<RESULT>
+				<RETCODE ref="RETCODE" type="String">返回码</RETCODE>
+					=0成功, 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE ref="MESSAGE" type="String">返回的提示消息内容</MESSAGE>	
+<TTLREC ref="TotalRecords" type="Integer">总记录数</TTLREC>
+			</RESULT>
+<RESULTLIST>	
+<REC>主要集合类
+	<OR_N ref="OrderNum" type="String">委托单号</OR_N>
+					<CO_I ref="CommodityID" type="String">商品代码</CO_I>
+<CO_N ref="CommodityName" type="String">商品名称</CO_N>
+<STA ref="Status" type="Integer">状态：
+1:已委托
+2:部分成交
+3:全部成交
+5:全部撤单
+6:部分成交后撤单
+</STA>	
+<PRI ref="Price" type="Double">委托价格</PRI>	
+<QTY ref="Qty" type="Double">委托数量</QTY>	
+<IC ref="ImplyCash" type="Double">申购金额</IC>
+<BACK_IC ref="BackImplyCash" type="Double">退还申购金额</BACK_IC>
+<ICF ref="IntendDeductFee" type="Double">预扣发行服务费</ICF>
+<BACK_ICF ref="BackIntendDeductFee" type="String">预退还发行服务费</BACK_ICF>
+<TIME ref="DelegationTime" type="Date">委托时间</TIME>
+<B_D ref="ClearDate" type="Date">结算日期</B_D>
+<S_N ref="StartNumber" type="Long">开始序号</S_N>
+<E_N ref="EndNumber" type="Long">结束序号</E_N>
+</REC>
+			</RESULTLIST>
+		</REP>
+	</MEBS_MOBILE>
+5.申购成交查询
+提交包
+<?xml version="1.0" encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="issue_trade_query">
+<U>登陆用户ID</U>
+<S_D>开始日期</ S_D>
+<E_D>结束日期</E_D>
+<S_I>SESSION_ID</S_I>
+		</REQ>
+</MEBS_MOBILE>
+返回包
+<?xml version="1.0" encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="issue_trade_query">
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					=0成功, 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容</MESSAGE>	
+<TTLREC>总记录数</TTLREC>	
+			</RESULT>
+<RESULTLIST>	
+<REC>
+<TR_N>成交号</TR_N>
+<OR_N>委托单号</OR_N>
+<TI>成交时间</TI>
+<CO_I>商品代码</CO_I>
+<CO_N>商品名称</CO_N>
+<SE_F>申购类型：1：定价摇号</SE_F>
+<PRI>成交价格</PRI>	
+<QTY>中签数量</QTY>	
+<IC>成交金额</IC>
+<ICF>发行服务费</ICF>
+<B_D>结算日期</B_D>
+</REC>
+			</RESULTLIST>
+		</REP>
+	</MEBS_MOBILE>
+6.历史增发配售
+提交包
+<?xml version="1.0" encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="h_reissue_commodity">
+<U>登陆用户ID</U>
+<S_D>开始日期</ S_D>
+<E_D>结束日期</E_D>
+<S_I>SESSION_ID</S_I>
+		</REQ>
+	</MEBS_MOBILE>
+
+返回包
+<?xml version="1.0" encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="h_reissue_commodity">
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					=0成功, 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容</MESSAGE>
+				<TTLREC>总记录数</TTLREC>
+			</RESULT>
+<RESULTLIST>
+<REC>
+					<CO_I>商品代码</CO_I>
+<RE_A>增发数量</RE_A>
+<RE_P>增发价格</RE_P>
+<P_RE_Q>预配售数量</P_RE_Q>
+<RE_Q>配售数量</RE_Q>
+<P_RE_M>预配售货款</P_RE_M>
+<RE_M>配售货款</RE_M>
+<P_RE_FE>预配售服务费</P_RE_FE>
+<RE_FE>配售服务费</RE_FE>
+<RE_DATE>登记日期</RE_DATE>
+<RE_IS_DATE>增发日期</RE_IS_DATE>
+<RE_LI_DATE>上市日期</RE_LI_DATE>
+<RE_T>类型
+0:未配售
+1:已配售
+</RE_T>
+</REC>
+			</RESULTLIST>
+		</REP>
+	</MEBS_MOBILE>
+7.当前增发配售
+提交包
+<?xml version="1.0" encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="reissue_commodity">
+<U>登陆用户ID</U>
+<S_I>SESSION_ID</S_I>
+		</REQ>
+	</MEBS_MOBILE>
+返回包
+<?xml version="1.0" encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="reissue_commodity">
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					=0成功, 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容</MESSAGE>
+<TTLREC>总记录数</TTLREC>
+			</RESULT>
+<RESULTLIST>
+<REC>
+					<CO_I>商品代码</CO_I>
+<RE_A>增发数量</RE_A>
+<RE_P>增发价格</RE_P>
+<P_RE_Q>预配售数量</P_RE_Q>
+<RE_Q>配售数量</RE_Q>
+<P_RE_M>预配售货款</P_RE_M>
+<RE_M>配售货款</RE_M>
+<P_RE_FE>预配售服务费</P_RE_FE>
+<RE_FE>配售服务费</RE_FE>
+<RE_DATE>登记日期</RE_DATE>
+<RE_IS_DATE>增发日期</RE_IS_DATE>
+<RE_LI_DATE>上市日期</RE_LI_DATE>
+<RE_T>类型
+0:未配售
+1:已配售
+</RE_T>
+</REC>
+			</RESULTLIST>
+		</REP>
+	</MEBS_MOBILE>
+9.增发配售确认
+提交包
+<?xml version="1.0" encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REQ name="reissue_commodity_sure">
+<U>登陆用户ID</U>
+<C_I>商品代码</C_I>
+<R_D>增发商品登记日期</R_D>
+<QUANTITY>配售数量</QUANTITY>
+<S_I>SESSION_ID</S_I>
+		</REQ>
+	</MEBS_MOBILE>
+
+返回包
+<?xml version="1.0" encoding="GB2312"?>
+	<MEBS_MOBILE>
+		<REP name="reissue_commodity_sure">
+			<RESULT>
+				<RETCODE>返回码</RETCODE>
+					=0成功, 其他为失败，错误描述在MESSAGE 中
+				<MESSAGE>返回的提示消息内容(当资金不够时,为错误)</MESSAGE>
+</RESULT>
+		</REP>
+	</MEBS_MOBILE>
+
+10.附录错误代码
+xml中RetCode的错误代码
+协议	错误代码（RETCODE）	错误信息描述（MESSAGE）	说明	建议处理方法
+申购商品	0	成功		
+	1	身份不合法		
+	2	市场未启用		
+	3	不是开市时间		
+	-1	资金余额不足		
+	-2	超过商品最大申购量		
+	-3	低于商品最小申购量		
+	-4	申购数量必须为最小申购变动量的倍数		
+	-5	交易商无权申购该商品		
+	-6	该交易商已申购过该商品		
+	-7	该商品承销商不能申购该商品		
+	-8	该商品发行商不能申购该商品		
+

@@ -7,7 +7,7 @@ import com.celestial.agniRadiance.EzUtil.Util_File;
 import com.celestial.agniRadiance.entity.FileReader;
 import com.celestial.agniRadiance.entity.Print;
 /**
- * 文件替换类。<br/>
+ * 文件替换类,读取文件一部分，放到另一个文件某一位置上去<br/>
  * 要对读取的文件片段进行操作，则在子类中复写doTrans()方法。<br/>
  * 以偏安全的方式进行设计。<br/>
  * @author Administrator

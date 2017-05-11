@@ -31,7 +31,7 @@ public class TestUtil_Json {
 	
 	@Test
 	public void _01_toJsonString(){
-		Equip e = new Equip();e.setName("月下");e.setGoodslevel("009300010001");e.setSuitId("qaq").setAf(12.33);
+		Equip e = new Equip().setName("月下");e.setGoodslevel("009300010001");e.setSuitId("qaq").setAf(12.33);
 		
 		String jsonstr = Util_Json.toJsonString(e);
 		Assert.assertEquals("{\"suitId\":\"qaq\",\"name\":\"月下\",\"goodslevel\":\"009300010001\",\"af\":\"12.33\"}", jsonstr);

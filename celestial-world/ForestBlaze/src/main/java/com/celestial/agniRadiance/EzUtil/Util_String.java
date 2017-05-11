@@ -430,5 +430,23 @@ public class Util_String {
 		}
 		return sb.toString();
 	}
+
+	/**
+	 * 返回配对字符串str长度n之后在match1和match2之间的字符。<br/>
+	 * 例如：
+	 * _getMatchIn("name = 'kurise',name = 'miki'; yesterday once more.","'",";",20)
+	 * --> miki'
+	 * @param str
+	 * @param match1
+	 * @param match2
+	 * @param n
+	 * @return
+	 */
+	public static String _getMatchIn(String str,String match1,String match2,int n) {
+		str = str.substring(n);
+		int index1 = str.indexOf(match1);
+		int index2 = str.indexOf(match2,index1+1);
+		return str.substring(index1+1, index2);
+	}
 	
 }

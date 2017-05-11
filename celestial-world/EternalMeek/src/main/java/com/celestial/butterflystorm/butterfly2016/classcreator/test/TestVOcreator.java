@@ -18,7 +18,7 @@ import com.celestial.butterflystorm.butterfly2016.classcreator.CreateResponseVO;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class TestVOcreator {
 	
-	public static String resultPath = "src/main/java/com/celestial/butterflystorm/classcreator/test/file/result/";
+	public static String resultPath = "src/main/java/com/celestial/butterflystorm/butterfly2016/classcreator/test/file/result/";
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -30,7 +30,7 @@ public class TestVOcreator {
 	@Test
 	public void _01_requestVO_create_warehouse() {
 		
-		FileReader f1 = new FileReader("src/main/java/com/celestial/butterflystorm/classcreator/test/file/srcFile/投资类--手机客户端与仓单服务器通信协议.txt")
+		FileReader f1 = new FileReader("src/main/java/com/celestial/butterflystorm/butterfly2016/classcreator/test/file/srcFile/投资类--手机客户端与仓单服务器通信协议.txt")
 				.selectAllLineBetweenRegex2("4\\.申购委托查询", "5\\.申购成交查询");
 		List<List<String>> requestReader = f1.selectAllLineBetweenRegexList(".*提交包.*", ".*返回包.*");
 		
@@ -45,7 +45,7 @@ public class TestVOcreator {
 	@Test
 	public void _02_requestVO_create_espot() {
 		
-		FileReader f1 = new FileReader("src/main/java/com/celestial/butterflystorm/classcreator/test/file/srcFile/E现货--手机客户端与服务器通信协议(旧).txt")
+		FileReader f1 = new FileReader("src/main/java/com/celestial/butterflystorm/butterfly2016/classcreator/test/file/srcFile/E现货--手机客户端与服务器通信协议(旧).txt")
 				.selectAllLineBetweenRegex2("10\\. 商品委托查询", "11\\. 商品委托详情查询");
 		List<List<String>> requestReader = f1.selectAllLineBetweenRegexList(".*请求包.*", ".*返回包.*");
 		
@@ -61,7 +61,7 @@ public class TestVOcreator {
 	@Test
 	public void _03_responseVO_create_warehouse() {
 		
-		FileReader f1 = new FileReader("src/main/java/com/celestial/butterflystorm/classcreator/test/file/srcFile/投资类--手机客户端与仓单服务器通信协议.txt")
+		FileReader f1 = new FileReader("src/main/java/com/celestial/butterflystorm/butterfly2016/classcreator/test/file/srcFile/投资类--手机客户端与仓单服务器通信协议.txt")
 				.selectAllLineBetweenRegex2("4\\.申购委托查询", "5\\.申购成交查询");
 		List<List<String>> responseReader = f1.selectAllLineBetweenRegexList(".*返回包.*", "5\\.申购成交查询");
 		
@@ -74,7 +74,7 @@ public class TestVOcreator {
 	
 	@Test
 	public void _04_responseVO_create_espot() {
-		FileReader f1 = new FileReader("src/main/java/com/celestial/butterflystorm/classcreator/test/file/srcFile/E现货--手机客户端与服务器通信协议(旧).txt")
+		FileReader f1 = new FileReader("src/main/java/com/celestial/butterflystorm/butterfly2016/classcreator/test/file/srcFile/E现货--手机客户端与服务器通信协议(旧).txt")
 				.selectAllLineBetweenRegex2("11\\. 商品委托详情查询", "12\\. 个人委托查询");
 		List<List<String>> responseReader = f1.selectAllLineBetweenRegexList(".*返回包.*", "12\\. 个人委托查询");
 		

@@ -105,4 +105,17 @@ public class TestUtil_String {
 		Assert.assertFalse(s.contains("\\"));
 		
 	}
+	
+	@Test
+	public void _08__getMatchIn(){
+		String s = Util_String._getMatchIn("name = 'kurise',name = 'miki'; yesterday once more.","'",";",20);
+		String ex = "miki'";
+		Assert.assertEquals(ex, s);
+		
+		s = "<classpathentry kind=\"src\" path=\"src/account-src\"/>";
+		s = Util_String._getMatchIn(s,"\"","\"",s.indexOf("path="));
+		ex = "src/account-src";
+		Assert.assertEquals(ex, s);
+		
+	}
 }

@@ -9,6 +9,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import com.celestial.agniRadiance.EzUtil.Util_File;
+import com.celestial.agniRadiance.EzUtil.Util_String;
+import com.celestial.agniRadiance.entity.FileReader;
 import com.celestial.butterflystorm.butterfly2016.puddingIII.Interface.entity.TypeFile;
 import com.celestial.butterflystorm.butterfly2016.puddingIII.tempAbstract.entity.TypeFileTemp;
 
@@ -79,11 +81,16 @@ public class TypeJava extends TypeFileTemp implements TypeFile {
 	}
 
 	private List<String> getSrcPathList(String projectPath) {
-		File[] fArr = Util_File.fileDirectory(projectPath, ".*src");
 		List<String> fileList = new ArrayList<String>();
-		for(File i : fArr){
-			if(Util_File.findFile(".+\\.java", i).size() > 0)
-				fileList.add(i.getAbsolutePath().replaceAll("\\\\", "/"));
+		FileReader f = new FileReader(projectPath+"/.classpath");
+		String s = "";
+		while(f.hasNext()){
+			s = f.readLine();
+			if( Util_String.matchAllSameRegx(s,
+					"<classpathentry\\s+kind=\"src\"\\s+path=\"src/.*\"\\s*/>")){
+				s = Util_String._getMatchIn(s,"\"","\"",s.indexOf("path="));
+				fileList.add(projectPath+"/"+s);
+			}
 		}
 		return fileList;
 	}

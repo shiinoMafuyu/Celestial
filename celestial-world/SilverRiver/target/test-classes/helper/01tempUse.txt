@@ -1,111 +1,14 @@
-/** 序列编号 */
-	private static final long serialVersionUID = 5171390494785368908L;
-
-	/** 客户编码 */
-	private String customerID;
-	
-	/** 资金账户 */
-	private String fundsAccount;
-
-	/** 所属会员编码 */
-	private String brokerID;
-
-	/** 状态
-	 * 0-已开户 
-	 * 1-正常
-	 * 2-已解约
-	 *  3-已销户
-	 * */
-	private String status;
-
-	/** 客户简称 */
-	private String customerShortName;
-
-	/** 客户名称（用于签约检验） */
-	private String customerName;
-
-	/** 证件类型
-	    11.身份证
-		12.护照
-		13.军官证
-		21.组织机构代码
-		24.营业执照	
-		25.统一社会信用代码
-		31 其他	
-	 *  */
-	private String certificateType;
-
-	/** 证件号码 */
-	private String certificateNo;
-
-	/** 地址 */
-	private String address;
-
-	/** 邮编 */
-	private String postCode;
-
-	/** 邮箱 */
-	private String email;
-
-	/** 手机 */
-	private String mobile;
-
-	/** 传真 */
-	private String faxno;
-
-	/** 联系人 */
-	private String contactor;
-
-	/** 联系人手机 */
-	private String contactorPhone;
-
-	/** 法人代表 (法人名称)*/
-	private String corporateRepresentative;
-	
-	/** 法人证件类型 */
-	private String corporateCertificateType;
-	
-	/** 法人证件号*/
-	private String corporateCertificateNo;
-	
-	/** 法人联系方式*/
-	private String corporatePhone;
-	
-	/** 组织机构代码 */
-	private String organizationCode;
-	
-	/**银行编号*/
-	private String bankID;
-	
-	/** 银行卡号*/ 
-	private String bankCardNo;
-
-	/** 客户类型 
-	 * 0-个人户 
-	 * 1-企业户
-	 * */
-	private String property;
-
-	/** 客户类别 
-	 * 1 - 交易商
-	 * 2 - 经纪人
-	 * 3 - 综合会员（代理商）
-	 * 4 - 特别会员  
-	 * */
-	private String type;
-
-	/** 开户时间 */
-	private Date createTime;
-
-	/** 有效期 */
-	private Date validity;
-
-	/** 所属主账户*/
-	private String belongCustomerID;
-
-	/** 清算中心分配客户ID*/
-	private String exchangeCustomerID;
-
-	/** 备注 */
-	private String remark;
-
+$0
+当前脚本的文件名
+$n
+传递给脚本或函数的参数。n 是一个数字，表示第几个参数。例如，第一个参数是$1，第二个参数是$2
+$#
+传递给脚本或函数的参数个数。
+$*
+传递给脚本或函数的所有参数。
+$@
+传递给脚本或函数的所有参数。被双引号(" ")包含时，与 $* 稍有不同，下面将会讲到。
+$?
+上个命令的退出状态，或函数的返回值。
+$$
+当前Shell进程ID。对于 Shell 脚本，就是这些脚本所在的进程ID。

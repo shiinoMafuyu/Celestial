@@ -19,8 +19,8 @@ public class FileReadAndOP {
 //		_01_();
 //		_02_();
 		readVariable();
-//		createSetVariable();
-//		createAppend();
+		createSetVariable();
+		createAppend();
 //		_04_();
 //		_05_();
 		
@@ -28,18 +28,29 @@ public class FileReadAndOP {
 
 	private static void createAppend() {
 		FileReader f = new FileReader("src/test/resources/helper/01tempUse.txt",false,"gbk");
-		System.out.println(Util_sepotSysn.createAppend(f.getLineList()));
+		System.out.println(Util_sepotSysn.createSQlAppend(f.getLineList()));
 	}
 
 	//l.add("");
 	private static void _05_() {
 		FileReader f = new FileReader("src/test/resources/helper/01tempUse.txt",true,"gbk");
-		String s="";
+		String si="";
+		String[] sArr = new String[]{"",""};
 		StringBuffer sb= new StringBuffer("new StringBuffer(\"\")\n");
 		while(f.hasNext()){
-			s = f.readLine();
-			if(!"".equals(s))
-				sb.append(".append(\""+s+"\").append(\" \")\n");
+			si = f.readLine();
+			if(!"".equals(si)){
+				if(si.contains("--")){
+					sArr = si.split("--");
+					sArr[1] = "//" + sArr[1];
+				}
+				else{
+					sArr[0] = si;
+					sArr[1] = "";
+				}
+				sb.append(".append(\""+sArr[0]+"\").append(\" \")+//"+sArr[1]+"\n");
+			}
+				
 			else
 				sb.append("\n");
 		}

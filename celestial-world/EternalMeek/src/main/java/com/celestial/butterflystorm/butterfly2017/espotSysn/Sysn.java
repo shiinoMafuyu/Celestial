@@ -51,7 +51,7 @@ public class Sysn extends Replace {
 	
 	@Override
 	public List<String> doTrans(List<String> sourceList) {
-		String apendSql = Util_sepotSysn.createAppend(sourceList,2,"sql");
+		String apendSql = Util_sepotSysn.createSQlAppend(sourceList,2,"sql");
 		return Arrays.asList(new String[]{apendSql});
 	}
 	

@@ -17,8 +17,8 @@ public class Util_sepotSysn {
 	 * @param tabN
 	 * @return
 	 */
-	public static String createAppend(List<String> list) {
-		return createAppend(list,0);
+	public static String createSQlAppend(List<String> list) {
+		return createSQlAppend(list,0);
 	}
 	
 	/**
@@ -27,8 +27,8 @@ public class Util_sepotSysn {
 	 * @param tabN
 	 * @return
 	 */
-	public static String createAppend(List<String> list,int tabN) {
-		return createAppend(list,0,"");
+	public static String createSQlAppend(List<String> list,int tabN) {
+		return createSQlAppend(list,0,"");
 	}
 
 	/**
@@ -37,14 +37,25 @@ public class Util_sepotSysn {
 	 * @param tabN
 	 * @return
 	 */
-	public static String createAppend(List<String> list, int tabN, String name) {
+	public static String createSQlAppend(List<String> list, int tabN, String name) {
 		if(null!=name && "".equals(name))
 			name = "sql";
 		String tab = Util_String.__nstr("\t", tabN);
 		StringBuffer sb = new StringBuffer(tab).append("String ").append(name).append(" = new StringBuffer(\"\")\n");
+		String[] sArr = new String[]{"",""};
 		for(String si : list){
-			if(!"".equals(si) && !Util_String.matchAllSameRegx(si, "(\\s|\\t)+"))
-				sb.append(tab).append(".append(\""+si+"\")\n");
+			if(!"".equals(si) && !Util_String.matchAllSameRegx(si, "(\\s|\\t)+")){
+				if(si.contains("--")){
+					sArr = si.split("--");
+					sArr[1] = "//" + sArr[1];
+				}
+				else{
+					sArr[0] = si;
+					sArr[1] = "";
+				}
+				sb.append(tab).append(".append(\""+sArr[0]+"\")"+sArr[1]+"\n");
+			}
+				
 			else
 				sb.append(tab).append("\n");
 		}

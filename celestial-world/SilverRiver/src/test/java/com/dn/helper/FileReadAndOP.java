@@ -17,10 +17,12 @@ public class FileReadAndOP {
 	 */
 	public static void main(String[] args) {
 //		_01_();
-//		_02_();
+//		_02_addAnnotion();
+		
 		readVariable();
 		createSetVariable();
 		createAppend();
+		
 //		_04_();
 //		_05_();
 		
@@ -127,18 +129,13 @@ public class FileReadAndOP {
 	}
 
 	//json´®
-	protected static void _02_() {
+	protected static void _02_addAnnotion() {
 		FileReader f = new FileReader("src/test/resources/helper/01tempUse.txt",false,"gbk");
 		
 		StringBuffer sb = new StringBuffer("{");
 		while(f.hasNext()){
 			String s = f.readLine();
-			if("".equals(s))
-				sb.append("\n");
-			else{
-				String key = s.split(" ")[0];
-				sb.append("\"").append(key).append("\"").append(":0,");
-			}
+			System.out.println("#   "+s);
 		}
 		sb.append("}");
 		System.out.println(sb.toString());
@@ -149,13 +146,11 @@ public class FileReadAndOP {
 		FileReader f = new FileReader("src/test/resources/helper/01tempUse.txt",true,"gbk");
 		String s="";
 		while(f.hasNext()){
+			int n =f.getIndex();
 			s = f.readLine();
-			if(s.indexOf("(") < 0){
-				System.out.println("");
-				continue;
-			}
-			
-			System.out.println(Util_String.subStringLastChar(s, ","));
+			String s1 = s.substring(0,s.indexOf("[")+1);
+			String s2 = s.substring(s.indexOf("]"));
+			System.out.println(s1 + n + s2);
 		}
 	}
 

@@ -5,9 +5,11 @@ import com.celestial.agniRadiance.EzUtil.test.entity.Equip;
 
 public class a {
 	public static void main(String[] args) {
-		Equip e = new Equip().setName("月下");e.setGoodslevel("009300010001");e.setSuitId("qaq").setAf(12.33);
+//		Equip e = new Equip().setName("月下");e.setGoodslevel("009300010001");e.setSuitId("qaq").setAf(12.33);
+//		
+//		String jsonstr = Util_Json.toJsonString(e);
+//		System.out.println(jsonstr);
 		
-		String jsonstr = Util_Json.toJsonString(e);
-		System.out.println(jsonstr);
+		System.out.println();
 	}
 }

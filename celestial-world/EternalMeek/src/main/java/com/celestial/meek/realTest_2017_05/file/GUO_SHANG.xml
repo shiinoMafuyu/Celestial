@@ -1,0 +1,89 @@
+<QUERY>
+<!-- 成交sql -->
+<TradesDAO>
+	<sql>
+		<key>abc</key>
+		<value>select t.* from (select 1 abc from dual) t where t.abc = 2</value>
+	</sql>
+	
+	<sql>
+		<key>testSql</key>
+		<value><![CDATA[
+			select t.*,
+			       '- -' HoldNo,
+			       f.Quantity fQuantity,
+			       nvl(fe.DeliveryFee, 0) DeliveryFee,
+			       nvl(fe.StorageFee, 0) StorageFee,
+			       nvl(fe.InsuranceFee, 0) InsuranceFee,
+			       nvl(fe.TrusteeFee, 0) TrusteeFee,
+			       fa.FundsAccountID
+			  from su_deliveryapply_h t,
+			       su_DeliveryFeeDetail_H fe,
+			       FE_FP_FundsAccount fa,
+			       (select sum(f1.Quantity) Quantity,
+			               f1.DeliveryApplyID,
+			               f1.importtradedate
+			          from su_DeliveryFrozen_H f1
+			         group by f1.DeliveryApplyID, f1.importtradedate) f
+			 where f.DeliveryApplyID = t.DeliveryApplyID
+			   and f.importtradedate = t.importtradedate
+			   and fe.ImportTradeDate(+) = t.ImportTradeDate
+			   and fe.DeliveryApplyID(+) = t.DeliveryApplyID
+			   and fa.Belonger = t.Belonger
+			   and t.status = 1
+			   and trunc(t.UpdateTime) = ?
+		]]></value>
+	</sql>
+	
+	
+</TradesDAO>
+
+<!-- 交收sql -->
+<DeliveryTradesDAO>
+	<sql>
+		<key>abc</key>
+		<value>select t.* from (select 1 abc from dual) t where t.abc = 2</value>
+	</sql>
+	<sql>
+		<key>abc2</key>
+		<value>select t.* from (select 1 abc from dual) t where t.abc = 2</value>
+	</sql>
+</DeliveryTradesDAO>
+
+
+</QUERY>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

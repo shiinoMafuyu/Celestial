@@ -1,6 +1,8 @@
 package com.celestial.butterflystorm.butterfly2017.codeSynchronous;
 
 import java.io.File;
+import java.util.Arrays;
+import java.util.List;
 
 import com.celestial.agniRadiance.EzUtil.Util_File;
 import com.celestial.agniRadiance.EzUtil.Util_String;
@@ -8,13 +10,35 @@ import com.celestial.agniRadiance.abstracte.RecursiveDealFile;
 import com.celestial.agniRadiance.entity.FileReader;
 
 public class Synchronous_reverse {
+	
+	private static List<String[]> configList = Arrays.asList(new String[][]{
+		new String[]{"D:/workspace_final/02MyEclipse2013/liquidation/depository-extract-tradedata-m6-issue/src/gnnt/MEBS6/depository/extract/tradedata/issue"
+				,"D:/workspace_final/02MyEclipse2013/liquidation/depository-extract-tradedata-m6-sale/src/gnnt/MEBS6/depository/extract/tradedata/sale"},
+		new String[]{"D:/workspace_final/02MyEclipse2013/liquidation/depository-extract-tradedata-m6-issue/src/configfiles/GUO_SHANG.xml"
+				,"D:/workspace_final/02MyEclipse2013/liquidation/depository-extract-tradedata-m6-sale/src/configfiles/GUO_SHANG.xml"}
+	});
 
 	public static void main(String[] args) {
-		String path1 = "D:/workspace_final/02MyEclipse2013/liquidation/depository-extract-tradedata-m6-issue/src/gnnt/MEBS6/depository/extract/tradedata/issue";
-		String path2 = "D:/workspace_final/02MyEclipse2013/liquidation/depository-extract-tradedata-m6-sale/src/gnnt/MEBS6/depository/extract/tradedata/sale";
-//		String path2 = "C:/Users/Administrator/Desktop/a";
-		Synchronous_reverse syn = new Synchronous_reverse();
-		syn.doSynchronous(path1,path2);
+		
+		
+		doAllSysn(configList);
+		
+		
+	}
+
+	/**
+	 * <b>方法说明：</b>
+	 * <ul>
+	 * 
+	 * </ul>
+	 * @param configList2 
+	 */
+	private static void doAllSysn(List<String[]> aconfigList) {
+		
+		for(String[] si : aconfigList){
+			Synchronous_reverse syn = new Synchronous_reverse();
+			syn.doSynchronous(si[0],si[1]);
+		}
 		
 	}
 
@@ -23,7 +47,8 @@ public class Synchronous_reverse {
 		RecursiveDealFile rd = new RecursiveDealFile(new File(path1)) {
 			@Override
 			public void doWork(File file) {
-				FileReader f = new FileReader(file,"gbk",false);
+				String charset = getCharsetByType(file.getName());
+				FileReader f = new FileReader(file,charset,false);
 				StringBuffer sb = new StringBuffer();
 				while(f.hasNext()){
 					sb.append(f.readLine()).append("\n");
@@ -34,15 +59,23 @@ public class Synchronous_reverse {
 							.replaceAll("sA_", "sa_")
 							.replaceAll("SU_", "sa_")
 							.replaceAll("Su_", "sa_");
-				Util_File.printFile(send, path2 + Util_String.fmtPathStr(file.getAbsolutePath()).substring(path1.length()),"gbk");
+				Util_File.printFile(send, path2 + Util_String.fmtPathStr(file.getAbsolutePath()).substring(path1.length()),charset);
 				System.out.println("修改保存完成：" + file.getName());
 			}
+
+			
+			
 		};
 		
 		rd.start();
 		
 	}
 	
-	
+	private String getCharsetByType(String name) {
+		if(Util_String.matchAllSameRegx(name, ".*\\.java"))
+			return "gbk";
+		else
+			return "utf-8";
+	}
 
 }

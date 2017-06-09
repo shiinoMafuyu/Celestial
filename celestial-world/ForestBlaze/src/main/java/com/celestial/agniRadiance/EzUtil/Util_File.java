@@ -18,6 +18,7 @@ import java.security.MessageDigest;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -25,11 +26,31 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+
+import javax.swing.filechooser.FileSystemView;
+
 import java.util.Properties;
 
 import com.celestial.agniRadiance.abstracte.RecursiveDealFile;
+import com.celestial.agniRadiance.entity.FileReader;
 
 public class Util_File {
+	
+	/**
+	 * <b>方法说明：</b>
+	 * <ul>
+	 * 通过管道拷贝文件f1到f2<br/>
+	 * 目录存在则创建<br/>
+	 * </ul>
+	 * @param f1
+	 * @param f2
+	 * @throws Exception
+	 */
+	public static void copyByTransferDRS(File f1,File f2) throws Exception{
+		createFile(f2.getParentFile());
+		copyByTransfer(f1,f2);
+	}
+	
 	/**
 	 * 拷贝文件 <br/>
 	 * 通过管道 <br/>
@@ -42,23 +63,23 @@ public class Util_File {
 	@SuppressWarnings("resource")
 	public static long copyByTransfer(File f1,File f2) throws Exception{
 //		System.out.println(f1.getAbsolutePath() + "  -->  \n     " + f2.getAbsolutePath());
-        long time=new Date().getTime();
-        int length=2097152;
+		long time=new Date().getTime();
+		int length=2097152;
 		FileChannel inC=new FileInputStream(f1).getChannel();
-        FileChannel outC=new FileOutputStream(f2).getChannel();
-        while(true){
-            if(inC.position()==inC.size()){
-                inC.close();
-                outC.close();
-                return new Date().getTime()-time;
-            }
-            if((inC.size()-inC.position())<20971520)
-                length=(int)(inC.size()-inC.position());
-            else
-                length=20971520;
-            inC.transferTo(inC.position(),length,outC);
-            inC.position(inC.position()+length);
-        }
+		FileChannel outC=new FileOutputStream(f2).getChannel();
+		while(true){
+			if(inC.position()==inC.size()){
+			    inC.close();
+			    outC.close();
+			    return new Date().getTime()-time;
+			}
+			if((inC.size()-inC.position())<20971520)
+			    length=(int)(inC.size()-inC.position());
+			else
+			    length=20971520;
+			inC.transferTo(inC.position(),length,outC);
+			inC.position(inC.position()+length);
+		}
     }
 
 	/**
@@ -68,26 +89,26 @@ public class Util_File {
 	 * @throws FileNotFoundException
 	 */
 	public static String getMd5ByFile(File file){
-        String value = null;
-        FileInputStream in = null;
-	    try {
+		String value = null;
+		FileInputStream in = null;
+		try {
 	    	in = new FileInputStream(file);
-	        MappedByteBuffer byteBuffer = in.getChannel().map(FileChannel.MapMode.READ_ONLY, 0, file.length());
-	        MessageDigest md5 = MessageDigest.getInstance("MD5");
-	        md5.update(byteBuffer);
-	        BigInteger bi = new BigInteger(1, md5.digest());
-	        value = bi.toString(16);
+			MappedByteBuffer byteBuffer = in.getChannel().map(FileChannel.MapMode.READ_ONLY, 0, file.length());
+			MessageDigest md5 = MessageDigest.getInstance("MD5");
+			md5.update(byteBuffer);
+			BigInteger bi = new BigInteger(1, md5.digest());
+			value = bi.toString(16);
 	    } catch (Exception e) {
-	        e.printStackTrace();
-	        throw new RuntimeException("获取文件MD5值失败.");
+			e.printStackTrace();
+			throw new RuntimeException("获取文件MD5值失败.");
 	    } finally {
-	        if(null != in) {
-	            try {
-	            in.close();
-	            } catch (IOException e) {
-	                e.printStackTrace();
-	            }
-	        }
+			if(null != in) {
+				try {
+				in.close();
+				} catch (IOException e) {
+				    e.printStackTrace();
+				}
+			}
 	    }
 	    return value;
     }
@@ -109,31 +130,7 @@ public class Util_File {
 		}
 		return b;
 	} 
-	/**
-	 * 获取文件创建时间
-	 * @param filePath
-	 */
-	public static void getCreateTime(String filePath) {
-		String fileName = filePath.substring(filePath.lastIndexOf("\\")+1);
-	    try {
-	      Process p = Runtime.getRuntime().exec("cmd /C dir "+filePath+" /tc");
-	      InputStream is = p.getInputStream();
-	      BufferedReader br = new BufferedReader(new InputStreamReader(is));
-	      String result;
-	      String getTime = null;
-	      while ((result = br.readLine()) != null) {
-	        String[] str = result.split(" ");
-	        for (int i = str.length - 1; i >= 0; i--) {
-	          if (str[i].equals(fileName)) {
-	            getTime = str[0] + " " + str[2];
-	          }
-	        }
-	      }
-	      System.out.println(fileName+ " 文件的创建日期是：" + getTime);
-	    } catch (java.io.IOException exc) {
-	      exc.printStackTrace();
-	    }
-	  }
+	
 
 	/**
 	 * <b>方法说明：</b>
@@ -177,32 +174,85 @@ public class Util_File {
 	/**
 	 * <b>方法说明：</b>
 	 * <ul>
-	 * 把文件f1拷到目录f2下 
+	 * 把文件f1拷到目录f2下 <br/>
+	 * 使用控制台方式<br/>
 	 * </ul>
 	 * @param f1
 	 * @param f2
 	 */
 	public static void copyByCmd(File f1, File f2) {
 		try {
-            Runtime rt = Runtime.getRuntime();
-            String s1 = formate(f1.getAbsolutePath().replaceAll("\\\\", "\\\\\\\\"));
-            String s2 = formate(f2.getAbsolutePath().replaceAll("\\\\", "\\\\\\\\"));
-            Process pr = rt.exec("cmd /c copy "+s1+" "+s2);
-            BufferedReader input = new BufferedReader(new InputStreamReader(pr.getInputStream(), "GBK"));
-            String line = null;
-            while ((line = input.readLine()) != null) {
-                System.out.println(line);
-            }
-            int exitVal = pr.waitFor();
-            if(exitVal!=0){
-            	throw new RuntimeException("拷贝文件请处理异常.文件路径是否正确,或者是应该加上引号的字符在DBUtil.cmdStringChangeMap中添加.");
-            }
-        } catch (Exception e) {
-            System.out.println(e.toString());
-            e.printStackTrace();
-        }
+			String s1 = formateCmdPath(f1.getAbsolutePath());
+			String s2 = formateCmdPath(f2.getAbsolutePath());
+			
+			Runtime rt = Runtime.getRuntime();
+			String cmd = "cmd /c copy " + s1 + " " + s2;
+			Process pr = rt.exec(cmd);
+			BufferedReader input = new BufferedReader(new InputStreamReader(pr.getInputStream(), "GBK"));
+			String line = null;
+			while ((line = input.readLine()) != null) {
+			    System.out.println(line);
+			}
+			int exitVal = pr.waitFor();
+			if(exitVal!=0){
+				throw new RuntimeException("拷贝文件请处理异常.文件路径是否正确,或者是应该加上引号的字符在DBUtil.cmdStringChangeMap中添加.");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * <b>方法说明：</b>
+	 * <ul>
+	 * 把文件f1拷到目录f2下 ,如果f2所在目录不存在则创建。<br/>
+	 * 使用控制台方式<br/>
+	 * </ul>
+	 * @param f1
+	 * @param f2
+	 */
+	public static void copyByCmdDRS(File f1, File f2) {
+		createFile(f2.getParentFile());
+		copyByCmd(f1,f2);
+	}
+	
+	/**
+	 * <b>方法说明：</b>
+	 * <ul>
+	 * 如果不存在则创建文件<br/>
+	 * </ul>
+	 * @param parentFile 
+	 */
+	public static void createFile(File file) {
+		if(!file.exists())
+			file.mkdirs();
 	}
 
+	/**
+	 * 获取文件创建时间(精确到分钟)。<br/>
+	 * 通过控制台方式。<br/>
+	 * @param filePath
+	 */
+	public static Date getCreateTime(String filePath){
+		filePath = formateCmdPath(filePath);
+		try {
+			String cmd = String.format("cmd /C dir %s /tc", filePath);
+			Process p = Runtime.getRuntime().exec(cmd);
+			InputStream is = p.getInputStream(); 
+			BufferedReader br = new BufferedReader(new InputStreamReader(is));
+			String line;
+			while((line = br.readLine()) != null){
+				if(Util_String.matchAllSameRegx(line, "\\d{4}/\\d{2}/\\d{2}\\s{2}\\d{2}:\\d{2}.*")){
+					break;
+				}
+			 }
+			return new SimpleDateFormat("yyyy/MM/dd  hh:mm").parse(line);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
 	/**
 	 * <b>方法说明：</b>
 	 * <ul>
@@ -212,7 +262,7 @@ public class Util_File {
 	 * @param s
 	 * @return
 	 */
-	private static String formate(String s) {
+	private static String formateCmdPath(String s) {
 		Iterator<Map.Entry<String, String>> it = cmdStringChangeMap.entrySet().iterator();
 		while (it.hasNext()) {
 			Map.Entry<String, String> entry = it.next();
@@ -745,5 +795,143 @@ public class Util_File {
 			
 			
 	}
+	
+	/**
+	 * 更新文件。<br/>
+	 * 如果srcFile比targetFile，或者targetFile不存在则复制srcFile到targetFile.<br/>
+	 * @param srcFile
+	 * @param targetFile
+	 */
+	public static void compareAndRenew(File srcFile, File targetFile) {
+		if(!targetFile.exists() || !compareModifiedTime(srcFile,targetFile)){
+			Util_File.copyByCmdDRS(srcFile, targetFile);
+		}
+	}
+	
+	/** 
+	 * 读取文件修改时间的方法1
+	 * @param file
+	 */ 
+	public static Date getModifiedTime(File file){
+		Calendar cal = Calendar.getInstance();
+		cal.setTimeInMillis(file.lastModified());
+		return cal.getTime();
+	}
+
+	/**
+	 * 比较f1Path和f2Path是否一致。
+	 * @param f1Path 
+	 * @param f2Path 
+	 * @return
+	 */
+	public static boolean compareFileContent(String f1Path, String f2Path) {
+		return compareFileContent(new File(f1Path),new File(f1Path));
+	}
+	
+	/**
+	 * 比较f1和f2是否一致。
+	 * @param f1 
+	 * @param f2 
+	 * @return
+	 */
+	public static boolean compareFileContent(File f1, File f2) {
+		FileReader pf = new FileReader(f1);
+		FileReader ff = new FileReader(f2);
+		if(ff.getLineList().size() != pf.getLineList().size())
+			return false;
+		while(ff.hasNext()){
+			if(!ff.readLine().equals(pf.readLine()))
+				return false;
+		}
+		return true;
+	}
+
+	/**
+	 * 比较创建时间f2是否比f1新。
+	 * @param f1
+	 * @param f2
+	 * @return
+	 */
+	public static boolean compareModifiedTime(File f1, File f2) {
+		return Util_File.getModifiedTime(f2).after(Util_File.getModifiedTime(f1));
+	}
+
+	/**
+	 * 获取文件file的不重名新名<br/>
+	 * @param file
+	 */
+	public static File getUnRepeatName(File file) {
+		String name = file.getName();
+		Integer n = 1;
+		if(file.exists()){
+			if(Util_String.matchAllRegx(name, "\\d+-.*")){
+				n = Integer.valueOf(name.split("-")[0]);
+				n++;
+				name = n + name.substring(name.indexOf("-"));
+			}else{
+				name = n + "-" + name;
+			}
+			return getUnRepeatName(new File(file.getParentFile().getAbsolutePath()+"/"+name));
+		}else{
+			return file;
+		}
+	}
+
+	/**
+	 * <b>方法说明：</b>
+	 * <ul>
+	 * 获取绝对路径。
+	 * </ul>
+	 * @param path
+	 * @return 
+	 */
+	public static String getAbsolutePath(String path) {
+		return getAbsolutePath(new File(path));
+	}
+	
+	/**
+	 * <b>方法说明：</b>
+	 * <ul>
+	 * 获取绝对路径。
+	 * </ul>
+	 * @param file
+	 * @return 
+	 */
+	public static String getAbsolutePath(File file) {
+		return Util_String.fmtPathStr(file.getAbsolutePath());
+	}
+
+	/**
+	 * <b>方法说明：</b>
+	 * <ul>
+	 * 判断path是不是存在的目录.<br/>
+	 * </ul>
+	 * @param path
+	 * @return 
+	 */
+	public static boolean isPath(String path) {
+		try{
+			File f = new File(path);
+			if(f.exists() && f.isDirectory())
+				return true;
+		}catch (Exception e) {
+		}
+		return false;
+	}
+	
+	/**
+	 * <b>方法说明：</b>
+	 * <ul>
+	 * 获取桌面路径<br/>
+	 * </ul>
+	 * @return
+	 */
+	public static String getDesktopPath(){
+		FileSystemView fsv = FileSystemView.getFileSystemView();
+		File home = fsv.getHomeDirectory(); 
+		return Util_String.fmtPathStr(home.getAbsolutePath());
+	}
+	
+	
 
 }

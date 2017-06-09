@@ -17,7 +17,6 @@ import com.dn.entity.Equipment;
 
 
 
-@SuppressWarnings("unused")
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class TestQueryEquipmentDao{
 	

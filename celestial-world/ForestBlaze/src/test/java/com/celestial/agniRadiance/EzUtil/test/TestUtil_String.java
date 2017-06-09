@@ -118,4 +118,16 @@ public class TestUtil_String {
 		Assert.assertEquals(ex, s);
 		
 	}
+	
+	@Test
+	public void _08__transHead(){
+		
+		Assert.assertEquals("Mafuyu", Util_String.__transHeadToUpperCase("mafuyu"));
+		Assert.assertEquals("A", Util_String.__transHeadToUpperCase("a"));
+		Assert.assertEquals("", Util_String.__transHeadToUpperCase(""));
+		
+	}
+	
+	
+	
 }

@@ -24,6 +24,8 @@ import java.util.regex.Pattern;
  * </p>
  */
 public class Util_String {
+	
+	public static String EMPTY = "";
 
 	/**
 	 * <b>方法说明：</b>
@@ -34,6 +36,8 @@ public class Util_String {
 	 * @return
 	 */
 	public static String __transHeadToUpperCase(String str) {
+		if("".equals(str))
+			return "";
 		return new StringBuffer(str.substring(0, 1).toUpperCase()).append(str.substring(1)).toString();
 	}
 
@@ -96,13 +100,13 @@ public class Util_String {
 	 * <ul>
 	 * 把首写字母大写变小写
 	 * </ul>
-	 * @param string
+	 * @param str
 	 * @return
 	 */
-	public static String __transHeadToLowerCase(String string) {
-		if("".equals(string))
+	public static String __transHeadToLowerCase(String str) {
+		if("".equals(str))
 			return "";
-		return string.substring(0, 1).toLowerCase()+string.substring(1);
+		return new StringBuffer(str.substring(0, 1).toLowerCase()).append(str.substring(1)).toString();
 	}
 	
 	/**
@@ -343,7 +347,7 @@ public class Util_String {
 	 * <b>方法说明：</b>
 	 * <ul>
 	 * 在s中取得最后的sign之后的部分。<br/>
-	 * 如：ez.EzUtil.Util_String取得最后的。之后的，即为Util_String。
+	 * 如：ez.EzUtil.Util_String取得最后的.之后的，即为Util_String。
 	 * </ul>
 	 * @param s
 	 * @param sign 

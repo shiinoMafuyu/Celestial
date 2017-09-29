@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
-import com.celestial.agniRadiance.EzUtil.Util_File;
+import com.celestial.agniRadiance.EzUtil.UtilFile;
 
 
 public class 先不解析文本了直接用生成 {
@@ -32,18 +32,19 @@ public class 先不解析文本了直接用生成 {
 		for(List<Object> li : lreq){
 			String qualifiedName = (String)li.get(0);
 			List<String> ls = CreateRequestResponseOld.createRequestClass(qualifiedName, Arrays.asList(((String[][])li.get(1))), (List<String>)li.get(2));
-			Util_File.printFile(ls,filePath + qualifiedName.substring(qualifiedName.lastIndexOf(".")+1) + ".java");
+			UtilFile.printFile(ls,filePath + qualifiedName.substring(qualifiedName.lastIndexOf(".")+1) + ".java");
 			
 		}
 		for(List<Object> li : lres){
 			String qualifiedName = (String)li.get(0);
 			List<String> ls = CreateRequestResponseOld.createreResponseClass(qualifiedName, Arrays.asList(((String[][])li.get(1))), Arrays.asList(((String[][])li.get(2))), (List<String>)li.get(3));
-			Util_File.printFile(ls,filePath + qualifiedName.substring(qualifiedName.lastIndexOf(".")+1) + ".java");
+			UtilFile.printFile(ls,filePath + qualifiedName.substring(qualifiedName.lastIndexOf(".")+1) + ".java");
 		}
 		
 		
 	}
 
+	@SuppressWarnings("unused")
 	private static void get_TemplateCancelResponseVO() {
 		/**=============================== =========================================*/
 		//request添加p1

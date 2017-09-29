@@ -3,7 +3,7 @@ package com.celestial.hydrogenousProminence.fileReplace;
 import java.util.List;
 import java.util.Map.Entry;
 
-import com.celestial.agniRadiance.EzUtil.Util_File;
+import com.celestial.agniRadiance.EzUtil.UtilFile;
 import com.celestial.agniRadiance.entity.FileReader;
 import com.celestial.agniRadiance.entity.Print;
 /**
@@ -58,7 +58,7 @@ public class Replace {
 			if(!(start > 0 && end > start))
 				throw new RuntimeException("文件：" + targetFilePath + " 的开始下标：" + repArr[2] + " 和结束下标：" + repArr[3] + " 匹配有误！");
 			FileReader endFile = targetFile.replaceList(start, end, targetList);
-			Util_File.printFile(endFile.getLineList(), targetFilePath, charset);
+			UtilFile.printFile(endFile.getLineList(), targetFilePath, charset);
 			return true;
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -13,8 +13,8 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.celestial.agniRadiance.EzUtil.Util_Collection;
-import com.celestial.agniRadiance.EzUtil.Util_File;
+import com.celestial.agniRadiance.EzUtil.UtilCollection;
+import com.celestial.agniRadiance.EzUtil.UtilString;
 import com.celestial.agniRadiance.entity.FileReader;
 
 
@@ -48,7 +48,7 @@ public class te1 {
 		FileReader f = new FileReader("C:/Users/Administrator/Desktop/parese2/e现货.txt");
 		String head=".*<MEBS_MOBILE.*>.*",tail = ".*</MEBS_MOBILE>.*";
 		List<Map<Integer,String>> lm = f.selectAllLineBetweenRegex(head,tail);
-		List<String> li = Util_Collection.transMaptoList(lm.get(0));
+		List<String> li = UtilCollection.transMaptoList(lm.get(0));
 		int title=1,r=0;
 		
 		System.out.println(123);
@@ -61,12 +61,12 @@ public class te1 {
 		String[] sArr1 = new String[]{"nn","mm"};
 		String[] sArr2 = new String[]{"22","33"};
 		
-		String[] sArr3 = (String[])Util_Collection.combineArray(new String[][]{{"nn","mm"},{"22","33"}});
+		String[] sArr3 = (String[])UtilCollection.combineArray(new String[][]{{"nn","mm"},{"22","33"}});
 		List<Object[]> ls = new ArrayList<Object[]>();
 		ls.add(sArr1);
 		ls.add(sArr2);
 		ls.add(sArr3);
-		sArr3 = (String[])Util_Collection.combineArray(ls);
+		sArr3 = (String[])UtilCollection.combineArray(ls);
 		
 		System.out.println(1);
 	}
@@ -86,7 +86,7 @@ public class te1 {
 		System.out.println("-----------------------------------------");
 //		Util_Collection.print(l);
 		List<String> lc = new CopyOnWriteArrayList<String>(l);
-		Util_Collection.print(lc);
+		UtilCollection.print(lc);
 		
 		int i = 0;
 		for(String si : lc){
@@ -101,7 +101,7 @@ public class te1 {
 
 		
 		System.out.println("-----------------------------------------");
-		Util_Collection.print(lc);
+		UtilCollection.print(lc);
 		System.out.println("-----------------------------------------");
 		
 	}
@@ -136,7 +136,7 @@ public class te1 {
 		List<Object[]> l = new ArrayList<Object[]>();
 		for(String si : sArr){
 			String[] sR = si.split("=");
-			if(sR.length == 2 && Util_File.checkNotNullnotKong(sR[0]) && Util_File.checkNotNullnotKong(sR[1])){
+			if(sR.length == 2 && UtilString.notNullEmpty(sR[0]) && UtilString.notNullEmpty(sR[1])){
 				l.add(sR);
 			}else{
 				throw new RuntimeException(new StringBuffer("属性字符串").append(s).append("属性有问题!").toString());
@@ -190,6 +190,7 @@ public class te1 {
 	}
 
 
+	@SuppressWarnings("resource")
 	public static void te3() throws Exception {
 		BufferedReader br =new BufferedReader(new InputStreamReader(new FileInputStream("F:/云盘同步文件夹/云盘同步文件夹/00sentence/parse/33仓单信息.txt"),"utf-8"));
 		StringBuffer sb = new StringBuffer();

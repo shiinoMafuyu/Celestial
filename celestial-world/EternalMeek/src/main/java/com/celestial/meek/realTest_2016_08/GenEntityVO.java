@@ -40,7 +40,8 @@ private String pk;
    /* 
 33.     * 构�?函数 
 34.     */  
-    public GenEntityVO(){  
+    @SuppressWarnings("unused")
+	public GenEntityVO(){  
        //创建连接  
         Connection con;  
        //查要生成实体类的�? 

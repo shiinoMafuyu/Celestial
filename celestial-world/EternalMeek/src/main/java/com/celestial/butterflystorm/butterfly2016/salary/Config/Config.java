@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.celestial.agniRadiance.EzUtil.Util_DB;
+import com.celestial.agniRadiance.EzUtil.UtilDB;
 
 public class Config {
 	
@@ -23,7 +23,7 @@ public class Config {
 	/**根据配置获取实例的方法.*/
 	
 	public static Connection getConnection() {
-		return Util_DB.getConnectionMySQL(userName, passWord, url);
+		return UtilDB.getConnectionMySQL(userName, passWord, url);
 	}
 	
 	

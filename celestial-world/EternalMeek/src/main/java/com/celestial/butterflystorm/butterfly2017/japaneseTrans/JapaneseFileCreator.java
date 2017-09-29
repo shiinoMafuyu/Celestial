@@ -3,8 +3,8 @@ package com.celestial.butterflystorm.butterfly2017.japaneseTrans;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.celestial.agniRadiance.EzUtil.Util_File;
-import com.celestial.agniRadiance.EzUtil.Util_String;
+import com.celestial.agniRadiance.EzUtil.UtilFile;
+import com.celestial.agniRadiance.EzUtil.UtilString;
 import com.celestial.agniRadiance.entity.FileReader;
 
 public class JapaneseFileCreator {
@@ -36,10 +36,10 @@ public class JapaneseFileCreator {
 			
 			
 		}
-		String saveDirectory = Util_String.__getStrBeforeLast(path, "/");
-		Util_File.printFile(l_no_annotion, saveDirectory+"/StudyFile/01日语无注释.txt");
-		Util_File.printFile(l_no_fanyi, saveDirectory+"/StudyFile/02日语无翻译.txt");
-		Util_File.printFile(f.getLineList(), saveDirectory+"/StudyFile/03日语全有.txt");
+		String saveDirectory = UtilString.getStrBeforeLast(path, "/");
+		UtilFile.printFile(l_no_annotion, saveDirectory+"/StudyFile/01日语无注释.txt");
+		UtilFile.printFile(l_no_fanyi, saveDirectory+"/StudyFile/02日语无翻译.txt");
+		UtilFile.printFile(f.getLineList(), saveDirectory+"/StudyFile/03日语全有.txt");
 		
 	}
 	

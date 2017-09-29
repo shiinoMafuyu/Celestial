@@ -10,8 +10,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.celestial.agniRadiance.EzUtil.Util_Collection;
-import com.celestial.agniRadiance.EzUtil.Util_Json;
+import com.celestial.agniRadiance.EzUtil.UtilCollection;
+import com.celestial.agniRadiance.EzUtil.UtilJson;
 import com.dn.dao.QueryBuffDao;
 import com.dn.dao.QueryCharactorDao;
 import com.dn.dao.QueryDragonJadeDao;
@@ -81,7 +81,7 @@ public class MainController {
 		return res;
 	}*/
 	
-	
+	//127.0.0.1:8080/SilverRiver/all.action
 	@RequestMapping("all.action")
 	@ResponseBody
 	public Result queryAll(){
@@ -128,11 +128,11 @@ public class MainController {
 		Map<String, List<Equipment>> m = new HashMap<String, List<Equipment>>();
 		
 		for(Equipment ei : data){
-			Util_Collection.put(m,ei.getRepresentId(),ei);
+			UtilCollection.put2MapList(m,ei.getRepresentId(),ei);
 		}
 		
 		String res = "{\"message\":\"获取数据成功.\",\"retcode\":0,\"data\":arg_data}";
-		return res.replaceAll("arg_data", Util_Json.toJsonStringMap(m));
+		return res.replaceAll("arg_data", UtilJson.toJsonStringMap(m));
 	}
 	
 

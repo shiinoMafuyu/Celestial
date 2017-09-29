@@ -2,7 +2,7 @@ package com.celestial.butterflystorm.butterfly2017.espotSysn;
 
 import java.util.List;
 
-import com.celestial.agniRadiance.EzUtil.Util_String;
+import com.celestial.agniRadiance.EzUtil.UtilString;
 
 /**
  * 将一段List变为append的字符串。
@@ -40,11 +40,11 @@ public class Util_sepotSysn {
 	public static String createSQlAppend(List<String> list, int tabN, String name) {
 		if(null!=name && "".equals(name))
 			name = "sql";
-		String tab = Util_String.__nstr("\t", tabN);
+		String tab = UtilString.nstr("\t", tabN);
 		StringBuffer sb = new StringBuffer(tab).append("String ").append(name).append(" = new StringBuffer(\"\")\n");
 		String[] sArr = new String[]{"",""};
 		for(String si : list){
-			if(!"".equals(si) && !Util_String.matchAllSameRegx(si, "(\\s|\\t)+")){
+			if(!"".equals(si) && !UtilString.matchAllSameRegx(si, "(\\s|\\t)+")){
 				if(si.contains("--")){
 					sArr = si.split("--");
 					sArr[1] = "//" + sArr[1];

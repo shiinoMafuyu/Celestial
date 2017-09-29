@@ -10,8 +10,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import com.celestial.agniRadiance.EzUtil.Util_Normal;
-import com.celestial.agniRadiance.EzUtil.Util_String;
+import com.celestial.agniRadiance.EzUtil.UtilNormal;
+import com.celestial.agniRadiance.EzUtil.UtilString;
 
 
 
@@ -147,10 +147,10 @@ public class NormalClass {
 		l.addAll(this.annotationInfo);
 		l.add("public class " + className + "{");//----------------------------------------------->>
 		
-		l.addAll(Util_Normal.table(createExtra1()));
+		l.addAll(UtilNormal.table(createExtra1()));
 		
-		l.addAll(Util_Normal.table(this.memberVariables));
-		l.addAll(Util_Normal.table(this.mixSetAndGetMethods));
+		l.addAll(UtilNormal.table(this.memberVariables));
+		l.addAll(UtilNormal.table(this.mixSetAndGetMethods));
 		
 		l.add("}");
 		return l;
@@ -220,13 +220,13 @@ public class NormalClass {
 	 */
 	private Collection<? extends String> createAsetMethod(String[] sArr) {
 		List<String> l = new ArrayList<String>();
-		String paramCase = Util_String.__transHeadToLowerCase(sArr[0]);
+		String paramCase = UtilString.transHeadToLowerCase(sArr[0]);
 		l.add("/**");
 		l.add(" * <b>方法说明：</b>");
 		l.add(" * <ul>");
 		l.add(" * 设置" + sArr[2]);
 		l.add(" * </ul>");
-		l.add(" * @param " + Util_String.__transHeadToLowerCase(sArr[0]));
+		l.add(" * @param " + UtilString.transHeadToLowerCase(sArr[0]));
 		l.add(" */");
 		l.add("public void set" + sArr[0] + "(" + sArr[1] + " " + paramCase + ") {");
 		l.add("	this." + paramCase + " = " + paramCase + ";");
@@ -266,7 +266,7 @@ public class NormalClass {
 		l.add(" * @return");
 		l.add(" */");
 		l.add("public " + sArr[1] + " get"+sArr[0]+"() {");
-		l.add("	return " + Util_String.__transHeadToLowerCase(sArr[0]) + " ;");
+		l.add("	return " + UtilString.transHeadToLowerCase(sArr[0]) + " ;");
 		l.add("}");
 		l.add("");
 		return l;
@@ -284,7 +284,7 @@ public class NormalClass {
 			l.add("/**");
 			l.add(" * " + sArr[2] + " ");
 			l.add(" */");
-			l.add("private "+ sArr[1] +" "+ Util_String.__transHeadToLowerCase(sArr[0]) +" ;");
+			l.add("private "+ sArr[1] +" "+ UtilString.transHeadToLowerCase(sArr[0]) +" ;");
 		}
 		l.add("");
 		return l;

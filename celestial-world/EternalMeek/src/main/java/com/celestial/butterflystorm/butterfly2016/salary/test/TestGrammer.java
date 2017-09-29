@@ -5,8 +5,8 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-import com.celestial.agniRadiance.EzUtil.Util_DB;
-import com.celestial.agniRadiance.EzUtil.Util_String;
+import com.celestial.agniRadiance.EzUtil.UtilDB;
+import com.celestial.agniRadiance.EzUtil.UtilString;
 import com.celestial.agniRadiance.entity.Print;
 import com.celestial.agniRadiance.entity.Tag;
 import com.celestial.butterflystorm.butterfly2016.salary.Interface.entity.Employee;
@@ -35,7 +35,7 @@ public class TestGrammer extends TestCase {
 	
 	public void testDBLink(){
 		p.println("testDBLink---------------------------------------------->");
-		Connection conn = Util_DB.getConnectionMySQL();
+		Connection conn = UtilDB.getConnectionMySQL();
 		Statement st = null;
 		ResultSet rs = null;
 		try {
@@ -43,7 +43,7 @@ public class TestGrammer extends TestCase {
 			rs = st.executeQuery("select * from employee");
 			while(rs.next()){
 				p.println(rs.getString(1) + " , " + rs.getString(2) + " , " + rs.getString(3)+ " , " + rs.getString(4)+ " , " + rs.getString(5)+ " , " + rs.getString(6));
-				assertTrue(Util_String.isInteger(rs.getString(1)));
+				assertTrue(UtilString.isInteger(rs.getString(1)));
 				
 				/*assertTrue(rs.getString(2) != null);
 				assertTrue(UtilString.isInteger(rs.getString(3)));
@@ -63,7 +63,7 @@ public class TestGrammer extends TestCase {
 				st.close();
 			} catch (Exception e2) {
 			}
-			Util_DB.close(conn);
+			UtilDB.close(conn);
 		}
 	}
 	

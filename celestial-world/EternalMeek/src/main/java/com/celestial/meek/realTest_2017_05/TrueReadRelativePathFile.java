@@ -1,6 +1,6 @@
 /******************************************************************
  * TrueReadRelativePathFile.java
- * Copyright 2017 by GNNT Company. All Rights Reserved.
+ * Copyright 2017 by WZG. All Rights Reserved.
  * CreateDate£º2017Äê5ÔÂ23ÈÕ
  * Author£ºwangzg
  * Version£º1.0.0

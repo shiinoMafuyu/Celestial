@@ -2,8 +2,8 @@ package com.celestial.misdirection.JunitPlay;
 
 import java.util.List;
 
-import com.celestial.agniRadiance.EzUtil.Util_Collection;
-import com.celestial.agniRadiance.EzUtil.Util_String;
+import com.celestial.agniRadiance.EzUtil.UtilCollection;
+import com.celestial.agniRadiance.EzUtil.UtilString;
 import com.celestial.agniRadiance.entity.FileReader;
 import com.celestial.agniRadiance.entity.Tag;
 /**
@@ -106,7 +106,7 @@ public class UserCase {
 				Tag output = this.tagOutput.getTagByNames(sArr);
 				String regxValue = verify.getValue();
 				regxValue = ___getVariableFromINPUT(regxValue,verify);
-				if(Util_String.matchAllSameRegx(output.getValue(), regxValue)){
+				if(UtilString.matchAllSameRegx(output.getValue(), regxValue)){
 					System.out.println("	标签:" + verify.getTagName() + "	sucessed!");
 				}else{
 					System.out.println("	标签:" + verify.getTagName() + "	faild!");
@@ -138,7 +138,7 @@ public class UserCase {
 		try {
 			int n = -1,i = 0;
 			while(true){
-				if(Util_String.matchAllSameRegx(regxValue, ".*cite\\["+i+"\\].*")){
+				if(UtilString.matchAllSameRegx(regxValue, ".*cite\\["+i+"\\].*")){
 					n++;
 					i++;
 				}else{
@@ -196,7 +196,7 @@ public class UserCase {
 	 * @param xmlineList 包含USERCASE的xml list
 	 */
 	public UserCase(List<String> xmlineList){
-		init(Util_Collection.transListToLine(xmlineList));
+		init(UtilCollection.transListToLine(xmlineList));
 	}
 	/**
 	 * 用包含USERCASE xml的string对象生成USERCASE对象.

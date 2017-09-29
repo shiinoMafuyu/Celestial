@@ -9,8 +9,8 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.celestial.agniRadiance.EzUtil.Util_File;
-import com.celestial.agniRadiance.EzUtil.Util_String;
+import com.celestial.agniRadiance.EzUtil.UtilFile;
+import com.celestial.agniRadiance.EzUtil.UtilString;
 import com.celestial.agniRadiance.entity.FileReader;
 
 public class Dbutil_play {
@@ -127,7 +127,7 @@ public class Dbutil_play {
 					s0 = s.substring(s.indexOf("set") , s.indexOf("("));
 					methodKeyWords = s.substring(s.indexOf("set") + 3, s.indexOf("("));
 					String[] sArr = s.substring(s.indexOf("(")+1, s.indexOf(")")).split(" ");
-					String sx = objName + "." + s0 + "(rs.get" + sArr[0] + "(\"" + Util_String.__transHeadToLowerCase(methodKeyWords) + "\"));";
+					String sx = objName + "." + s0 + "(rs.get" + sArr[0] + "(\"" + UtilString.transHeadToLowerCase(methodKeyWords) + "\"));";
 					n++;
 					
 					s = br.readLine();
@@ -162,7 +162,7 @@ public class Dbutil_play {
 			 throw new RuntimeException("today i get up early but nothing happen~");
 		}
 		finally{
-			Util_File.close(br);
+			UtilFile.close(br);
 		}
 		
 	}
@@ -226,7 +226,7 @@ public class Dbutil_play {
 			 throw new RuntimeException("today i get up early but nothing happen~");
 		}
 		finally{
-			Util_File.close(br);
+			UtilFile.close(br);
 		}
 		return l;
 	}
@@ -292,7 +292,7 @@ public class Dbutil_play {
 					s0 = s.substring(s.indexOf("set") , s.indexOf("("));
 					methodKeyWords = s.substring(s.indexOf("set") + 3, s.indexOf("("));
 					String[] sArr = s.substring(s.indexOf("(")+1, s.indexOf(")")).split(" ");
-					String sx = objName + "." + s0 + "(rs.get" + sArr[0] + "(\"" + Util_String.__transHeadToLowerCase(methodKeyWords) + "\"));";
+					String sx = objName + "." + s0 + "(rs.get" + sArr[0] + "(\"" + UtilString.transHeadToLowerCase(methodKeyWords) + "\"));";
 					System.out.println(sx);
 					
 				}
@@ -302,7 +302,7 @@ public class Dbutil_play {
 			 throw new RuntimeException("today i get up early but nothing happen~");
 		}
 		finally{
-			Util_File.close(br);
+			UtilFile.close(br);
 		}
 	}
 	

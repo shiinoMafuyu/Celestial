@@ -2,7 +2,7 @@ package com.celestial.butterflystorm.butterfly2016.puddingII;
 
 import java.io.File;
 
-import com.celestial.agniRadiance.EzUtil.Util_File;
+import com.celestial.agniRadiance.EzUtil.UtilFile;
 /**
  * <b>修改记录：</b> 
  * <p>
@@ -127,7 +127,7 @@ public class PuddingMaker {
 				String iName = i.getName();
 				if(iName.contains(firstName+"$") && iName.endsWith(".class")){
 					File iDesFile = new File(parentDes + "/"+iName);
-					Util_File.copyByCmd(i, iDesFile);
+					UtilFile.copyByCmd(i, iDesFile);
 				}
 			}
 		} catch (Exception e) {
@@ -143,7 +143,7 @@ public class PuddingMaker {
 	private boolean cookDinner() {
 		boolean b = true;
 		try {
-			Util_File.copyByCmd(srcFile, desFile);
+			UtilFile.copyByCmd(srcFile, desFile);
 		} catch (Exception e) {
 			e.printStackTrace();
 			b = false;
@@ -202,7 +202,7 @@ public class PuddingMaker {
 			}
 		}
 		else if(file.isFile()){
-			if(Util_File.compareFile(file,this.s1File)){
+			if(UtilFile.compareFile(file,this.s1File)){
 				if(this.tail !=null ){
 					System.out.println("警告 : 找到的 "+this.fileName+" 文件不止一个,请注意!");
 				}

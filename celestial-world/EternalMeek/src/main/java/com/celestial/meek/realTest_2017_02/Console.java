@@ -14,7 +14,7 @@ public class Console {
 		
 		String s = "strengthenKind=strengthenKind,level=level,goodslevel=goodslevel|strengthen";
 		String[] sArr = s.split("\\|");
-		System.out.println(1);
+		System.out.println(sArr);
 	}
 
 }

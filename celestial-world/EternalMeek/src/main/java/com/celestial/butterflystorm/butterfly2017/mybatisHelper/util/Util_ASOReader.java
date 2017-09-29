@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.celestial.agniRadiance.EzUtil.Util_String;
+import com.celestial.agniRadiance.EzUtil.UtilString;
 import com.celestial.agniRadiance.entity.FileReader;
 import com.celestial.butterflystorm.butterfly2017.mybatisHelper.creator.SQLcreator;
 import com.celestial.butterflystorm.butterfly2017.mybatisHelper.depender.XMLdepender;
@@ -65,9 +65,9 @@ public class Util_ASOReader {
 					classList.add(new String[]{sArr[0],"String",annotion});
 				}
 				else if(sArr[1].startsWith("ref")){
-					String[] refArr = Util_String.getLineParam(sArr[1], "ref").split(",");
+					String[] refArr = UtilString.getLineParam(sArr[1], "ref").split(",");
 					//设置引用类型成员变量的类型和注释。
-					String refClassName = Util_String.__getStrAfterLast(refArr[1], ".");
+					String refClassName = UtilString.getStrAfterLast(refArr[1], ".");
 					if(SQLcreator.ONE_TO_MANY.equals(refArr[0])){
 						classList.add(new String[]{sArr[0],"List<" + refClassName +">",annotion });
 					}else if(SQLcreator.ONE_TO_ONE.equals(refArr[0])){
@@ -96,7 +96,7 @@ public class Util_ASOReader {
 			}
 			else if(null!=s && s.contains("(") && s.contains(")")){
 				String[] sArr = s.split(" ");
-				String condition = Util_String.getLineParam(s, "col_con");
+				String condition = UtilString.getLineParam(s, "col_con");
 				if(sArr[1].contains("int")){
 					sqlList.add(new String[]{sArr[0],sArr[1],condition});
 				}
@@ -133,8 +133,8 @@ public class Util_ASOReader {
 			//"level=level,strengthenKind=strengthenKind|strengthen|strengthenList|com.dn.entity.Strengthen"
 			else if(null!=s && s.contains("(") && s.contains(")") && s.contains("ref") && s.contains("table")){
 				String refProperty = s.split(" ")[0];
-				String[] refInfos = Util_String.getLineParam(s,"ref").split(",");
-				String[] tableInfoArr = Util_String.getLineParam(s, "table").split("\\|");
+				String[] refInfos = UtilString.getLineParam(s,"ref").split(",");
+				String[] tableInfoArr = UtilString.getLineParam(s, "table").split("\\|");
 				l.add(new String[]{tableInfoArr[0],tableInfoArr[1],refProperty,refInfos[1],refInfos[0]});
 			}
 		}
@@ -147,20 +147,20 @@ public class Util_ASOReader {
 	public static Map<String, String> getInfoMap(FileReader f) {
 		Map<String,String> createInfoMap = new HashMap<String, String>();
 		//类名 表名 dao名等信息
-		String fullClassName = Util_String.getLineParam(f.readLine(0),"fullClassName");
-		String fullDaoName = Util_String.getLineParam(f.readLine(1),"fullDaoName");
+		String fullClassName = UtilString.getLineParam(f.readLine(0),"fullClassName");
+		String fullDaoName = UtilString.getLineParam(f.readLine(1),"fullDaoName");
 		
 		String daoName = fullDaoName.substring(fullDaoName.lastIndexOf(".")+1);
 		String className = fullClassName.substring(fullClassName.lastIndexOf(".")+1);
 		
-		String tableName = Util_String.__transHeadToLowerCase(className);
+		String tableName = UtilString.transHeadToLowerCase(className);
 		
 		createInfoMap.put("fullClassName", fullClassName);
 		createInfoMap.put("fullDaoName", fullDaoName);
 		createInfoMap.put("daoName", daoName);
 		createInfoMap.put("className", className);
 		createInfoMap.put("tableName", tableName);
-		createInfoMap.put("tableCondition", Util_String.getLineParam(f.readLine(2), "tableCondition"));
+		createInfoMap.put("tableCondition", UtilString.getLineParam(f.readLine(2), "tableCondition"));
 		return createInfoMap;
 	}
 
@@ -183,7 +183,7 @@ public class Util_ASOReader {
 		if(joinOnArr.size() >0){
 			xMLdepender.setJoinOnArr(joinOnArr);
 			//递归开始
-			String directory = Util_String.__getStrBeforeLast(path, "/");
+			String directory = UtilString.getStrBeforeLast(path, "/");
 			setXMLdependerMap(xMLdepender,directory);
 		}
 		

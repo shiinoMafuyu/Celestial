@@ -3,7 +3,7 @@ package com.celestial.butterflystorm.butterfly2017.mybatisHelper.depender;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.celestial.agniRadiance.EzUtil.Util_String;
+import com.celestial.agniRadiance.EzUtil.UtilString;
 
 public class ENTITYdepender {
 	
@@ -28,7 +28,7 @@ public class ENTITYdepender {
 	}
 
 	private void changeClassName() {
-		className = Util_String.__getStrAfterLast(this.qualifiedName,".");
+		className = UtilString.getStrAfterLast(this.qualifiedName,".");
 	}
 	
 	

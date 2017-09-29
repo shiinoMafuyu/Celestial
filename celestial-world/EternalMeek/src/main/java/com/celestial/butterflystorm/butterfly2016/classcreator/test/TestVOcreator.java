@@ -8,8 +8,8 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
-import com.celestial.agniRadiance.EzUtil.Util_Collection;
-import com.celestial.agniRadiance.EzUtil.Util_File;
+import com.celestial.agniRadiance.EzUtil.UtilCollection;
+import com.celestial.agniRadiance.EzUtil.UtilFile;
 import com.celestial.agniRadiance.entity.FileReader;
 import com.celestial.agniRadiance.entity.Tag;
 import com.celestial.butterflystorm.butterfly2016.classcreator.CreateRequestVO;
@@ -34,12 +34,12 @@ public class TestVOcreator {
 				.selectAllLineBetweenRegex2("4\\.申购委托查询", "5\\.申购成交查询");
 		List<List<String>> requestReader = f1.selectAllLineBetweenRegexList(".*提交包.*", ".*返回包.*");
 		
-		Tag requestTag = new Tag(Util_Collection.transListToLine(requestReader.get(0)));
+		Tag requestTag = new Tag(UtilCollection.transListToLine(requestReader.get(0)));
 		Tag req = requestTag.getTagByNamesReal("REQ");
 		
 		CreateRequestVO cr = new CreateRequestVO(req);
 //		Util_Collection.print(cr.getVoClassStringList());
-		Util_File.printFile(cr.getVoClassStringList(), resultPath+cr.getClassName()+".java.txt");
+		UtilFile.printFile(cr.getVoClassStringList(), resultPath+cr.getClassName()+".java.txt");
 	}
 	
 	@Test
@@ -49,12 +49,12 @@ public class TestVOcreator {
 				.selectAllLineBetweenRegex2("10\\. 商品委托查询", "11\\. 商品委托详情查询");
 		List<List<String>> requestReader = f1.selectAllLineBetweenRegexList(".*请求包.*", ".*返回包.*");
 		
-		Tag requestTag = new Tag(Util_Collection.transListToLine(requestReader.get(0)));
+		Tag requestTag = new Tag(UtilCollection.transListToLine(requestReader.get(0)));
 		Tag req = requestTag.getTagByNamesReal("REQ");
 		
 		CreateRequestVO cr = new CreateRequestVO(req);
 //		Util_Collection.print(cr.getVoClassStringList());
-		Util_File.printFile(cr.getVoClassStringList(), resultPath+cr.getClassName()+".java.txt");
+		UtilFile.printFile(cr.getVoClassStringList(), resultPath+cr.getClassName()+".java.txt");
 	}
 	
 	
@@ -65,11 +65,11 @@ public class TestVOcreator {
 				.selectAllLineBetweenRegex2("4\\.申购委托查询", "5\\.申购成交查询");
 		List<List<String>> responseReader = f1.selectAllLineBetweenRegexList(".*返回包.*", "5\\.申购成交查询");
 		
-		Tag responseTag = new Tag(Util_Collection.transListToLine(responseReader.get(0)));
+		Tag responseTag = new Tag(UtilCollection.transListToLine(responseReader.get(0)));
 		Tag res = responseTag.getTagByNamesReal("REP");
 		CreateResponseVO cr = new CreateResponseVO(res);
 //		Util_Collection.print(cr.getVoClassStringList());
-		Util_File.printFile(cr.getVoClassStringList(), resultPath+cr.getClassName()+".java.txt");
+		UtilFile.printFile(cr.getVoClassStringList(), resultPath+cr.getClassName()+".java.txt");
 	}
 	
 	@Test
@@ -78,11 +78,11 @@ public class TestVOcreator {
 				.selectAllLineBetweenRegex2("11\\. 商品委托详情查询", "12\\. 个人委托查询");
 		List<List<String>> responseReader = f1.selectAllLineBetweenRegexList(".*返回包.*", "12\\. 个人委托查询");
 		
-		Tag responseTag = new Tag(Util_Collection.transListToLine(responseReader.get(0)));
+		Tag responseTag = new Tag(UtilCollection.transListToLine(responseReader.get(0)));
 		Tag res = responseTag.getTagByNamesReal("REP");
 		CreateResponseVO cr = new CreateResponseVO(res);
 //		Util_Collection.print(cr.getVoClassStringList());
-		Util_File.printFile(cr.getVoClassStringList(), resultPath+cr.getClassName()+".java.txt","gbk");
+		UtilFile.printFile(cr.getVoClassStringList(), resultPath+cr.getClassName()+".java.txt","gbk");
 	}
 	
 	

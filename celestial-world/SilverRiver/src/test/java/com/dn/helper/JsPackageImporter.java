@@ -3,8 +3,8 @@ package com.dn.helper;
 import java.io.File;
 import java.util.List;
 
-import com.celestial.agniRadiance.EzUtil.Util_Collection;
-import com.celestial.agniRadiance.EzUtil.Util_File;
+import com.celestial.agniRadiance.EzUtil.UtilCollection;
+import com.celestial.agniRadiance.EzUtil.UtilFile;
 import com.celestial.agniRadiance.entity.FileReader;
 
 
@@ -22,7 +22,7 @@ public class JsPackageImporter {
 	public static void main(String[] args) {
 		
 		lineList = new FileReader(srcFile,false,"utf-8").getLineList();
-		allFileAddImport(Util_File.fileAll("src/WebContent", ".*html"));
+		allFileAddImport(UtilFile.fileAll("src/WebContent", ".*html"));
 	}
 	
 	/**
@@ -44,8 +44,8 @@ public class JsPackageImporter {
 		int end = f.getRegexPosition(".*(<!-- auto import end-->){1}.*");
 		
 		if(start>=0 && end > start){
-			List l_res = Util_Collection.replaceList(f.getLineList(), start, end, lineList);
-			Util_File.printFile(l_res, f.getFilePath(),"utf-8");
+			List l_res = UtilCollection.replaceList(f.getLineList(), start, end, lineList);
+			UtilFile.printFile(l_res, f.getFilePath(),"utf-8");
 			System.out.println("插入引用成功：" + f.getFileName());
 		}else{
 			System.out.println("未找到的头插入标志，跳过：" + f.getFileName());

@@ -3,7 +3,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-import com.celestial.agniRadiance.EzUtil.Util_DB;
+import com.celestial.agniRadiance.EzUtil.UtilDB;
 
 
 
@@ -20,7 +20,7 @@ public class te2 {
 //		teContainNum();
 		String userName ="trade_3400drh",password="password",path="jdbc:oracle:thin:@172.18.3.1:1521/gnnt";
 		
-		Connection conn = Util_DB.getConnectionOracle(userName,password,path);
+		Connection conn = UtilDB.getConnectionOracle(userName,password,path);
 		try {
 			Statement st = conn.createStatement();
 			ResultSet rs = st.executeQuery("select t.code, t.commodityid ,t.beginprice from v_vvvvvvvvvvv t");
@@ -34,7 +34,7 @@ public class te2 {
 			e.printStackTrace();
 		}
 		finally{
-			Util_DB.close(conn);
+			UtilDB.close(conn);
 		}
 	}
 

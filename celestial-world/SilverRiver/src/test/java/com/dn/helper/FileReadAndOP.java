@@ -1,40 +1,99 @@
 package com.dn.helper;
 
-import com.celestial.agniRadiance.EzUtil.Util_String;
+import java.util.List;
+
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
+import org.junit.Ignore;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
+
+import com.celestial.agniRadiance.EzUtil.UtilString;
 import com.celestial.agniRadiance.entity.FileReader;
+import com.celestial.agniRadiance.entity.Tag;
 import com.celestial.agniRadiance.map.JavaToRS;
 import com.celestial.butterflystorm.butterfly2017.espotSysn.Util_sepotSysn;
+import com.dn.dao.QueryCharactorDao;
 
 @SuppressWarnings("unused")
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class FileReadAndOP {
+	
+	
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+		
+	}
+	@AfterClass
+	public static void tearDownAfterClass() throws Exception {
+	}
+
+	
 
 	/**
 	 * <b>方法说明：</b>
 	 * <ul>
 	 * 
-	 * </ul>
-	 * @param args 
+	 * </ul> 
 	 */
-	public static void main(String[] args) {
-//		_01_();
-//		_02_addAnnotion();
-		
-		readVariable();
-		createSetVariable();
-		createAppend();
-		
-//		_04_();
-//		_05_();
-		
+	@Ignore
+	@Test
+	public void _02_readTagString() {
+		System.out.println("==========================================\n\n\n");
+		FileReader f = new FileReader("src/test/resources/helper/01tempUse.txt",false,"gbk");
+		String si="";
+		while(f.hasNext()){
+			si = f.readLine();
+			System.out.println("\""+si.replaceAll("\"", "\\\\\"")+"\" + ");
+		}
+		printDivide("_02_readTagString");
 	}
 
-	private static void createAppend() {
+	/**
+	 * <b>方法说明：</b>
+	 * <ul>
+	 * 
+	 * </ul> 
+	 */
+	@Test
+	public void _03_createVariable() {
+		FileReader f = new FileReader("src/test/resources/helper/01tempUse.txt",false,"gbk");
+		String si="";
+		String t1 = "ref=",t2 = "type=",m = "\"",m2 = ">",m3="<";
+		while(f.hasNext()){
+			si = f.readLine();
+			String va = UtilString.getMatchIn(si, m, m, si.indexOf(t1));
+			String ty = UtilString.getMatchIn(si, m, m, si.indexOf(t2));
+			String ano = UtilString.getMatchIn(si, m2, m3, si.indexOf(m2));
+			System.out.println(String.format("/** %s */\nprivate %s %s;\n",ano,ty,va));
+		}
+		printDivide("_03_createVariable");
+	}
+
+	@Test
+	public void _04_createAppend() {
 		FileReader f = new FileReader("src/test/resources/helper/01tempUse.txt",false,"gbk");
 		System.out.println(Util_sepotSysn.createSQlAppend(f.getLineList()));
+		
+		printDivide("_04_createAppend");
+	}
+	
+	@Test
+	public void _04_02_createAppend() {
+		FileReader f = new FileReader("src/test/resources/helper/01tempUse.txt",false,"gbk");
+		String res = Util_sepotSysn.createSQlAppend(f.getLineList()).substring("String sql = ".length());
+		
+		System.out.println(res);
+		
+		printDivide("_04_02_createAppend");
 	}
 
 	//l.add("");
-	private static void _05_() {
+	@Ignore
+	@Test
+	public void _05_() {
 		FileReader f = new FileReader("src/test/resources/helper/01tempUse.txt",true,"gbk");
 		String si="";
 		String[] sArr = new String[]{"",""};
@@ -58,11 +117,16 @@ public class FileReadAndOP {
 		}
 		sb.append(".toString();");
 		System.out.println(sb.toString());
+		
+		printDivide("_05_");
 	}
 	
 
+	
 	//json串
-	private static void _04_() {
+	@Ignore
+	@Test
+	public void _06_() {
 		FileReader f = new FileReader("src/test/resources/helper/中英对照.txt",false,"gbk");
 		String s="";
 		while(f.hasNext()){
@@ -74,10 +138,12 @@ public class FileReadAndOP {
 				System.out.println("");
 			}
 		}
+		
+		printDivide("_06_");
 	}
 
-	//
-	private static void readVariable() {
+	@Test
+	public void _07_readVariable() {
 		FileReader f = new FileReader("src/test/resources/helper/01tempUse.txt",true,"gbk");
 		String s="";
 		int n = 0;
@@ -92,7 +158,7 @@ public class FileReadAndOP {
 				String zs = f.readBeforeLine1(2).replaceAll("\\*", "").replaceAll("/", "").replaceAll("\\s+", "");
 				
 				
-//				s = "tradeVO.set"+Util_String.__transHeadToUpperCase(s)+"("+JavaToDB.MAP.get(type)+");";
+//				s = "tradeVO.set"+Util_String.transHeadToUpperCase(s)+"("+JavaToDB.MAP.get(type)+");";
 				System.out.println(s+" --"+zs);
 				if(n%4 == 0)
 					System.out.println();
@@ -100,9 +166,12 @@ public class FileReadAndOP {
 			
 		}
 		System.out.println("共计：" +n);
+		
+		printDivide("_07_readVariable");
 	}
 	
-	private static void createSetVariable() {
+	@Test
+	public void _08_createSetVariable() {
 		FileReader f = new FileReader("src/test/resources/helper/01tempUse.txt",true,"gbk");
 		String s="";
 		int n = 0;
@@ -118,7 +187,7 @@ public class FileReadAndOP {
 				String zs = f.readBeforeLine1(2).replaceAll("\\*", "").replaceAll("/", "").replaceAll("\\s+", "");
 				
 				
-				s = "orderVO.set"+Util_String.__transHeadToUpperCase(s)+"("+JavaToRS.MAP.get(type).replaceAll("ARG", param)+");";
+				s = "orderVO.set"+UtilString.transHeadToUpperCase(s)+"("+JavaToRS.MAP.get(type).replaceAll("ARG", param)+");";
 				System.out.println(s);
 				if(n%4 == 0)
 					System.out.println();
@@ -126,32 +195,104 @@ public class FileReadAndOP {
 			
 		}
 		System.out.println("共计：" +n);
+		
+		printDivide("_08_createSetVariable");
 	}
 
 	//json串
-	protected static void _02_addAnnotion() {
+	@Test
+	public void _09_addAnnotion() {
 		FileReader f = new FileReader("src/test/resources/helper/01tempUse.txt",false,"gbk");
 		
-		StringBuffer sb = new StringBuffer("{");
 		while(f.hasNext()){
 			String s = f.readLine();
-			System.out.println("#   "+s);
+			System.out.println("\""+s+"\",");
 		}
-		sb.append("}");
-		System.out.println(sb.toString());
+		
+		printDivide("_09_addAnnotion");
 	}
 
 	//去尾
-	protected static void _01_() {
-		FileReader f = new FileReader("src/test/resources/helper/01tempUse.txt",true,"gbk");
+	@Test
+	public void _10_() {
+		FileReader f = new FileReader("src/test/resources/helper/01tempUse.txt",false,"gbk");
 		String s="";
 		while(f.hasNext()){
-			int n =f.getIndex();
 			s = f.readLine();
-			String s1 = s.substring(0,s.indexOf("[")+1);
-			String s2 = s.substring(s.indexOf("]"));
-			System.out.println(s1 + n + s2);
+			System.out.println("l.add(\""+s+"\");");
 		}
+		
+		printDivide("_10_");
+	}
+	
+	@Test
+	public void _11_readVariableTas() {
+		FileReader f = new FileReader("src/test/resources/helper/01tempUse.txt",true,"gbk");
+		String s="";
+		int n = 0;
+		while(f.hasNext()){
+			s = f.readLine();
+			if(s.startsWith("private ") && !s.contains("static")){
+				n++;
+				String[] arr = s.replaceAll(";", "").replaceAll("\\s+", " ").split(" ");
+				String type = arr[1];
+				s = arr[2];
+				
+				String zs = f.readBeforeLine1(2).replaceAll("\\*", "").replaceAll("/", "").replaceAll("\\s+", "");
+				
+				
+//				s = "tradeVO.set"+Util_String.transHeadToUpperCase(s)+"("+JavaToDB.MAP.get(type)+");";
+				System.out.println("t." + s + " " + s + ", --" + zs);
+				if(n%4 == 0)
+					System.out.println();
+			}
+			
+		}
+		System.out.println("共计：" +n);
+		
+		printDivide("_11_readVariableTas");
+	}
+	
+	
+	@Test
+	public void _12_replaceAll(){
+		StringBuffer sb = new StringBuffer();
+		FileReader f = new FileReader("src/test/resources/helper/01tempUse.txt",true,"gbk");
+		
+		List<String> list = f.selectLineStartEndContain("", "", "mins");
+		
+		
+		Double total = 0.0;
+		for(String s: list){
+			Double mins = Double.parseDouble(s.replaceAll("mins", "").replaceAll(" ", ""));
+			total += mins;
+		}
+		System.out.println("Total :" + total/60.0);
+		
+	}
+	
+	@Test
+	public void _12_replaceAll2(){
+		StringBuffer sb = new StringBuffer();
+		FileReader f = new FileReader("src/test/resources/helper/01tempUse.txt",true,"gbk");
+		while(f.hasNext()){
+			String s = f.readLine();
+			if(UtilString.notNullEmpty(s))
+				System.out.println(String.format("new String[]{\"%s\",\"%s\"},", UtilString.subStringLast(s, 1),s));
+		}
+		printDivide("_12_replaceAll2");
+	}
+	
+	/**
+	 * <b>方法说明：</b>
+	 * <ul>
+	 * 
+	 * </ul> 
+	 * @param methodName 
+	 */
+	private void printDivide(String methodName) {
+		System.out.println("============>> " + methodName + " >>========================================\n\n\n\n");
+		
 	}
 
 }

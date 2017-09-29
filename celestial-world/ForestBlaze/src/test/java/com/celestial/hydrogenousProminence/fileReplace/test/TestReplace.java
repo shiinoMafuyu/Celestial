@@ -9,7 +9,7 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
-import com.celestial.agniRadiance.EzUtil.Util_File;
+import com.celestial.agniRadiance.EzUtil.UtilFile;
 import com.celestial.hydrogenousProminence.fileReplace.RepDependency;
 import com.celestial.hydrogenousProminence.fileReplace.Replace;
 
@@ -39,8 +39,8 @@ public class TestReplace {
 		rep.executeReplace();
 		String p1 = dep.getRepMap().get("rep1")[4] , f1 = commonPath + "展示1预期.txt";
 		String p2 = dep.getRepMap().get("rep2")[4] , f2 = commonPath + "展示2预期.txt";
-		boolean b1 = Util_File.compareFileContent(p1,f1);
-		boolean b2 = Util_File.compareFileContent(p2,f2);
+		boolean b1 = UtilFile.compareFileContent(p1,f1);
+		boolean b2 = UtilFile.compareFileContent(p2,f2);
 		Assert.assertTrue(b1);
 		Assert.assertTrue(b2);
 	}

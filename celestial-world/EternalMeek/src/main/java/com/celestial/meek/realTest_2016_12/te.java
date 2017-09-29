@@ -7,7 +7,7 @@ public class te {
 				"decode(t.oc_flag, 'O', '1', 'C', '2') oc_flag,t.tradetype,t.openprice,nvl(t.holdprice, 0) holdprice " +
 				"from t_commodity_h t2,t_trade_h t where t2.commodityid = t.commodityid and t2.cleardate = t.cleardate " +
 				"and trunc(t.cleardate)>=? and trunc(t.cleardate)<=? and t.firmid = ? order by t.tradeno desc";
-		System.out.println(1);
+		System.out.println(sql);
 	}
 	
 	

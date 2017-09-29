@@ -1,6 +1,6 @@
 package com.celestial.butterflystorm.butterfly2016.dragonNest.other;
 
-import com.celestial.agniRadiance.EzUtil.Util_String;
+import com.celestial.agniRadiance.EzUtil.UtilString;
 
 public class Util_Helper {
 
@@ -12,8 +12,8 @@ public class Util_Helper {
 	private static boolean match(String s, String regex1, String regex2) {
 		boolean b = false;
 		try {
-			boolean b1 = Util_String.matchAllSameRegx(s, regex1);
-			boolean b2 = Util_String.matchAllSameRegx(s,regex2 );
+			boolean b1 = UtilString.matchAllSameRegx(s, regex1);
+			boolean b2 = UtilString.matchAllSameRegx(s,regex2 );
 			b = b1 || b2;
 		} catch (Exception e) {
 			e.printStackTrace();

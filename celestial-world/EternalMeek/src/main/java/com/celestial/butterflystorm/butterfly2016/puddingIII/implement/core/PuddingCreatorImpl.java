@@ -4,7 +4,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.celestial.agniRadiance.EzUtil.Util_File;
+import com.celestial.agniRadiance.EzUtil.UtilFile;
 import com.celestial.agniRadiance.entity.Print;
 import com.celestial.butterflystorm.butterfly2016.puddingIII.Interface.core.PuddingCreator;
 import com.celestial.butterflystorm.butterfly2016.puddingIII.Interface.entity.TypeFile;
@@ -17,7 +17,7 @@ public class PuddingCreatorImpl implements PuddingCreator{
 	public List<File> getPrepareFile(String prepareFilePath) {
 		//现在觉得遍历获取下面所有文件比较好.
 		List<File> l = new ArrayList<File>();
-		l.addAll(Util_File.findAllFile(prepareFilePath));
+		l.addAll(UtilFile.findAllFile(prepareFilePath));
 		return l;
 	}
 

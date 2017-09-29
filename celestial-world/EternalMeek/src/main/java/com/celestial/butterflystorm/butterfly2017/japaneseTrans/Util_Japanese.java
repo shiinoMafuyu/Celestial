@@ -5,7 +5,7 @@ import java.util.Map;
 
 import net.sf.json.JSONObject;
 
-import com.celestial.agniRadiance.EzUtil.Util_Json;
+import com.celestial.agniRadiance.EzUtil.UtilJson;
 
 public class Util_Japanese {
 	
@@ -13,11 +13,11 @@ public class Util_Japanese {
 	private static Map<String, String> aoyinMap = new LinkedHashMap<String,String>();
 
 	static{
-		qingyinMap = Util_Json.json2Map(new JSONObject("{¤Å:zu,¤Ä:tsu,¤Ç:de,¤Æ:te,¤Á:chi,¤À:da,¤Ã:xtu,¤Â:ji,¤Í:ne,¤Ì:nu,¤Ï:ha,¤Î:no,¤É:do,¤È:to,¤Ë:ni,¤Ê:na,¤Ô:pi,¤Õ:fu,¤Ö:bu,¤×:pu,¤Ð:ba,¤Ñ:pa,¤Ò:hi,¤Ó:bi,¤Ü:bo,¤Ý:po,¤Þ:ma,¤ß:mi,¤Ø:he,¤Ù:be,¤Ú:pe,¤Û:ho,¤§:xe,¤¦:u,¤¥:xu,¤¤:i,¤£:xi,¤¢:a,¤¡:xa,¤¯:ku,¤®:gi,¤­:ki,¤¬:ga,¤«:ka,¤ª:o,¤©:xo,¤¨:e,¤¶:za,¤·:shi,¤´:go,¤µ:sa,¤²:ge,¤³:ko,¤°:gu,¤±:ke,¤¾:zo,¤¿:ta,¤¼:ze,¤½:so,¤º:zu,¤»:se,¤¸:ji,¤¹:su,¥ì:re,¥í:ro,¥ï:wa,¥è:yo,¥é:ra,¥ê:ri,¥ë:ru,¥ä:ya,¥æ:yu,¥à:mu,¥á:me,¥â:mo,¥õ:xka,¥ö:xke,¥ó:n,¥ò:o,¥Î:no,¥Ï:ha,¥Ì:nu,¥Í:ne,¥Ê:na,¥Ë:ni,¥È:to,¥É:do,¥Æ:te,¥Ç:de,¥Ä:tsu,¥Å:zu,¥Â:ji,¥À:da,¥Á:chi,¥ß:mi,¥Þ:ma,¥Ý:po,¥Ü:bo,¥Û:ho,¥Ú:pe,¥Ù:be,¥Ø:he,¥×:pu,¥Ö:bu,¥Õ:fu,¥Ô:pi,¥Ó:bi,¥Ò:hi,¥Ñ:pa,¥Ð:ba,¥¨:e,¥ª:o,¥«:ka,¥¬:ga,¥­:ki,¥®:gi,¥¯:ku,¥¢:a,¥¤:i,¥¦:u,¥¹:su,¥¸:ji,¥»:se,¥º:zu,¥½:so,¥¼:ze,¥¿:ta,¥¾:zo,¥±:ke,¥°:gu,¥³:ko,¥²:ge,¥µ:sa,¥´:go,¥·:shi,¥¶:za,¤ê:ri,¤ë:ru,¤è:yo,¤é:ra,¤î:xwa,¤ï:wa,¤ì:re,¤í:ro,¤â:mo,¤ã:xya,¤à:mu,¤á:me,¤æ:yu,¤ç:xyo,¤ä:ya,¤å:xuy,¤ó:n,¤ò:o,©`:©`}"));
-		aoyinMap = Util_Json.json2Map(new JSONObject("{¥Ó¥ç:byo,¤Ô¤ç:pyo,¤Ô¤å:pyu,¥Ó¥ã:bya,¥Ó¥å:byu,¥ß¥ç:myo,¤Ç¤£:dhi,¥ß¥å:myu,¥ß¥ã:mya,¥¸¥ã:ja,¥Á¥ã:cha,¤®¤ç:gyo,¥¸¥ç:jo,¥Á¥ç:cho,¥¸¥å:ju,¥Á¥å:chu,¤Ô¤ã:pya,¤®¤å:gyu,¤®¤ã:gya,¥Ò¥ç:hyo,¥Ò¥å:hyu,¥Ò¥ã:hya,¥·¥ç:sho,¥Â¥ã:ja,¤­¤å:kyu,¥Â¥å:ju,¤­¤ç:kyo,¥ê¥ç:ryo,¥Â¥ç:jo,¥ê¥å:ryu,¥·¥ã:sha,¥ê¥ã:rya,¥·¥å:shu,¥Ë¥å:nyu,¥Ë¥ã:nya,¤­¤ã:kya,¥Ë¥ç:nyo,¥­¥ã:kya,¥­¥å:kyu,¤Ò¤ç:hyo,¥­¥ç:kyo,¤Ò¤å:hyu,¤·¤ã:sha,¤Ò¤ã:hya,¤·¤å:shu,¤·¤ç:sho,¤Ë¤å:nyu,¤Ë¤ã:nya,¤Ë¤ç:nyo,¤Â¤ã:ja,¤Ä¤§:tse,¤Â¤å:ju,¤Ä¤©:tso,¤Â¤ç:jo,null:null,¤ß¤å:myu,¤ß¤ã:mya,¤Ä¤£:tsi,¥®¥å:gyu,¤Ä¤¡:tsa,¥®¥ã:gya,¤º¤¤:zui,¥Ô¥ç:pyo,¤¸¤ã:ja,¤Ó¤ç:byo,¥Ô¥å:pyu,¥®¥ç:gyo,¤ê¤ç:ryo,¤ê¤å:ryu,¤¸¤ç:jo,¤Ó¤ã:bya,¤ê¤ã:rya,¤ß¤ç:myo,¤¸¤å:ju,¤Ó¤å:byu,¥Ô¥ã:pya,¤Á¤ã:cha,¤Á¤ç:cho,¤Á¤å:chu}"));
+		qingyinMap = UtilJson.json2Map(new JSONObject("{¤Å:zu,¤Ä:tsu,¤Ç:de,¤Æ:te,¤Á:chi,¤À:da,¤Ã:xtu,¤Â:ji,¤Í:ne,¤Ì:nu,¤Ï:ha,¤Î:no,¤É:do,¤È:to,¤Ë:ni,¤Ê:na,¤Ô:pi,¤Õ:fu,¤Ö:bu,¤×:pu,¤Ð:ba,¤Ñ:pa,¤Ò:hi,¤Ó:bi,¤Ü:bo,¤Ý:po,¤Þ:ma,¤ß:mi,¤Ø:he,¤Ù:be,¤Ú:pe,¤Û:ho,¤§:xe,¤¦:u,¤¥:xu,¤¤:i,¤£:xi,¤¢:a,¤¡:xa,¤¯:ku,¤®:gi,¤­:ki,¤¬:ga,¤«:ka,¤ª:o,¤©:xo,¤¨:e,¤¶:za,¤·:shi,¤´:go,¤µ:sa,¤²:ge,¤³:ko,¤°:gu,¤±:ke,¤¾:zo,¤¿:ta,¤¼:ze,¤½:so,¤º:zu,¤»:se,¤¸:ji,¤¹:su,¥ì:re,¥í:ro,¥ï:wa,¥è:yo,¥é:ra,¥ê:ri,¥ë:ru,¥ä:ya,¥æ:yu,¥à:mu,¥á:me,¥â:mo,¥õ:xka,¥ö:xke,¥ó:n,¥ò:o,¥Î:no,¥Ï:ha,¥Ì:nu,¥Í:ne,¥Ê:na,¥Ë:ni,¥È:to,¥É:do,¥Æ:te,¥Ç:de,¥Ä:tsu,¥Å:zu,¥Â:ji,¥À:da,¥Á:chi,¥ß:mi,¥Þ:ma,¥Ý:po,¥Ü:bo,¥Û:ho,¥Ú:pe,¥Ù:be,¥Ø:he,¥×:pu,¥Ö:bu,¥Õ:fu,¥Ô:pi,¥Ó:bi,¥Ò:hi,¥Ñ:pa,¥Ð:ba,¥¨:e,¥ª:o,¥«:ka,¥¬:ga,¥­:ki,¥®:gi,¥¯:ku,¥¢:a,¥¤:i,¥¦:u,¥¹:su,¥¸:ji,¥»:se,¥º:zu,¥½:so,¥¼:ze,¥¿:ta,¥¾:zo,¥±:ke,¥°:gu,¥³:ko,¥²:ge,¥µ:sa,¥´:go,¥·:shi,¥¶:za,¤ê:ri,¤ë:ru,¤è:yo,¤é:ra,¤î:xwa,¤ï:wa,¤ì:re,¤í:ro,¤â:mo,¤ã:xya,¤à:mu,¤á:me,¤æ:yu,¤ç:xyo,¤ä:ya,¤å:xuy,¤ó:n,¤ò:o,©`:©`}"));
+		aoyinMap = UtilJson.json2Map(new JSONObject("{¥Ó¥ç:byo,¤Ô¤ç:pyo,¤Ô¤å:pyu,¥Ó¥ã:bya,¥Ó¥å:byu,¥ß¥ç:myo,¤Ç¤£:dhi,¥ß¥å:myu,¥ß¥ã:mya,¥¸¥ã:ja,¥Á¥ã:cha,¤®¤ç:gyo,¥¸¥ç:jo,¥Á¥ç:cho,¥¸¥å:ju,¥Á¥å:chu,¤Ô¤ã:pya,¤®¤å:gyu,¤®¤ã:gya,¥Ò¥ç:hyo,¥Ò¥å:hyu,¥Ò¥ã:hya,¥·¥ç:sho,¥Â¥ã:ja,¤­¤å:kyu,¥Â¥å:ju,¤­¤ç:kyo,¥ê¥ç:ryo,¥Â¥ç:jo,¥ê¥å:ryu,¥·¥ã:sha,¥ê¥ã:rya,¥·¥å:shu,¥Ë¥å:nyu,¥Ë¥ã:nya,¤­¤ã:kya,¥Ë¥ç:nyo,¥­¥ã:kya,¥­¥å:kyu,¤Ò¤ç:hyo,¥­¥ç:kyo,¤Ò¤å:hyu,¤·¤ã:sha,¤Ò¤ã:hya,¤·¤å:shu,¤·¤ç:sho,¤Ë¤å:nyu,¤Ë¤ã:nya,¤Ë¤ç:nyo,¤Â¤ã:ja,¤Ä¤§:tse,¤Â¤å:ju,¤Ä¤©:tso,¤Â¤ç:jo,null:null,¤ß¤å:myu,¤ß¤ã:mya,¤Ä¤£:tsi,¥®¥å:gyu,¤Ä¤¡:tsa,¥®¥ã:gya,¤º¤¤:zui,¥Ô¥ç:pyo,¤¸¤ã:ja,¤Ó¤ç:byo,¥Ô¥å:pyu,¥®¥ç:gyo,¤ê¤ç:ryo,¤ê¤å:ryu,¤¸¤ç:jo,¤Ó¤ã:bya,¤ê¤ã:rya,¤ß¤ç:myo,¤¸¤å:ju,¤Ó¤å:byu,¥Ô¥ã:pya,¤Á¤ã:cha,¤Á¤ç:cho,¤Á¤å:chu}"));
 	}
 	public static void main(String[] args) {
-		String s = Util_Json.map2Json(aoyinMap).toString();
+		String s = UtilJson.map2Json(aoyinMap).toString();
 		System.out.println(s);
 		
 	}

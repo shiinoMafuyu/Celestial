@@ -14,7 +14,6 @@ public class te自动类型转换 {
 		String str = "xxxxxxxxxxxxxxxxxx";
 		Object obj = (Object)str;
 		System.out.println(obj.toString());
-		te静态方法需要类实例化么 xx;
 	}
 
 }

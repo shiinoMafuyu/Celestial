@@ -3,7 +3,7 @@ package com.celestial.meek.realTest_2016_06_reflectBefore;
 import java.io.File;
 import java.util.Date;
 
-import com.celestial.agniRadiance.EzUtil.Util_File;
+import com.celestial.agniRadiance.EzUtil.UtilFile;
 import com.celestial.agniRadiance.entity.FileReader;
 
 
@@ -18,16 +18,16 @@ public class te1 {
 		/*te1 t = new te1();
 		Object o = t.new HH();*/
 		teQuanJiaoBanJiao();
-		System.out.println("<CU>锟�/CU>".equals("<CU>锟�/CU>"));
+		System.out.println("<CU>閿燂拷/CU>".equals("<CU>閿燂拷/CU>"));
 	}
 	
 	private static void teQuanJiaoBanJiao() {
-		FileReader f = new FileReader("C:/Users/Administrator/Desktop/parese2/绁炵粡锟�txt",false,"gbk");
+		FileReader f = new FileReader("C:/Users/Administrator/Desktop/parese2/缁佺偟绮￠敓锟絫xt",false,"gbk");
 		String s = null;
 		while(f.hasNext()){
 			s = f.readLine();
 			boolean b = s.contains("x") || s.contains("x") || s.contains("x");
-//			boolean b = s.contains("锟�) || s.contains("锟�) || s.contains("锟�);
+//			boolean b = s.contains("閿燂拷) || s.contains("閿燂拷) || s.contains("閿燂拷);
 //			boolean b =true;
 			if(b)
 				System.out.println(s);
@@ -36,10 +36,10 @@ public class te1 {
 
 	private static void teGetCreateTime() {
 //		DBUtil.getCreateTime("C:/Users/Administrator/Desktop/x/gt.txt");
-		Util_File.getCreateTime("C:\\Users\\Administrator\\Desktop\\x\\gt.txt");
-		Util_File.getCreateTime("C:\\Users\\Administrator\\Desktop\\x\\gt2.txt");
-		Util_File.getCreateTime("C:\\Users\\Administrator\\Desktop\\x\\gt3.txt");
-		Util_File.getCreateTime("C:\\Users\\Administrator\\Desktop\\x\\gt4.txt");
+		UtilFile.getCreateTime("C:\\Users\\Administrator\\Desktop\\x\\gt.txt");
+		UtilFile.getCreateTime("C:\\Users\\Administrator\\Desktop\\x\\gt2.txt");
+		UtilFile.getCreateTime("C:\\Users\\Administrator\\Desktop\\x\\gt3.txt");
+		UtilFile.getCreateTime("C:\\Users\\Administrator\\Desktop\\x\\gt4.txt");
 	}
 
 	private static void teLastCreateTime() {
@@ -53,9 +53,9 @@ public class te1 {
 	}
 
 	private static void ruleMyPuddingFile() {
-		File f = new File( "C:/Users/Administrator/Desktop/琛ヤ竵锟�娴嬭瘯鏂囦欢鏁村悎");
+		File f = new File( "C:/Users/Administrator/Desktop/鐞涖儰绔甸敓锟藉ù瀣槸閺傚洣娆㈤弫鏉戞値");
 		File[] files = f.listFiles();
-		System.out.println("鏂囦欢涓暟 : "+files.length);
+		System.out.println("閺傚洣娆㈡稉顏呮殶 : "+files.length);
 		int filesCount = 0;
 		for(File i : files){
 			File[] fi = i.listFiles();
@@ -66,7 +66,7 @@ public class te1 {
 				}
 			}
 		}
-		System.out.println("鍏辫鍚玣iles:" +filesCount +"   娌℃湁闂: "+(filesCount == files.length));
+		System.out.println("閸忚精顓搁崥鐜les:" +filesCount +"   濞屸剝婀侀梻顕�顣�: "+(filesCount == files.length));
 	}
 	
 	private HH h;

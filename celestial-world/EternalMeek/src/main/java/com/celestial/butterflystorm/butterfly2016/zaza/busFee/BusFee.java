@@ -12,6 +12,7 @@ public class BusFee {
 	 * </ul>
 	 * @param args 
 	 */
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		String[] msg = new String[]{"参数错误,","请输入如下形式参数:\n  (int year, int month)\n  (int year, int month, int percent)\n  (int year, int month, int percent , double price)"};
 		boolean isContinue = true;
@@ -53,8 +54,8 @@ public class BusFee {
 	 * @return iArr[0] : 该月工作日,iArr[1] : 该月休息日
 	 */
 	public int[] getDayScattered(int year, int month) {
-		if(month > 12 || month<0)
-			throw new RuntimeException("- -我不想和你说话.");
+		if(month > Calendar.DECEMBER || month < Calendar.JANUARY)
+			throw new RuntimeException("鱼粉");
 		month -= 1;
 		int[] iArr = new int[]{0,0};
 		Calendar cd = Calendar.getInstance();
@@ -63,7 +64,7 @@ public class BusFee {
 		for(int date = 1 ; date <= days ; date++){
 			cd.set(year, month, date);
 			int weekDay = cd.get(Calendar.DAY_OF_WEEK);
-			if(weekDay == 1 || weekDay == 7)
+			if(weekDay == Calendar.SATURDAY || weekDay == Calendar.SUNDAY)
 				iArr[1] += 1;
 			else
 				iArr[0] += 1;

@@ -4,7 +4,7 @@ import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import com.celestial.agniRadiance.EzUtil.Util_File;
+import com.celestial.agniRadiance.EzUtil.UtilFile;
 
 public class FindClassProblem {
 
@@ -24,15 +24,16 @@ public class FindClassProblem {
 //		System.out.println(f1.exists() +" "+f2.exists());
 //		getFileTogetherByModifyTime(f1,f2);
 //		compareMad5();
-		Util_File.getFileTogetherByModifyTime(f1,f2);
+		UtilFile.getFileTogetherByModifyTime(f1,f2);
 	}
 
+	@SuppressWarnings("unused")
 	private static void compareMad5() {
 		File f1 = new File("E:/HackingGate/03_2016-08-20_开发一部时的补丁文件/补丁包/真绿巨人(核是否最新)/integrated_broker/timebargain_broker/jquery.validationEngine-zh_CN.js");
 		File f2 = new File("E:/HackingGate/03_2016-08-20_开发一部时的补丁文件/补丁包/x/");
 		File[] fArr = f2.listFiles();
 		for(File i : fArr){
-			if(Util_File.compareMD5(f1,i)){
+			if(UtilFile.compareMD5(f1,i)){
 				System.out.println(i.getName());
 			}
 		}
@@ -55,7 +56,7 @@ public class FindClassProblem {
 				}
 			}
 			if(b)
-				Util_File.copyByCmd(f1, f2);
+				UtilFile.copyByCmd(f1, f2);
 			else
 				System.out.println("f1: -->  "+f1.getAbsolutePath());
 		}

@@ -49,7 +49,8 @@ public class 摘要算法长度 {
 	    }
 
 	    //对字符串进行MD5编码   
-	    private static String encodeByMD5(String originstr)  
+	    @SuppressWarnings("unused")
+		private static String encodeByMD5(String originstr)  
 	    {  
 	   	 if(originstr !=null)  
 	   	 {  

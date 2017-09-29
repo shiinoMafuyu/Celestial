@@ -2,7 +2,7 @@ package com.celestial.butterflystorm.butterfly2016.dragonNest.entity;
 
 import java.util.Map;
 
-import com.celestial.agniRadiance.EzUtil.Util_String;
+import com.celestial.agniRadiance.EzUtil.UtilString;
 import com.celestial.butterflystorm.butterfly2016.dragonNest.other.Config;
 
 public class NumericDouble {
@@ -18,7 +18,7 @@ public class NumericDouble {
 	}
 	
 	public NumericDouble(String s){
-		if(Util_String.matchAllSameRegx(s, Config.REGEX_DOUBLE_1)){
+		if(UtilString.matchAllSameRegx(s, Config.REGEX_DOUBLE_1)){
 			//13.96%
 			Double d = Double.valueOf(s.substring(0,s.indexOf("%")));
 			arr[0] = d;

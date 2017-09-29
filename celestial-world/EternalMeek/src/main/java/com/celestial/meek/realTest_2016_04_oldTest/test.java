@@ -11,6 +11,7 @@ import java.nio.channels.FileChannel;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+@SuppressWarnings("unused")
 public class test {
 
 	/**
@@ -200,11 +201,12 @@ public class test {
 	 * @return
 	 * @throws Exception
 	 */
+	@SuppressWarnings("resource")
 	private static long copyByTransfer(File f1, File f2) throws Exception{
 		long time=new Date().getTime();
         int length=1,size=20971520;
         FileChannel inC=new FileInputStream(f1).getChannel();
-        FileChannel outC=new FileOutputStream(f2).getChannel();
+		FileChannel outC=new FileOutputStream(f2).getChannel();
         while(true){
         	//如果源文件的指针位置和大小一样了,说明读完了,结束
             if(inC.position()==inC.size()){
@@ -236,11 +238,12 @@ public class test {
 		}
 	}
 
+	@SuppressWarnings("resource")
 	private static void te1 () throws Exception{
 		File f=new File("w.txt");
 		File f2=new File("C:/Users/Administrator/Desktop");
-		BufferedReader br=new BufferedReader(new InputStreamReader(new FileInputStream(f2)));
 		PrintWriter pw=new PrintWriter(new OutputStreamWriter(new FileOutputStream(f,false),"utf-8"),true);
+		BufferedReader br=new BufferedReader(new InputStreamReader(new FileInputStream(f2)));
 		String s=null;
 		while((s=br.readLine())!=null){
 			pw.println("");

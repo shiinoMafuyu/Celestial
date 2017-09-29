@@ -2,8 +2,8 @@ package com.celestial.butterflystorm.butterfly2016.dragonNest.other;
 
 import java.util.Map;
 
-import com.celestial.agniRadiance.EzUtil.Util_Collection;
-import com.celestial.agniRadiance.EzUtil.Util_File;
+import com.celestial.agniRadiance.EzUtil.UtilCollection;
+import com.celestial.agniRadiance.EzUtil.UtilFile;
 @SuppressWarnings({ "unchecked", "rawtypes" })
 public class PropertySpace {
 	/**ÇëÎðÐÞ¸Ä´Ëmap*/
@@ -23,12 +23,12 @@ public class PropertySpace {
 	}
 
 	private static void init() {
-		Map m1 = Util_File.readProperties(Config.PROPERTY_LV1_MAP_PATH);
-		Map m2 = Util_File.readProperties(Config.PROPERTY_LV2_MAP_PATH);
-		propertyListLV1Map = Util_Collection.deepCopyMap(m1);
-		propertyListLV2Map = Util_Collection.deepCopyMap(m2);
+		Map m1 = UtilFile.readProperties(Config.PROPERTY_LV1_MAP_PATH);
+		Map m2 = UtilFile.readProperties(Config.PROPERTY_LV2_MAP_PATH);
+		propertyListLV1Map = UtilCollection.deepCopyMap(m1);
+		propertyListLV2Map = UtilCollection.deepCopyMap(m2);
 		m1.putAll(m2);
-		propertyFixedPCTMap = Util_File.readProperties(Config.PROPERTY_FIXEDPCTMAP_PATH);
+		propertyFixedPCTMap = UtilFile.readProperties(Config.PROPERTY_FIXEDPCTMAP_PATH);
 		propertyMap = m1;
 	}
 }

@@ -14,6 +14,8 @@ import javax.swing.JTextField;
 import javax.swing.WindowConstants;
 
 public class GraExp extends JFrame {
+	/**  */
+	private static final long serialVersionUID = 1L;
 	CInstead c1 = new CInstead();
 	Container c;
 	JLabel lbl1 = new JLabel("ÐÕÃû£º");
@@ -35,10 +37,11 @@ public class GraExp extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		GraExp ge = new GraExp();
 	}
 
 	class CInstead extends JPanel {
+		/**  */
+		private static final long serialVersionUID = 1L;
 		ImageIcon icon;
 		Image img;
 

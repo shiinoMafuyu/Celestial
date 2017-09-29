@@ -20,9 +20,10 @@ public class 外部类能直接使用内部类的私有属性吗 {
 	}
 	
 	class hhh{
-		private String sos ="斯巴拉西";
-		
-		private Map<String,String> m = new HashMap<String,String>(){{
+		private Map<String,String> m = new HashMap<String,String>(){/**  */
+			private static final long serialVersionUID = 1L;
+
+		{
 			put("name","yukino");
 		}};
 	}

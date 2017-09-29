@@ -1,6 +1,6 @@
 /******************************************************************
  * ParseXML.java
- * Copyright 2017 by GNNT Company. All Rights Reserved.
+ * Copyright 2017 by WZG. All Rights Reserved.
  * CreateDate：2017年5月24日
  * Author：wangzg
  * Version：1.0.0
@@ -48,6 +48,7 @@ public class ParseXML {
 		SAXReader rd = new SAXReader();
 		Document d = rd.read(new File(path));
 		Element root = d.getRootElement();
+		System.out.println(root);
 //		List<Attribute> list = re.attributes();
 //		System.out.println(1);
 //		listNodes(root);
@@ -60,10 +61,11 @@ public class ParseXML {
 
 
 
+	@SuppressWarnings("unchecked")
 	public static void listNodes(Element node){  
 	        System.out.println("当前节点的名称：" + node.getName());  
 	        //首先获取当前节点的所有属性节点  
-	        List<Attribute> list = node.attributes();  
+			List<Attribute> list = node.attributes();  
 	        //遍历属性节点  
 	        for(Attribute attribute : list){  
 	            System.out.println("属性"+attribute.getName() +":" + attribute.getValue());  

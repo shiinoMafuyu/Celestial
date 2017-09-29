@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import com.celestial.agniRadiance.EzUtil.Util_Collection;
-import com.celestial.agniRadiance.EzUtil.Util_Normal;
-import com.celestial.agniRadiance.EzUtil.Util_String;
+import com.celestial.agniRadiance.EzUtil.UtilCollection;
+import com.celestial.agniRadiance.EzUtil.UtilNormal;
+import com.celestial.agniRadiance.EzUtil.UtilString;
 import com.celestial.agniRadiance.entity.Tag;
 import com.celestial.butterflystorm.butterfly2016.classcreator.silence.Conf;
 
@@ -35,19 +35,19 @@ public class CreateRequestVO extends VOcreator{
 	protected int createClass() {
 		super._createClass_p1();
 		//3.添加所有变量及其注释
-		this.voClassStringList.addAll(Util_Normal.table(_createAllVariables()));
+		this.voClassStringList.addAll(UtilNormal.table(_createAllVariables()));
 		//3.25 添加主类里的定义和get set方法(所有集合类的)
 		for(Tag t : this.layerTagList){
-			this.voClassStringList.addAll(Util_Normal.table(__createOneInnerClassDefine(t)));
+			this.voClassStringList.addAll(UtilNormal.table(__createOneInnerClassDefine(t)));
 		}
 		//3.5添加请求属性 4.添加构造方法及其注释
-		this.voClassStringList.addAll(Util_Normal.table(_createProperty_pa_constructor_response()));
+		this.voClassStringList.addAll(UtilNormal.table(_createProperty_pa_constructor_response()));
 		//5.添加所有get方法及其注释
-		this.voClassStringList.addAll(Util_Normal.table(_createAllGet(this.directTagList)));
+		this.voClassStringList.addAll(UtilNormal.table(_createAllGet(this.directTagList)));
 		//6.添加内部类
-		this.voClassStringList.addAll(Util_Normal.table(_createInnerClass()));
+		this.voClassStringList.addAll(UtilNormal.table(_createInnerClass()));
 		//附带 添加toString方法
-		this.voClassStringList.addAll(Util_Normal.table(__createToString()));
+		this.voClassStringList.addAll(UtilNormal.table(__createToString()));
 		this.voClassStringList.add("}");
 		this.voClassStringList.add("");
 		return 0;
@@ -119,7 +119,7 @@ public class CreateRequestVO extends VOcreator{
 		l.add("public class " + Conf.requestInnerClassNameMap.get(t.getTagName()) + " {");
 		//1.创建集合类内部的信息类变量定义 初始化 get set方法 private List<PropertyObj> PRO = new ArrayList<PropertyObj>(); 
 		for(Tag ti : t.getChildTagList()){
-			l.addAll(Util_Normal.table(___createInnerProperty(ti)));
+			l.addAll(UtilNormal.table(___createInnerProperty(ti)));
 		}
 		//2.创建集合类内部的信息类<PRO>这一级
 			/*<PRO>商品属性
@@ -127,9 +127,9 @@ public class CreateRequestVO extends VOcreator{
 				<CP>商品属性值</CP>
 			</PRO>*/
 		for(Tag ti : t.getChildTagList()){
-			l.addAll(Util_Normal.table(___createInnerPropertyClass(ti)));
+			l.addAll(UtilNormal.table(___createInnerPropertyClass(ti)));
 		}
-		l.addAll(Util_Normal.table(__createToString()));
+		l.addAll(UtilNormal.table(__createToString()));
 		l.add("}");
 		l.add("");
 		return l;
@@ -155,7 +155,7 @@ public class CreateRequestVO extends VOcreator{
 		l.add(" * 属性类");
 		l.add(" */");
 		l.add("public class "+className+" {");
-		l.addAll(Util_Normal.table(__createNormalVariable( t.getChildTagList())));
+		l.addAll(UtilNormal.table(__createNormalVariable( t.getChildTagList())));
 		l.add("	/**");
 		l.add("	* <b>构造方法</b>");
 		l.add("	* <br/>");
@@ -164,8 +164,8 @@ public class CreateRequestVO extends VOcreator{
 		l.add("		super();");
 		l.add("	}");
 		l.add("	");
-		l.addAll(Util_Normal.table(_createAllGet(t.getChildTagList())));
-		l.addAll(Util_Normal.table(__createToString()));
+		l.addAll(UtilNormal.table(_createAllGet(t.getChildTagList())));
+		l.addAll(UtilNormal.table(__createToString()));
 		l.add("}");
 		l.add("");
 		return l;
@@ -270,7 +270,7 @@ public class CreateRequestVO extends VOcreator{
 		l.add(" * @return");
 		l.add(" */");
 		String type = t.getPropertyMap().get("type");
-		l.add("public "+ type + " get"+Util_String.__transHeadToUpperCase(t.getPropertyMap().get("ref")) + "(){");
+		l.add("public "+ type + " get"+UtilString.transHeadToUpperCase(t.getPropertyMap().get("ref")) + "(){");
 		l.add("	return " + Conf.supportMap.get(type).replace("X", t.getTagName()));
 		l.add("}");
 		l.add("");
@@ -540,8 +540,8 @@ public class CreateRequestVO extends VOcreator{
 	@SuppressWarnings("unchecked")
 	@Override
 	protected void __initVar() {
-		this.mustImport = Util_Collection.deepCopyList(Conf.mustImport_request);
-		this.importMap = Util_Collection.deepCopyMap(Conf.importMap);
+		this.mustImport = UtilCollection.deepCopyList(Conf.mustImport_request);
+		this.importMap = UtilCollection.deepCopyMap(Conf.importMap);
 		
 		this.extendClass = "RequestVO";
 		this.voType = Conf.REQUESTVO;

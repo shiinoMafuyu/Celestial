@@ -30,6 +30,6 @@ public class MainFrame extends JFrame{
 	
 	public static void main(String[] args) {
 		MainFrame mf = new MainFrame();
-		System.out.println(1234);
+		System.out.println(mf);
 	}
 }

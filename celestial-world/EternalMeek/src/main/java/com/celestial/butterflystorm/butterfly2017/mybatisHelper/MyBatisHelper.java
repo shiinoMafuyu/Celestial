@@ -3,7 +3,7 @@ package com.celestial.butterflystorm.butterfly2017.mybatisHelper;
 import java.util.Arrays;
 import java.util.List;
 
-import com.celestial.agniRadiance.EzUtil.Util_File;
+import com.celestial.agniRadiance.EzUtil.UtilFile;
 import com.celestial.butterflystorm.butterfly2017.mybatisHelper.creator.DAOcreator;
 import com.celestial.butterflystorm.butterfly2017.mybatisHelper.creator.ENTITYcreator;
 import com.celestial.butterflystorm.butterfly2017.mybatisHelper.creator.SQLcreator;
@@ -40,7 +40,7 @@ public class MyBatisHelper {
 		
 		String savePath = entityPath + entityDepender.getClassName() + ".java";
 		
-		Util_File.printFile(cc.getThisClass(),savePath ,"gbk");
+		UtilFile.printFile(cc.getThisClass(),savePath ,"gbk");
 		System.out.println("实体类创建/更新完毕：" + savePath);
 		
 	}
@@ -49,7 +49,7 @@ public class MyBatisHelper {
 		SQLcreator sqlFile = new SQLcreator(sQLdepender);
 		
 		String savePath = sqlPath + sQLdepender.getTableName() + ".sql";
-		Util_File.printFile(sqlFile.getSQL(), savePath);
+		UtilFile.printFile(sqlFile.getSQL(), savePath);
 		
 		System.out.println("表创建sql创建/更新完毕：" + savePath);
 	}
@@ -61,7 +61,7 @@ public class MyBatisHelper {
 		List<String> l = Arrays.asList(new String[]{daoInterface});
 		String savePath = daoPath + daOdepender.getDaoName() +".java";
 		
-		Util_File.printFile(l, savePath , "gbk");
+		UtilFile.printFile(l, savePath , "gbk");
 		System.out.println("MyBatis dao创建/更新完毕：" + savePath);
 		
 	}
@@ -75,7 +75,7 @@ public class MyBatisHelper {
 
 		String savePath = xmlPath + xmLdepender.getClassName() +".xml";
 		
-		Util_File.printFile(l, savePath);
+		UtilFile.printFile(l, savePath);
 		System.out.println("MyBatis xml创建/更新完毕：" + savePath);
 		
 	}

@@ -15,6 +15,8 @@ import java.awt.Font;
 
 //主程序类
 public class ShootGame extends JPanel {
+	/**  */
+	private static final long serialVersionUID = 1L;
 	public static final int WIDTH = 400; //窗口宽
 	public static final int HEIGHT = 654; //窗口高
 	

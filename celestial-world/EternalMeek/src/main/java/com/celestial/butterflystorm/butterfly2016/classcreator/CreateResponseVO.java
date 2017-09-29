@@ -6,9 +6,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.celestial.agniRadiance.EzUtil.Util_Collection;
-import com.celestial.agniRadiance.EzUtil.Util_Normal;
-import com.celestial.agniRadiance.EzUtil.Util_String;
+import com.celestial.agniRadiance.EzUtil.UtilCollection;
+import com.celestial.agniRadiance.EzUtil.UtilNormal;
+import com.celestial.agniRadiance.EzUtil.UtilString;
 import com.celestial.agniRadiance.entity.Tag;
 import com.celestial.butterflystorm.butterfly2016.classcreator.silence.Conf;
 
@@ -79,14 +79,14 @@ public class CreateResponseVO extends VOcreator{
 	protected int createClass() {
 		super._createClass_p1();
 		//3.5添加请求属性 4.添加构造方法及其注释
-		this.voClassStringList.addAll(Util_Normal.table(_createProperty_pa_constructor_response()));
+		this.voClassStringList.addAll(UtilNormal.table(_createProperty_pa_constructor_response()));
 		
 		//4.创建主要集合类.
-		this.voClassStringList.addAll(Util_Normal.table(_createMainList()));
+		this.voClassStringList.addAll(UtilNormal.table(_createMainList()));
 		//5.创建主要ResultVO实现类.
-		this.voClassStringList.addAll(Util_Normal.table(_createResultVO_impl()));
+		this.voClassStringList.addAll(UtilNormal.table(_createResultVO_impl()));
 		//6.创建剩下的集合类和信息类.简单的工作了O(∩_∩)O哈哈~
-		this.voClassStringList.addAll(Util_Normal.table(_createInnerCollection_Info()));
+		this.voClassStringList.addAll(UtilNormal.table(_createInnerCollection_Info()));
 		this.voClassStringList.add("}");
 		this.voClassStringList.add("");
 		return 0;
@@ -107,7 +107,7 @@ public class CreateResponseVO extends VOcreator{
 		l.add(" */");
 		l.add("public class "+this.resultVOName+" extends ResultVO{");
 		this.directTagList.get(0);
-		l.addAll(Util_Normal.table(__create_normalVarAndSetter(this.directTagList)));
+		l.addAll(UtilNormal.table(__create_normalVarAndSetter(this.directTagList)));
 		l.add("}");
 		l.add("");
 		return l;
@@ -142,7 +142,7 @@ public class CreateResponseVO extends VOcreator{
 		List<String> l = new ArrayList<String>();
 		for(Tag t : tagList){
 			String ref = t.getPropertyMap().get("ref");
-			String var = Util_String.__transHeadToLowerCase(ref);
+			String var = UtilString.transHeadToLowerCase(ref);
 			String type = t.getPropertyMap().get("type");
 			String op = Conf.supportMapResponse.get(type).replace("X", var);
 			l.add("/**");
@@ -220,7 +220,7 @@ public class CreateResponseVO extends VOcreator{
 		l.add(" * "+tag.getValue());
 		l.add(" */");
 		l.add("public class "+this.responseInnerClassNameMap.get(tag.getTagName())+"{");
-		l.addAll(Util_Normal.table(__create_normalVarAndSetter(tag.getChildTagList())));
+		l.addAll(UtilNormal.table(__create_normalVarAndSetter(tag.getChildTagList())));
 		l.add("}");
 		l.add("");
 		return l;
@@ -286,15 +286,15 @@ public class CreateResponseVO extends VOcreator{
 		l.add(" */");
 		l.add("public class "+this.resultClassName+"{");
 		
-		l.addAll(Util_Normal.table(__create_1_p1()));//PRS ORP之类 private PropertyList PRS; 这一层
+		l.addAll(UtilNormal.table(__create_1_p1()));//PRS ORP之类 private PropertyList PRS; 这一层
 		
 		for(Tag t : this.layerTagList1){
-			l.addAll(Util_Normal.table(__create_2_p1(t)));//private List<SubOrderQueryObj> REC; 这一层
+			l.addAll(UtilNormal.table(__create_2_p1(t)));//private List<SubOrderQueryObj> REC; 这一层
 		}
 		l.add("");
-		l.addAll(Util_Normal.table(__create_1_p2()));
+		l.addAll(UtilNormal.table(__create_1_p2()));
 		for(Tag t : this.layerTagList1){
-			l.addAll(Util_Normal.table(__create_2_p2(t)));
+			l.addAll(UtilNormal.table(__create_2_p2(t)));
 		}
 		l.add("}");
 		l.add("");
@@ -434,7 +434,9 @@ public class CreateResponseVO extends VOcreator{
 		}
 		
 		//<RESULTLIST>的子级标签.根据层级分类,如:<REC>只有子标签,而<PRS> <ORP>含有子子标签.
-		for(Tag t : resTag.getTagByNamesReal("RESULTLIST").getChildTagList()){
+		Tag resultList = resTag.getTagByNamesReal("RESULTLIST");
+		if(null != resultList  && null != resultList.getChildTagList())
+		for(Tag t : resultList.getChildTagList()){
 			//一般来说只有1层或者2层
 			int repeat = t.getMapColor().get(0).split(" ").length;
 			if(repeat == 1){
@@ -495,8 +497,8 @@ public class CreateResponseVO extends VOcreator{
 	@SuppressWarnings("unchecked")
 	@Override
 	protected void __initVar() {
-		this.mustImport = Util_Collection.deepCopyList(Conf.mustImport_response);
-		this.importMap = Util_Collection.deepCopyMap(Conf.importMapResponse);
+		this.mustImport = UtilCollection.deepCopyList(Conf.mustImport_response);
+		this.importMap = UtilCollection.deepCopyMap(Conf.importMapResponse);
 		
 		this.extendClass = "ResponseVO";
 		this.voType = Conf.RESPONSEVO;

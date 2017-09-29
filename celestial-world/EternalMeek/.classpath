@@ -38,5 +38,7 @@
 	<classpathentry kind="lib" path="src/main/lib/json-lib-2.4-jdk15.jar"/>
 	<classpathentry kind="lib" path="src/main/lib/mysql-connector-java-5.0.4-bin.jar"/>
 	<classpathentry kind="lib" path="src/main/lib/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="src/main/lib/mockito-all-1.9.5.jar"/>
+	<classpathentry kind="lib" path="src/main/lib/guava-19.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

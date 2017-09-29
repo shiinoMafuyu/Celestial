@@ -18,7 +18,8 @@ public class AnotherClassLoader extends ClassLoader {
 	           super(parent);
 	           this.baseDir = baseDir;
 	    }
-	    protected Class findClass(String name)
+	    @SuppressWarnings({ "unchecked", "rawtypes" })
+		protected Class findClass(String name)
 	            throws ClassNotFoundException {
 	        //LOG.debug("findClass " + name);
 	        byte[] bytes = loadClassBytes(name);

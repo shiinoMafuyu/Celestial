@@ -8,9 +8,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.celestial.agniRadiance.EzUtil.Util_Collection;
-import com.celestial.agniRadiance.EzUtil.Util_File;
-import com.celestial.agniRadiance.EzUtil.Util_String;
+import com.celestial.agniRadiance.EzUtil.UtilCollection;
+import com.celestial.agniRadiance.EzUtil.UtilFile;
+import com.celestial.agniRadiance.EzUtil.UtilString;
 import com.celestial.agniRadiance.entity.Tag;
 import com.celestial.butterflystorm.butterfly2016.classcreator.silence.Conf;
 
@@ -110,7 +110,7 @@ public abstract class VOcreator {
 		String[] sArr = str.split("_");
 		StringBuffer sb = new StringBuffer();
 		for(String i: sArr){
-			sb.append(Util_String.__transHeadToUpperCase(i));
+			sb.append(UtilString.transHeadToUpperCase(i));
 		}
 		return sb.append(this.voType).toString();
 	}
@@ -146,11 +146,11 @@ public abstract class VOcreator {
 		for(Tag t : tagList){
 			String type = t.getPropertyMap().get("type");
 			addType(type);
-			boolean b1 = Util_File.checkNotNullnotKong(t.getTagName());
-			boolean b2 = Util_File.checkNotNullnotKong(t.getPropertyMap().get("ref"));
-			boolean b3 = Util_File.checkNotNullnotKong(type);
+			boolean b1 = UtilString.notNullEmpty(t.getTagName());
+			boolean b2 = UtilString.notNullEmpty(t.getPropertyMap().get("ref"));
+			boolean b3 = UtilString.notNullEmpty(type);
 			
-			boolean b4 = Util_File.checkNotNullnotKong(t.getValue());
+			boolean b4 = UtilString.notNullEmpty(t.getValue());
 			if(!(b1 && b2 && b3 && b4))
 				throw new RuntimeException("标签 : <" + t.getTagName() + "> 不完整,请检查其ref,type属性和其值是否完整.");
 		}
@@ -164,7 +164,7 @@ public abstract class VOcreator {
 	 * @param type
 	 */
 	protected void addType(String type) {
-		if(!Util_Collection.contain(this.typeList, type)){
+		if(!UtilCollection.inList(this.typeList, type)){
 			this.typeList.add(type);
 		}
 	}
@@ -208,7 +208,7 @@ public abstract class VOcreator {
 			if(importString == null)
 				continue;
 			for(String si : importString){
-				if(!Util_Collection.contain(l,si)){
+				if(!UtilCollection.inList(l,si)){
 					l.add(si);
 				}
 			}

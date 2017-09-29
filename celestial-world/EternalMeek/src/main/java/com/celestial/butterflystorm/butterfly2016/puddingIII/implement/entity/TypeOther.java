@@ -4,7 +4,7 @@ import java.io.File;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
-import com.celestial.agniRadiance.EzUtil.Util_File;
+import com.celestial.agniRadiance.EzUtil.UtilFile;
 import com.celestial.butterflystorm.butterfly2016.puddingIII.Interface.entity.TypeFile;
 import com.celestial.butterflystorm.butterfly2016.puddingIII.tempAbstract.entity.TypeFileTemp;
 
@@ -15,7 +15,7 @@ public class TypeOther extends TypeFileTemp implements TypeFile {
 
 	@Override
 	public String[] findOriginalFile() {
-		List<String> l = Util_File.findFile(originalFile, new File(originalPath));
+		List<String> l = UtilFile.findFile(originalFile, new File(originalPath));
 		check(l);
 		String[] originalFilePath = new String[]{originalPath,l.get(0).substring(originalPath.length())};
 		return originalFilePath;

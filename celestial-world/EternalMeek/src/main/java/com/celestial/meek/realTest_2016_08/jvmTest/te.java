@@ -3,7 +3,7 @@ package com.celestial.meek.realTest_2016_08.jvmTest;
 import java.util.List;
 import java.util.Map;
 
-import com.celestial.agniRadiance.EzUtil.Util_Collection;
+import com.celestial.agniRadiance.EzUtil.UtilCollection;
 import com.celestial.agniRadiance.entity.FileReader;
 import com.celestial.agniRadiance.entity.Tag;
 /**
@@ -62,7 +62,7 @@ public class te {
 		FileReader f2 = f.selectAllLineBetweenRegex2(headRegex, tailRegex);
 		List<List<String>> ll = f2.selectAllLineBetweenRegexList(".*<INPUT>.*", ".*</INPUT>.*");
 		
-		Util_Collection.print(ll.get(0));
+		UtilCollection.print(ll.get(0));
 		List<Map<Integer,String>> lx = f.selectAllLineBetweenRegex(headRegex, tailRegex);
 	}
 

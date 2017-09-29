@@ -19,14 +19,15 @@ import javax.swing.Timer;
 * @version 1.0
 */
 public class Clock extends JFrame implements ActionListener{ 
-   Timer timer;
+   /**  */
+	private static final long serialVersionUID = 1L;
+Timer timer;
    int x,y,old_X,old_Y, r,x0,y0,w,h,ang; 
    int sdo,mdo,hdo,old_M,old_H; 
    TimeZone tz =TimeZone.getTimeZone("JST");
    final double RAD=Math.PI/180.0; 
 
  public static void main(String[] args){
-   Clock cl = new Clock();
  }
 /**
 *<br>方法说明：实现ActionListener类必须过载的方法
@@ -46,7 +47,6 @@ public class Clock extends JFrame implements ActionListener{
    setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
    setBackground(new Color(0,0,192));
    setSize(300,300);
-   show();
    int delay = 1000;
    //窗体添加事件监听，监听秒表的触发
    ActionListener taskPerformer = new ActionListener() {

@@ -5,8 +5,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-import com.celestial.agniRadiance.EzUtil.Util_DB;
-import com.celestial.agniRadiance.EzUtil.Util_Normal;
+import com.celestial.agniRadiance.EzUtil.UtilDB;
+import com.celestial.agniRadiance.EzUtil.UtilReflect;
 import com.celestial.butterflystorm.butterfly2016.salary.Config.Config;
 
 
@@ -27,16 +27,16 @@ public abstract class ManagerEmployeeDaoTemp {
 		Object obj = new Object();
 		try {
 			//eg:private void addEmployee1(Employee employee)
-			obj = Util_Normal.excuteReflectObject2(methodAndParams);
+			obj = UtilReflect.excuteReflectObject2(methodAndParams);
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw new RuntimeException("数据库相关操作执行失败.");
 		}
-		finally{
-			Util_DB.close(rs);
-			Util_DB.close(st);
-			Util_DB.close(ps);//看来ps能造型为st,大概
-			Util_DB.close(conn);
+		finally{	
+			UtilDB.close(rs);
+			UtilDB.close(st);
+			UtilDB.close(ps);//看来ps能造型为st,大概
+			UtilDB.close(conn);
 		}
 		return obj;
 	}

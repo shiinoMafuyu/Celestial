@@ -1,10 +1,8 @@
 package com.celestial.meek.realTest_2016_09;
 
-import java.io.File;
-import java.util.HashMap;
 import java.util.Map;
 
-import com.celestial.agniRadiance.EzUtil.Util_Collection;
+import com.celestial.agniRadiance.EzUtil.UtilCollection;
 import com.celestial.butterflystorm.butterfly2016.classcreator.silence.Conf;
 
 public class te {
@@ -28,7 +26,7 @@ public class te {
 		String[] sArr = " ref=\"MESSAGE\" type=\" String\"".split("[^=]{1}\"{1}\\s+");
 		System.out.println(sArr[0]);*/
 		
-		/*Map<String,String> map = DBUtil3_parseTxt.___getPropertyMap(" ref = \" MESS AGE \" type=\" String \" ");
+		/*Map<String,String> map = DBUtil3_parseTxt.getPropertyMap(" ref = \" MESS AGE \" type=\" String \" ");
 		System.out.println(map.get("ref"));*/
 		
 		
@@ -43,20 +41,11 @@ public class te {
 	}
 
 	
-	private static void teDeepCopyMap2() {
-		//非常奇怪,map的泛型进去的时候不能定型.而出来的时候又可以...
-		Map m1 = new HashMap();
-		m1.put("f1", new File("xxx"));
-		Map m2 = Util_Collection.deepCopyMap(m1);
-		System.out.println(((File)m2.get("f1")).getAbsolutePath());
-		System.out.println(1);
-	}
-
 	@SuppressWarnings({ "unused", "unchecked", "rawtypes" })
 	private static void teDeepCopyMap() {
 		Map m = Conf.responseInnerClassNameMap ,mx;
 		System.out.println(Conf.responseInnerClassNameMap.get("frozen"));
-		mx = Util_Collection.deepCopyMap(m);
+		mx = UtilCollection.deepCopyMap(m);
 		//ORP=OrderPictureList
 		
 		mx.put("frozen", "Summer");

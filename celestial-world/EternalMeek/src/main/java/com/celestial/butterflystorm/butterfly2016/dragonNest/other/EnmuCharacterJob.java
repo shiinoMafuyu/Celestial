@@ -3,7 +3,7 @@ package com.celestial.butterflystorm.butterfly2016.dragonNest.other;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.celestial.agniRadiance.EzUtil.Util_Collection;
+import com.celestial.agniRadiance.EzUtil.UtilCollection;
 
 public enum EnmuCharacterJob {
 	Swordmaster/*½£Ê¥*/,
@@ -26,7 +26,7 @@ public enum EnmuCharacterJob {
 	
 	@SuppressWarnings("unchecked")
 	public static Map<String,Map<String,Double>> getAddtionMap(){
-		Map<String, Map<String,Double>> m = Util_Collection.deepCopyMap(addtionMap);
+		Map<String, Map<String,Double>> m = UtilCollection.deepCopyMap(addtionMap);
 		return m;
 	}
 }

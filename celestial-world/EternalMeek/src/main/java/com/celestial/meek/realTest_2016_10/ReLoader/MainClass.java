@@ -1,6 +1,6 @@
 package com.celestial.meek.realTest_2016_10.ReLoader;
 
-import com.celestial.agniRadiance.EzUtil.Util_Normal;
+import com.celestial.agniRadiance.EzUtil.UtilReflect;
 
 public class MainClass {
 
@@ -12,8 +12,8 @@ public class MainClass {
 	 * @param args 
 	 */
 	public static void main(String[] args) {
-		Util_Normal.ClassFor("test.realTest_2016_10.ReLoader.MinorClass");
-		Util_Normal.ClassFor("test.realTest_2016_10.ReLoader.MinorClass");
+		UtilReflect.ClassFor("test.realTest_2016_10.ReLoader.MinorClass");
+		UtilReflect.ClassFor("test.realTest_2016_10.ReLoader.MinorClass");
 	}
 
 }

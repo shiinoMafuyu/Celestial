@@ -51,6 +51,7 @@ public class te {
 		
 	}
 
+	@SuppressWarnings("unused")
 	private static void te2()  throws Exception{
 		int n;
 		BufferedReader br=new BufferedReader(new InputStreamReader(new FileInputStream("D:/tat/t1.txt")));
@@ -71,6 +72,7 @@ public class te {
 	 * 
 	 * @throws Exception
 	 */
+	@SuppressWarnings("unused")
 	private static void te1() throws Exception {
 		int n=16;
 		byte b[]=new byte[n];

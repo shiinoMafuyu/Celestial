@@ -114,7 +114,7 @@ public class FileTree {
 	 */
 	public boolean isContain(FileTree t2) {
 		boolean contain = checkContain(t2.getBootPath(),this.bootPath);
-		return false;
+		return contain;
 	}
 	
 	List<String> perhapsNodesList = new ArrayList<String>();

@@ -22,7 +22,7 @@ public class Container {
 			for(Map.Entry<String, String> ei : realizationMap.entrySet()){
 				try {
 //					REALIZATION_CLASS_MAP.put(ei.getKey(), Util_Normal.getReflectObject(ei.getValue()));
-					REALIZATION_CLASS_MAP.put(ei.getKey(),Util_Normal.ClassFor(ei.getKey()));
+					REALIZATION_CLASS_MAP.put(ei.getKey(),UtilReflect.ClassFor(ei.getKey()));
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

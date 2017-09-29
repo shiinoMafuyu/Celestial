@@ -4,8 +4,8 @@ import java.io.File;
 import java.util.Arrays;
 import java.util.List;
 
-import com.celestial.agniRadiance.EzUtil.Util_File;
-import com.celestial.agniRadiance.EzUtil.Util_String;
+import com.celestial.agniRadiance.EzUtil.UtilFile;
+import com.celestial.agniRadiance.EzUtil.UtilString;
 import com.celestial.agniRadiance.abstracte.RecursiveDealFile;
 import com.celestial.agniRadiance.entity.FileReader;
 
@@ -43,7 +43,7 @@ public class Synchronous_reverse {
 	}
 
 	public void doSynchronous(String path1,String path2) {
-		Util_File.deleteFile(new File(path2));
+		UtilFile.deleteFile(new File(path2));
 		RecursiveDealFile rd = new RecursiveDealFile(new File(path1)) {
 			@Override
 			public void doWork(File file) {
@@ -53,13 +53,13 @@ public class Synchronous_reverse {
 				while(f.hasNext()){
 					sb.append(f.readLine()).append("\n");
 				}
-				String send = Util_String.subStringLastChar(sb.toString(), "\n");
+				String send = UtilString.subStringLastChar(sb.toString(), "\n");
 				send =  send.replaceAll("gnnt.MEBS6.depository.extract.tradedata.issue","gnnt.MEBS6.depository.extract.tradedata.sale")
 							.replaceAll("su_", "sa_")
 							.replaceAll("sA_", "sa_")
 							.replaceAll("SU_", "sa_")
 							.replaceAll("Su_", "sa_");
-				Util_File.printFile(send, path2 + Util_String.fmtPathStr(file.getAbsolutePath()).substring(path1.length()),charset);
+				UtilFile.printFile(send, path2 + UtilString.fmtPathStr(file.getAbsolutePath()).substring(path1.length()),charset);
 				System.out.println("修改保存完成：" + file.getName());
 			}
 
@@ -72,7 +72,7 @@ public class Synchronous_reverse {
 	}
 	
 	private String getCharsetByType(String name) {
-		if(Util_String.matchAllSameRegx(name, ".*\\.java"))
+		if(UtilString.matchAllSameRegx(name, ".*\\.java"))
 			return "gbk";
 		else
 			return "utf-8";

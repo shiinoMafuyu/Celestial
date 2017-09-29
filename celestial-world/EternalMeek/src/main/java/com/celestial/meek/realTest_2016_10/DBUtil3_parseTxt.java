@@ -8,8 +8,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.celestial.agniRadiance.EzUtil.Util_File;
-import com.celestial.agniRadiance.EzUtil.Util_String;
+import com.celestial.agniRadiance.EzUtil.UtilFile;
+import com.celestial.agniRadiance.EzUtil.UtilString;
 
 public class DBUtil3_parseTxt {
 
@@ -194,14 +194,14 @@ public class DBUtil3_parseTxt {
 				s = s.trim();
 				if(!startFlag)
 					continue;
-				if(Util_String.matchHeadRegx(s,titleRegex)){
+				if(UtilString.matchHeadRegx(s,titleRegex)){
 					lt = new ArrayList<String>();
 					l.add(lt);
 				}
 				lt.add(s);
 			}
 		} catch (Exception e) {
-			Util_File.close(br);
+			UtilFile.close(br);
 			throw new RuntimeException("文件读取流错误~");
 		}
 		
@@ -385,7 +385,7 @@ public class DBUtil3_parseTxt {
 	 * @param st
 	 * @return
 	 */
-/*	public static Map<String, String> _____getPropertyMap(String st) {
+/*	public static Map<String, String> __getPropertyMap(String st) {
 		String[] sArr = DBUtil3_parseTxt.split(st, new String[]{"="," "});
 		if(sArr.length%2!=0){
 			throw new RuntimeException("标签属性错误~");

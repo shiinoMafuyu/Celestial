@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.celestial.agniRadiance.EzUtil.Util_String;
+import com.celestial.agniRadiance.EzUtil.UtilString;
 
 public class XMLdepender {
 	/**
@@ -49,7 +49,7 @@ public class XMLdepender {
 	}
 
 	private void onFullClassNameChange() {
-		this.className = Util_String.__getStrAfterLast(this.fullClassName, ".");
+		this.className = UtilString.getStrAfterLast(this.fullClassName, ".");
 	}
 
 	public XMLdepender(String path) {

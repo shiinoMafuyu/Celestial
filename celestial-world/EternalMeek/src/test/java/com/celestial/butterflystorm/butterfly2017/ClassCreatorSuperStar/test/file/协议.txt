@@ -1,0 +1,32 @@
+10. 游戏关卡信息查询
+10.1. 提交包
+<?xml version="1.0" encoding="GB2312"?>
+<MEBS_MOBILE>
+	<REQ name="game_level" ie="游戏关卡信息查询vo" pkg="gnnt.mobile.forecast.frontend.vo">
+<U ref="Pinscode" type="String">pinscode</U>
+<SID ref="sessionID" type="long">sessionID</SID>
+<GID ref="gameId" type="String">游戏编号</GID>
+<LNO ref="LunaNum" type="Integer">关卡序号</LNO>
+	</REQ>
+</ MEBS_MOBILE>
+10.2. 返回包
+<?xml version="1.0"encoding="GB2312"?>
+<MEBS_MOBILE>
+	<REP name="game_level" ie="游戏关卡信息返回vo" pkg="gnnt.mobile.forecast.frontend.vo">
+		<RESULT>
+			<RETCODE ref="retcode" type="long">返回码0成功, 其他为失败，错误描述在ARGS中</RETCODE>
+<ARGS ref="arguments" type="String">
+提示信息参数，多个参数使用符号 | 分隔 ，
+没有参数时该标签不返回。
+</ARGS>
+<GID ref="gameId" type="String">游戏编号</GID >					
+<N ref="Node" type="String">类别编号</N>
+<B ref="breed" type="Integer">关卡序号</B>
+<ID ref="InId" type="String">期号</ID>
+<P ref="prize" type="Integer">奖品编号</P>
+<ED ref="endDate" type="Date">截止日期</ED>
+<R ref="result" type="Integer">竞猜结果(1涨，2跌，3平)</R>
+<S ref="status" type="Integer">竞猜结果状态(1成功2失败)</S>
+		</RESULT>
+	</REP>
+</MEBS_MOBILE>

@@ -9,8 +9,8 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
-import com.celestial.agniRadiance.EzUtil.Util_File;
-import com.celestial.agniRadiance.EzUtil.Util_String;
+import com.celestial.agniRadiance.EzUtil.UtilFile;
+import com.celestial.agniRadiance.EzUtil.UtilString;
 import com.celestial.agniRadiance.entity.FileReader;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
@@ -28,7 +28,7 @@ public class mavenMD5 {
 	
 	@Test
 	public void _01showFileMd5(){
-		boolean b = "b69a7d94a045430a1d8216950cb27199".equals(Util_File.getMd5ByFile(new File("E:/Download/wechat_web_devtools_0.7.0_x64.exe")));
+		boolean b = "b69a7d94a045430a1d8216950cb27199".equals(UtilFile.getMd5ByFile(new File("E:/Download/wechat_web_devtools_0.7.0_x64.exe")));
 		System.out.println("_01showFileMd5:"+b);
 	}
 	
@@ -39,7 +39,7 @@ public class mavenMD5 {
 		FileReader f = new FileReader("C:/Users/Administrator/Desktop/2.txt");
 		while(f.hasNext()){
 			String s = f.readLine();
-			if(Util_String.matchHeadRegx(s, ".*<{1}.*>{1}.*")){
+			if(UtilString.matchHeadRegx(s, ".*<{1}.*>{1}.*")){
 				s = s.substring(s.indexOf("<")+1,s.indexOf(">"));
 				if(!s.contains("/"))
 					System.out.println("\""+s+"\":\"\",");
@@ -90,7 +90,7 @@ public class mavenMD5 {
 	@Ignore
 	@Test
 	public void _03classMethodUse(){
-		File[] fArr =Util_File.fileAll("D:/GitHub/DN/DN/src/main/webapp", ".*html");
+		File[] fArr =UtilFile.fileAll("D:/GitHub/DN/DN/src/main/webapp", ".*html");
 		for(File f:fArr){
 			System.out.println(f.getAbsolutePath());
 		}

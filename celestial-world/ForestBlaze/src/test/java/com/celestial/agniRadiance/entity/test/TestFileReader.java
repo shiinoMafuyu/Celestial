@@ -11,11 +11,10 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
-import com.celestial.agniRadiance.EzUtil.Util_Collection;
+import com.celestial.agniRadiance.EzUtil.UtilCollection;
 import com.celestial.agniRadiance.entity.FileReader;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-@SuppressWarnings("unchecked")
 public class TestFileReader {
 	
 	public static List<String> l0 = new ArrayList<String>();
@@ -31,7 +30,7 @@ public class TestFileReader {
 		l0.add("4");
 		l0.add("5");
 		
-		l = Util_Collection.deepCopyList(l0);
+		l = UtilCollection.deepCopyList(l0);
 		
 		l.add(1,"qaq--ÕôµÄ£¡£¡");
 		l.add(4,"--ÕôµÄ£¡£¡");

@@ -3,9 +3,9 @@ package com.celestial.meek.reaLTest_2017_01;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.celestial.agniRadiance.EzUtil.Util_Normal;
-import com.celestial.agniRadiance.EzUtil.Util_String;
+import com.celestial.agniRadiance.EzUtil.UtilString;
 import com.celestial.agniRadiance.entity.FileReader;
+import com.celestial.agniRadiance.remote.UtilHttp;
 
 public class getSeveralPicFromSD {
 
@@ -33,7 +33,7 @@ public class getSeveralPicFromSD {
 		for(String url:sList){
 			String name = url.substring(url.lastIndexOf("/")+1);
 			String save = savePath + "/" + name;
-			int re = Util_Normal.sendGetAndSaveFile(url, null, save);
+			int re = UtilHttp.sendGetAndSaveFile(url, null, save);
 			String msg = re==0?"  下载成功!":" 下载失败";
 			System.out.println(name+msg);
 		}
@@ -46,10 +46,10 @@ public class getSeveralPicFromSD {
 			String line = f.readLine();
 //			if(line.matches(regex))
 //			Util_String.matchAllRegx(line, ".*url({1})");
-			while(Util_String.matchAllRegx(line, ".*url({1}.*).*")){
+			while(UtilString.matchAllRegx(line, ".*url({1}.*).*")){
 				line = line.substring(line.indexOf("url("));
 				String url = line.substring(line.indexOf("(")+1, line.indexOf(")"));
-				if(Util_String.matchAllSameRegx(url,"http{1}.*"))
+				if(UtilString.matchAllSameRegx(url,"http{1}.*"))
 					l.add(url);
 				line = line.substring(line.indexOf(")")+1);
 			}

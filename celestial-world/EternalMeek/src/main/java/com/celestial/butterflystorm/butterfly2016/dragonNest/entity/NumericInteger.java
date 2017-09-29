@@ -2,7 +2,7 @@ package com.celestial.butterflystorm.butterfly2016.dragonNest.entity;
 
 import java.util.Map;
 
-import com.celestial.agniRadiance.EzUtil.Util_String;
+import com.celestial.agniRadiance.EzUtil.UtilString;
 import com.celestial.butterflystorm.butterfly2016.dragonNest.other.Config;
 
 public class NumericInteger {
@@ -18,7 +18,7 @@ public class NumericInteger {
 	}
 	
 	public NumericInteger(String s) {
-		if(Util_String.matchAllSameRegx(s, Config.REGEX_Integer_1)){
+		if(UtilString.matchAllSameRegx(s, Config.REGEX_Integer_1)){
 			//1300
 			Integer i = Integer.valueOf(s);
 			arr[0] = i;

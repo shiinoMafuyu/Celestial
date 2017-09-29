@@ -3,7 +3,7 @@ package com.celestial.butterflystorm.butterfly2017.mybatisHelper.creator;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.celestial.agniRadiance.EzUtil.Util_String;
+import com.celestial.agniRadiance.EzUtil.UtilString;
 import com.celestial.butterflystorm.butterfly2017.mybatisHelper.depender.SQLdepender;
 
 public class SQLcreator {
@@ -34,7 +34,7 @@ public class SQLcreator {
 			else
 				SQL.add(new StringBuffer("	").append(si[0]).append(" ").append(si[1]).append(si[2]).append(",").toString());
 		}
-		SQL = Util_String.subStringLastChar(SQL, ",");
+		SQL = UtilString.subStringLastChar(SQL, ",");
 		SQL.add(")"+tableCondition);
 		SQL.add("");
 	}

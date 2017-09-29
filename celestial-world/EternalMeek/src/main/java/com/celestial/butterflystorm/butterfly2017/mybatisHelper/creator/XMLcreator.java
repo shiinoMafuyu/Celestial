@@ -6,7 +6,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.celestial.agniRadiance.EzUtil.Util_String;
+import com.celestial.agniRadiance.EzUtil.UtilString;
 import com.celestial.agniRadiance.entity.FileReader;
 import com.celestial.butterflystorm.butterfly2017.mybatisHelper.depender.XMLdepender;
 import com.celestial.butterflystorm.butterfly2017.mybatisHelper.util.Util_ASOReader;
@@ -58,8 +58,8 @@ public class XMLcreator {
 		StringBuffer sb_from = new StringBuffer(" from ");
 		StringBuffer sb_where = new StringBuffer(" where 1=1");
 		selectSQL(xmLdepender,0,0,sb_select,sb_from,sb_where);
-		String sql = new StringBuffer(Util_String.subStringLastChar(sb_select.toString(), ","))
-					.append(" ").append(Util_String.subStringLastChar(sb_from.toString(), ","))
+		String sql = new StringBuffer(UtilString.subStringLastChar(sb_select.toString(), ","))
+					.append(" ").append(UtilString.subStringLastChar(sb_from.toString(), ","))
 					.append(sb_where).append("\n").toString();
 		m.put("--select_sql_sentence--", sql);
 	}
@@ -145,7 +145,7 @@ public class XMLcreator {
 	 */
 	private void resultMap(XMLdepender xmLdepender,int talbelLevel,int index, StringBuffer sb) {
 		List<String[]> colList = xmLdepender.getColumnList();
-		String tabs = Util_String.__createTabs(talbelLevel);
+		String tabs = UtilString.createTabs(talbelLevel);
 		for(String[] si:colList){
 			//<result column="id" property="id"/>
 			if(!"".equals(si[0]))

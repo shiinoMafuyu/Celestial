@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 
-import com.celestial.agniRadiance.EzUtil.Util_File;
+import com.celestial.agniRadiance.EzUtil.UtilFile;
 
 public class teFileOccupation {
 
@@ -29,9 +29,9 @@ public class teFileOccupation {
 		}
 		File f2 = new File("C:/Users/Administrator/Desktop/12/x.txt");
 //		File[] f3 = f2.listFiles();
-//		Util_File.findFile(new File("C:/Users/Administrator/Desktop/12/x.txt"), new File("C:/Users/Administrator/Desktop/12"));
+//		UtilFile.findFile(new File("C:/Users/Administrator/Desktop/12/x.txt"), new File("C:/Users/Administrator/Desktop/12"));
 		
-		String md5 = Util_File.getMd5ByFile(f2);
+		String md5 = UtilFile.getMd5ByFile(f2);
 		Scanner sc= new Scanner(System.in);
 		String ok = sc.next();
 		System.out.println(ok+"  " +md5);

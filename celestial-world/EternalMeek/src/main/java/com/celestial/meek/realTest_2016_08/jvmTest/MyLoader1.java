@@ -12,17 +12,18 @@ import java.util.Map;
 public class MyLoader1 extends ClassLoader{
 String classpath;  
     
-    Map<String, Class> loadedClassPool = new HashMap<String, Class>();  
+    @SuppressWarnings("rawtypes")
+	Map<String, Class> loadedClassPool = new HashMap<String, Class>();  
   
     public MyLoader1(String classpath) {  
         this.classpath = classpath;  
     }  
   
       
-    @SuppressWarnings("unchecked")  
     @Override  
+    @SuppressWarnings("rawtypes")
     public synchronized Class<?> loadClass(String name, boolean resolve) throws ClassNotFoundException {  
-        Class claz = null;  
+		Class claz = null;  
         if (loadedClassPool.containsKey(name)) {  
             claz = this.loadedClassPool.get(name);  
         } else {  

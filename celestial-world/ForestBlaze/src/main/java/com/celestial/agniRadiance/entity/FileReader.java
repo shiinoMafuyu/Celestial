@@ -7,10 +7,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
 
-import com.celestial.agniRadiance.EzUtil.Util_Collection;
-import com.celestial.agniRadiance.EzUtil.Util_File;
-import com.celestial.agniRadiance.EzUtil.Util_String;
-
+import com.celestial.agniRadiance.EzUtil.UtilCollection;
+import com.celestial.agniRadiance.EzUtil.UtilFile;
+import com.celestial.agniRadiance.EzUtil.UtilString;
 
 public class FileReader {
 	
@@ -33,38 +32,6 @@ public class FileReader {
 	
 	/**---------------遍历 变量---------------------------*/
 	
-	/**
-	 * <b>方法说明：</b>
-	 * <ul>
-	 * 
-	 * </ul>
-	 * @param args 
-	 */
-	@SuppressWarnings("unused")
-	public static void main(String[] args) {
-		
-		FileReader f = new FileReader("C:/Users/Administrator/Desktop/kimo`/vendo_response/MyCmdQueryResponseVO.java");
-		//过滤字符串
-//		List<String> st = f.selectLineStartWith("public");
-//		List<String> st2 = f.selectLineEndWith("public");
-		List<String> st3 = f.selectLineStartEndContain("","","*","设置");
-		for(String s : st3){
-			System.out.println(s);
-		}
-		
-		//找到某一行,某几行 ; 遍历LineList
-		f.setIndex(4);
-		String s = f.readLine();
-		String s2 =f.readCurrentLine();
-		
-		String s3 = f.readBeforeLine(1);
-		String s31 = f.readBeforeLine1();
-		
-		String s4 = f.readNextLine();
-		String s5 = f.readNextLine(3);
-		
-		String s6 = f.readNextLine1();
-	}
 	
 	/**
 	 * 生成一个FileReader类 <br/>
@@ -113,7 +80,7 @@ public class FileReader {
 		File f = new File(filePath);
 		if(!(f.exists() && f.isFile()))
 			throw new RuntimeException("指定文件不存在或不是文件!" + filePath);
-		lineList = Util_File.readFileLineToList(filePath,charset,isTrim);
+		lineList = UtilFile.readFileLineToList(filePath,charset,isTrim);
 		this.fileName = filePath.substring(filePath.lastIndexOf("/")+1);
 		
 	}
@@ -302,7 +269,7 @@ public class FileReader {
 		
 		List<String> l = new ArrayList<String>();
 		for(String si : lineList){
-			if(si.startsWith(headWords) && si.endsWith(taiWords) && Util_Collection.containAll(containWords, si)){
+			if(si.startsWith(headWords) && si.endsWith(taiWords) && UtilCollection.containAll(containWords, si)){
 				l.add(si);
 			}
 				
@@ -373,7 +340,7 @@ public class FileReader {
 		Map<Integer,String> m = new LinkedHashMap<Integer, String>();
 		for(int i = 0 ; i < lineList.size() ; i++ ){
 			si = lineList.get(i);
-			if(si.startsWith(headWords) && si.endsWith(tailWords) && Util_Collection.containAll(containWords, si) && Pattern.compile(regex).matcher(si).matches()){
+			if(si.startsWith(headWords) && si.endsWith(tailWords) && UtilCollection.containAll(containWords, si) && Pattern.compile(regex).matcher(si).matches()){
 				m.put(i, si);
 			}
 		}
@@ -499,7 +466,7 @@ public class FileReader {
 	 * @return
 	 */
 	public List<Map<Integer, String>> selectAllLineBetweenRegex(String headRegex, String tailRegex) {
-		return  Util_Collection.selectLineBetweenRegx(lineList, headRegex, tailRegex);
+		return  UtilCollection.selectLineBetweenRegx(lineList, headRegex, tailRegex);
 	}
 
 	/**
@@ -547,7 +514,7 @@ public class FileReader {
 		if(l !=null && l.size() > 0){
 			List<String> backList = l.get(0);
 			if(backList.size() >= 2){
-				return new FileReader(Util_Collection.listRemoveElem(backList,0,backList.size()-1));
+				return new FileReader(UtilCollection.listRemoveElem(backList,0,backList.size()-1));
 			}
 		}
 		
@@ -567,7 +534,7 @@ public class FileReader {
 			String tailRegex) {
 		List<List<String>> l = new ArrayList<List<String>>();
 		for(Map<Integer,String> mi : selectAllLineBetweenRegex(headRegex, tailRegex)){
-			l.add(Util_Collection.transMaptoList(mi));
+			l.add(UtilCollection.transMaptoList(mi));
 		}
 		return l;
 	}
@@ -597,7 +564,7 @@ public class FileReader {
 	public FileReader selectLineExcludeRegex(String regx) {
 		List<String> l =new ArrayList<String>();
 		for(String si : lineList){
-			if(Util_String.matchAllSameRegx(si, regx))
+			if(UtilString.matchAllSameRegx(si, regx))
 				continue;
 			l.add(si);
 		}
@@ -613,7 +580,7 @@ public class FileReader {
 	 * @return
 	 */
 	public FileReader replaceList(int start, int end, List<String> lineListRep) {
-		return new FileReader(Util_Collection.replaceList(this.lineList, start, end, lineListRep));
+		return new FileReader(UtilCollection.replaceList(this.lineList, start, end, lineListRep));
 	}
 
 	/**

@@ -27,7 +27,6 @@ public class te {
 		/*System.out.println(365.25*19/235);
 		System.out.println(365.25*19-235*29.5);readFileAndPrint();*/
 		
-		String mooncake = "badTast1";
 		
 	}
 

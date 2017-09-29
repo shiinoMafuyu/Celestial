@@ -8,8 +8,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import com.celestial.agniRadiance.EzUtil.Util_File;
-import com.celestial.agniRadiance.EzUtil.Util_String;
+import com.celestial.agniRadiance.EzUtil.UtilFile;
+import com.celestial.agniRadiance.EzUtil.UtilString;
 import com.celestial.agniRadiance.entity.FileReader;
 import com.celestial.butterflystorm.butterfly2016.puddingIII.Interface.entity.TypeFile;
 import com.celestial.butterflystorm.butterfly2016.puddingIII.tempAbstract.entity.TypeFileTemp;
@@ -25,7 +25,7 @@ public class TypeJava extends TypeFileTemp implements TypeFile {
 		Map<String,List<String>> m = new LinkedHashMap<String, List<String>>();
 		String key = null;
 		for(String i : srcPathList){
-			List<String> ltemp = Util_File.findFile(this.srcFile, new File(i));
+			List<String> ltemp = UtilFile.findFile(this.srcFile, new File(i));
 			if(ltemp.size() > 0){
 				m.put(i, ltemp);
 				if(key == null)
@@ -86,9 +86,9 @@ public class TypeJava extends TypeFileTemp implements TypeFile {
 		String s = "";
 		while(f.hasNext()){
 			s = f.readLine();
-			if( Util_String.matchAllSameRegx(s,
+			if( UtilString.matchAllSameRegx(s,
 					"<classpathentry\\s+kind=\"src\"\\s+path=\"src/.*\"\\s*/>")){
-				s = Util_String._getMatchIn(s,"\"","\"",s.indexOf("path="));
+				s = UtilString.getMatchIn(s,"\"","\"",s.indexOf("path="));
 				fileList.add(projectPath+"/"+s);
 			}
 		}
@@ -101,7 +101,7 @@ public class TypeJava extends TypeFileTemp implements TypeFile {
 		m.invoke(null, original,pudding);
 		String name = original.getName();
 		name = name.substring(0, name.lastIndexOf(".class"));
-		File[] fArr = Util_File.fileDocument(original.getParent().replaceAll("\\\\", "/"), name+"\\$.*\\.class");
+		File[] fArr = UtilFile.fileDocument(original.getParent().replaceAll("\\\\", "/"), name+"\\$.*\\.class");
 		for(File f: fArr){
 			m.invoke(null,f, new File(pudding.getParent()+"/"+f.getName()));
 		}

@@ -1,6 +1,6 @@
 package com.celestial.meek.realTest_2017_02;
 
-import com.celestial.agniRadiance.EzUtil.Util_Collection;
+import com.celestial.agniRadiance.EzUtil.UtilCollection;
 
 public class passwordHeadache {
 
@@ -16,10 +16,10 @@ public class passwordHeadache {
 		String[] sArr2 = new String[]{"(","!","====","$"};
 		String[] sArr3 = new String[]{"mi",""};
 		String[] sArr4 = new String[]{"143","23141","314"};
-		String[] sarr = Util_Collection.dikaer(sArr1,sArr2);
-		sarr = Util_Collection.dikaer(sarr,sArr3);
-		sarr = Util_Collection.dikaer(sarr,sArr2);
-		sarr = Util_Collection.dikaer(sarr,sArr4);
+		String[] sarr = UtilCollection.dikaer(sArr1,sArr2);
+		sarr = UtilCollection.dikaer(sarr,sArr3);
+		sarr = UtilCollection.dikaer(sarr,sArr2);
+		sarr = UtilCollection.dikaer(sarr,sArr4);
 //		System.out.println(sarr);
 		for(String si:sarr){
 			System.out.println(si);

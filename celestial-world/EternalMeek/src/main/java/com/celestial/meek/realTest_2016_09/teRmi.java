@@ -35,9 +35,5 @@ public class teRmi {
 		
 	}
 
-	private void smile(Object object) {
-		System.out.println(object);
-		
-	}
 
 }

@@ -4,7 +4,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.celestial.agniRadiance.EzUtil.Util_File;
+import com.celestial.agniRadiance.EzUtil.UtilFile;
 
 /**
  * 生成补丁
@@ -33,7 +33,7 @@ public class puddingController {
 	}
 
 	private static boolean makeingPudding(String s1, String s2) {
-		if(!(Util_File.checkFileExist(s1) && Util_File.checkFileExist(s2)))
+		if(!(UtilFile.checkFileExist(s1) && UtilFile.checkFileExist(s2)))
 			throw new RuntimeException("检查文件是否都存在" + s1 +"\n" + s2);
 		boolean b = true;
 		List<String> failedList =new ArrayList<String>();

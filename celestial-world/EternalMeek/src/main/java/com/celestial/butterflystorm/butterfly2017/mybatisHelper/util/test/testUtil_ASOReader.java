@@ -12,7 +12,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
-import com.celestial.agniRadiance.EzUtil.Util_File;
+import com.celestial.agniRadiance.EzUtil.UtilFile;
 import com.celestial.agniRadiance.entity.FileReader;
 import com.celestial.butterflystorm.butterfly2017.mybatisHelper.creator.XMLcreator;
 import com.celestial.butterflystorm.butterfly2017.mybatisHelper.depender.XMLdepender;
@@ -54,7 +54,7 @@ public class testUtil_ASOReader {
 		XMLdepender xmlDepender = Util_ASOReader.createXMLdepernder("src/test/resources/helper/tableAssociation/equipment.aso");
 		XMLcreator xmlCreattor = new XMLcreator(xmlDepender);
 		System.out.println(xmlCreattor.getThisClass());
-		Util_File.printFile(Arrays.asList(new String[]{xmlCreattor.getThisClass()}), asoOutPut+"/equipment.xml");
+		UtilFile.printFile(Arrays.asList(new String[]{xmlCreattor.getThisClass()}), asoOutPut+"/equipment.xml");
 		Assert.assertEquals(xmlDepender.getxMLdependerMap().size(),1);
 	}
 	

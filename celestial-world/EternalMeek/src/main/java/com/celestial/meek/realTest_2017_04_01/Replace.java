@@ -2,7 +2,7 @@ package com.celestial.meek.realTest_2017_04_01;
 
 import java.util.Arrays;
 
-import com.celestial.agniRadiance.EzUtil.Util_File;
+import com.celestial.agniRadiance.EzUtil.UtilFile;
 import com.celestial.agniRadiance.entity.FileReader;
 
 public class Replace {
@@ -21,7 +21,7 @@ public class Replace {
 						.replaceAll("交收保证金","交收履约保证金")
 						.replaceAll("可用保证金","可用交易履约保证金")
 						.replaceAll("冻结保证金","冻结交易履约保证金");
-		Util_File.printFile(Arrays.asList(new String[]{send}), save,"gbk");
+		UtilFile.printFile(Arrays.asList(new String[]{send}), save,"gbk");
 		System.out.println("完成！");
 		System.out.println(send);
 	}

@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import com.celestial.agniRadiance.EzUtil.Util_Normal;
-import com.celestial.agniRadiance.EzUtil.Util_String;
+import com.celestial.agniRadiance.EzUtil.UtilNormal;
+import com.celestial.agniRadiance.EzUtil.UtilString;
 
 
 public class CreateRequestResponseOld {
@@ -94,15 +94,15 @@ public class CreateRequestResponseOld {
 		
 		//3.添加resultList 
 		if(lz != null && lz.size() > 0){
-			l.addAll(Util_Normal.table(CreateRequestResponseOld.create2ResultList(className)));
+			l.addAll(UtilNormal.table(CreateRequestResponseOld.create2ResultList(className)));
 		}
 		//4.添加结果信息类
-		l.addAll(Util_Normal.table(CreateRequestResponseOld.create2ResultInfoClass(ls, className)));
+		l.addAll(UtilNormal.table(CreateRequestResponseOld.create2ResultInfoClass(ls, className)));
 		if(lz != null && lz.size() > 0){
 			//5.添加查询结果集合类
-			l.addAll(Util_Normal.table(CreateRequestResponseOld.create2ListClass(className)));
+			l.addAll(UtilNormal.table(CreateRequestResponseOld.create2ListClass(className)));
 			//6.添加查询结果信息内部类
-			l.addAll(Util_Normal.table(CreateRequestResponseOld.create2InfoClass(lz, className)));
+			l.addAll(UtilNormal.table(CreateRequestResponseOld.create2InfoClass(lz, className)));
 		}
 		l.add("");
 		l.add("");
@@ -132,8 +132,8 @@ public class CreateRequestResponseOld {
 		l.add(" */");
 		l.add("public class "+head+"ResultVO extends ResultVO{");
 
-		l.addAll(Util_Normal.table(CreateRequestResponseOld.createAllVariables(ls)));
-		l.addAll(Util_Normal.table(CreateRequestResponseOld.createAllSet(ls)));
+		l.addAll(UtilNormal.table(CreateRequestResponseOld.createAllVariables(ls)));
+		l.addAll(UtilNormal.table(CreateRequestResponseOld.createAllSet(ls)));
 		
 		l.add("}");
 		l.add("");
@@ -253,8 +253,8 @@ public class CreateRequestResponseOld {
 		l.add(" * 信息类");
 		l.add(" */");
 		l.add("public class "+head+"Obj{");
-		l.addAll(Util_Normal.table(CreateRequestResponseOld.createAllVariables(ls)));
-		l.addAll(Util_Normal.table(CreateRequestResponseOld.createAllSet(ls)));
+		l.addAll(UtilNormal.table(CreateRequestResponseOld.createAllVariables(ls)));
+		l.addAll(UtilNormal.table(CreateRequestResponseOld.createAllSet(ls)));
 		l.add("}");
 		l.add("");
 		
@@ -266,8 +266,8 @@ public class CreateRequestResponseOld {
 	 * 测试部分1 Request类生成完毕
 	 */
 	protected static void tePart1_requestOver() {
-		List<String> lx =new ArrayList<String>();
-		String[] sArr = new String[]{"CHF","CheckHistoryFlag","Double","当前历史查询标志   0：当前记录; 1: 历史记录"};
+//		List<String> lx =new ArrayList<String>();
+//		String[] sArr = new String[]{"CHF","CheckHistoryFlag","Double","当前历史查询标志   0：当前记录; 1: 历史记录"};
 		//测试生成get方法
 		/*List<String> lget = DBUtil2_class.createGetMethod(sArr);
 		for(String i : lget){
@@ -275,18 +275,18 @@ public class CreateRequestResponseOld {
 		}*/
 		
 		//测试生成set方法
-		List<String> lset = CreateRequestResponseOld.createSetMethod(sArr);
+//		List<String> lset = CreateRequestResponseOld.createSetMethod(sArr);
 		/*for(String i : lset){
 			System.out.println(i);
 		}*/
 		
 		//测试生成get注释
-		List<String> lannotateSet = CreateRequestResponseOld.createGetAnnotate(sArr);
+//		List<String> lannotateSet = CreateRequestResponseOld.createGetAnnotate(sArr);
 		/*for(String i : lannotateSet){
 			System.out.println(i);
 		}*/
 		//测试生成set注释
-		List<String> lannotateGet = CreateRequestResponseOld.createSetAnnotate(sArr);
+//		List<String> lannotateGet = CreateRequestResponseOld.createSetAnnotate(sArr);
 		/*for(String i : lannotateGet){
 			System.out.println(i);
 		}*/
@@ -460,11 +460,11 @@ public class CreateRequestResponseOld {
 		l.addAll(CreateRequestResponseOld.createClassAnnotation(linfo,qualifiedName));
 		l.add("public class "+className+" extends RequestVO{");
 		//3.添加所有变量及其注释
-		l.addAll(Util_Normal.table(CreateRequestResponseOld.createAllVariables(varsList),1));
+		l.addAll(UtilNormal.table(CreateRequestResponseOld.createAllVariables(varsList),1));
 		//4.添加构造方法及其注释
-		l.addAll(Util_Normal.table(CreateRequestResponseOld.createConstructor(className)));
+		l.addAll(UtilNormal.table(CreateRequestResponseOld.createConstructor(className)));
 		//5.添加所有get方法及其注释
-		l.addAll(Util_Normal.table(CreateRequestResponseOld.createAllGet(varsList, className)));
+		l.addAll(UtilNormal.table(CreateRequestResponseOld.createAllGet(varsList, className)));
 		l.add("}");
 		l.add("");
 		return l;
@@ -867,7 +867,7 @@ public class CreateRequestResponseOld {
 	 */
 	public static List<String> createSetMethod(String[] sArr) {
 		List<String> l = new ArrayList<String>();
-		String param = Util_String.__transHeadToLowerCase(sArr[1]);
+		String param = UtilString.transHeadToLowerCase(sArr[1]);
 		l.add("public void set"+sArr[1]+"("+sArr[2]+" "+param+") {");
 		String ret = "";
 		if("String".equals(sArr[2])){

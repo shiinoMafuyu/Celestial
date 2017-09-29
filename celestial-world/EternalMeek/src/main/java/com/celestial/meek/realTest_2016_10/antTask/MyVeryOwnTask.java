@@ -20,7 +20,8 @@ public class MyVeryOwnTask extends Task {
 	//目录下有的就直接覆盖 改名 先做这个
 	//没有目录 没有文件的弹出个提示~~最好 应该
     // The method executing the task
-    public void execute() throws BuildException {
+    @SuppressWarnings("resource")
+	public void execute() throws BuildException {
         System.out.println("补丁位置: "+podding);
         System.out.println("项目位置: "+project);
         //找到补丁名	找到补丁下面所有文件的字符串 		拼项目下面的文件,去看下面有没有补丁对应文件	没有的话直接复制 有的话直接复制(..)

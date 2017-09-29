@@ -6,8 +6,8 @@ import java.util.Iterator;
 import java.util.Map.Entry;
 import java.util.Properties;
 
-import com.celestial.agniRadiance.EzUtil.Util_File;
-import com.celestial.agniRadiance.EzUtil.Util_String;
+import com.celestial.agniRadiance.EzUtil.UtilFile;
+import com.celestial.agniRadiance.EzUtil.UtilString;
 
 @SuppressWarnings("unused")
 public class te {
@@ -28,7 +28,7 @@ public class te {
 	}
 
 	private static void compareTwoFile() throws FileNotFoundException {
-		System.out.println("相同 : " + Util_File.getMd5ByFile(new File("C:/Users/Administrator/Documents/新项目开发/08手机/2代码和ER图/zhaozy/微交易和报价/报价系统ER图(1).dm1")).equals(Util_File.getMd5ByFile(new File("C:/Users/Administrator/Documents/新项目开发/08手机/2代码和ER图/zhaozy/微交易和报价/报价系统ER图.dm1"))));
+		System.out.println("相同 : " + UtilFile.getMd5ByFile(new File("C:/Users/Administrator/Documents/新项目开发/08手机/2代码和ER图/zhaozy/微交易和报价/报价系统ER图(1).dm1")).equals(UtilFile.getMd5ByFile(new File("C:/Users/Administrator/Documents/新项目开发/08手机/2代码和ER图/zhaozy/微交易和报价/报价系统ER图.dm1"))));
 	}
 
 	/**
@@ -68,8 +68,8 @@ public class te {
 	}
 
 	private static void teEquals() throws FileNotFoundException {
-		String espot = Util_File.getMd5ByFile(new File("C:/Users/Administrator/Desktop/umb/e现货/ActiveUser.jar"));
-		String vendor = Util_File.getMd5ByFile(new File("C:/Users/Administrator/Desktop/umb/竞价/ActiveUser.jar"));
+		String espot = UtilFile.getMd5ByFile(new File("C:/Users/Administrator/Desktop/umb/e现货/ActiveUser.jar"));
+		String vendor = UtilFile.getMd5ByFile(new File("C:/Users/Administrator/Desktop/umb/竞价/ActiveUser.jar"));
 		System.out.println(espot.equals(vendor));
 		
 		
@@ -82,7 +82,7 @@ public class te {
 		System.out.println(s.replaceAll(" ", "\\\\\\\\s*").replaceAll("\"", "\\\\\""));
 		
 		String ss = "<\\s*\\?\\s*xml\\s*version\\s*=\\s*\"1\\.0\"\\s*encoding\\s*=\\s*\"GBK\"\\s*\\?\\s*>";
-		System.out.println(Util_String.matchAllSameRegx(s, ss));
+		System.out.println(UtilString.matchAllSameRegx(s, ss));
 		
 	}
 

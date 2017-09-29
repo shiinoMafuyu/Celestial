@@ -1,0 +1,13 @@
+#时间以秒为单位
+#源文件路径(目录/文件夹)
+srcPath=C:/Users/Administrator/Documents/Klei/DoNotStarve/save
+#目标文件夹路径
+desPath=H:/t/06饥荒/02 存档/03海难
+#备份时间间隔
+interval=180
+#删除时间间隔
+deleteInterval=60
+#剩余文件数量
+least=20
+
+

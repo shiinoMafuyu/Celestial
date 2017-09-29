@@ -4,7 +4,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.celestial.agniRadiance.EzUtil.Util_String;
+import com.celestial.agniRadiance.EzUtil.UtilString;
 
 
 	/**
@@ -149,7 +149,7 @@ import com.celestial.agniRadiance.EzUtil.Util_String;
 			try {
 				while(chirldTagString.contains("<")){
 					tagHead = chirldTagString.substring(chirldTagString.indexOf("<") + 1, chirldTagString.indexOf(">"));
-					tagName = Util_String.___getTheFirstWord(tagHead);
+					tagName = UtilString.getTheFirstWord(tagHead);
 					tagEnd = "</" + tagName +">";
 					chirldTagString = chirldTagString.replaceAll("<{1}\\s*/{1}\\s*"+tagName+"{1}\\s*>{1}",tagEnd);
 					l.add(chirldTagString.substring(chirldTagString.indexOf("<"), chirldTagString.indexOf(tagEnd)+tagEnd.length()));
@@ -180,11 +180,11 @@ import com.celestial.agniRadiance.EzUtil.Util_String;
 				tagString = removeVersionTitile(tagString);
 				//1.添加标签名
 				tagHead = tagString.substring(tagString.indexOf("<") + 1, tagString.indexOf(">"));
-				tagName = Util_String.___getTheFirstWord(tagHead);
+				tagName = UtilString.getTheFirstWord(tagHead);
 				l.add(tagName);
 				//2.添加map属性ref="ddd" sub="ddd" type="String"
 				tagString = tagString.replaceAll("<{1}\\s*/{1}\\s*"+tagName+"{1}\\s*>", "</" + tagName +">");
-				Map<String,String> map = Util_String.___getPropertyMap(tagHead.substring(tagHead.indexOf(tagName)+tagName.length()));
+				Map<String,String> map = UtilString.getPropertyMap(tagHead.substring(tagHead.indexOf(tagName)+tagName.length()));
 				l.add(map);
 				//innerText为第一个>到接着的<中间的内容,接着的<有可能是自己的结束标签,也可能是字标签的开始标签.
 				//3.获取自己标签中的文本内容(有子标签就是头部的>结尾到子标签的<开头的地方;如果没有子标签就是头部>和尾部<之间的内容.)

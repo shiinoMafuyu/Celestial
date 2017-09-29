@@ -1,6 +1,6 @@
 package com.celestial.butterflystorm.butterfly2017.mybatisHelper.creator;
 
-import com.celestial.agniRadiance.EzUtil.Util_String;
+import com.celestial.agniRadiance.EzUtil.UtilString;
 import com.celestial.butterflystorm.butterfly2017.mybatisHelper.depender.DAOdepender;
 
 public class DAOcreator {
@@ -39,7 +39,7 @@ public class DAOcreator {
 
 	private void createDao() {
 		String methodStr = sb.toString().replaceAll("className", className)
-										.replaceAll("paramName", Util_String.__transHeadToLowerCase(className));
+										.replaceAll("paramName", UtilString.transHeadToLowerCase(className));
 		
 		thisClass = interfaceDao.replaceAll("--arg_className--", className)
 									   .replaceAll("--arg_daoName--", daoName)

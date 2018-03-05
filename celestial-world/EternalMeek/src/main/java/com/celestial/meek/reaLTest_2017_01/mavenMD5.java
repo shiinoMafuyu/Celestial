@@ -1,6 +1,7 @@
 package com.celestial.meek.reaLTest_2017_01;
 
 import java.io.File;
+import java.util.List;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -90,9 +91,9 @@ public class mavenMD5 {
 	@Ignore
 	@Test
 	public void _03classMethodUse(){
-		File[] fArr =UtilFile.fileAll("D:/GitHub/DN/DN/src/main/webapp", ".*html");
-		for(File f:fArr){
-			System.out.println(f.getAbsolutePath());
+		List<String> fArr =UtilFile.findFile(".*html",new File("\"D:/GitHub/DN/DN/src/main/webapp\""));
+		for(String f:fArr){
+			System.out.println(new File(f).getAbsolutePath());
 		}
 		
 		//E:/t/t19Util持续开发/t01FileReader元素替换/1.txt

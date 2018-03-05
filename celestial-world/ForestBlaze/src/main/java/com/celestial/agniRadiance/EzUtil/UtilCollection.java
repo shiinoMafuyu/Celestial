@@ -933,4 +933,16 @@ public class UtilCollection {
 			clazz = list.get(0).getClass();
 		return clazz;
 	}
+
+	/**
+	 * 深度拷贝数组
+	 * @param array
+	 * @return
+	 */
+	public static <T> T[] deepCopyArr(T[] array) {
+		if(null == array)
+			return array;
+		T[] arr = Arrays.copyOf(array, array.length);
+		return arr;
+	}
 }

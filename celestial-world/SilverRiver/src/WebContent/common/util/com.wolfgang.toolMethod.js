@@ -71,6 +71,7 @@
     				arr[i] = 0;
     			}
         	}
+    		//月份js里存的值比我们输入的值小1，所以1月份对应数值0,2月份对应数值1，依次类推
         	date = new Date(arr[0], arr[1]-1, arr[2], arr[3], arr[4], arr[5]);
         	if(date == "Invalid Date")
         		date = "";

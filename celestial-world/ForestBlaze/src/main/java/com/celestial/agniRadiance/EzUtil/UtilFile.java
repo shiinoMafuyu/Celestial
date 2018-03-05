@@ -73,10 +73,10 @@ public class UtilFile {
 			    outC.close();
 			    return new Date().getTime()-time;
 			}
-			if((inC.size()-inC.position())<20971520)
+			if((inC.size()-inC.position())<2097152)
 			    length=(int)(inC.size()-inC.position());
 			else
-			    length=20971520;
+			    length=2097152;
 			inC.transferTo(inC.position(),length,outC);
 			inC.position(inC.position()+length);
 		}

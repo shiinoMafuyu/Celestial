@@ -353,4 +353,13 @@ public class TestUtilCollection {
 		
 		Assert.assertTrue(val2 ==UtilCollection.nullChoose(val2, val2,val2,val2) );
 	}
+	
+	@Test
+	public void testDeepCopyArr() {
+		String[] sarr = new String[]{"1","2","3"};
+		String[] sarr2 = UtilCollection.deepCopyArr(sarr);
+		sarr[1] = "Œ“";
+		Assert.assertTrue("Œ“".equals(sarr[1]));
+		Assert.assertTrue("2".equals(sarr2[1]));
+	}
 }

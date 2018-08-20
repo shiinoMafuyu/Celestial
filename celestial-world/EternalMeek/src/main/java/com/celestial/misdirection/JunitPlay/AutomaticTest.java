@@ -8,7 +8,7 @@ public class AutomaticTest {
 	
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜Žï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -29,7 +29,7 @@ public class AutomaticTest {
 	
 	/**
 	 * 
-	 * <b>¹¹Ôì·½·¨</b>
+	 * <b>æž„é€ æ–¹æ³•</b>
 	 * <br/>
 	 * @param string
 	 */

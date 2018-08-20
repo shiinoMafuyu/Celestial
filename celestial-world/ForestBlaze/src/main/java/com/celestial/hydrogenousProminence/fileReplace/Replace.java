@@ -7,9 +7,9 @@ import com.celestial.agniRadiance.EzUtil.UtilFile;
 import com.celestial.agniRadiance.entity.FileReader;
 import com.celestial.agniRadiance.entity.Print;
 /**
- * ÎÄ¼şÌæ»»Àà,¶ÁÈ¡ÎÄ¼şÒ»²¿·Ö£¬·Åµ½ÁíÒ»¸öÎÄ¼şÄ³Ò»Î»ÖÃÉÏÈ¥<br/>
- * Òª¶Ô¶ÁÈ¡µÄÎÄ¼şÆ¬¶Î½øĞĞ²Ù×÷£¬ÔòÔÚ×ÓÀàÖĞ¸´Ğ´doTrans()·½·¨¡£<br/>
- * ÒÔÆ«°²È«µÄ·½Ê½½øĞĞÉè¼Æ¡£<br/>
+ * æ–‡ä»¶æ›¿æ¢ç±»,è¯»å–æ–‡ä»¶ä¸€éƒ¨åˆ†ï¼Œæ”¾åˆ°å¦ä¸€ä¸ªæ–‡ä»¶æŸä¸€ä½ç½®ä¸Šå»<br/>
+ * è¦å¯¹è¯»å–çš„æ–‡ä»¶ç‰‡æ®µè¿›è¡Œæ“ä½œï¼Œåˆ™åœ¨å­ç±»ä¸­å¤å†™doTrans()æ–¹æ³•ã€‚<br/>
+ * ä»¥åå®‰å…¨çš„æ–¹å¼è¿›è¡Œè®¾è®¡ã€‚<br/>
  * @author Administrator
  *
  */
@@ -37,12 +37,12 @@ public class Replace {
 	public void executeReplace(){
 		for(Entry<String,String[]> ei: depend.getRepMap().entrySet()){
 			boolean isSuccess = replaceOne(ei.getValue());
-			p.println("ÎÄ¼ş£º" + ei.getValue()[4] + "Ìæ»»ÄÚÈİ" + (isSuccess==true?"³É¹¦":"Ê§°Ü£¡"));
+			p.println("æ–‡ä»¶ï¼š" + ei.getValue()[4] + "æ›¿æ¢å†…å®¹" + (isSuccess==true?"æˆåŠŸ":"å¤±è´¥ï¼"));
 		}
 	}
 
 	/**
-	 * ½á¹¹ÈçRepDependencyÖĞËùÃèÊö<br/>
+	 * ç»“æ„å¦‚RepDependencyä¸­æ‰€æè¿°<br/>
 	 * [sn_flag,en_flag,target_sn_flag,target_en_flag,targetPath]
 	 * @param value
 	 * @return
@@ -56,7 +56,7 @@ public class Replace {
 			int start = targetFile.getRegexPosition(repArr[2]),
 				end = targetFile.getRegexPosition(repArr[3]);
 			if(!(start > 0 && end > start))
-				throw new RuntimeException("ÎÄ¼ş£º" + targetFilePath + " µÄ¿ªÊ¼ÏÂ±ê£º" + repArr[2] + " ºÍ½áÊøÏÂ±ê£º" + repArr[3] + " Æ¥ÅäÓĞÎó£¡");
+				throw new RuntimeException("æ–‡ä»¶ï¼š" + targetFilePath + " çš„å¼€å§‹ä¸‹æ ‡ï¼š" + repArr[2] + " å’Œç»“æŸä¸‹æ ‡ï¼š" + repArr[3] + " åŒ¹é…æœ‰è¯¯ï¼");
 			FileReader endFile = targetFile.replaceList(start, end, targetList);
 			UtilFile.printFile(endFile.getLineList(), targetFilePath, charset);
 			return true;
@@ -67,9 +67,9 @@ public class Replace {
 	}
 
 	/**
-	 * ½«Ô­À´µÄÎÄ¼ş²¿·Ö×ªÎªĞÂµÄ×ª»»·½Ê½¡£<br/>
-	 * Ä¬ÈÏ²»×öÈÎºÎĞŞ¸Ä¡£<br/>
-	 * Òª×öÊ²Ã´ĞŞ¸ÄÔò´´½¨×ÓÀà¸´Ğ´´Ë·½·¨.<br/>
+	 * å°†åŸæ¥çš„æ–‡ä»¶éƒ¨åˆ†è½¬ä¸ºæ–°çš„è½¬æ¢æ–¹å¼ã€‚<br/>
+	 * é»˜è®¤ä¸åšä»»ä½•ä¿®æ”¹ã€‚<br/>
+	 * è¦åšä»€ä¹ˆä¿®æ”¹åˆ™åˆ›å»ºå­ç±»å¤å†™æ­¤æ–¹æ³•.<br/>
 	 * @param sourceList
 	 * @return
 	 */

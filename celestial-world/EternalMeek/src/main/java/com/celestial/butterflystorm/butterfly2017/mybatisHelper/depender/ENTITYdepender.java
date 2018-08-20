@@ -8,7 +8,7 @@ import com.celestial.agniRadiance.EzUtil.UtilString;
 public class ENTITYdepender {
 	
 	/**
-	 * String[] = [成员变量名，类型，注释]
+	 * String[] = [鎴愬憳鍙橀噺鍚嶏紝绫诲瀷锛屾敞閲奭
 	 */
 	private List<String[]> classList = new ArrayList<String[]>();
 	

@@ -15,13 +15,13 @@ public class Singleton {
 	}
 	
 	void show() {
-		System.out.println("ÕâÊÇ¸öµ¥Àı~");
+		System.out.println("è¿™æ˜¯ä¸ªå•ä¾‹~");
 	}
 	public static void main(String[] args) {
 		Singleton.getInstance().show();
 		Singleton.getInstance().increase(3L, 5);
 		
-		System.out.println("ÄêÁä£º"+Singleton.getInstance().getAge(10, 8));;
+		System.out.println("å¹´é¾„ï¼š"+Singleton.getInstance().getAge(10, 8));;
 	}
 	
 	int getAge(int age,int n) {

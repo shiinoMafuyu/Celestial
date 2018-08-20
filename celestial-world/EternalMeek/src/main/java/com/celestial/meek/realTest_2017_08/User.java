@@ -1,9 +1,9 @@
 /******************************************************************
  * User.java
  * Copyright 2017 by WZG. All Rights Reserved.
- * CreateDate£º2017Äê8ÔÂ6ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´8æœˆ6æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.meek.realTest_2017_08;
@@ -12,15 +12,15 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê8ÔÂ6ÈÕ
+ *                        ---- wangzg 2017å¹´8æœˆ6æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
  * 
  * </p>
@@ -31,7 +31,7 @@ public class User {
 	
 	private String id = "experiment001";
 	
-	private String name = "ÊµÑéÌå001";
+	private String name = "å®éªŒä½“001";
 
 	public static void main(String[] args) {
 		Timer timer = new Timer();
@@ -43,9 +43,9 @@ public class User {
 		System.out.println("------->next");
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡
+	 * è·å–
 	 * </ul>
 	 * @return the kind
 	 */
@@ -54,9 +54,9 @@ public class User {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃ
+	 * è®¾ç½®
 	 * </ul>
 	 * kind
 	 */
@@ -65,9 +65,9 @@ public class User {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡
+	 * è·å–
 	 * </ul>
 	 * @return the name
 	 */
@@ -76,9 +76,9 @@ public class User {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃ
+	 * è®¾ç½®
 	 * </ul>
 	 * name
 	 */
@@ -87,9 +87,9 @@ public class User {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡
+	 * è·å–
 	 * </ul>
 	 * @return the id
 	 */
@@ -98,9 +98,9 @@ public class User {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃ
+	 * è®¾ç½®
 	 * </ul>
 	 * id
 	 */

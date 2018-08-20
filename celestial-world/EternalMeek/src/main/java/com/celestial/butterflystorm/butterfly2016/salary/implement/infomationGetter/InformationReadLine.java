@@ -6,10 +6,10 @@ public class InformationReadLine implements InformationGetter {
 
 	@Override
 	public String getInformation() {
-		//µÈ»á¶ù´ÓÃüÁîĞĞ¶ÁÈ¡
-//		String s="<name></name><age></age><gender></gender><salary></salary><union><u1>»Ê¼Òµ³</u1></union>";
-//		String s="<name>Î¢É³</name><age>998</age><gender>Å®</gender><salary>24000</salary><union><u1>»Ê¼Òµ³</u1><u1>¿Û·Ñµ³</u1></union>";
-		String s = "<Employee><name>Î¢É³</name><age>998</age><gender>0</gender><salary>24000</salary><union>»Ê¼Òµ³,¿Û·Ñµ³,Ãñ½øµ³</union></Employee>";
+		//ç­‰ä¼šå„¿ä»å‘½ä»¤è¡Œè¯»å–
+//		String s="<name></name><age></age><gender></gender><salary></salary><union><u1>çš‡å®¶å…š</u1></union>";
+//		String s="<name>å¾®æ²™</name><age>998</age><gender>å¥³</gender><salary>24000</salary><union><u1>çš‡å®¶å…š</u1><u1>æ‰£è´¹å…š</u1></union>";
+		String s = "<Employee><name>å¾®æ²™</name><age>998</age><gender>0</gender><salary>24000</salary><union>çš‡å®¶å…š,æ‰£è´¹å…š,æ°‘è¿›å…š</union></Employee>";
 		return s;
 	}
 

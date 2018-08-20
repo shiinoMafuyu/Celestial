@@ -52,21 +52,21 @@ public class EquipmentImpl extends PropertyEntity implements Equipment {
 			String key = si.substring(0, index);
 			String value = si.substring(index+1);
 			if(PropertySpace.propertyFixedPCTMap.get(key) != null){
-				//ÊÇ¹Ì¶¨ÊôĞÔÖµ¹â°µ»ğË® + ¿¹
-				//ÔÚ¹Ì¶¨ÊôĞÔÖµÀïÃæÖ»¿ÉÄÜÊÇ%
+				//æ˜¯å›ºå®šå±æ€§å€¼å…‰æš—ç«æ°´ + æŠ—
+				//åœ¨å›ºå®šå±æ€§å€¼é‡Œé¢åªå¯èƒ½æ˜¯%
 				if(!Util_Helper.checkDouble(value))
 					continue;
 				NumericDouble.put(propertyFixedPCTMap,key,value);
 			}else if(PropertySpace.propertyMap.get(key) != null){
-				//ÊÇÒ»°ãÊôĞÔÖµ
+				//æ˜¯ä¸€èˆ¬å±æ€§å€¼
 				if(Util_Helper.checkInteger(value))
 				{
-					//ÊÇÊôĞÔÖµµÄÊ±ºò Îï¹¥:50~60
-					//½«key,value¶ÔÓ¦µÄ¼üÖµ¶ÔÀïµÄÖµ,µş¼Óµ½mapÒÔÇ°µÄkey,valueÀï(Ã»ÓĞÔòĞÂ½¨,ÓĞÔòµş¼Ó)
+					//æ˜¯å±æ€§å€¼çš„æ—¶å€™ ç‰©æ”»:50~60
+					//å°†key,valueå¯¹åº”çš„é”®å€¼å¯¹é‡Œçš„å€¼,å åŠ åˆ°mapä»¥å‰çš„key,valueé‡Œ(æ²¡æœ‰åˆ™æ–°å»º,æœ‰åˆ™å åŠ )
 					NumericInteger.put(propertyMap,key,value);
 				}else if(Util_Helper.checkDouble(value)){
-					//ÊÇÊôĞÔ°Ù·Ö±ÈµÄÊ±ºò Îï¹¥:5.00%~5.00%
-					//½«key,value¶ÔÓ¦µÄ¼üÖµ¶ÔÀïµÄÖµ,µş¼Óµ½mapÒÔÇ°µÄkey,valueÀï(Ã»ÓĞÔòĞÂ½¨,ÓĞÔòµş¼Ó)
+					//æ˜¯å±æ€§ç™¾åˆ†æ¯”çš„æ—¶å€™ ç‰©æ”»:5.00%~5.00%
+					//å°†key,valueå¯¹åº”çš„é”®å€¼å¯¹é‡Œçš„å€¼,å åŠ åˆ°mapä»¥å‰çš„key,valueé‡Œ(æ²¡æœ‰åˆ™æ–°å»º,æœ‰åˆ™å åŠ )
 					NumericDouble.put(propertyMulMap,key,value);
 				}
 			}

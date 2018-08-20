@@ -23,9 +23,9 @@ public class TypeOther extends TypeFileTemp implements TypeFile {
 
 	private void check(List<String> l) {
 		if(l.size() < 1)
-			throw new RuntimeException("ÎÄ¼þÎ´ÕÒµ½:"+originalFile.getName());
+			throw new RuntimeException("æ–‡ä»¶æœªæ‰¾åˆ°:"+originalFile.getName());
 		else if(l.size() > 1)
-			p.println("¾¯¸æ,ÎÄ¼þ³¬¹ý1¸ö,ÒÔµÚÒ»¸öÎª×¼."+ originalFile.getName());
+			p.println("è­¦å‘Š,æ–‡ä»¶è¶…è¿‡1ä¸ª,ä»¥ç¬¬ä¸€ä¸ªä¸ºå‡†."+ originalFile.getName());
 	}
 
 	public TypeOther(String originalPath, File originalFile) {

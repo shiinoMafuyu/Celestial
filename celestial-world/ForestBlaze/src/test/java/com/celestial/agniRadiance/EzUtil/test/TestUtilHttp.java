@@ -1,9 +1,9 @@
 /******************************************************************
  * TestUtil_Http.java
  * Copyright 2017 by WZG. All Rights Reserved.
- * CreateDate£º2017Äê9ÔÂ7ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´9æœˆ7æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.agniRadiance.EzUtil.test;
@@ -20,15 +20,15 @@ import net.sf.json.JSONDynaBean;
 import net.sf.json.JSONObject;
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê9ÔÂ7ÈÕ
+ *                        ---- wangzg 2017å¹´9æœˆ7æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
  * 
  * </p>
@@ -38,24 +38,24 @@ public class TestUtilHttp {
 	@Test
 	public void _01_01_queryPhone(){
 		String s = UtilHttp.doPost2("http://tcc.taobao.com/cc/json/mobile_tel_segment.htm?tel=18235146546", "");
-		System.out.println("ÌÔ±¦:"+s);
+		System.out.println("æ·˜å®:"+s);
 		
 //		s = Util_Http.doPost2("https://www.baifubao.com/callback?cmd=1059&callback=phone&phone=18235146546", "");
-//		System.out.println("°Ù¸¶±¦:"+s);
+//		System.out.println("ç™¾ä»˜å®:"+s);
 		
 	}
 	
 	@Test
 	public void _01_02_JsonOperator(){
 		
-		JSONObject js = new JSONObject("{    mts:'1823514',    province:'É½Î÷',    catName:'ÖĞ¹úÒÆ¶¯',    telString:'18235146546',	areaVid:'30502',	ispVid:'3236139',	carrier:'É½Î÷ÒÆ¶¯',home:{jpHome:'¹ãµº',cnHome:'ËìÄş'}}");
+		JSONObject js = new JSONObject("{    mts:'1823514',    province:'å±±è¥¿',    catName:'ä¸­å›½ç§»åŠ¨',    telString:'18235146546',	areaVid:'30502',	ispVid:'3236139',	carrier:'å±±è¥¿ç§»åŠ¨',home:{jpHome:'å¹¿å²›',cnHome:'é‚å®'}}");
 		JSONDynaBean obj = (JSONDynaBean)JSONObject.toBean(js);
 		System.out.println(obj);
 		
 		JSONDynaBean home = (JSONDynaBean)obj.get("home");
 		System.out.println(home.get("jpHome"));
 		
-		String s = "__GetZoneResult_ = {    mts:'1823514',    province:'É½Î÷',    catName:'ÖĞ¹úÒÆ¶¯',    telString:'18235146546',	areaVid:'30502',	ispVid:'3236139',	carrier:'É½Î÷ÒÆ¶¯',home:{jpHome:'¹ãµº',cnHome:'ËìÄş'}}";
+		String s = "__GetZoneResult_ = {    mts:'1823514',    province:'å±±è¥¿',    catName:'ä¸­å›½ç§»åŠ¨',    telString:'18235146546',	areaVid:'30502',	ispVid:'3236139',	carrier:'å±±è¥¿ç§»åŠ¨',home:{jpHome:'å¹¿å²›',cnHome:'é‚å®'}}";
 		String s2 = UtilString.getMatchIn2(s, "{", "}", 0);
 		System.out.println(s2);
 		
@@ -66,7 +66,7 @@ public class TestUtilHttp {
 	
 	@Test
 	public void _03_01_MapReference(){
-		/** p1½«ÒıÓÃ´«µİ¸øÁËMap,p1¸ÄÁËMapÀï¾Í¸ÄÁË£»È»ºóp1¸ü¸ÄÁËÒıÓÃÎ»ÖÃ£¬Æä²Ù×÷¾Í²»ÔÙ¶ÔMapÀïµÄ²úÉúÓ°ÏìÁË. */
+		/** p1å°†å¼•ç”¨ä¼ é€’ç»™äº†Map,p1æ”¹äº†Mapé‡Œå°±æ”¹äº†ï¼›ç„¶åp1æ›´æ”¹äº†å¼•ç”¨ä½ç½®ï¼Œå…¶æ“ä½œå°±ä¸å†å¯¹Mapé‡Œçš„äº§ç”Ÿå½±å“äº†. */
 		Map<Person,Integer> m= new LinkedHashMap<>();
 		Person p1 = new Person().setName("maya").setAge(17);
 		p1.setName("maya2");

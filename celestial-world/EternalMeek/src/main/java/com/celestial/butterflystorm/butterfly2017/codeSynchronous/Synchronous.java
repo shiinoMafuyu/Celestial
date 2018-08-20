@@ -35,7 +35,7 @@ public class Synchronous {
 							.replaceAll("Sa_", "su_")
 							.replaceAll("SA_", "su_");
 				UtilFile.printFile(send, path2 + UtilString.fmtPathStr(file.getAbsolutePath()).substring(path1.length()),"gbk");
-				System.out.println("ĞŞ¸Ä±£´æÍê³É£º" + file.getName());
+				System.out.println("ä¿®æ”¹ä¿å­˜å®Œæˆï¼š" + file.getName());
 			}
 		};
 		

@@ -9,49 +9,49 @@ import com.celestial.agniRadiance.EzUtil.UtilString;
 
 	/**
 	 * 
-	 * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+	 * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
 	 * <p>
 	 * <li>
 	 * 
 	 *                        ---- Administrator 2016-8-15<br/>
-	 *  Ò»¸ö±êÇ©¶ÔÏó;<br/>
-	 *  ´«ÈëÒ»¶Îxml±êÇ©×Ö·û´®°ÑËü½øĞĞµİ¹é½âÎö³É±êÇ©.<br/>
-	 *  »á°ÑµÚÒ»¸ö±êÇ©µ±³É¸¸±êÇ© ,½øĞĞ½âÎöÀıÈç:<XXX ref="xxx" sub="lll"></XXX><br/>
-	 *  ³ıÁËÓÃ×÷±êÇ©ÇëÎğÊ¹ÓÃ"<"ºÍ">"·ûºÅ<br/>
+	 *  ä¸€ä¸ªæ ‡ç­¾å¯¹è±¡;<br/>
+	 *  ä¼ å…¥ä¸€æ®µxmlæ ‡ç­¾å­—ç¬¦ä¸²æŠŠå®ƒè¿›è¡Œé€’å½’è§£ææˆæ ‡ç­¾.<br/>
+	 *  ä¼šæŠŠç¬¬ä¸€ä¸ªæ ‡ç­¾å½“æˆçˆ¶æ ‡ç­¾ ,è¿›è¡Œè§£æä¾‹å¦‚:<XXX ref="xxx" sub="lll"></XXX><br/>
+	 *  é™¤äº†ç”¨ä½œæ ‡ç­¾è¯·å‹¿ä½¿ç”¨"<"å’Œ">"ç¬¦å·<br/>
 	 * </li>
 	 * </p>
 	 * 
-	 * <b>ÀàËµÃ÷£º</b>
+	 * <b>ç±»è¯´æ˜ï¼š</b>
 	 * <p> 
-	 * Î´ĞŞÕıbug:
-	 * 1.Ã»¿¼ÂÇµ½Í¬¼¶±êÇ©ÖØÃûµÄÇé¿ö.±ÈÈçul±êÇ©ÏÂÃæ¶à¸öli±êÇ©.
+	 * æœªä¿®æ­£bug:
+	 * 1.æ²¡è€ƒè™‘åˆ°åŒçº§æ ‡ç­¾é‡åçš„æƒ…å†µ.æ¯”å¦‚ulæ ‡ç­¾ä¸‹é¢å¤šä¸ªliæ ‡ç­¾.
 	 * </p>
 	 */
 	public class Tag{
 		/**
-		 * ±êÇ©Ãû
+		 * æ ‡ç­¾å
 		 */
 		private String tagName ;
 		/**
-		 * ±êÇ©Í·Î²ÖĞ¼äµÄÄÚÈİ;
+		 * æ ‡ç­¾å¤´å°¾ä¸­é—´çš„å†…å®¹;
 		 */
 		private String value;
 		/**
-		 * ±êÇ©ÊôĞÔÖµÈçref = "fundQuery" sub = "QueryID" 
+		 * æ ‡ç­¾å±æ€§å€¼å¦‚ref = "fundQuery" sub = "QueryID" 
 		 */
 		private Map<String,String> propertyMap = new LinkedHashMap<String, String>();
 		/**
-		 * ×Ó±êÇ©ÁĞ±í
+		 * å­æ ‡ç­¾åˆ—è¡¨
 		 */
 		private List<Tag> childTagList = new ArrayList<Tag>();
 		
 		/**
-		 * ÓÃÀ´¸ù¾İ±êÇ©ÃûsÕÒËùĞè±êÇ©µÄ<br/>
+		 * ç”¨æ¥æ ¹æ®æ ‡ç­¾åsæ‰¾æ‰€éœ€æ ‡ç­¾çš„<br/>
 		 */
 		private List<String> mapColor = new ArrayList<String>();
 		
 		/**
-		 * ¸¸±êÇ©
+		 * çˆ¶æ ‡ç­¾
 		 */
 		private Tag parentTag = null;
 		
@@ -60,11 +60,11 @@ import com.celestial.agniRadiance.EzUtil.UtilString;
 			init(tagString,null);
 		}
 		/**
-		 * Õâ¸öÖ÷ÒªÊÇÓÃÀ´Éú³É×Ó±êÇ©µÄ¸¸±êÇ©×Ö¶ÎÖµµÄ!<br/>
-		 * ËùÒÔĞ´³Éprivate²»ÔÊĞíÍâ²¿µ÷ÓÃÅ¶<br/>
-		 * <b>¹¹Ôì·½·¨</b>
+		 * è¿™ä¸ªä¸»è¦æ˜¯ç”¨æ¥ç”Ÿæˆå­æ ‡ç­¾çš„çˆ¶æ ‡ç­¾å­—æ®µå€¼çš„!<br/>
+		 * æ‰€ä»¥å†™æˆprivateä¸å…è®¸å¤–éƒ¨è°ƒç”¨å“¦<br/>
+		 * <b>æ„é€ æ–¹æ³•</b>
 		 * <br/>
-		 * Éú³Éº¬ÓĞ¸¸±êÇ©µÄTag<br/>
+		 * ç”Ÿæˆå«æœ‰çˆ¶æ ‡ç­¾çš„Tag<br/>
 		 * @param tagString
 		 * @param parentTag
 		 */
@@ -73,29 +73,29 @@ import com.celestial.agniRadiance.EzUtil.UtilString;
 			init(tagString,parentTag);
 		}
 		/**
-		 * <b>·½·¨ËµÃ÷£º</b>
+		 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 		 * <ul>
-		 * ºÃÏñÒªµİ¹éÉú³Étag°¡
+		 * å¥½åƒè¦é€’å½’ç”Ÿæˆtagå•Š
 		 * </ul>
 		 * @param stringList
 		 */
 		@SuppressWarnings("unchecked")
 		private void init(String tagString,Tag parentTag) {
 			this.parentTag = parentTag;
-			//p1 Éú³ÉÉÏÃæËùĞèÒªµÄÊı¾İÀàĞÍ ÊôĞÔÖµ
-			//Í¬²ã´Î±êÇ©²»ÄÜÍ¬Ãû otherwise throw exception  Ã»ÓĞ¿ØÖÆºÃ¹ı³ÌÂğ ÓĞĞ©ÁèÂÒ ²»ÖªµÀºÍ×Ô¼ºµÄĞèÇó¶ÔÓ¦ÉÏÁËÃ» ÓĞÃ»ÓĞÅÜÆ« ; ÓÉÓÚµÚÒ»²ã±êÇ©Ö»È¡Ò»¸öËùÒÔ²»ÓÃµ£ĞÄ,¼ì²éÆä×Ó±êÇ©×Ö·û´®¼´¿É~
+			//p1 ç”Ÿæˆä¸Šé¢æ‰€éœ€è¦çš„æ•°æ®ç±»å‹ å±æ€§å€¼
+			//åŒå±‚æ¬¡æ ‡ç­¾ä¸èƒ½åŒå otherwise throw exception  æ²¡æœ‰æ§åˆ¶å¥½è¿‡ç¨‹å— æœ‰äº›å‡Œä¹± ä¸çŸ¥é“å’Œè‡ªå·±çš„éœ€æ±‚å¯¹åº”ä¸Šäº†æ²¡ æœ‰æ²¡æœ‰è·‘å ; ç”±äºç¬¬ä¸€å±‚æ ‡ç­¾åªå–ä¸€ä¸ªæ‰€ä»¥ä¸ç”¨æ‹…å¿ƒ,æ£€æŸ¥å…¶å­æ ‡ç­¾å­—ç¬¦ä¸²å³å¯~
 			
-			//¼ì²âÖ®ºó×ö (±ØĞëÕâÑù ÒòÎªÕâ±ßÊÇÔ¤¼ÆºÃÁËµÄ,ºÜ¶à¶«Î÷Ò²¶¼¿¼ÂÇºÃÁË,²»È»µÈÏÂÓÖÈ«ÍüÁË) ¿ÉÒÔ×ö¸ö¼òµ¥µÄ<xx><xx />Ò»¸ö¸öÌæ»»µô²»È«µÄ»°Å×³öÒì³£ Õâ¸öºÃÏñ¾ÍºÜ¼òµ¥ÁËÅ¶ »»³ÉÒ»ĞĞÒÔºó O(¡É_¡É)O¹ş¹ş~;¼ì²â½á¹ûËµok....
-			//¼ÙÈç¼ì²âÒÑ¾­ÍüÁË ¹æ·¶ÁËºÃË¬!
+			//æ£€æµ‹ä¹‹ååš (å¿…é¡»è¿™æ · å› ä¸ºè¿™è¾¹æ˜¯é¢„è®¡å¥½äº†çš„,å¾ˆå¤šä¸œè¥¿ä¹Ÿéƒ½è€ƒè™‘å¥½äº†,ä¸ç„¶ç­‰ä¸‹åˆå…¨å¿˜äº†) å¯ä»¥åšä¸ªç®€å•çš„<xx><xx />ä¸€ä¸ªä¸ªæ›¿æ¢æ‰ä¸å…¨çš„è¯æŠ›å‡ºå¼‚å¸¸ è¿™ä¸ªå¥½åƒå°±å¾ˆç®€å•äº†å“¦ æ¢æˆä¸€è¡Œä»¥å O(âˆ©_âˆ©)Oå“ˆå“ˆ~;æ£€æµ‹ç»“æœè¯´ok....
+			//å‡å¦‚æ£€æµ‹å·²ç»å¿˜äº† è§„èŒƒäº†å¥½çˆ½!
 			
-			//<MEBS_MOBILE ref = "µØÇòÍ¨Ñ¶" sub="ßÙßÙßÙ" type ="µç²¨ÉÕ¾Æ">ÎÒµÄbs³ÌĞòÂğ<REQ name="user_login" name2 ="user_login_request">ÉêÇë½»Ò×Äó<U sub="UserID" type ="String">µÇÂ½ÓÃ»§ID</U><PASSWORD sub="PassWord" type="String">¿ÚÁî</PASSWORD><IC sub="InMysteryCode" type="String">¼ÓÃÜ×Ö·û´®</IC><RANDOM_KEY sub="Random_key" type="Integer" >Ëæ»ú´®</RANDOM_KEY></REQ></MEBS_MOBILE>
+			//<MEBS_MOBILE ref = "åœ°çƒé€šè®¯" sub="å“”å“”å“”" type ="ç”µæ³¢çƒ§é…’">æˆ‘çš„bsç¨‹åºå—<REQ name="user_login" name2 ="user_login_request">ç”³è¯·äº¤æ˜“æ<U sub="UserID" type ="String">ç™»é™†ç”¨æˆ·ID</U><PASSWORD sub="PassWord" type="String">å£ä»¤</PASSWORD><IC sub="InMysteryCode" type="String">åŠ å¯†å­—ç¬¦ä¸²</IC><RANDOM_KEY sub="Random_key" type="Integer" >éšæœºä¸²</RANDOM_KEY></REQ></MEBS_MOBILE>
 			
 			List<Object> lp = parseTagString(tagString);
 			this.tagName = (String)lp.get(0);
 			this.propertyMap = (LinkedHashMap<String, String>)lp.get(1);
 			this.value = (String)lp.get(2);
 			
-			//p2 µİ¹éÉú³É×Ó±êÇ© ×Ó×ÓËïËï±êÇ©   		--> ok!
+			//p2 é€’å½’ç”Ÿæˆå­æ ‡ç­¾ å­å­å­™å­™æ ‡ç­¾   		--> ok!
 			String chirldTagString = (String)lp.get(3);
 			if(chirldTagString != null && !"".equals(chirldTagString)){
 				List<String> chirldTagStringList = parseChirldTagString(chirldTagString);
@@ -105,7 +105,7 @@ import com.celestial.agniRadiance.EzUtil.UtilString;
 				}
 			}
 			
-			//Õâ¸öÈç¹ûÊÇ×î¶¥¶Ë±êÇ©Ôò¸øËûmapColorÉèÖµ.ÓÃÓÚ²éÕÒ×Ó±êÇ©;
+			//è¿™ä¸ªå¦‚æœæ˜¯æœ€é¡¶ç«¯æ ‡ç­¾åˆ™ç»™ä»–mapColorè®¾å€¼.ç”¨äºæŸ¥æ‰¾å­æ ‡ç­¾;
 			//[REQ U, REQ PASSWORD, REQ RANDOM_KEY]
 			/*if(this.getParentTag() == null){
 				List<String> l = createMapColor(this);
@@ -135,10 +135,10 @@ import com.celestial.agniRadiance.EzUtil.UtilString;
 			return l;
 		}
 		/**
-		 * <b>·½·¨ËµÃ÷£º</b>
+		 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 		 * <ul>
-		 * °Ñ×Ó±êÇ©ÆÊ½âÎª±ê×¼Ê½.<br/>
-		 * ´Ó
+		 * æŠŠå­æ ‡ç­¾å‰–è§£ä¸ºæ ‡å‡†å¼.<br/>
+		 * ä»
 		 * </ul>
 		 * @param chirldTagString
 		 * @return
@@ -157,55 +157,55 @@ import com.celestial.agniRadiance.EzUtil.UtilString;
 				}
 			} catch (Exception e) {
 				e.printStackTrace();
-				throw new RuntimeException("×Ó±êÇ©·Ö½âÊ§°Ü!Çë¼ì²é±êÇ©ÊÇ·ñÍêÕû,ÊÇ·ñ·ûºÏ¹æ·¶!ÕÒ²»µ½ Î²²¿±êÇ©,»òÆä¸½½üÓĞxml¸ñÊ½´íÎó:" + tagEnd + " <---- " + chirldTagString);
+				throw new RuntimeException("å­æ ‡ç­¾åˆ†è§£å¤±è´¥!è¯·æ£€æŸ¥æ ‡ç­¾æ˜¯å¦å®Œæ•´,æ˜¯å¦ç¬¦åˆè§„èŒƒ!æ‰¾ä¸åˆ° å°¾éƒ¨æ ‡ç­¾,æˆ–å…¶é™„è¿‘æœ‰xmlæ ¼å¼é”™è¯¯:" + tagEnd + " <---- " + chirldTagString);
 			}
 			return l;
 		}
 
 		/**
-		 * <b>·½·¨ËµÃ÷£º</b>
+		 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 		 * <ul>
-		 * ½âÎötagString»ñÈ¡ÆäÊôĞÔĞÅÏ¢(¸¸±êÇ©ÊôĞÔ)<br/>
-		 * ÒÔµÚÒ»¸ö"<"ºÍ">"Ö®¼äµÄ×Ö·û´®ÀïÎª±êÇ©¿ªÍ·ÄÚÈİ.ÒÔµÚÒ»¸ö×Ö·û´®×öÎª±êÇ©Ãû,ºóÃæµÄÒÔ key = valueµÄĞÎÊ½´æÔÚ,×öÎªpropertyMap<br/>
-		 * valueÎªheadÎ²°ÍµÄ">"ºÍ¸Ã±êÇ©Î²²¿¶ÔÓ¦µÄ"<"ÖĞ¼äµÄÄÚÈİ<br/>
+		 * è§£ætagStringè·å–å…¶å±æ€§ä¿¡æ¯(çˆ¶æ ‡ç­¾å±æ€§)<br/>
+		 * ä»¥ç¬¬ä¸€ä¸ª"<"å’Œ">"ä¹‹é—´çš„å­—ç¬¦ä¸²é‡Œä¸ºæ ‡ç­¾å¼€å¤´å†…å®¹.ä»¥ç¬¬ä¸€ä¸ªå­—ç¬¦ä¸²åšä¸ºæ ‡ç­¾å,åé¢çš„ä»¥ key = valueçš„å½¢å¼å­˜åœ¨,åšä¸ºpropertyMap<br/>
+		 * valueä¸ºheadå°¾å·´çš„">"å’Œè¯¥æ ‡ç­¾å°¾éƒ¨å¯¹åº”çš„"<"ä¸­é—´çš„å†…å®¹<br/>
 		 * </ul>
 		 * @param tagString
-		 * @return tagName + map<String,String>(ÊôĞÔĞÇÏµ) + value(ÎÄ±¾ÄÚÈİ)  + ×Ó±êÇ©tagString
+		 * @return tagName + map<String,String>(å±æ€§æ˜Ÿç³») + value(æ–‡æœ¬å†…å®¹)  + å­æ ‡ç­¾tagString
 		 */
 		private List<Object> parseTagString(String tagString) {
 			List<Object> l = new ArrayList<Object>();
 			String tagHead="",tagName="",innerTagString="",value="";
 			try {
-				//0.É¾³ı±êÇ©Í·<?xml version="1.0" encoding = "GBK"?> Èç¹ûÓĞµÄ»°
+				//0.åˆ é™¤æ ‡ç­¾å¤´<?xml version="1.0" encoding = "GBK"?> å¦‚æœæœ‰çš„è¯
 				tagString = removeVersionTitile(tagString);
-				//1.Ìí¼Ó±êÇ©Ãû
+				//1.æ·»åŠ æ ‡ç­¾å
 				tagHead = tagString.substring(tagString.indexOf("<") + 1, tagString.indexOf(">"));
 				tagName = UtilString.getTheFirstWord(tagHead);
 				l.add(tagName);
-				//2.Ìí¼ÓmapÊôĞÔref="ddd" sub="ddd" type="String"
+				//2.æ·»åŠ mapå±æ€§ref="ddd" sub="ddd" type="String"
 				tagString = tagString.replaceAll("<{1}\\s*/{1}\\s*"+tagName+"{1}\\s*>", "</" + tagName +">");
 				Map<String,String> map = UtilString.getPropertyMap(tagHead.substring(tagHead.indexOf(tagName)+tagName.length()));
 				l.add(map);
-				//innerTextÎªµÚÒ»¸ö>µ½½Ó×ÅµÄ<ÖĞ¼äµÄÄÚÈİ,½Ó×ÅµÄ<ÓĞ¿ÉÄÜÊÇ×Ô¼ºµÄ½áÊø±êÇ©,Ò²¿ÉÄÜÊÇ×Ö±êÇ©µÄ¿ªÊ¼±êÇ©.
-				//3.»ñÈ¡×Ô¼º±êÇ©ÖĞµÄÎÄ±¾ÄÚÈİ(ÓĞ×Ó±êÇ©¾ÍÊÇÍ·²¿µÄ>½áÎ²µ½×Ó±êÇ©µÄ<¿ªÍ·µÄµØ·½;Èç¹ûÃ»ÓĞ×Ó±êÇ©¾ÍÊÇÍ·²¿>ºÍÎ²²¿<Ö®¼äµÄÄÚÈİ.)
+				//innerTextä¸ºç¬¬ä¸€ä¸ª>åˆ°æ¥ç€çš„<ä¸­é—´çš„å†…å®¹,æ¥ç€çš„<æœ‰å¯èƒ½æ˜¯è‡ªå·±çš„ç»“æŸæ ‡ç­¾,ä¹Ÿå¯èƒ½æ˜¯å­—æ ‡ç­¾çš„å¼€å§‹æ ‡ç­¾.
+				//3.è·å–è‡ªå·±æ ‡ç­¾ä¸­çš„æ–‡æœ¬å†…å®¹(æœ‰å­æ ‡ç­¾å°±æ˜¯å¤´éƒ¨çš„>ç»“å°¾åˆ°å­æ ‡ç­¾çš„<å¼€å¤´çš„åœ°æ–¹;å¦‚æœæ²¡æœ‰å­æ ‡ç­¾å°±æ˜¯å¤´éƒ¨>å’Œå°¾éƒ¨<ä¹‹é—´çš„å†…å®¹.)
 				int index1 = tagString.indexOf(">")+1;
 				int index2 = tagString.indexOf("<", index1);
 				value = tagString.substring(index1, index2);
 				l.add(value);
-				//4.Ìí¼Ó×Ó±êÇ©tagStringÄÚÈİ
+				//4.æ·»åŠ å­æ ‡ç­¾tagStringå†…å®¹
 				innerTagString = tagString.substring(index2, tagString.indexOf("</" + tagName +">", index2));
 				l.add(innerTagString);
 			} catch (Exception e) {
 				e.printStackTrace();
-				throw new RuntimeException("¼ì²é±êÇ©" + tagName + "ÊÇ·ñÍêÕû");
+				throw new RuntimeException("æ£€æŸ¥æ ‡ç­¾" + tagName + "æ˜¯å¦å®Œæ•´");
 			}
 			return l;
 		}
 
 		/**
-		 * <b>·½·¨ËµÃ÷£º</b>
+		 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 		 * <ul>
-		 * Èôº¬ÓĞÌÖÑáµÄ<?xml version="1.0" encoding = "GBK"?>ĞÅÏ¢,ÔòÈ¥µô<br/>
+		 * è‹¥å«æœ‰è®¨åŒçš„<?xml version="1.0" encoding = "GBK"?>ä¿¡æ¯,åˆ™å»æ‰<br/>
 		 * </ul>
 		 * @param tagString
 		 * @return
@@ -217,8 +217,8 @@ import com.celestial.agniRadiance.EzUtil.UtilString;
 			/**--------------------------------------------------------------------------------------------------------------------------*/
 //			tagString = tagString.replaceAll("<\\s*\\?\\s*xml\\s*version\\s*=\\s*\"1\\.0\"\\s*encoding\\s*=\\s*\"GBK\"\\s*\\?\\s*>", "");
 			//---------------------------------------------------------------------------------------------------------------------------
-			/**ĞŞ¸ÄÈÕÆÚ:2016Äê9ÔÂ14ÈÕ11:00:20 wangzg ĞŞ¸ÄÕıÔòÌæ»»Ê½×ÓÎªÏÂÃæ°æ±¾.
-			 * ×¢ÊÍ°æ±¾±àÂëÖ»Æ¥ÅäGBK,ÊÂÊµÉÏÓĞ¶àÖØ,±ÈÈçGBK2312,UTF-8Ö®Àà,Ö»ÒªÆ¥ÅäÊÇµ¥¸ö×Ö·û¾ÍºÃÁË */
+			/**ä¿®æ”¹æ—¥æœŸ:2016å¹´9æœˆ14æ—¥11:00:20 wangzg ä¿®æ”¹æ­£åˆ™æ›¿æ¢å¼å­ä¸ºä¸‹é¢ç‰ˆæœ¬.
+			 * æ³¨é‡Šç‰ˆæœ¬ç¼–ç åªåŒ¹é…GBK,äº‹å®ä¸Šæœ‰å¤šé‡,æ¯”å¦‚GBK2312,UTF-8ä¹‹ç±»,åªè¦åŒ¹é…æ˜¯å•ä¸ªå­—ç¬¦å°±å¥½äº† */
 			tagString = tagString.replaceAll("<\\s*\\?\\s*xml\\s*version\\s*=\\s*\"1\\.0\"\\s*encoding\\s*=\\s*\"((\\w|-)+)\"\\s*\\?\\s*>", "");
 			/**--------------------------------------------------------------------------------------------------------------------------*/
 			 
@@ -252,17 +252,17 @@ import com.celestial.agniRadiance.EzUtil.UtilString;
 		}
 
 		/**
-		 * <b>·½·¨ËµÃ÷£º</b>
+		 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 		 * <ul>
-		 * »ñÈ¡Ö¸¶¨tag.
-		 * Attention:ÕâÀï»ñÈ¡µÄÊÇ×î»ñÈ¡µÄ×îµ×²ãµÄ±êÇ©!¿ÉÒÔ²»Ğ´È«Â·¾¶,µ«ÊÇĞèÒª¹Ì¶¨±êÇ©±¾ÉíµÄÃû³Æ<br/>
+		 * è·å–æŒ‡å®štag.
+		 * Attention:è¿™é‡Œè·å–çš„æ˜¯æœ€è·å–çš„æœ€åº•å±‚çš„æ ‡ç­¾!å¯ä»¥ä¸å†™å…¨è·¯å¾„,ä½†æ˜¯éœ€è¦å›ºå®šæ ‡ç­¾æœ¬èº«çš„åç§°<br/>
 		 * </ul>
 		 * @param string
 		 * @param string2
 		 * @return
 		 */
 		public Tag getTagByNames(String ...tagNames) {
-			//µİ¹é»ñÈ¡Ö¸¶¨µÄ±êÇ©
+			//é€’å½’è·å–æŒ‡å®šçš„æ ‡ç­¾
 			if(!(tagNames != null && tagNames.length > 0))
 				return null;
 			String[] tagNameList = findTagNameList(tagNames);
@@ -273,10 +273,10 @@ import com.celestial.agniRadiance.EzUtil.UtilString;
 		}
 		
 		/**
-		 * <b>·½·¨ËµÃ÷£º</b>
+		 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 		 * <ul>
-		 * ÒÔÍêÕûµÄ±êÇ©Â·¾¶»ñÈ¡¾ø¶ÔµÄ×Ó±êÇ©.<br/>
-		 * ´ø²»´ø×Ó±êÇ©¶¼ÄÜ»ñÈ¡.<br/>
+		 * ä»¥å®Œæ•´çš„æ ‡ç­¾è·¯å¾„è·å–ç»å¯¹çš„å­æ ‡ç­¾.<br/>
+		 * å¸¦ä¸å¸¦å­æ ‡ç­¾éƒ½èƒ½è·å–.<br/>
 		 * </ul>
 		 * @param string
 		 * @param string2
@@ -295,14 +295,14 @@ import com.celestial.agniRadiance.EzUtil.UtilString;
 					}
 				}
 			} catch (NullPointerException e) {
-				throw new RuntimeException("±êÇ©Î´ÕÒµ½.");
+				throw new RuntimeException("æ ‡ç­¾æœªæ‰¾åˆ°.");
 			}
 			return t;
 		}
 		/**
-		 * <b>·½·¨ËµÃ÷£º</b>
+		 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 		 * <ul>
-		 * ÕÒÆ¥ÅäĞĞ<br/>
+		 * æ‰¾åŒ¹é…è¡Œ<br/>
 		 * </ul>
 		 * @param tagNames
 		 * @return
@@ -310,7 +310,7 @@ import com.celestial.agniRadiance.EzUtil.UtilString;
 		public String[] findTagNameList(String[] tagNames) {
 			for(int i=0;i<tagNames.length;i++){
 				if(null == tagNames[i] || "".equals(tagNames[i]))
-						throw new RuntimeException("±êÇ©Ãû´íÎó!");
+						throw new RuntimeException("æ ‡ç­¾åé”™è¯¯!");
 			}
 			String[] sArr = null;
 			List<String> l = this.mapColor;
@@ -330,9 +330,9 @@ import com.celestial.agniRadiance.EzUtil.UtilString;
 			return sArr;
 		}
 		/**
-		 * <b>·½·¨ËµÃ÷£º</b>
+		 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 		 * <ul>
-		 * ×Ö·û´®sÊÇ·ñÔÚsArrÀïÃæ,´Ón¿ªÊ¼Ö®ºóµÄÄ³¸öµØ·½(°üº¬ÄÇ¸öÎ»ÖÃ)
+		 * å­—ç¬¦ä¸²sæ˜¯å¦åœ¨sArré‡Œé¢,ä»nå¼€å§‹ä¹‹åçš„æŸä¸ªåœ°æ–¹(åŒ…å«é‚£ä¸ªä½ç½®)
 		 * </ul>
 		 * @param sArr
 		 * @param s
@@ -350,9 +350,9 @@ import com.celestial.agniRadiance.EzUtil.UtilString;
 			return ret;
 		}
 		/**
-		 * <b>·½·¨ËµÃ÷£º</b>
+		 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 		 * <ul>
-		 * »ñÈ¡Ö±½Ó×Ó±êÇ©
+		 * è·å–ç›´æ¥å­æ ‡ç­¾
 		 * </ul>
 		 * @param i
 		 * @return
@@ -382,9 +382,9 @@ import com.celestial.agniRadiance.EzUtil.UtilString;
 			return sArr;
 		}*/
 		/**
-		 * <b>·½·¨ËµÃ÷£º</b>
+		 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 		 * <ul>
-		 * »ñÈ¡¸Ã±êÇ©ÄÚÃ»ÓĞ×Ó±êÇ©µÄËùÓĞ×Ó±êÇ©.<br/>
+		 * è·å–è¯¥æ ‡ç­¾å†…æ²¡æœ‰å­æ ‡ç­¾çš„æ‰€æœ‰å­æ ‡ç­¾.<br/>
 		 * </ul>
 		 * @return
 		 */

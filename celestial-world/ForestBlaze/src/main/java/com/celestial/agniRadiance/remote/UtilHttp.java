@@ -14,15 +14,15 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê9ÔÂ7ÈÕ
+ *                        ---- wangzg 2017å¹´9æœˆ7æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
  * 
  * </p>
@@ -32,7 +32,7 @@ public class UtilHttp {
 	public static String doPost2(String servletUrl,String xml){
 		String res = "";
 		try {
-			/* ³õÊ¼»¯ */
+			/* åˆå§‹åŒ– */
 			java.net.URL url = new java.net.URL(servletUrl);
 			java.net.URLConnection con = url.openConnection();
 			HttpURLConnection httpconn = (HttpURLConnection) con;
@@ -67,7 +67,7 @@ public class UtilHttp {
 	private static int CONNECT_TIMEOUT = 3000;
 	private static int READ_TIMEOUT = 3000;
 	/**
-	 * postÇëÇóÊı¾İ
+	 * postè¯·æ±‚æ•°æ®
 	 * 
 	 * @param connectURL
 	 * @param param
@@ -166,9 +166,9 @@ public class UtilHttp {
 	
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ·¢ËÍGetÇëÇó£¬»ñÈ¡ÎÄ¼ş<br/>
+	 * å‘é€Getè¯·æ±‚ï¼Œè·å–æ–‡ä»¶<br/>
 	 * </ul>
 	 * @param urlParam
 	 * @param params
@@ -177,7 +177,7 @@ public class UtilHttp {
 	 */
     public static int sendGetAndSaveFile(String urlParam, Map<String, Object> params, String fileSavePath) {
     	int re = 0;
-        // ¹¹½¨ÇëÇó²ÎÊı 
+        // æ„å»ºè¯·æ±‚å‚æ•° 
         StringBuffer sbParams = new StringBuffer();
         if (params != null && params.size() > 0) {
             for (Entry<String, Object> entry : params.entrySet()) {

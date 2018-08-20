@@ -6,7 +6,7 @@ import java.util.List;
 public abstract class TeFa {
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -18,5 +18,5 @@ public abstract class TeFa {
 	}
 
 	protected List<String> l = new ArrayList<String>();
-	protected String s = "Íş·çÌÃÌÃ";
+	protected String s = "å¨é£å ‚å ‚";
 }

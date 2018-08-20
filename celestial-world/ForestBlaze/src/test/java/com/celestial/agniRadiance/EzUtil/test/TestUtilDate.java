@@ -1,9 +1,9 @@
 /******************************************************************
  * Testjava
  * Copyright ${year} by WZG. All Rights Reserved.
- * CreateDate£º2017-8-8
- * Author£ºwanzg
- * Version£ºF1.0.0.0
+ * CreateDateï¼š2017-8-8
+ * Authorï¼šwanzg
+ * Versionï¼šF1.0.0.0
  ******************************************************************/
 
 package com.celestial.agniRadiance.EzUtil.test;
@@ -21,7 +21,7 @@ import com.celestial.agniRadiance.EzUtil.test.entity.OverGamePO;
 
 
 /**
- * <b>ÐÞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
@@ -29,7 +29,7 @@ import com.celestial.agniRadiance.EzUtil.test.entity.OverGamePO;
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜Žï¼š</b>
  * <p> 
  * 
  * </p>

@@ -13,33 +13,33 @@ import com.celestial.agniRadiance.EzUtil.UtilString;
 
 public class FileReader {
 	
-	/**---------------³õÊ¼»¯ºóÖµ²»ÔÙ¸Ä±ä---------------------*/
+	/**---------------åˆå§‹åŒ–åå€¼ä¸å†æ”¹å˜---------------------*/
 	private String filePath = "";
 	private String fileName = "";
 	private List<String> lineList = new ArrayList<String>();
-	/**---------------³õÊ¼»¯ºóÖµ²»ÔÙ¸Ä±ä---------------------*/
+	/**---------------åˆå§‹åŒ–åå€¼ä¸å†æ”¹å˜---------------------*/
 	
-	/**---------------±éÀú ±äÁ¿---------------------------*/
+	/**---------------éå† å˜é‡---------------------------*/
 	/**
-	 * indexÖ¸ÏòÏÂÒ»ĞĞ<br/>
-	 * Èç¹ûÄã¹»´ÏÃ÷µÄ»°¾ÍÄÜÒâÊ¶µ½ÒÔÏÂº¬Òå:<br/>
-	 * 1. currentLine ²»ÊÇindexËùÖ¸ÏòµÄĞĞÊı<br/>
-	 * 2. index±»³õÊ¼»¯µÄ»°×îĞ¡ÄÜµ½ 0,Ò²¾ÍÊÇÆäÏÂÒ»´Î¶ÁÈ¡ÄÚÈİÎª0.µ±Ç°currentLine Îªnull; <br/>
-	 * 3.currentLine ÎªÁËÊÇ½á¹¹²»¸´ÔÓ  + ±ãÓÚÊ¹ÓÃ  ,currentLineÉèÖÃÎª½øĞĞÁËÒ»´ÎÆäËûread²Ù×÷ºó,¶ÁÈ¡µÄÄÚÈİ.
+	 * indexæŒ‡å‘ä¸‹ä¸€è¡Œ<br/>
+	 * å¦‚æœä½ å¤Ÿèªæ˜çš„è¯å°±èƒ½æ„è¯†åˆ°ä»¥ä¸‹å«ä¹‰:<br/>
+	 * 1. currentLine ä¸æ˜¯indexæ‰€æŒ‡å‘çš„è¡Œæ•°<br/>
+	 * 2. indexè¢«åˆå§‹åŒ–çš„è¯æœ€å°èƒ½åˆ° 0,ä¹Ÿå°±æ˜¯å…¶ä¸‹ä¸€æ¬¡è¯»å–å†…å®¹ä¸º0.å½“å‰currentLine ä¸ºnull; <br/>
+	 * 3.currentLine ä¸ºäº†æ˜¯ç»“æ„ä¸å¤æ‚  + ä¾¿äºä½¿ç”¨  ,currentLineè®¾ç½®ä¸ºè¿›è¡Œäº†ä¸€æ¬¡å…¶ä»–readæ“ä½œå,è¯»å–çš„å†…å®¹.
 	 */
 	private int index = 0;
 	private String currentLine = null;
 	
-	/**---------------±éÀú ±äÁ¿---------------------------*/
+	/**---------------éå† å˜é‡---------------------------*/
 	
 	
 	/**
-	 * Éú³ÉÒ»¸öFileReaderÀà <br/>
-	 * ÎÄ¼şÂ·¾¶ÇëÒÔ"/"·Ö¸ô.<br/>
-	 * Ä¬ÈÏÒÔtrim()·½Ê½¶ÁÈ¡ <br/>
-	 * <b>¹¹Ôì·½·¨</b>
+	 * ç”Ÿæˆä¸€ä¸ªFileReaderç±» <br/>
+	 * æ–‡ä»¶è·¯å¾„è¯·ä»¥"/"åˆ†éš”.<br/>
+	 * é»˜è®¤ä»¥trim()æ–¹å¼è¯»å– <br/>
+	 * <b>æ„é€ æ–¹æ³•</b>
 	 * <br/>
-	 * @param filePath ÎÄ¼şÂ·¾¶
+	 * @param filePath æ–‡ä»¶è·¯å¾„
 	 */
 	public FileReader(String filePath) {
 		super();
@@ -47,12 +47,12 @@ public class FileReader {
 	}
 	
 	/**
-	 * Éú³ÉÒ»¸öFileReaderÀà<br/>
-	 * ÎÄ¼şÂ·¾¶ÇëÒÔ"/"·Ö¸ô.<br/>
-	 * <b>¹¹Ôì·½·¨</b>
+	 * ç”Ÿæˆä¸€ä¸ªFileReaderç±»<br/>
+	 * æ–‡ä»¶è·¯å¾„è¯·ä»¥"/"åˆ†éš”.<br/>
+	 * <b>æ„é€ æ–¹æ³•</b>
 	 * <br/>
-	 * @param filePath ÎÄ¼şÂ·¾¶
-	 * @param isTrim ÊÇ·ñĞèÒªtrim ;Ä¬ÈÏtrue;
+	 * @param filePath æ–‡ä»¶è·¯å¾„
+	 * @param isTrim æ˜¯å¦éœ€è¦trim ;é»˜è®¤true;
 	 */
 	public FileReader(String filePath,boolean isTrim) {
 		super();
@@ -60,13 +60,13 @@ public class FileReader {
 	}
 	
 	/**
-	 * Éú³ÉÒ»¸öFileReaderÀà<br/>
-	 * ÎÄ¼şÂ·¾¶ÇëÒÔ"/"·Ö¸ô.<br/>
-	 * <b>¹¹Ôì·½·¨</b>
+	 * ç”Ÿæˆä¸€ä¸ªFileReaderç±»<br/>
+	 * æ–‡ä»¶è·¯å¾„è¯·ä»¥"/"åˆ†éš”.<br/>
+	 * <b>æ„é€ æ–¹æ³•</b>
 	 * <br/>
-	 * @param filePath ÎÄ¼şÂ·¾¶
-	 * @param isTrim ÊÇ·ñĞèÒªtrim ;Ä¬ÈÏtrue;
-	 * @param charset ¶ÁÈ¡Ê±µÄ×Ö·û²ú
+	 * @param filePath æ–‡ä»¶è·¯å¾„
+	 * @param isTrim æ˜¯å¦éœ€è¦trim ;é»˜è®¤true;
+	 * @param charset è¯»å–æ—¶çš„å­—ç¬¦äº§
 	 */
 	public FileReader(String filePath,boolean isTrim , String charset) {
 		super();
@@ -79,7 +79,7 @@ public class FileReader {
 		this.filePath = filePath;
 		File f = new File(filePath);
 		if(!(f.exists() && f.isFile()))
-			throw new RuntimeException("Ö¸¶¨ÎÄ¼ş²»´æÔÚ»ò²»ÊÇÎÄ¼ş!" + filePath);
+			throw new RuntimeException("æŒ‡å®šæ–‡ä»¶ä¸å­˜åœ¨æˆ–ä¸æ˜¯æ–‡ä»¶!" + filePath);
 		lineList = UtilFile.readFileLineToList(filePath,charset,isTrim);
 		this.fileName = filePath.substring(filePath.lastIndexOf("/")+1);
 		
@@ -96,7 +96,7 @@ public class FileReader {
 	}
 
 	/**
-	 * <b>¹¹Ôì·½·¨</b>
+	 * <b>æ„é€ æ–¹æ³•</b>
 	 * <br/>
 	 * @param file
 	 * @param charset
@@ -107,9 +107,9 @@ public class FileReader {
 		init(path, charset, isTrim);
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¶ÁÈ¡ÏÂÒ»ĞĞÊı¾İ,Î»ÖÃ²»»áÌø×ª<br/>
+	 * è¯»å–ä¸‹ä¸€è¡Œæ•°æ®,ä½ç½®ä¸ä¼šè·³è½¬<br/>
 	 * </ul>
 	 * @return
 	 */
@@ -118,9 +118,9 @@ public class FileReader {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¶ÁÈ¡ºóÃænĞĞÊı¾İ,Î»ÖÃ²»»ØÌø×ª
+	 * è¯»å–åé¢nè¡Œæ•°æ®,ä½ç½®ä¸å›è·³è½¬
 	 * </ul>
 	 * @param n
 	 * @return
@@ -130,9 +130,9 @@ public class FileReader {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¶ÁÈ¡Ç°Ò»ĞĞµÄÖµ,ĞĞºÅ²»»ØÌø;
+	 * è¯»å–å‰ä¸€è¡Œçš„å€¼,è¡Œå·ä¸å›è·³;
 	 * </ul>
 	 * @return
 	 */
@@ -142,9 +142,9 @@ public class FileReader {
 
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¶ÁÈ¡Ç°nĞĞµÄÖµ,ĞĞºÅ²»»ØÌø
+	 * è¯»å–å‰nè¡Œçš„å€¼,è¡Œå·ä¸å›è·³
 	 * </ul>
 	 * @param n
 	 * @return
@@ -157,10 +157,10 @@ public class FileReader {
 	
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¶ÁÈ¡ºóÃæµÚnĞĞµÄÊı¾İÈç¹û³¬¹ı×îºóĞĞ¶ÁÈ¡×îºóĞĞÄÚÈİ;<br/>
-	 * Ïà¶ÔÓÚreadNextLine1(),´Ë·½·¨ĞĞÊı»á»ì¹öÖÁ¶ÁÈ¡ĞĞ.<br/>
+	 * è¯»å–åé¢ç¬¬nè¡Œçš„æ•°æ®å¦‚æœè¶…è¿‡æœ€åè¡Œè¯»å–æœ€åè¡Œå†…å®¹;<br/>
+	 * ç›¸å¯¹äºreadNextLine1(),æ­¤æ–¹æ³•è¡Œæ•°ä¼šæ··æ»šè‡³è¯»å–è¡Œ.<br/>
 	 * </ul>
 	 * @param n
 	 * @return
@@ -170,10 +170,10 @@ public class FileReader {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¶ÁÈ¡ÏÂÒ»ĞĞ<br/>
-	 * Ïà¶ÔÓÚreadNextLine1(),´Ë·½·¨ĞĞÊı»á»Ø¹öÖÁ¶ÁÈ¡ĞĞ.<br/>
+	 * è¯»å–ä¸‹ä¸€è¡Œ<br/>
+	 * ç›¸å¯¹äºreadNextLine1(),æ­¤æ–¹æ³•è¡Œæ•°ä¼šå›æ»šè‡³è¯»å–è¡Œ.<br/>
 	 * </ul>
 	 * @return
 	 */
@@ -182,10 +182,10 @@ public class FileReader {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¶ÁÈ¡ÉÏÒ»ĞĞÊı¾İ <br/>
-	 * Ïà¶ÔÓÚreadBeforeLine1(),´Ë·½·¨ĞĞÊı»á»ì¹öÖÁ¶ÁÈ¡ĞĞ.<br/>
+	 * è¯»å–ä¸Šä¸€è¡Œæ•°æ® <br/>
+	 * ç›¸å¯¹äºreadBeforeLine1(),æ­¤æ–¹æ³•è¡Œæ•°ä¼šæ··æ»šè‡³è¯»å–è¡Œ.<br/>
 	 * </ul>
 	 * @return
 	 */
@@ -194,12 +194,12 @@ public class FileReader {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¶ÁÈ¡Ç°nĞĞÊı¾İ<br/>
-	 * Ïà¶ÔÓÚreadBeforeLine1(),´Ë·½·¨ĞĞÊı»á»ì¹öÖÁ¶ÁÈ¡ĞĞ.<br/>
+	 * è¯»å–å‰nè¡Œæ•°æ®<br/>
+	 * ç›¸å¯¹äºreadBeforeLine1(),æ­¤æ–¹æ³•è¡Œæ•°ä¼šæ··æ»šè‡³è¯»å–è¡Œ.<br/>
 	 * </ul>
-	 * @param n ¶ÁÈ¡Ö®Ç°nĞĞµÄÊı¾İ;
+	 * @param n è¯»å–ä¹‹å‰nè¡Œçš„æ•°æ®;
 	 * @return
 	 */
 	public String readBeforeLine(int n) {
@@ -209,9 +209,9 @@ public class FileReader {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡µ±Ç°ĞĞ
+	 * è·å–å½“å‰è¡Œ
 	 * </ul>
 	 * @return
 	 */
@@ -220,9 +220,9 @@ public class FileReader {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¶ÁÈ¡ÏÂÒ»ĞĞÄÚÈİ
+	 * è¯»å–ä¸‹ä¸€è¡Œå†…å®¹
 	 * </ul>
 	 * @return
 	 */
@@ -231,10 +231,10 @@ public class FileReader {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¶ÁÈ¡µÚnĞĞµÄÊı¾İ <br/>
-	 * ÓÎ±êµ÷µ½¸Ã´¦<br/>
+	 * è¯»å–ç¬¬nè¡Œçš„æ•°æ® <br/>
+	 * æ¸¸æ ‡è°ƒåˆ°è¯¥å¤„<br/>
 	 * </ul>
 	 * @param i
 	 * @return
@@ -247,15 +247,15 @@ public class FileReader {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ·µ»ØÎÄ¼şÀïÒÔheadWords¿ªÍ·; ÒÔtaiWords½áÎ² ;²¢ÇÒ°üº¬containWordsµÄ¾ä×Ó; <br/>
-	 * Èô¹û²»ÏëÓÃ ÆäÖĞÄ³Ò»¸öÖ±½Ó´«Èënull»òÕß""¼´¿É <br/>
-	 * ÕâÑùµÄ»°¸ÃÌõ¼ş½á¹ûÄ¬ÈÏÎªtrue <br/>
+	 * è¿”å›æ–‡ä»¶é‡Œä»¥headWordså¼€å¤´; ä»¥taiWordsç»“å°¾ ;å¹¶ä¸”åŒ…å«containWordsçš„å¥å­; <br/>
+	 * è‹¥æœä¸æƒ³ç”¨ å…¶ä¸­æŸä¸€ä¸ªç›´æ¥ä¼ å…¥nullæˆ–è€…""å³å¯ <br/>
+	 * è¿™æ ·çš„è¯è¯¥æ¡ä»¶ç»“æœé»˜è®¤ä¸ºtrue <br/>
 	 * </ul>
-	 * @param headWords ¿ªÍ·´Ê
-	 * @param taiWords ½áÎ²´Ê
-	 * @param containWords ²»¶¨²Î
+	 * @param headWords å¼€å¤´è¯
+	 * @param taiWords ç»“å°¾è¯
+	 * @param containWords ä¸å®šå‚
 	 * @return
 	 */
 	public List<String> selectLineStartEndContain(String headWords,
@@ -277,16 +277,16 @@ public class FileReader {
 		return l;
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * MapĞÎÊ½<ĞĞºÅ,¶ÔÓ¦ĞĞ×Ö·û´®>
-	 * ·µ»ØÎÄ¼şÀïÒÔheadWords¿ªÍ·; ÒÔtaiWords½áÎ² ;²¢ÇÒ°üº¬containWordsµÄ¾ä×Ó; <br/>
-	 * Èô¹û²»ÏëÓÃ ÆäÖĞÄ³Ò»¸öÖ±½Ó´«Èënull»òÕß""¼´¿É <br/>
-	 * ÕâÑùµÄ»°¸ÃÌõ¼ş½á¹ûÄ¬ÈÏÎªtrue <br/>
+	 * Mapå½¢å¼<è¡Œå·,å¯¹åº”è¡Œå­—ç¬¦ä¸²>
+	 * è¿”å›æ–‡ä»¶é‡Œä»¥headWordså¼€å¤´; ä»¥taiWordsç»“å°¾ ;å¹¶ä¸”åŒ…å«containWordsçš„å¥å­; <br/>
+	 * è‹¥æœä¸æƒ³ç”¨ å…¶ä¸­æŸä¸€ä¸ªç›´æ¥ä¼ å…¥nullæˆ–è€…""å³å¯ <br/>
+	 * è¿™æ ·çš„è¯è¯¥æ¡ä»¶ç»“æœé»˜è®¤ä¸ºtrue <br/>
 	 * </ul>
-	 * @param headWords ¿ªÍ·´Ê
-	 * @param taiWords ½áÎ²´Ê
-	 * @param containWords ËùÒª°üº¬µÄ×Ö·û´®Êı×é
+	 * @param headWords å¼€å¤´è¯
+	 * @param taiWords ç»“å°¾è¯
+	 * @param containWords æ‰€è¦åŒ…å«çš„å­—ç¬¦ä¸²æ•°ç»„
 	 * @return
 	 */
 	public Map<Integer, String> selectLineStartEndContainMap(String headWords,
@@ -296,15 +296,15 @@ public class FileReader {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * LinkedHashMapĞÎÊ½·µ»ØÒÔheadWords¿ªÍ·,ÒÔtaiWords½áÎ²ÇÒÆ¥ÅäÕıÔò±í´ïÊ½µÄĞĞ <br/>
-	 * Èç¹û²»ÏëÊ¹ÓÃÒÔ""±íÊ¾¼´¿É<br/>
+	 * LinkedHashMapå½¢å¼è¿”å›ä»¥headWordså¼€å¤´,ä»¥taiWordsç»“å°¾ä¸”åŒ¹é…æ­£åˆ™è¡¨è¾¾å¼çš„è¡Œ <br/>
+	 * å¦‚æœä¸æƒ³ä½¿ç”¨ä»¥""è¡¨ç¤ºå³å¯<br/>
 	 * <br/>
 	 * </ul>
-	 * @param headWords ¿ªÍ·´Ê
-	 * @param taiWords ½áÎ²´Ê
-	 * @param regx ÕıÔò±í´ïÊ½
+	 * @param headWords å¼€å¤´è¯
+	 * @param taiWords ç»“å°¾è¯
+	 * @param regx æ­£åˆ™è¡¨è¾¾å¼
 	 * @return
 	 */
 	public Map<Integer, String> selectLineStartEndContainMap(
@@ -313,17 +313,17 @@ public class FileReader {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * MapĞÎÊ½<ĞĞºÅ,¶ÔÓ¦ĞĞ×Ö·û´®>
-	 * ·µ»ØÎÄ¼şÀïÒÔheadWords¿ªÍ·; ÒÔtailWords½áÎ² ;²¢ÇÒ°üº¬containWordsµÄ¾ä×Ó; <br/>
-	 * Èô¹û²»ÏëÓÃ ÆäÖĞÄ³Ò»¸öÖ±½Ó´«Èënull»òÕß""¼´¿É <br/>
-	 * ÕâÑùµÄ»°¸ÃÌõ¼ş½á¹ûÄ¬ÈÏÎªtrue <br/>
+	 * Mapå½¢å¼<è¡Œå·,å¯¹åº”è¡Œå­—ç¬¦ä¸²>
+	 * è¿”å›æ–‡ä»¶é‡Œä»¥headWordså¼€å¤´; ä»¥tailWordsç»“å°¾ ;å¹¶ä¸”åŒ…å«containWordsçš„å¥å­; <br/>
+	 * è‹¥æœä¸æƒ³ç”¨ å…¶ä¸­æŸä¸€ä¸ªç›´æ¥ä¼ å…¥nullæˆ–è€…""å³å¯ <br/>
+	 * è¿™æ ·çš„è¯è¯¥æ¡ä»¶ç»“æœé»˜è®¤ä¸ºtrue <br/>
 	 * </ul>
-	 * @param headWords ¿ªÍ·´Ê
-	 * @param tailWords ½áÎ²´Ê
-	 * @param regex ÕıÔò±í´ïÊ½
-	 * @param containWords Òª°üº¬µÄ×Ö·û´®Êı×é
+	 * @param headWords å¼€å¤´è¯
+	 * @param tailWords ç»“å°¾è¯
+	 * @param regex æ­£åˆ™è¡¨è¾¾å¼
+	 * @param containWords è¦åŒ…å«çš„å­—ç¬¦ä¸²æ•°ç»„
 	 * @return
 	 */
 	public Map<Integer, String> selectLineStartEndContainMap(String headWords,
@@ -348,9 +348,9 @@ public class FileReader {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ·µ»ØÄ³Ò»ÕıÔòÊ½ÔÚÕû¸öListÖĞµÄËù´¦Î»ÖÃ¡£<br/>
+	 * è¿”å›æŸä¸€æ­£åˆ™å¼åœ¨æ•´ä¸ªListä¸­çš„æ‰€å¤„ä½ç½®ã€‚<br/>
 	 * </ul>
 	 * @param regex
 	 * @return
@@ -367,9 +367,9 @@ public class FileReader {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Ñ¡ÔñÒÔÄ³¸ö×Ö·û´®½áÎ²µÄËùÓĞĞĞ;
+	 * é€‰æ‹©ä»¥æŸä¸ªå­—ç¬¦ä¸²ç»“å°¾çš„æ‰€æœ‰è¡Œ;
 	 * </ul>
 	 * @param taiWords
 	 * @return
@@ -384,9 +384,9 @@ public class FileReader {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ·µ»ØÒÔÄ³¸ö×Ö·û´®¿ªÊ¼µÄËùÓĞĞĞ ;
+	 * è¿”å›ä»¥æŸä¸ªå­—ç¬¦ä¸²å¼€å§‹çš„æ‰€æœ‰è¡Œ ;
 	 * </ul>
 	 * @param headWords
 	 * @return
@@ -402,9 +402,9 @@ public class FileReader {
 	
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¼ì²éindexÊÇ·ñ¹ı½ç
+	 * æ£€æŸ¥indexæ˜¯å¦è¿‡ç•Œ
 	 * </ul>
 	 */
 	private int checkIndex(int n){
@@ -417,9 +417,9 @@ public class FileReader {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡ÎÄ¼şÃû
+	 * è·å–æ–‡ä»¶å
 	 * </ul>
 	 * @return
 	 */
@@ -434,9 +434,9 @@ public class FileReader {
 		return lineList;
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡ĞĞ±ê
+	 * è·å–è¡Œæ ‡
 	 * </ul>
 	 * @return
 	 */
@@ -445,11 +445,11 @@ public class FileReader {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃĞĞ±ê <br/>
-	 * ²»ÄÜĞ¡ÓÚ0,²»ÄÜ³¬¹ı×î´óĞĞ±ê <br/>
-	 * ·ñÔò±»ÖÃÎª0»ò×î´ó<br/>
+	 * è®¾ç½®è¡Œæ ‡ <br/>
+	 * ä¸èƒ½å°äº0,ä¸èƒ½è¶…è¿‡æœ€å¤§è¡Œæ ‡ <br/>
+	 * å¦åˆ™è¢«ç½®ä¸º0æˆ–æœ€å¤§<br/>
 	 * </ul>
 	 * @param index
 	 */
@@ -457,9 +457,9 @@ public class FileReader {
 		this.index = checkIndex(index);
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡lineListµ±ÖĞ,Æ¥ÅäÕıÔò±í´ïÊ½headRegexºÍtailRegexÖ®¼äµÄËùÓĞĞĞ<br/>
+	 * è·å–lineListå½“ä¸­,åŒ¹é…æ­£åˆ™è¡¨è¾¾å¼headRegexå’ŒtailRegexä¹‹é—´çš„æ‰€æœ‰è¡Œ<br/>
 	 * </ul>
 	 * @param headRegex
 	 * @param tailRegex
@@ -470,9 +470,9 @@ public class FileReader {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÅĞ¶ÏlineListÊÇ·ñ»¹ÓĞ¿É¶ÁÔªËØ<br/>
+	 * åˆ¤æ–­lineListæ˜¯å¦è¿˜æœ‰å¯è¯»å…ƒç´ <br/>
 	 * </ul>
 	 * @return
 	 */
@@ -480,12 +480,12 @@ public class FileReader {
 		return index < lineList.size();
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÒÔÑ¡ÖĞĞĞÉú³ÉÒ»¸öĞÂµÄFileReader¶ÔÏó
+	 * ä»¥é€‰ä¸­è¡Œç”Ÿæˆä¸€ä¸ªæ–°çš„FileReaderå¯¹è±¡
 	 * </ul>
-	 * @param headRegex ÆğÊ¼ĞĞÆ¥Åä
-	 * @param tailRegex ÖÕ½áĞĞÆ¥Åä
+	 * @param headRegex èµ·å§‹è¡ŒåŒ¹é…
+	 * @param tailRegex ç»ˆç»“è¡ŒåŒ¹é…
 	 * @return
 	 */
 	public FileReader selectAllLineBetweenRegex2(String headRegex,
@@ -498,13 +498,13 @@ public class FileReader {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÒÔÑ¡ÖĞĞĞÉú³ÉÒ»¸öĞÂµÄFileReader¶ÔÏó.<br/>
-	 * ²»°üº¬Ê×Î²¡£
+	 * ä»¥é€‰ä¸­è¡Œç”Ÿæˆä¸€ä¸ªæ–°çš„FileReaderå¯¹è±¡.<br/>
+	 * ä¸åŒ…å«é¦–å°¾ã€‚
 	 * </ul>
-	 * @param headRegex ÆğÊ¼ĞĞÆ¥Åä
-	 * @param tailRegex ÖÕ½áĞĞÆ¥Åä
+	 * @param headRegex èµ·å§‹è¡ŒåŒ¹é…
+	 * @param tailRegex ç»ˆç»“è¡ŒåŒ¹é…
 	 * @return
 	 */
 	public FileReader selectAllLineBetweenRegex2_removeHeadTail(String headRegex,
@@ -522,9 +522,9 @@ public class FileReader {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Ñ¡ÔñĞĞ,ÒÔList<List<String>>ĞÎÊ½·µ»Ø,¶Ô±È selectAllLineBetweenRegex(String headRegex,String tailRegex)
+	 * é€‰æ‹©è¡Œ,ä»¥List<List<String>>å½¢å¼è¿”å›,å¯¹æ¯” selectAllLineBetweenRegex(String headRegex,String tailRegex)
 	 * </ul>
 	 * @param headRegex
 	 * @param tailRegex
@@ -539,11 +539,11 @@ public class FileReader {
 		return l;
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ----------ÔİÊ±²»²¹Íê-------<br/>
-	 * Ñ¡ÔñheadRegex¿ªÊ¼ºóÖ±µ½tailRegexµÄÄÇÒ»ĞĞ<br/>
-	 * ²»°üº¬¿ªÍ·½áÎ²<br/>
+	 * ----------æš‚æ—¶ä¸è¡¥å®Œ-------<br/>
+	 * é€‰æ‹©headRegexå¼€å§‹åç›´åˆ°tailRegexçš„é‚£ä¸€è¡Œ<br/>
+	 * ä¸åŒ…å«å¼€å¤´ç»“å°¾<br/>
 	 * </ul>
 	 * @param headRegex
 	 * @param tailRegex
@@ -557,7 +557,7 @@ public class FileReader {
 	}
 
 	/**
-	 * ·µ»ØÒ»¸öFileReader ÅÅ³ıÁËÔ­FileReaderÖĞÆ¥ÅäÕıÊ½regxµÄ¾ä×Ó¡£
+	 * è¿”å›ä¸€ä¸ªFileReader æ’é™¤äº†åŸFileReaderä¸­åŒ¹é…æ­£å¼regxçš„å¥å­ã€‚
 	 * @param regx
 	 * @return FileReader
 	 */
@@ -572,8 +572,8 @@ public class FileReader {
 	}
 
 	/**
-	 * ½«ÊµÀıÖĞµÄlineListÖĞstartºÍendÖ®¼äµÄ²¿·ÖÌæ»»ÎªlineListRepÖĞµÄÄÚÈİ£¬·µ»ØÒ»¸öĞÂ½¨FileReader<br/>
-	 * ×¢£º²»Ó°Ïìµ±Ç°ÊµÀı<br/>
+	 * å°†å®ä¾‹ä¸­çš„lineListä¸­startå’Œendä¹‹é—´çš„éƒ¨åˆ†æ›¿æ¢ä¸ºlineListRepä¸­çš„å†…å®¹ï¼Œè¿”å›ä¸€ä¸ªæ–°å»ºFileReader<br/>
+	 * æ³¨ï¼šä¸å½±å“å½“å‰å®ä¾‹<br/>
 	 * @param start
 	 * @param end
 	 * @param lineListRep
@@ -584,8 +584,8 @@ public class FileReader {
 	}
 
 	/**
-	 * ´òÓ¡µ±Ç°ÊµÀıµÄlineListÄÚÈİ¡£<br/>
-	 * ´òÓ¡ÍêºóÖ¸Õëµ÷»ØÆğÊ¼´¦¡£
+	 * æ‰“å°å½“å‰å®ä¾‹çš„lineListå†…å®¹ã€‚<br/>
+	 * æ‰“å°å®ŒåæŒ‡é’ˆè°ƒå›èµ·å§‹å¤„ã€‚
 	 */
 	public void printAll() {
 		while(this.hasNext()){

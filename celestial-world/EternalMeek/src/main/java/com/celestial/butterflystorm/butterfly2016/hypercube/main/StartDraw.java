@@ -25,7 +25,7 @@ public class StartDraw extends JPanel {
 		cube=new Cube(350, 180, 6,Cube.ROTATE_TYPE3);
 		
 		StartDraw sd=new StartDraw();
-		JFrame frame=new JFrame("³¬Õý·½Ìå~~");
+		JFrame frame=new JFrame("è¶…æ­£æ–¹ä½“~~");
 		frame.add(sd);
 		frame.setSize(800,471);
 		frame.setAlwaysOnTop(false);

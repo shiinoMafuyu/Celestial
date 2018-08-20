@@ -9,18 +9,18 @@ import com.celestial.agniRadiance.EzUtil.UtilFile;
 public class FindClassProblem {
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
 	 * @param args 
 	 */
 	public static void main(String[] args) {
-//		DBUtil.forCMD(new File("E:\\anotherDeskTop\\parese2\\fall\\EÏÖ»õ--ÊÖ»ú¿Í»§¶ËÓë·şÎñÆ÷Í¨ĞÅĞ­Òé(¾É).txt"),new File("E:\\anotherDeskTop\\parese2\\fall\\te"));
-//		DBUtil.forCMD(new File("E:/HackingGate/03_2016-08-20_¿ª·¢Ò»²¿Ê±µÄ²¹¶¡ÎÄ¼ş/²¹¶¡°ü/=0001ÄşÏÄÂÌ¾ŞÈË/0037-¼ÓÃËÉÌÉèÖÃ--Ó¶½ğ²éÑ¯--½»Ò×´ı¸¶Ó¶½ğºÍÈÕ·µÓ¶²éÑ¯µÄĞŞ¸Ä/db_script/´ı¸¶Ó¶½ğÊÓÍ¼ĞŞ¸Ä--Ìí¼ÓÁËÒ»¸ö²éÑ¯×Ö¶Î--type.sql"),new File("E:\\anotherDeskTop\\parese2\\fall\\te"));
-		//E:\HackingGate\03_2016-08-20_¿ª·¢Ò»²¿Ê±µÄ²¹¶¡ÎÄ¼ş\²¹¶¡°ü\=0001ÄşÏÄÂÌ¾ŞÈË\0037-¼ÓÃËÉÌÉèÖÃ--Ó¶½ğ²éÑ¯--½»Ò×´ı¸¶Ó¶½ğºÍÈÕ·µÓ¶²éÑ¯µÄĞŞ¸Ä\db_script\´ı¸¶Ó¶½ğÊÓÍ¼ĞŞ¸Ä--Ìí¼ÓÁËÒ»¸ö²éÑ¯×Ö¶Î--type.sql
-		File f1 = new File("E:/HackingGate/03_2016-08-20_¿ª·¢Ò»²¿Ê±µÄ²¹¶¡ÎÄ¼ş/²¹¶¡°ü/=0001ÄşÏÄÂÌ¾ŞÈË");
-		File f2 = new File("E:/HackingGate/03_2016-08-20_¿ª·¢Ò»²¿Ê±µÄ²¹¶¡ÎÄ¼ş/²¹¶¡°ü/ÕæÂÌ¾ŞÈË(ºËÊÇ·ñ×îĞÂ)");
+//		DBUtil.forCMD(new File("E:\\anotherDeskTop\\parese2\\fall\\Eç°è´§--æ‰‹æœºå®¢æˆ·ç«¯ä¸æœåŠ¡å™¨é€šä¿¡åè®®(æ—§).txt"),new File("E:\\anotherDeskTop\\parese2\\fall\\te"));
+//		DBUtil.forCMD(new File("E:/HackingGate/03_2016-08-20_å¼€å‘ä¸€éƒ¨æ—¶çš„è¡¥ä¸æ–‡ä»¶/è¡¥ä¸åŒ…/=0001å®å¤ç»¿å·¨äºº/0037-åŠ ç›Ÿå•†è®¾ç½®--ä½£é‡‘æŸ¥è¯¢--äº¤æ˜“å¾…ä»˜ä½£é‡‘å’Œæ—¥è¿”ä½£æŸ¥è¯¢çš„ä¿®æ”¹/db_script/å¾…ä»˜ä½£é‡‘è§†å›¾ä¿®æ”¹--æ·»åŠ äº†ä¸€ä¸ªæŸ¥è¯¢å­—æ®µ--type.sql"),new File("E:\\anotherDeskTop\\parese2\\fall\\te"));
+		//E:\HackingGate\03_2016-08-20_å¼€å‘ä¸€éƒ¨æ—¶çš„è¡¥ä¸æ–‡ä»¶\è¡¥ä¸åŒ…\=0001å®å¤ç»¿å·¨äºº\0037-åŠ ç›Ÿå•†è®¾ç½®--ä½£é‡‘æŸ¥è¯¢--äº¤æ˜“å¾…ä»˜ä½£é‡‘å’Œæ—¥è¿”ä½£æŸ¥è¯¢çš„ä¿®æ”¹\db_script\å¾…ä»˜ä½£é‡‘è§†å›¾ä¿®æ”¹--æ·»åŠ äº†ä¸€ä¸ªæŸ¥è¯¢å­—æ®µ--type.sql
+		File f1 = new File("E:/HackingGate/03_2016-08-20_å¼€å‘ä¸€éƒ¨æ—¶çš„è¡¥ä¸æ–‡ä»¶/è¡¥ä¸åŒ…/=0001å®å¤ç»¿å·¨äºº");
+		File f2 = new File("E:/HackingGate/03_2016-08-20_å¼€å‘ä¸€éƒ¨æ—¶çš„è¡¥ä¸æ–‡ä»¶/è¡¥ä¸åŒ…/çœŸç»¿å·¨äºº(æ ¸æ˜¯å¦æœ€æ–°)");
 //		System.out.println(f1.exists() +" "+f2.exists());
 //		getFileTogetherByModifyTime(f1,f2);
 //		compareMad5();
@@ -29,8 +29,8 @@ public class FindClassProblem {
 
 	@SuppressWarnings("unused")
 	private static void compareMad5() {
-		File f1 = new File("E:/HackingGate/03_2016-08-20_¿ª·¢Ò»²¿Ê±µÄ²¹¶¡ÎÄ¼ş/²¹¶¡°ü/ÕæÂÌ¾ŞÈË(ºËÊÇ·ñ×îĞÂ)/integrated_broker/timebargain_broker/jquery.validationEngine-zh_CN.js");
-		File f2 = new File("E:/HackingGate/03_2016-08-20_¿ª·¢Ò»²¿Ê±µÄ²¹¶¡ÎÄ¼ş/²¹¶¡°ü/x/");
+		File f1 = new File("E:/HackingGate/03_2016-08-20_å¼€å‘ä¸€éƒ¨æ—¶çš„è¡¥ä¸æ–‡ä»¶/è¡¥ä¸åŒ…/çœŸç»¿å·¨äºº(æ ¸æ˜¯å¦æœ€æ–°)/integrated_broker/timebargain_broker/jquery.validationEngine-zh_CN.js");
+		File f2 = new File("E:/HackingGate/03_2016-08-20_å¼€å‘ä¸€éƒ¨æ—¶çš„è¡¥ä¸æ–‡ä»¶/è¡¥ä¸åŒ…/x/");
 		File[] fArr = f2.listFiles();
 		for(File i : fArr){
 			if(UtilFile.compareMD5(f1,i)){
@@ -41,18 +41,18 @@ public class FindClassProblem {
 
 	public static void getFileTogetherByModifyTime(File f1,File f2) {
 		if(f1.isFile()){
-			//ÊÇÎÄ¼şµÄ»°¿´f2ÀïÃæÓĞÃ»ÓĞ,Ã»ÓĞÖ±½Ó¿½ÓĞµÄ»°±È½ÏÆäĞŞ¸ÄÊ±¼ä.±È½ÏĞÂÔÙ¿½~
+			//æ˜¯æ–‡ä»¶çš„è¯çœ‹f2é‡Œé¢æœ‰æ²¡æœ‰,æ²¡æœ‰ç›´æ¥æ‹·æœ‰çš„è¯æ¯”è¾ƒå…¶ä¿®æ”¹æ—¶é—´.æ¯”è¾ƒæ–°å†æ‹·~
 			File[] fArr = f2.listFiles();
 			boolean b = true;
 			for(File f: fArr){
 				if(f1.getName().equals(f.getName())){
-					//Èç¹ûµ±Ç°ÎÄ¼ş²»±Èf2ÖĞ´æÔÚµÄÍ¬ÃûÎÄ¼şÍí~¾Í²»ÓÃ¿½ÁË
+					//å¦‚æœå½“å‰æ–‡ä»¶ä¸æ¯”f2ä¸­å­˜åœ¨çš„åŒåæ–‡ä»¶æ™š~å°±ä¸ç”¨æ‹·äº†
 					
 					if(!(f1.lastModified() > f.lastModified())){
 						b = false;
 					}
 					SimpleDateFormat sm = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-					System.out.println("f1: "+sm.format(new Date(f1.lastModified())) +"\nf2: "+sm.format(new Date(f.lastModified())) + "  Òª¿½ :" + b);
+					System.out.println("f1: "+sm.format(new Date(f1.lastModified())) +"\nf2: "+sm.format(new Date(f.lastModified())) + "  è¦æ‹· :" + b);
 				}
 			}
 			if(b)
@@ -61,14 +61,14 @@ public class FindClassProblem {
 				System.out.println("f1: -->  "+f1.getAbsolutePath());
 		}
 		else if(f1.isDirectory()){
-			//ÊÇÎÄ¼ş¼Ğ¼ÌĞø±éÀú
+			//æ˜¯æ–‡ä»¶å¤¹ç»§ç»­éå†
 			File[] fArr = f1.listFiles();
 			for(File f : fArr){
 				getFileTogetherByModifyTime(f,f2);
 			}
 		}
 		else{
-			throw new RuntimeException("²»ÊÇÎÄ¼şÒ²²»ÊÇÎÄ¼ş¼ĞÒì³£!Çë¼ì²é!");
+			throw new RuntimeException("ä¸æ˜¯æ–‡ä»¶ä¹Ÿä¸æ˜¯æ–‡ä»¶å¤¹å¼‚å¸¸!è¯·æ£€æŸ¥!");
 		}
 	}
 

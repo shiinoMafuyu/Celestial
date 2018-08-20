@@ -15,7 +15,7 @@ public class PuddingCreatorImpl implements PuddingCreator{
 	private Print p = new Print(Config.isPrint);
 	@Override
 	public List<File> getPrepareFile(String prepareFilePath) {
-		//现在觉得遍历获取下面所有文件比较好.
+		//鐜板湪瑙夊緱閬嶅巻鑾峰彇涓嬮潰鎵�鏈夋枃浠舵瘮杈冨ソ.
 		List<File> l = new ArrayList<File>();
 		l.addAll(UtilFile.findAllFile(prepareFilePath));
 		return l;
@@ -38,7 +38,7 @@ public class PuddingCreatorImpl implements PuddingCreator{
 			puddingFa.mkdirs();
 		}
 		typeFile.copy(original,pudding);
-		p.println("拷贝成功:" + original.getAbsolutePath() + "   -->\n      " + pudding.getAbsolutePath());
+		p.println("鎷疯礉鎴愬姛:" + original.getAbsolutePath() + "   -->\n      " + pudding.getAbsolutePath());
 	}
 	
 }

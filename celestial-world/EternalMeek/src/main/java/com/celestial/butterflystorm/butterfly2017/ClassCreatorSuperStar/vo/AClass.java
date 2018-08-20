@@ -1,23 +1,23 @@
 /******************************************************************
  * AClass.java
  * Copyright 2017 by WZG. All Rights Reserved.
- * CreateDate£º2017Äê6ÔÂ9ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´6æœˆ9æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.butterflystorm.butterfly2017.ClassCreatorSuperStar.vo;
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê6ÔÂ9ÈÕ
+ *                        ---- wangzg 2017å¹´6æœˆ9æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
  * 
  * </p>
@@ -31,13 +31,13 @@ public class AClass {
 	private AClass[] innerClass = new AClass[]{};
 	private String[][] variables = new String[][]{};
 	
-	private String classAnnotion = "Ò»¸ö¾ßÓĞ¹¦ÄÜµÄ²¿¼ş£¬ÄÜ´æÊı¾İ£¬ÄÜÔËËã¡£";
+	private String classAnnotion = "ä¸€ä¸ªå…·æœ‰åŠŸèƒ½çš„éƒ¨ä»¶ï¼Œèƒ½å­˜æ•°æ®ï¼Œèƒ½è¿ç®—ã€‚";
 	private String author = "wangzg";
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡
+	 * è·å–
 	 * </ul>
 	 * @return the qualifiedName
 	 */
@@ -47,9 +47,9 @@ public class AClass {
 
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡
+	 * è·å–
 	 * </ul>
 	 * @return the superName
 	 */
@@ -58,9 +58,9 @@ public class AClass {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡
+	 * è·å–
 	 * </ul>
 	 * @return the interfaces
 	 */
@@ -69,9 +69,9 @@ public class AClass {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡
+	 * è·å–
 	 * </ul>
 	 * @return the innerClass
 	 */
@@ -80,9 +80,9 @@ public class AClass {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡
+	 * è·å–
 	 * </ul>
 	 * @return the variables
 	 */
@@ -91,9 +91,9 @@ public class AClass {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃ
+	 * è®¾ç½®
 	 * </ul>
 	 * qualifiedName
 	 */
@@ -103,9 +103,9 @@ public class AClass {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃ
+	 * è®¾ç½®
 	 * </ul>
 	 * superName
 	 */
@@ -115,9 +115,9 @@ public class AClass {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃ
+	 * è®¾ç½®
 	 * </ul>
 	 * interfaces
 	 */
@@ -127,9 +127,9 @@ public class AClass {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃ
+	 * è®¾ç½®
 	 * </ul>
 	 * innerClass
 	 */
@@ -139,9 +139,9 @@ public class AClass {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃ
+	 * è®¾ç½®
 	 * </ul>
 	 * variables
 	 */
@@ -152,9 +152,9 @@ public class AClass {
 
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡
+	 * è·å–
 	 * </ul>
 	 * @return the classAnnotion
 	 */
@@ -164,9 +164,9 @@ public class AClass {
 
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃ
+	 * è®¾ç½®
 	 * </ul>
 	 * classAnnotion
 	 */
@@ -176,9 +176,9 @@ public class AClass {
 
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡
+	 * è·å–
 	 * </ul>
 	 * @return the author
 	 */
@@ -188,9 +188,9 @@ public class AClass {
 
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃ
+	 * è®¾ç½®
 	 * </ul>
 	 * author
 	 */

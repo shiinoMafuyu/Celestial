@@ -1,9 +1,9 @@
 /******************************************************************
  * ASocketTask.java
  * Copyright 2017 by WZG. All Rights Reserved.
- * CreateDate£º2017Äê9ÔÂ19ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´9æœˆ19æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.agniRadiance.remote.socket;
@@ -15,53 +15,53 @@ import com.celestial.agniRadiance.thread.AbstractThread;
 import com.celestial.agniRadiance.tuple.ThreeTuple;
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê9ÔÂ19ÈÕ
+ *                        ---- wangzg 2017å¹´9æœˆ19æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
- * socketÈÎÎñ½Ó¿Ú<br/>
- * ½«ÎªsocketÆô¶¯ÇëÇó·¢ËÍ¡¢Êı¾İ¶ÁÈ¡¡¢ĞÄÌø·¢ËÍ(socketÁ¬½Ó±£³Ö)3ÌõÏß³Ì
+ * socketä»»åŠ¡æ¥å£<br/>
+ * å°†ä¸ºsocketå¯åŠ¨è¯·æ±‚å‘é€ã€æ•°æ®è¯»å–ã€å¿ƒè·³å‘é€(socketè¿æ¥ä¿æŒ)3æ¡çº¿ç¨‹
  * </p>
  */
 public interface ISocketTask  {
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * socketÇëÇó·¢ËÍ
+	 * socketè¯·æ±‚å‘é€
 	 * </ul>
 	 * @param out
 	 */
 	void send(DataOutputStream out);
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ĞÄÌø(ÓÃÓÚsocketÁ¬½Ó±£³Ö)
+	 * å¿ƒè·³(ç”¨äºsocketè¿æ¥ä¿æŒ)
 	 * </ul>
 	 * @param out
 	 */
 	void sendHeartBeat(DataOutputStream out);
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * socketÇëÇó½ÓÊÕ
+	 * socketè¯·æ±‚æ¥æ”¶
 	 * </ul>
 	 * @param in
 	 */
 	void receive(DataInputStream in);
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ĞÄÌø´íÎóÒì³£´¦Àí
+	 * å¿ƒè·³é”™è¯¯å¼‚å¸¸å¤„ç†
 	 * </ul>
 	 */
 	void heartBreak();
@@ -69,45 +69,45 @@ public interface ISocketTask  {
 	
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÇëÇó·¢ËÍ¼ä¸ô
+	 * è¯·æ±‚å‘é€é—´éš”
 	 * </ul>
 	 * @return
 	 */
 	long getSendPeriod();
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ĞÄÌø·¢ËÍ¼ä¸ô
+	 * å¿ƒè·³å‘é€é—´éš”
 	 * </ul>
 	 * @return
 	 */
 	long getSendHeartPeriod();
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * socketĞÅÏ¢¶ÁÈ¡¼ä¸ô
+	 * socketä¿¡æ¯è¯»å–é—´éš”
 	 * </ul>
 	 * @return
 	 */
 	long getrReceivePeriod();
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃsocketÈÎÎñÖ´ĞĞÏß³Ì
+	 * è®¾ç½®socketä»»åŠ¡æ‰§è¡Œçº¿ç¨‹
 	 * </ul>
 	 * @param socktThreads
 	 */
 	void setThreads(ThreeTuple<AbstractThread, AbstractThread, AbstractThread> socktThreads);
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡socketÈÎÎñÖ´ĞĞÏß³Ì
+	 * è·å–socketä»»åŠ¡æ‰§è¡Œçº¿ç¨‹
 	 * </ul>
 	 * @return
 	 */

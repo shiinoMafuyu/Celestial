@@ -3,10 +3,10 @@ package com.celestial.meek.realTest_2016_11;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class CalendarÏÂÒ»ÈÕ {
+public class Calendarä¸‹ä¸€æ—¥ {
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜Žï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -14,12 +14,12 @@ public class CalendarÏÂÒ»ÈÕ {
 	 */
 	public static void main(String[] args) {
 //		teNextDay();
-//		tÁ½¸ögetCalendarÊÇ·ñÊÇÒ»¸ö¶ÔÏó();
-//		dayofYear¹ýÄê();
-		day_of_year¹ýÄê();
+//		tä¸¤ä¸ªgetCalendaræ˜¯å¦æ˜¯ä¸€ä¸ªå¯¹è±¡();
+//		dayofYearè¿‡å¹´();
+		day_of_yearè¿‡å¹´();
 	}
 
-	private static void day_of_year¹ýÄê() {
+	private static void day_of_yearè¿‡å¹´() {
 		Calendar c = Calendar.getInstance();
 		SimpleDateFormat sm = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 		System.out.println(sm.format(c.getTime()));
@@ -30,7 +30,7 @@ public class CalendarÏÂÒ»ÈÕ {
 		
 	}
 
-	public static void dayofYear¹ýÄê() {
+	public static void dayofYearè¿‡å¹´() {
 		Calendar c1 = Calendar.getInstance();
 		Calendar c2 = Calendar.getInstance();
 		c1.set(Calendar.YEAR, c1.get(Calendar.YEAR)+1);
@@ -40,7 +40,7 @@ public class CalendarÏÂÒ»ÈÕ {
 		System.out.println();
 	}
 
-	public static void tÁ½¸ögetCalendarÊÇ·ñÊÇÒ»¸ö¶ÔÏó() {
+	public static void tä¸¤ä¸ªgetCalendaræ˜¯å¦æ˜¯ä¸€ä¸ªå¯¹è±¡() {
 		Calendar c1 = Calendar.getInstance();
 		Calendar c2 = Calendar.getInstance();
 		
@@ -58,8 +58,8 @@ public class CalendarÏÂÒ»ÈÕ {
 		c2.set(Calendar.DAY_OF_YEAR, c2.get(Calendar.DAY_OF_YEAR)+7);
 		System.out.println(c2.get(Calendar.MONTH));
 		System.out.println(c2.get(Calendar.DAY_OF_MONTH));
-		/**DAY_OF_YEAR + 1ºÍDAY_OF_MONTH + 1Ò»ÑùµÄÐ§¹û~*/
-		/*ÅÐ¶Ï¼ÓÁËÒ»ÌìÖ®ºó*/
+		/**DAY_OF_YEAR + 1å’ŒDAY_OF_MONTH + 1ä¸€æ ·çš„æ•ˆæžœ~*/
+		/*åˆ¤æ–­åŠ äº†ä¸€å¤©ä¹‹åŽ*/
 		System.out.println("----------->");
 		System.out.println((c2.getTimeInMillis()-c.getTimeInMillis())/(1*60.0*60*1000));
 	}

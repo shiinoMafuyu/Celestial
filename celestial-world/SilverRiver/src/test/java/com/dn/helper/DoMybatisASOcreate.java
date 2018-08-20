@@ -8,7 +8,7 @@ public class DoMybatisASOcreate {
 	
 	
 	public static void main(String[] args) {
-		Util_ASOReader.init_annotionMapInfo("src/test/resources/helper/ÖÐÓ¢¶ÔÕÕ.txt");
+		Util_ASOReader.init_annotionMapInfo("src/test/resources/helper/ä¸­è‹±å¯¹ç…§.txt");
 		Util_ASOReader.XML_TEMPLATE_FILEPATH = "src/test/resources/helper/MybatisXML_template.xml";
 		String[] asoFilesPathes = new String[]{
 				"src/test/resources/helper/tableAssociation/equipment.aso",

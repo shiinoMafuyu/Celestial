@@ -8,7 +8,7 @@ import com.celestial.butterflystorm.butterfly2016.puddingIII.config.Config.PUDDI
 public class DoCreate {
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -16,13 +16,13 @@ public class DoCreate {
 	 */
 	public static void main(String[] args) {
 		
-		//²¹¶¡Éú³É¹¤¾ß
-		/**ÉèÖÃ¿½±´ÓÃµÄ·½·¨*/
+		//è¡¥ä¸ç”Ÿæˆå·¥å…·
+		/**è®¾ç½®æ‹·è´ç”¨çš„æ–¹æ³•*/
 		Config.CopyMethod = COPY_METHOD.COPY_BY_CMD;
-		/**ÉèÖÃ²¹¶¡Éú³Éºó´æ·ÅµÄÂ·¾¶*/
+		/**è®¾ç½®è¡¥ä¸ç”Ÿæˆåå­˜æ”¾çš„è·¯å¾„*/
 		Config.puddingPath = "E:/t/t26_myToolDevelopTestDataArea/puddingIII/02_strange_web/res";
 		
-		/**Éú³ÉÎÄ¼şÎ»ÖÃÔÚConfigÀïÅäÖÃ*/
+		/**ç”Ÿæˆæ–‡ä»¶ä½ç½®åœ¨Configé‡Œé…ç½®*/
 		InterfaceHolder holder = new InterfaceHolder(
 							"E:/t/t26_myToolDevelopTestDataArea/puddingIII/02_strange_web/puddingSrc",
 							"E:/t/t26_myToolDevelopTestDataArea/puddingIII/02_strange_web/specialmember",

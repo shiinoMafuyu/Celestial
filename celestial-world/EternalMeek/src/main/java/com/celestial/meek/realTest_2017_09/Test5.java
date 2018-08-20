@@ -1,9 +1,9 @@
 /******************************************************************
  * Test5.java
  * Copyright 2017 by WZG. All Rights Reserved.
- * CreateDate£º2017Äê10ÔÂ11ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´10æœˆ11æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.meek.realTest_2017_09;
@@ -12,15 +12,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê10ÔÂ11ÈÕ
+ *                        ---- wangzg 2017å¹´10æœˆ11æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
  * 
  * </p>
@@ -34,14 +34,14 @@ public class Test5 {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
 	 * @param year 
 	 */
 	private static void pigNUm(int year) {
-		System.out.println(year + "Äêºó£¬ÖíµÄÊıÁ¿Îª£º");
+		System.out.println(year + "å¹´åï¼ŒçŒªçš„æ•°é‡ä¸ºï¼š");
 		List<Integer> pigs = new ArrayList<Integer>();
 		pigs.add(2);
 		pigs.add(2);
@@ -53,9 +53,9 @@ public class Test5 {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñµÃÏÂÒ»ÄêÖíµÄÊıÁ¿
+	 * è·å¾—ä¸‹ä¸€å¹´çŒªçš„æ•°é‡
 	 * </ul>
 	 * @param pigs
 	 * @return 

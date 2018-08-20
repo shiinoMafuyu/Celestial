@@ -17,9 +17,9 @@ public abstract class ManagerEmployeeDaoTemp {
 	protected ResultSet rs = null;
 	protected PreparedStatement ps = null;
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * methodAndParams½á¹¹[¶ÔÏó,"methodName",[param0,param1,param2...]]
+	 * methodAndParamsç»“æ„[å¯¹è±¡,"methodName",[param0,param1,param2...]]
 	 * </ul>
 	 * @param methodAndParams
 	 */
@@ -30,12 +30,12 @@ public abstract class ManagerEmployeeDaoTemp {
 			obj = UtilReflect.excuteReflectObject2(methodAndParams);
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new RuntimeException("Êı¾İ¿âÏà¹Ø²Ù×÷Ö´ĞĞÊ§°Ü.");
+			throw new RuntimeException("æ•°æ®åº“ç›¸å…³æ“ä½œæ‰§è¡Œå¤±è´¥.");
 		}
 		finally{	
 			UtilDB.close(rs);
 			UtilDB.close(st);
-			UtilDB.close(ps);//¿´À´psÄÜÔìĞÍÎªst,´ó¸Å
+			UtilDB.close(ps);//çœ‹æ¥psèƒ½é€ å‹ä¸ºst,å¤§æ¦‚
 			UtilDB.close(conn);
 		}
 		return obj;

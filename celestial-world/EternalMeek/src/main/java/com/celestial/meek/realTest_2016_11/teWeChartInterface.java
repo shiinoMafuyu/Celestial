@@ -3,7 +3,7 @@ package com.celestial.meek.realTest_2016_11;
 public class teWeChartInterface {
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜Žï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>

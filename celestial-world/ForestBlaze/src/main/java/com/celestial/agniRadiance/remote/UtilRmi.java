@@ -1,9 +1,9 @@
 /******************************************************************
  * UtilRmi.java
  * Copyright ${year} by WZG. All Rights Reserved.
- * CreateDate£º2017Äê9ÔÂ18ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´9æœˆ18æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.agniRadiance.remote;
@@ -16,15 +16,15 @@ import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê9ÔÂ18ÈÕ
+ *                        ---- wangzg 2017å¹´9æœˆ18æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
  * 
  * </p>
@@ -33,16 +33,16 @@ public class UtilRmi {
 	
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * rmi·¢²¼·½·¨
+	 * rmiå‘å¸ƒæ–¹æ³•
 	 * </ul>
 	 * @param registerUrl
 	 * @param rmiServer 
 	 */
 	public static void registerRmi(final String registerUrl,final int port,final Remote rmiServer) {
 		try {
-			System.out.println("¿ªÊ¼rmi×¢²á£¬·şÎñurl£º "+registerUrl);
+			System.out.println("å¼€å§‹rmiæ³¨å†Œï¼ŒæœåŠ¡urlï¼š "+registerUrl);
 			LocateRegistry.createRegistry(port);
 			Naming.bind(registerUrl, rmiServer);
 	    } catch (Exception e) { 
@@ -51,9 +51,9 @@ public class UtilRmi {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * rmi»ñÈ¡
+	 * rmiè·å–
 	 * </ul>
 	 * @param rmiUrl
 	 * @return
@@ -71,7 +71,7 @@ public class UtilRmi {
 }
 
 
-/** ÓÃspringµÄrmi¹¤¾ß½øĞĞ·¢²¼ºÍµ÷ÓÃ */
+/** ç”¨springçš„rmiå·¥å…·è¿›è¡Œå‘å¸ƒå’Œè°ƒç”¨ */
 //<?xml version="1.0" encoding="UTF-8"?>
 //<beans xmlns="http://www.springframework.org/schema/beans"
 //	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
@@ -83,28 +83,28 @@ public class UtilRmi {
 //           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
 //           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
 //
-//    <!-- ÅäÖÃÆô¶¯RMI -->
+//    <!-- é…ç½®å¯åŠ¨RMI -->
 //	
-//	<!-- rmi·¢²¼ -->
+//	<!-- rmiå‘å¸ƒ -->
 //	<bean id="forecastCoreRMI" class="gnnt.mobile.forecast.core.service.rmi.impl.ForecastCoreRMI" />
 //    
 //	<bean id="coreRMI" class="org.springframework.remoting.rmi.RmiServiceExporter">
-//		<!-- ·şÎñÊµÏÖÀà -->
+//		<!-- æœåŠ¡å®ç°ç±» -->
 //		<property name="service">
 //			<ref bean="forecastCoreRMI" />
 //		</property>
-//		<!-- ¶¨Òå·şÎñÃû -->
+//		<!-- å®šä¹‰æœåŠ¡å -->
 //		<property name="serviceName" value="forecastCoreRMI" />
-//		<!-- ·şÎñ½Ó¿Ú -->
+//		<!-- æœåŠ¡æ¥å£ -->
 //		<property name="serviceInterface">
 //			<value>gnnt.mobile.forecast.core.interfaces.rmi.IForecastCoreRMI
 //			</value>
 //		</property>
-//		<!-- ¿ª·Å¶Ë¿Ú -->
+//		<!-- å¼€æ”¾ç«¯å£ -->
 //		<property name="registryPort">
 //			<value>${rmi.forecast.core.port}</value>
 //		</property>
-//		<!-- ¶¨ÒåÊı¾İ´«Êä¶Ë¿Ú -->
+//		<!-- å®šä¹‰æ•°æ®ä¼ è¾“ç«¯å£ -->
 //		<property name="servicePort">
 //			<value>${rmi.forecast.core.dataPort}</value>
 //		</property>
@@ -112,7 +112,7 @@ public class UtilRmi {
 //    
 //	
 //	
-//    <!-- rmiµ÷ÓÃ -->
+//    <!-- rmiè°ƒç”¨ -->
 //	<bean id="forecastCoreRMI" class="org.springframework.remoting.rmi.RmiProxyFactoryBean"
 //		lazy-init="true">
 //		<property name="refreshStubOnConnectFailure" value="true" />

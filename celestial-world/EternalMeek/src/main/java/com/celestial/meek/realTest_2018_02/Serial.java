@@ -8,12 +8,12 @@ public class Serial implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private String name= "½þ";
+	private String name= "æµ¸";
 	private int age = 30;
 	public static void main(String[] args) {
 		
 		Serial se = new Serial();
-		se.setName("³Á½þ");
+		se.setName("æ²‰æµ¸");
 		se.setAge(18);
 		
 		

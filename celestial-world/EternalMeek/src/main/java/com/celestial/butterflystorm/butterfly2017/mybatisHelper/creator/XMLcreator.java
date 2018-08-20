@@ -30,7 +30,7 @@ public class XMLcreator {
 		this.fullClassName = xmLdepender.getFullClassName();
 		this.tableName = xmLdepender.getTableName();
 		m.put("--resultMapName--", tableName+"ResultMap");
-		//Ã÷Ììµİ¹é Éú³É£¡£¡
+		//æ˜å¤©é€’å½’ ç”Ÿæˆï¼ï¼
 		this.thisClass = createXmlFile(xmLdepender);
 	}
 
@@ -64,7 +64,7 @@ public class XMLcreator {
 		m.put("--select_sql_sentence--", sql);
 	}
 
-	//Ê÷è¾Ğ¡Íõ×Ó
+	//æ ‘æˆå°ç‹å­
 	Map<Integer,Integer> gradationTree = new HashMap<Integer,Integer>();
 	
 	private void putInGradationTree(Integer i, Integer size) {
@@ -87,19 +87,19 @@ public class XMLcreator {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÒÔXMLdependerÊı¾İ½á¹¹Îª»ù´¡£¬µİ¹é½øĞĞselect sqlÓï¾ä´´½¨¡£<br/>
-	 * ±íµÄ±ğÃût11ÓÃ "t"+²ã¼¶ +µÚ¼¸¸ö±íÊ¾<br/>
-	 * ºÍresultMap¶ÔÓ¦<br/>
-	 * ÓÃ³ÌĞò±íÏÖÄãµÄÏë·¨£¡<br/>
+	 * ä»¥XMLdependeræ•°æ®ç»“æ„ä¸ºåŸºç¡€ï¼Œé€’å½’è¿›è¡Œselect sqlè¯­å¥åˆ›å»ºã€‚<br/>
+	 * è¡¨çš„åˆ«åt11ç”¨ "t"+å±‚çº§ +ç¬¬å‡ ä¸ªè¡¨ç¤º<br/>
+	 * å’ŒresultMapå¯¹åº”<br/>
+	 * ç”¨ç¨‹åºè¡¨ç°ä½ çš„æƒ³æ³•ï¼<br/>
 	 * </ul>
 	 * @param sb_where 
 	 * @param sb_from 
 	 */
 	private void selectSQL(XMLdepender xmLdepender,int talbelLevel,int index,StringBuffer sb_select, StringBuffer sb_from, StringBuffer sb_where ) {
-		//Òª¸ø±íÈ¡±ğÃû²ÅĞĞ¡£
-		//ÁíÍâÒª×¢Òâ£¬ÕâÀïµÄ±éÀúË³ĞòºÍmapµÄË³ĞòÓ¦¸ÃÊÇÒ»ÑùµÄ£¬²»È»»á´í¡£
+		//è¦ç»™è¡¨å–åˆ«åæ‰è¡Œã€‚
+		//å¦å¤–è¦æ³¨æ„ï¼Œè¿™é‡Œçš„éå†é¡ºåºå’Œmapçš„é¡ºåºåº”è¯¥æ˜¯ä¸€æ ·çš„ï¼Œä¸ç„¶ä¼šé”™ã€‚
 		List<String[]> colList = xmLdepender.getColumnList();
 		for(String[] si:colList){
 			if(!"".equals(si[0]))
@@ -109,9 +109,9 @@ public class XMLcreator {
 		//equipment t00,
 		sb_from.append(xmLdepender.getTableName()).append(" ").append("t").append(talbelLevel).append(index).append(",");
 		int nextLevelIndex = getputInGradationTree(talbelLevel+1);
-		//Ò»¸ö±íÓĞ¹ØÁª±í²ÅÓĞÒÔÏÂÄÚÈİ
+		//ä¸€ä¸ªè¡¨æœ‰å…³è”è¡¨æ‰æœ‰ä»¥ä¸‹å†…å®¹
 		for(String[] sj:xmLdepender.getJoinOnList()){
-			//sj = [level=level,strengthenKind=strengthenKind|strengthen|strengthenList|com.dn.entity.Strengthen] Êı×é(ÒÔ|¸ô¿ªµÄÎªÒ»¸öÔªËØ)
+			//sj = [level=level,strengthenKind=strengthenKind|strengthen|strengthenList|com.dn.entity.Strengthen] æ•°ç»„(ä»¥|éš”å¼€çš„ä¸ºä¸€ä¸ªå…ƒç´ )
 			//and t00.level=t01.level and t00.strengthenKind=t01.strengthenKind
 			String[] conditionArr = sj[0].split(",");
 			for(String sci : conditionArr){
@@ -136,9 +136,9 @@ public class XMLcreator {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÒÔXMLdependerÊı¾İ½á¹¹Îª»ù´¡£¬µİ¹é½øĞĞresultMap´´½¨¡£<br/>
+	 * ä»¥XMLdependeræ•°æ®ç»“æ„ä¸ºåŸºç¡€ï¼Œé€’å½’è¿›è¡ŒresultMapåˆ›å»ºã€‚<br/>
 	 * </ul>
 	 * @param xmLdepender
 	 * @param sb
@@ -156,7 +156,7 @@ public class XMLcreator {
 		int nextLevelIndex = getputInGradationTree(talbelLevel+1);
 		for(String[] si : xmLdepender.getJoinOnList()){
 			//"level=level,strengthenKind=strengthenKind|strengthen|strengthenList|com.dn.entity.Strengthen|many"
-			String refType = "many".equals(si[4])? "collection" :"association";//Ò»¶Ô¶à»¹ÊÇÒ»¶ÔÒ»
+			String refType = "many".equals(si[4])? "collection" :"association";//ä¸€å¯¹å¤šè¿˜æ˜¯ä¸€å¯¹ä¸€
 			sb.append(tabs).append("		<").append(refType).append(" property=\""+si[2]+"\" ofType=\""+si[3]+"\">\n");
 			resultMap(xmLdepender.getxMLdependerMap().get(si[1]),talbelLevel+1,nextLevelIndex,sb);
 			sb.append(tabs).append("		</").append(refType).append(">\n");
@@ -228,9 +228,9 @@ public class XMLcreator {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Ä£ºı²éÑ¯
+	 * æ¨¡ç³ŠæŸ¥è¯¢
 	 * </ul>
 	 */
 	private void selectByVague() {
@@ -251,10 +251,10 @@ public class XMLcreator {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨updateÀïµÄset<br/>
-	 * ÉÏÃæµÄ²»ºÃ£¬²»ÄÜ¶¯Ì¬Éú³ÉËùĞè  »»³ÉÏÂÃæµÄ°æ±¾¡£
+	 * åˆ›å»ºupdateé‡Œçš„set<br/>
+	 * ä¸Šé¢çš„ä¸å¥½ï¼Œä¸èƒ½åŠ¨æ€ç”Ÿæˆæ‰€éœ€  æ¢æˆä¸‹é¢çš„ç‰ˆæœ¬ã€‚
 	 *  <trim prefix="set" suffixOverrides=",">
 		  <if test="srcId!=null">SRC_ID=#{srcId},</if>
 		  <if test="srcType!=null">SRC_TYPE=#{srcType},</if>

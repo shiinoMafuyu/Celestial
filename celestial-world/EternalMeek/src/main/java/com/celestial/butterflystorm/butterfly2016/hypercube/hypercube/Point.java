@@ -1,6 +1,6 @@
 package com.celestial.butterflystorm.butterfly2016.hypercube.hypercube;
 /**
- * ËùÓĞ´øÓĞ·µ»ØÖµÎªPoint(±¾ÀàÀàĞÍ)µÄº¯Êı ¾ù·µ»ØÁË×ÔÉí
+ * æ‰€æœ‰å¸¦æœ‰è¿”å›å€¼ä¸ºPoint(æœ¬ç±»ç±»å‹)çš„å‡½æ•° å‡è¿”å›äº†è‡ªèº«
  * @author Administrator
  *
  */
@@ -20,7 +20,7 @@ public class Point {
 	}
 	
 	/**
-	 * µãÒÆ¶¯
+	 * ç‚¹ç§»åŠ¨
 	 * @param a
 	 * @param b
 	 */
@@ -31,7 +31,7 @@ public class Point {
 	
 	
 	/**
-	 * Íù×óÒÆ¶¯dµÄ¾àÀë
+	 * å¾€å·¦ç§»åŠ¨dçš„è·ç¦»
 	 * @param d
 	 * @return
 	 */
@@ -41,7 +41,7 @@ public class Point {
 		return this;
 	}
 	/**
-	 * Á½¸öµãÏà¼õ »ñÈ¡ÏòÁ¿
+	 * ä¸¤ä¸ªç‚¹ç›¸å‡ è·å–å‘é‡
 	 * @param d
 	 * @return
 	 */
@@ -51,7 +51,7 @@ public class Point {
 		return this;
 	}
 	/**
-	 * µãµÄ³Ë·¨
+	 * ç‚¹çš„ä¹˜æ³•
 	 * @param d
 	 * @return
 	 */
@@ -61,13 +61,13 @@ public class Point {
 		return this;
 	}
 	/**
-	 * µãµÄ³ı·¨
+	 * ç‚¹çš„é™¤æ³•
 	 * @param d
 	 * @return
 	 */
 	public  Point div(double d){
 		if(d==0){
-			throw new RuntimeException("³ıÊı²»ÄÜÎª0,Äã´ÀÂğ?");
+			throw new RuntimeException("é™¤æ•°ä¸èƒ½ä¸º0,ä½ è ¢å—?");
 		}else{
 			this.x/=d;
 			this.y/=d;
@@ -75,8 +75,8 @@ public class Point {
 		}
 	}
 	/**
-	 * »ñÈ¡x,yÁ½µãÆ½·½ºÍµÄÆ½·½¸ù
-	 * ¼´ Ä£Á¿»òÕßµãµ½Ô­µãµÄ¾àÀë.
+	 * è·å–x,yä¸¤ç‚¹å¹³æ–¹å’Œçš„å¹³æ–¹æ ¹
+	 * å³ æ¨¡é‡æˆ–è€…ç‚¹åˆ°åŸç‚¹çš„è·ç¦».
 	 */
 	public double getModule(){
 		return Math.sqrt(Math.pow(x, 2)+ Math.pow(y, 2));
@@ -99,7 +99,7 @@ public class Point {
 		return "Point [x=" + x + ", y=" + y + "]";
 	}
 	/**
-	 * µ±Ç°¶ÔÏó¸ù¾İÆğÊ¼Î»ÖÃa,·½ÏòÏòÁ¿pÖØÉèÎ»ÖÃºó·µ»Ø
+	 * å½“å‰å¯¹è±¡æ ¹æ®èµ·å§‹ä½ç½®a,æ–¹å‘å‘é‡pé‡è®¾ä½ç½®åè¿”å›
 	 * @param a
 	 * @param p
 	 * @return

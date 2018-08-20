@@ -8,7 +8,7 @@ public class InterfaceHolder {
 
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜Žï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>

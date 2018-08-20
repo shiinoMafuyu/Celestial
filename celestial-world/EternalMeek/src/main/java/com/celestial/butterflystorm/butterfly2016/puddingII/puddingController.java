@@ -7,34 +7,34 @@ import java.util.List;
 import com.celestial.agniRadiance.EzUtil.UtilFile;
 
 /**
- * Éú³É²¹¶¡
+ * ç”Ÿæˆè¡¥ä¸
  * @author Administrator
  *
  */
 public class puddingController {
 
 	/**
-	 * ×Ô¶¯Éú³É²¹¶¡Ğ¡¹¤¾ß.
-	 * ¹¤×÷Á÷³ÌËµÃ÷:
-	 * 1)»ñÈ¡s1ËùÔÚµÄÄ¿Â¼µÄËùÓĞÎÄ¼ş,±éÀúÖ®.ÉèÎªs1.fileI.
-	 * 2)È¥s2Àïµİ¹éÕÒÎÄ¼ş,Ö»ÓĞÃû×ÖÒ»ÑùÇÒmd5ÕªÒªËã·¨¾ùÒ»ÖÂµÄ²ÅËãÍ¬Ò»¸öÎÄ¼ş(ÕâÑù±£Ö¤¾ø¶Ô²»³ö´í):
-	 * 		Èç¹ûÊÇs1.fileIÊÇ.javaÎÄ¼şÈ¥,srcÏÂÃæÕÒ.ÕÒµ½Ö®ºó¸ù¾İsrcÏÂµÄÂ·¾¶È¥WEB-INFÏÂÕÒ.javaÎÄ¼ş¶ÔÓ¦µÄ.classÎÄ¼ş.
-	 * 		Èç¹ûs1.fileIÊÇ·Ç.javaÎÄ¼ş (Èç.jsp .xml µÈ)ÔòÖ±½ÓÈ¥WEB-INFÏÂÕÒÍ¬ÃûÍ¬MD5ÖµÎÄ¼ş.
-	 * 3)ÕÒµ½¶ÔÓ¦µÄÎÄ¼şºó¾ÍÔÚs1Àï´´½¨¶ÔÓ¦Ä¿Â¼,¿½±´¹ıÈ¥.Èç¹ûÊÇjavaÎÄ¼ş¿´ÏÂÓĞÄÚ²¿ÀàÎÄ¼şÃ»ÓĞ,ÓĞµÄ»°Ò²È«¿½¹ıÈ¥.
-	 * 2016Äê8ÔÂ23ÈÕ16:40:38
+	 * è‡ªåŠ¨ç”Ÿæˆè¡¥ä¸å°å·¥å…·.
+	 * å·¥ä½œæµç¨‹è¯´æ˜:
+	 * 1)è·å–s1æ‰€åœ¨çš„ç›®å½•çš„æ‰€æœ‰æ–‡ä»¶,éå†ä¹‹.è®¾ä¸ºs1.fileI.
+	 * 2)å»s2é‡Œé€’å½’æ‰¾æ–‡ä»¶,åªæœ‰åå­—ä¸€æ ·ä¸”md5æ‘˜è¦ç®—æ³•å‡ä¸€è‡´çš„æ‰ç®—åŒä¸€ä¸ªæ–‡ä»¶(è¿™æ ·ä¿è¯ç»å¯¹ä¸å‡ºé”™):
+	 * 		å¦‚æœæ˜¯s1.fileIæ˜¯.javaæ–‡ä»¶å»,srcä¸‹é¢æ‰¾.æ‰¾åˆ°ä¹‹åæ ¹æ®srcä¸‹çš„è·¯å¾„å»WEB-INFä¸‹æ‰¾.javaæ–‡ä»¶å¯¹åº”çš„.classæ–‡ä»¶.
+	 * 		å¦‚æœs1.fileIæ˜¯é.javaæ–‡ä»¶ (å¦‚.jsp .xml ç­‰)åˆ™ç›´æ¥å»WEB-INFä¸‹æ‰¾åŒååŒMD5å€¼æ–‡ä»¶.
+	 * 3)æ‰¾åˆ°å¯¹åº”çš„æ–‡ä»¶åå°±åœ¨s1é‡Œåˆ›å»ºå¯¹åº”ç›®å½•,æ‹·è´è¿‡å».å¦‚æœæ˜¯javaæ–‡ä»¶çœ‹ä¸‹æœ‰å†…éƒ¨ç±»æ–‡ä»¶æ²¡æœ‰,æœ‰çš„è¯ä¹Ÿå…¨æ‹·è¿‡å».
+	 * 2016å¹´8æœˆ23æ—¥16:40:38
 	 * 
 	 */
 	public static void main(String[] args) {
-		/**1.Òª×ö²¹¶¡µÄÎÄ¼şÍÏÈëÒ»¸öÁÙÊ±Ä¿Â¼ÖĞ,ÔÚs1´¦ÌîÉÏÎ»ÖÃ*/
-		String s1 = "E:/HackingGate/03_2016-08-20_¿ª·¢Ò»²¿Ê±µÄ²¹¶¡ÎÄ¼ş/²¹¶¡°ü/testPodCreate/pudding";
-		/**2.ÌîÉÏ¶ÔÒûµÄwebÏîÄ¿Â·¾¶,ÔËĞĞ¼´¿É.*/
-		String s2 = "E:/HackingGate/03_2016-08-20_¿ª·¢Ò»²¿Ê±µÄ²¹¶¡ÎÄ¼ş/²¹¶¡°ü/testPodCreate/project/issue_front_É½¶«¶¦·å";
+		/**1.è¦åšè¡¥ä¸çš„æ–‡ä»¶æ‹–å…¥ä¸€ä¸ªä¸´æ—¶ç›®å½•ä¸­,åœ¨s1å¤„å¡«ä¸Šä½ç½®*/
+		String s1 = "E:/HackingGate/03_2016-08-20_å¼€å‘ä¸€éƒ¨æ—¶çš„è¡¥ä¸æ–‡ä»¶/è¡¥ä¸åŒ…/testPodCreate/pudding";
+		/**2.å¡«ä¸Šå¯¹é¥®çš„webé¡¹ç›®è·¯å¾„,è¿è¡Œå³å¯.*/
+		String s2 = "E:/HackingGate/03_2016-08-20_å¼€å‘ä¸€éƒ¨æ—¶çš„è¡¥ä¸æ–‡ä»¶/è¡¥ä¸åŒ…/testPodCreate/project/issue_front_å±±ä¸œé¼å³°";
 		makeingPudding(s1,s2);
 	}
 
 	private static boolean makeingPudding(String s1, String s2) {
 		if(!(UtilFile.checkFileExist(s1) && UtilFile.checkFileExist(s2)))
-			throw new RuntimeException("¼ì²éÎÄ¼şÊÇ·ñ¶¼´æÔÚ" + s1 +"\n" + s2);
+			throw new RuntimeException("æ£€æŸ¥æ–‡ä»¶æ˜¯å¦éƒ½å­˜åœ¨" + s1 +"\n" + s2);
 		boolean b = true;
 		List<String> failedList =new ArrayList<String>();
 		try{
@@ -48,10 +48,10 @@ public class puddingController {
 					failedList.add(p.getFileName());
 				}
 			}
-			//½á¹ûÕ¹Ê¾
-			System.out.println("¹²¼Æ " + fArr.length);
-			System.out.println("³É¹¦: " +(fArr.length - failedList.size()));
-			System.out.println("Ê§°Ü: " + failedList.size());
+			//ç»“æœå±•ç¤º
+			System.out.println("å…±è®¡ " + fArr.length);
+			System.out.println("æˆåŠŸ: " +(fArr.length - failedList.size()));
+			System.out.println("å¤±è´¥: " + failedList.size());
 			for(String i : failedList){
 				System.out.println(i);
 			}

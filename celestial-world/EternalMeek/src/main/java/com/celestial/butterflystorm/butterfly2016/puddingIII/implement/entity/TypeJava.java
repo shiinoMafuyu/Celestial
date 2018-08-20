@@ -40,22 +40,22 @@ public class TypeJava extends TypeFileTemp implements TypeFile {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¼ì²éÕÒµ½µÄÎÄ¼şÊÇ·ñ³¬¹ıÒ»¸ö.
+	 * æ£€æŸ¥æ‰¾åˆ°çš„æ–‡ä»¶æ˜¯å¦è¶…è¿‡ä¸€ä¸ª.
 	 * </ul>
 	 * @param m
 	 * @return
 	 */
 	private void check(Map<String, List<String>> m) {
 		if(m.size()<1)
-			throw new RuntimeException("ÎÄ¼şÎ´ÕÒµ½:"+srcFile.getName());
+			throw new RuntimeException("æ–‡ä»¶æœªæ‰¾åˆ°:"+srcFile.getName());
 		if(m.size() > 1)
-			p.println("¾¯¸æ,ÎÄ¼ş³¬¹ı1¸ö,ÒÔµÚÒ»¸öÎª×¼."+ srcFile.getName());
-		//ËäÈ»Ö»ÓĞÒ»¸ö..
+			p.println("è­¦å‘Š,æ–‡ä»¶è¶…è¿‡1ä¸ª,ä»¥ç¬¬ä¸€ä¸ªä¸ºå‡†."+ srcFile.getName());
+		//è™½ç„¶åªæœ‰ä¸€ä¸ª..
 		for(Entry<String, List<String>> ei : m.entrySet()){
 			if(ei.getValue().size() > 1){
-				p.println("¾¯¸æ,ÎÄ¼ş³¬¹ı1¸ö,ÒÔµÚÒ»¸öÎª×¼."+ srcFile.getName());
+				p.println("è­¦å‘Š,æ–‡ä»¶è¶…è¿‡1ä¸ª,ä»¥ç¬¬ä¸€ä¸ªä¸ºå‡†."+ srcFile.getName());
 			}
 		}
 	}
@@ -67,7 +67,7 @@ public class TypeJava extends TypeFileTemp implements TypeFile {
 		tail = tail.substring(0, tail.lastIndexOf(".java"))+".class";
 		String filePath = this.originalPath + tail;
 		if(!new File(filePath).exists())
-			throw new RuntimeException("¶ÔÓ¦.classÎÄ¼ş²»´æÔÚ:" + this.srcFile.getName());
+			throw new RuntimeException("å¯¹åº”.classæ–‡ä»¶ä¸å­˜åœ¨:" + this.srcFile.getName());
 		String[] originalFilePath = new String[]{filePath.substring(0, subHead.length()),filePath.substring(subHead.length())};
 		return originalFilePath;
 	}

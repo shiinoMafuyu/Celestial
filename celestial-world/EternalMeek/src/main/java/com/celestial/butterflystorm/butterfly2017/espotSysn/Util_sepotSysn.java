@@ -5,14 +5,14 @@ import java.util.List;
 import com.celestial.agniRadiance.EzUtil.UtilString;
 
 /**
- * ½«Ò»¶ÎList±äÎªappendµÄ×Ö·û´®¡£
+ * å°†ä¸€æ®µListå˜ä¸ºappendçš„å­—ç¬¦ä¸²ã€‚
  * @author Administrator
  *
  */
 public class Util_sepotSysn {
 	
 	/**
-	 * ´´½¨javaÀïµÄappend×Ö·û´®¡£
+	 * åˆ›å»ºjavaé‡Œçš„appendå­—ç¬¦ä¸²ã€‚
 	 * @param list
 	 * @param tabN
 	 * @return
@@ -22,7 +22,7 @@ public class Util_sepotSysn {
 	}
 	
 	/**
-	 * ´´½¨javaÀïµÄappend×Ö·û´®¡£
+	 * åˆ›å»ºjavaé‡Œçš„appendå­—ç¬¦ä¸²ã€‚
 	 * @param list
 	 * @param tabN
 	 * @return
@@ -32,7 +32,7 @@ public class Util_sepotSysn {
 	}
 
 	/**
-	 * ´´½¨javaÀïµÄappend×Ö·û´®¡£
+	 * åˆ›å»ºjavaé‡Œçš„appendå­—ç¬¦ä¸²ã€‚
 	 * @param list
 	 * @param tabN
 	 * @return

@@ -1,10 +1,10 @@
 package com.celestial.meek.realTest_2016_11;
 
 
-public class te¾²Ì¬·½·¨ĞèÒªÀàÊµÀı»¯Ã´ {
+public class teé™æ€æ–¹æ³•éœ€è¦ç±»å®ä¾‹åŒ–ä¹ˆ {
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -15,14 +15,14 @@ public class te¾²Ì¬·½·¨ĞèÒªÀàÊµÀı»¯Ã´ {
 //		System.out.println(s);
 		/**
 		 * qaq
-		 * µ÷ÓÃ¾²Ì¬·½·¨²»ĞèÒªÀàÏÈÊµÀı»¯ß¹~~
+		 * è°ƒç”¨é™æ€æ–¹æ³•ä¸éœ€è¦ç±»å…ˆå®ä¾‹åŒ–å–~~
 		 */
 		System.out.println("\u542F\u52A8\u76D1\u542C\u5F00\u59CB!");
 		System.out.println("\u52A0\u8F7D\u7CFB\u7EDF\u53C2\u6570");
 		System.out.println("MobilePayServer \u524D\u7F6E\u673A\u521D\u59CB\u5316 \u5B8C\u6210");
 		
 		/**
-		 * Í¬Ò»¸ö°üÖĞµÄÀà²»ĞèÒªµ¼Èë~
+		 * åŒä¸€ä¸ªåŒ…ä¸­çš„ç±»ä¸éœ€è¦å¯¼å…¥~
 		 */
 		
 		

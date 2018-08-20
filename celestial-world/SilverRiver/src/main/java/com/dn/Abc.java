@@ -1,23 +1,23 @@
 /******************************************************************
  * Abc.java
  * Copyright 2017 by WZG. All Rights Reserved.
- * CreateDate£º2017Äê6ÔÂ5ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´6æœˆ5æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.dn;
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê6ÔÂ5ÈÕ
+ *                        ---- wangzg 2017å¹´6æœˆ5æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
  * 
  * </p>
@@ -25,7 +25,7 @@ package com.dn;
 public class Abc {
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -33,20 +33,20 @@ public class Abc {
 	 */
 	public static void main(String[] args) {
 		System.out.println(new StringBuffer("")
-			.append("select t.billID stockId, ")//²Öµ¥ºÅ
-			.append("       t.belonger customId, ")//ËùÊô½»Ò×ÉÌid
-			.append("       t.breedId breedId, ")//ËùÊôÆ·ÖÖ·ÖÀàId
-			.append("       '- -' commodityID, ")//ÉÌÆ·±àÂë
+			.append("select t.billID stockId, ")//ä»“å•å·
+			.append("       t.belonger customId, ")//æ‰€å±äº¤æ˜“å•†id
+			.append("       t.breedId breedId, ")//æ‰€å±å“ç§åˆ†ç±»Id
+			.append("       '- -' commodityID, ")//å•†å“ç¼–ç 
 			
-			.append("       t.warehouseId warehouseId, ")//²Ö¿â±àºÅ
-			.append("       '-1' quantity, ")//ÉÌÆ·ÊıÁ¿
-			.append("       t.quantity stockQuantity, ")//²Öµ¥ÊıÁ¿
-			.append("       t.frozenqty freezeQuantity, ")//¶³½áÊıÁ¿
+			.append("       t.warehouseId warehouseId, ")//ä»“åº“ç¼–å·
+			.append("       '-1' quantity, ")//å•†å“æ•°é‡
+			.append("       t.quantity stockQuantity, ")//ä»“å•æ•°é‡
+			.append("       t.frozenqty freezeQuantity, ")//å†»ç»“æ•°é‡
 			
-			.append("       t.createTime createTime, ")//´´½¨Ê±¼ä
-			.append("       nvl(t.updatetime,t.createTime) modifyTime, ")//ĞŞ¸ÄÊ±¼ä
-			.append("       'N' chgDirection, ")//²Öµ¥±ä¶¯·½Ïò
-			.append("       t.belongerType customType ")//ÓÃ»§ÀàĞÍ
+			.append("       t.createTime createTime, ")//åˆ›å»ºæ—¶é—´
+			.append("       nvl(t.updatetime,t.createTime) modifyTime, ")//ä¿®æ”¹æ—¶é—´
+			.append("       'N' chgDirection, ")//ä»“å•å˜åŠ¨æ–¹å‘
+			.append("       t.belongerType customType ")//ç”¨æˆ·ç±»å‹
 			.append("  from bl_bill t  ")
 			.append(" where trunc(t.CreateTime) = ?")
 			.toString());

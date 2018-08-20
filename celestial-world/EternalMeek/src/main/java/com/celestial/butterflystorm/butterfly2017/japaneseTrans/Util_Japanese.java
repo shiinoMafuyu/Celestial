@@ -13,8 +13,8 @@ public class Util_Japanese {
 	private static Map<String, String> aoyinMap = new LinkedHashMap<String,String>();
 
 	static{
-		qingyinMap = UtilJson.json2Map(new JSONObject("{¤Å:zu,¤Ä:tsu,¤Ç:de,¤Æ:te,¤Á:chi,¤À:da,¤Ã:xtu,¤Â:ji,¤Í:ne,¤Ì:nu,¤Ï:ha,¤Î:no,¤É:do,¤È:to,¤Ë:ni,¤Ê:na,¤Ô:pi,¤Õ:fu,¤Ö:bu,¤×:pu,¤Ğ:ba,¤Ñ:pa,¤Ò:hi,¤Ó:bi,¤Ü:bo,¤İ:po,¤Ş:ma,¤ß:mi,¤Ø:he,¤Ù:be,¤Ú:pe,¤Û:ho,¤§:xe,¤¦:u,¤¥:xu,¤¤:i,¤£:xi,¤¢:a,¤¡:xa,¤¯:ku,¤®:gi,¤­:ki,¤¬:ga,¤«:ka,¤ª:o,¤©:xo,¤¨:e,¤¶:za,¤·:shi,¤´:go,¤µ:sa,¤²:ge,¤³:ko,¤°:gu,¤±:ke,¤¾:zo,¤¿:ta,¤¼:ze,¤½:so,¤º:zu,¤»:se,¤¸:ji,¤¹:su,¥ì:re,¥í:ro,¥ï:wa,¥è:yo,¥é:ra,¥ê:ri,¥ë:ru,¥ä:ya,¥æ:yu,¥à:mu,¥á:me,¥â:mo,¥õ:xka,¥ö:xke,¥ó:n,¥ò:o,¥Î:no,¥Ï:ha,¥Ì:nu,¥Í:ne,¥Ê:na,¥Ë:ni,¥È:to,¥É:do,¥Æ:te,¥Ç:de,¥Ä:tsu,¥Å:zu,¥Â:ji,¥À:da,¥Á:chi,¥ß:mi,¥Ş:ma,¥İ:po,¥Ü:bo,¥Û:ho,¥Ú:pe,¥Ù:be,¥Ø:he,¥×:pu,¥Ö:bu,¥Õ:fu,¥Ô:pi,¥Ó:bi,¥Ò:hi,¥Ñ:pa,¥Ğ:ba,¥¨:e,¥ª:o,¥«:ka,¥¬:ga,¥­:ki,¥®:gi,¥¯:ku,¥¢:a,¥¤:i,¥¦:u,¥¹:su,¥¸:ji,¥»:se,¥º:zu,¥½:so,¥¼:ze,¥¿:ta,¥¾:zo,¥±:ke,¥°:gu,¥³:ko,¥²:ge,¥µ:sa,¥´:go,¥·:shi,¥¶:za,¤ê:ri,¤ë:ru,¤è:yo,¤é:ra,¤î:xwa,¤ï:wa,¤ì:re,¤í:ro,¤â:mo,¤ã:xya,¤à:mu,¤á:me,¤æ:yu,¤ç:xyo,¤ä:ya,¤å:xuy,¤ó:n,¤ò:o,©`:©`}"));
-		aoyinMap = UtilJson.json2Map(new JSONObject("{¥Ó¥ç:byo,¤Ô¤ç:pyo,¤Ô¤å:pyu,¥Ó¥ã:bya,¥Ó¥å:byu,¥ß¥ç:myo,¤Ç¤£:dhi,¥ß¥å:myu,¥ß¥ã:mya,¥¸¥ã:ja,¥Á¥ã:cha,¤®¤ç:gyo,¥¸¥ç:jo,¥Á¥ç:cho,¥¸¥å:ju,¥Á¥å:chu,¤Ô¤ã:pya,¤®¤å:gyu,¤®¤ã:gya,¥Ò¥ç:hyo,¥Ò¥å:hyu,¥Ò¥ã:hya,¥·¥ç:sho,¥Â¥ã:ja,¤­¤å:kyu,¥Â¥å:ju,¤­¤ç:kyo,¥ê¥ç:ryo,¥Â¥ç:jo,¥ê¥å:ryu,¥·¥ã:sha,¥ê¥ã:rya,¥·¥å:shu,¥Ë¥å:nyu,¥Ë¥ã:nya,¤­¤ã:kya,¥Ë¥ç:nyo,¥­¥ã:kya,¥­¥å:kyu,¤Ò¤ç:hyo,¥­¥ç:kyo,¤Ò¤å:hyu,¤·¤ã:sha,¤Ò¤ã:hya,¤·¤å:shu,¤·¤ç:sho,¤Ë¤å:nyu,¤Ë¤ã:nya,¤Ë¤ç:nyo,¤Â¤ã:ja,¤Ä¤§:tse,¤Â¤å:ju,¤Ä¤©:tso,¤Â¤ç:jo,null:null,¤ß¤å:myu,¤ß¤ã:mya,¤Ä¤£:tsi,¥®¥å:gyu,¤Ä¤¡:tsa,¥®¥ã:gya,¤º¤¤:zui,¥Ô¥ç:pyo,¤¸¤ã:ja,¤Ó¤ç:byo,¥Ô¥å:pyu,¥®¥ç:gyo,¤ê¤ç:ryo,¤ê¤å:ryu,¤¸¤ç:jo,¤Ó¤ã:bya,¤ê¤ã:rya,¤ß¤ç:myo,¤¸¤å:ju,¤Ó¤å:byu,¥Ô¥ã:pya,¤Á¤ã:cha,¤Á¤ç:cho,¤Á¤å:chu}"));
+		qingyinMap = UtilJson.json2Map(new JSONObject("{å‹¿:zu,å‹¾:tsu,åŒ¹:de,åŒ–:te,åˆ‡:chi,åˆ†:da,å‹»:xtu,åˆˆ:ji,å‹:ne,å„:nu,å:ha,åŠ:no,å‡:do,åˆ:to,å:ni,å…:na,å¤­:pi,å­”:fu,å°‘:bu,å°¤:pu,å£¬:ba,å¤©:pa,å¤«:hi,å¤ª:bi,å»¿:bo,å¼”:po,å¼•:ma,å¿ƒ:mi,å°º:he,å±¯:be,å·´:pe,å¹»:ho,ä¹‹:xe,ä¸¹:u,ä¸°:xu,ä¸­:i,ä¸:xi,ä¸:a,ä¸‘:xa,ä»:ku,äº¢:gi,äº”:ki,äº’:ga,äº•:ka,äº‘:o,äºˆ:xo,å°¹:e,ä»‹:za,ä»„:shi,ä»:go,ä»Š:sa,ä»†:ge,ä»‡:ko,ä»€:gu,ä»ƒ:ke,å†—:zo,å‡¶:ta,å…®:ze,å…¬:so,å…§:zu,å…­:se,å…ƒ:ji,å…:su,ä¼Š:re,ä¼•:ro,ä¼:wa,äº¥:yo,ä»¿:ra,ä¼‰:ri,ä¼™:ru,ä¹©:ya,äº¤:yu,ä¸:mu,ä¸Ÿ:me,ä¹’:mo,ä»°:xka,ä»³:xke,ä»¶:n,ä»²:o,ç”¨:no,ç”©:ha,ç”˜:nu,ç”Ÿ:ne,ç“œ:na,ç“¦:ni,ç„:to,ç‰:do,æ°¾:te,çŠ¯:de,æ±:tsu,æ±€:zu,æ°:ji,æ¯:da,æ°‘:chi,ç«‹:mi,ç©´:ma,ç¦¾:po,ç¤º:bo,çŸ³:ho,çŸ¢:pe,çŸ›:be,ç›®:he,çš¿:pu,çš®:bu,ç™½:fu,ç–‹:pi,ç”³:bi,ç”²:hi,ç”±:pa,ç”°:ba,å·¨:e,å·¦:o,å¸‚:ka,å¸ƒ:ga,å¹³:ki,å¹¼:gi,å¼:ku,å¤±:a,å¥¶:i,å®ƒ:u,æ—¦:su,æ–¥:ji,æœ¬:se,æœ®:zu,æœ«:so,æœª:ze,æ­£:ta,æœ­:zo,å¼—:ke,å¼˜:gu,æˆŠ:ko,å¿…:ge,æ‰”:sa,æ‰“:go,æ‰‘:shi,æ‰’:za,æ›°:ri,æœˆ:ru,æ–¹:yo,æ—¥:ra,æ­¢:xwa,æ­¹:wa,æœ¨:re,æ¬ :ro,æ‰‹:mo,æ‰:xya,æˆˆ:mu,æˆ¶:me,æ–—:yu,æ–¤:xyo,æ”¯:ya,æ–‡:xuy,æ°:n,æ¯›:o,å¥ˆ:å¥ˆ}"));
+		aoyinMap = UtilJson.json2Map(new JSONObject("{ç”³äº¦:byo,å¤­æ–¤:pyo,å¤­æ–‡:pyu,ç”³ä¹“:bya,ç”³äº™:byu,ç«‹äº¦:myo,åŒ¹ä¸:dhi,ç«‹äº™:myu,ç«‹ä¹“:mya,æ–¥ä¹“:ja,æ°‘ä¹“:cha,äº¢æ–¤:gyo,æ–¥äº¦:jo,æ°‘äº¦:cho,æ–¥äº™:ju,æ°‘äº™:chu,å¤­æ‰:pya,äº¢æ–‡:gyu,äº¢æ‰:gya,ç”²äº¦:hyo,ç”²äº™:hyu,ç”²ä¹“:hya,æ‰‘äº¦:sho,æ°ä¹“:ja,äº”æ–‡:kyu,æ°äº™:ju,äº”æ–¤:kyo,ä¼‰äº¦:ryo,æ°äº¦:jo,ä¼‰äº™:ryu,æ‰‘ä¹“:sha,ä¼‰ä¹“:rya,æ‰‘äº™:shu,ç“¦äº™:nyu,ç“¦ä¹“:nya,äº”æ‰:kya,ç“¦äº¦:nyo,å¹³ä¹“:kya,å¹³äº™:kyu,å¤«æ–¤:hyo,å¹³äº¦:kyo,å¤«æ–‡:hyu,ä»„æ‰:sha,å¤«æ‰:hya,ä»„æ–‡:shu,ä»„æ–¤:sho,åæ–‡:nyu,åæ‰:nya,åæ–¤:nyo,åˆˆæ‰:ja,å‹¾ä¹‹:tse,åˆˆæ–‡:ju,å‹¾äºˆ:tso,åˆˆæ–¤:jo,null:null,å¿ƒæ–‡:myu,å¿ƒæ‰:mya,å‹¾ä¸:tsi,å¹¼äº™:gyu,å‹¾ä¸‘:tsa,å¹¼ä¹“:gya,å…§ä¸­:zui,ç–‹äº¦:pyo,å…ƒæ‰:ja,å¤ªæ–¤:byo,ç–‹äº™:pyu,å¹¼äº¦:gyo,æ›°æ–¤:ryo,æ›°æ–‡:ryu,å…ƒæ–¤:jo,å¤ªæ‰:bya,æ›°æ‰:rya,å¿ƒæ–¤:myo,å…ƒæ–‡:ju,å¤ªæ–‡:byu,ç–‹ä¹“:pya,åˆ‡æ‰:cha,åˆ‡æ–¤:cho,åˆ‡æ–‡:chu}"));
 	}
 	public static void main(String[] args) {
 		String s = UtilJson.map2Json(aoyinMap).toString();
@@ -32,8 +32,8 @@ public class Util_Japanese {
 			word = findQingyin(sb,word);
 			
 			if(orinal.equals(word)){
-//				throw new RuntimeException("´Ë´¦ÓĞ²»´æÔÚµÄ·¢Òô:"+word);
-				//·­Òë²»³öÀ´µÄ ²»·­Òë£¡
+//				throw new RuntimeException("æ£®æ­è¡„ç¥¥æ¹”å©“è…”æ¥·ç§:"+word);
+				//æ¥¹ç¥’ç¥¥å ¤æ‡‚è…” ç¥¥æ¥¹ç¥’ã„
 				sb.append(word.substring(0,1)).append(" ");
 				word = word.substring(1);
 				

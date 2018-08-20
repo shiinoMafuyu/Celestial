@@ -12,7 +12,7 @@ public abstract class RecursiveDealFile {
 	}
 	
 	/**
-	 * ½øĞĞµİ¹é±éÀú¡£<br/>
+	 * è¿›è¡Œé€’å½’éå†ã€‚<br/>
 	 * @param file
 	 */
 	private  void recursiveFile(File file,Object...obs){
@@ -29,20 +29,20 @@ public abstract class RecursiveDealFile {
 	}
 	
 	/**
-	 * ¿ªÊ¼´¦Àí
+	 * å¼€å§‹å¤„ç†
 	 */
 	public  void start(){
 		recursiveFile(recursiveFile);
 	}
 
 	/**
-	 * ÎÄ¼ş´¦Àí·½Ê½¡£
+	 * æ–‡ä»¶å¤„ç†æ–¹å¼ã€‚
 	 * @param file
 	 */
 	public abstract void doWork(File file);
 	
 	/**
-	 * Ä¿Â¼´¦Àí·½Ê½¡£
+	 * ç›®å½•å¤„ç†æ–¹å¼ã€‚
 	 * @param file
 	 */
 	public void doDirectoryWork(File directory){

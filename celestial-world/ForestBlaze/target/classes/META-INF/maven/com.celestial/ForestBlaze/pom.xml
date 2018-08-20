@@ -8,4 +8,7 @@
   <artifactId>ForestBlaze</artifactId>
   <name>blaze</name>
   <description>kindle over the all</description>
+  
+  <dependencies>
+  </dependencies>
 </project>

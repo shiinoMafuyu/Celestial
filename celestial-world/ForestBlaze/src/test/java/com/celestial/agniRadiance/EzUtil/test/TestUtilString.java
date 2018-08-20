@@ -133,10 +133,10 @@ public class TestUtilString {
 	
 	@Test
 	public void _09__transHead(){
-		Assert.assertEquals(":",UtilString.getMinMatch("yuki:{age:17,height:165,home:{jp:'ÉñÄÎ´¨',us:'losAnges'}}",0,"{","}",":"));
-		Assert.assertEquals("{",UtilString.getMinMatch("yuki:{age:17,height:165,home:{jp:'ÉñÄÎ´¨',us:'losAnges'}}",0,"{","}","ho"));
-		Assert.assertEquals("los",UtilString.getMinMatch("yuki:{age:17,height:165,home:{jp:'ÉñÄÎ´¨',us:'losAnges'}}",0,"{{","}}","los"));
-		Assert.assertEquals("}}",UtilString.getMinMatch("yuki:{age:17,height:165,home:{jp:'ÉñÄÎ´¨',us:'losAnges'}}",0,"{{","}}","losa"));
+		Assert.assertEquals(":",UtilString.getMinMatch("yuki:{age:17,height:165,home:{jp:'ç¥å¥ˆå·',us:'losAnges'}}",0,"{","}",":"));
+		Assert.assertEquals("{",UtilString.getMinMatch("yuki:{age:17,height:165,home:{jp:'ç¥å¥ˆå·',us:'losAnges'}}",0,"{","}","ho"));
+		Assert.assertEquals("los",UtilString.getMinMatch("yuki:{age:17,height:165,home:{jp:'ç¥å¥ˆå·',us:'losAnges'}}",0,"{{","}}","los"));
+		Assert.assertEquals("}}",UtilString.getMinMatch("yuki:{age:17,height:165,home:{jp:'ç¥å¥ˆå·',us:'losAnges'}}",0,"{{","}}","losa"));
 		
 	}
 	

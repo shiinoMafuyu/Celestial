@@ -21,11 +21,11 @@ public class CopyByTransfer {
 
 	public static void main(String[] args) throws IOException {
 		
-//		System.out.println("¿½±´µçÓ°ÓÃÊ±£º"+
-//		copyByTransfer(new File("H:\\baiduyundownload\\04µÍÓ×¶¯»­\\Ä©ÈÕÊ±ÄãÔÚ×öÊ²Ã´Ã¦Âğ¿ÉÒÔÕü¾ÈÒ»ÏÂÂğ\\01.mp4")
-//				, new File("H:\\baiduyundownload\\04µÍÓ×¶¯»­\\Ä©ÈÕÊ±ÄãÔÚ×öÊ²Ã´Ã¦Âğ¿ÉÒÔÕü¾ÈÒ»ÏÂÂğ\\002.mp4")));
+//		System.out.println("æ‹·è´ç”µå½±ç”¨æ—¶ï¼š"+
+//		copyByTransfer(new File("H:\\baiduyundownload\\04ä½å¹¼åŠ¨ç”»\\æœ«æ—¥æ—¶ä½ åœ¨åšä»€ä¹ˆå¿™å—å¯ä»¥æ‹¯æ•‘ä¸€ä¸‹å—\\01.mp4")
+//				, new File("H:\\baiduyundownload\\04ä½å¹¼åŠ¨ç”»\\æœ«æ—¥æ—¶ä½ åœ¨åšä»€ä¹ˆå¿™å—å¯ä»¥æ‹¯æ•‘ä¸€ä¸‹å—\\002.mp4")));
 		
-		Map<String,Integer> map = readFile(new File("H:\\t\\08 ¼òÀú\\Òª±³µÄÌâ\\name.txt"));
+		Map<String,Integer> map = readFile(new File("H:\\t\\08 ç®€å†\\è¦èƒŒçš„é¢˜\\name.txt"));
 		List<Person> list = sortName(map);
 		System.out.println(list);
 	}

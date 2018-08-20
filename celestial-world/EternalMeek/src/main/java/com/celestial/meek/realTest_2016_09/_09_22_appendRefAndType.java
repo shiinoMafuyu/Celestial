@@ -6,7 +6,7 @@ import com.celestial.agniRadiance.entity.FileReader;
 public class _09_22_appendRefAndType {
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -17,14 +17,14 @@ public class _09_22_appendRefAndType {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¼òµ¥´¦ÀíÏÂ±êÇ©.
+	 * ç®€å•å¤„ç†ä¸‹æ ‡ç­¾.
 	 * </ul>
 	 */
 	private static void smipleTagDealWith() {
-		//¿ÉÒÔÅäÖÃ¸ö±êÇ©¶ÔÓ¦µÄmapÊÔÊÔ.
-		FileReader f = new FileReader("E:/anotherDeskTop/parese2/fall/EÏÖ»õ--ÊÖ»ú¿Í»§¶ËÓë·şÎñÆ÷Í¨ĞÅĞ­Òé(¾É) - ÎşÉüÆ·.txt");
+		//å¯ä»¥é…ç½®ä¸ªæ ‡ç­¾å¯¹åº”çš„mapè¯•è¯•.
+		FileReader f = new FileReader("E:/anotherDeskTop/parese2/fall/Eç°è´§--æ‰‹æœºå®¢æˆ·ç«¯ä¸æœåŠ¡å™¨é€šä¿¡åè®®(æ—§) - ç‰ºç‰²å“.txt");
 		while(f.hasNext()){
 			String s = f.readLine();
 			int index = UtilString.containCompleteSimpleTag(s);

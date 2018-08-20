@@ -1,31 +1,31 @@
 package com.celestial.meek.realTest_2016_03.de.shoot;
 import java.awt.image.BufferedImage;
-/** ·ÉÐÐÎï */
+/** é£žè¡Œç‰© */
 public abstract class FlyingObject {
-	protected BufferedImage image; //Í¼Æ¬
-	protected int width; //¿í
-	protected int height; //¸ß
-	protected int x; //x×ø±ê
-	protected int y; //y×ø±ê
+	protected BufferedImage image; //å›¾ç‰‡
+	protected int width; //å®½
+	protected int height; //é«˜
+	protected int x; //xåæ ‡
+	protected int y; //yåæ ‡
 	
-	/** ·ÉÐÐÎï×ßÒ»²½ */
+	/** é£žè¡Œç‰©èµ°ä¸€æ­¥ */
 	public abstract void step();
 	
-	/** ÅÐ¶Ï·ÉÐÐÎïÊÇ·ñÔ½½ç */
+	/** åˆ¤æ–­é£žè¡Œç‰©æ˜¯å¦è¶Šç•Œ */
 	public abstract boolean outOfBounds();
 	
-	/** µÐÈË±»×Óµ¯×²   this:µÐÈË  bullet:×Óµ¯ */
+	/** æ•Œäººè¢«å­å¼¹æ’ž   this:æ•Œäºº  bullet:å­å¼¹ */
 	public boolean shootBy(Bullet bullet){
-		int x1 = this.x;               //x1:µÐÈËµÄx
-		int x2 = this.x + this.width;  //x2:µÐÈËµÄx+µÐÈËµÄ¿í
-		int y1 = this.y;               //y1:µÐÈËµÄy
-		int y2 = this.y + this.height; //y2:µÐÈËµÄy+µÐÈËµÄ¸ß
-		int x = bullet.x;              //x:×Óµ¯µÄx
-		int y = bullet.y;              //y:×Óµ¯µÄy
+		int x1 = this.x;               //x1:æ•Œäººçš„x
+		int x2 = this.x + this.width;  //x2:æ•Œäººçš„x+æ•Œäººçš„å®½
+		int y1 = this.y;               //y1:æ•Œäººçš„y
+		int y2 = this.y + this.height; //y2:æ•Œäººçš„y+æ•Œäººçš„é«˜
+		int x = bullet.x;              //x:å­å¼¹çš„x
+		int y = bullet.y;              //y:å­å¼¹çš„y
 		
 		return x>x1 && x<x2
 			   &&
-			   y>y1 && y<y2; //xÔÚx1ºÍx2Ö®¼ä£¬²¢ÇÒ£¬yÔÚy1ºÍy2Ö®¼ä£¬¼´Îª×²ÉÏÁË
+			   y>y1 && y<y2; //xåœ¨x1å’Œx2ä¹‹é—´ï¼Œå¹¶ä¸”ï¼Œyåœ¨y1å’Œy2ä¹‹é—´ï¼Œå³ä¸ºæ’žä¸Šäº†
 	}
 	
 }

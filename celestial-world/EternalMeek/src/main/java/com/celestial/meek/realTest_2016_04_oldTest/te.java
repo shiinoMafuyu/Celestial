@@ -17,7 +17,7 @@ public class te {
 	public static void main(String[] args) throws Exception{
 		System.out.println("all in seat are garbage~");
 //		String[] sArr={"11104"};
-//		ClassDump.main(sArr); //ÄÜÓÃ µ«ÊÇ²»ÖªµÀdump³öÀ´°Ñ¶«Î÷·ÅÄÄ¶ùÁË
+//		ClassDump.main(sArr); //èƒ½ç”¨ ä½†æ˜¯ä¸çŸ¥é“dumpå‡ºæ¥æŠŠä¸œè¥¿æ”¾å“ªå„¿äº†
 		/*FileInputStream fi=new FileInputStream("D:/workspace/test/bin/te2.class");
 		int n=fi.read();
 		while((n=fi.read())>-1){
@@ -68,7 +68,7 @@ public class te {
 	}
 
 	/**
-	 * Éú³Éclass·´ÂëÎÄ¼ş
+	 * ç”Ÿæˆclassåç æ–‡ä»¶
 	 * 
 	 * @throws Exception
 	 */
@@ -76,9 +76,9 @@ public class te {
 	private static void te1() throws Exception {
 		int n=16;
 		byte b[]=new byte[n];
-		InputStream is=new FileInputStream("D:/tat/jvmµÄÁô´æ/MyLoader.class");
+		InputStream is=new FileInputStream("D:/tat/jvmçš„ç•™å­˜/MyLoader.class");
 		int k=0;
-		OutputStream os=new FileOutputStream("D:/tat/jvmµÄÁô´æ/MyLoader2.class");
+		OutputStream os=new FileOutputStream("D:/tat/jvmçš„ç•™å­˜/MyLoader2.class");
 		while((k=is.read(b, 0, n)) != -1){
 			System.out.print(new String(b,0,k));
 			for(int i=0;i<k;i++){

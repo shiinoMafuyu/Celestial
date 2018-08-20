@@ -17,9 +17,9 @@ public class UtilCollection {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´òÓ¡map
+	 * æ‰“å°map
 	 * </ul>
 	 * @param map
 	 */
@@ -34,9 +34,9 @@ public class UtilCollection {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÓÃÓÚÏÔÊ¾List<Map<Integer,String>> ÃâµÃÂé·³Ã¿´ÎÈ¥Ğ´;<br/>
+	 * ç”¨äºæ˜¾ç¤ºList<Map<Integer,String>> å…å¾—éº»çƒ¦æ¯æ¬¡å»å†™;<br/>
 	 * </ul>
 	 * @param l
 	 */
@@ -58,9 +58,9 @@ public class UtilCollection {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * °ÑmapÀïµÄvalueÖµtoString()ºó´æÈëListÖĞ,·µ»Ølist;
+	 * æŠŠmapé‡Œçš„valueå€¼toString()åå­˜å…¥Listä¸­,è¿”å›list;
 	 * </ul>
 	 * @param map
 	 * @return
@@ -74,15 +74,15 @@ public class UtilCollection {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
- 	 * ½øĞĞ°üº¬Æ¥Åä,»ñÈ¡Æ¥Åäµ½°üº¬startÖ®ºóµ½endÖ®¼äµÄËùÓĞlistÔªËØ <br/>
-	 * Ã¿Íê³ÉÒ»´Îstart ~ endÆ¥Åä ,½«½á¹û´æ·Åµ½Ò»¸öLinkedHashMapÀï<br/>
-	 * ÔÙ°ÑÕâ¸öMap·Åµ½ListÀï·µ»Ø.<br/>
+ 	 * è¿›è¡ŒåŒ…å«åŒ¹é…,è·å–åŒ¹é…åˆ°åŒ…å«startä¹‹ååˆ°endä¹‹é—´çš„æ‰€æœ‰listå…ƒç´  <br/>
+	 * æ¯å®Œæˆä¸€æ¬¡start ~ endåŒ¹é… ,å°†ç»“æœå­˜æ”¾åˆ°ä¸€ä¸ªLinkedHashMapé‡Œ<br/>
+	 * å†æŠŠè¿™ä¸ªMapæ”¾åˆ°Listé‡Œè¿”å›.<br/>
 	 * </ul>
-	 * @param stringList ĞèÒª½øĞĞ½âÎöµÄList<String>
-	 * @param start ¿ªÊ¼±êÊ¶
-	 * @param end ½áÊø±êÊ¶
+	 * @param stringList éœ€è¦è¿›è¡Œè§£æçš„List<String>
+	 * @param start å¼€å§‹æ ‡è¯†
+	 * @param end ç»“æŸæ ‡è¯†
 	 * @return 
 	 */
 	public static List<Map<Integer,String>>selectLineBetween(List<String> stringList, String start,
@@ -91,15 +91,15 @@ public class UtilCollection {
 		
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡stringListÖĞ,Æ¥ÅäÕıÔò±í´ïÊ½startRegexÖ®ºóµ½endRegexÖ®¼äµÄËùÓĞ¾ä×Ó<br/>
-	 * Ã¿Íê³ÉÒ»´Îstart ~ endÆ¥Åä ,½«½á¹û´æ·Åµ½Ò»¸öLinkedHashMapÀï<br/>
-	 * ÔÙ°ÑÕâ¸öMap·Åµ½ListÀï·µ»Ø.<br/>
+	 * è·å–stringListä¸­,åŒ¹é…æ­£åˆ™è¡¨è¾¾å¼startRegexä¹‹ååˆ°endRegexä¹‹é—´çš„æ‰€æœ‰å¥å­<br/>
+	 * æ¯å®Œæˆä¸€æ¬¡start ~ endåŒ¹é… ,å°†ç»“æœå­˜æ”¾åˆ°ä¸€ä¸ªLinkedHashMapé‡Œ<br/>
+	 * å†æŠŠè¿™ä¸ªMapæ”¾åˆ°Listé‡Œè¿”å›.<br/>
 	 * </ul>
-	 * @param stringList ĞèÒª½øĞĞ½âÎöµÄList<String>
-	 * @param startRegex ¿ªÊ¼±êÊ¶
-	 * @param endRegex ½áÊø±êÊ¶
+	 * @param stringList éœ€è¦è¿›è¡Œè§£æçš„List<String>
+	 * @param startRegex å¼€å§‹æ ‡è¯†
+	 * @param endRegex ç»“æŸæ ‡è¯†
 	 * @return 
 	 */
 	public static List<Map<Integer,String>> selectLineBetweenRegx(List<String> stringList, String startRegex,
@@ -108,17 +108,17 @@ public class UtilCollection {
 		
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * isRegxÎªtrue : ½øĞĞÕıÔòÆ¥Åä,»ñÈ¡startÉÏºóµ½endÖ®¼äµÄËùÓĞlistÔªËØ.<br/>
-	 * isRegxÎªfalse : ½øĞĞ°üº¬Æ¥Åä,»ñÈ¡Æ¥Åäµ½°üº¬startÖ®ºóµ½endÖ®¼äµÄËùÓĞlistÔªËØ <br/>
-	 * Ã¿Íê³ÉÒ»´Îstart ~ endÆ¥Åä ,½«½á¹û´æ·Åµ½Ò»¸öLinkedHashMapÀï<br/>
-	 * ÔÙ°ÑÕâ¸öMap·Åµ½ListÀï·µ»Ø.<br/>
+	 * isRegxä¸ºtrue : è¿›è¡Œæ­£åˆ™åŒ¹é…,è·å–startä¸Šååˆ°endä¹‹é—´çš„æ‰€æœ‰listå…ƒç´ .<br/>
+	 * isRegxä¸ºfalse : è¿›è¡ŒåŒ…å«åŒ¹é…,è·å–åŒ¹é…åˆ°åŒ…å«startä¹‹ååˆ°endä¹‹é—´çš„æ‰€æœ‰listå…ƒç´  <br/>
+	 * æ¯å®Œæˆä¸€æ¬¡start ~ endåŒ¹é… ,å°†ç»“æœå­˜æ”¾åˆ°ä¸€ä¸ªLinkedHashMapé‡Œ<br/>
+	 * å†æŠŠè¿™ä¸ªMapæ”¾åˆ°Listé‡Œè¿”å›.<br/>
 	 * </ul>
-	 * @param stringList ĞèÒª½øĞĞ½âÎöµÄList<String>
-	 * @param start ¿ªÊ¼±êÊ¶
-	 * @param end ½áÊø±êÊ¶
-	 * @param isRegx ÊÇ·ñÕıÔòÆ¥Åä
+	 * @param stringList éœ€è¦è¿›è¡Œè§£æçš„List<String>
+	 * @param start å¼€å§‹æ ‡è¯†
+	 * @param end ç»“æŸæ ‡è¯†
+	 * @param isRegx æ˜¯å¦æ­£åˆ™åŒ¹é…
 	 * @return
 	 */
 	private static List<Map<Integer,String>> selectLineBetween(
@@ -156,9 +156,9 @@ public class UtilCollection {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * °Ñlist×ªÎªÒ»¸ö×Ö·û´®(ÓÃtoStringµÄ·½·¨)
+	 * æŠŠlistè½¬ä¸ºä¸€ä¸ªå­—ç¬¦ä¸²(ç”¨toStringçš„æ–¹æ³•)
 	 * </ul>
 	 * @param stringList
 	 * @return
@@ -172,9 +172,9 @@ public class UtilCollection {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´òÓ¡ListÖĞÃ¿Ò»ĞĞ<br/>
+	 * æ‰“å°Listä¸­æ¯ä¸€è¡Œ<br/>
 	 * </ul>
 	 * @param lm
 	 */
@@ -185,7 +185,7 @@ public class UtilCollection {
 	}
 	
 	/**
-	 * ÅĞ¶ÏÇ°Ò»¸öÊı×éÖĞÊÇ·ñº¬ÓĞºóÒ»¸öÔªËØ
+	 * åˆ¤æ–­å‰ä¸€ä¸ªæ•°ç»„ä¸­æ˜¯å¦å«æœ‰åä¸€ä¸ªå…ƒç´ 
 	 * @param arr
 	 * @param elem
 	 * @return
@@ -204,21 +204,21 @@ public class UtilCollection {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÅĞ¶Ïarr·Çnull·Ç¿Õ<br/>
+	 * åˆ¤æ–­arrénulléç©º<br/>
 	 * </ul>
 	 * @param arr
-	 * @return true Èç¹û·Çnull·Ç¿Õ
+	 * @return true å¦‚æœénulléç©º
 	 */
 	private static <T> boolean notNullEmpty(T[] arr) {
 		return arr != null && arr.length > 0;
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÅĞ¶ÏlistÀïÊÇ·ñ°üº¬str
+	 * åˆ¤æ–­listé‡Œæ˜¯å¦åŒ…å«str
 	 * </ul>
 	 * @param list
 	 * @param str
@@ -228,9 +228,9 @@ public class UtilCollection {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÅĞ¶ÏcontainWordsÀïµÄ×Ö·û´®,siÀïÊÇ·ñ¶¼º¬ÓĞ!
+	 * åˆ¤æ–­containWordsé‡Œçš„å­—ç¬¦ä¸²,sié‡Œæ˜¯å¦éƒ½å«æœ‰!
 	 * </ul>
 	 * @param containWords
 	 * @param si
@@ -246,9 +246,9 @@ public class UtilCollection {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Éî¶È¿½±´List,·µ»ØÒ»¸öĞÂµÄlist
+	 * æ·±åº¦æ‹·è´List,è¿”å›ä¸€ä¸ªæ–°çš„list
 	 * </ul>
 	 * @param list
 	 * @return
@@ -262,11 +262,11 @@ public class UtilCollection {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * °ÑarrÀï´æ·ÅµÄÊı×éºÏ²¢ÎªÒ»¸ö<br/>
+	 * æŠŠarré‡Œå­˜æ”¾çš„æ•°ç»„åˆå¹¶ä¸ºä¸€ä¸ª<br/>
 	 * </ul>
-	 * @param ÒªºÏ²¢ÎªÒ»¸öµÄÊı×éµÄÊı×é
+	 * @param è¦åˆå¹¶ä¸ºä¸€ä¸ªçš„æ•°ç»„çš„æ•°ç»„
 	 * @return
 	 */
 	public static <T> T[] combineArray(T[][] arr) {
@@ -286,11 +286,11 @@ public class UtilCollection {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>s
-	 * °Ñ List lÀï´æ·ÅµÄÊı×éºÏ²¢ÎªÒ»¸ö<br/>
+	 * æŠŠ List lé‡Œå­˜æ”¾çš„æ•°ç»„åˆå¹¶ä¸ºä¸€ä¸ª<br/>
 	 * </ul>
-	 * @param l ÒªºÏ²¢ÎªÒ»¸öµÄÊı×éµÄ¼¯ºÏ
+	 * @param l è¦åˆå¹¶ä¸ºä¸€ä¸ªçš„æ•°ç»„çš„é›†åˆ
 	 * @return
 	 */
 	public static Object[] combineArray(List<Object[]> l) {
@@ -302,9 +302,9 @@ public class UtilCollection {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Éî¶È¿½±´Ò»¸öMap.<br/>
+	 * æ·±åº¦æ‹·è´ä¸€ä¸ªMap.<br/>
 	 * </ul>
 	 * @param map
 	 * @return
@@ -319,9 +319,9 @@ public class UtilCollection {
 
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÓÃÒ»¸ökey´Ó¼¸¸öMapÖĞ»ñÈ¡Ò»¸övalue.<br/>
+	 * ç”¨ä¸€ä¸ªkeyä»å‡ ä¸ªMapä¸­è·å–ä¸€ä¸ªvalue.<br/>
 	 * </ul>
 	 * @param key
 	 * @param maps
@@ -341,7 +341,7 @@ public class UtilCollection {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -360,9 +360,9 @@ public class UtilCollection {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Êı×éµÑ¿¨¶ûºÏ²¢¡£
+	 * æ•°ç»„ç¬›å¡å°”åˆå¹¶ã€‚
 	 * </ul>
 	 * @param sArr1
 	 * @param sArr2
@@ -383,10 +383,10 @@ public class UtilCollection {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ½«¼üÖµ¶Ôvalue±£´æµ½ map<String,List>Àï key¶ÔÓ¦µÄlistÀïÃæ¡£<br/>
-	 * Ã»ÓĞlistÔòĞÂ½¨Ò»¸ö¡£
+	 * å°†é”®å€¼å¯¹valueä¿å­˜åˆ° map<String,List>é‡Œ keyå¯¹åº”çš„listé‡Œé¢ã€‚<br/>
+	 * æ²¡æœ‰liståˆ™æ–°å»ºä¸€ä¸ªã€‚
 	 * </ul>
 	 * @param m
 	 * @param representId
@@ -403,7 +403,7 @@ public class UtilCollection {
 	}
 
 	/**
-	 * ´ÓsArrÀï»ñÈ¡Î»ÖÃÊÇi´óµÄÔªËØ£¬ÔªËØ³¤¶È²»¹»Ê±·µ»ØÄ¬ÈÏÖµ¡£
+	 * ä»sArré‡Œè·å–ä½ç½®æ˜¯iå¤§çš„å…ƒç´ ï¼Œå…ƒç´ é•¿åº¦ä¸å¤Ÿæ—¶è¿”å›é»˜è®¤å€¼ã€‚
 	 * @param sArr
 	 * @param i
 	 * @param defaultVal
@@ -417,9 +417,9 @@ public class UtilCollection {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ½«List×ªÎªÊı×é¡£
+	 * å°†Listè½¬ä¸ºæ•°ç»„ã€‚
 	 * </ul>
 	 * @param list
 	 * @return
@@ -430,7 +430,7 @@ public class UtilCollection {
 	}
 
 	/**
-	 * ´ÓlistÖĞÒÆ³ıpositionsÖĞÎ»ÖÃËùÖ¸µÄÔªËØ¡£
+	 * ä»listä¸­ç§»é™¤positionsä¸­ä½ç½®æ‰€æŒ‡çš„å…ƒç´ ã€‚
 	 * @param list
 	 * @param positions
 	 * @return
@@ -445,7 +445,7 @@ public class UtilCollection {
 	}
 
 	/**
-	 * ÅĞ¶ÏelemÊÇ·ñÔÚarrÖĞ¡£
+	 * åˆ¤æ–­elemæ˜¯å¦åœ¨arrä¸­ã€‚
 	 * @param arr
 	 * @param elem
 	 * @return
@@ -467,7 +467,7 @@ public class UtilCollection {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -482,9 +482,9 @@ public class UtilCollection {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´ÓmapÖĞÈ¡³ö¼ükey¶ÔÓ¦µÄÖµ£¬Ã»ÓĞµÄ»°·µ»ØÄ¬ÈÏÖµ<br/>
+	 * ä»mapä¸­å–å‡ºé”®keyå¯¹åº”çš„å€¼ï¼Œæ²¡æœ‰çš„è¯è¿”å›é»˜è®¤å€¼<br/>
 	 * </ul>
 	 * @param map
 	 * @param key
@@ -504,9 +504,9 @@ public class UtilCollection {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÑéÖ¤list·Çnull¡¢·Ç¿Õ
+	 * éªŒè¯listénullã€éç©º
 	 * </ul>
 	 * @param list
 	 * @return 
@@ -517,7 +517,7 @@ public class UtilCollection {
 	
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -573,9 +573,9 @@ public class UtilCollection {
 	
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¸ù¾İÊ±¼äÀàĞÍÅÅĞò£¬°üÀ¨Date¡¢TimestampÀàĞÍ¡£
+	 * æ ¹æ®æ—¶é—´ç±»å‹æ’åºï¼ŒåŒ…æ‹¬Dateã€Timestampç±»å‹ã€‚
 	 * </ul>
 	 * @param list
 	 * @param variableName
@@ -631,9 +631,9 @@ public class UtilCollection {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Èç¹ûµÚÒ»¸öÖµÎªnull,¾ÍÑ¡ÔñºóÃæµÄ,ÏÂÒ»¸öÎªnull ¾ÍÒÀ´ÎÔÙÑ¡ºóÃæµÄ<br/>
+	 * å¦‚æœç¬¬ä¸€ä¸ªå€¼ä¸ºnull,å°±é€‰æ‹©åé¢çš„,ä¸‹ä¸€ä¸ªä¸ºnull å°±ä¾æ¬¡å†é€‰åé¢çš„<br/>
 	 * </ul>
 	 * @param val1
 	 * @param vals
@@ -655,9 +655,9 @@ public class UtilCollection {
 	
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¼ì²éobjsÈ«²¿²»Îªnull
+	 * æ£€æŸ¥objså…¨éƒ¨ä¸ä¸ºnull
 	 * </ul>
 	 * @param objs
 	 * @return 
@@ -677,12 +677,12 @@ public class UtilCollection {
 	
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 *  ¹ıÂË³ö³ÉÔ±±äÁ¿µÄÖµÔÚÄ³Ò»·¶Î§µÄÔªËØ£¬·µ»ØÆä¼¯ºÏ<br/>
-	 *  ·¶Î§ÀàĞÍ¿ÉÎªÈÕÆÚ»òÕßÊı×Ö<br/>
-	 *  filterMap<key,value> = [±äÁ¿Ãû£¬±äÁ¿·¶Î§Êı×é(³¤¶È2¡¢ÆäÒ»¿ÉÎªnull)]<br/>
-	 * Îªnull±íÊ¾¡Ş
+	 *  è¿‡æ»¤å‡ºæˆå‘˜å˜é‡çš„å€¼åœ¨æŸä¸€èŒƒå›´çš„å…ƒç´ ï¼Œè¿”å›å…¶é›†åˆ<br/>
+	 *  èŒƒå›´ç±»å‹å¯ä¸ºæ—¥æœŸæˆ–è€…æ•°å­—<br/>
+	 *  filterMap<key,value> = [å˜é‡åï¼Œå˜é‡èŒƒå›´æ•°ç»„(é•¿åº¦2ã€å…¶ä¸€å¯ä¸ºnull)]<br/>
+	 * ä¸ºnullè¡¨ç¤ºâˆ
 	 * </ul>
 	 * @param list
 	 * @param filterMap
@@ -693,13 +693,13 @@ public class UtilCollection {
 		if(!UtilCollection.notNullEmpty(list))
 			return resList;
 		try {
-			//»ñÈ¡³ÉÔ±±äÁ¿,Öµmap
+			//è·å–æˆå‘˜å˜é‡,å€¼map
 			Map<Field,Object[]> fieldMap = new HashMap<Field,Object[]>();
 			for(Entry<String,Object[]> ei : filterMap.entrySet()){
 				Field field = list.get(0).getClass().getDeclaredField(ei.getKey());
 				fieldMap.put(field,ei.getValue());
 			}
-			//±éÀú¶ÔÏó£¬½øĞĞ¹ıÂË
+			//éå†å¯¹è±¡ï¼Œè¿›è¡Œè¿‡æ»¤
 			for(T ti : list){
 				boolean isAllIn = true;
 				for(Entry<Field,Object[]> ei : fieldMap.entrySet()){
@@ -713,43 +713,43 @@ public class UtilCollection {
 			}
 			
 		} catch (Exception e) {
-			System.out.println(String.format("ÒÔ·¶Î§·½Ê½¹ıÂËlist¼¯ºÏÊ§°Ü¡£¹ıÂËÊı¾İ£º\n%s\n¹ıÂËmap£º\n%s", list,filterMap));
+			System.out.println(String.format("ä»¥èŒƒå›´æ–¹å¼è¿‡æ»¤listé›†åˆå¤±è´¥ã€‚è¿‡æ»¤æ•°æ®ï¼š\n%s\nè¿‡æ»¤mapï¼š\n%s", list,filterMap));
 		}
 		return resList;
 	}
 	
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÅĞ¶Ï¶ÔÏóobjµÄfield³ÉÔ±±äÁ¿µÄÖµÊÇ·ñÔÚrangeÖĞ£¬Èç¹ûµÄ»°·µ»Øtrue£»<br/>
-	 * Çø¼äÒ»±ßnullÔò±íÊ¾ÄÇ±ßµ½¡Ş<br/>
-	 * ÒÔ×ó±ÕÓÒ¿ª·½Ê½±È½Ï.
+	 * åˆ¤æ–­å¯¹è±¡objçš„fieldæˆå‘˜å˜é‡çš„å€¼æ˜¯å¦åœ¨rangeä¸­ï¼Œå¦‚æœçš„è¯è¿”å›trueï¼›<br/>
+	 * åŒºé—´ä¸€è¾¹nullåˆ™è¡¨ç¤ºé‚£è¾¹åˆ°âˆ<br/>
+	 * ä»¥å·¦é—­å³å¼€æ–¹å¼æ¯”è¾ƒ.
 	 * </ul>
-	 * @param obj ¶ÔÏó
-	 * @param field ³ÉÔ±±äÁ¿Ãû
-	 * @param range ·¶Î§
+	 * @param obj å¯¹è±¡
+	 * @param field æˆå‘˜å˜é‡å
+	 * @param range èŒƒå›´
 	 * @return
 	 */
 	public static boolean isInRange(Object obj,Field field,Object[] range){
 		try {
 			field.setAccessible(true);
 			if(range[0] == null && range[1] == null)
-				throw new RuntimeException(String.format("±äÁ¿µÄ·¶Î§ÓĞÎó£¬Çø¼äÁ½±ßÖÁ¶àÒ»·½Îªnull£¬¶ÔÏó£º\n%s\n±äÁ¿Ãû:\n%s\n·¶Î§:\n%s",
+				throw new RuntimeException(String.format("å˜é‡çš„èŒƒå›´æœ‰è¯¯ï¼ŒåŒºé—´ä¸¤è¾¹è‡³å¤šä¸€æ–¹ä¸ºnullï¼Œå¯¹è±¡ï¼š\n%s\nå˜é‡å:\n%s\nèŒƒå›´:\n%s",
 						obj.getClass().getName(),field.getName(),range));
 		} catch (Exception e) {
 			return false;
 		}
 		
-		//ÊÇÊı×ÖÀàĞÍ
+		//æ˜¯æ•°å­—ç±»å‹
 		boolean left = false;
 		boolean right = false;
 		try {
 			boolean leftIsNum = UtilString.isNumber(range[0]),
 					rightIsNum = UtilString.isNumber(range[1]);
-			//Èç¹ûÁ½¶Ë¶¼²»ÊÇÊı×ÖËµÃ÷²»ÊÇÊı×ÖÀàĞÍ
+			//å¦‚æœä¸¤ç«¯éƒ½ä¸æ˜¯æ•°å­—è¯´æ˜ä¸æ˜¯æ•°å­—ç±»å‹
 			if(!(leftIsNum || rightIsNum))
-				throw new RuntimeException(String.format("³ÉÔ±±äÁ¿¡¾%s¡¿·ÇÊı×ÖÀàĞÍ", field.getName()));
+				throw new RuntimeException(String.format("æˆå‘˜å˜é‡ã€%sã€‘éæ•°å­—ç±»å‹", field.getName()));
 			Double variableValue = null;
 			if(range[0] == null)
 				left = true;
@@ -770,12 +770,12 @@ public class UtilCollection {
 		} catch (Exception e) {
 		}
 		
-		//ÊÇÈÕÆÚÀàĞÍ
+		//æ˜¯æ—¥æœŸç±»å‹
 		try {
 			boolean leftIsDate = UtilDate.isDate(range[0]),
 					rightIsDate = UtilDate.isDate(range[1]);
 			if(!(leftIsDate || rightIsDate))
-				throw new RuntimeException(String.format("³ÉÔ±±äÁ¿¡¾%s¡¿·ÇÈÕÆÚÀàĞÍ", field.getName()));
+				throw new RuntimeException(String.format("æˆå‘˜å˜é‡ã€%sã€‘éæ—¥æœŸç±»å‹", field.getName()));
 			
 			Date variableValue = null;
 			
@@ -804,13 +804,13 @@ public class UtilCollection {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ½«listÀïµÄÄÚÈİ¸ù¾İ³ÉÔ±±äÁ¿varialbeµÄÖµ½øĞĞ·Ö×é¡£<br/>
+	 * å°†listé‡Œçš„å†…å®¹æ ¹æ®æˆå‘˜å˜é‡varialbeçš„å€¼è¿›è¡Œåˆ†ç»„ã€‚<br/>
 	 * </ul>
-	 * @param list ĞèÒª·Ö×éµÄ¶ÔÏóList
-	 * @param varialbe ³ÉÔ±±äÁ¿Ãû
-	 * @param clazz ³ÉÔ±±äÁ¿ÀàĞÍ
+	 * @param list éœ€è¦åˆ†ç»„çš„å¯¹è±¡List
+	 * @param varialbe æˆå‘˜å˜é‡å
+	 * @param clazz æˆå‘˜å˜é‡ç±»å‹
 	 * @return 
 	 */
 	@SuppressWarnings("unchecked")
@@ -827,15 +827,15 @@ public class UtilCollection {
 			}
 			
 		} catch (Exception e) {
-			System.out.println(String.format("²ğ·Ö·Ö×éListÊ§°Ü£º\n·Ö×é³ÉÔ±±äÁ¿Ãû£º%s\nÀàĞÍ£º%s", varialbe,clazz.getName()));
+			System.out.println(String.format("æ‹†åˆ†åˆ†ç»„Listå¤±è´¥ï¼š\nåˆ†ç»„æˆå‘˜å˜é‡åï¼š%s\nç±»å‹ï¼š%s", varialbe,clazz.getName()));
 		}
 		return map;
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ²éÕÒ³ölistÖĞ±äÁ¿Âú×ãfilterMap¼üÖµ¶ÔÒªÇóµÄ¶ÔÏó(Ö»ÕÒÒ»¸ö)¡£<br/>
+	 * æŸ¥æ‰¾å‡ºlistä¸­å˜é‡æ»¡è¶³filterMapé”®å€¼å¯¹è¦æ±‚çš„å¯¹è±¡(åªæ‰¾ä¸€ä¸ª)ã€‚<br/>
 	 * </ul>
 	 * @param list
 	 * @param filterMap
@@ -849,16 +849,16 @@ public class UtilCollection {
 			else
 				return reslist.get(0);
 		} catch (Exception e) {
-			System.out.println(String.format("Î´¹ıÂË³öÕıÈ·Êı¾İ£¬¹ıÂË¶ÔÏóÀàĞÍ:%s\n¹ıÂËÌõ¼şfilterMap£º%s", UtilCollection.getClassByList(list) ,filterMap));
+			System.out.println(String.format("æœªè¿‡æ»¤å‡ºæ­£ç¡®æ•°æ®ï¼Œè¿‡æ»¤å¯¹è±¡ç±»å‹:%s\nè¿‡æ»¤æ¡ä»¶filterMapï¼š%s", UtilCollection.getClassByList(list) ,filterMap));
 			return null;
 		}
 		
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ²éÕÒ³ölistÖĞÂú×ãfilterMap¼üÖµ¶ÔÒªÇóµÄ¶ÔÏó(È«²¿)¡£<br/>
+	 * æŸ¥æ‰¾å‡ºlistä¸­æ»¡è¶³filterMapé”®å€¼å¯¹è¦æ±‚çš„å¯¹è±¡(å…¨éƒ¨)ã€‚<br/>
 	 * </ul>
 	 * @param list
 	 * @param filterMap
@@ -869,20 +869,20 @@ public class UtilCollection {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
 	 * @param list
 	 * @param filterMap
-	 * @param isOne ÊÇ·ñÖ»ÕÒÒ»¸ö
+	 * @param isOne æ˜¯å¦åªæ‰¾ä¸€ä¸ª
 	 * @return
 	 */
 	private static <T> List<T> filterComprehensive(List<T> list,Map<String, Object> filterMap,boolean isOne){
 		List<T> resList = new ArrayList<T>();
 		if(!UtilCollection.notNullEmpty(list))
 			return resList;
-		//³õÊ¼»¯map
+		//åˆå§‹åŒ–map
 		Map<Field,Object> fieldMap = new HashMap<Field, Object>();
 		try {
 			for(Entry<String, Object> ei : filterMap.entrySet()){
@@ -911,17 +911,17 @@ public class UtilCollection {
 			for(Entry<String, Object> ei : filterMap.entrySet()){
 				sb.append(ei.getKey()).append(" = ").append(ei.getValue());
 			}
-			System.out.println(String.format("¹ıÂË¶ÔÏó³öÏÖÒì³££º\n%s", sb.toString()));
+			System.out.println(String.format("è¿‡æ»¤å¯¹è±¡å‡ºç°å¼‚å¸¸ï¼š\n%s", sb.toString()));
 		}
 			
 		return resList;
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡·ºĞÍlistÀïÖµµÄÀà¶ÔÏó<br/>
-	 * Ç°ÌáÊÇlistÓĞÔªËØ´æÔÚ£¬Èç¹ûÃ»ÓĞÔò·µ»Ønull
+	 * è·å–æ³›å‹listé‡Œå€¼çš„ç±»å¯¹è±¡<br/>
+	 * å‰ææ˜¯listæœ‰å…ƒç´ å­˜åœ¨ï¼Œå¦‚æœæ²¡æœ‰åˆ™è¿”å›null
 	 * </ul>
 	 * @param list
 	 * @return
@@ -935,7 +935,7 @@ public class UtilCollection {
 	}
 
 	/**
-	 * Éî¶È¿½±´Êı×é
+	 * æ·±åº¦æ‹·è´æ•°ç»„
 	 * @param array
 	 * @return
 	 */

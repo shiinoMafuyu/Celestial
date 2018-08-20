@@ -1,7 +1,7 @@
 package com.celestial.butterflystorm.butterfly2016.hypercube.hypercube;
 /**
- * µãa,bµÄÖµ¸Ä±äÁËÖØÉè³¤¶Èlength
- * ³¤¶È¸Ä±äÁË ´«Èë²ÎÊıÊÇ·ñÒÑaÎª»ùµã ÖØÉèb,falseµÄ»°ÒÔbÎª»ùµãÖØÉèa.
+ * ç‚¹a,bçš„å€¼æ”¹å˜äº†é‡è®¾é•¿åº¦length
+ * é•¿åº¦æ”¹å˜äº† ä¼ å…¥å‚æ•°æ˜¯å¦å·²aä¸ºåŸºç‚¹ é‡è®¾b,falseçš„è¯ä»¥bä¸ºåŸºç‚¹é‡è®¾a.
  * @author Administrator
  *
  */
@@ -24,7 +24,7 @@ public class Line {
 
 	
 	/**
-	 * ÏÂÃæ4¸öº¯Êı»ñÈ¡»æÏß×ø±ê
+	 * ä¸‹é¢4ä¸ªå‡½æ•°è·å–ç»˜çº¿åæ ‡
 	 * @return
 	 */
 	public int getX1(){
@@ -73,7 +73,7 @@ public class Line {
 	}
 
 	/**
-	 * Éè¶¨ÏßµÄ³¤¶È
+	 * è®¾å®šçº¿çš„é•¿åº¦
 	 * @param length
 	 * @param is
 	 */

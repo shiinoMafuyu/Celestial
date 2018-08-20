@@ -2,17 +2,17 @@ package com.celestial.meek.realTest_2016_11;
 
 import java.security.MessageDigest;
 
-public class ÕªÒªËã·¨³¤¶È {
+public class æ‘˜è¦ç®—æ³•é•¿åº¦ {
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
 	 * @param args 
 	 */
 	public static void main(String[] args) {
-		/*String s =Util_File.getMd5ByFile(new File("F:/mashiro/ÎÒÃÇ¶¼ÊÇÍâĞÇÈË/tu/1.jpg"));
+		/*String s =Util_File.getMd5ByFile(new File("F:/mashiro/æˆ‘ä»¬éƒ½æ˜¯å¤–æ˜Ÿäºº/tu/1.jpg"));
 		System.out.println(s.length()+" : " + s);
 		String s2= "a87ff679a2f3e71d9181a67b7542122c";
 		System.out.println(s2.length()+" : " + s2);*/
@@ -31,7 +31,7 @@ public class ÕªÒªËã·¨³¤¶È {
 	    }
 
 	    /**
-	     * ÓÃÓÚ»ñÈ¡Ò»¸öStringµÄmd5Öµ
+	     * ç”¨äºè·å–ä¸€ä¸ªStringçš„md5å€¼
 	     * @param string
 	     * @return
 	     */
@@ -48,18 +48,18 @@ public class ÕªÒªËã·¨³¤¶È {
 	        return sb.toString();
 	    }
 
-	    //¶Ô×Ö·û´®½øĞĞMD5±àÂë   
+	    //å¯¹å­—ç¬¦ä¸²è¿›è¡ŒMD5ç¼–ç    
 	    @SuppressWarnings("unused")
 		private static String encodeByMD5(String originstr)  
 	    {  
 	   	 if(originstr !=null)  
 	   	 {  
 	   		 try{  
-	   			 //´´½¨¾ßÓĞÖ¸¶¨Ëã·¨Ãû³ÆµÄĞÅÏ¢ÕªÒª   
+	   			 //åˆ›å»ºå…·æœ‰æŒ‡å®šç®—æ³•åç§°çš„ä¿¡æ¯æ‘˜è¦   
 	   			 MessageDigest md = MessageDigest.getInstance("MD5");  
-	   			 //Ê¹ÓÃÖ¸¶¨µÄ×Ö½ÚÊı×é¶ÔÕªÒª½øĞĞ×îºóµÄ¸üĞÂ£¬È»ºóÍê³ÉÕªÒª¼ÆËã   
+	   			 //ä½¿ç”¨æŒ‡å®šçš„å­—èŠ‚æ•°ç»„å¯¹æ‘˜è¦è¿›è¡Œæœ€åçš„æ›´æ–°ï¼Œç„¶åå®Œæˆæ‘˜è¦è®¡ç®—   
 	   			 byte[] results = md.digest(originstr.getBytes());  
-	   			  //½«µÃµ½µÄ×Ö½ÚÊı×é±à³Ì×Ö·û´Ü·µ»Ø   
+	   			  //å°†å¾—åˆ°çš„å­—èŠ‚æ•°ç»„ç¼–ç¨‹å­—ç¬¦çªœè¿”å›   
 	   			 String resultString = byteArrayToHexString(results);  
 	   			 return resultString.toUpperCase();  
 	   		 }catch(Exception ex){  
@@ -68,7 +68,7 @@ public class ÕªÒªËã·¨³¤¶È {
 	   	 }  
 	   	return null;  
 	    }  
-	    //×ª»»×Ö½ÚÊı×éÎªÊ®Áù½øÖÆ×Ö·û´®   
+	    //è½¬æ¢å­—èŠ‚æ•°ç»„ä¸ºåå…­è¿›åˆ¶å­—ç¬¦ä¸²   
 	    private static String byteArrayToHexString(byte[] b)  
 	   {  
 	   	StringBuffer resultsb = new StringBuffer();  
@@ -79,7 +79,7 @@ public class ÕªÒªËã·¨³¤¶È {
 	   	}  
 	   	return resultsb.toString();  
 	   }  
-	   //½«×Ö½Ú×ª»¯³ÉÊ®Áù½øÖÆµÄ×Ö·û´®   
+	   //å°†å­—èŠ‚è½¬åŒ–æˆåå…­è¿›åˆ¶çš„å­—ç¬¦ä¸²   
 	   private static String byteToHexString(byte b)  
 	   {  
 	   	

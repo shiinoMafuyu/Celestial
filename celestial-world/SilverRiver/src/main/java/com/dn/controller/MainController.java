@@ -77,7 +77,7 @@ public class MainController {
 		for(Equipment ei : data){
 			Util_Collection.put(m,ei.getRepresentId(),ei);
 		}
-		Result res = new Result("获取数据成功.", 0, m);
+		Result res = new Result("鑾峰彇鏁版嵁鎴愬姛.", 0, m);
 		return res;
 	}*/
 	
@@ -108,7 +108,7 @@ public class MainController {
 		data.put("strengthen", strengthen);
 		
 		
-		Result res = new Result("获取数据成功.", 0, data);
+		Result res = new Result("鑾峰彇鏁版嵁鎴愬姛.", 0, data);
 		return res;
 	}
 	
@@ -117,7 +117,7 @@ public class MainController {
 	@ResponseBody
 	public Result queryEquipment(){
 		List<Equipment> data = queryEquipmentDao.selectByCondition(new Equipment());
-		Result res = new Result("获取数据成功.", 0, data);
+		Result res = new Result("鑾峰彇鏁版嵁鎴愬姛.", 0, data);
 		return res;
 	}
 	
@@ -131,7 +131,7 @@ public class MainController {
 			UtilCollection.put2MapList(m,ei.getRepresentId(),ei);
 		}
 		
-		String res = "{\"message\":\"获取数据成功.\",\"retcode\":0,\"data\":arg_data}";
+		String res = "{\"message\":\"鑾峰彇鏁版嵁鎴愬姛.\",\"retcode\":0,\"data\":arg_data}";
 		return res.replaceAll("arg_data", UtilJson.toJsonStringMap(m));
 	}
 	
@@ -140,7 +140,7 @@ public class MainController {
 	@ResponseBody
 	public Result queryBuff(){
 		List<Buff> data = queryBuffDao.selectByCondition(new Buff());
-		Result res = new Result("获取数据成功.", 0, data);
+		Result res = new Result("鑾峰彇鏁版嵁鎴愬姛.", 0, data);
 		return res;
 	}
 	
@@ -148,7 +148,7 @@ public class MainController {
 	@ResponseBody
 	public Result queryCharactor(){
 		List<Charactor> data = queryCharactorDao.selectByCondition(new Charactor());
-		Result res = new Result("获取数据成功.", 0, data);
+		Result res = new Result("鑾峰彇鏁版嵁鎴愬姛.", 0, data);
 		return res;
 	}
 	
@@ -156,7 +156,7 @@ public class MainController {
 	@ResponseBody
 	public Result queryDragonJade(){
 		List<DragonJade> data = queryDragonJadeDao.selectByCondition(new DragonJade());
-		Result res = new Result("获取数据成功.", 0, data);
+		Result res = new Result("鑾峰彇鏁版嵁鎴愬姛.", 0, data);
 		return res;
 	}
 	
@@ -164,7 +164,7 @@ public class MainController {
 	@ResponseBody
 	public Result queryEnchantment(){
 		List<Enchantment> data = queryEnchantmentDao.selectByCondition(new Enchantment());
-		Result res = new Result("获取数据成功.", 0, data);
+		Result res = new Result("鑾峰彇鏁版嵁鎴愬姛.", 0, data);
 		return res;
 	}
 	
@@ -172,7 +172,7 @@ public class MainController {
 	@ResponseBody
 	public Result queryMintMark(){
 		List<MintMark> data = queryMintMarkDao.selectByCondition(new MintMark());
-		Result res = new Result("获取数据成功.", 0, data);
+		Result res = new Result("鑾峰彇鏁版嵁鎴愬姛.", 0, data);
 		return res;
 	}
 	
@@ -180,7 +180,7 @@ public class MainController {
 	@ResponseBody
 	public Result queryStrengthen(){
 		List<Strengthen> data = queryStrengthenDao.selectByCondition(new Strengthen());
-		Result res = new Result("获取数据成功.", 0, data);
+		Result res = new Result("鑾峰彇鏁版嵁鎴愬姛.", 0, data);
 		return res;
 	}
 	

@@ -1,9 +1,9 @@
 /******************************************************************
  * IExcutedQuery.java
  * Copyright 2017 by WZG. All Rights Reserved.
- * CreateDate£º2017Äê6ÔÂ27ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´6æœˆ27æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.meek.realTest_2017_06.testSelectSpeed.callback;
@@ -13,15 +13,15 @@ import java.util.List;
 import com.celestial.meek.realTest_2017_06.testSelectSpeed.Entity;
 
 /**
- * <b>ÐÞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê6ÔÂ27ÈÕ
+ *                        ---- wangzg 2017å¹´6æœˆ27æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜Žï¼š</b>
  * <p> 
  * 
  * </p>

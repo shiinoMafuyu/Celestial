@@ -15,7 +15,7 @@ public class TestGame extends TestCase {
 	}
 	
 	public void testSpare(){
-		randomAdd(g,5);//0 1 2 3 4(´ÓµÚ0³¡¿ªÊ¼)
+		randomAdd(g,5);//0 1 2 3 4(ä»ç¬¬0åœºå¼€å§‹)
 		g.add(4);
 		g.add(5);// 5
 		
@@ -69,7 +69,7 @@ public class TestGame extends TestCase {
 	}
 	public void testDrunkPerfect(){
 		for(int i=0;i<Game.GAMEROUND;i++){
-			int pines1 = (int)Math.floor(Math.random()*10);//²»Òª10.ÕâÀïÊÇdemo,Êµ¼ÊÉÏÌí¼ÓÁËÒ»¸ö10ºó¾Í½øÈëÏÂÒ»ÂÖÁË,¶øÕâÀï»áÔÙÌí¼ÓµÚ¶ş¸ö0¶àÓàÁË..
+			int pines1 = (int)Math.floor(Math.random()*10);//ä¸è¦10.è¿™é‡Œæ˜¯demo,å®é™…ä¸Šæ·»åŠ äº†ä¸€ä¸ª10åå°±è¿›å…¥ä¸‹ä¸€è½®äº†,è€Œè¿™é‡Œä¼šå†æ·»åŠ ç¬¬äºŒä¸ª0å¤šä½™äº†..
 			g.add(pines1);
 			g.add(10-pines1);
 		}
@@ -89,16 +89,16 @@ public class TestGame extends TestCase {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÎªÓÎÏ·game Ìí¼Ó n»ØºÏµÄÂ¼ÈëÊı¾İ
+	 * ä¸ºæ¸¸æˆgame æ·»åŠ  nå›åˆçš„å½•å…¥æ•°æ®
 	 * </ul>
 	 * @param game
 	 * @param n
 	 */
 	private void randomAdd(Game game, int n) {
 		if(n<0 || n > 11)
-			throw new RuntimeException("»ØºÏÊı²»ÄÜ´óÓÚ11»òĞ¡ÓÚ0");
+			throw new RuntimeException("å›åˆæ•°ä¸èƒ½å¤§äº11æˆ–å°äº0");
 		for(int i=0;i<n;i++){
 			Random r = new Random();
 			int pines1 = r.nextInt(10)+1;//1 <= pines1 <= 10
@@ -123,7 +123,7 @@ public class TestGame extends TestCase {
 		g.add(5);
 		
 		g.add(10);//ok
-		//-------------Ò»°ë--------
+		//-------------ä¸€åŠ--------
 		
 		g.add(0);
 		g.add(1);

@@ -1,23 +1,23 @@
 /******************************************************************
  * Entity.java
  * Copyright 2017 by WZG. All Rights Reserved.
- * CreateDate£º2017Äê6ÔÂ27ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´6æœˆ27æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.meek.realTest_2017_06.testSelectSpeed;
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê6ÔÂ27ÈÕ
+ *                        ---- wangzg 2017å¹´6æœˆ27æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
  * 
  * </p>
@@ -45,9 +45,9 @@ public class Entity {
 	private String corereceivetime;
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡
+	 * è·å–
 	 * </ul>
 	 * @return the importtradedate
 	 */
@@ -56,9 +56,9 @@ public class Entity {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡
+	 * è·å–
 	 * </ul>
 	 * @return the id
 	 */
@@ -67,9 +67,9 @@ public class Entity {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡
+	 * è·å–
 	 * </ul>
 	 * @return the commodityid
 	 */
@@ -78,9 +78,9 @@ public class Entity {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡
+	 * è·å–
 	 * </ul>
 	 * @return the outprice
 	 */
@@ -89,9 +89,9 @@ public class Entity {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡
+	 * è·å–
 	 * </ul>
 	 * @return the exchangerate
 	 */
@@ -100,9 +100,9 @@ public class Entity {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡
+	 * è·å–
 	 * </ul>
 	 * @return the price
 	 */
@@ -111,9 +111,9 @@ public class Entity {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡
+	 * è·å–
 	 * </ul>
 	 * @return the priceno
 	 */
@@ -122,9 +122,9 @@ public class Entity {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡
+	 * è·å–
 	 * </ul>
 	 * @return the quotationqty
 	 */
@@ -133,9 +133,9 @@ public class Entity {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡
+	 * è·å–
 	 * </ul>
 	 * @return the tradefundstotal
 	 */
@@ -144,9 +144,9 @@ public class Entity {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡
+	 * è·å–
 	 * </ul>
 	 * @return the corereceivetime
 	 */
@@ -155,9 +155,9 @@ public class Entity {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃ
+	 * è®¾ç½®
 	 * </ul>
 	 * importtradedate
 	 */
@@ -166,9 +166,9 @@ public class Entity {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃ
+	 * è®¾ç½®
 	 * </ul>
 	 * id
 	 */
@@ -177,9 +177,9 @@ public class Entity {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃ
+	 * è®¾ç½®
 	 * </ul>
 	 * commodityid
 	 */
@@ -188,9 +188,9 @@ public class Entity {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃ
+	 * è®¾ç½®
 	 * </ul>
 	 * outprice
 	 */
@@ -199,9 +199,9 @@ public class Entity {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃ
+	 * è®¾ç½®
 	 * </ul>
 	 * exchangerate
 	 */
@@ -210,9 +210,9 @@ public class Entity {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃ
+	 * è®¾ç½®
 	 * </ul>
 	 * price
 	 */
@@ -221,9 +221,9 @@ public class Entity {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃ
+	 * è®¾ç½®
 	 * </ul>
 	 * priceno
 	 */
@@ -232,9 +232,9 @@ public class Entity {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃ
+	 * è®¾ç½®
 	 * </ul>
 	 * quotationqty
 	 */
@@ -243,9 +243,9 @@ public class Entity {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃ
+	 * è®¾ç½®
 	 * </ul>
 	 * tradefundstotal
 	 */
@@ -254,9 +254,9 @@ public class Entity {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃ
+	 * è®¾ç½®
 	 * </ul>
 	 * corereceivetime
 	 */

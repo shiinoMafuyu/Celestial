@@ -22,7 +22,7 @@ public class MainPanel extends JPanel{
 		icon = new ImageIcon(GraExp.class.getResource("/bkg04.jpg"));
 		img = icon.getImage();
 		
-		JButton jb = new JButton("ÕÙ»½ÂÜÀò£¡");
+		JButton jb = new JButton("å¬å”¤èè‰ï¼");
 		jb.setBounds(50, 50, 40, 25);
 		this.add(jb);
 		

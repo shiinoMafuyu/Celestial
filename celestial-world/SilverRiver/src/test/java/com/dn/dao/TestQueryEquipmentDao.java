@@ -39,7 +39,7 @@ public class TestQueryEquipmentDao{
 	
 	@Test
 	public void _01_insert(){
-		entity = new Equipment().setRepresentId("009300010001").setLevel(90).setGoodslevel("S").setName("±ùÁúÍ·¿ø").setAg(12.5).setHg(22.33);
+		entity = new Equipment().setRepresentId("009300010001").setLevel(90).setGoodslevel("S").setName("å†°é¾™å¤´ç›”").setAg(12.5).setHg(22.33);
 		int re = theDao.insert(entity);
 		Assert.assertTrue(re >=0);
 	}
@@ -47,7 +47,7 @@ public class TestQueryEquipmentDao{
 	@Test
 	public void _02_select01(){
 		List<Equipment> entityList = theDao.selectByCondition(entity);
-		System.out.println("Ìõ¼ş²éÑ¯£º");
+		System.out.println("æ¡ä»¶æŸ¥è¯¢ï¼š");
 		for(Equipment i:entityList){
 			System.out.println(i);
 		}
@@ -58,7 +58,7 @@ public class TestQueryEquipmentDao{
 	@Test
 	public void _02_select02_vague(){
 		List<Equipment> entityList = theDao.selectByVague(entity);
-		System.out.println("Ä£ºı²éÑ¯£º");
+		System.out.println("æ¨¡ç³ŠæŸ¥è¯¢ï¼š");
 		for(Equipment i:entityList){
 			System.out.println(i);
 		}

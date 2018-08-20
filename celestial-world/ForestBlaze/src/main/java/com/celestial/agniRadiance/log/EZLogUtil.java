@@ -29,14 +29,14 @@ public class EZLogUtil {
 		try {
 			showMSG = UtilUnicode.decodeUnicode(title);
 		} catch (Exception e) {
-			systemLogger.error("×ª»»»¶Ó­ĞÅÏ¢Òì³£", e);
+			systemLogger.error("è½¬æ¢æ¬¢è¿ä¿¡æ¯å¼‚å¸¸", e);
 		}
 		String version = (String) map.get("Signature-Version");
 		showStartSuccess(showMSG, version);
 	}
 
 	private static void showStartSuccess(String showMSG, String version) {
-		String versionName = "°æ±¾ºÅ£º";
+		String versionName = "ç‰ˆæœ¬å·ï¼š";
 
 		String emptyString = "                                                                         ";
 
@@ -91,7 +91,7 @@ public class EZLogUtil {
 		builder.append("\n=").append(emptyString).append("=");
 
 		String time = UtilDate.fmtTime(new Date());
-		builder.append("\n=                                          Æô¶¯ÓÚ£º").append(time).append("    =");
+		builder.append("\n=                                          å¯åŠ¨äºï¼š").append(time).append("    =");
 		builder.append("\n=").append(emptyString).append("=").append("\n===========================================================================");
 		systemLogger.slightWarn(builder.toString());
 	}
@@ -147,7 +147,7 @@ public class EZLogUtil {
 				}
 			}
 		} catch (Exception e) {
-			systemLogger.error("Í¨¹ıÀà " + clazz.getCanonicalName() + " ¶ÁÈ¡MFÎÄ¼şÊ§°Ü", e);
+			systemLogger.error("é€šè¿‡ç±» " + clazz.getCanonicalName() + " è¯»å–MFæ–‡ä»¶å¤±è´¥", e);
 		} finally {
 			if (reader != null) {
 				try {
@@ -191,7 +191,7 @@ public class EZLogUtil {
 		try {
 			return Class.forName(trace.getClassName());
 		} catch (ClassNotFoundException e) {
-			systemLogger.error("Í¨Â·¾¶ " + trace.getClassName() + " »ñÈ¡ÀàÊ§°Ü", e);
+			systemLogger.error("é€šè·¯å¾„ " + trace.getClassName() + " è·å–ç±»å¤±è´¥", e);
 		}
 
 		return null;

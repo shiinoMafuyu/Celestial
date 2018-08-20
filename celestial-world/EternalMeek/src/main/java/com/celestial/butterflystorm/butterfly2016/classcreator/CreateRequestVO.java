@@ -16,10 +16,10 @@ public class CreateRequestVO extends VOcreator{
 	
 	/**agniRadiance
 	 * 
-	 * <b>¹¹Ôì·½·¨</b>
-	 * Í¨¹ı±êÇ©Éú³ÉÀà.<br/>
+	 * <b>æ„é€ æ–¹æ³•</b>
+	 * é€šè¿‡æ ‡ç­¾ç”Ÿæˆç±».<br/>
 	 * <br/>
-	 * @param protocolTag req±êÇ©
+	 * @param protocolTag reqæ ‡ç­¾
 	 */
 	public CreateRequestVO(Tag reqTag) {
 		super.initAndCreate(reqTag);
@@ -27,26 +27,26 @@ public class CreateRequestVO extends VOcreator{
 
 	/**
 	 * 
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨Àà
+	 * åˆ›å»ºç±»
 	 * </ul>
 	 */
 	protected int createClass() {
 		super._createClass_p1();
-		//3.Ìí¼ÓËùÓĞ±äÁ¿¼°Æä×¢ÊÍ
+		//3.æ·»åŠ æ‰€æœ‰å˜é‡åŠå…¶æ³¨é‡Š
 		this.voClassStringList.addAll(UtilNormal.table(_createAllVariables()));
-		//3.25 Ìí¼ÓÖ÷ÀàÀïµÄ¶¨ÒåºÍget set·½·¨(ËùÓĞ¼¯ºÏÀàµÄ)
+		//3.25 æ·»åŠ ä¸»ç±»é‡Œçš„å®šä¹‰å’Œget setæ–¹æ³•(æ‰€æœ‰é›†åˆç±»çš„)
 		for(Tag t : this.layerTagList){
 			this.voClassStringList.addAll(UtilNormal.table(__createOneInnerClassDefine(t)));
 		}
-		//3.5Ìí¼ÓÇëÇóÊôĞÔ 4.Ìí¼Ó¹¹Ôì·½·¨¼°Æä×¢ÊÍ
+		//3.5æ·»åŠ è¯·æ±‚å±æ€§ 4.æ·»åŠ æ„é€ æ–¹æ³•åŠå…¶æ³¨é‡Š
 		this.voClassStringList.addAll(UtilNormal.table(_createProperty_pa_constructor_response()));
-		//5.Ìí¼ÓËùÓĞget·½·¨¼°Æä×¢ÊÍ
+		//5.æ·»åŠ æ‰€æœ‰getæ–¹æ³•åŠå…¶æ³¨é‡Š
 		this.voClassStringList.addAll(UtilNormal.table(_createAllGet(this.directTagList)));
-		//6.Ìí¼ÓÄÚ²¿Àà
+		//6.æ·»åŠ å†…éƒ¨ç±»
 		this.voClassStringList.addAll(UtilNormal.table(_createInnerClass()));
-		//¸½´ø Ìí¼ÓtoString·½·¨
+		//é™„å¸¦ æ·»åŠ toStringæ–¹æ³•
 		this.voClassStringList.addAll(UtilNormal.table(__createToString()));
 		this.voClassStringList.add("}");
 		this.voClassStringList.add("");
@@ -54,21 +54,21 @@ public class CreateRequestVO extends VOcreator{
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨ÄÚ²¿Àà
+	 * åˆ›å»ºå†…éƒ¨ç±»
 	 * </ul>
 	 * @return
 	 */
 	private Collection<? extends String> _createInnerClass() {
 		List<String> l = new ArrayList<String>();
-		//1.Ìí¼ÓÖ÷ÀàÀïµÄ¶¨ÒåºÍget set·½·¨(·Åµ½ÉÏÃæÈ¥ Ìí¼ÓËùÓĞ±äÁ¿Ä©Î²~)
+		//1.æ·»åŠ ä¸»ç±»é‡Œçš„å®šä¹‰å’Œget setæ–¹æ³•(æ”¾åˆ°ä¸Šé¢å» æ·»åŠ æ‰€æœ‰å˜é‡æœ«å°¾~)
 		
-		//2.Ìí¼ÓÄÚ²¿Àà<PROS>ÕâÒ»¼¶. Ã¿¸öÕâÒ»¼¶µÄ±êÇ©¶ÔÓ¦Ò»¸ö¼¯ºÏÀà.<PROS>¶ÔÓ¦µÄÊÇPropertyList,Ä¿Ç°Ö»ÓĞÕâ¸öÓĞĞèÒª×Ô¼ºÈ¥Conf.requestInnerClassNameMapÀïÅä.
+		//2.æ·»åŠ å†…éƒ¨ç±»<PROS>è¿™ä¸€çº§. æ¯ä¸ªè¿™ä¸€çº§çš„æ ‡ç­¾å¯¹åº”ä¸€ä¸ªé›†åˆç±».<PROS>å¯¹åº”çš„æ˜¯PropertyList,ç›®å‰åªæœ‰è¿™ä¸ªæœ‰éœ€è¦è‡ªå·±å»Conf.requestInnerClassNameMapé‡Œé….
 			/*<PROS>
-				<PRO>ÉÌÆ·ÊôĞÔ
-					<BP>ÊôĞÔÃû³Æ</BP>
-					<CP>ÉÌÆ·ÊôĞÔÖµ</CP>
+				<PRO>å•†å“å±æ€§
+					<BP>å±æ€§åç§°</BP>
+					<CP>å•†å“å±æ€§å€¼</CP>
 				</PRO>
 			</PROS>*/
 		for(Tag t : this.layerTagList){
@@ -78,9 +78,9 @@ public class CreateRequestVO extends VOcreator{
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨Ö÷ÀàÀï¶Ô¸ö¼¯ºÏÀà³ÉÔ±±äÁ¿¶ÔÏóµÄÉùÃ÷.
+	 * åˆ›å»ºä¸»ç±»é‡Œå¯¹ä¸ªé›†åˆç±»æˆå‘˜å˜é‡å¯¹è±¡çš„å£°æ˜.
 	 * </ul>
 	 * @param t
 	 * @return
@@ -91,9 +91,9 @@ public class CreateRequestVO extends VOcreator{
 		String className = Conf.requestInnerClassNameMap.get(tagName);
 		List<String> l = new ArrayList<String>();
 		l.add("/**");
-		l.add(" * <b>·½·¨ËµÃ÷£º</b>");
+		l.add(" * <b>æ–¹æ³•è¯´æ˜ï¼š</b>");
 		l.add(" * <ul>");
-		l.add(" * »ñÈ¡"+t.getValue()+"ÁĞ±í");
+		l.add(" * è·å–"+t.getValue()+"åˆ—è¡¨");
 		l.add(" * </ul>");
 		l.add(" * @return");
 		l.add(" */");
@@ -104,9 +104,9 @@ public class CreateRequestVO extends VOcreator{
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨Ò»¸öÄÚ²¿Àà()
+	 * åˆ›å»ºä¸€ä¸ªå†…éƒ¨ç±»()
 	 * </ul>
 	 * @param t
 	 * @return
@@ -114,17 +114,17 @@ public class CreateRequestVO extends VOcreator{
 	private Collection<? extends String> __createInnerGatherClass(Tag t) {
 		List<String> l = new ArrayList<String>();
 		l.add("/**");
-		l.add(" * ¼¯ºÏÀà");
+		l.add(" * é›†åˆç±»");
 		l.add(" */");
 		l.add("public class " + Conf.requestInnerClassNameMap.get(t.getTagName()) + " {");
-		//1.´´½¨¼¯ºÏÀàÄÚ²¿µÄĞÅÏ¢Àà±äÁ¿¶¨Òå ³õÊ¼»¯ get set·½·¨ private List<PropertyObj> PRO = new ArrayList<PropertyObj>(); 
+		//1.åˆ›å»ºé›†åˆç±»å†…éƒ¨çš„ä¿¡æ¯ç±»å˜é‡å®šä¹‰ åˆå§‹åŒ– get setæ–¹æ³• private List<PropertyObj> PRO = new ArrayList<PropertyObj>(); 
 		for(Tag ti : t.getChildTagList()){
 			l.addAll(UtilNormal.table(___createInnerProperty(ti)));
 		}
-		//2.´´½¨¼¯ºÏÀàÄÚ²¿µÄĞÅÏ¢Àà<PRO>ÕâÒ»¼¶
-			/*<PRO>ÉÌÆ·ÊôĞÔ
-				<BP>ÊôĞÔÃû³Æ</BP>
-				<CP>ÉÌÆ·ÊôĞÔÖµ</CP>
+		//2.åˆ›å»ºé›†åˆç±»å†…éƒ¨çš„ä¿¡æ¯ç±»<PRO>è¿™ä¸€çº§
+			/*<PRO>å•†å“å±æ€§
+				<BP>å±æ€§åç§°</BP>
+				<CP>å•†å“å±æ€§å€¼</CP>
 			</PRO>*/
 		for(Tag ti : t.getChildTagList()){
 			l.addAll(UtilNormal.table(___createInnerPropertyClass(ti)));
@@ -136,9 +136,9 @@ public class CreateRequestVO extends VOcreator{
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨¼¯ºÏÀàµÄ×ÓÀàÊôĞÔÀà.
+	 * åˆ›å»ºé›†åˆç±»çš„å­ç±»å±æ€§ç±».
 	 * </ul>
 	 * @param ti
 	 * @return
@@ -152,12 +152,12 @@ public class CreateRequestVO extends VOcreator{
 		String className = Conf.requestInnerClassNameMap.get(propertyName);
 		
 		l.add("/**");
-		l.add(" * ÊôĞÔÀà");
+		l.add(" * å±æ€§ç±»");
 		l.add(" */");
 		l.add("public class "+className+" {");
 		l.addAll(UtilNormal.table(__createNormalVariable( t.getChildTagList())));
 		l.add("	/**");
-		l.add("	* <b>¹¹Ôì·½·¨</b>");
+		l.add("	* <b>æ„é€ æ–¹æ³•</b>");
 		l.add("	* <br/>");
 		l.add("	*/");
 		l.add("	public "+className+"() {");
@@ -173,9 +173,9 @@ public class CreateRequestVO extends VOcreator{
 
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Ìí¼ÓtoString()·½·¨.
+	 * æ·»åŠ toString()æ–¹æ³•.
 	 * </ul>
 	 * @return
 	 */
@@ -190,9 +190,9 @@ public class CreateRequestVO extends VOcreator{
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨¼¯ºÏÀàµÄÄÚ²¿ÊôĞÔ.°üÀ¨³ÉÔ±±äÁ¿¶¨Òå ×¢ÊÍ get set·½·¨Ö®Àà.
+	 * åˆ›å»ºé›†åˆç±»çš„å†…éƒ¨å±æ€§.åŒ…æ‹¬æˆå‘˜å˜é‡å®šä¹‰ æ³¨é‡Š get setæ–¹æ³•ä¹‹ç±».
 	 * </ul>
 	 * @param t
 	 * @return
@@ -205,16 +205,16 @@ public class CreateRequestVO extends VOcreator{
 		String propertyName = t.getTagName();
 		String className = Conf.requestInnerClassNameMap.get(propertyName);
 		if(null == className)
-			throw new RuntimeException("Conf.requestInnerClassNameMapÖĞÎ´ÕÒµ½ " + propertyName +"¶ÔÓ¦ÀàÃû.");
+			throw new RuntimeException("Conf.requestInnerClassNameMapä¸­æœªæ‰¾åˆ° " + propertyName +"å¯¹åº”ç±»å.");
 		l.add("/**");
 		l.add(" * " + annotation);
 		l.add(" */");
 		l.add("private List<" + className + "> " + propertyName + " = new ArrayList<" + className + ">();");
 		l.add("");
 		l.add("/**");
-		l.add("* <b>·½·¨ËµÃ÷£º</b>");
+		l.add("* <b>æ–¹æ³•è¯´æ˜ï¼š</b>");
 		l.add("* <ul>");
-		l.add("* ÉèÖÃ" + annotation);
+		l.add("* è®¾ç½®" + annotation);
 		l.add("* </ul>");
 		l.add("* @param list");
 		l.add("*/");
@@ -223,9 +223,9 @@ public class CreateRequestVO extends VOcreator{
 		l.add("}");
 		l.add("");
 		l.add("/**");
-		l.add("* <b>·½·¨ËµÃ÷£º</b>");
+		l.add("* <b>æ–¹æ³•è¯´æ˜ï¼š</b>");
 		l.add("* <ul>");
-		l.add("* »ñÈ¡" + annotation);
+		l.add("* è·å–" + annotation);
 		l.add("* </ul>");
 		l.add("* @return");
 		l.add("*/");
@@ -237,9 +237,9 @@ public class CreateRequestVO extends VOcreator{
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨ÆÕÍ¨³ÉÔ±±äÁ¿µÄget·½·¨¼°Æä×¢ÊÍ.
+	 * åˆ›å»ºæ™®é€šæˆå‘˜å˜é‡çš„getæ–¹æ³•åŠå…¶æ³¨é‡Š.
 	 * </ul>
 	 * @param tagList 
 	 * @return
@@ -253,9 +253,9 @@ public class CreateRequestVO extends VOcreator{
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨get·½·¨¼°Æä×¢ÊÍ.
+	 * åˆ›å»ºgetæ–¹æ³•åŠå…¶æ³¨é‡Š.
 	 * </ul>
 	 * @param t
 	 * @return
@@ -263,9 +263,9 @@ public class CreateRequestVO extends VOcreator{
 	private Collection<? extends String> __creaeteGetMethod(Tag t) {
 		List<String> l = new ArrayList<String>();
 		l.add("/**");
-		l.add(" * <b>·½·¨ËµÃ÷£º</b>");
+		l.add(" * <b>æ–¹æ³•è¯´æ˜ï¼š</b>");
 		l.add(" * <ul>");
-		l.add(" * »ñÈ¡" + t.getValue() + "");
+		l.add(" * è·å–" + t.getValue() + "");
 		l.add(" * </ul>");
 		l.add(" * @return");
 		l.add(" */");
@@ -278,9 +278,9 @@ public class CreateRequestVO extends VOcreator{
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨ÖĞ¼ä²¿·Ö
+	 * åˆ›å»ºä¸­é—´éƒ¨åˆ†
 	 * </ul>
 	 * @return
 	 */
@@ -294,15 +294,15 @@ public class CreateRequestVO extends VOcreator{
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Éú³É·µ»ØresponseµÄ´úÂë.
+	 * ç”Ÿæˆè¿”å›responseçš„ä»£ç .
 	 * </ul>
 	 * @return
 	 */
 	private Collection<? extends String> __create_getReponse() {
 		List<String> l = new ArrayList<String>();
-		//Éú³Épublic ResponseVO getResponseVO()·½·¨ ¼°Æä×¢½â
+		//ç”Ÿæˆpublic ResponseVO getResponseVO()æ–¹æ³• åŠå…¶æ³¨è§£
 		String head = className.substring(0, className.indexOf("RequestVO"));
 		l.add("@Override");
 		l.add("public ResponseVO getResponseVO() {");
@@ -313,10 +313,10 @@ public class CreateRequestVO extends VOcreator{
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨¹¹Ôì·½·¨.<br/>
-	 * Ã»ÓĞuserID sessionIDÊ±²»Òª´ø²Î¹¹Ôìº¯Êı<br/>
+	 * åˆ›å»ºæ„é€ æ–¹æ³•.<br/>
+	 * æ²¡æœ‰userID sessionIDæ—¶ä¸è¦å¸¦å‚æ„é€ å‡½æ•°<br/>
 	 * </ul>
 	 * @return
 	 */
@@ -325,7 +325,7 @@ public class CreateRequestVO extends VOcreator{
 		String head = className.substring(0, className.indexOf("RequestVO"));
 		//TemplateQueryRequestVO
 		l.add("/**");
-		l.add(" * <b>¹¹Ôì·½·¨</b>");
+		l.add(" * <b>æ„é€ æ–¹æ³•</b>");
 		l.add(" * <br/>");
 		l.add(" */");
 		l.add("public "+head+"RequestVO() {");
@@ -334,7 +334,7 @@ public class CreateRequestVO extends VOcreator{
 		l.add("");
 		if(this.directTagListPa.size() > 0){
 			l.add("/**");
-			l.add(" * <b>¹¹Ôì·½·¨</b>");
+			l.add(" * <b>æ„é€ æ–¹æ³•</b>");
 			l.add(" * <br/>");
 			l.add(" * @param userID");
 			l.add(" * @param sessionID");
@@ -350,15 +350,15 @@ public class CreateRequestVO extends VOcreator{
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨¸¸±äÁ¿µÄget set·½·¨.<br/>
-	 * ÓĞuserID sessionIDºÍÃ»ÓĞ²»Í¬Å¶~
+	 * åˆ›å»ºçˆ¶å˜é‡çš„get setæ–¹æ³•.<br/>
+	 * æœ‰userID sessionIDå’Œæ²¡æœ‰ä¸åŒå“¦~
 	 * </ul>
 	 * @return
 	 */
 	private Collection<? extends String> __create_paGetter() {
-		//ÏÖÔÚ¾ÍÕâÁ½¸ö,ĞèÒªÔÙ¼Ó.¾ÍÊÇËµ¼ÙÈçÓĞÆäËû(²»¿ÉÄÜ)ÔòÌø¹ı.
+		//ç°åœ¨å°±è¿™ä¸¤ä¸ª,éœ€è¦å†åŠ .å°±æ˜¯è¯´å‡å¦‚æœ‰å…¶ä»–(ä¸å¯èƒ½)åˆ™è·³è¿‡.
 		List<String> l = new ArrayList<String>();
 		
 		if(this.directTagListPa.size() > 0){
@@ -378,7 +378,7 @@ public class CreateRequestVO extends VOcreator{
 					l.add("");
 				}
 				else{
-					throw new RuntimeException("²»Ö§³ÖµÄ¼Ì³ĞÔªËØ.ÇëÌí¼ÓÖ§³Ö»òÕßÖØĞ´Ö§³Ö·½·¨.");
+					throw new RuntimeException("ä¸æ”¯æŒçš„ç»§æ‰¿å…ƒç´ .è¯·æ·»åŠ æ”¯æŒæˆ–è€…é‡å†™æ”¯æŒæ–¹æ³•.");
 				}
 			}
 		}else{
@@ -398,9 +398,9 @@ public class CreateRequestVO extends VOcreator{
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨ÄÚ²¿Àà±äÁ¿¶¨Òå
+	 * åˆ›å»ºå†…éƒ¨ç±»å˜é‡å®šä¹‰
 	 * </ul>
 	 * @return
 	 */
@@ -419,9 +419,9 @@ public class CreateRequestVO extends VOcreator{
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Éú³ÉÖ÷ÀàÀïËùÓĞ±äÁ¿¼°Æä×¢ÊÍ.
+	 * ç”Ÿæˆä¸»ç±»é‡Œæ‰€æœ‰å˜é‡åŠå…¶æ³¨é‡Š.
 	 * </ul>
 	 * @return
 	 */
@@ -433,9 +433,9 @@ public class CreateRequestVO extends VOcreator{
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨³£¹æ±äÁ¿ºÍÆä×¢ÊÍ
+	 * åˆ›å»ºå¸¸è§„å˜é‡å’Œå…¶æ³¨é‡Š
 	 * </ul>
 	 * @param tagList 
 	 * @return
@@ -450,9 +450,9 @@ public class CreateRequestVO extends VOcreator{
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¸¸ÀàÖĞµÄ±äÁ¿
+	 * çˆ¶ç±»ä¸­çš„å˜é‡
 	 * </ul>
 	 * @return
 	 */
@@ -467,9 +467,9 @@ public class CreateRequestVO extends VOcreator{
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¸ù¾İ»ù²ã±êÇ©´´½¨±äÁ¿<br/>
+	 * æ ¹æ®åŸºå±‚æ ‡ç­¾åˆ›å»ºå˜é‡<br/>
 	 * </ul>
 	 * @param tag
 	 * @return
@@ -488,7 +488,7 @@ public class CreateRequestVO extends VOcreator{
 	
 	protected void checkParamArr() {
 		super.__checkParamArr_0();
-		//Ğ£ÑéÄÚ²¿Àà±êÇ©ÍêÕû ²¢ÇÒ°ÑÀàĞÍÌí¼Óµ½typeListÀïÃæ
+		//æ ¡éªŒå†…éƒ¨ç±»æ ‡ç­¾å®Œæ•´ å¹¶ä¸”æŠŠç±»å‹æ·»åŠ åˆ°typeListé‡Œé¢
 		if(this.layerTagList.size() > 0){
 			this.typeList.add("ToStringStyle");
 			this.typeList.add("List");
@@ -496,21 +496,21 @@ public class CreateRequestVO extends VOcreator{
 				checkLayerTag(t);
 			}
 		}
-		//¼ì²é²ÎÊıÀàĞÍÓĞÎÊÌâÃ».
+		//æ£€æŸ¥å‚æ•°ç±»å‹æœ‰é—®é¢˜æ²¡.
 		checkType();
 	}
 
 
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¼ì²éÄÚ²¿Àà±êÇ©ÀïµÄ¶«¶«<br/>
+	 * æ£€æŸ¥å†…éƒ¨ç±»æ ‡ç­¾é‡Œçš„ä¸œä¸œ<br/>
 	 * </ul>
 	 * @param t
 	 */
 	private void checkLayerTag(Tag t) {
-		//ÏÖÔÚÖ»¼ûµ½ÓĞÈı²ãµÄÁË,¾Í°´3²ãÀ´Ğ´,ÓĞĞèÒªÔÙ¸Ä.
+		//ç°åœ¨åªè§åˆ°æœ‰ä¸‰å±‚çš„äº†,å°±æŒ‰3å±‚æ¥å†™,æœ‰éœ€è¦å†æ”¹.
 		for(Tag t1 : t.getChildTagList()){
 			checkTagList(t1.getChildTagList());
 		}
@@ -518,9 +518,9 @@ public class CreateRequestVO extends VOcreator{
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ³õÊ¼»¯³ÉÔ±±äÁ¿  <br/>
+	 * åˆå§‹åŒ–æˆå‘˜å˜é‡  <br/>
 	 * </ul>
 	 * @param reqTag
 	 */
@@ -530,7 +530,7 @@ public class CreateRequestVO extends VOcreator{
 			if(t.getMapColor() != null && t.getMapColor().size() >0){
 				this.layerTagList.add(t);
 			}else{
-				//Èç¹ûÊÇConfµÄrequestPaVariableMapÀï¶¨ÒåµÄÔòÈ¥µô.
+				//å¦‚æœæ˜¯Confçš„requestPaVariableMapé‡Œå®šä¹‰çš„åˆ™å»æ‰.
 				super.__init_1_separateVariable(t,Conf.requestPaVariableMap);
 			}
 		}

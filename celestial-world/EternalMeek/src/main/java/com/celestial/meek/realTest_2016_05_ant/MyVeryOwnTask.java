@@ -15,52 +15,52 @@ public class MyVeryOwnTask extends Task {
 	private String podding;
 	private String project;
 	
-	//Ä¿Â¼ÏÂÓĞµÄ¾ÍÖ±½Ó¸²¸Ç ¸ÄÃû ÏÈ×öÕâ¸ö
-	//Ã»ÓĞÄ¿Â¼ Ã»ÓĞÎÄ¼şµÄµ¯³ö¸öÌáÊ¾~~×îºÃ Ó¦¸Ã
+	//ç›®å½•ä¸‹æœ‰çš„å°±ç›´æ¥è¦†ç›– æ”¹å å…ˆåšè¿™ä¸ª
+	//æ²¡æœ‰ç›®å½• æ²¡æœ‰æ–‡ä»¶çš„å¼¹å‡ºä¸ªæç¤º~~æœ€å¥½ åº”è¯¥
     // The method executing the task
     @SuppressWarnings("resource")
 	public void execute() throws BuildException {
-        System.out.println("²¹¶¡Î»ÖÃ: "+podding);
-        System.out.println("ÏîÄ¿Î»ÖÃ: "+project);
-        //ÕÒµ½²¹¶¡Ãû	ÕÒµ½²¹¶¡ÏÂÃæËùÓĞÎÄ¼şµÄ×Ö·û´® 		Æ´ÏîÄ¿ÏÂÃæµÄÎÄ¼ş,È¥¿´ÏÂÃæÓĞÃ»ÓĞ²¹¶¡¶ÔÓ¦ÎÄ¼ş	Ã»ÓĞµÄ»°Ö±½Ó¸´ÖÆ ÓĞµÄ»°Ö±½Ó¸´ÖÆ(..)
-        //²»»ñÈ¡Ä¿Â¼ÔõÃ´Ñù (niceIdea~) Èç¹û²¹¶¡Àï´æÔÚÏîÄ¿Àï²»º¬ÓĞµÄÄ¿Â¼»òÎÄ¼ş,´òÓ¡³öÀ´,ÎÊÊÇ·ñ´ò²¹¶¡.ÊÇµÄ»°,´´½¨Ä¿Â¼ºÍÎÄ¼ş,·ñµÄ»°ÍêÈ«²»Ö´ĞĞ²Ù×÷--->±éÀú²¹¶¡È¥°É~
-        //·µ»ØµÄÊÇÊı×é ²»¹ıÃ»Ê²Ã´¹ØÏµ,²¢²»ĞèÒª»ñÈ¡²»ÖªµÀ³¤¶ÈºÍ²ã´ÎµÄlist Ö±½ÓÈ«²¿Ğ£ÑéÒ»´Î ÔÙÈ«²¿´´½¨¼´¿É
+        System.out.println("è¡¥ä¸ä½ç½®: "+podding);
+        System.out.println("é¡¹ç›®ä½ç½®: "+project);
+        //æ‰¾åˆ°è¡¥ä¸å	æ‰¾åˆ°è¡¥ä¸ä¸‹é¢æ‰€æœ‰æ–‡ä»¶çš„å­—ç¬¦ä¸² 		æ‹¼é¡¹ç›®ä¸‹é¢çš„æ–‡ä»¶,å»çœ‹ä¸‹é¢æœ‰æ²¡æœ‰è¡¥ä¸å¯¹åº”æ–‡ä»¶	æ²¡æœ‰çš„è¯ç›´æ¥å¤åˆ¶ æœ‰çš„è¯ç›´æ¥å¤åˆ¶(..)
+        //ä¸è·å–ç›®å½•æ€ä¹ˆæ · (niceIdea~) å¦‚æœè¡¥ä¸é‡Œå­˜åœ¨é¡¹ç›®é‡Œä¸å«æœ‰çš„ç›®å½•æˆ–æ–‡ä»¶,æ‰“å°å‡ºæ¥,é—®æ˜¯å¦æ‰“è¡¥ä¸.æ˜¯çš„è¯,åˆ›å»ºç›®å½•å’Œæ–‡ä»¶,å¦çš„è¯å®Œå…¨ä¸æ‰§è¡Œæ“ä½œ--->éå†è¡¥ä¸å»å§~
+        //è¿”å›çš„æ˜¯æ•°ç»„ ä¸è¿‡æ²¡ä»€ä¹ˆå…³ç³»,å¹¶ä¸éœ€è¦è·å–ä¸çŸ¥é“é•¿åº¦å’Œå±‚æ¬¡çš„list ç›´æ¥å…¨éƒ¨æ ¡éªŒä¸€æ¬¡ å†å…¨éƒ¨åˆ›å»ºå³å¯
         File fPodding=new File(podding);
         File fProject=new File(project);
         
-        //¼ì²éÄ¿Â¼ÊÇ²»ÊÇ²»´æÔÚ
+        //æ£€æŸ¥ç›®å½•æ˜¯ä¸æ˜¯ä¸å­˜åœ¨
         boolean b1=checkFile(fPodding);
         boolean b2=checkFile(fProject);
         if(!b1){
-        	System.out.println("²¹¶¡Ä¿Â¼Îª¿Õ»òÕß²»´æÔÚ»òÕß²»ÊÇÄ¿Â¼,Çë¼ì²é~");
+        	System.out.println("è¡¥ä¸ç›®å½•ä¸ºç©ºæˆ–è€…ä¸å­˜åœ¨æˆ–è€…ä¸æ˜¯ç›®å½•,è¯·æ£€æŸ¥~");
         	return;
         }
         if(!b2){
-        	System.out.println("ÏîÄ¿Ä¿Â¼Îª¿Õ»òÕß²»´æÔÚ»òÕß²»ÊÇÄ¿Â¼,Çë¼ì²é~");
+        	System.out.println("é¡¹ç›®ç›®å½•ä¸ºç©ºæˆ–è€…ä¸å­˜åœ¨æˆ–è€…ä¸æ˜¯ç›®å½•,è¯·æ£€æŸ¥~");
         	return;
         }
         
         
-        //¶ÔÕÕÎÄ¼ş
+        //å¯¹ç…§æ–‡ä»¶
         boolean b= recursiveTraverseCheck(fPodding,fProject);
         if(b){
-        	System.out.println("Íê³É¼ì²â,²¹¶¡Ä¿Â¼ÓëÏîÄ¿Ä¿Â¼½á¹¹Ò»ÖÂ.ÊÇ·ñ¿ªÊ¼? Y/N");
+        	System.out.println("å®Œæˆæ£€æµ‹,è¡¥ä¸ç›®å½•ä¸é¡¹ç›®ç›®å½•ç»“æ„ä¸€è‡´.æ˜¯å¦å¼€å§‹? Y/N");
         }else{
-        	System.out.println("Íê³É¼ì²â,²¹¶¡Ä¿Â¼ÓëÏîÄ¿Ä¿Â¼½á¹¹²»Ò»ÖÂ.Èô¼ÌĞøÔò»áÔÚÏîÄ¿ÖĞÔö¼Ó¶ÔÓ¦Ä¿Â¼ºÍÎÄ¼ş");
-        	System.out.println("ÊÇ·ñ¿ªÊ¼? Y/N");
+        	System.out.println("å®Œæˆæ£€æµ‹,è¡¥ä¸ç›®å½•ä¸é¡¹ç›®ç›®å½•ç»“æ„ä¸ä¸€è‡´.è‹¥ç»§ç»­åˆ™ä¼šåœ¨é¡¹ç›®ä¸­å¢åŠ å¯¹åº”ç›®å½•å’Œæ–‡ä»¶");
+        	System.out.println("æ˜¯å¦å¼€å§‹? Y/N");
         }
         
-        //¶ÔÕÕÍê±Ï Ö´ĞĞcopy»òÕß·ÅÆú
+        //å¯¹ç…§å®Œæ¯• æ‰§è¡Œcopyæˆ–è€…æ”¾å¼ƒ
         Scanner scan=new Scanner(System.in);
         String op=scan.next();
         if(!op.toLowerCase().equals("y")){
-        	System.out.println("´ò²¹¶¡²Ù×÷ÒÑ·ÅÆú,³ÌĞò½áÊø~");
+        	System.out.println("æ‰“è¡¥ä¸æ“ä½œå·²æ”¾å¼ƒ,ç¨‹åºç»“æŸ~");
         	return;
         }
         //copy
-        //copy step1:»ñÈ¡±¸·İ´æ·ÅÂ·¾¶
+        //copy step1:è·å–å¤‡ä»½å­˜æ”¾è·¯å¾„
         String recordIndexPath=createRecordIndex(fPodding);
-        //copy step2:projectÀïÃæµÄÎÄ¼şÒÆ¶¯±¸·İ,²¹¶¡ÖĞµÄÎÄ¼ş·Å¹ıÀ´ Ä¿Â¼´´½¨
+        //copy step2:projecté‡Œé¢çš„æ–‡ä»¶ç§»åŠ¨å¤‡ä»½,è¡¥ä¸ä¸­çš„æ–‡ä»¶æ”¾è¿‡æ¥ ç›®å½•åˆ›å»º
 		try {
 			recursiveTraverseMoveAndCopy(fPodding,fProject,recordIndexPath,fProject.getPath().lastIndexOf("\\"));
 		} catch (Exception e) {
@@ -69,13 +69,13 @@ public class MyVeryOwnTask extends Task {
         
     }
     /**
-     * ¼ì²éFileÊÇ·ñÎª¿Õ»òÕß²»´æÔÚ»òÕß²»ÊÇÄ¿Â¼
+     * æ£€æŸ¥Fileæ˜¯å¦ä¸ºç©ºæˆ–è€…ä¸å­˜åœ¨æˆ–è€…ä¸æ˜¯ç›®å½•
      * @param f
      * @return
      */
 	private static boolean checkFile(File f) {
 		if(!(f!=null&&f.exists()&&!f.isFile())){
-			System.out.println("²¹¶¡ÎÄ¼ş¼ĞÎªnull,»òÕß²»´æÔÚ,»òÕß²»ÊÇÎÄ¼ş¼Ğ");
+			System.out.println("è¡¥ä¸æ–‡ä»¶å¤¹ä¸ºnull,æˆ–è€…ä¸å­˜åœ¨,æˆ–è€…ä¸æ˜¯æ–‡ä»¶å¤¹");
 			return false;
 		}else{
 			return true;
@@ -83,9 +83,9 @@ public class MyVeryOwnTask extends Task {
 	}
 
 	/**
-	 * Í¨¹ı¹ÜµÀ´«ÊäÎÄ¼ş
-	 * @param f1 ÊäÈëÎÄ¼ş
-	 * @param f2 Êä³öÎÄ¼ş
+	 * é€šè¿‡ç®¡é“ä¼ è¾“æ–‡ä»¶
+	 * @param f1 è¾“å…¥æ–‡ä»¶
+	 * @param f2 è¾“å‡ºæ–‡ä»¶
 	 * @return
 	 * @throws Exception
 	 */
@@ -112,8 +112,8 @@ public class MyVeryOwnTask extends Task {
 	}
 	
 	/**
-	 * ¸ù¾İ²¹¶¡ËùÔÚÎ»ÖÃ´´½¨±¸·İÄ¿Â¼
-	 * ²¹¶¡Í¬Ò»¼¶Ä¿Â¼ÏÂ½¨Á¢²¹¶¡±¸·İÄ¿Â¼---ÈÕÆÚ-02---ËùÓĞÏîÄ¿µÄ±¸·İ 
+	 * æ ¹æ®è¡¥ä¸æ‰€åœ¨ä½ç½®åˆ›å»ºå¤‡ä»½ç›®å½•
+	 * è¡¥ä¸åŒä¸€çº§ç›®å½•ä¸‹å»ºç«‹è¡¥ä¸å¤‡ä»½ç›®å½•---æ—¥æœŸ-02---æ‰€æœ‰é¡¹ç›®çš„å¤‡ä»½ 
 	 * @param podding
 	 * @return
 	 */
@@ -135,14 +135,14 @@ public class MyVeryOwnTask extends Task {
 		recordIndexFile.mkdirs();
 		return recordIndexFile.getPath();
 	}
-	//ÎÄ¼şµİ¹écopy
-		//±éÀú²¹¶¡ ¸ù¾İ²¹¶¡ÖĞµÄÎÄ¼ş ÎÄ¼ş¼ĞÈ¥ÏîÄ¿ÖĞÒÆ×ßÎÄ¼ş»òÕßÖ±½Ó´´½¨
+	//æ–‡ä»¶é€’å½’copy
+		//éå†è¡¥ä¸ æ ¹æ®è¡¥ä¸ä¸­çš„æ–‡ä»¶ æ–‡ä»¶å¤¹å»é¡¹ç›®ä¸­ç§»èµ°æ–‡ä»¶æˆ–è€…ç›´æ¥åˆ›å»º
 		/**
 		 * 
-		 * @param podding ²¹¶¡ÎÄ¼ş
-		 * @param project ÏîÄ¿ÎÄ¼ş
-		 * @param recordIndexPath ±¸·İ±£´æµÄ¸ùÂ·¾¶
-		 * @param index projectµÄÃû×ÖµÄÎ»ÖÃ,ÓÃÀ´´´½¨±£´æÂ·¾¶µÄÎ»ÖÃÊ±ºòĞèÒªÓÃ
+		 * @param podding è¡¥ä¸æ–‡ä»¶
+		 * @param project é¡¹ç›®æ–‡ä»¶
+		 * @param recordIndexPath å¤‡ä»½ä¿å­˜çš„æ ¹è·¯å¾„
+		 * @param index projectçš„åå­—çš„ä½ç½®,ç”¨æ¥åˆ›å»ºä¿å­˜è·¯å¾„çš„ä½ç½®æ—¶å€™éœ€è¦ç”¨
 		 * @throws Exception 
 		 */
 		private static void recursiveTraverseMoveAndCopy(File podding, File project,String recordIndexPath, int index) throws Exception {
@@ -151,20 +151,20 @@ public class MyVeryOwnTask extends Task {
 			File ex=null;
 			boolean isExist=true;
 			for(File i:fArr){
-				ex=new File(sProject+"/"+i.getName());//ÎÄ¼şÈ«Ãû~Ö»²Ù×÷ÎÄ¼ş
+				ex=new File(sProject+"/"+i.getName());//æ–‡ä»¶å…¨å~åªæ“ä½œæ–‡ä»¶
 				isExist=ex.exists();
-				if(i.isFile()){//ÊÇÎÄ¼ş
-					if(isExist){//´æÔÚµÄ»° ÒÆ×ß
+				if(i.isFile()){//æ˜¯æ–‡ä»¶
+					if(isExist){//å­˜åœ¨çš„è¯ ç§»èµ°
 						File ft=new File(recordIndexPath+"/"+ex.getPath().substring(index));
 						ft.getParentFile().mkdirs();
 						ft.createNewFile();
 						copyByTransfer(ex,ft);
-					}else{//²»´æÔÚµÄ»°´´½¨
+					}else{//ä¸å­˜åœ¨çš„è¯åˆ›å»º
 						ex.createNewFile();
 					}
 					copyByTransfer(i,ex);
-				}else{//ÊÇÄ¿Â¼
-					if(!isExist){//ÏîÄ¿ÖĞ²»´æÔÚµÄ¶ÔÓ¦Ä¿Â¼»°´´½¨Ä¿Â¼ ¼ÌĞøµİ¹é
+				}else{//æ˜¯ç›®å½•
+					if(!isExist){//é¡¹ç›®ä¸­ä¸å­˜åœ¨çš„å¯¹åº”ç›®å½•è¯åˆ›å»ºç›®å½• ç»§ç»­é€’å½’
 						ex.mkdirs();
 					}
 					recursiveTraverseMoveAndCopy(i,ex,recordIndexPath,index);
@@ -174,8 +174,8 @@ public class MyVeryOwnTask extends Task {
 			
 		}
 	/**
-	 * µİ¹éÑéÖ¤ÎÄ¼şÊÇ·ñ´æÔÚ
-	 * ÒÔ²¹¶¡Îª×¼ Í¬Ê±µİ¹é ²¹¶¡ºÍÏîÄ¿±ØĞëÍ¬Ò»¼¶±ğ,Ö®Ç°·½Ê½µÄÊÇ¿Óµù~~
+	 * é€’å½’éªŒè¯æ–‡ä»¶æ˜¯å¦å­˜åœ¨
+	 * ä»¥è¡¥ä¸ä¸ºå‡† åŒæ—¶é€’å½’ è¡¥ä¸å’Œé¡¹ç›®å¿…é¡»åŒä¸€çº§åˆ«,ä¹‹å‰æ–¹å¼çš„æ˜¯å‘çˆ¹~~
 	 * @param podding
 	 * @param project
 	 * @return
@@ -187,17 +187,17 @@ public class MyVeryOwnTask extends Task {
 		File ex=null;
 		boolean isExist=true;
 		boolean isSameStructure=true;
-		//±éÀú
-		//Èç¹ûÊÇÎÄ¼şÔò²»»ñÈ¡list Ö±½Ó¿´ÁíÒ»±ßÓĞÃ»ÓĞ ·ñÔòµÄ»°Ò²Òª¿´ÄÇ±ßÓĞÃ»ÓĞ ²¢ÇÒÓĞµÄ»°»¹Òª±È½ÏÏÂ¼¶Ä¿Â¼
+		//éå†
+		//å¦‚æœæ˜¯æ–‡ä»¶åˆ™ä¸è·å–list ç›´æ¥çœ‹å¦ä¸€è¾¹æœ‰æ²¡æœ‰ å¦åˆ™çš„è¯ä¹Ÿè¦çœ‹é‚£è¾¹æœ‰æ²¡æœ‰ å¹¶ä¸”æœ‰çš„è¯è¿˜è¦æ¯”è¾ƒä¸‹çº§ç›®å½•
 		for(File i:fArr){
 			ex=new File(sProject+"/"+i.getName());
 			isExist=ex.exists();
-			if(isExist==false)//Õâ¾ä»°µÄÒâË¼ÊÇ ±éÀú¹ı³ÌÖĞÖ»ÒªÓĞÒ»¸ö²¹¶¡ÖĞ´æÔÚ¶øÏîÄ¿ÖĞ²»´æÔÚµÄÎÄ¼ş/ÎÄ¼ş¼Ğ Ôò½á¹¹ÊÇ²»Ò»ÑùµÄ ±ä³Éfalse~
+			if(isExist==false)//è¿™å¥è¯çš„æ„æ€æ˜¯ éå†è¿‡ç¨‹ä¸­åªè¦æœ‰ä¸€ä¸ªè¡¥ä¸ä¸­å­˜åœ¨è€Œé¡¹ç›®ä¸­ä¸å­˜åœ¨çš„æ–‡ä»¶/æ–‡ä»¶å¤¹ åˆ™ç»“æ„æ˜¯ä¸ä¸€æ ·çš„ å˜æˆfalse~
 				isSameStructure=false;
 			if(i.isFile()){
-				System.out.println("ÎÄ¼ş : "+ex.getPath() +"´æÔÚ : "+isExist );
+				System.out.println("æ–‡ä»¶ : "+ex.getPath() +"å­˜åœ¨ : "+isExist );
 			}else{
-				System.out.println("Ä¿Â¼ : "+ex.getPath() +"´æÔÚ : "+isExist );
+				System.out.println("ç›®å½• : "+ex.getPath() +"å­˜åœ¨ : "+isExist );
 				if(isExist){
 					boolean b=recursiveTraverseCheck(i,ex);
 					if(b==false)

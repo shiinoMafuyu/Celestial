@@ -14,23 +14,23 @@ import java.util.Date;
  
 public class GenEntityVO {  
       
-private String packageOutPath = "com.vbm.grc.basic.busiarea";//指定实体生成�?��包的路径  
-private String authorName = "lqy";//作�?名字  
+private String packageOutPath = "com.vbm.grc.basic.busiarea";//æå®å®ä½çææ?¨åçè·¯å¾  
+private String authorName = "lqy";//ä½è?åå­  
 private String extendVo="GrcSuperVO";
 private String extendVoPath="com.grc.basic.vo.pub.GrcSuperVO;";
-private String tablename = "grc_flow_list";//表名  
-private String[] colnames; // 列名数组  
-private String[] colTypes; //列名类型数组  
-private int[] colSizes; //列名大小数组  
-private boolean f_util = false; // 是否�?��导入包java.util.*  
-private boolean f_sql = false; // 是否�?��导入包java.sql.*
+private String tablename = "grc_flow_list";//è¡¨å  
+private String[] colnames; // ååæ°ç»  
+private String[] colTypes; //ååç±»åæ°ç»  
+private int[] colSizes; //ååå¤§å°æ°ç»  
+private boolean f_util = false; // æ¯å¦é?¦å¯¼å¥åjava.util.*  
+private boolean f_sql = false; // æ¯å¦é?¦å¯¼å¥åjava.sql.*
 private String pk;
 /*private String sql="select 'public static final ' || 'String ' || upper(a.column_name) || '='||'"'||lower(a.column_name)||'"'||';'+
 "from user_tab_cols a,user_col_comments  b +
 "where a.TABLE_NAME = b.TABLE_NAME +
 "and a.COLUMN_NAME = b.COLUMN_NAME+
 "and a.table_name = 'FA_ASSET_APPLY';"*/
- //数据库连�? 
+ //æ°æ®åºè¿æ? 
 
 
  private static final String URL ="jdbc:oracle:thin:@localhost:1521:orcl";
@@ -38,13 +38,13 @@ private String pk;
     private static final String PASS = "vbm_grc";  
     private static final String DRIVER ="oracle.jdbc.driver.OracleDriver";  
    /* 
-33.     * 构�?函数 
+33.     * æé?å½æ° 
 34.     */  
     @SuppressWarnings("unused")
 	public GenEntityVO(){  
-       //创建连接  
+       //åå»ºè¿æ¥  
         Connection con;  
-       //查要生成实体类的�? 
+       //æ¥è¦çæå®ä½ç±»çè¡? 
        String sql = "select * from " + tablename;  
         PreparedStatement pStemt = null;  
         try {  
@@ -63,7 +63,7 @@ private String pk;
         		//user_id=rs.getString("user_id");
         	}*/
            ResultSetMetaData rsmd = pStemt.getMetaData();  
-           int size = rsmd.getColumnCount();   //统计�? 
+           int size = rsmd.getColumnCount();   //ç»è®¡å? 
            colnames = new String[size];  
            colTypes = new String[size];  
            colSizes = new int[size];  
@@ -84,8 +84,8 @@ private String pk;
               
            try {  
                 File directory = new File("");  
-                //System.out.println("绝对路径�?+directory.getAbsolutePath());  
-                //System.out.println("相对路径�?+directory.getCanonicalPath());  
+                //System.out.println("ç»å¯¹è·¯å¾ï¼?+directory.getAbsolutePath());  
+                //System.out.println("ç¸å¯¹è·¯å¾ï¼?+directory.getCanonicalPath());  
                 ///C:/Primeton/Platform/ide/eclipse/workspace_grc/GRC/com.vbm.grc.basic/bin/com/vbm/grc/basic/busiarea/
 
                String path=this.getClass().getResource("").getPath();  
@@ -119,7 +119,7 @@ private String pk;
         }      }  
   
    /** 
-102.     * 功能：生成实体类主体代码 
+102.     * åè½ï¼çæå®ä½ç±»ä¸»ä½ä»£ç  
 103.     * @param colnames 
 104.     * @param colTypes 
 105.     * @param colSizes 
@@ -131,7 +131,7 @@ private String pk;
        if(!this.extendVo.equals("")){
     	   sb.append("import "+this.extendVoPath+"\r\n");
        }
-       //判断是否导入工具�? 
+       //å¤æ­æ¯å¦å¯¼å¥å·¥å·å? 
        if(f_util){  
           sb.append("import java.util.Date;\r\n");  
       }  
@@ -139,15 +139,15 @@ private String pk;
           sb.append("import java.sql.*;\r\n");  
       }  
       sb.append("\r\n");  
-        //注释部分  
+        //æ³¨éé¨å  
        sb.append("   /**\r\n");  
-       sb.append("    * "+tablename+" 实体类\r\n");  
+       sb.append("    * "+tablename+" å®ä½ç±»\r\n");  
        sb.append("    * "+new Date()+" "+this.authorName+"\r\n");  
        sb.append("    */ \r\n");  
-      //实体部分  
+      //å®ä½é¨å  
        sb.append("\r\n\r\npublic class " + initcap(tablename).replace("_", "") + "VO"+"  extends  "+this.extendVo + "{\r\n");  
-        processAllAttrs(sb);//属�?  
-      processAllMethod(sb);//get set方法  
+        processAllAttrs(sb);//å±æ?  
+      processAllMethod(sb);//get setæ¹æ³  
       sb.append("}\r\n");  
          
        //System.out.println(sb.toString());  
@@ -155,7 +155,7 @@ private String pk;
     }
       
     /** 
-     * 功能：生成所有属�?
+     * åè½ï¼çæææå±æ?
      * @param sb 
     */  
     private void processAllAttrs(StringBuffer sb) {  
@@ -177,7 +177,7 @@ private String pk;
    }  
   
     /** 
-     * 功能：生成所有方�?
+     * åè½ï¼çææææ¹æ³?
     * @param sb 
      */  
     private void processAllMethod(StringBuffer sb) {  
@@ -217,7 +217,7 @@ private String pk;
     
    
     /** 
-166.     * 功能：将输入字符串的首字母改成大�?
+166.     * åè½ï¼å°è¾å¥å­ç¬¦ä¸²çé¦å­æ¯æ¹æå¤§å?
 167.     * @param str 
 168.     * @return 
 169.     */  
@@ -258,7 +258,7 @@ private String pk;
    }*/
  
    /** 
-181.     * 功能：获得列的数据类�?
+181.     * åè½ï¼è·å¾åçæ°æ®ç±»å?
 182.     * @param sqlType 
 183.     * @return 
 184.     */  
@@ -293,7 +293,7 @@ private String pk;
     }  
      
     /** 
-217.     * 出口 
+217.     * åºå£ 
 218.     * TODO 
 219.     * @param args 
 220.     */  

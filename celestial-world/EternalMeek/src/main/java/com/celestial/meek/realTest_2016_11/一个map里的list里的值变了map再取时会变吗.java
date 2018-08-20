@@ -5,10 +5,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Ò»¸ömapÀïµÄlistÀïµÄÖµ±äÁËmapÔÙÈ¡Ê±»á±äÂğ {
+public class ä¸€ä¸ªmapé‡Œçš„listé‡Œçš„å€¼å˜äº†mapå†å–æ—¶ä¼šå˜å— {
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -17,13 +17,13 @@ public class Ò»¸ömapÀïµÄlistÀïµÄÖµ±äÁËmapÔÙÈ¡Ê±»á±äÂğ {
 	public static void main(String[] args) {
 		Map<String,List<String>> m = new HashMap<String,List<String>>();
 		List<String> l = new ArrayList<String>();
-		l.add("Ê±¹â");
-		l.add("Èç»¨ÃÀ¾ì");
-		l.add("ËÆË®Á÷Äê");
+		l.add("æ—¶å…‰");
+		l.add("å¦‚èŠ±ç¾çœ·");
+		l.add("ä¼¼æ°´æµå¹´");
 		m.put("1", l);
 		List<String> l2 = m.get("1");
-		l2.add("»ÄÄê");
-		l2.add("ÏãÄê");
+		l2.add("è’å¹´");
+		l2.add("é¦™å¹´");
 		System.out.println(l);
 	}
 

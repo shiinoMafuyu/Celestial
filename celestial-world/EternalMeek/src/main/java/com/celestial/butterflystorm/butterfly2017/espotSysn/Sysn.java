@@ -8,14 +8,14 @@ import com.celestial.hydrogenousProminence.fileReplace.RepDependency;
 import com.celestial.hydrogenousProminence.fileReplace.Replace;
 
 /**
- * espotÓÃsqlÎÄ¼şÀïµÄsql´úÂëÍ¬²½¶ÔÓ¦µÄjava´úÂë¡£<br/>
- * sqlÀï×ø±ê¶¨Î»£º
- * "--" + javaÎÄ¼şÃû + " sql start-"
- * "--" + javaÎÄ¼şÃû + " sql end-"
+ * espotç”¨sqlæ–‡ä»¶é‡Œçš„sqlä»£ç åŒæ­¥å¯¹åº”çš„javaä»£ç ã€‚<br/>
+ * sqlé‡Œåæ ‡å®šä½ï¼š
+ * "--" + javaæ–‡ä»¶å + " sql start-"
+ * "--" + javaæ–‡ä»¶å + " sql end-"
  * <br/>
- * java Àï×ø±ê¶¨Î»£º
- * "¡ª¡ª¡ª¡ª¡ª¡ªsql start¡ª¡ª¡ª¡ª¡ª¡ª"
- * "¡ª¡ª¡ª¡ª¡ª¡ªsql end¡ª¡ª¡ª¡ª¡ª¡ª"
+ * java é‡Œåæ ‡å®šä½ï¼š
+ * "â€•â€•â€•â€•â€•â€•sql startâ€•â€•â€•â€•â€•â€•"
+ * "â€•â€•â€•â€•â€•â€•sql endâ€•â€•â€•â€•â€•â€•"
  * <br/>
  * 
  * @author Administrator
@@ -32,7 +32,7 @@ public class Sysn extends Replace {
 		String commonStart = ".*sql start.*",
 			   commonEnd = ".*sql end.*",
 			   aimPath = "D:/workspace_final/02MyEclipse2013/liquidation/depository-extract-tradedata-m6-espot/src/gnnt/MEBS6/depository/extract/tradedata/espot/dao/impl/" ,
-			   srcPath = "D:/workspace_final/02MyEclipse2013/liquidation/depository-extract-tradedata-m6-espot/src/configfiles/eÏÖ»õ²éÑ¯.sql";
+			   srcPath = "D:/workspace_final/02MyEclipse2013/liquidation/depository-extract-tradedata-m6-espot/src/configfiles/eç°è´§æŸ¥è¯¢.sql";
 		
 		String[] nameArr = new String[]{
 										"OrdersDAO","OrderFileDatasDAO",

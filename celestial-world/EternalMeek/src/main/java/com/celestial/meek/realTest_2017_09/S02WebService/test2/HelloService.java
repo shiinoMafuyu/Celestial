@@ -1,9 +1,9 @@
 /******************************************************************
  * HelloService.java
  * Copyright 2017 by GNNT Company. All Rights Reserved.
- * CreateDate£º2017Äê9ÔÂ13ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´9æœˆ13æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.meek.realTest_2017_09.S02WebService.test2;
@@ -15,15 +15,15 @@ import javax.jws.WebService;
 import javax.xml.ws.Endpoint;
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê9ÔÂ13ÈÕ
+ *                        ---- wangzg 2017å¹´9æœˆ13æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
  * 
  * </p>
@@ -34,7 +34,7 @@ public class HelloService {
 	@WebMethod
 	@WebResult(name="myReturn")
     public String sayHello(@WebParam(name="name")String message){
-		System.out.println("--------------> °ÙÄêºóµÄÊÀ½ç");
+		System.out.println("--------------> ç™¾å¹´åçš„ä¸–ç•Œ");
         return "Hello ," + message;    
     }
 	

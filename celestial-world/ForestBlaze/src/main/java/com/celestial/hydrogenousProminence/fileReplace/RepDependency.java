@@ -3,19 +3,19 @@ package com.celestial.hydrogenousProminence.fileReplace;
 import java.util.HashMap;
 import java.util.Map;
 /**
- * ÎÄ¼şÌæ»»ÒÀÀµ¶ÔÏó¡£
+ * æ–‡ä»¶æ›¿æ¢ä¾èµ–å¯¹è±¡ã€‚
  * @author Administrator
  *
  */
 public class RepDependency {
 	
 	/**
-	 * Ô´Â·¾¶¡£
+	 * æºè·¯å¾„ã€‚
 	 */
 	private String sourceFilePath = "";
 	
 	/**
-	 * ÓÃÓÚÌæ»»Ë÷ÒıµÄMap repMap = <"±àºÅ±êÖ¾"£¬[sn_flag,en_flag,target_sn_flag,target_en_flag,targetPath]>
+	 * ç”¨äºæ›¿æ¢ç´¢å¼•çš„Map repMap = <"ç¼–å·æ ‡å¿—"ï¼Œ[sn_flag,en_flag,target_sn_flag,target_en_flag,targetPath]>
 	 */
 	private Map<String,String[]> repMap = new HashMap<String,String[]>();
 

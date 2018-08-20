@@ -26,7 +26,7 @@ public class TestGrammer extends TestCase {
 	}
 	public void testTagSameChild(){
 		p.println("testTagSameChild---------------------------------------------->");
-		Tag t = new Tag("<Employee><name>Î¢É³</name><age>998</age><gender>Å®</gender><salary>24000</salary><union>»Ê¼Òµ³,¿Û·Ñµ³,Ãñ½øµ³</union></Employee>");
+		Tag t = new Tag("<Employee><name>å¾®æ²™</name><age>998</age><gender>å¥³</gender><salary>24000</salary><union>çš‡å®¶å…š,æ‰£è´¹å…š,æ°‘è¿›å…š</union></Employee>");
 		for(String s : t.getMapColor()){
 //			System.out.println(t.getTagByNames(s.split(" ")));
 			assertNotNull(t.getTagByNames(s.split(" ")));
@@ -52,7 +52,7 @@ public class TestGrammer extends TestCase {
 				assertTrue(UtilString.isDouble(rs.getString(5)));
 				assertTrue(rs.getString(6) != null);*/
 			}
-//			st.execute("insert into Employee values(null,'shiino',14,0,27000.51,'gameResearch,¸ÎÔàÆÆËé')");²åÈëÃ»ÎÊÌâ
+//			st.execute("insert into Employee values(null,'shiino',14,0,27000.51,'gameResearch,è‚è„ç ´ç¢')");æ’å…¥æ²¡é—®é¢˜
 			
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -72,7 +72,7 @@ public class TestGrammer extends TestCase {
 		ManagerEmployeeDaoImpl med = new ManagerEmployeeDaoImpl();
 		try {
 			Method m = med.getClass().getDeclaredMethod("addEmployee1", Employee.class);
-//			Method m = med.getClass().getDeclaredMethod("addEmployee1", EmployeeFixed.class);//·¢ÉúÒì³£,EmployeeFixedËäÈ»¼Ì³Ğ×ÔEmployee,µ«ÊÇÕâ»ñÈ¡²»ÁËÄÇ¸ö·½·¨.
+//			Method m = med.getClass().getDeclaredMethod("addEmployee1", EmployeeFixed.class);//å‘ç”Ÿå¼‚å¸¸,EmployeeFixedè™½ç„¶ç»§æ‰¿è‡ªEmployee,ä½†æ˜¯è¿™è·å–ä¸äº†é‚£ä¸ªæ–¹æ³•.
 			p.println(m.getName());
 		} catch (SecurityException e) {
 			e.printStackTrace();

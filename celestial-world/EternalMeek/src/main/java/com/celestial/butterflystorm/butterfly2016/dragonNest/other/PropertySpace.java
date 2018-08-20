@@ -6,20 +6,20 @@ import com.celestial.agniRadiance.EzUtil.UtilCollection;
 import com.celestial.agniRadiance.EzUtil.UtilFile;
 @SuppressWarnings({ "unchecked", "rawtypes" })
 public class PropertySpace {
-	/**ÇëÎğĞŞ¸Ä´Ëmap*/
+	/**è¯·å‹¿ä¿®æ”¹æ­¤map*/
 	public static Map propertyMap = null;
-	/**ÇëÎğĞŞ¸Ä´Ëmap*/
+	/**è¯·å‹¿ä¿®æ”¹æ­¤map*/
 	public static Map propertyFixedPCTMap = null;
-	/**ÇëÎğĞŞ¸Ä´Ëmap*/
+	/**è¯·å‹¿ä¿®æ”¹æ­¤map*/
 	public static Map propertyListLV1Map = null;
-	/**ÇëÎğĞŞ¸Ä´Ëmap*/
+	/**è¯·å‹¿ä¿®æ”¹æ­¤map*/
 	public static Map propertyListLV2Map = null;
 	
 	static{
 		init();
 	}
 	public PropertySpace() {
-		//¾ÓÈ»»¹Ê¡ÏÂÁËÎÒ×ªĞÍµÄÊÂ
+		//å±…ç„¶è¿˜çœä¸‹äº†æˆ‘è½¬å‹çš„äº‹
 	}
 
 	private static void init() {

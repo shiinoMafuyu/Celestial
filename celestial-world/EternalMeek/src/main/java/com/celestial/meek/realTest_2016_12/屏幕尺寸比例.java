@@ -2,12 +2,12 @@ package com.celestial.meek.realTest_2016_12;
 
 import com.celestial.agniRadiance.entity.FileReader;
 
-public class ÆÁÄ»³ß´ç±ÈÀı {
+public class å±å¹•å°ºå¯¸æ¯”ä¾‹ {
 	public static void main(String[] args) {
 		/**
 		 * 
 		 */
-		FileReader f = new FileReader("C:/Users/Administrator/Desktop/ÒıÓÃĞŞ¸Ä/d.txt");
+		FileReader f = new FileReader("C:/Users/Administrator/Desktop/å¼•ç”¨ä¿®æ”¹/d.txt");
 		while(f.hasNext()){
 //			System.out.println(f.readLine());
 			String s = f.readLine();

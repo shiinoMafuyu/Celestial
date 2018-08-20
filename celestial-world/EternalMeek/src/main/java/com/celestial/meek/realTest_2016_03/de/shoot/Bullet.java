@@ -1,23 +1,23 @@
 package com.celestial.meek.realTest_2016_03.de.shoot;
-/** ×Óµ¯: ÊÇ·ÉĞĞÎï */
+/** å­å¼¹: æ˜¯é£è¡Œç‰© */
 public class Bullet extends FlyingObject {
-	private int speed = 3; //×Óµ¯×ß²½µÄ²½Êı
-	/** ¹¹Ôì·½·¨  x/y²ÎÊıÊÇÒòÎª×Óµ¯µÄ×ø±êËæ»úÓ¢ĞÛ»ú¶¯ */
+	private int speed = 3; //å­å¼¹èµ°æ­¥çš„æ­¥æ•°
+	/** æ„é€ æ–¹æ³•  x/yå‚æ•°æ˜¯å› ä¸ºå­å¼¹çš„åæ ‡éšæœºè‹±é›„æœºåŠ¨ */
 	public Bullet(int x,int y){
-		image = ShootGame.bullet; //Í¼Æ¬
-		width = image.getWidth(); //¿í
-		height = image.getHeight(); //¸ß
-		this.x = x; //x×ø±ê:Ëæ×ÅÓ¢ĞÛ»ú¶¯
-		this.y = y; //y×ø±ê:Ëæ×ÅÓ¢ĞÛ»ú¶¯
+		image = ShootGame.bullet; //å›¾ç‰‡
+		width = image.getWidth(); //å®½
+		height = image.getHeight(); //é«˜
+		this.x = x; //xåæ ‡:éšç€è‹±é›„æœºåŠ¨
+		this.y = y; //yåæ ‡:éšç€è‹±é›„æœºåŠ¨
 	}
 	
-	/** ÖØĞ´step() */
+	/** é‡å†™step() */
 	public void step(){
-		y -= speed; //y¼õ(ÏòÉÏ)
+		y -= speed; //yå‡(å‘ä¸Š)
 	}
 
-	/** ÖØĞ´outOfBounds() */
+	/** é‡å†™outOfBounds() */
 	public boolean outOfBounds(){
-		return this.y<-this.height; //×Óµ¯µÄyĞ¡ÓÚ¸ºµÄ×Óµ¯µÄ¸ß£¬¼´ÎªÔ½½ç
+		return this.y<-this.height; //å­å¼¹çš„yå°äºè´Ÿçš„å­å¼¹çš„é«˜ï¼Œå³ä¸ºè¶Šç•Œ
 	}
 }

@@ -1,9 +1,9 @@
 /******************************************************************
  * SocketVO.java
  * Copyright ${year} by WZG. All Rights Reserved.
- * CreateDate£º2017Äê9ÔÂ18ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´9æœˆ18æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.agniRadiance.remote.socket;
@@ -15,30 +15,30 @@ import java.net.Socket;
 import com.celestial.agniRadiance.remote.UtilSocket;
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê9ÔÂ18ÈÕ
+ *                        ---- wangzg 2017å¹´9æœˆ18æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
- * socketĞÅÏ¢·â×°Àà
+ * socketä¿¡æ¯å°è£…ç±»
  * </p>
  */
 public class SocketVO {
 	
 	/** socket */
 	public final Socket socket;
-	/** Êä³öÁ÷ */
+	/** è¾“å‡ºæµ */
 	public final DataOutputStream out;
-	/** ÊäÈëÁ÷ */
+	/** è¾“å…¥æµ */
 	public final DataInputStream in;
 	
 	/**
-	 * <b>¹¹Ôì·½·¨</b>
+	 * <b>æ„é€ æ–¹æ³•</b>
 	 * <br/>
 	 * @param socket
 	 */
@@ -49,15 +49,15 @@ public class SocketVO {
 			this.in = new DataInputStream(socket.getInputStream());
 		} catch (Exception e) {
 			close();
-			throw new RuntimeException("ÎŞĞ§µÄsocket");
+			throw new RuntimeException("æ— æ•ˆçš„socket");
 		}
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Í£Ö¹Ò»ÇĞÔÚsocketÉÏµÄÊäÈëÊä³öÁ÷²Ù×÷<br/>
-	 * Áí:¿ÉÓÃshutdown·½·¨Ö»¹Ø±ÕÊäÈëÊä³öÒ»·½<br/>
+	 * åœæ­¢ä¸€åˆ‡åœ¨socketä¸Šçš„è¾“å…¥è¾“å‡ºæµæ“ä½œ<br/>
+	 * å¦:å¯ç”¨shutdownæ–¹æ³•åªå…³é—­è¾“å…¥è¾“å‡ºä¸€æ–¹<br/>
 	 * </ul>
 	 */
 	public void close(){

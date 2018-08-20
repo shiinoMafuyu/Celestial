@@ -18,13 +18,13 @@ public class test {
 	 * @param args
 	 */
 	public static void main(String[] args) throws Exception{
-		//²âÊÔ¹ÜµÀ´«ÊäÎÄ¼ş ¿´ÆğÀ´Ö»ÄÜ¿½±´ÎÄ¼ş
+		//æµ‹è¯•ç®¡é“ä¼ è¾“æ–‡ä»¶ çœ‹èµ·æ¥åªèƒ½æ‹·è´æ–‡ä»¶
 		//teCopyByTransfer();
-		//²âÊÔÎÄ¼şcopy
+		//æµ‹è¯•æ–‡ä»¶copy
 		//teFileCreate();
-		//²âÊÔÎÄ¼şlistFile()·½·¨
+		//æµ‹è¯•æ–‡ä»¶listFile()æ–¹æ³•
 		//teFileList();
-		//²âÊÔµİ¹é¼ìÑé
+		//æµ‹è¯•é€’å½’æ£€éªŒ
 		//teCheck();
 		
 		File podding=new File("E:/te/test/pod");
@@ -32,7 +32,7 @@ public class test {
 		boolean  b1=checkFile(podding);
 		boolean b2=checkFile(project);
 		if(!(b1&&b2)){
-			System.out.println("ÎÄ¼şÄ¿Â¼ÓĞÎÊÌâ ³ÌĞò½áÊø~");
+			System.out.println("æ–‡ä»¶ç›®å½•æœ‰é—®é¢˜ ç¨‹åºç»“æŸ~");
 			return;
 		}
 		
@@ -41,8 +41,8 @@ public class test {
 		
 	}
 	/**
-	 * ´´½¨±¸·İÄ¿Â¼
-	 * ²¹¶¡Í¬Ò»¼¶Ä¿Â¼ÏÂ½¨Á¢²¹¶¡±¸·İÄ¿Â¼---ÈÕÆÚ-02---ËùÓĞÏîÄ¿µÄ±¸·İ 
+	 * åˆ›å»ºå¤‡ä»½ç›®å½•
+	 * è¡¥ä¸åŒä¸€çº§ç›®å½•ä¸‹å»ºç«‹è¡¥ä¸å¤‡ä»½ç›®å½•---æ—¥æœŸ-02---æ‰€æœ‰é¡¹ç›®çš„å¤‡ä»½ 
 	 * @param podding
 	 * @return
 	 */
@@ -64,14 +64,14 @@ public class test {
 		recordIndexFile.mkdirs();
 		return recordIndexFile.getPath();
 	}
-	//ÎÄ¼şµİ¹écopy
-	//±éÀú²¹¶¡ ¸ù¾İ²¹¶¡ÖĞµÄÎÄ¼ş ÎÄ¼ş¼ĞÈ¥ÏîÄ¿ÖĞÒÆ×ßÎÄ¼ş»òÕßÖ±½Ó´´½¨
+	//æ–‡ä»¶é€’å½’copy
+	//éå†è¡¥ä¸ æ ¹æ®è¡¥ä¸ä¸­çš„æ–‡ä»¶ æ–‡ä»¶å¤¹å»é¡¹ç›®ä¸­ç§»èµ°æ–‡ä»¶æˆ–è€…ç›´æ¥åˆ›å»º
 	/**
 	 * 
-	 * @param podding ²¹¶¡ÎÄ¼ş
-	 * @param project ÏîÄ¿ÎÄ¼ş
-	 * @param recordIndexPath ±¸·İ±£´æµÄ¸ùÂ·¾¶
-	 * @param index projectµÄÃû×ÖµÄÎ»ÖÃ,ÓÃÀ´´´½¨±£´æÂ·¾¶µÄÎ»ÖÃÊ±ºòĞèÒªÓÃ
+	 * @param podding è¡¥ä¸æ–‡ä»¶
+	 * @param project é¡¹ç›®æ–‡ä»¶
+	 * @param recordIndexPath å¤‡ä»½ä¿å­˜çš„æ ¹è·¯å¾„
+	 * @param index projectçš„åå­—çš„ä½ç½®,ç”¨æ¥åˆ›å»ºä¿å­˜è·¯å¾„çš„ä½ç½®æ—¶å€™éœ€è¦ç”¨
 	 * @throws Exception 
 	 */
 	private static void recursiveTraverseMoveAndCopy(File podding, File project,String recordIndexPath, int index) throws Exception {
@@ -80,20 +80,20 @@ public class test {
 		File ex=null;
 		boolean isExist=true;
 		for(File i:fArr){
-			ex=new File(sProject+"/"+i.getName());//ÎÄ¼şÈ«Ãû~Ö»²Ù×÷ÎÄ¼ş
+			ex=new File(sProject+"/"+i.getName());//æ–‡ä»¶å…¨å~åªæ“ä½œæ–‡ä»¶
 			isExist=ex.exists();
-			if(i.isFile()){//ÊÇÎÄ¼ş
-				if(isExist){//´æÔÚµÄ»° ÒÆ×ß
+			if(i.isFile()){//æ˜¯æ–‡ä»¶
+				if(isExist){//å­˜åœ¨çš„è¯ ç§»èµ°
 					File ft=new File(recordIndexPath+"/"+ex.getPath().substring(index));
 					ft.getParentFile().mkdirs();
 					ft.createNewFile();
 					copyByTransfer(ex,ft);
-				}else{//²»´æÔÚµÄ»°´´½¨
+				}else{//ä¸å­˜åœ¨çš„è¯åˆ›å»º
 					ex.createNewFile();
 				}
 				copyByTransfer(i,ex);
-			}else{//ÊÇÄ¿Â¼
-				if(!isExist){//ÏîÄ¿ÖĞ²»´æÔÚµÄ¶ÔÓ¦Ä¿Â¼»°´´½¨Ä¿Â¼ ¼ÌĞøµİ¹é
+			}else{//æ˜¯ç›®å½•
+				if(!isExist){//é¡¹ç›®ä¸­ä¸å­˜åœ¨çš„å¯¹åº”ç›®å½•è¯åˆ›å»ºç›®å½• ç»§ç»­é€’å½’
 					ex.mkdirs();
 				}
 				recursiveTraverseMoveAndCopy(i,ex,recordIndexPath,index);
@@ -103,8 +103,8 @@ public class test {
 		
 	}
 	
-	//µİ¹éÑéÖ¤ÎÄ¼şÊÇ·ñ´æÔÚ
-	//ÒÔ²¹¶¡Îª×¼ Í¬Ê±µİ¹é ²¹¶¡ºÍÏîÄ¿±ØĞëÍ¬Ò»¼¶±ğ,Ö®Ç°µÄÊÇ¿Óµù~~
+	//é€’å½’éªŒè¯æ–‡ä»¶æ˜¯å¦å­˜åœ¨
+	//ä»¥è¡¥ä¸ä¸ºå‡† åŒæ—¶é€’å½’ è¡¥ä¸å’Œé¡¹ç›®å¿…é¡»åŒä¸€çº§åˆ«,ä¹‹å‰çš„æ˜¯å‘çˆ¹~~
 	private static boolean recursiveTraverseCheck(File podding, File project) {
 		
 		File[] fArr=podding.listFiles();
@@ -112,17 +112,17 @@ public class test {
 		File ex=null;
 		boolean isExist=true;
 		boolean isSameStructure=true;
-		//±éÀú
-		//Èç¹ûÊÇÎÄ¼şÔò²»»ñÈ¡list Ö±½Ó¿´ÁíÒ»±ßÓĞÃ»ÓĞ ·ñÔòµÄ»°Ò²Òª¿´ÄÇ±ßÓĞÃ»ÓĞ ²¢ÇÒÓĞµÄ»°»¹Òª±È½ÏÏÂ¼¶Ä¿Â¼
+		//éå†
+		//å¦‚æœæ˜¯æ–‡ä»¶åˆ™ä¸è·å–list ç›´æ¥çœ‹å¦ä¸€è¾¹æœ‰æ²¡æœ‰ å¦åˆ™çš„è¯ä¹Ÿè¦çœ‹é‚£è¾¹æœ‰æ²¡æœ‰ å¹¶ä¸”æœ‰çš„è¯è¿˜è¦æ¯”è¾ƒä¸‹çº§ç›®å½•
 		for(File i:fArr){
 			ex=new File(sProject+"/"+i.getName());
 			isExist=ex.exists();
-			if(isExist==false)//Õâ¾ä»°µÄÒâË¼ÊÇ ±éÀú¹ı³ÌÖĞÖ»ÒªÓĞÒ»¸ö²¹¶¡ÖĞ´æÔÚ¶øÏîÄ¿ÖĞ²»´æÔÚµÄÎÄ¼ş/ÎÄ¼ş¼Ğ Ôò½á¹¹ÊÇ²»Ò»ÑùµÄ ±ä³Éfalse~
+			if(isExist==false)//è¿™å¥è¯çš„æ„æ€æ˜¯ éå†è¿‡ç¨‹ä¸­åªè¦æœ‰ä¸€ä¸ªè¡¥ä¸ä¸­å­˜åœ¨è€Œé¡¹ç›®ä¸­ä¸å­˜åœ¨çš„æ–‡ä»¶/æ–‡ä»¶å¤¹ åˆ™ç»“æ„æ˜¯ä¸ä¸€æ ·çš„ å˜æˆfalse~
 				isSameStructure=false;
 			if(i.isFile()){
-				System.out.println("ÎÄ¼ş : "+ex.getPath() +"´æÔÚ : "+isExist );
+				System.out.println("æ–‡ä»¶ : "+ex.getPath() +"å­˜åœ¨ : "+isExist );
 			}else{
-				System.out.println("Ä¿Â¼ : "+ex.getPath() +"´æÔÚ : "+isExist );
+				System.out.println("ç›®å½• : "+ex.getPath() +"å­˜åœ¨ : "+isExist );
 				if(isExist){
 					boolean b=recursiveTraverseCheck(i,ex);
 					if(b==false)
@@ -133,7 +133,7 @@ public class test {
 		return isSameStructure;
 		
 	}
-	//²âÊÔÎÄ¼şList
+	//æµ‹è¯•æ–‡ä»¶List
 	private static void teFileList() {
 		File f=new File("E:/te");
 		File[] fArr=f.listFiles();
@@ -141,15 +141,15 @@ public class test {
 		for(File i:fArr){
 			System.out.print(i.getPath());
 			if(i.isFile()){
-				System.out.println("  ÎÄ¼ş");
+				System.out.println("  æ–‡ä»¶");
 			}else{
-				System.out.println("  ÎÄ¼ş¼Ğ");
+				System.out.println("  æ–‡ä»¶å¤¹");
 			}
 		}
 		
 	}
 	/**
-	 * ²âÊÔµİ¹é¼ìÑéÎÄ¼şÄÇ¸ö·½·¨
+	 * æµ‹è¯•é€’å½’æ£€éªŒæ–‡ä»¶é‚£ä¸ªæ–¹æ³•
 	 */
 	private static void teCheck() {
 		File podding=new File("E:/te/test/pod");
@@ -165,14 +165,14 @@ public class test {
 		boolean b=recursiveTraverseCheck(podding,project);
 		System.out.println(b);
 	}
-	//ÎÄ¼ş´´½¨»òÕßÎÄ¼ş¼Ğ´´½¨²âÊÔ
-	//½áÂÛ:Òª´´½¨²»´æÔÚµÄÄ¿Â¼ÏÂµÄÄ¿Â¼ÓÃfile.mkdirs()·½·¨	Òª´´½¨²»´æÔÚµÄÄ¿Â¼ÏÂµÄÎÄ¼şÏÈ°´Ö®Ç°µÄ´´½¨Ä¿Â¼ÔÙÓÃfile.createNewFile()´´½¨ÎÄ¼ş
-	//Èç¹ûÎÄ¼ş,ÎÄ¼ş¼Ğ´æÔÚÄÇÃ´file.mkdirs() file.createNewFile()²»Ö´ĞĞ
+	//æ–‡ä»¶åˆ›å»ºæˆ–è€…æ–‡ä»¶å¤¹åˆ›å»ºæµ‹è¯•
+	//ç»“è®º:è¦åˆ›å»ºä¸å­˜åœ¨çš„ç›®å½•ä¸‹çš„ç›®å½•ç”¨file.mkdirs()æ–¹æ³•	è¦åˆ›å»ºä¸å­˜åœ¨çš„ç›®å½•ä¸‹çš„æ–‡ä»¶å…ˆæŒ‰ä¹‹å‰çš„åˆ›å»ºç›®å½•å†ç”¨file.createNewFile()åˆ›å»ºæ–‡ä»¶
+	//å¦‚æœæ–‡ä»¶,æ–‡ä»¶å¤¹å­˜åœ¨é‚£ä¹ˆfile.mkdirs() file.createNewFile()ä¸æ‰§è¡Œ
 	private static void teFileCreate() throws Exception {
 		File f=new File("E:/te/h/h2");
 		File f2=new File("E:/te/h/h2/lp.txt");
-		/*System.out.println("ÎÄ¼ş¼Ğ´æÔÚ: "+f.exists());
-		System.out.println("ÎÄ¼ş´æÔÚ: "+f2.exists());*/
+		/*System.out.println("æ–‡ä»¶å¤¹å­˜åœ¨: "+f.exists());
+		System.out.println("æ–‡ä»¶å­˜åœ¨: "+f2.exists());*/
 		
 		File f3=new File("w2.txt");
 		/*File f4=new File("D:/workspace/test/lib");
@@ -188,16 +188,16 @@ public class test {
 		//System.out.println(copyByTransfer(f3,f2));
 		
 	}
-	//²âÊÔ¹ÜµÀ´«Êä
+	//æµ‹è¯•ç®¡é“ä¼ è¾“
 	private static void teCopyByTransfer() throws Exception {
 		File in=new File("C:/Users/Administrator/Desktop/te2");
 		File out=new File("E:/te2");
 		System.out.println(copyByTransfer(in,out));
 	}
 	/**
-	 * Í¨¹ı¹ÜµÀ´«ÊäÎÄ¼ş
-	 * @param f1 ÊäÈëÎÄ¼ş
-	 * @param f2 Êä³öÎÄ¼ş
+	 * é€šè¿‡ç®¡é“ä¼ è¾“æ–‡ä»¶
+	 * @param f1 è¾“å…¥æ–‡ä»¶
+	 * @param f2 è¾“å‡ºæ–‡ä»¶
 	 * @return
 	 * @throws Exception
 	 */
@@ -208,30 +208,30 @@ public class test {
         FileChannel inC=new FileInputStream(f1).getChannel();
 		FileChannel outC=new FileOutputStream(f2).getChannel();
         while(true){
-        	//Èç¹ûÔ´ÎÄ¼şµÄÖ¸ÕëÎ»ÖÃºÍ´óĞ¡Ò»ÑùÁË,ËµÃ÷¶ÁÍêÁË,½áÊø
+        	//å¦‚æœæºæ–‡ä»¶çš„æŒ‡é’ˆä½ç½®å’Œå¤§å°ä¸€æ ·äº†,è¯´æ˜è¯»å®Œäº†,ç»“æŸ
             if(inC.position()==inC.size()){
                 inC.close();
                 outC.close();
                 return new Date().getTime()-time;
             }
-            //ÏÂÃæÁ½¾ä´ó¸ÅÃ÷°×ÁË ¾ÍÊÇËµÁ½±ßÍ¨¹ı¹ÜµÀ´«Êä¶«Î÷´ó¸Å´«ÊäÁ¿²»¿É¿Ø,Èç¹ûÃ»ÓĞ20mµÄÁ¿¾Í°´Êµ¼Ê³ß´çĞ´Èë;Èç¹û³¬³ö20mµÄÁ¿¾ÍÏÈĞ´Èë20m Ê£ÏÂµÄÏÂ´ÎÔÙËµ~
-            if((inC.size()-inC.position())<size)//Èç¹û´óĞ¡¼õÈ¥Î»ÖÃĞ¡ÓÚ 20m ³¤¶Èlength=³ß´ç²î
+            //ä¸‹é¢ä¸¤å¥å¤§æ¦‚æ˜ç™½äº† å°±æ˜¯è¯´ä¸¤è¾¹é€šè¿‡ç®¡é“ä¼ è¾“ä¸œè¥¿å¤§æ¦‚ä¼ è¾“é‡ä¸å¯æ§,å¦‚æœæ²¡æœ‰20mçš„é‡å°±æŒ‰å®é™…å°ºå¯¸å†™å…¥;å¦‚æœè¶…å‡º20mçš„é‡å°±å…ˆå†™å…¥20m å‰©ä¸‹çš„ä¸‹æ¬¡å†è¯´~
+            if((inC.size()-inC.position())<size)//å¦‚æœå¤§å°å‡å»ä½ç½®å°äº 20m é•¿åº¦length=å°ºå¯¸å·®
                 length=(int)(inC.size()-inC.position());
             else
-                length=size;//·ñÔò³¤¶È=20m
+                length=size;//å¦åˆ™é•¿åº¦=20m
             inC.transferTo(inC.position(),length,outC);
             inC.position(inC.position()+length);
         }
 	}
 
 	/**
-     * ¼ì²éFileÊÇ·ñÎª¿Õ»òÕß²»´æÔÚ»òÕß²»ÊÇÄ¿Â¼
+     * æ£€æŸ¥Fileæ˜¯å¦ä¸ºç©ºæˆ–è€…ä¸å­˜åœ¨æˆ–è€…ä¸æ˜¯ç›®å½•
      * @param f
      * @return
      */
 	private static boolean checkFile(File f) {
 		if(!(f!=null&&f.exists()&&!f.isFile())){
-			System.out.println("²¹¶¡ÎÄ¼ş¼ĞÎªnull,»òÕß²»´æÔÚ,»òÕß²»ÊÇÎÄ¼ş¼Ğ");
+			System.out.println("è¡¥ä¸æ–‡ä»¶å¤¹ä¸ºnull,æˆ–è€…ä¸å­˜åœ¨,æˆ–è€…ä¸æ˜¯æ–‡ä»¶å¤¹");
 			return false;
 		}else{
 			return true;

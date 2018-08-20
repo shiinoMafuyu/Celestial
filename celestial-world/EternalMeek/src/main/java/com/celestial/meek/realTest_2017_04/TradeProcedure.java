@@ -9,7 +9,7 @@ public class TradeProcedure {
 	}
 
 	/**
-	 * ÒµÎñÂß¼­
+	 * ä¸šåŠ¡é€»è¾‘
 	 * @param tradeDependence
 	 */
 	public static void processTrade(TradeDependence td) {

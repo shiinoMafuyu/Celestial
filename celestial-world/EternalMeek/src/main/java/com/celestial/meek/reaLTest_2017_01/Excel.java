@@ -5,14 +5,14 @@ import com.celestial.agniRadiance.entity.FileReader;
 public class Excel {
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
 	 * @param args 
 	 */
 	public static void main(String[] args) {
-		FileReader f = new FileReader("E:/t/t19Util³ÖĞø¿ª·¢/xb.xlsx");
+		FileReader f = new FileReader("E:/t/t19UtilæŒç»­å¼€å‘/xb.xlsx");
 		while(f.hasNext()){
 			System.out.println(f.readLine());
 		}

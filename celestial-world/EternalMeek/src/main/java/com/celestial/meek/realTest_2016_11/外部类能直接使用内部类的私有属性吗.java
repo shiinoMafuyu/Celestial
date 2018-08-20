@@ -3,10 +3,10 @@ package com.celestial.meek.realTest_2016_11;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Íâ²¿ÀàÄÜÖ±½ÓÊ¹ÓÃÄÚ²¿ÀàµÄË½ÓĞÊôĞÔÂğ {
+public class å¤–éƒ¨ç±»èƒ½ç›´æ¥ä½¿ç”¨å†…éƒ¨ç±»çš„ç§æœ‰å±æ€§å— {
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -14,7 +14,7 @@ public class Íâ²¿ÀàÄÜÖ±½ÓÊ¹ÓÃÄÚ²¿ÀàµÄË½ÓĞÊôĞÔÂğ {
 	 */
 	public static void main(String[] args) {
 		
-		Íâ²¿ÀàÄÜÖ±½ÓÊ¹ÓÃÄÚ²¿ÀàµÄË½ÓĞÊôĞÔÂğ w = new Íâ²¿ÀàÄÜÖ±½ÓÊ¹ÓÃÄÚ²¿ÀàµÄË½ÓĞÊôĞÔÂğ();
+		å¤–éƒ¨ç±»èƒ½ç›´æ¥ä½¿ç”¨å†…éƒ¨ç±»çš„ç§æœ‰å±æ€§å— w = new å¤–éƒ¨ç±»èƒ½ç›´æ¥ä½¿ç”¨å†…éƒ¨ç±»çš„ç§æœ‰å±æ€§å—();
 		hhh h = w.new hhh();
 		System.out.println(h.m.get("name"));
 	}

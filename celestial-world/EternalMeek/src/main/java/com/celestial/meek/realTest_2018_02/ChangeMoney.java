@@ -6,35 +6,35 @@ import java.util.Map;
 public class ChangeMoney {
 	static Map<Long,String> numMap = new HashMap<>();
 	static Map<Integer,String> rankMap = new HashMap<>();
-	//1.4Î»Êı×Ö4Î»Êı×ÖµÄÆ¥Åä£¬Ã¿¸ö4Î»½øĞĞÇ§°ÙÊ®ÁãÎ»µÄ¶ÁÈ¡¡£
-	//2.Ò»¸ö4Î»ÊıÖĞ¶à¸öÁã¸ÄÎª1¸ö£¬Ä©Î²µÄÁãÈ¥µô£¬ÀıÈç450Íò ¶ø²»ÊÇËÄ°ÙÎåÊ®ÁãÍò¡£Èç¹ûÈ«ÊÇÁãµÄ»°±£Áô1¸öÁã£¬ÇÒµ¥Î»²»ÒªÁË£¬²»ÄÜÊÇ1ÒÚ0ÍòÁãËÄ°ÙÎåÊ®Áù
-	//3.×îºóºÏ³ÉµÄÊı×Ö¶à¸öÁãÆ¥Åä³ÉÒ»¸ö£¬×î¿ªÍ·µÄÁãÈ¥µô¡£
+	//1.4ä½æ•°å­—4ä½æ•°å­—çš„åŒ¹é…ï¼Œæ¯ä¸ª4ä½è¿›è¡Œåƒç™¾åé›¶ä½çš„è¯»å–ã€‚
+	//2.ä¸€ä¸ª4ä½æ•°ä¸­å¤šä¸ªé›¶æ”¹ä¸º1ä¸ªï¼Œæœ«å°¾çš„é›¶å»æ‰ï¼Œä¾‹å¦‚450ä¸‡ è€Œä¸æ˜¯å››ç™¾äº”åé›¶ä¸‡ã€‚å¦‚æœå…¨æ˜¯é›¶çš„è¯ä¿ç•™1ä¸ªé›¶ï¼Œä¸”å•ä½ä¸è¦äº†ï¼Œä¸èƒ½æ˜¯1äº¿0ä¸‡é›¶å››ç™¾äº”åå…­
+	//3.æœ€ååˆæˆçš„æ•°å­—å¤šä¸ªé›¶åŒ¹é…æˆä¸€ä¸ªï¼Œæœ€å¼€å¤´çš„é›¶å»æ‰ã€‚
 	static {
-		numMap.put(1L, "Ò»");
-		numMap.put(2L, "¶ş");
-		numMap.put(3L, "Èı");
-		numMap.put(4L, "ËÄ");
-		numMap.put(5L, "Îå");
+		numMap.put(1L, "ä¸€");
+		numMap.put(2L, "äºŒ");
+		numMap.put(3L, "ä¸‰");
+		numMap.put(4L, "å››");
+		numMap.put(5L, "äº”");
 		
-		numMap.put(6L, "Áù");
-		numMap.put(7L, "Æß");
-		numMap.put(8L, "°Ë");
-		numMap.put(9L, "¾Å");
-		numMap.put(0L, "Áã");
+		numMap.put(6L, "å…­");
+		numMap.put(7L, "ä¸ƒ");
+		numMap.put(8L, "å…«");
+		numMap.put(9L, "ä¹");
+		numMap.put(0L, "é›¶");
 		
 		rankMap.put(0,"");
-		rankMap.put(1,"Íò");
-		rankMap.put(2,"ÒÚ");
-		rankMap.put(3,"ÍòÒÚ");
-		rankMap.put(4,"ÒÚÒÚ");
+		rankMap.put(1,"ä¸‡");
+		rankMap.put(2,"äº¿");
+		rankMap.put(3,"ä¸‡äº¿");
+		rankMap.put(4,"äº¿äº¿");
 		
 	}
 	public static void main(String[] args) {
 		//1011
 		//1004 2314
 		//23 1004 2314
-		//"ÒÚ" "Íò" "Ôª"
-		//1.·Ö³É4¸öÒ»×é±íÊ¾ ¶à¸ö"Áã"È«²¿Ìæ»»Îª1¸ö
+		//"äº¿" "ä¸‡" "å…ƒ"
+		//1.åˆ†æˆ4ä¸ªä¸€ç»„è¡¨ç¤º å¤šä¸ª"é›¶"å…¨éƒ¨æ›¿æ¢ä¸º1ä¸ª
 		
 		ChangeMoney c = new ChangeMoney();
 		
@@ -47,7 +47,7 @@ public class ChangeMoney {
 	}
 	
 	public String formatMoney(Long money) {
-		return new StringBuilder(formatMoneyRe(money,0)).append("Ôª").toString().replaceAll("Áã+", "Áã").replaceAll("^Áã", "");
+		return new StringBuilder(formatMoneyRe(money,0)).append("å…ƒ").toString().replaceAll("é›¶+", "é›¶").replaceAll("^é›¶", "");
 	}
 
 	private String formatMoneyRe(Long money,Integer rank) {
@@ -62,22 +62,22 @@ public class ChangeMoney {
 			return str4;
 	}
 
-//1.ÖĞ¼ä¶àÁãµÄÇé¿ö 2.¿ªÍ·µÄÁã²»ÓÃÈ¥µô£¬¶à¸öÁãºÏ²¢Îª1¸ö£¬Ä©Î²µÄÁãÈ¥µô£¬Èç¹ûÖ»ÓĞÒ»¸öÁãÁËµÄ»°£¬µ¥Î»Ò²²»ÒªÁË
+//1.ä¸­é—´å¤šé›¶çš„æƒ…å†µ 2.å¼€å¤´çš„é›¶ä¸ç”¨å»æ‰ï¼Œå¤šä¸ªé›¶åˆå¹¶ä¸º1ä¸ªï¼Œæœ«å°¾çš„é›¶å»æ‰ï¼Œå¦‚æœåªæœ‰ä¸€ä¸ªé›¶äº†çš„è¯ï¼Œå•ä½ä¹Ÿä¸è¦äº†
 
 	private String format4(Long money,int rank) {
 		//3201
 		StringBuilder sb = new StringBuilder();
 		
-		sb.append(fomate1(money/1000,"Ç§"))
-		.append(fomate1(money%1000/100,"°Ù"))
-		.append(fomate1(money%1000%100/10,"Ê®"))
+		sb.append(fomate1(money/1000,"åƒ"))
+		.append(fomate1(money%1000/100,"ç™¾"))
+		.append(fomate1(money%1000%100/10,"å"))
 		.append(fomate1(money%1000%100%10,""));
 		
-		String res = sb.toString().replaceAll("Áã+", "Áã");
-		if("Áã".equals(res))
+		String res = sb.toString().replaceAll("é›¶+", "é›¶");
+		if("é›¶".equals(res))
 			return res;
 		else
-			return res.replaceAll("Áã$", "")+rankMap.get(rank);
+			return res.replaceAll("é›¶$", "")+rankMap.get(rank);
 	}
 
 	private String fomate1(Long num, String unit) {

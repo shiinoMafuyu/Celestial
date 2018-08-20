@@ -8,15 +8,15 @@ import javax.swing.JDialog;
 import javax.swing.JFileChooser;
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *						---- wangzg 2017Äê5ÔÂ27ÈÕ
+ *						---- wangzg 2017å¹´5æœˆ27æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
  * 
  * </p>
@@ -24,46 +24,46 @@ import javax.swing.JFileChooser;
 public class UtilUI {
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Ò»Ğ©uiÉèÖÃĞÅÏ¢¡£
+	 * ä¸€äº›uiè®¾ç½®ä¿¡æ¯ã€‚
 	 * </ul>
 	 * @return
 	 */
 	public static String storage(){
-		JFileChooser chooser = new JFileChooser(); //´´½¨Ñ¡ÔñÎÄ¼ş¶ÔÏó
-		chooser.setDialogTitle("ÇëÑ¡ÔñÎÄ¼ş¼Ğ");//ÉèÖÃ±êÌâ
-//		chooser.setMultiSelectionEnabled(true);  //ÉèÖÃÖ»ÄÜÑ¡ÔñÎÄ¼ş
+		JFileChooser chooser = new JFileChooser(); //åˆ›å»ºé€‰æ‹©æ–‡ä»¶å¯¹è±¡
+		chooser.setDialogTitle("è¯·é€‰æ‹©æ–‡ä»¶å¤¹");//è®¾ç½®æ ‡é¢˜
+//		chooser.setMultiSelectionEnabled(true);  //è®¾ç½®åªèƒ½é€‰æ‹©æ–‡ä»¶
 		chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-//		FileNameExtensionFilter filter = new FileNameExtensionFilter("jpg", "jpg");//¶¨Òå¿ÉÑ¡ÔñÎÄ¼şÀàĞÍ
-//		chooser.setFileFilter(filter); //ÉèÖÃ¿ÉÑ¡ÔñÎÄ¼şÀàĞÍ
-		chooser.showOpenDialog(null); //´ò¿ªÑ¡ÔñÎÄ¼ş¶Ô»°¿ò,null¿ÉÉèÖÃÎªÄãµ±Ç°µÄ´°¿ÚJFrame»òFrame
-		File file = chooser.getSelectedFile(); //fileÎªÓÃ»§Ñ¡ÔñµÄÍ¼Æ¬ÎÄ¼ş
+//		FileNameExtensionFilter filter = new FileNameExtensionFilter("jpg", "jpg");//å®šä¹‰å¯é€‰æ‹©æ–‡ä»¶ç±»å‹
+//		chooser.setFileFilter(filter); //è®¾ç½®å¯é€‰æ‹©æ–‡ä»¶ç±»å‹
+		chooser.showOpenDialog(null); //æ‰“å¼€é€‰æ‹©æ–‡ä»¶å¯¹è¯æ¡†,nullå¯è®¾ç½®ä¸ºä½ å½“å‰çš„çª—å£JFrameæˆ–Frame
+		File file = chooser.getSelectedFile(); //fileä¸ºç”¨æˆ·é€‰æ‹©çš„å›¾ç‰‡æ–‡ä»¶
 		System.out.println(file.getAbsolutePath());
 //		panel.add(chooser);
 		return UtilString.fmtPathStr(file.getAbsolutePath());
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Ñ¡ÔñÄ¿Â¼¡£<br/>
+	 * é€‰æ‹©ç›®å½•ã€‚<br/>
 	 * </ul>
 	 * @return 
 	 */
 	public static String chooseDirctory() {
-		JFileChooser chooser = new JFileChooser(); //´´½¨Ñ¡ÔñÎÄ¼ş¶ÔÏó
-		chooser.setDialogTitle("ÇëÑ¡ÔñÎÄ¼ş¼Ğ");//ÉèÖÃ±êÌâ
+		JFileChooser chooser = new JFileChooser(); //åˆ›å»ºé€‰æ‹©æ–‡ä»¶å¯¹è±¡
+		chooser.setDialogTitle("è¯·é€‰æ‹©æ–‡ä»¶å¤¹");//è®¾ç½®æ ‡é¢˜
 		chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-		chooser.showOpenDialog(null); //´ò¿ªÑ¡ÔñÎÄ¼ş¶Ô»°¿ò,null¿ÉÉèÖÃÎªÄãµ±Ç°µÄ´°¿ÚJFrame»òFrame
-		File file = chooser.getSelectedFile(); //fileÎªÓÃ»§Ñ¡ÔñµÄÄ¿Â¼
+		chooser.showOpenDialog(null); //æ‰“å¼€é€‰æ‹©æ–‡ä»¶å¯¹è¯æ¡†,nullå¯è®¾ç½®ä¸ºä½ å½“å‰çš„çª—å£JFrameæˆ–Frame
+		File file = chooser.getSelectedFile(); //fileä¸ºç”¨æˆ·é€‰æ‹©çš„ç›®å½•
 		return UtilString.fmtPathStr(file.getAbsolutePath());
 	}
 	
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡¹Ì¶¨³ß´çµÄÎÄ¼şÑ¡ÔñÆ÷<br/>
+	 * è·å–å›ºå®šå°ºå¯¸çš„æ–‡ä»¶é€‰æ‹©å™¨<br/>
 	 * </ul>
 	 * @param x
 	 * @param y
@@ -84,10 +84,10 @@ public class UtilUI {
 		};
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡jFileµÄpath,ÓÉÓÚÃ»Ñ¡Ôñ¾Í¹Øµô¶Ô»°¿ò¿ÉÄÜµ¼ÖÂ¿ÕÖ¸ÕëÒì³£¡£<br/>
-	 * ËùÒÔ·â×°ÏÂ<br/>
+	 * è·å–jFileçš„path,ç”±äºæ²¡é€‰æ‹©å°±å…³æ‰å¯¹è¯æ¡†å¯èƒ½å¯¼è‡´ç©ºæŒ‡é’ˆå¼‚å¸¸ã€‚<br/>
+	 * æ‰€ä»¥å°è£…ä¸‹<br/>
 	 * </ul>
 	 * @param jFileChooser
 	 * @return 

@@ -5,7 +5,7 @@ import com.celestial.agniRadiance.EzUtil.UtilString;
 public class Util_Helper {
 
 	public static boolean checkDouble(String s) {
-		//8.00% ªÚ’ﬂ 4.31%~4.31%¡Ω÷÷
+		//8.00% ÊàñËÄÖ 4.31%~4.31%‰∏§Áßç
 		return match(s,Config.REGEX_DOUBLE_1,Config.REGEX_DOUBLE_2);
 	}
 
@@ -17,13 +17,13 @@ public class Util_Helper {
 			b = b1 || b2;
 		} catch (Exception e) {
 			e.printStackTrace();
-//			throw new RuntimeException("∏Ò Ω≤ª∆•≈‰:"+s);
+//			throw new RuntimeException("Ê†ºÂºè‰∏çÂåπÈÖç:"+s);
 		}
 		return b;
 	}
 
 	public static boolean checkInteger(String s) {
-		//12 ªÚ’ﬂ 11~23¡Ω÷÷.
+		//12 ÊàñËÄÖ 11~23‰∏§Áßç.
 		return match(s,Config.REGEX_Integer_1,Config.REGEX_Integer_2);
 	}
 	

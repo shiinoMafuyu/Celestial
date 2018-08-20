@@ -38,10 +38,10 @@ import com.celestial.agniRadiance.entity.FileReader;
 public class UtilFile {
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Í¨¹ı¹ÜµÀ¿½±´ÎÄ¼şf1µ½f2<br/>
-	 * Ä¿Â¼´æÔÚÔò´´½¨<br/>
+	 * é€šè¿‡ç®¡é“æ‹·è´æ–‡ä»¶f1åˆ°f2<br/>
+	 * ç›®å½•å­˜åœ¨åˆ™åˆ›å»º<br/>
 	 * </ul>
 	 * @param f1
 	 * @param f2
@@ -53,9 +53,9 @@ public class UtilFile {
 	}
 	
 	/**
-	 * ¿½±´ÎÄ¼ş <br/>
-	 * Í¨¹ı¹ÜµÀ <br/>
-	 * °Ñ f1 ¿½±´µ½ f2
+	 * æ‹·è´æ–‡ä»¶ <br/>
+	 * é€šè¿‡ç®¡é“ <br/>
+	 * æŠŠ f1 æ‹·è´åˆ° f2
 	 * @param f1
 	 * @param f2
 	 * @return
@@ -83,7 +83,7 @@ public class UtilFile {
     }
 
 	/**
-	 * »ñÈ¡md5Öµ
+	 * è·å–md5å€¼
 	 * @param file
 	 * @return
 	 * @throws FileNotFoundException
@@ -100,7 +100,7 @@ public class UtilFile {
 			value = bi.toString(16);
 	    } catch (Exception e) {
 			e.printStackTrace();
-			throw new RuntimeException("»ñÈ¡ÎÄ¼şMD5ÖµÊ§°Ü.");
+			throw new RuntimeException("è·å–æ–‡ä»¶MD5å€¼å¤±è´¥.");
 	    } finally {
 			if(null != in) {
 				try {
@@ -113,7 +113,7 @@ public class UtilFile {
 	    return value;
     }
 	/**
-	 * ±È½ÏÁ½¸öÎÄ¼ş ¿´ËûÃÇÊÇ²»ÊÇÒ»ÑùµÄ
+	 * æ¯”è¾ƒä¸¤ä¸ªæ–‡ä»¶ çœ‹ä»–ä»¬æ˜¯ä¸æ˜¯ä¸€æ ·çš„
 	 * @param file
 	 * @param s1File
 	 * @return
@@ -134,7 +134,7 @@ public class UtilFile {
 
 //	private static final List<String> cmdStringChangeList = new ArrayList<String>(Arrays.asList(new String[]{" ",""}));
 	/**
-	 * Windows¿ØÖÆÌ¨ĞèÒªÌæ»»¼ÓÉÏ"À¨ÆğÀ´µÄ×Ö·û.×¢ÒâÌæ»»Ê±ÕıÔòÆ¥Åä.±ÈÈçÌæ»»µô+ºÅÊ±ÓÉÓÚÊÇÕıÔò·ûËùÒÔÒª×ªÒâ\\+.<br/>
+	 * Windowsæ§åˆ¶å°éœ€è¦æ›¿æ¢åŠ ä¸Š"æ‹¬èµ·æ¥çš„å­—ç¬¦.æ³¨æ„æ›¿æ¢æ—¶æ­£åˆ™åŒ¹é….æ¯”å¦‚æ›¿æ¢æ‰+å·æ—¶ç”±äºæ˜¯æ­£åˆ™ç¬¦æ‰€ä»¥è¦è½¬æ„\\+.<br/>
 	 */
 	@SuppressWarnings("serial")
 	private static final Map<String,String> cmdStringChangeMap = new HashMap<String, String>(){{
@@ -144,10 +144,10 @@ public class UtilFile {
 		put(",","\",\"");
 	}};
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * °ÑÎÄ¼şf1¿½±´µ½Ä¿Â¼f2ÏÂÃæ.<br/>
-	 * ÕâÑù²»»á¸Ä±äÎÄ¼şÉú³ÉÊ±¼ä.<br/>
+	 * æŠŠæ–‡ä»¶f1æ‹·è´åˆ°ç›®å½•f2ä¸‹é¢.<br/>
+	 * è¿™æ ·ä¸ä¼šæ”¹å˜æ–‡ä»¶ç”Ÿæˆæ—¶é—´.<br/>
 	 * </ul>
 	 * @param f1
 	 * @param f2
@@ -157,10 +157,10 @@ public class UtilFile {
 	}*/
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * °ÑÎÄ¼şf1¿½µ½Ä¿Â¼f2ÏÂ <br/>
-	 * Ê¹ÓÃ¿ØÖÆÌ¨·½Ê½<br/>
+	 * æŠŠæ–‡ä»¶f1æ‹·åˆ°ç›®å½•f2ä¸‹ <br/>
+	 * ä½¿ç”¨æ§åˆ¶å°æ–¹å¼<br/>
 	 * </ul>
 	 * @param f1
 	 * @param f2
@@ -180,7 +180,7 @@ public class UtilFile {
 			}
 			int exitVal = pr.waitFor();
 			if(exitVal!=0){
-				throw new RuntimeException("¿½±´ÎÄ¼şÇë´¦ÀíÒì³£.ÎÄ¼şÂ·¾¶ÊÇ·ñÕıÈ·,»òÕßÊÇÓ¦¸Ã¼ÓÉÏÒıºÅµÄ×Ö·ûÔÚDBUtil.cmdStringChangeMapÖĞÌí¼Ó.");
+				throw new RuntimeException("æ‹·è´æ–‡ä»¶è¯·å¤„ç†å¼‚å¸¸.æ–‡ä»¶è·¯å¾„æ˜¯å¦æ­£ç¡®,æˆ–è€…æ˜¯åº”è¯¥åŠ ä¸Šå¼•å·çš„å­—ç¬¦åœ¨DBUtil.cmdStringChangeMapä¸­æ·»åŠ .");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -188,10 +188,10 @@ public class UtilFile {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * °ÑÎÄ¼şf1¿½µ½Ä¿Â¼f2ÏÂ ,Èç¹ûf2ËùÔÚÄ¿Â¼²»´æÔÚÔò´´½¨¡£<br/>
-	 * Ê¹ÓÃ¿ØÖÆÌ¨·½Ê½<br/>
+	 * æŠŠæ–‡ä»¶f1æ‹·åˆ°ç›®å½•f2ä¸‹ ,å¦‚æœf2æ‰€åœ¨ç›®å½•ä¸å­˜åœ¨åˆ™åˆ›å»ºã€‚<br/>
+	 * ä½¿ç”¨æ§åˆ¶å°æ–¹å¼<br/>
 	 * </ul>
 	 * @param f1
 	 * @param f2
@@ -202,9 +202,9 @@ public class UtilFile {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Èç¹û²»´æÔÚÔò´´½¨ÎÄ¼ş<br/>
+	 * å¦‚æœä¸å­˜åœ¨åˆ™åˆ›å»ºæ–‡ä»¶<br/>
 	 * </ul>
 	 * @param parentFile 
 	 */
@@ -214,8 +214,8 @@ public class UtilFile {
 	}
 
 	/**
-	 * »ñÈ¡ÎÄ¼ş´´½¨Ê±¼ä(¾«È·µ½·ÖÖÓ)¡£<br/>
-	 * Í¨¹ı¿ØÖÆÌ¨·½Ê½¡£<br/>
+	 * è·å–æ–‡ä»¶åˆ›å»ºæ—¶é—´(ç²¾ç¡®åˆ°åˆ†é’Ÿ)ã€‚<br/>
+	 * é€šè¿‡æ§åˆ¶å°æ–¹å¼ã€‚<br/>
 	 * @param filePath
 	 */
 	public static Date getCreateTime(String filePath){
@@ -239,10 +239,10 @@ public class UtilFile {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ½«javaÀïµÄ×Ö·û´®¸ñÊ½ÎªWindows¿ØÖÆÌ¨Ò²ÄÜÊ¶±ğµÄĞÎÊ½.<br/>
-	 * ¾ÍÊÇ¼ÓÉÏ"" Âèµ°<br/>
+	 * å°†javaé‡Œçš„å­—ç¬¦ä¸²æ ¼å¼ä¸ºWindowsæ§åˆ¶å°ä¹Ÿèƒ½è¯†åˆ«çš„å½¢å¼.<br/>
+	 * å°±æ˜¯åŠ ä¸Š"" å¦ˆè›‹<br/>
 	 * </ul>
 	 * @param s
 	 * @return
@@ -252,7 +252,7 @@ public class UtilFile {
 		while (it.hasNext()) {
 			Map.Entry<String, String> entry = it.next();
 			String st = entry.getKey();
-			//Ã»´íÖ±½Ó±éÀúÌæ»».ÕıÔòÅĞ¶Ï°üº¬Ê²Ã´µÄ»¹ÊÇÈ¥ËÀÒ»ËÀ±È½ÏºÃ.
+			//æ²¡é”™ç›´æ¥éå†æ›¿æ¢.æ­£åˆ™åˆ¤æ–­åŒ…å«ä»€ä¹ˆçš„è¿˜æ˜¯å»æ­»ä¸€æ­»æ¯”è¾ƒå¥½.
 			s = s.replaceAll(st, cmdStringChangeMap.get(st));
 //			}
 		}
@@ -260,12 +260,12 @@ public class UtilFile {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ±È½ÏÎÄ¼şf1ºÍf2µÄMD5ÖµÊÇ·ñÒ»Ñù.
+	 * æ¯”è¾ƒæ–‡ä»¶f1å’Œf2çš„MD5å€¼æ˜¯å¦ä¸€æ ·.
 	 * </ul>
-	 * @param f1 ÎÄ¼ş
-	 * @param f2 ÎÄ¼ş2
+	 * @param f1 æ–‡ä»¶
+	 * @param f2 æ–‡ä»¶2
 	 * @return
 	 */
 	public static boolean compareMD5(File f1, File f2) {
@@ -280,10 +280,10 @@ public class UtilFile {
 	}
 	private static List<String> fileList = null;
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´ÓpathÏÂËùÓĞÄ¿Â¼ÖĞ(µİ¹é²éÕÒËùÓĞ)Ñ°ÕÒÆ¥ÅäÕıÔòÊ½fileNameµÄÎÄ¼ş.<br/>
-	 * Ö±½ÓĞ´ÎÄ¼şÈ«ÃûÒ²ÊÇ¿ÉÒÔµÄÅ¶<br/>
+	 * ä»pathä¸‹æ‰€æœ‰ç›®å½•ä¸­(é€’å½’æŸ¥æ‰¾æ‰€æœ‰)å¯»æ‰¾åŒ¹é…æ­£åˆ™å¼fileNameçš„æ–‡ä»¶.<br/>
+	 * ç›´æ¥å†™æ–‡ä»¶å…¨åä¹Ÿæ˜¯å¯ä»¥çš„å“¦<br/>
 	 * </ul>
 	 * @param fileName(regex)
 	 * @param path
@@ -295,12 +295,12 @@ public class UtilFile {
 		return fileList;
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * µİ¹éÑ°ÕÒÎÄ¼ş.<br/>
-	 * ÒÔµİ¹éµÄ·½Ê½È¥ÕÒËùÓĞÎÄ¼şÃûÆ¥ÅäµÄ,
+	 * é€’å½’å¯»æ‰¾æ–‡ä»¶.<br/>
+	 * ä»¥é€’å½’çš„æ–¹å¼å»æ‰¾æ‰€æœ‰æ–‡ä»¶ååŒ¹é…çš„,
 	 * </ul>
-	 * @param fileName ¿ÉÓÃÕıÔòÆ¥Åä.
+	 * @param fileName å¯ç”¨æ­£åˆ™åŒ¹é….
 	 * @param path
 	 */
 	private static void findFileRecursive(String fileName, File path) {
@@ -316,7 +316,7 @@ public class UtilFile {
 			}
 		}
 		else{
-			throw new RuntimeException(path.getAbsolutePath() + "²»ÊÇÎÄ¼şÒ²²»ÊÇÎÄ¼ş¼Ğ!");
+			throw new RuntimeException(path.getAbsolutePath() + "ä¸æ˜¯æ–‡ä»¶ä¹Ÿä¸æ˜¯æ–‡ä»¶å¤¹!");
 		}
 	}
 	/**
@@ -324,27 +324,27 @@ public class UtilFile {
 	 */
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * °Ñf1ÖĞËùÓĞÎÄ¼ş(°üÀ¨ÏÂÃæËùÓĞ×ÓÄ¿Â¼ÖĞµÄ)¿½±´µ½f2ÖĞ
+	 * æŠŠf1ä¸­æ‰€æœ‰æ–‡ä»¶(åŒ…æ‹¬ä¸‹é¢æ‰€æœ‰å­ç›®å½•ä¸­çš„)æ‹·è´åˆ°f2ä¸­
 	 * </ul>
-	 * @param f1 ÎÄ¼şÄ¿Â¼.
-	 * @param f2 ¿½µ½µÄÄ¿±êÄ¿Â¼.
+	 * @param f1 æ–‡ä»¶ç›®å½•.
+	 * @param f2 æ‹·åˆ°çš„ç›®æ ‡ç›®å½•.
 	 */
 	public static void getFileTogetherByModifyTime(File f1, File f2) {
 		if(f1.isFile()){
-			//ÊÇÎÄ¼şµÄ»°¿´f2ÀïÃæÓĞÃ»ÓĞ,Ã»ÓĞÖ±½Ó¿½ÓĞµÄ»°±È½ÏÆäĞŞ¸ÄÊ±¼ä.±È½ÏĞÂÔÙ¿½~
+			//æ˜¯æ–‡ä»¶çš„è¯çœ‹f2é‡Œé¢æœ‰æ²¡æœ‰,æ²¡æœ‰ç›´æ¥æ‹·æœ‰çš„è¯æ¯”è¾ƒå…¶ä¿®æ”¹æ—¶é—´.æ¯”è¾ƒæ–°å†æ‹·~
 			File[] fArr = f2.listFiles();
 			boolean b = true;
 			for(File f: fArr){
 				if(f1.getName().equals(f.getName())){
-					//Èç¹ûµ±Ç°ÎÄ¼ş²»±Èf2ÖĞ´æÔÚµÄÍ¬ÃûÎÄ¼şÍí~¾Í²»ÓÃ¿½ÁË
+					//å¦‚æœå½“å‰æ–‡ä»¶ä¸æ¯”f2ä¸­å­˜åœ¨çš„åŒåæ–‡ä»¶æ™š~å°±ä¸ç”¨æ‹·äº†
 					
 					if(!(f1.lastModified() > f.lastModified())){
 						b = false;
 					}
 					SimpleDateFormat sm = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-					System.out.println("f1: "+sm.format(new Date(f1.lastModified())) +"\nf2: "+sm.format(new Date(f.lastModified())) + "  Òª¿½ :" + b);
+					System.out.println("f1: "+sm.format(new Date(f1.lastModified())) +"\nf2: "+sm.format(new Date(f.lastModified())) + "  è¦æ‹· :" + b);
 				}
 			}
 			if(b)
@@ -353,14 +353,14 @@ public class UtilFile {
 				System.out.println("f1: -->  "+f1.getAbsolutePath());
 		}
 		else if(f1.isDirectory()){
-			//ÊÇÎÄ¼ş¼Ğ¼ÌĞø±éÀú
+			//æ˜¯æ–‡ä»¶å¤¹ç»§ç»­éå†
 			File[] fArr = f1.listFiles();
 			for(File f : fArr){
 				getFileTogetherByModifyTime(f,f2);
 			}
 		}
 		else{
-			throw new RuntimeException("²»ÊÇÎÄ¼şÒ²²»ÊÇÎÄ¼ş¼ĞÒì³£!Çë¼ì²é!");
+			throw new RuntimeException("ä¸æ˜¯æ–‡ä»¶ä¹Ÿä¸æ˜¯æ–‡ä»¶å¤¹å¼‚å¸¸!è¯·æ£€æŸ¥!");
 		}
 	}
 
@@ -368,18 +368,18 @@ public class UtilFile {
 
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ½«ÎÄ±¾ÄÚÈİ¶ÁÈëlineListÖĞ
+	 * å°†æ–‡æœ¬å†…å®¹è¯»å…¥lineListä¸­
 	 * </ul>
-	 * @param filePath ÎÄ¼şÂ·¾¶
-	 * @param charset ±àÂë
+	 * @param filePath æ–‡ä»¶è·¯å¾„
+	 * @param charset ç¼–ç 
 	 * @return
 	 */
 	public static List<String> readFileLineToList(String filePath,String charset,boolean isTrim) {
 		File f = new File(filePath);
 		if(!(f.exists() && f.isFile()))
-			throw new RuntimeException("Ö¸¶¨ÎÄ¼ş²»´æÔÚ»ò²»ÊÇÎÄ¼ş!");
+			throw new RuntimeException("æŒ‡å®šæ–‡ä»¶ä¸å­˜åœ¨æˆ–ä¸æ˜¯æ–‡ä»¶!");
 		
 		List<String> l = new ArrayList<String>();
 		
@@ -401,7 +401,7 @@ public class UtilFile {
 			
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new RuntimeException("¶ÁÈ¡ÎÄ¼şÄÚÈİÊ§°Ü~");
+			throw new RuntimeException("è¯»å–æ–‡ä»¶å†…å®¹å¤±è´¥~");
 		}
 		finally{
 			UtilFile.close(br);
@@ -409,11 +409,11 @@ public class UtilFile {
 		return l;
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ½«ÎÄ±¾ÄÚÈİ¶ÁÈëlineListÖĞ
+	 * å°†æ–‡æœ¬å†…å®¹è¯»å…¥lineListä¸­
 	 * </ul>
-	 * @param filePath ÎÄ¼şÂ·¾¶
+	 * @param filePath æ–‡ä»¶è·¯å¾„
 	 * @return
 	 */
 	public static List<String> readFileLineToList(String filePath) {
@@ -421,20 +421,20 @@ public class UtilFile {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ½«ÎÄ±¾ÄÚÈİ¶ÁÈëlineListÖĞ
+	 * å°†æ–‡æœ¬å†…å®¹è¯»å…¥lineListä¸­
 	 * </ul>
-	 * @param filePath ÎÄ¼şÂ·¾¶
+	 * @param filePath æ–‡ä»¶è·¯å¾„
 	 * @return
 	 */
 	public static List<String> readFileLineToList(String filePath,boolean isTrim) {
 		return readFileLineToList(filePath,null,isTrim);
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * °ÑlsÖĞµÄÄÚÈİĞ´µ½pathËùÖ¸ÏòµÄÎÄ¼şÖĞ
+	 * æŠŠlsä¸­çš„å†…å®¹å†™åˆ°pathæ‰€æŒ‡å‘çš„æ–‡ä»¶ä¸­
 	 * </ul>
 	 * @param ls
 	 * @param string
@@ -445,7 +445,7 @@ public class UtilFile {
 	}
 	
 	/**
-	 * ±£´æ×Ö·û´®send£¬Ä¬ÈÏ¸ñÊ½utf-8£¬Â·¾¶ÉÏÃ»ÓĞ¾Í´´½¨¡£ÓĞ¾Í¸²¸Ç¡£
+	 * ä¿å­˜å­—ç¬¦ä¸²sendï¼Œé»˜è®¤æ ¼å¼utf-8ï¼Œè·¯å¾„ä¸Šæ²¡æœ‰å°±åˆ›å»ºã€‚æœ‰å°±è¦†ç›–ã€‚
 	 * @param send
 	 * @param path
 	 */
@@ -454,7 +454,7 @@ public class UtilFile {
 	}
 	
 	/**
-	 * ±£´æ×Ö·û´®send£¬Â·¾¶ÉÏÃ»ÓĞ¾Í´´½¨¡£ÓĞ¾Í¸²¸Ç¡£
+	 * ä¿å­˜å­—ç¬¦ä¸²sendï¼Œè·¯å¾„ä¸Šæ²¡æœ‰å°±åˆ›å»ºã€‚æœ‰å°±è¦†ç›–ã€‚
 	 * @param send
 	 * @param path
 	 */
@@ -463,9 +463,9 @@ public class UtilFile {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * °ÑlsÖĞµÄÄÚÈİĞ´µ½pathËùÖ¸ÏòµÄÎÄ¼şÖĞ
+	 * æŠŠlsä¸­çš„å†…å®¹å†™åˆ°pathæ‰€æŒ‡å‘çš„æ–‡ä»¶ä¸­
 	 * </ul>
 	 * @param ls
 	 * @param string
@@ -483,17 +483,17 @@ public class UtilFile {
 			pw.flush();
 			pw.close();
 		}catch(Exception e){
-			throw new RuntimeException(new StringBuffer("±£´æÎÄ¼şÊ§°Ü:").append(path).toString(),e);
+			throw new RuntimeException(new StringBuffer("ä¿å­˜æ–‡ä»¶å¤±è´¥:").append(path).toString(),e);
 		}
 		
 		
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¸ù¾İÖ¸¶¨Â·¾¶´´½¨Ò»¸öÎÄ¼ş,Â·¾¶²»´æÔÚÔò´´½¨,ÎÄ¼ş²»´æÔÚÔò´´½¨.<br/>
-	 * ÎÄ¼şÒÔ"/"×öÎª·Ö¸ô·û<br/>
+	 * æ ¹æ®æŒ‡å®šè·¯å¾„åˆ›å»ºä¸€ä¸ªæ–‡ä»¶,è·¯å¾„ä¸å­˜åœ¨åˆ™åˆ›å»º,æ–‡ä»¶ä¸å­˜åœ¨åˆ™åˆ›å»º.<br/>
+	 * æ–‡ä»¶ä»¥"/"åšä¸ºåˆ†éš”ç¬¦<br/>
 	 * </ul>
 	 * @param path
 	 * @return
@@ -511,15 +511,15 @@ public class UtilFile {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new RuntimeException("ÎÄ¼ş´´½¨Ê§°Ü!");
+			throw new RuntimeException("æ–‡ä»¶åˆ›å»ºå¤±è´¥!");
 		}
 		return file;
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¹Ø±ÕÎÄ¼şÁ÷
+	 * å…³é—­æ–‡ä»¶æµ
 	 * </ul>
 	 * @param br
 	 */
@@ -534,9 +534,9 @@ public class UtilFile {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¼ì²éfilePathÖ¸ÏòµÄÎÄ¼ş´æÔÚ²»(°üÀ¨ÎÄ¼ş,ÎÄ¼ş¼Ğ)<br/>
+	 * æ£€æŸ¥filePathæŒ‡å‘çš„æ–‡ä»¶å­˜åœ¨ä¸(åŒ…æ‹¬æ–‡ä»¶,æ–‡ä»¶å¤¹)<br/>
 	 * </ul>
 	 * @param filePath
 	 * @return
@@ -552,11 +552,11 @@ public class UtilFile {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡filePathÂ·¾¶ÏÂ,Æ¥ÅäÕıÔòÊ½regexµÄÈ«²¿Ä¿Â¼.
+	 * è·å–filePathè·¯å¾„ä¸‹,åŒ¹é…æ­£åˆ™å¼regexçš„å…¨éƒ¨ç›®å½•.
 	 * <br/>
-	 * ²»µİ¹é
+	 * ä¸é€’å½’
 	 * </ul>
 	 * @param filePath
 	 * @param regex
@@ -577,34 +577,34 @@ public class UtilFile {
 					public boolean accept(File dir, String name) {
 						File file = new File(dir.getAbsolutePath()+"/"+name);
 						boolean b = true;
-						//ÑéÖ¤µ±Ç°ÎÄ¼şºÍËùĞèÎÄ¼şµÄÀàĞÍÊÇ·ñÒ»Ñù,Í¬ÎªÎÄ¼ş»òÕßÍ¬ÎªÎÄ¼ş¼Ğ.Èç¹ûÎªnull,ÔòÎÄ¼ş»òÎÄ¼ş¼Ğ¶¼¿ÉÒÔ.
+						//éªŒè¯å½“å‰æ–‡ä»¶å’Œæ‰€éœ€æ–‡ä»¶çš„ç±»å‹æ˜¯å¦ä¸€æ ·,åŒä¸ºæ–‡ä»¶æˆ–è€…åŒä¸ºæ–‡ä»¶å¤¹.å¦‚æœä¸ºnull,åˆ™æ–‡ä»¶æˆ–æ–‡ä»¶å¤¹éƒ½å¯ä»¥.
 						if(isFile == null){
 						}else if(file.isFile() == isFile){
 						}else{
 							b = false;
 						}
-						//ÎÄ¼ş»òÕßÎÄ¼ş¼ĞÊÇ·ñ°üº¬¸ø¶¨×Ö·û´®.
+						//æ–‡ä»¶æˆ–è€…æ–‡ä»¶å¤¹æ˜¯å¦åŒ…å«ç»™å®šå­—ç¬¦ä¸².
 						if(!UtilString.matchAllSameRegx(name, regex))
 							b = false;
 						return b;
 					}
 				});
 			}else{
-				throw new RuntimeException("Ö¸¶¨Î»ÖÃ²»´æÔÚ»òÕß²»ÊÇÄ¿Â¼." + filePath);
+				throw new RuntimeException("æŒ‡å®šä½ç½®ä¸å­˜åœ¨æˆ–è€…ä¸æ˜¯ç›®å½•." + filePath);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new RuntimeException("»ñÈ¡ÎÄ¼şÊ§°Ü");
+			throw new RuntimeException("è·å–æ–‡ä»¶å¤±è´¥");
 		}
 		return fArr;
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡filePathÂ·¾¶ÏÂ,Æ¥ÅäÕıÔòÊ½regexµÄÈ«²¿ÎÄ¼ş.
+	 * è·å–filePathè·¯å¾„ä¸‹,åŒ¹é…æ­£åˆ™å¼regexçš„å…¨éƒ¨æ–‡ä»¶.
 	 * <br/>
-	 * ²»µİ¹é
+	 * ä¸é€’å½’
 	 * </ul>
 	 * @param filePath
 	 * @param regex
@@ -615,9 +615,9 @@ public class UtilFile {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡filePathÂ·¾¶ÏÂ,Æ¥ÅäÕıÔòÊ½regexµÄÈ«²¿Ä¿Â¼ºÍÎÄ¼ş.
+	 * è·å–filePathè·¯å¾„ä¸‹,åŒ¹é…æ­£åˆ™å¼regexçš„å…¨éƒ¨ç›®å½•å’Œæ–‡ä»¶.
 	 * </ul>
 	 * @param filePath
 	 * @param regex
@@ -628,9 +628,9 @@ public class UtilFile {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡filePathÂ·¾¶ÏÂµÄÈ«²¿Ä¿Â¼ºÍÎÄ¼ş.
+	 * è·å–filePathè·¯å¾„ä¸‹çš„å…¨éƒ¨ç›®å½•å’Œæ–‡ä»¶.
 	 * </ul>
 	 * @param filePath
 	 * @return
@@ -640,9 +640,9 @@ public class UtilFile {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * µİ¹éÕÒµ½ÏÂµÄËùÓĞÎÄ¼ş<br/>
+	 * é€’å½’æ‰¾åˆ°ä¸‹çš„æ‰€æœ‰æ–‡ä»¶<br/>
 	 * </ul>
 	 * @param filePath
 	 * @return
@@ -661,16 +661,16 @@ public class UtilFile {
 				findAllFileRecursive(i);
 			}
 		}else{
-			throw new RuntimeException("·ÇÎÄ¼ş·ÇÄ¿Â¼Òì³£!µİ¹é²éÕÒÎÄ¼şÊ§°Ü!");
+			throw new RuntimeException("éæ–‡ä»¶éç›®å½•å¼‚å¸¸!é€’å½’æŸ¥æ‰¾æ–‡ä»¶å¤±è´¥!");
 		}
 	}
 
 	private static List<File> findAllFile = null;
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * µİ¹é²éÕÒÄ¿Â¼pathFileÏÂÃæµÄfileÎÄ¼ş.
+	 * é€’å½’æŸ¥æ‰¾ç›®å½•pathFileä¸‹é¢çš„fileæ–‡ä»¶.
 	 * </ul>
 	 * @param file
 	 * @param pathFile
@@ -696,14 +696,14 @@ public class UtilFile {
 			}
 		}
 		else{
-			throw new RuntimeException(path.getAbsolutePath() + "²»ÊÇÎÄ¼şÒ²²»ÊÇÎÄ¼ş¼Ğ!");
+			throw new RuntimeException(path.getAbsolutePath() + "ä¸æ˜¯æ–‡ä»¶ä¹Ÿä¸æ˜¯æ–‡ä»¶å¤¹!");
 		}
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡pathËùÖ¸¶¨µÄpropertiesÎÄ¼şÀïµÄËùÓĞ¼üÖµ¶Ô,ÒÔHashMapĞÎÊ½·µ»Ø.<br/>
+	 * è·å–pathæ‰€æŒ‡å®šçš„propertiesæ–‡ä»¶é‡Œçš„æ‰€æœ‰é”®å€¼å¯¹,ä»¥HashMapå½¢å¼è¿”å›.<br/>
 	 * </ul>
 	 * @param path
 	 * @return
@@ -713,9 +713,9 @@ public class UtilFile {
 	}
 	
 	/**
-	 * ½«pathÂ·¾¶Ö¸¶¨ÎÄ¼ş£¬ÒÔÖ¸¶¨¸ñÊ½charset¶ÁÈ¡
-	 * @param path ÎÄ¼şÂ·¾¶
-	 * @param charset ±àÂë
+	 * å°†pathè·¯å¾„æŒ‡å®šæ–‡ä»¶ï¼Œä»¥æŒ‡å®šæ ¼å¼charsetè¯»å–
+	 * @param path æ–‡ä»¶è·¯å¾„
+	 * @param charset ç¼–ç 
 	 * @return
 	 */
 	public static Map<String,String> readProperties(String path,String charset){
@@ -723,7 +723,7 @@ public class UtilFile {
 	}
 	
 	/**
-	 * ¶ÁÈ¡PropertiesÎÄ¼şµ½mapÀï
+	 * è¯»å–Propertiesæ–‡ä»¶åˆ°mapé‡Œ
 	 * @param file
 	 * @return
 	 */
@@ -732,7 +732,7 @@ public class UtilFile {
 	}
 	
 	/**
-	 * ½«fileÒÔÖ¸¶¨¸ñÊ½charset¶ÁÈ¡
+	 * å°†fileä»¥æŒ‡å®šæ ¼å¼charsetè¯»å–
 	 * @param file
 	 * @param charset
 	 * @return
@@ -750,14 +750,14 @@ public class UtilFile {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new RuntimeException("¶ÁÈ¡propertiesÎÄ¼şÊ§°Ü:" + file.getAbsolutePath());
+			throw new RuntimeException("è¯»å–propertiesæ–‡ä»¶å¤±è´¥:" + file.getAbsolutePath());
 		}
 		return m;
 	}
 	
 	
 	/**
-	 * µİ¹éÉ¾³ıÎÄ¼ş¡£
+	 * é€’å½’åˆ é™¤æ–‡ä»¶ã€‚
 	 * @param file
 	 */
 	public static void deleteFile(File file) {
@@ -766,11 +766,11 @@ public class UtilFile {
 				@Override
 				public void doWork(File file) {
 					file.delete();
-//					System.out.println("É¾³ı"+file.getAbsolutePath());
+//					System.out.println("åˆ é™¤"+file.getAbsolutePath());
 				}
 				public void doDirectoryWork(File directory){
 					directory.delete();
-//					System.out.println("É¾³ı"+directory.getAbsolutePath());
+//					System.out.println("åˆ é™¤"+directory.getAbsolutePath());
 				}
 			};
 		rd.start();
@@ -780,8 +780,8 @@ public class UtilFile {
 	}
 	
 	/**
-	 * ¸üĞÂÎÄ¼ş¡£<br/>
-	 * Èç¹ûsrcFile±ÈtargetFile£¬»òÕßtargetFile²»´æÔÚÔò¸´ÖÆsrcFileµ½targetFile.<br/>
+	 * æ›´æ–°æ–‡ä»¶ã€‚<br/>
+	 * å¦‚æœsrcFileæ¯”targetFileï¼Œæˆ–è€…targetFileä¸å­˜åœ¨åˆ™å¤åˆ¶srcFileåˆ°targetFile.<br/>
 	 * @param srcFile
 	 * @param targetFile
 	 */
@@ -792,7 +792,7 @@ public class UtilFile {
 	}
 	
 	/** 
-	 * ¶ÁÈ¡ÎÄ¼şĞŞ¸ÄÊ±¼äµÄ·½·¨1
+	 * è¯»å–æ–‡ä»¶ä¿®æ”¹æ—¶é—´çš„æ–¹æ³•1
 	 * @param file
 	 */ 
 	public static Date getModifiedTime(File file){
@@ -802,7 +802,7 @@ public class UtilFile {
 	}
 
 	/**
-	 * ±È½Ïf1PathºÍf2PathÊÇ·ñÒ»ÖÂ¡£
+	 * æ¯”è¾ƒf1Pathå’Œf2Pathæ˜¯å¦ä¸€è‡´ã€‚
 	 * @param f1Path 
 	 * @param f2Path 
 	 * @return
@@ -812,7 +812,7 @@ public class UtilFile {
 	}
 	
 	/**
-	 * ±È½Ïf1ºÍf2ÊÇ·ñÒ»ÖÂ¡£
+	 * æ¯”è¾ƒf1å’Œf2æ˜¯å¦ä¸€è‡´ã€‚
 	 * @param f1 
 	 * @param f2 
 	 * @return
@@ -830,7 +830,7 @@ public class UtilFile {
 	}
 
 	/**
-	 * ±È½Ï´´½¨Ê±¼äf2ÊÇ·ñ±Èf1ĞÂ¡£
+	 * æ¯”è¾ƒåˆ›å»ºæ—¶é—´f2æ˜¯å¦æ¯”f1æ–°ã€‚
 	 * @param f1
 	 * @param f2
 	 * @return
@@ -840,7 +840,7 @@ public class UtilFile {
 	}
 
 	/**
-	 * »ñÈ¡ÎÄ¼şfileµÄ²»ÖØÃûĞÂÃû<br/>
+	 * è·å–æ–‡ä»¶fileçš„ä¸é‡åæ–°å<br/>
 	 * @param file
 	 */
 	public static File getUnRepeatName(File file) {
@@ -861,9 +861,9 @@ public class UtilFile {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡¾ø¶ÔÂ·¾¶¡£
+	 * è·å–ç»å¯¹è·¯å¾„ã€‚
 	 * </ul>
 	 * @param path
 	 * @return 
@@ -873,9 +873,9 @@ public class UtilFile {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡¾ø¶ÔÂ·¾¶¡£
+	 * è·å–ç»å¯¹è·¯å¾„ã€‚
 	 * </ul>
 	 * @param file
 	 * @return 
@@ -885,9 +885,9 @@ public class UtilFile {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÅĞ¶ÏpathÊÇ²»ÊÇ´æÔÚµÄÄ¿Â¼.<br/>
+	 * åˆ¤æ–­pathæ˜¯ä¸æ˜¯å­˜åœ¨çš„ç›®å½•.<br/>
 	 * </ul>
 	 * @param path
 	 * @return 
@@ -903,9 +903,9 @@ public class UtilFile {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡×ÀÃæÂ·¾¶<br/>
+	 * è·å–æ¡Œé¢è·¯å¾„<br/>
 	 * </ul>
 	 * @return
 	 */
@@ -916,7 +916,7 @@ public class UtilFile {
 	}
 
 	/**
-	 * ¸ù¾İÎÄ¼şÃû»ñµÃsourcepathÏÂÎÄ¼şÂ·¾¢
+	 * æ ¹æ®æ–‡ä»¶åè·å¾—sourcepathä¸‹æ–‡ä»¶è·¯åŠ²
 	 * @param fileName
 	 * @return
 	 */
@@ -931,9 +931,9 @@ public class UtilFile {
 	}
 	
 	/**
-	 * ¸ù¾İÎÄ¼şÃû»ñµÃsourcepathÏÂÎÄ¼şÂ·¾¶
+	 * æ ¹æ®æ–‡ä»¶åè·å¾—sourcepathä¸‹æ–‡ä»¶è·¯å¾„
 	 * @param fileName 
-	 * @param obj ÅäÖÃÎÄ¼şÍ¬Ô´Àà¶ÔÏó
+	 * @param obj é…ç½®æ–‡ä»¶åŒæºç±»å¯¹è±¡
 	 * @return
 	 */
 	public static String load(String fileName,Object obj) {
@@ -943,7 +943,7 @@ public class UtilFile {
 	
 
 	/**
-	 * Èç¹ûÎªnullÔò·µ»ØÊı×é³¤¶ÈÎª0µÄ¡£
+	 * å¦‚æœä¸ºnullåˆ™è¿”å›æ•°ç»„é•¿åº¦ä¸º0çš„ã€‚
 	 * @param file
 	 * @return
 	 */
@@ -955,7 +955,7 @@ public class UtilFile {
 	}
 
 	/**
-	 * »ñÈ¡µ±Ç°Ä¿Â¼ÏÂµÄËùÓĞÎÄ¼ş
+	 * è·å–å½“å‰ç›®å½•ä¸‹çš„æ‰€æœ‰æ–‡ä»¶
 	 * @param directory
 	 * @return
 	 */
@@ -970,9 +970,9 @@ public class UtilFile {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÅĞ¶ÏÎÄ¼şÊÇ·ñÊÇ¶ÔÓ¦ÖĞµÄÒ»ÖÖ
+	 * åˆ¤æ–­æ–‡ä»¶æ˜¯å¦æ˜¯å¯¹åº”ä¸­çš„ä¸€ç§
 	 * </ul>
 	 * @param file
 	 * @param types
@@ -990,9 +990,9 @@ public class UtilFile {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¼ÓÔØconfigfiles×ÊÔ´¡£<br/>
+	 * åŠ è½½configfilesèµ„æºã€‚<br/>
 	 * </ul>
 	 * @param fileName
 	 * @return

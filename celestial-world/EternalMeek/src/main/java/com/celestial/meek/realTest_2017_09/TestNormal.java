@@ -1,9 +1,9 @@
 /******************************************************************
  * Test.java
  * Copyright 2017 by WZG. All Rights Reserved.
- * CreateDate£º2017Äê9ÔÂ4ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´9æœˆ4æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.meek.realTest_2017_09;
@@ -17,15 +17,15 @@ import org.junit.Test;
 import com.celestial.meek.realTest_2017_07.SerialTest.Person;
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê9ÔÂ4ÈÕ
+ *                        ---- wangzg 2017å¹´9æœˆ4æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
  * 
  * </p>
@@ -87,7 +87,7 @@ public class TestNormal {
 		System.out.println(p.equals(p2));
 		
 		Map<Person,String> m = new HashMap<>();
-		String val = "ÎÒ²ø×¡Ìõ×Ó£¬ÄãÃÇ¿ìÅÜ£¡";
+		String val = "æˆ‘ç¼ ä½æ¡å­ï¼Œä½ ä»¬å¿«è·‘ï¼";
 		m.put(p, val);
 		
 		Assert.assertEquals(val,m.get(p));

@@ -1,12 +1,12 @@
 /**
- * ¶ÔÓÚcom.celestial.agniRadianceÀïÃæ»ù´¡¹¤¾ß¸ü¸ß²ã´ÎµÄ·â×°£¬Ê¹ÓÃ¡£<br/>
- * ¹¦ÄÜ¿é¸ü´ó£¬ÄÜÁ¦¸ü´ó¡£<br/>
- * µ«ÊÇÓëÖ®Ïà¶Ô£¬²ã´ÎÔ½¸ßÔ½È±ÉÙÍ¨ÓÃĞÔ¡£
- * Ò»°ãÀ´×ÔÓÚEternalMeekÖĞcom.celestial.butterflystorm°üÖĞĞÂÊµÏÖµÄ³éÏó¡£<br/>
+ * å¯¹äºcom.celestial.agniRadianceé‡Œé¢åŸºç¡€å·¥å…·æ›´é«˜å±‚æ¬¡çš„å°è£…ï¼Œä½¿ç”¨ã€‚<br/>
+ * åŠŸèƒ½å—æ›´å¤§ï¼Œèƒ½åŠ›æ›´å¤§ã€‚<br/>
+ * ä½†æ˜¯ä¸ä¹‹ç›¸å¯¹ï¼Œå±‚æ¬¡è¶Šé«˜è¶Šç¼ºå°‘é€šç”¨æ€§ã€‚
+ * ä¸€èˆ¬æ¥è‡ªäºEternalMeekä¸­com.celestial.butterflystormåŒ…ä¸­æ–°å®ç°çš„æŠ½è±¡ã€‚<br/>
  */
 /**
  * @author Administrator
- * 2017Äê4ÔÂ28ÈÕ10:31:12
+ * 2017å¹´4æœˆ28æ—¥10:31:12
  *
  */
 package com.celestial.hydrogenousProminence;

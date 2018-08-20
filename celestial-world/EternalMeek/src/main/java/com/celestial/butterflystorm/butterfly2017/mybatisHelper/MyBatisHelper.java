@@ -23,7 +23,7 @@ public class MyBatisHelper {
 	
 
 	/**
-	 * ´´ÔìËùÓÐ¡£
+	 * åˆ›é€ æ‰€æœ‰ã€‚
 	 * @param de
 	 */
 	public void createAll(DependerContainer de) {
@@ -41,7 +41,7 @@ public class MyBatisHelper {
 		String savePath = entityPath + entityDepender.getClassName() + ".java";
 		
 		UtilFile.printFile(cc.getThisClass(),savePath ,"gbk");
-		System.out.println("ÊµÌåÀà´´½¨/¸üÐÂÍê±Ï£º" + savePath);
+		System.out.println("å®žä½“ç±»åˆ›å»º/æ›´æ–°å®Œæ¯•ï¼š" + savePath);
 		
 	}
 	
@@ -51,7 +51,7 @@ public class MyBatisHelper {
 		String savePath = sqlPath + sQLdepender.getTableName() + ".sql";
 		UtilFile.printFile(sqlFile.getSQL(), savePath);
 		
-		System.out.println("±í´´½¨sql´´½¨/¸üÐÂÍê±Ï£º" + savePath);
+		System.out.println("è¡¨åˆ›å»ºsqlåˆ›å»º/æ›´æ–°å®Œæ¯•ï¼š" + savePath);
 	}
 
 	private void create_dao(DAOdepender daOdepender) {
@@ -62,7 +62,7 @@ public class MyBatisHelper {
 		String savePath = daoPath + daOdepender.getDaoName() +".java";
 		
 		UtilFile.printFile(l, savePath , "gbk");
-		System.out.println("MyBatis dao´´½¨/¸üÐÂÍê±Ï£º" + savePath);
+		System.out.println("MyBatis daoåˆ›å»º/æ›´æ–°å®Œæ¯•ï¼š" + savePath);
 		
 	}
 	
@@ -76,7 +76,7 @@ public class MyBatisHelper {
 		String savePath = xmlPath + xmLdepender.getClassName() +".xml";
 		
 		UtilFile.printFile(l, savePath);
-		System.out.println("MyBatis xml´´½¨/¸üÐÂÍê±Ï£º" + savePath);
+		System.out.println("MyBatis xmlåˆ›å»º/æ›´æ–°å®Œæ¯•ï¼š" + savePath);
 		
 	}
 

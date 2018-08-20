@@ -17,7 +17,7 @@ public class MainFrame extends JFrame{
 		MainPanel mp = new MainPanel();
 		setContentPane(mp);
 		
-		JTextArea jt = new JTextArea("¸‚¼¼£¡„ÙÀû£¡°Ñ¹ı³ÌºÍ½á¹û»ìÎªÒ»Ì¸£¬¾Í±¾Ä©µ¹ÖÃÁË¹ş£¡", 5, 3);
+		JTextArea jt = new JTextArea("ï¿½æŠ€ï¼ï¿½å€®ï¿½ï¼æŠŠè¿‡ç¨‹å’Œç»“æœæ··ä¸ºä¸€è°ˆï¼Œå°±æœ¬æœ«å€’ç½®äº†å“ˆï¼", 5, 3);
 		jt.setBounds(30, 30, 100, 30);
 		add(jt);
 		

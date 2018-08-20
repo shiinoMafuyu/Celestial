@@ -3,12 +3,12 @@ package com.celestial.butterflystorm.butterfly2016.strange.findme;
 public class BaiduGet {
 	public static void main(String[] args) {
 		/**
-		 * ·ÃÎÊÓ¦ÓÃAK : dyFDohVGEObrQQ7Kufni2hn5my4sKRVp
-		 * ·ÃÎÊÊ¾Àı:
+		 * è®¿é—®åº”ç”¨AK : dyFDohVGEObrQQ7Kufni2hn5my4sKRVp
+		 * è®¿é—®ç¤ºä¾‹:
 		 * http://api.map.baidu.com/location/ip?ak=dyFDohVGEObrQQ7Kufni2hn5my4sKRVp&coor=182.150.46.239
-		 * ·ÃÎÊ½á¹û:
+		 * è®¿é—®ç»“æœ:
 		 * System.out.println("{'address':'CN|\u56db\u5ddd|\u6210\u90fd|None|CHINANET|0|0','content':{'address_detail':{'province':'\u56db\u5ddd\u7701','city':'\u6210\u90fd\u5e02','district':'','street':'','street_number':'','city_code':75},'address':'\u56db\u5ddd\u7701\u6210\u90fd\u5e02','point':{'y':'3569251.03','x':'11584914.3'}},'status':0}");
-		 * °Ù¶ÈºÃÏñ»¹Ìá¹©¸ü¾«È·µÄ·ÃÎÊ.
+		 * ç™¾åº¦å¥½åƒè¿˜æä¾›æ›´ç²¾ç¡®çš„è®¿é—®.
 		 * 
 		 */
 		System.out.println("{'address':'CN|\u56db\u5ddd|\u6210\u90fd|None|CHINANET|0|0','content':{'address_detail':{'province':'\u56db\u5ddd\u7701','city':'\u6210\u90fd\u5e02','district':'','street':'','street_number':'','city_code':75},'address':'\u56db\u5ddd\u7701\u6210\u90fd\u5e02','point':{'y':'3569251.03','x':'11584914.3'}},'status':0}");

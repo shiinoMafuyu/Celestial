@@ -1,28 +1,28 @@
 package com.celestial.meek.realTest_2016_03.de.shoot;
 import java.awt.image.BufferedImage;
-/** Ó¢ÐÛ»ú: ÊÇ·ÉÐÐÎï */
+/** è‹±é›„æœº: æ˜¯é£žè¡Œç‰© */
 public class Hero extends FlyingObject {
-	private int life; //Ãü
-	private int doubleFire; //»ðÁ¦Öµ
-	private BufferedImage[] images; //Í¼Æ¬Êý×é
-	private int index; //Ð­ÖúÍ¼Æ¬ÇÐ»»
-	/** ¹¹Ôì·½·¨ */
+	private int life; //å‘½
+	private int doubleFire; //ç«åŠ›å€¼
+	private BufferedImage[] images; //å›¾ç‰‡æ•°ç»„
+	private int index; //ååŠ©å›¾ç‰‡åˆ‡æ¢
+	/** æž„é€ æ–¹æ³• */
 	public Hero(){
-		image = ShootGame.hero0; //Í¼Æ¬
-		width = image.getWidth(); //¿í
-		height = image.getHeight(); //¸ß
-		x = 150; //x×ø±ê:¹Ì¶¨×¡
-		y = 400; //y×ø±ê:¹Ì¶¨×¡
-		life = 3; //3ÌõÃü
-		doubleFire = 0; //»ðÁ¦ÖµÎª0(µ¥±¶»ðÁ¦)
+		image = ShootGame.hero0; //å›¾ç‰‡
+		width = image.getWidth(); //å®½
+		height = image.getHeight(); //é«˜
+		x = 150; //xåæ ‡:å›ºå®šä½
+		y = 400; //yåæ ‡:å›ºå®šä½
+		life = 3; //3æ¡å‘½
+		doubleFire = 0; //ç«åŠ›å€¼ä¸º0(å•å€ç«åŠ›)
 		images = new BufferedImage[]{ShootGame.hero0,ShootGame.hero1};
-		index = 0; //Ð­ÖúÍ¼Æ¬ÇÐ»»
+		index = 0; //ååŠ©å›¾ç‰‡åˆ‡æ¢
 	}
 	
-	/** ÖØÐ´step() */
-	public void step(){ //10ºÁÃë×ßÒ»´Î
+	/** é‡å†™step() */
+	public void step(){ //10æ¯«ç§’èµ°ä¸€æ¬¡
 		
-		image = images[index++/10%images.length]; //Ã¿100ºÁÃëÇÐ»»Ò»´ÎÍ¼Æ¬
+		image = images[index++/10%images.length]; //æ¯100æ¯«ç§’åˆ‡æ¢ä¸€æ¬¡å›¾ç‰‡
 		
 		/*
 		index++;
@@ -46,67 +46,67 @@ public class Hero extends FlyingObject {
 		 */
 	}
 
-	/** Ó¢ÐÛ»ú·¢Éä×Óµ¯ */
+	/** è‹±é›„æœºå‘å°„å­å¼¹ */
 	public Bullet[] shoot(){
-		int xStep = this.width/4; //Ó¢ÐÛ»ú1/4¿í
-		if(doubleFire>0){ //Ë«±¶»ðÁ¦
+		int xStep = this.width/4; //è‹±é›„æœº1/4å®½
+		if(doubleFire>0){ //åŒå€ç«åŠ›
 			Bullet[] bullets = new Bullet[2];
-			bullets[0] = new Bullet(this.x+1*xStep,this.y-20); //x:Ó¢ÐÛ»úx+1/4Ó¢ÐÛ»ú¿í y:Ó¢ÐÛ»úy-20
-			bullets[1] = new Bullet(this.x+3*xStep,this.y-20); //x:Ó¢ÐÛ»úx+3/4Ó¢ÐÛ»ú¿í y:Ó¢ÐÛ»úy-20
-			doubleFire -= 2; //·¢ÉäÒ»´ÎË«±¶»ðÁ¦£¬Ôò»ðÁ¦Öµ¼õ2
+			bullets[0] = new Bullet(this.x+1*xStep,this.y-20); //x:è‹±é›„æœºx+1/4è‹±é›„æœºå®½ y:è‹±é›„æœºy-20
+			bullets[1] = new Bullet(this.x+3*xStep,this.y-20); //x:è‹±é›„æœºx+3/4è‹±é›„æœºå®½ y:è‹±é›„æœºy-20
+			doubleFire -= 2; //å‘å°„ä¸€æ¬¡åŒå€ç«åŠ›ï¼Œåˆ™ç«åŠ›å€¼å‡2
 			return bullets;
-		}else{ //µ¥±¶»ðÁ¦
+		}else{ //å•å€ç«åŠ›
 			Bullet[] bullets = new Bullet[1];
-			bullets[0] = new Bullet(this.x+2*xStep,this.y-20); //x:Ó¢ÐÛ»úx+2/4Ó¢ÐÛ»ú¿í y:Ó¢ÐÛ»úy-20
+			bullets[0] = new Bullet(this.x+2*xStep,this.y-20); //x:è‹±é›„æœºx+2/4è‹±é›„æœºå®½ y:è‹±é›„æœºy-20
 			return bullets;
 		}
 	}
 	
-	/** Ó¢ÐÛ»úËæ×ÅÊó±êÒÆ¶¯ x:Êó±êµÄx×ø±ê y:Êó±êµÄy×ø±ê */
+	/** è‹±é›„æœºéšç€é¼ æ ‡ç§»åŠ¨ x:é¼ æ ‡çš„xåæ ‡ y:é¼ æ ‡çš„yåæ ‡ */
 	public void moveTo(int x,int y){
-		this.x = x - this.width/2;  //Ó¢ÐÛ»úµÄx:Êó±êµÄx-1/2Ó¢ÐÛ»úµÄ¿í
-		this.y = y - this.height/2; //Ó¢ÐÛ»úµÄy:Êó±êµÄy-1/2Ó¢ÐÛ»úµÄ¸ß
+		this.x = x - this.width/2;  //è‹±é›„æœºçš„x:é¼ æ ‡çš„x-1/2è‹±é›„æœºçš„å®½
+		this.y = y - this.height/2; //è‹±é›„æœºçš„y:é¼ æ ‡çš„y-1/2è‹±é›„æœºçš„é«˜
 	}
 	
-	/** ÖØÐ´outOfBounds() */
+	/** é‡å†™outOfBounds() */
 	public boolean outOfBounds(){
-		return false; //Ó¢ÐÛ»úÓÀ²»Ô½½ç
+		return false; //è‹±é›„æœºæ°¸ä¸è¶Šç•Œ
 	}
 
-	/** ÔöÃü */
+	/** å¢žå‘½ */
 	public void addLife(){
 		life++;
 	}	
-	/** »ñÈ¡Ãü */
+	/** èŽ·å–å‘½ */
 	public int getLife(){
 		return life;
 	}	
-	/** ¼õÃü */
+	/** å‡å‘½ */
 	public void subtractLife(){
 		life--;
 	}
 	
-	/** Ôö»ðÁ¦Öµ */
+	/** å¢žç«åŠ›å€¼ */
 	public void addDoubleFire(){
 		doubleFire += 40;
 	}
-	/** ÉèÖÃ»ðÁ¦Öµ */
+	/** è®¾ç½®ç«åŠ›å€¼ */
 	public void setDoubleFire(int doubleFire){
 		this.doubleFire = doubleFire;
 	}
 	
-	/** Ó¢ÐÛ»ú×²µÐÈË this:Ó¢ÐÛ»ú  other:µÐÈË*/
+	/** è‹±é›„æœºæ’žæ•Œäºº this:è‹±é›„æœº  other:æ•Œäºº*/
 	public boolean hit(FlyingObject other){
-		int x1 = other.x-this.width/2; //x1:µÐÈËµÄx-1/2Ó¢ÐÛ»úµÄ¿í
-		int x2 = other.x+other.width+this.width/2; //x2:µÐÈËµÄx+µÐÈËµÄ¿í+1/2Ó¢ÐÛ»úµÄ¿í
-		int y1 = other.y-this.height/2; //y1:µÐÈËµÄy-1/2Ó¢ÐÛ»úµÄ¸ß
-		int y2 = other.y+other.height+this.height/2; //y2:µÐÈËµÄy+µÐÈËµÄ¸ß+1/2Ó¢ÐÛ»úµÄ¸ß
-		int hx = this.x+this.width/2; //hx:Ó¢ÐÛ»úµÄx+1/2Ó¢ÐÛ»úµÄ¿í
-		int hy = this.y+this.height/2; //hy:Ó¢ÐÛ»úµÄy+1/2Ó¢ÐÛ»úµÄ¸ß
+		int x1 = other.x-this.width/2; //x1:æ•Œäººçš„x-1/2è‹±é›„æœºçš„å®½
+		int x2 = other.x+other.width+this.width/2; //x2:æ•Œäººçš„x+æ•Œäººçš„å®½+1/2è‹±é›„æœºçš„å®½
+		int y1 = other.y-this.height/2; //y1:æ•Œäººçš„y-1/2è‹±é›„æœºçš„é«˜
+		int y2 = other.y+other.height+this.height/2; //y2:æ•Œäººçš„y+æ•Œäººçš„é«˜+1/2è‹±é›„æœºçš„é«˜
+		int hx = this.x+this.width/2; //hx:è‹±é›„æœºçš„x+1/2è‹±é›„æœºçš„å®½
+		int hy = this.y+this.height/2; //hy:è‹±é›„æœºçš„y+1/2è‹±é›„æœºçš„é«˜
 		
 		return hx>x1 && hx<x2
 			   &&
-			   hy>y1 && hy<y2; //hxÔÚx1ºÍx2Ö®¼ä£¬²¢ÇÒ£¬hyÔÚy1ºÍy2Ö®¼ä£¬¼´Îª×²ÉÏÁË
+			   hy>y1 && hy<y2; //hxåœ¨x1å’Œx2ä¹‹é—´ï¼Œå¹¶ä¸”ï¼Œhyåœ¨y1å’Œy2ä¹‹é—´ï¼Œå³ä¸ºæ’žä¸Šäº†
 	}
 	
 }

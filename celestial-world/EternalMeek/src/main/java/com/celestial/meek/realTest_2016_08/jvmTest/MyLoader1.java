@@ -32,22 +32,22 @@ String classpath;
                 if (claz == null) {  
                     claz = super.loadClass(name, false);  
                     if (claz != null) {  
-                        System.out.println("ÏµÍ³¼ÓÔØ³É¹¦£º" + name);  
+                        System.out.println("ç³»ç»ŸåŠ è½½æˆåŠŸï¼š" + name);  
                     }  
                 }  
             } catch (ClassNotFoundException e) {  
-                System.out.println("ÏµÍ³ÎŞ·¨¼ÓÔØ£º" + name);  
+                System.out.println("ç³»ç»Ÿæ— æ³•åŠ è½½ï¼š" + name);  
             }  
               
             try {  
                 if (claz == null) {  
                     claz = loadByCjClassLoader(name);  
                     if (claz != null) {  
-                        System.out.println("×Ô¶¨Òå¼ÓÔØ³É¹¦£º" + name);  
+                        System.out.println("è‡ªå®šä¹‰åŠ è½½æˆåŠŸï¼š" + name);  
                     }  
                 }  
             } catch (Exception e) {  
-                System.out.println("×Ô¶¨ÒåÎŞ·¨¼ÓÔØ£º" + name);  
+                System.out.println("è‡ªå®šä¹‰æ— æ³•åŠ è½½ï¼š" + name);  
             }  
   
             if (claz != null) {  
@@ -63,7 +63,7 @@ String classpath;
   
     /** 
      *  
-     * ½âÃÜ¼ÓÔØ 
+     * è§£å¯†åŠ è½½ 
      *  
      *  
      * @param name 
@@ -88,7 +88,7 @@ String classpath;
 
 
     /**
-     * È¡·´Êä³öÕıÈ·µÄclass¶ş½øÖÆÊı¾İ
+     * å–åè¾“å‡ºæ­£ç¡®çš„classäºŒè¿›åˆ¶æ•°æ®
      * @param name
      * @return
      * @throws IOException 

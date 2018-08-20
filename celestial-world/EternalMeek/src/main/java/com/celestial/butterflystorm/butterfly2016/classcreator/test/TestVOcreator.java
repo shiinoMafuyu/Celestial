@@ -30,9 +30,9 @@ public class TestVOcreator {
 	@Test
 	public void _01_requestVO_create_warehouse() {
 		
-		FileReader f1 = new FileReader("src/main/java/com/celestial/butterflystorm/butterfly2016/classcreator/test/file/srcFile/Í¶×ÊÀà--ÊÖ»ú¿Í»§¶ËÓë²Öµ¥·şÎñÆ÷Í¨ĞÅĞ­Òé.txt")
-				.selectAllLineBetweenRegex2("4\\.Éê¹ºÎ¯ÍĞ²éÑ¯", "5\\.Éê¹º³É½»²éÑ¯");
-		List<List<String>> requestReader = f1.selectAllLineBetweenRegexList(".*Ìá½»°ü.*", ".*·µ»Ø°ü.*");
+		FileReader f1 = new FileReader("src/main/java/com/celestial/butterflystorm/butterfly2016/classcreator/test/file/srcFile/æŠ•èµ„ç±»--æ‰‹æœºå®¢æˆ·ç«¯ä¸ä»“å•æœåŠ¡å™¨é€šä¿¡åè®®.txt")
+				.selectAllLineBetweenRegex2("4\\.ç”³è´­å§”æ‰˜æŸ¥è¯¢", "5\\.ç”³è´­æˆäº¤æŸ¥è¯¢");
+		List<List<String>> requestReader = f1.selectAllLineBetweenRegexList(".*æäº¤åŒ….*", ".*è¿”å›åŒ….*");
 		
 		Tag requestTag = new Tag(UtilCollection.transListToLine(requestReader.get(0)));
 		Tag req = requestTag.getTagByNamesReal("REQ");
@@ -45,9 +45,9 @@ public class TestVOcreator {
 	@Test
 	public void _02_requestVO_create_espot() {
 		
-		FileReader f1 = new FileReader("src/main/java/com/celestial/butterflystorm/butterfly2016/classcreator/test/file/srcFile/EÏÖ»õ--ÊÖ»ú¿Í»§¶ËÓë·şÎñÆ÷Í¨ĞÅĞ­Òé(¾É).txt")
-				.selectAllLineBetweenRegex2("10\\. ÉÌÆ·Î¯ÍĞ²éÑ¯", "11\\. ÉÌÆ·Î¯ÍĞÏêÇé²éÑ¯");
-		List<List<String>> requestReader = f1.selectAllLineBetweenRegexList(".*ÇëÇó°ü.*", ".*·µ»Ø°ü.*");
+		FileReader f1 = new FileReader("src/main/java/com/celestial/butterflystorm/butterfly2016/classcreator/test/file/srcFile/Eç°è´§--æ‰‹æœºå®¢æˆ·ç«¯ä¸æœåŠ¡å™¨é€šä¿¡åè®®(æ—§).txt")
+				.selectAllLineBetweenRegex2("10\\. å•†å“å§”æ‰˜æŸ¥è¯¢", "11\\. å•†å“å§”æ‰˜è¯¦æƒ…æŸ¥è¯¢");
+		List<List<String>> requestReader = f1.selectAllLineBetweenRegexList(".*è¯·æ±‚åŒ….*", ".*è¿”å›åŒ….*");
 		
 		Tag requestTag = new Tag(UtilCollection.transListToLine(requestReader.get(0)));
 		Tag req = requestTag.getTagByNamesReal("REQ");
@@ -61,9 +61,9 @@ public class TestVOcreator {
 	@Test
 	public void _03_responseVO_create_warehouse() {
 		
-		FileReader f1 = new FileReader("src/main/java/com/celestial/butterflystorm/butterfly2016/classcreator/test/file/srcFile/Í¶×ÊÀà--ÊÖ»ú¿Í»§¶ËÓë²Öµ¥·şÎñÆ÷Í¨ĞÅĞ­Òé.txt")
-				.selectAllLineBetweenRegex2("4\\.Éê¹ºÎ¯ÍĞ²éÑ¯", "5\\.Éê¹º³É½»²éÑ¯");
-		List<List<String>> responseReader = f1.selectAllLineBetweenRegexList(".*·µ»Ø°ü.*", "5\\.Éê¹º³É½»²éÑ¯");
+		FileReader f1 = new FileReader("src/main/java/com/celestial/butterflystorm/butterfly2016/classcreator/test/file/srcFile/æŠ•èµ„ç±»--æ‰‹æœºå®¢æˆ·ç«¯ä¸ä»“å•æœåŠ¡å™¨é€šä¿¡åè®®.txt")
+				.selectAllLineBetweenRegex2("4\\.ç”³è´­å§”æ‰˜æŸ¥è¯¢", "5\\.ç”³è´­æˆäº¤æŸ¥è¯¢");
+		List<List<String>> responseReader = f1.selectAllLineBetweenRegexList(".*è¿”å›åŒ….*", "5\\.ç”³è´­æˆäº¤æŸ¥è¯¢");
 		
 		Tag responseTag = new Tag(UtilCollection.transListToLine(responseReader.get(0)));
 		Tag res = responseTag.getTagByNamesReal("REP");
@@ -74,9 +74,9 @@ public class TestVOcreator {
 	
 	@Test
 	public void _04_responseVO_create_espot() {
-		FileReader f1 = new FileReader("src/main/java/com/celestial/butterflystorm/butterfly2016/classcreator/test/file/srcFile/EÏÖ»õ--ÊÖ»ú¿Í»§¶ËÓë·şÎñÆ÷Í¨ĞÅĞ­Òé(¾É).txt")
-				.selectAllLineBetweenRegex2("11\\. ÉÌÆ·Î¯ÍĞÏêÇé²éÑ¯", "12\\. ¸öÈËÎ¯ÍĞ²éÑ¯");
-		List<List<String>> responseReader = f1.selectAllLineBetweenRegexList(".*·µ»Ø°ü.*", "12\\. ¸öÈËÎ¯ÍĞ²éÑ¯");
+		FileReader f1 = new FileReader("src/main/java/com/celestial/butterflystorm/butterfly2016/classcreator/test/file/srcFile/Eç°è´§--æ‰‹æœºå®¢æˆ·ç«¯ä¸æœåŠ¡å™¨é€šä¿¡åè®®(æ—§).txt")
+				.selectAllLineBetweenRegex2("11\\. å•†å“å§”æ‰˜è¯¦æƒ…æŸ¥è¯¢", "12\\. ä¸ªäººå§”æ‰˜æŸ¥è¯¢");
+		List<List<String>> responseReader = f1.selectAllLineBetweenRegexList(".*è¿”å›åŒ….*", "12\\. ä¸ªäººå§”æ‰˜æŸ¥è¯¢");
 		
 		Tag responseTag = new Tag(UtilCollection.transListToLine(responseReader.get(0)));
 		Tag res = responseTag.getTagByNamesReal("REP");

@@ -17,7 +17,7 @@ import com.celestial.agniRadiance.EzUtil.UtilString;
 
 /**
  * 
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
@@ -25,8 +25,8 @@ import com.celestial.agniRadiance.EzUtil.UtilString;
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º´´½¨Ò»°ãµÄÀà,³ÉÔ±±äÁ¿Ãû (´ø×¢ÊÍ) + get set ·½·¨(´ø×¢ÊÍ)</b>
- * Õâ¸öµØ·½Ö÷ÒªÓÃ×÷´´½¨POÀà<br/>
+ * <b>ç±»è¯´æ˜ï¼šåˆ›å»ºä¸€èˆ¬çš„ç±»,æˆå‘˜å˜é‡å (å¸¦æ³¨é‡Š) + get set æ–¹æ³•(å¸¦æ³¨é‡Š)</b>
+ * è¿™ä¸ªåœ°æ–¹ä¸»è¦ç”¨ä½œåˆ›å»ºPOç±»<br/>
  * <p> 
  * 
  * </p>
@@ -34,7 +34,7 @@ import com.celestial.agniRadiance.EzUtil.UtilString;
 public class NormalClass {
 
 	/**
-	 * ¸ù¾İÊÇ·ñº¬ÓĞÏàÓ¦µÄÀàĞÍÌí¼Óµ¼Èë°ü
+	 * æ ¹æ®æ˜¯å¦å«æœ‰ç›¸åº”çš„ç±»å‹æ·»åŠ å¯¼å…¥åŒ…
 	 * 
 	 */
 	@SuppressWarnings("serial")
@@ -43,7 +43,7 @@ public class NormalClass {
 		put("Timestamp","import java.sql.Timestamp;");
 	}};
 	/**
-	 * ÌØ¶¨»·¾³ĞèÒªÌí¼ÓµÄ¨r(¨s¨Œ¨t)¨q
+	 * ç‰¹å®šç¯å¢ƒéœ€è¦æ·»åŠ çš„ï¿½r(ï¿½sï¿½ï¿½t)ï¿½q
 	 */
 	@SuppressWarnings("serial")
 	Map<String,String> packageMap2  = new HashMap<String, String>(){{
@@ -65,7 +65,7 @@ public class NormalClass {
 	List<String> thisClass = new ArrayList<String>();
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -73,25 +73,25 @@ public class NormalClass {
 	 */
 	public static void main(String[] args) {
 		NormalClass n = new NormalClass(Arrays.asList(new String[][]{
-				{"MESSAGE","String","·µ»ØĞÅÏ¢"},
-				{"UserID","String","ÓÃ»§id"},
-				{"TotalRecords","Integer","×Ü¼ÇÂ¼Êı"},
-				{"Price","Double","×Ê½ğ×Ü¶î"}
+				{"MESSAGE","String","è¿”å›ä¿¡æ¯"},
+				{"UserID","String","ç”¨æˆ·id"},
+				{"TotalRecords","Integer","æ€»è®°å½•æ•°"},
+				{"Price","Double","èµ„é‡‘æ€»é¢"}
 		}),"gnnt.MEBS.MobileServer.po.micro.funds.FuckResponseVO");
 		
-		//³ÉÔ±±äÁ¿
+		//æˆå‘˜å˜é‡
 		/*List<String> lp = n.createMemberVariables();
 		for(String si : lp){
 			System.out.println(si);
 		}*/
 		
-		//È«²¿get·½·¨
+		//å…¨éƒ¨getæ–¹æ³•
 		/*List<String> lget = n.createGetMethods();
 		for(String si : lget){
 			System.out.println(si);
 		}*/
 		
-		//È«²¿set·½·¨
+		//å…¨éƒ¨setæ–¹æ³•
 		/*List<String> lset = n.createSetMethods();
 		for(String si : lset){
 			System.out.println(si);
@@ -108,11 +108,11 @@ public class NormalClass {
 		}
 	}
 	/**
-	 * <b>¹¹Ôì·½·¨</b>
-	 * ¹¹ÔìÒ»¸öÄÇÉ¶Àà
+	 * <b>æ„é€ æ–¹æ³•</b>
+	 * æ„é€ ä¸€ä¸ªé‚£å•¥ç±»
 	 * <br/>
-	 * @param lsArr ±äÁ¿Êı×é
-	 * @param qualifiedName ÀàµÄÈ«³Æ
+	 * @param lsArr å˜é‡æ•°ç»„
+	 * @param qualifiedName ç±»çš„å…¨ç§°
 	 */
 	public NormalClass(List<String[]> lsArr ,String qualifiedName) {
 		super();
@@ -129,9 +129,9 @@ public class NormalClass {
 		thisClass = createThisClass();
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Õû¸öÀàµÄËùÓĞĞĞ
+	 * æ•´ä¸ªç±»çš„æ‰€æœ‰è¡Œ
 	 * </ul>
 	 * @return
 	 */
@@ -156,23 +156,23 @@ public class NormalClass {
 		return l;
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Ò»Ğ©²»ÖØÒªµÄ¶îÍâĞÅÏ¢
+	 * ä¸€äº›ä¸é‡è¦çš„é¢å¤–ä¿¡æ¯
 	 * </ul>
 	 * @return
 	 */
 	private List<String> createExtra1() {
 		List<String> l =new ArrayList<String>();
 		l.add("");
-		l.add("/** ĞòÁĞºÅ */");
+		l.add("/** åºåˆ—å· */");
 		l.add("private static final long serialVersionUID = 1L;");
 		return l;
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨×¢½âĞÅÏ¢~
+	 * åˆ›å»ºæ³¨è§£ä¿¡æ¯~
 	 * </ul>
 	 * @return
 	 */
@@ -180,7 +180,7 @@ public class NormalClass {
 		List<String> l = new ArrayList<String>();
 		l.add("/**");
 		l.add(" * ");
-		l.add(" * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> ");
+		l.add(" * <b>ä¿®æ”¹è®°å½•ï¼š</b> ");
 		l.add(" * <p>");
 		l.add(" * <li>");
 		l.add(" * ");
@@ -188,7 +188,7 @@ public class NormalClass {
 		l.add(" * </li>");
 		l.add(" * </p>");
 		l.add(" * ");
-		l.add(" * <b>ÀàËµÃ÷£º</b>");
+		l.add(" * <b>ç±»è¯´æ˜ï¼š</b>");
 		l.add(" * <p> ");
 		l.add(" * ");
 		l.add(" * </p>");
@@ -197,9 +197,9 @@ public class NormalClass {
 		return l;
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨È«²¿set·½·¨
+	 * åˆ›å»ºå…¨éƒ¨setæ–¹æ³•
 	 * </ul>
 	 * @return
 	 */
@@ -211,9 +211,9 @@ public class NormalClass {
 		return l;
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨Ò»¸öset·½·¨
+	 * åˆ›å»ºä¸€ä¸ªsetæ–¹æ³•
 	 * </ul>
 	 * @param sArr
 	 * @return
@@ -222,9 +222,9 @@ public class NormalClass {
 		List<String> l = new ArrayList<String>();
 		String paramCase = UtilString.transHeadToLowerCase(sArr[0]);
 		l.add("/**");
-		l.add(" * <b>·½·¨ËµÃ÷£º</b>");
+		l.add(" * <b>æ–¹æ³•è¯´æ˜ï¼š</b>");
 		l.add(" * <ul>");
-		l.add(" * ÉèÖÃ" + sArr[2]);
+		l.add(" * è®¾ç½®" + sArr[2]);
 		l.add(" * </ul>");
 		l.add(" * @param " + UtilString.transHeadToLowerCase(sArr[0]));
 		l.add(" */");
@@ -235,9 +235,9 @@ public class NormalClass {
 		return l;
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨get·½·¨
+	 * åˆ›å»ºgetæ–¹æ³•
 	 * </ul>
 	 * @return
 	 */
@@ -249,9 +249,9 @@ public class NormalClass {
 		return l;
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨Ò»¸öget·½·¨
+	 * åˆ›å»ºä¸€ä¸ªgetæ–¹æ³•
 	 * </ul>
 	 * @param sArr
 	 * @return
@@ -259,9 +259,9 @@ public class NormalClass {
 	private Collection<? extends String> createAgetMethod(String[] sArr) {
 		List<String> l = new ArrayList<String>();
 		l.add("/**");
-		l.add(" * <b>·½·¨ËµÃ÷£º</b>");
+		l.add(" * <b>æ–¹æ³•è¯´æ˜ï¼š</b>");
 		l.add(" * <ul>");
-		l.add(" * »ñÈ¡" + sArr[2]  );
+		l.add(" * è·å–" + sArr[2]  );
 		l.add(" * </ul>");
 		l.add(" * @return");
 		l.add(" */");
@@ -272,9 +272,9 @@ public class NormalClass {
 		return l;
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨³ÉÔ±±äÁ¿
+	 * åˆ›å»ºæˆå‘˜å˜é‡
 	 * </ul>
 	 * @return
 	 */
@@ -294,9 +294,9 @@ public class NormalClass {
 	
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¸ù¾İ°üº¬µÄÀàµÄĞÅÏ¢µ¼Èë°ü
+	 * æ ¹æ®åŒ…å«çš„ç±»çš„ä¿¡æ¯å¯¼å…¥åŒ…
 	 * </ul>
 	 * @return
 	 */
@@ -315,9 +315,9 @@ public class NormalClass {
 		return l;
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨getºÍset·½·¨½»²æµÄ·½·¨
+	 * åˆ›å»ºgetå’Œsetæ–¹æ³•äº¤å‰çš„æ–¹æ³•
 	 * </ul>
 	 * @return
 	 */

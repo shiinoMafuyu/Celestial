@@ -1,9 +1,9 @@
 /******************************************************************
  * TestUtilRmi.java
  * Copyright ${year} by WZG. All Rights Reserved.
- * CreateDate£º2017Äê9ÔÂ18ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´9æœˆ18æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.agniRadiance.remote.test;
@@ -21,15 +21,15 @@ import com.celestial.agniRadiance.remote.UtilRmi;
 
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê9ÔÂ18ÈÕ
+ *                        ---- wangzg 2017å¹´9æœˆ18æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
  * 
  * </p>
@@ -42,9 +42,9 @@ public class TestUtilRmi {
 	private static String rmiUrl = String.format("rmi://%s:%s/%s",host,port,serviceName);
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ²âÊÔrmi·¢²¼ºÍµ÷ÓÃ·½·¨<br/>
+	 * æµ‹è¯•rmiå‘å¸ƒå’Œè°ƒç”¨æ–¹æ³•<br/>
 	 * registerRmi()<br/>
 	 * getRmiService()<br/>
 	 * </ul>
@@ -56,7 +56,7 @@ public class TestUtilRmi {
 		
 		IServiceRMI searchPersonService = (IServiceRMI) UtilRmi.getRmiService(rmiUrl);
 		try {
-			String name = "ÎŞĞÄÎŞÓ°¡¤²Ğ»ê";
+			String name = "æ— å¿ƒæ— å½±ãƒ»æ®‹é­‚";
 			Integer age = 78;
 			Person theOne = searchPersonService.searchPerson(name, age);
 			Assert.assertEquals(name, theOne.getName());

@@ -13,37 +13,37 @@ import java.awt.event.MouseEvent;
 import java.awt.Color;
 import java.awt.Font;
 
-//Ö÷³ÌĞòÀà
+//ä¸»ç¨‹åºç±»
 public class ShootGame extends JPanel {
 	/**  */
 	private static final long serialVersionUID = 1L;
-	public static final int WIDTH = 400; //´°¿Ú¿í
-	public static final int HEIGHT = 654; //´°¿Ú¸ß
+	public static final int WIDTH = 400; //çª—å£å®½
+	public static final int HEIGHT = 654; //çª—å£é«˜
 	
-	public static BufferedImage background; //±³¾°Í¼
-	public static BufferedImage start;      //Æô¶¯Í¼
-	public static BufferedImage pause;      //ÔİÍ£Í¼
-	public static BufferedImage gameover;   //ÓÎÏ·½áÊøÍ¼
-	public static BufferedImage airplane;   //µĞ»ú
-	public static BufferedImage bee;        //Ğ¡ÃÛ·ä
-	public static BufferedImage bullet;     //×Óµ¯
-	public static BufferedImage hero0;      //Ó¢ĞÛ»ú0
-	public static BufferedImage hero1;      //Ó¢ĞÛ»ú1
+	public static BufferedImage background; //èƒŒæ™¯å›¾
+	public static BufferedImage start;      //å¯åŠ¨å›¾
+	public static BufferedImage pause;      //æš‚åœå›¾
+	public static BufferedImage gameover;   //æ¸¸æˆç»“æŸå›¾
+	public static BufferedImage airplane;   //æ•Œæœº
+	public static BufferedImage bee;        //å°èœœèœ‚
+	public static BufferedImage bullet;     //å­å¼¹
+	public static BufferedImage hero0;      //è‹±é›„æœº0
+	public static BufferedImage hero1;      //è‹±é›„æœº1
 	
-	public static final int START = 0;    //Æô¶¯×´Ì¬
-	public static final int RUNNING = 1;  //ÔËĞĞ×´Ì¬
-	public static final int PAUSE = 2;    //ÔİÍ£×´Ì¬
-	public static final int GAME_OVER = 3;//ÓÎÏ·½áÊø×´Ì¬
-	private int state = 0; //µ±Ç°×´Ì¬
+	public static final int START = 0;    //å¯åŠ¨çŠ¶æ€
+	public static final int RUNNING = 1;  //è¿è¡ŒçŠ¶æ€
+	public static final int PAUSE = 2;    //æš‚åœçŠ¶æ€
+	public static final int GAME_OVER = 3;//æ¸¸æˆç»“æŸçŠ¶æ€
+	private int state = 0; //å½“å‰çŠ¶æ€
 	
-	private Hero hero = new Hero();      //Ó¢ĞÛ»ú¶ÔÏó
-	private Bullet[] bullets = {};       //×Óµ¯Êı×é
-	private FlyingObject[] flyings = {}; //µĞÈË(µĞ»ú+Ğ¡ÃÛ·ä)Êı×é
+	private Hero hero = new Hero();      //è‹±é›„æœºå¯¹è±¡
+	private Bullet[] bullets = {};       //å­å¼¹æ•°ç»„
+	private FlyingObject[] flyings = {}; //æ•Œäºº(æ•Œæœº+å°èœœèœ‚)æ•°ç»„
 	
-	private Timer timer; //¶¨Ê±Æ÷
-	private int intervel = 10; //¼ä¸ôÊ±¼ä(ÒÔºÁÃëÎªµ¥Î»)
+	private Timer timer; //å®šæ—¶å™¨
+	private int intervel = 10; //é—´éš”æ—¶é—´(ä»¥æ¯«ç§’ä¸ºå•ä½)
 	
-	static{ //³õÊ¼»¯¾²Ì¬×ÊÔ´
+	static{ //åˆå§‹åŒ–é™æ€èµ„æº
 		try{
 			background = ImageIO.read(ShootGame.class.getResource("background.png"));
 			start = ImageIO.read(ShootGame.class.getResource("start.png"));
@@ -59,165 +59,165 @@ public class ShootGame extends JPanel {
 		}
 	}
 	
-	/** Ëæ»úÉú³ÉµĞÈË(µĞ»ú+Ğ¡ÃÛ·ä)¶ÔÏó */
+	/** éšæœºç”Ÿæˆæ•Œäºº(æ•Œæœº+å°èœœèœ‚)å¯¹è±¡ */
 	public static FlyingObject nextOne(){
-		Random rand = new Random(); //Ëæ»úÊı¶ÔÏó
-		int type = rand.nextInt(20); //Éú³É0µ½19Ö®¼äµÄËæ»úÊı
-		if(type == 0){ //Îª0Ê±·µ»ØĞ¡ÃÛ·ä¶ÔÏó
+		Random rand = new Random(); //éšæœºæ•°å¯¹è±¡
+		int type = rand.nextInt(20); //ç”Ÿæˆ0åˆ°19ä¹‹é—´çš„éšæœºæ•°
+		if(type == 0){ //ä¸º0æ—¶è¿”å›å°èœœèœ‚å¯¹è±¡
 			return new Bee();
-		}else{ //Îª1µ½19Ê±·µ»ØµĞ»ú¶ÔÏó
+		}else{ //ä¸º1åˆ°19æ—¶è¿”å›æ•Œæœºå¯¹è±¡
 			return new Airplane();
 		}
 	}
 	
-	int flyEnteredIndex = 0; //µĞÈËÈë³¡¼ÆÊı
-	/** µĞÈËÈë³¡ */
-	public void enterAction(){ //10ºÁÃë×ßÒ»´Î
-		flyEnteredIndex++; //Ã¿10ºÁÃëÔö1
-		if(flyEnteredIndex%40==0){ //400(10*40)ºÁÃë×ßÒ»´Î
-			FlyingObject obj = nextOne(); //»ñÈ¡µĞÈË¶ÔÏó
-			flyings = Arrays.copyOf(flyings,flyings.length+1); //À©´óÒ»¸öÈİÁ¿
-			flyings[flyings.length-1] = obj; //½«µĞÈË¶ÔÏóÌí¼Óµ½Êı×éµÄ×îºóÒ»¸öÔªËØÎ»ÖÃ
+	int flyEnteredIndex = 0; //æ•Œäººå…¥åœºè®¡æ•°
+	/** æ•Œäººå…¥åœº */
+	public void enterAction(){ //10æ¯«ç§’èµ°ä¸€æ¬¡
+		flyEnteredIndex++; //æ¯10æ¯«ç§’å¢1
+		if(flyEnteredIndex%40==0){ //400(10*40)æ¯«ç§’èµ°ä¸€æ¬¡
+			FlyingObject obj = nextOne(); //è·å–æ•Œäººå¯¹è±¡
+			flyings = Arrays.copyOf(flyings,flyings.length+1); //æ‰©å¤§ä¸€ä¸ªå®¹é‡
+			flyings[flyings.length-1] = obj; //å°†æ•Œäººå¯¹è±¡æ·»åŠ åˆ°æ•°ç»„çš„æœ€åä¸€ä¸ªå…ƒç´ ä½ç½®
 		}
 	}
 	
-	/** ·ÉĞĞÎï×ßÒ»²½ */
-	public void stepAction(){ //10ºÁÃë×ßÒ»´Î
-		hero.step(); //Ó¢ĞÛ»ú×ßÒ»²½
-		for(int i=0;i<flyings.length;i++){ //±éÀúËùÓĞµĞÈË
-			flyings[i].step(); //µĞÈË×ßÒ»²½
+	/** é£è¡Œç‰©èµ°ä¸€æ­¥ */
+	public void stepAction(){ //10æ¯«ç§’èµ°ä¸€æ¬¡
+		hero.step(); //è‹±é›„æœºèµ°ä¸€æ­¥
+		for(int i=0;i<flyings.length;i++){ //éå†æ‰€æœ‰æ•Œäºº
+			flyings[i].step(); //æ•Œäººèµ°ä¸€æ­¥
 		}
-		for(int i=0;i<bullets.length;i++){ //±éÀúËùÓĞ×Óµ¯
-			bullets[i].step(); //×Óµ¯×ßÒ»²½
-		}
-	}
-	
-	int shootIndex = 0; //Éä»÷¼ÆÊı
-	/** ×Óµ¯Èë³¡ */
-	public void shootAction(){ //10ºÁÃë×ßÒ»´Î
-		shootIndex++; //Ã¿10ºÁÃëÔö1
-		if(shootIndex%30==0){ //300(10*30)ºÁÃë×ßÒ»´Î
-			Bullet[] bs = hero.shoot(); //»ñÈ¡×Óµ¯¶ÔÏó
-			bullets = Arrays.copyOf(bullets,bullets.length+bs.length); //À©Èİ(bsÓĞ¼¸¸öÔªËØ¾ÍÀ©´ó¼¸¸öÈİÁ¿)
-			System.arraycopy(bs,0,bullets,bullets.length-bs.length,bs.length); //Êı×éµÄ×·¼Ó
+		for(int i=0;i<bullets.length;i++){ //éå†æ‰€æœ‰å­å¼¹
+			bullets[i].step(); //å­å¼¹èµ°ä¸€æ­¥
 		}
 	}
 	
-	/** É¾³ıÔ½½çµÄ·ÉĞĞÎï */
+	int shootIndex = 0; //å°„å‡»è®¡æ•°
+	/** å­å¼¹å…¥åœº */
+	public void shootAction(){ //10æ¯«ç§’èµ°ä¸€æ¬¡
+		shootIndex++; //æ¯10æ¯«ç§’å¢1
+		if(shootIndex%30==0){ //300(10*30)æ¯«ç§’èµ°ä¸€æ¬¡
+			Bullet[] bs = hero.shoot(); //è·å–å­å¼¹å¯¹è±¡
+			bullets = Arrays.copyOf(bullets,bullets.length+bs.length); //æ‰©å®¹(bsæœ‰å‡ ä¸ªå…ƒç´ å°±æ‰©å¤§å‡ ä¸ªå®¹é‡)
+			System.arraycopy(bs,0,bullets,bullets.length-bs.length,bs.length); //æ•°ç»„çš„è¿½åŠ 
+		}
+	}
+	
+	/** åˆ é™¤è¶Šç•Œçš„é£è¡Œç‰© */
 	public void outOfBoundsAction(){
-		int index = 0; //1.²»Ô½½çµĞÈË¸öÊı  2.²»Ô½½çµĞÈËÊı×éÏÂ±ê
-		FlyingObject[] flyingLives = new FlyingObject[flyings.length]; //²»Ô½½çµĞÈËÊı×é
-		for(int i=0;i<flyings.length;i++){ //±éÀúËùÓĞµĞÈË
-			FlyingObject f = flyings[i]; //»ñÈ¡Ã¿Ò»¸öµĞÈË
-			if(!f.outOfBounds()){ //²»Ô½½ç
-				flyingLives[index] = f; //½«²»Ô½½çµĞÈËÌí¼Óµ½²»Ô½½çµĞÈËÊı×éÖĞ
-				index++; //1.²»Ô½½çµĞÈË¸öÊıÔö1  2.²»Ô½½çµĞÈËÊı×éÏÂ±êÔö1
+		int index = 0; //1.ä¸è¶Šç•Œæ•Œäººä¸ªæ•°  2.ä¸è¶Šç•Œæ•Œäººæ•°ç»„ä¸‹æ ‡
+		FlyingObject[] flyingLives = new FlyingObject[flyings.length]; //ä¸è¶Šç•Œæ•Œäººæ•°ç»„
+		for(int i=0;i<flyings.length;i++){ //éå†æ‰€æœ‰æ•Œäºº
+			FlyingObject f = flyings[i]; //è·å–æ¯ä¸€ä¸ªæ•Œäºº
+			if(!f.outOfBounds()){ //ä¸è¶Šç•Œ
+				flyingLives[index] = f; //å°†ä¸è¶Šç•Œæ•Œäººæ·»åŠ åˆ°ä¸è¶Šç•Œæ•Œäººæ•°ç»„ä¸­
+				index++; //1.ä¸è¶Šç•Œæ•Œäººä¸ªæ•°å¢1  2.ä¸è¶Šç•Œæ•Œäººæ•°ç»„ä¸‹æ ‡å¢1
 			}
 		}
-		flyings = Arrays.copyOf(flyingLives, index); //½«²»Ô½½çµĞÈËÊı×é¸´ÖÆµ½flyingsÖĞ£¬index¼´ÎªflyingsÊı×éÔªËØµÄ¸öÊı
+		flyings = Arrays.copyOf(flyingLives, index); //å°†ä¸è¶Šç•Œæ•Œäººæ•°ç»„å¤åˆ¶åˆ°flyingsä¸­ï¼Œindexå³ä¸ºflyingsæ•°ç»„å…ƒç´ çš„ä¸ªæ•°
 		
-		index = 0; //1.²»Ô½½ç×Óµ¯¸öÊı   2.²»Ô½½ç×Óµ¯Êı×éÏÂ±ê
-		Bullet[] bulletLives = new Bullet[bullets.length]; //²»Ô½½ç×Óµ¯Êı×é
-		for(int i=0;i<bullets.length;i++){ //±éÀúËùÓĞ×Óµ¯
-			Bullet b = bullets[i]; //»ñÈ¡Ã¿Ò»¸ö×Óµ¯
-			if(!b.outOfBounds()){ //²»Ô½½ç
-				bulletLives[index] = b; //½«²»Ô½½ç×Óµ¯Ìí¼Óµ½²»Ô½½ç×Óµ¯Êı×éÖĞ
-				index++; //1.²»Ô½½ç×Óµ¯¸öÊıÔö1 2.²»Ô½½ç×Óµ¯Êı×éÏÂ±êÔö1
+		index = 0; //1.ä¸è¶Šç•Œå­å¼¹ä¸ªæ•°   2.ä¸è¶Šç•Œå­å¼¹æ•°ç»„ä¸‹æ ‡
+		Bullet[] bulletLives = new Bullet[bullets.length]; //ä¸è¶Šç•Œå­å¼¹æ•°ç»„
+		for(int i=0;i<bullets.length;i++){ //éå†æ‰€æœ‰å­å¼¹
+			Bullet b = bullets[i]; //è·å–æ¯ä¸€ä¸ªå­å¼¹
+			if(!b.outOfBounds()){ //ä¸è¶Šç•Œ
+				bulletLives[index] = b; //å°†ä¸è¶Šç•Œå­å¼¹æ·»åŠ åˆ°ä¸è¶Šç•Œå­å¼¹æ•°ç»„ä¸­
+				index++; //1.ä¸è¶Šç•Œå­å¼¹ä¸ªæ•°å¢1 2.ä¸è¶Šç•Œå­å¼¹æ•°ç»„ä¸‹æ ‡å¢1
 			}
 		}
-		bullets = Arrays.copyOf(bulletLives, index); //½«²»Ô½½ç×Óµ¯Êı×é¸´ÖÆµ½bulletsÖĞ£¬index¼´ÎªbulletsÊı×éÔªËØµÄ¸öÊı
+		bullets = Arrays.copyOf(bulletLives, index); //å°†ä¸è¶Šç•Œå­å¼¹æ•°ç»„å¤åˆ¶åˆ°bulletsä¸­ï¼Œindexå³ä¸ºbulletsæ•°ç»„å…ƒç´ çš„ä¸ªæ•°
 	}
 	
-	int score = 0; //µÃ·Ö
-	/** ËùÓĞ×Óµ¯ÓëËùÓĞµĞÈË×² */
+	int score = 0; //å¾—åˆ†
+	/** æ‰€æœ‰å­å¼¹ä¸æ‰€æœ‰æ•Œäººæ’ */
 	public void bangAction(){
-		for(int i=0;i<bullets.length;i++){ //±éÀúËùÓĞ×Óµ¯
-			bang(bullets[i]); //1¸ö×Óµ¯ÓëËùÓĞµĞÈË×²
+		for(int i=0;i<bullets.length;i++){ //éå†æ‰€æœ‰å­å¼¹
+			bang(bullets[i]); //1ä¸ªå­å¼¹ä¸æ‰€æœ‰æ•Œäººæ’
 		}
 	}
-	/** 1¸ö×Óµ¯ÓëËùÓĞµĞÈË×² */
+	/** 1ä¸ªå­å¼¹ä¸æ‰€æœ‰æ•Œäººæ’ */
 	public void bang(Bullet b){
-		int index = -1; //±»×²µĞÈËË÷Òı
-		for(int i=0;i<flyings.length;i++){ //±éÀúËùÓĞµĞÈË
-			if(flyings[i].shootBy(b)){ //ÅĞ¶ÏÊÇ·ñ×²ÉÏÁË
-				index = i; //¼ÇÂ¼±»×²µĞÈËË÷Òı
-				break; //¸Ã×Óµ¯²»ÔÙÓëÆäÓàµĞÈË×²
+		int index = -1; //è¢«æ’æ•Œäººç´¢å¼•
+		for(int i=0;i<flyings.length;i++){ //éå†æ‰€æœ‰æ•Œäºº
+			if(flyings[i].shootBy(b)){ //åˆ¤æ–­æ˜¯å¦æ’ä¸Šäº†
+				index = i; //è®°å½•è¢«æ’æ•Œäººç´¢å¼•
+				break; //è¯¥å­å¼¹ä¸å†ä¸å…¶ä½™æ•Œäººæ’
 			}
 		}
-		if(index!=-1){ //×²ÉÏÁË
-			FlyingObject one = flyings[index]; //»ñÈ¡±»×²µÄµĞÈË¶ÔÏó
-			if(one instanceof Enemy){  //ÊÇµĞÈË
-				Enemy e = (Enemy)one;  //Ç¿×ªÎªµĞÈË
-				score += e.getScore(); //µÃ·Ö
+		if(index!=-1){ //æ’ä¸Šäº†
+			FlyingObject one = flyings[index]; //è·å–è¢«æ’çš„æ•Œäººå¯¹è±¡
+			if(one instanceof Enemy){  //æ˜¯æ•Œäºº
+				Enemy e = (Enemy)one;  //å¼ºè½¬ä¸ºæ•Œäºº
+				score += e.getScore(); //å¾—åˆ†
 			}
-			if(one instanceof Award){  //ÊÇ½±Àø
-				Award a = (Award)one;  //Ç¿×ªÎª½±Àø
-				int type = a.getType();//»ñÈ¡½±ÀøÀàĞÍ
-				switch(type){ //¸ù¾İ½±ÀøÀàĞÍ×ö²»Í¬²Ù×÷
-				case Award.DOUBLE_FIRE:  //½±ÀøÎª»ğÁ¦Öµ
-					hero.addDoubleFire();//Ó¢ĞÛ»úÔö»ğÁ¦Öµ
+			if(one instanceof Award){  //æ˜¯å¥–åŠ±
+				Award a = (Award)one;  //å¼ºè½¬ä¸ºå¥–åŠ±
+				int type = a.getType();//è·å–å¥–åŠ±ç±»å‹
+				switch(type){ //æ ¹æ®å¥–åŠ±ç±»å‹åšä¸åŒæ“ä½œ
+				case Award.DOUBLE_FIRE:  //å¥–åŠ±ä¸ºç«åŠ›å€¼
+					hero.addDoubleFire();//è‹±é›„æœºå¢ç«åŠ›å€¼
 					break;
-				case Award.LIFE:   //½±ÀøÎªÃü
-					hero.addLife();//Ó¢ĞÛ»úÔöÃü
+				case Award.LIFE:   //å¥–åŠ±ä¸ºå‘½
+					hero.addLife();//è‹±é›„æœºå¢å‘½
 					break;
 				}
 			}
 			
-			//½»»»±»×²µÄµĞÈËÓëflyingsÖĞµÄ×îºóÒ»¸öÔªËØ
+			//äº¤æ¢è¢«æ’çš„æ•Œäººä¸flyingsä¸­çš„æœ€åä¸€ä¸ªå…ƒç´ 
 			FlyingObject t = flyings[index];
 			flyings[index] = flyings[flyings.length-1];
 			flyings[flyings.length-1] = t;
-			//ËõÈİ--Ëõµô×îºóÒ»¸ö¶ÔÏó(¼´±»×²µÄ¶ÔÏó)
+			//ç¼©å®¹--ç¼©æ‰æœ€åä¸€ä¸ªå¯¹è±¡(å³è¢«æ’çš„å¯¹è±¡)
 			flyings = Arrays.copyOf(flyings, flyings.length-1);
 			
 		}
 	}
 	
-	/** ¼ì²âÓÎÏ·ÊÇ·ñ½áÊø */
+	/** æ£€æµ‹æ¸¸æˆæ˜¯å¦ç»“æŸ */
 	public void checkGameOverAction(){
-		if(isGameOver()){ //ÓÎÏ·½áÊøÊ±¸Ä±äµ±Ç°×´Ì¬ÎªÓÎÏ·½áÊø×´Ì¬
+		if(isGameOver()){ //æ¸¸æˆç»“æŸæ—¶æ”¹å˜å½“å‰çŠ¶æ€ä¸ºæ¸¸æˆç»“æŸçŠ¶æ€
 			state = GAME_OVER;
 		}
 	}
-	/** ÅĞ¶ÏÓÎÏ·ÊÇ·ñ½áÊø true±íÊ¾ÓÎÏ·½áÊø */
+	/** åˆ¤æ–­æ¸¸æˆæ˜¯å¦ç»“æŸ trueè¡¨ç¤ºæ¸¸æˆç»“æŸ */
 	public boolean isGameOver(){
-		for(int i=0;i<flyings.length;i++){ //±éÀúËùÓĞµĞÈË
-			if(hero.hit(flyings[i])){ //ÅĞ¶ÏÓ¢ĞÛ»úÊÇ·ñÓëµĞÈË×²ÉÏÁË
-				hero.subtractLife();   //Ó¢ĞÛ»ú¼õÃü
-				hero.setDoubleFire(0); //Ó¢ĞÛ»ú»ğÁ¦ÖµÇåÁã
+		for(int i=0;i<flyings.length;i++){ //éå†æ‰€æœ‰æ•Œäºº
+			if(hero.hit(flyings[i])){ //åˆ¤æ–­è‹±é›„æœºæ˜¯å¦ä¸æ•Œäººæ’ä¸Šäº†
+				hero.subtractLife();   //è‹±é›„æœºå‡å‘½
+				hero.setDoubleFire(0); //è‹±é›„æœºç«åŠ›å€¼æ¸…é›¶
 				
-				//½«±»×²µĞÈËÓëflyingsÖĞ×îºóÒ»¸öÔªËØ¶ÔÏó½»»»
+				//å°†è¢«æ’æ•Œäººä¸flyingsä¸­æœ€åä¸€ä¸ªå…ƒç´ å¯¹è±¡äº¤æ¢
 				FlyingObject t = flyings[i];
 				flyings[i] = flyings[flyings.length-1];
 				flyings[flyings.length-1] = t;
-				//ËõÈİ--Ëõµô×îºóÒ»¸öÔªËØ(¼´:±»×²µÄµĞÈË¶ÔÏó)
+				//ç¼©å®¹--ç¼©æ‰æœ€åä¸€ä¸ªå…ƒç´ (å³:è¢«æ’çš„æ•Œäººå¯¹è±¡)
 				flyings = Arrays.copyOf(flyings,flyings.length-1);
 			}
 		}
 		
-		return hero.getLife()<=0; //Ó¢ĞÛ»úµÄÃüĞ¡ÓÚµÈÓÚ0£¬¼´ÎªÓÎÏ·½áÊø
+		return hero.getLife()<=0; //è‹±é›„æœºçš„å‘½å°äºç­‰äº0ï¼Œå³ä¸ºæ¸¸æˆç»“æŸ
 	}
 	
-	/** Æô¶¯Ö´ĞĞ´úÂë */
+	/** å¯åŠ¨æ‰§è¡Œä»£ç  */
 	public void action(){
-		//Êó±êÊÊÅäÆ÷¶ÔÏó---ÕìÌıÆ÷
+		//é¼ æ ‡é€‚é…å™¨å¯¹è±¡---ä¾¦å¬å™¨
 		MouseAdapter l = new MouseAdapter(){
-			/** Êó±êÒÆ¶¯ÊÂ¼ş */
+			/** é¼ æ ‡ç§»åŠ¨äº‹ä»¶ */
 			public void mouseMoved(MouseEvent e){
-				if(state == RUNNING){ //ÔËĞĞ×´Ì¬Ê±Ö´ĞĞ
-					int x = e.getX(); //Êó±êµÄx×ø±ê
-					int y = e.getY(); //Êó±êµÄy×ø±ê
-					hero.moveTo(x, y); //Ó¢ĞÛ»úËæ×ÅÊó±êÒÆ¶¯
+				if(state == RUNNING){ //è¿è¡ŒçŠ¶æ€æ—¶æ‰§è¡Œ
+					int x = e.getX(); //é¼ æ ‡çš„xåæ ‡
+					int y = e.getY(); //é¼ æ ‡çš„yåæ ‡
+					hero.moveTo(x, y); //è‹±é›„æœºéšç€é¼ æ ‡ç§»åŠ¨
 				}
 			}
-			/** Êó±êµã»÷ÊÂ¼ş */
+			/** é¼ æ ‡ç‚¹å‡»äº‹ä»¶ */
 			public void mouseClicked(MouseEvent e){
-				switch(state){ //¸ù¾İµ±Ç°×´Ì¬×ö²»Í¬²Ù×÷
-				case START: //Æô¶¯×´Ì¬Ê±±äÎªÔËĞĞ×´Ì¬
+				switch(state){ //æ ¹æ®å½“å‰çŠ¶æ€åšä¸åŒæ“ä½œ
+				case START: //å¯åŠ¨çŠ¶æ€æ—¶å˜ä¸ºè¿è¡ŒçŠ¶æ€
 					state = RUNNING;
 					break;
-				case GAME_OVER: //ÓÎÏ·½áÊø×´Ì¬Ê±±äÎªÆô¶¯×´Ì¬
-					hero = new Hero(); //ÇåÀíÏÖ³¡
+				case GAME_OVER: //æ¸¸æˆç»“æŸçŠ¶æ€æ—¶å˜ä¸ºå¯åŠ¨çŠ¶æ€
+					hero = new Hero(); //æ¸…ç†ç°åœº
 					flyings = new FlyingObject[0];
 					bullets = new Bullet[0];
 					score = 0;
@@ -225,100 +225,100 @@ public class ShootGame extends JPanel {
 					break;
 				}
 			}
-			/** Êó±êÒÆÈëÊÂ¼ş */
+			/** é¼ æ ‡ç§»å…¥äº‹ä»¶ */
 			public void mouseEntered(MouseEvent e){
-				if(state == PAUSE){ //ÔİÍ£×´Ì¬Ê±¸ÄÎªÔËĞĞ×´Ì¬
+				if(state == PAUSE){ //æš‚åœçŠ¶æ€æ—¶æ”¹ä¸ºè¿è¡ŒçŠ¶æ€
 					state = RUNNING;
 				}
 			}
-			/** Êó±êÒÆ³öÊÂ¼ş */
+			/** é¼ æ ‡ç§»å‡ºäº‹ä»¶ */
 			public void mouseExited(MouseEvent e){
-				if(state == RUNNING){ //ÔËĞĞ×´Ì¬Ê±¸ÄÎªÔİÍ£×´Ì¬
+				if(state == RUNNING){ //è¿è¡ŒçŠ¶æ€æ—¶æ”¹ä¸ºæš‚åœçŠ¶æ€
 					state = PAUSE;
 				}
 			}
 			
 		};
-		this.addMouseListener(l); //´¦ÀíÊó±ê²Ù×÷ÊÂ¼ş
-		this.addMouseMotionListener(l); //´¦ÀíÊó±ê»¬¶¯ÊÂ¼ş
+		this.addMouseListener(l); //å¤„ç†é¼ æ ‡æ“ä½œäº‹ä»¶
+		this.addMouseMotionListener(l); //å¤„ç†é¼ æ ‡æ»‘åŠ¨äº‹ä»¶
 		
-		timer = new Timer(); //´´½¨¶¨Ê±Æ÷¶ÔÏó
+		timer = new Timer(); //åˆ›å»ºå®šæ—¶å™¨å¯¹è±¡
 		timer.schedule(new TimerTask(){
-			public void run(){ //¶¨Ê±¸ÉµÄÄÇ¸öÊÂ-Ã¿10ºÁÃë×ßÒ»´Î
-				if(state == RUNNING){ //ÔËĞĞ×´Ì¬ÏÂÖ´ĞĞ
-					enterAction(); //µĞÈËÈë³¡
-					stepAction();  //·ÉĞĞÎï×ßÒ»²½
-					shootAction(); //×Óµ¯Èë³¡
-					outOfBoundsAction(); //É¾³ıÔ½½çµÄ·ÉĞĞÎï
-					bangAction();  //×Óµ¯ÓëµĞÈË×²
-					checkGameOverAction(); //¼ì²âÓÎÏ·ÊÇ·ñ½áÊø
+			public void run(){ //å®šæ—¶å¹²çš„é‚£ä¸ªäº‹-æ¯10æ¯«ç§’èµ°ä¸€æ¬¡
+				if(state == RUNNING){ //è¿è¡ŒçŠ¶æ€ä¸‹æ‰§è¡Œ
+					enterAction(); //æ•Œäººå…¥åœº
+					stepAction();  //é£è¡Œç‰©èµ°ä¸€æ­¥
+					shootAction(); //å­å¼¹å…¥åœº
+					outOfBoundsAction(); //åˆ é™¤è¶Šç•Œçš„é£è¡Œç‰©
+					bangAction();  //å­å¼¹ä¸æ•Œäººæ’
+					checkGameOverAction(); //æ£€æµ‹æ¸¸æˆæ˜¯å¦ç»“æŸ
 				}
-				repaint(); //ÖØ»­£¬µ÷ÓÃpaint()·½·¨
+				repaint(); //é‡ç”»ï¼Œè°ƒç”¨paint()æ–¹æ³•
 			}
 		},intervel,intervel);
 	}
 	
-	/** ÖØĞ´paint() g:»­±Ê*/
+	/** é‡å†™paint() g:ç”»ç¬”*/
  	public void paint(Graphics g){
-		g.drawImage(background,0,0,null); //»­±³¾°Í¼
-		paintHero(g); //»­Ó¢ĞÛ»ú¶ÔÏó
-		paintFlyingObjects(g); //»­µĞÈË¶ÔÏós
-		paintBullets(g); //»­×Óµ¯¶ÔÏós
-		paintScore(g); //»­·ÖºÍ»­Ãü
-		paintState(g); //»­×´Ì¬
+		g.drawImage(background,0,0,null); //ç”»èƒŒæ™¯å›¾
+		paintHero(g); //ç”»è‹±é›„æœºå¯¹è±¡
+		paintFlyingObjects(g); //ç”»æ•Œäººå¯¹è±¡s
+		paintBullets(g); //ç”»å­å¼¹å¯¹è±¡s
+		paintScore(g); //ç”»åˆ†å’Œç”»å‘½
+		paintState(g); //ç”»çŠ¶æ€
 	}
- 	/** »­×´Ì¬ */
+ 	/** ç”»çŠ¶æ€ */
  	public void paintState(Graphics g){
- 		switch(state){ //¸ù¾İµ±Ç°×´Ì¬»­²»Í¬µÄÍ¼
- 		case START: //Æô¶¯×´Ì¬Ê±»­Æô¶¯Í¼
+ 		switch(state){ //æ ¹æ®å½“å‰çŠ¶æ€ç”»ä¸åŒçš„å›¾
+ 		case START: //å¯åŠ¨çŠ¶æ€æ—¶ç”»å¯åŠ¨å›¾
  			g.drawImage(start,0,0,null);
  			break;
- 		case PAUSE: //ÔİÍ£×´Ì¬Ê±»­ÔİÍ£Í¼
+ 		case PAUSE: //æš‚åœçŠ¶æ€æ—¶ç”»æš‚åœå›¾
  			g.drawImage(pause,0,0,null);
  			break;
- 		case GAME_OVER: //ÓÎÏ·½áÊø×´Ì¬Ê±»­ÓÎÏ·½áÊøÍ¼
+ 		case GAME_OVER: //æ¸¸æˆç»“æŸçŠ¶æ€æ—¶ç”»æ¸¸æˆç»“æŸå›¾
  			g.drawImage(gameover,0,0,null);
  			break;
  		}
  	}
- 	/** »­·ÖºÍ»­Ãü */
+ 	/** ç”»åˆ†å’Œç”»å‘½ */
  	public void paintScore(Graphics g){
- 		g.setColor(new Color(0xFF0000)); //ÉèÖÃÑÕÉ«--´¿ºì
- 		g.setFont(new Font(Font.SANS_SERIF,Font.BOLD,24)); //ÉèÖÃ×ÖÌåÑùÊ½(×ÖÌå:SANS_SERIF,ÑùÊ½:¼Ó´Ö ×ÖºÅ:24)
- 		g.drawString("SCORE: "+score,15,25); //»­·Ö
- 		g.drawString("LIFE: "+hero.getLife(),15,50); //»­Ãü
+ 		g.setColor(new Color(0xFF0000)); //è®¾ç½®é¢œè‰²--çº¯çº¢
+ 		g.setFont(new Font(Font.SANS_SERIF,Font.BOLD,24)); //è®¾ç½®å­—ä½“æ ·å¼(å­—ä½“:SANS_SERIF,æ ·å¼:åŠ ç²— å­—å·:24)
+ 		g.drawString("SCORE: "+score,15,25); //ç”»åˆ†
+ 		g.drawString("LIFE: "+hero.getLife(),15,50); //ç”»å‘½
  	}
-	/** »­Ó¢ĞÛ»ú¶ÔÏó */
+	/** ç”»è‹±é›„æœºå¯¹è±¡ */
 	public void paintHero(Graphics g){
-		g.drawImage(hero.image,hero.x,hero.y,null); //»­Ó¢ĞÛ»ú¶ÔÏó
+		g.drawImage(hero.image,hero.x,hero.y,null); //ç”»è‹±é›„æœºå¯¹è±¡
 	}
-	/** »­µĞÈË¶ÔÏós */
+	/** ç”»æ•Œäººå¯¹è±¡s */
 	public void paintFlyingObjects(Graphics g){
-		for(int i=0;i<flyings.length;i++){ //±éÀúËùÓĞµĞÈË(µĞ»ú+Ğ¡ÃÛ·ä)
-			FlyingObject f = flyings[i]; //»ñÈ¡Ã¿Ò»¸öµĞÈË(µĞ»ú+Ğ¡ÃÛ·ä)
-			g.drawImage(f.image,f.x,f.y,null); //»­µĞÈË¶ÔÏó(µĞ»ú+Ğ¡ÃÛ·ä)
+		for(int i=0;i<flyings.length;i++){ //éå†æ‰€æœ‰æ•Œäºº(æ•Œæœº+å°èœœèœ‚)
+			FlyingObject f = flyings[i]; //è·å–æ¯ä¸€ä¸ªæ•Œäºº(æ•Œæœº+å°èœœèœ‚)
+			g.drawImage(f.image,f.x,f.y,null); //ç”»æ•Œäººå¯¹è±¡(æ•Œæœº+å°èœœèœ‚)
 		}
 	}
-	/** »­×Óµ¯¶ÔÏós */
+	/** ç”»å­å¼¹å¯¹è±¡s */
 	public void paintBullets(Graphics g){
-		for(int i=0;i<bullets.length;i++){ //±éÀú×Óµ¯Êı×é
-			Bullet b = bullets[i]; //»ñÈ¡Ã¿Ò»¸ö×Óµ¯
-			g.drawImage(b.image,b.x,b.y,null); //»­×Óµ¯¶ÔÏó
+		for(int i=0;i<bullets.length;i++){ //éå†å­å¼¹æ•°ç»„
+			Bullet b = bullets[i]; //è·å–æ¯ä¸€ä¸ªå­å¼¹
+			g.drawImage(b.image,b.x,b.y,null); //ç”»å­å¼¹å¯¹è±¡
 		}
 	}
 	
 	public static void main(String[] args) {
-		JFrame frame = new JFrame("Fly"); //´°¿Ú¶ÔÏó
-		ShootGame game = new ShootGame(); //Ãæ°å¶ÔÏó
-		frame.add(game); //½«Ãæ°åÌí¼Óµ½´°¿ÚÖĞ
+		JFrame frame = new JFrame("Fly"); //çª—å£å¯¹è±¡
+		ShootGame game = new ShootGame(); //é¢æ¿å¯¹è±¡
+		frame.add(game); //å°†é¢æ¿æ·»åŠ åˆ°çª—å£ä¸­
 		
-		frame.setSize(WIDTH, HEIGHT); //ÉèÖÃ´°¿Ú´óĞ¡
-		frame.setAlwaysOnTop(true); //ÉèÖÃÒ»Ö±ÔÚ×îÉÏÃæ
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //ÉèÖÃÄ¬ÈÏ¹Ø±Õ²Ù×÷(´°¿Ú¹Ø±ÕÊ±ÍË³ö³ÌĞò)
-		frame.setLocationRelativeTo(null); //ÉèÖÃ´°¿Ú³õÊ¼Î»ÖÃ(¾ÓÖĞ)
-		frame.setVisible(true); //1.ÉèÖÃ´°¿Ú¿É¼û  2.¾¡¿ìµ÷ÓÃpaint()
+		frame.setSize(WIDTH, HEIGHT); //è®¾ç½®çª—å£å¤§å°
+		frame.setAlwaysOnTop(true); //è®¾ç½®ä¸€ç›´åœ¨æœ€ä¸Šé¢
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //è®¾ç½®é»˜è®¤å…³é—­æ“ä½œ(çª—å£å…³é—­æ—¶é€€å‡ºç¨‹åº)
+		frame.setLocationRelativeTo(null); //è®¾ç½®çª—å£åˆå§‹ä½ç½®(å±…ä¸­)
+		frame.setVisible(true); //1.è®¾ç½®çª—å£å¯è§  2.å°½å¿«è°ƒç”¨paint()
 		
-		game.action(); //Æô¶¯Ö´ĞĞ
+		game.action(); //å¯åŠ¨æ‰§è¡Œ
 	}
 }
 

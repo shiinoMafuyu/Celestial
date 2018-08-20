@@ -1,9 +1,9 @@
 /******************************************************************
  * ISendRequest.java
  * Copyright 2017 by WZG. All Rights Reserved.
- * CreateDate£º2017Äê6ÔÂ17ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´6æœˆ17æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.butterflystorm.butterfly2017.protocoltest.core;
@@ -11,15 +11,15 @@ package com.celestial.butterflystorm.butterfly2017.protocoltest.core;
 import com.celestial.agniRadiance.entity.Tag;
 
 /**
- * <b>ÐÞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê6ÔÂ17ÈÕ
+ *                        ---- wangzg 2017å¹´6æœˆ17æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜Žï¼š</b>
  * <p> 
  * 
  * </p>

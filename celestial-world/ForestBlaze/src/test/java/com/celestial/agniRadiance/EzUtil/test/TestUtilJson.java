@@ -31,19 +31,19 @@ public class TestUtilJson {
 	
 	@Test
 	public void _01_toJsonString(){
-		Equip e = new Equip().setName("ÔÂÏÂ");e.setGoodslevel("009300010001");e.setSuitId("qaq").setAf(12.33);
+		Equip e = new Equip().setName("æœˆä¸‹");e.setGoodslevel("009300010001");e.setSuitId("qaq").setAf(12.33);
 		
 		String jsonstr = UtilJson.toJsonString(e);
-		Assert.assertEquals("{\"suitId\":\"qaq\",\"name\":\"ÔÂÏÂ\",\"goodslevel\":\"009300010001\",\"af\":\"12.33\"}", jsonstr);
+		Assert.assertEquals("{\"suitId\":\"qaq\",\"name\":\"æœˆä¸‹\",\"goodslevel\":\"009300010001\",\"af\":\"12.33\"}", jsonstr);
 	}
 	
 	@Test
 	public void _02_stringToObject(){
-		String jsonstr = "{\"suitId\":\"qaq\",\"name\":\"ÔÂÏÂ\",\"goodslevel\":\"009300010001\",\"af\":\"12.33\"}";
+		String jsonstr = "{\"suitId\":\"qaq\",\"name\":\"æœˆä¸‹\",\"goodslevel\":\"009300010001\",\"af\":\"12.33\"}";
 		Equip e  = UtilJson.stringToObject(jsonstr, Equip.class);
-		Assert.assertEquals("ÔÂÏÂ" , e.getName());
+		Assert.assertEquals("æœˆä¸‹" , e.getName());
 		
-		jsonstr = "{\"suitId\":\"qaq\",\"name\":\"ÔÂÏÂ\",\"goodslevel\":\"009300010001\",\"af\":\"12.33\",id:12,gt:666}";
+		jsonstr = "{\"suitId\":\"qaq\",\"name\":\"æœˆä¸‹\",\"goodslevel\":\"009300010001\",\"af\":\"12.33\",id:12,gt:666}";
 		e  = UtilJson.stringToObject(jsonstr, Equip.class);
 		Assert.assertEquals(new Integer(12) , e.getId());
 		Assert.assertEquals(new Double(12.33) , e.getAf());
@@ -51,22 +51,22 @@ public class TestUtilJson {
 	
 	@Test
 	public void _03_toJsonStringArr(){
-		Equip e = new Equip();e.setName("ÔÂÏÂ");e.setGoodslevel("009300010001");e.setSuitId("qaq").setAf(12.33);
-		Equip e2 = new Equip().setAg(2.33).setGf(2.54).setName("Ñ©Ö®ÏÂ").setRepresentId("±¨¾¯µç»°110");
+		Equip e = new Equip();e.setName("æœˆä¸‹");e.setGoodslevel("009300010001");e.setSuitId("qaq").setAf(12.33);
+		Equip e2 = new Equip().setAg(2.33).setGf(2.54).setName("é›ªä¹‹ä¸‹").setRepresentId("æŠ¥è­¦ç”µè¯110");
 		List<Equip> l = Arrays.asList(new Equip[]{e,e2});
 		String s = UtilJson.toJsonStringArr(l);
 		
-		Assert.assertEquals("[{\"suitId\":\"qaq\",\"name\":\"ÔÂÏÂ\",\"goodslevel\":\"009300010001\",\"af\":\"12.33\"},{\"gf\":\"2.54\",\"representId\":\"±¨¾¯µç»°110\",\"name\":\"Ñ©Ö®ÏÂ\",\"ag\":\"2.33\"}]"
+		Assert.assertEquals("[{\"suitId\":\"qaq\",\"name\":\"æœˆä¸‹\",\"goodslevel\":\"009300010001\",\"af\":\"12.33\"},{\"gf\":\"2.54\",\"representId\":\"æŠ¥è­¦ç”µè¯110\",\"name\":\"é›ªä¹‹ä¸‹\",\"ag\":\"2.33\"}]"
 				,s);
 	}
 	
 	@Test
 	public void _04_toJsonStringMap(){
-		//»ñÈ¡Ò»¸ö¸ù¾İmap ·ÖÀàÁËµÄ
-		Equip e = new Equip().setRepresentId("01").setName("Õæ°×");
-		Equip[] eArr = new Equip[]{e,new Equip().setRepresentId("02").setName("Õæ¶¬"),
-									new Equip().setRepresentId("01").setName("ÕæÃû"),
-									new Equip().setRepresentId("02").setName("ÕæËª")};
+		//è·å–ä¸€ä¸ªæ ¹æ®map åˆ†ç±»äº†çš„
+		Equip e = new Equip().setRepresentId("01").setName("çœŸç™½");
+		Equip[] eArr = new Equip[]{e,new Equip().setRepresentId("02").setName("çœŸå†¬"),
+									new Equip().setRepresentId("01").setName("çœŸå"),
+									new Equip().setRepresentId("02").setName("çœŸéœœ")};
 		List<Equip> l = new ArrayList<Equip>();for(Equip ei:eArr){l.add(ei);}
 		List<Equip> l2 = new ArrayList<Equip>();l2.add(e);
 		
@@ -82,10 +82,10 @@ public class TestUtilJson {
 			ex.printStackTrace();
 		}
 		
-		//×ªjson
+		//è½¬json
 		
 		String jsonArr = UtilJson.toJsonStringMap(m);
-		Assert.assertEquals("{\"01\":[{\"representId\":\"01\",\"name\":\"Õæ°×\"},{\"representId\":\"01\",\"name\":\"Õæ°×\"},{\"representId\":\"01\",\"name\":\"ÕæÃû\"}],\"02\":[{\"representId\":\"02\",\"name\":\"Õæ¶¬\"},{\"representId\":\"02\",\"name\":\"ÕæËª\"}]}", 
+		Assert.assertEquals("{\"01\":[{\"representId\":\"01\",\"name\":\"çœŸç™½\"},{\"representId\":\"01\",\"name\":\"çœŸç™½\"},{\"representId\":\"01\",\"name\":\"çœŸå\"}],\"02\":[{\"representId\":\"02\",\"name\":\"çœŸå†¬\"},{\"representId\":\"02\",\"name\":\"çœŸéœœ\"}]}", 
 				jsonArr);
 		
 		

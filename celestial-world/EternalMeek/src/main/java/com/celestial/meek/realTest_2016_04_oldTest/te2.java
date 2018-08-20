@@ -10,7 +10,7 @@ import com.celestial.agniRadiance.EzUtil.UtilDB;
 public class te2 {
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -40,7 +40,7 @@ public class te2 {
 
 	@SuppressWarnings("unused")
 	private static void teContainNum() {
-		String s = "24 25 34 35 36 ºÅÃ»ĞŞ¸Ä¹ı 20 21 22 23 26 27 28 30 32 ÊÖĞ´µÄ,¿ÉÄÜ»¹»áÓĞĞ©ÎÊÌâ 15 16 17 18 19 31 33";
+		String s = "24 25 34 35 36 å·æ²¡ä¿®æ”¹è¿‡ 20 21 22 23 26 27 28 30 32 æ‰‹å†™çš„,å¯èƒ½è¿˜ä¼šæœ‰äº›é—®é¢˜ 15 16 17 18 19 31 33";
 		for(int i=0 ; i< 36;i++){
 			if(!s.contains(i+"")){
 				System.out.println(i);

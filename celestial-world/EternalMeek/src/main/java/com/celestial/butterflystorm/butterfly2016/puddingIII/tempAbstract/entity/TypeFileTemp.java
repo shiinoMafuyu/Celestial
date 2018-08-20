@@ -13,7 +13,7 @@ public abstract class TypeFileTemp {
 			m = UtilFile.class.getDeclaredMethod(Config.CopyMethod.toString(), new Class[]{File.class,File.class});
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new RuntimeException("获取拷贝方法失败.");
+			throw new RuntimeException("鑾峰彇鎷疯礉鏂规硶澶辫触.");
 		} 
 	}
 }

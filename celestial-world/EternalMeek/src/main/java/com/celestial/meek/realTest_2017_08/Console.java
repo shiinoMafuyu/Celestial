@@ -1,9 +1,9 @@
 /******************************************************************
  * Console.java
  * Copyright 2017 by WZG. All Rights Reserved.
- * CreateDate£º2017Äê8ÔÂ6ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´8æœˆ6æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.meek.realTest_2017_08;
@@ -21,15 +21,15 @@ import org.junit.Test;
 
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê8ÔÂ6ÈÕ
+ *                        ---- wangzg 2017å¹´8æœˆ6æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
  * 
  * </p>
@@ -54,7 +54,7 @@ public class Console {
 	public void _01_getMemberVariable(){
 		Field[] fileds = User.class.getDeclaredFields();
 		for(Field fi :fileds){
-			System.out.println(fi.getName() +" ÊÇ ¾²Ì¬±äÁ¿: " + Modifier.isStatic(fi.getModifiers()));
+			System.out.println(fi.getName() +" æ˜¯ é™æ€å˜é‡: " + Modifier.isStatic(fi.getModifiers()));
 		}
 	}
 	
@@ -112,8 +112,8 @@ public class Console {
 		Assert.assertTrue(t1 instanceof Date);
 		Assert.assertFalse(d1 instanceof Timestamp);
 		
-//		Assert.assertTrue(dt1.before(dt2));//ÎŞÂÛ false true¶¼²»ĞĞ ÀàĞÍÎÊÌâ
-		Assert.assertTrue(dt1.getTime() < dt2.getTime());//ÕâÑù²ÅĞĞ
+//		Assert.assertTrue(dt1.before(dt2));//æ— è®º false trueéƒ½ä¸è¡Œ ç±»å‹é—®é¢˜
+		Assert.assertTrue(dt1.getTime() < dt2.getTime());//è¿™æ ·æ‰è¡Œ
 		
 	}
 	
@@ -172,9 +172,9 @@ public class Console {
 		private BigDecimal battleVal = new BigDecimal("5");
 		
 		/**
-		 * <b>·½·¨ËµÃ÷£º</b>
+		 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 		 * <ul>
-		 * »ñÈ¡
+		 * è·å–
 		 * </ul>
 		 * @return the name
 		 */
@@ -183,9 +183,9 @@ public class Console {
 		}
 
 		/**
-		 * <b>·½·¨ËµÃ÷£º</b>
+		 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 		 * <ul>
-		 * »ñÈ¡
+		 * è·å–
 		 * </ul>
 		 * @return the age
 		 */
@@ -194,9 +194,9 @@ public class Console {
 		}
 
 		/**
-		 * <b>·½·¨ËµÃ÷£º</b>
+		 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 		 * <ul>
-		 * »ñÈ¡
+		 * è·å–
 		 * </ul>
 		 * @return the battleVal
 		 */
@@ -205,9 +205,9 @@ public class Console {
 		}
 
 		/**
-		 * <b>·½·¨ËµÃ÷£º</b>
+		 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 		 * <ul>
-		 * ÉèÖÃ
+		 * è®¾ç½®
 		 * </ul>
 		 * name
 		 */
@@ -216,9 +216,9 @@ public class Console {
 		}
 
 		/**
-		 * <b>·½·¨ËµÃ÷£º</b>
+		 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 		 * <ul>
-		 * ÉèÖÃ
+		 * è®¾ç½®
 		 * </ul>
 		 * age
 		 */
@@ -227,9 +227,9 @@ public class Console {
 		}
 
 		/**
-		 * <b>·½·¨ËµÃ÷£º</b>
+		 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 		 * <ul>
-		 * ÉèÖÃ
+		 * è®¾ç½®
 		 * </ul>
 		 * battleVal
 		 */

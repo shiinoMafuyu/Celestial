@@ -1,9 +1,9 @@
 package com.celestial.meek.realTest_2017_02;
 
-public class jsonºÍ¶ÔÏó»¥×ª {
+public class jsonå’Œå¯¹è±¡äº’è½¬ {
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜Žï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -13,13 +13,13 @@ public class jsonºÍ¶ÔÏó»¥×ª {
 	public static void main(String[] args) throws InterruptedException {
 		
 //		_01_();
-		/*Equip e = new Equip();e.setName("ÔÂÏÂ");e.setGoodslevel("009300010001");e.setSuitId("qaq").setAf(12.33);
+		/*Equip e = new Equip();e.setName("æœˆä¸‹");e.setGoodslevel("009300010001");e.setSuitId("qaq").setAf(12.33);
 		String jsonstr = Util_Json.toJsonString(e);
 		System.out.println(jsonstr);
 	}
 
 	private static void _01_() {
-		Equipment e = new Equipment();e.setName("ÔÂÏÂ");e.setGoodslevel("009300010001");e.setSuitId("qaq");
+		Equipment e = new Equipment();e.setName("æœˆä¸‹");e.setGoodslevel("009300010001");e.setSuitId("qaq");
 //		Util_Json
 //		JSONObject js = 
 //		JSONArray.
@@ -36,10 +36,10 @@ public class jsonºÍ¶ÔÏó»¥×ª {
 		
 //		js.toJSONArray(arg0)E:\m2\repository\net\sf\json-lib\json-lib\0.8\json-lib-0.8.jar
 		
-		String jsonArrStr = "[{\"gf\":null,\"ti\":null,\"zmsh\":null,\"level\":null,\"zmDK\":null,\"yzDK_\":null,\"ti_\":null,\"zz_\":null,\"wg\":\"\",\"hp_\":null,\"zhi\":null,\"hf\":null,\"hg\":null,\"zz\":null,\"sf\":null,\"sg\":null,\"li\":null,\"mg_\":\"\",\"gg\":null,\"xyDK_\":null,\"wg_\":\"\",\"yz_\":null,\"wf\":null,\"mphf\":null,\"hp\":null,\"representId\":\"\",\"min_\":null,\"zm_\":null,\"yzDK\":null,\"wf_\":null,\"ydsd\":null,\"yz\":null,\"id\":null,\"suitId\":\"\",\"name\":\"ÔÂÏÂ\",\"xy_\":null,\"mg\":\"\",\"mphf_\":null,\"mf\":null,\"zm\":null,\"zmsh_\":null,\"min\":null,\"ydsd_\":null,\"mf_\":null,\"goodslevel\":\"\",\"xy\":null,\"strengthenKind\":\"\",\"xyDK\":null,\"li_\":null,\"zhi_\":null,\"ag\":12.3,\"zmDK_\":null,\"af\":2.33}]";
+		String jsonArrStr = "[{\"gf\":null,\"ti\":null,\"zmsh\":null,\"level\":null,\"zmDK\":null,\"yzDK_\":null,\"ti_\":null,\"zz_\":null,\"wg\":\"\",\"hp_\":null,\"zhi\":null,\"hf\":null,\"hg\":null,\"zz\":null,\"sf\":null,\"sg\":null,\"li\":null,\"mg_\":\"\",\"gg\":null,\"xyDK_\":null,\"wg_\":\"\",\"yz_\":null,\"wf\":null,\"mphf\":null,\"hp\":null,\"representId\":\"\",\"min_\":null,\"zm_\":null,\"yzDK\":null,\"wf_\":null,\"ydsd\":null,\"yz\":null,\"id\":null,\"suitId\":\"\",\"name\":\"æœˆä¸‹\",\"xy_\":null,\"mg\":\"\",\"mphf_\":null,\"mf\":null,\"zm\":null,\"zmsh_\":null,\"min\":null,\"ydsd_\":null,\"mf_\":null,\"goodslevel\":\"\",\"xy\":null,\"strengthenKind\":\"\",\"xyDK\":null,\"li_\":null,\"zhi_\":null,\"ag\":12.3,\"zmDK_\":null,\"af\":2.33}]";
 		
-		String jsonStr = "{\"gf\":null,\"ti\":null,\"zmsh\":null,\"level\":null,\"zmDK\":null,\"yzDK_\":null,\"ti_\":null,\"zz_\":null,\"wg\":\"\",\"hp_\":null,\"zhi\":null,\"hf\":null,\"hg\":null,\"zz\":null,\"sf\":null,\"sg\":null,\"li\":null,\"mg_\":\"\",\"gg\":null,\"xyDK_\":null,\"wg_\":\"\",\"yz_\":null,\"wf\":null,\"mphf\":null,\"hp\":null,\"representId\":\"\",\"min_\":null,\"zm_\":null,\"yzDK\":null,\"wf_\":null,\"ydsd\":null,\"yz\":null,\"id\":null,\"suitId\":\"qaq\",\"name\":\"ÔÂÏÂ\",\"xy_\":null,\"mg\":\"\",\"mphf_\":null,\"mf\":null,\"zm\":null,\"zmsh_\":null,\"min\":null,\"ydsd_\":null,\"mf_\":null,\"goodslevel\":\"009300010001\",\"xy\":null,\"strengthenKind\":\"\",\"xyDK\":null,\"li_\":null,\"zhi_\":null,\"ag\":null,\"zmDK_\":null,\"af\":null}";
-		String jsonStr2 = "{\"suitId\":\"qaq\",\"name\":\"ÔÂÏÂ\",\"goodslevel\":\"009300010001\"}";
+		String jsonStr = "{\"gf\":null,\"ti\":null,\"zmsh\":null,\"level\":null,\"zmDK\":null,\"yzDK_\":null,\"ti_\":null,\"zz_\":null,\"wg\":\"\",\"hp_\":null,\"zhi\":null,\"hf\":null,\"hg\":null,\"zz\":null,\"sf\":null,\"sg\":null,\"li\":null,\"mg_\":\"\",\"gg\":null,\"xyDK_\":null,\"wg_\":\"\",\"yz_\":null,\"wf\":null,\"mphf\":null,\"hp\":null,\"representId\":\"\",\"min_\":null,\"zm_\":null,\"yzDK\":null,\"wf_\":null,\"ydsd\":null,\"yz\":null,\"id\":null,\"suitId\":\"qaq\",\"name\":\"æœˆä¸‹\",\"xy_\":null,\"mg\":\"\",\"mphf_\":null,\"mf\":null,\"zm\":null,\"zmsh_\":null,\"min\":null,\"ydsd_\":null,\"mf_\":null,\"goodslevel\":\"009300010001\",\"xy\":null,\"strengthenKind\":\"\",\"xyDK\":null,\"li_\":null,\"zhi_\":null,\"ag\":null,\"zmDK_\":null,\"af\":null}";
+		String jsonStr2 = "{\"suitId\":\"qaq\",\"name\":\"æœˆä¸‹\",\"goodslevel\":\"009300010001\"}";
 		JSONArray jRrr = JSONArray.fromString(jsonArrStr);
 		System.out.println(jRrr.length());
 		

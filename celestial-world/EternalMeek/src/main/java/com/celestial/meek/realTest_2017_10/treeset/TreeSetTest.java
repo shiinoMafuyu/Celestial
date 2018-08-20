@@ -1,9 +1,9 @@
 /******************************************************************
  * TreeSetTest.java
  * Copyright 2017 by WZG. All Rights Reserved.
- * CreateDate£º2017Äê10ÔÂ23ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´10æœˆ23æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.meek.realTest_2017_10.treeset;
@@ -14,15 +14,15 @@ import java.util.TreeSet;
 import org.junit.Test;
 
 /**
- * <b>ÐÞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê10ÔÂ23ÈÕ
+ *                        ---- wangzg 2017å¹´10æœˆ23æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜Žï¼š</b>
  * <p> 
  * 
  * </p>

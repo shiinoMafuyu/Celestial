@@ -13,7 +13,7 @@ import com.celestial.agniRadiance.EzUtil.UtilString;
 public class te {
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -28,19 +28,19 @@ public class te {
 	}
 
 	private static void compareTwoFile() throws FileNotFoundException {
-		System.out.println("ÏàÍ¬ : " + UtilFile.getMd5ByFile(new File("C:/Users/Administrator/Documents/ĞÂÏîÄ¿¿ª·¢/08ÊÖ»ú/2´úÂëºÍERÍ¼/zhaozy/Î¢½»Ò×ºÍ±¨¼Û/±¨¼ÛÏµÍ³ERÍ¼(1).dm1")).equals(UtilFile.getMd5ByFile(new File("C:/Users/Administrator/Documents/ĞÂÏîÄ¿¿ª·¢/08ÊÖ»ú/2´úÂëºÍERÍ¼/zhaozy/Î¢½»Ò×ºÍ±¨¼Û/±¨¼ÛÏµÍ³ERÍ¼.dm1"))));
+		System.out.println("ç›¸åŒ : " + UtilFile.getMd5ByFile(new File("C:/Users/Administrator/Documents/æ–°é¡¹ç›®å¼€å‘/08æ‰‹æœº/2ä»£ç å’ŒERå›¾/zhaozy/å¾®äº¤æ˜“å’ŒæŠ¥ä»·/æŠ¥ä»·ç³»ç»ŸERå›¾(1).dm1")).equals(UtilFile.getMd5ByFile(new File("C:/Users/Administrator/Documents/æ–°é¡¹ç›®å¼€å‘/08æ‰‹æœº/2ä»£ç å’ŒERå›¾/zhaozy/å¾®äº¤æ˜“å’ŒæŠ¥ä»·/æŠ¥ä»·ç³»ç»ŸERå›¾.dm1"))));
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * É¾³ı½âÑ¹´íÎóµÄÎÄ¼ş
+	 * åˆ é™¤è§£å‹é”™è¯¯çš„æ–‡ä»¶
 	 * </ul>
 	 * @throws FileNotFoundException 
 	 */
 	private static void deleteFileUnZipMistake() throws FileNotFoundException {
-		String s1="C:/Users/Administrator/Documents/ĞÂÏîÄ¿¿ª·¢/08ÊÖ»ú/2´úÂëºÍERÍ¼/zhaozy/Î¢½»Ò×ºÍ±¨¼Û/±¨¼ÛÏµÍ³";	
-		String s2="C:/Users/Administrator/Documents/ĞÂÏîÄ¿¿ª·¢/08ÊÖ»ú/2´úÂëºÍERÍ¼/zhaozy/Î¢½»Ò×ºÍ±¨¼Û";		
+		String s1="C:/Users/Administrator/Documents/æ–°é¡¹ç›®å¼€å‘/08æ‰‹æœº/2ä»£ç å’ŒERå›¾/zhaozy/å¾®äº¤æ˜“å’ŒæŠ¥ä»·/æŠ¥ä»·ç³»ç»Ÿ";	
+		String s2="C:/Users/Administrator/Documents/æ–°é¡¹ç›®å¼€å‘/08æ‰‹æœº/2ä»£ç å’ŒERå›¾/zhaozy/å¾®äº¤æ˜“å’ŒæŠ¥ä»·";		
 		
 		File f1 = new File(s1);
 		File[] fArr1 = f1.listFiles();
@@ -49,9 +49,9 @@ public class te {
 			System.out.println(name);
 			File ft = new File(s2+"/"+name);
 			if(ft.exists()){
-				System.out.println("É¾³ıÎÄ¼ş: " + ft.delete());
+				System.out.println("åˆ é™¤æ–‡ä»¶: " + ft.delete());
 			}else{
-				throw new RuntimeException("²»´æÔÚ~");
+				throw new RuntimeException("ä¸å­˜åœ¨~");
 			}
 		}
 
@@ -68,8 +68,8 @@ public class te {
 	}
 
 	private static void teEquals() throws FileNotFoundException {
-		String espot = UtilFile.getMd5ByFile(new File("C:/Users/Administrator/Desktop/umb/eÏÖ»õ/ActiveUser.jar"));
-		String vendor = UtilFile.getMd5ByFile(new File("C:/Users/Administrator/Desktop/umb/¾º¼Û/ActiveUser.jar"));
+		String espot = UtilFile.getMd5ByFile(new File("C:/Users/Administrator/Desktop/umb/eç°è´§/ActiveUser.jar"));
+		String vendor = UtilFile.getMd5ByFile(new File("C:/Users/Administrator/Desktop/umb/ç«ä»·/ActiveUser.jar"));
 		System.out.println(espot.equals(vendor));
 		
 		

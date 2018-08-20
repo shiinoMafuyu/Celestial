@@ -2,7 +2,7 @@ package com.celestial.meek.realTest_2016_10.extend;
 
 public class Super {
 	
-	protected String shiino = "o(>©n<)o²»Òª°¡";
+	protected String shiino = "o(>ï¿½n<)oä¸è¦å•Š";
 	
 	protected Super() {
 		shiino = "mashiro";

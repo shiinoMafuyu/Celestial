@@ -1,9 +1,9 @@
 /******************************************************************
  * App.java
  * Copyright 2017 by GNNT Company. All Rights Reserved.
- * CreateDate£º2017Äê9ÔÂ13ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´9æœˆ13æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.meek.realTest_2017_09.S02WebService.test2;
@@ -14,15 +14,15 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê9ÔÂ13ÈÕ
+ *                        ---- wangzg 2017å¹´9æœˆ13æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
  * 
  * </p>
@@ -31,7 +31,7 @@ public class App {
 
 
     public static void main(String[] args) throws Exception {
-        //·şÎñµÄµØÖ·
+        //æœåŠ¡çš„åœ°å€
         URL wsUrl = new URL("http://localhost:8080/helloService");
         
         HttpURLConnection conn = (HttpURLConnection) wsUrl.openConnection();
@@ -43,7 +43,7 @@ public class App {
         
         OutputStream os = conn.getOutputStream();
         
-        //ÇëÇóÌå
+        //è¯·æ±‚ä½“
         String soap = "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:q0=\"http://ws.itcast.cn/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">" + 
                       "<soapenv:Body> <q0:sayHello><arg0>aaa</arg0>  </q0:sayHello> </soapenv:Body> </soapenv:Envelope>";
         

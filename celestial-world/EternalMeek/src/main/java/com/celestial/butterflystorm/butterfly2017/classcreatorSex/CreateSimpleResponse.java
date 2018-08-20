@@ -1,9 +1,9 @@
 /******************************************************************
  * CreateSimpleResponse.java
  * Copyright 2017 by WZG. All Rights Reserved.
- * CreateDate£º2017Äê6ÔÂ16ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´6æœˆ16æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.butterflystorm.butterfly2017.classcreatorSex;
@@ -19,15 +19,15 @@ import com.celestial.butterflystorm.butterfly2017.ClassCreatorSuperStar.core.Moo
 import com.celestial.butterflystorm.butterfly2017.ClassCreatorSuperStar.core.impl.AliceWonderLand;
 
 /**
- * <b>ÐÞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê6ÔÂ16ÈÕ
+ *                        ---- wangzg 2017å¹´6æœˆ16æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜Žï¼š</b>
  * <p> 
  * 
  * </p>
@@ -42,7 +42,7 @@ public class CreateSimpleResponse {
 	
 	
 	/**
-	 * <b>¹¹Ôì·½·¨</b>
+	 * <b>æž„é€ æ–¹æ³•</b>
 	 * <br/>
 	 */
 	public CreateSimpleResponse(Tag t) {
@@ -60,7 +60,7 @@ public class CreateSimpleResponse {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜Žï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -78,7 +78,7 @@ public class CreateSimpleResponse {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜Žï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>

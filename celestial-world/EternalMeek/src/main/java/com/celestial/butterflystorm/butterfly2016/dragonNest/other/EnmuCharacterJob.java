@@ -6,15 +6,15 @@ import java.util.Map;
 import com.celestial.agniRadiance.EzUtil.UtilCollection;
 
 public enum EnmuCharacterJob {
-	Swordmaster/*½£Ê¥*/,
-	Mercenary/*Õ½Éñ*/,
-	Bowmaster/*¼ıÉñ*/,
-	Acrobat/*ÓÎÏÀ*/,
-	ElementLord/*ÔªËØÊ¦*/,
-	ForceUser/*Ä§µ¼Ê¦*/,
-	Paladin/*ÏÍÕß*/,
-	Priest/*¼ÀË¾*/,
-	theDefault/*ÆäËû¡ú_¡ú,ÈË¼Ò²»¹ÜÀ²*/;
+	Swordmaster/*å‰‘åœ£*/,
+	Mercenary/*æˆ˜ç¥*/,
+	Bowmaster/*ç®­ç¥*/,
+	Acrobat/*æ¸¸ä¾ */,
+	ElementLord/*å…ƒç´ å¸ˆ*/,
+	ForceUser/*é­”å¯¼å¸ˆ*/,
+	Paladin/*è´¤è€…*/,
+	Priest/*ç¥­å¸*/,
+	theDefault/*å…¶ä»–â†’_â†’,äººå®¶ä¸ç®¡å•¦*/;
 	
 	@SuppressWarnings({ "serial", "rawtypes" })
 	private final static Map addtionMap = new HashMap<String, Map<String,Double>>(){{

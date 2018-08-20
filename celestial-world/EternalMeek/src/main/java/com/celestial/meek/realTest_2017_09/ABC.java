@@ -1,9 +1,9 @@
 /******************************************************************
  * ABC.java
  * Copyright 2017 by WZG. All Rights Reserved.
- * CreateDate£º2017Äê9ÔÂ22ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´9æœˆ22æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.meek.realTest_2017_09;
@@ -13,15 +13,15 @@ import java.sql.Timestamp;
 import org.junit.Test;
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê9ÔÂ22ÈÕ
+ *                        ---- wangzg 2017å¹´9æœˆ22æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
  * 
  * </p>
@@ -44,19 +44,19 @@ public class ABC {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
 	 * @param si 
 	 */
 	private void gameRecord(String condition) {
-		//É¾³ıµÄÊı¾İÊÇÒÑµ¼ÀúÊ·µÄÊı¾İ£¬ËùÒÔ±ØĞëÓĞÒ»ÑùµÄÁ¬½ÓÌõ¼ş
+		//åˆ é™¤çš„æ•°æ®æ˜¯å·²å¯¼å†å²çš„æ•°æ®ï¼Œæ‰€ä»¥å¿…é¡»æœ‰ä¸€æ ·çš„è¿æ¥æ¡ä»¶
 		
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -74,13 +74,13 @@ public class ABC {
 				.append("    pl.guessresult,pl.createtime,pl.status,")
 				.append("    sysdate")
 				
-				.append("  from ft_game_level gl ,ft_game_records gr,ft_pass_level_records pl ")//Ò»ÖÂµÄÁ¬½ÓÌõ¼ş
-				.append("  where 1 = 1 ")//Ò»ÖÂµÄÁ¬½ÓÌõ¼ş
-				.append("    and gl.typeid(+) = gr.typeid ")//Ò»ÖÂµÄÁ¬½ÓÌõ¼ş
-				.append("    and gl.no(+) = gr.currentlevelno ")//Ò»ÖÂµÄÁ¬½ÓÌõ¼ş
-				.append("    and gr.gameid = pl.gameid ")//Ò»ÖÂµÄÁ¬½ÓÌõ¼ş
+				.append("  from ft_game_level gl ,ft_game_records gr,ft_pass_level_records pl ")//ä¸€è‡´çš„è¿æ¥æ¡ä»¶
+				.append("  where 1 = 1 ")//ä¸€è‡´çš„è¿æ¥æ¡ä»¶
+				.append("    and gl.typeid(+) = gr.typeid ")//ä¸€è‡´çš„è¿æ¥æ¡ä»¶
+				.append("    and gl.no(+) = gr.currentlevelno ")//ä¸€è‡´çš„è¿æ¥æ¡ä»¶
+				.append("    and gr.gameid = pl.gameid ")//ä¸€è‡´çš„è¿æ¥æ¡ä»¶
 				
-				.append(condition)//µ¼ÀúÊ·Ìõ¼ş
+				.append(condition)//å¯¼å†å²æ¡ä»¶
 				.append(")")
 				
 				.toString();
@@ -90,13 +90,13 @@ public class ABC {
 				.append("delete ft_pass_level_records pl where exists(")
 				.append(" select 1 ")
 				
-				.append(" from ft_game_level gl ,ft_game_records gr ")//Ò»ÖÂµÄÁ¬½ÓÌõ¼ş
-				.append("  where 1 = 1 ")//Ò»ÖÂµÄÁ¬½ÓÌõ¼ş
-				.append("    and gl.typeid(+) = gr.typeid ")//Ò»ÖÂµÄÁ¬½ÓÌõ¼ş
-				.append("    and gl.no(+) = gr.currentlevelno ")//Ò»ÖÂµÄÁ¬½ÓÌõ¼ş
-				.append("    and gr.gameid = pl.gameid ")//Ò»ÖÂµÄÁ¬½ÓÌõ¼ş
+				.append(" from ft_game_level gl ,ft_game_records gr ")//ä¸€è‡´çš„è¿æ¥æ¡ä»¶
+				.append("  where 1 = 1 ")//ä¸€è‡´çš„è¿æ¥æ¡ä»¶
+				.append("    and gl.typeid(+) = gr.typeid ")//ä¸€è‡´çš„è¿æ¥æ¡ä»¶
+				.append("    and gl.no(+) = gr.currentlevelno ")//ä¸€è‡´çš„è¿æ¥æ¡ä»¶
+				.append("    and gr.gameid = pl.gameid ")//ä¸€è‡´çš„è¿æ¥æ¡ä»¶
 				
-				.append(condition)//µ¼ÀúÊ·Ìõ¼ş
+				.append(condition)//å¯¼å†å²æ¡ä»¶
 				.append(")")
 				.toString();
 		

@@ -3,7 +3,7 @@ package com.celestial.meek.realTest_2017_03;
 public class enmuTest {
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -18,7 +18,7 @@ public class enmuTest {
 	           this.nCode = _nCode;
 	    }
 		
-		// ¶¨ÒåË½ÓĞ±äÁ¿
+		// å®šä¹‰ç§æœ‰å˜é‡
 	    private int nCode ;
 		public String toString() {
 	          return String.valueOf (this.nCode );

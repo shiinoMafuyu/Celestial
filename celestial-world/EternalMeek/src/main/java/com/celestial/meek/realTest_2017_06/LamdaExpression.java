@@ -1,9 +1,9 @@
 /******************************************************************
  * LamdaExpression.java
  * Copyright 2017 by WZG. All Rights Reserved.
- * CreateDate£º2017Äê6ÔÂ1ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´6æœˆ1æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.meek.realTest_2017_06;
@@ -26,15 +26,15 @@ import org.junit.runners.MethodSorters;
 import com.celestial.meek.realTest_2017_06.interFace.Beautiful;
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê6ÔÂ1ÈÕ
+ *                        ---- wangzg 2017å¹´6æœˆ1æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
  * 
  * </p>
@@ -52,7 +52,7 @@ public class LamdaExpression {
 	
 	@Test
 	public void _01_lamda() {
-		Beautiful b = () -> {System.out.println("ÄãÎªÊ²Ã´Òª³ÔÒ©£¿£¡¶¼²»ÃÈÃÈßÕÁË£¡");return "¸Ã³ÔÒ©ÁË£¬¸øÄãÁôÁË´óÆ¿µÄ";};
+		Beautiful b = () -> {System.out.println("ä½ ä¸ºä»€ä¹ˆè¦åƒè¯ï¼Ÿï¼éƒ½ä¸èŒèŒå“’äº†ï¼");return "è¯¥åƒè¯äº†ï¼Œç»™ä½ ç•™äº†å¤§ç“¶çš„";};
 		System.out.println(b.show());
 //		new Thread(() -> System.out.println("In Java8, Lambda expression rocks !!") ).start();
 	}
@@ -81,7 +81,7 @@ public class LamdaExpression {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -99,9 +99,9 @@ public class LamdaExpression {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ×ªÎªList·µ»Ø<br>
+	 * è½¬ä¸ºListè¿”å›<br>
 	 * </ul>
 	 * @param names
 	 * @param object 
@@ -113,9 +113,9 @@ public class LamdaExpression {
 		
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ²âÊÔfilter×÷ÓÃ<br/>
+	 * æµ‹è¯•filterä½œç”¨<br/>
 	 * </ul>
 	 * @param languages
 	 * @param object 
@@ -130,9 +130,9 @@ public class LamdaExpression {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Ô­°æfilter
+	 * åŸç‰ˆfilter
 	 * </ul>
 	 * @param names
 	 * @param condition
@@ -149,7 +149,7 @@ public class LamdaExpression {
 	public void _05_SummaryStatistics() {
 		List<Integer> primes = Arrays.asList(2, 3, 5, 7, 11, 13, 17, 19, 23, 29);
 		DoubleSummaryStatistics sta = primes.stream().mapToDouble(x -> x).summaryStatistics();
-		System.out.println(String.format("×î´ó:%1$s	×îĞ¡:%2$s		Æ½¾ù:%3$s", sta.getMax() , sta.getMin() , sta.getAverage() ));
+		System.out.println(String.format("æœ€å¤§:%1$s	æœ€å°:%2$s		å¹³å‡:%3$s", sta.getMax() , sta.getMin() , sta.getAverage() ));
 	}
 	
 	

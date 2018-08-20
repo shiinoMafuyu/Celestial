@@ -8,12 +8,12 @@ public class FormatMoney {
 	private static Map<Integer,String> m = new HashMap<>();
 	private static Map<Integer,String> mstage = new HashMap<>();
 	static {
-		m.put(0,"Áã");m.put(1,"Ò¼");m.put(2,"·¡");m.put(3,"Èş");m.put(4,"ËÁ");
-		m.put(5,"Îé");m.put(6,"Â½");m.put(7,"Æâ");m.put(8,"°Æ");m.put(9,"¾Á");
-		mstage.put(0, "ÔªÕû");
-		mstage.put(1, "Íò");
-		mstage.put(2, "ÒÚ");
-		mstage.put(3, "Õ×");
+		m.put(0,"é›¶");m.put(1,"å£¹");m.put(2,"è´°");m.put(3,"å");m.put(4,"è‚†");
+		m.put(5,"ä¼");m.put(6,"é™†");m.put(7,"æŸ’");m.put(8,"æŒ");m.put(9,"ç–");
+		mstage.put(0, "å…ƒæ•´");
+		mstage.put(1, "ä¸‡");
+		mstage.put(2, "äº¿");
+		mstage.put(3, "å…†");
 	}
 	
 	public static void main(String[] args) {
@@ -35,17 +35,17 @@ public class FormatMoney {
 			count++;
 			
 		}
-		return re.replaceAll("Áã[Ê°°ÛÇª]","Áã").replaceAll("Áã+", "Áã").
-				replaceAll("ÁãÒÚ", "ÒÚ").replaceAll("ÁãÍò", "Íò").replaceAll("ÁãÔª", "Ôª").replaceAll("^Áã", "").replaceAll("ÒÚÍò", "ÒÚ").replaceAll("Õ×ÒÚ", "Õ×");
+		return re.replaceAll("é›¶[æ‹¾ä½°ä»Ÿ]","é›¶").replaceAll("é›¶+", "é›¶").
+				replaceAll("é›¶äº¿", "äº¿").replaceAll("é›¶ä¸‡", "ä¸‡").replaceAll("é›¶å…ƒ", "å…ƒ").replaceAll("^é›¶", "").replaceAll("äº¿ä¸‡", "äº¿").replaceAll("å…†äº¿", "å…†");
 	}
 
 	private static String formate4(String str, int stage) {
 		str = String.format("%04d", Integer.valueOf(str));
 		StringBuilder sb = new StringBuilder(10);
 		
-		sb.append(m.get(Integer.valueOf(str.substring(0,1)))).append("Çª")
-		.append(m.get(Integer.valueOf(str.substring(1,2)))).append("°Û")
-		.append(m.get(Integer.valueOf(str.substring(2,3)))).append("Ê°")
+		sb.append(m.get(Integer.valueOf(str.substring(0,1)))).append("ä»Ÿ")
+		.append(m.get(Integer.valueOf(str.substring(1,2)))).append("ä½°")
+		.append(m.get(Integer.valueOf(str.substring(2,3)))).append("æ‹¾")
 		.append(m.get(Integer.valueOf(str.substring(3,4)))).append(mstage.get(stage));
 		return sb.toString();
 	}

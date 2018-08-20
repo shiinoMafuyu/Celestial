@@ -1,41 +1,41 @@
 package com.celestial.meek.realTest_2016_03.de.shoot;
 import java.util.Random;
-/** Ð¡ÃÛ·ä: ÊÇ·ÉÐÐÎï£¬Ò²ÊÇ½±Àø */
+/** å°èœœèœ‚: æ˜¯é£žè¡Œç‰©ï¼Œä¹Ÿæ˜¯å¥–åŠ± */
 public class Bee extends FlyingObject implements Award{
-	private int xSpeed = 1; //x×ø±ê×ß²½²½Êý
-	private int ySpeed = 2; //y×ø±ê×ß²½²½Êý
-	private int awardType;  //½±ÀøµÄÀàÐÍ
-	/** ¹¹Ôì·½·¨ */
+	private int xSpeed = 1; //xåæ ‡èµ°æ­¥æ­¥æ•°
+	private int ySpeed = 2; //yåæ ‡èµ°æ­¥æ­¥æ•°
+	private int awardType;  //å¥–åŠ±çš„ç±»åž‹
+	/** æž„é€ æ–¹æ³• */
 	public Bee(){
-		image = ShootGame.bee; //Í¼Æ¬
-		width = image.getWidth();   //¿í
-		height = image.getHeight(); //¸ß
-		Random rand = new Random(); //Ëæ»úÊý¶ÔÏó
-		x = rand.nextInt(ShootGame.WIDTH-this.width); //x:0µ½ÆÁÄ»¿í-ÃÛ·ä¿íÖ®¼äµÄËæ»úÊý
-		y = -this.height; //y:¸ºµÄÃÛ·äµÄ¸ß
-		awardType = rand.nextInt(2); //Ëæ»úÉú³É½±ÀøÀàÐÍ 0´ú±í»ðÁ¦Öµ  1´ú±íÃü
+		image = ShootGame.bee; //å›¾ç‰‡
+		width = image.getWidth();   //å®½
+		height = image.getHeight(); //é«˜
+		Random rand = new Random(); //éšæœºæ•°å¯¹è±¡
+		x = rand.nextInt(ShootGame.WIDTH-this.width); //x:0åˆ°å±å¹•å®½-èœœèœ‚å®½ä¹‹é—´çš„éšæœºæ•°
+		y = -this.height; //y:è´Ÿçš„èœœèœ‚çš„é«˜
+		awardType = rand.nextInt(2); //éšæœºç”Ÿæˆå¥–åŠ±ç±»åž‹ 0ä»£è¡¨ç«åŠ›å€¼  1ä»£è¡¨å‘½
 	}
 	
-	/** ÖØÐ´getType() */
+	/** é‡å†™getType() */
 	public int getType(){
 		return awardType;
 	}
 	
-	/** ÖØÐ´step() */
+	/** é‡å†™step() */
 	public void step(){
 		if(x>=ShootGame.WIDTH-this.width){
-			xSpeed = -1; //×îÓÒ±ßÊ±¼õ(Ïò×ó)
+			xSpeed = -1; //æœ€å³è¾¹æ—¶å‡(å‘å·¦)
 		}
 		if(x<=0){
-			xSpeed = 1; //×î×ó±ßÊ±¼Ó(¼ÓÓÒ)
+			xSpeed = 1; //æœ€å·¦è¾¹æ—¶åŠ (åŠ å³)
 		}
-		x += xSpeed; //x±ä(»ò¼Ó»ò¼õ)
-		y += ySpeed; //y¼Ó(ÏòÏÂ)
+		x += xSpeed; //xå˜(æˆ–åŠ æˆ–å‡)
+		y += ySpeed; //yåŠ (å‘ä¸‹)
 	}
 
-	/** ÖØÐ´outOfBounds() */
+	/** é‡å†™outOfBounds() */
 	public boolean outOfBounds(){
-		return this.y>ShootGame.HEIGHT; //ÃÛ·äµÄy´óÓÚÆÁÄ»µÄ¸ßÎªÔ½½ç
+		return this.y>ShootGame.HEIGHT; //èœœèœ‚çš„yå¤§äºŽå±å¹•çš„é«˜ä¸ºè¶Šç•Œ
 	}
 }
 

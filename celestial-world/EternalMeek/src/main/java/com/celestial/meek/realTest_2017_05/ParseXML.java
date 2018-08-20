@@ -1,9 +1,9 @@
 /******************************************************************
  * ParseXML.java
  * Copyright 2017 by WZG. All Rights Reserved.
- * CreateDate£º2017Äê5ÔÂ24ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´5æœˆ24æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.meek.realTest_2017_05;
@@ -19,15 +19,15 @@ import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê5ÔÂ24ÈÕ
+ *                        ---- wangzg 2017å¹´5æœˆ24æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
  * 
  * </p>
@@ -35,7 +35,7 @@ import org.dom4j.io.SAXReader;
 public class ParseXML {
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -63,19 +63,19 @@ public class ParseXML {
 
 	@SuppressWarnings("unchecked")
 	public static void listNodes(Element node){  
-	        System.out.println("µ±Ç°½ÚµãµÄÃû³Æ£º" + node.getName());  
-	        //Ê×ÏÈ»ñÈ¡µ±Ç°½ÚµãµÄËùÓĞÊôĞÔ½Úµã  
+	        System.out.println("å½“å‰èŠ‚ç‚¹çš„åç§°ï¼š" + node.getName());  
+	        //é¦–å…ˆè·å–å½“å‰èŠ‚ç‚¹çš„æ‰€æœ‰å±æ€§èŠ‚ç‚¹  
 			List<Attribute> list = node.attributes();  
-	        //±éÀúÊôĞÔ½Úµã  
+	        //éå†å±æ€§èŠ‚ç‚¹  
 	        for(Attribute attribute : list){  
-	            System.out.println("ÊôĞÔ"+attribute.getName() +":" + attribute.getValue());  
+	            System.out.println("å±æ€§"+attribute.getName() +":" + attribute.getValue());  
 	        }  
-	        //Èç¹ûµ±Ç°½ÚµãÄÚÈİ²»Îª¿Õ£¬ÔòÊä³ö  
+	        //å¦‚æœå½“å‰èŠ‚ç‚¹å†…å®¹ä¸ä¸ºç©ºï¼Œåˆ™è¾“å‡º  
 	        if(!(node.getTextTrim().equals(""))){  
-	             System.out.println( node.getName() + "£º" + node.getText());    
+	             System.out.println( node.getName() + "ï¼š" + node.getText());    
 	        }  
-	        //Í¬Ê±µü´úµ±Ç°½ÚµãÏÂÃæµÄËùÓĞ×Ó½Úµã  
-	        //Ê¹ÓÃµİ¹é  
+	        //åŒæ—¶è¿­ä»£å½“å‰èŠ‚ç‚¹ä¸‹é¢çš„æ‰€æœ‰å­èŠ‚ç‚¹  
+	        //ä½¿ç”¨é€’å½’  
 	        Iterator<Element> iterator = node.elementIterator();
 	        while(iterator.hasNext()){
 	            Element e = iterator.next();

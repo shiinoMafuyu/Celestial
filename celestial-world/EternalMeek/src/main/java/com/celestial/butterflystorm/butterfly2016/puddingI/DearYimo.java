@@ -15,7 +15,7 @@ public class DearYimo {
 
 	/**
 	 * 
-	 * javaÎÄ¼ş¶¼ÔÚsrcÏÂÃæ Âğ¹Ì¶¨ÏÂ²»..
+	 * javaæ–‡ä»¶éƒ½åœ¨srcä¸‹é¢ å—å›ºå®šä¸‹ä¸..
 	 * @param args
 	 * @throws Exception 
 	 */
@@ -27,20 +27,20 @@ public class DearYimo {
 		createDinner(source,project);
 	}
 	/**
-	 * ´´½¨²¹¶¡
-	 * @param source ´æ·ÅÁËÉú³É²¹¶¡ÎÄ¼şµÄÄ¿Â¼
-	 * @param project ÏîÄ¿Ä¿Â¼
+	 * åˆ›å»ºè¡¥ä¸
+	 * @param source å­˜æ”¾äº†ç”Ÿæˆè¡¥ä¸æ–‡ä»¶çš„ç›®å½•
+	 * @param project é¡¹ç›®ç›®å½•
 	 * @throws FileNotFoundException 
 	 */
 	private static void createDinner(String source0, String project0) throws Exception {
-		//1.ÏÈ¸ã¶¨javaÎÄ¼ş
+		//1.å…ˆæå®šjavaæ–‡ä»¶
 		File source=new File(source0);
 		File project=new File(project0);
 		
-		//±éÀúsourceÏÂµÄËùÓĞÎÄ¼şÎÄ¼ş¼Ğ
+		//éå†sourceä¸‹çš„æ‰€æœ‰æ–‡ä»¶æ–‡ä»¶å¤¹
 		if(checkFile(source) && checkFile(project)){
 			String f1Head=source0+project0.substring(project0.lastIndexOf("/"));
-			hook(source,project,f1Head);//f1Head µ±Ç°sourceÂ·¾¶¼ÓÉÏÏîÄ¿Ãû
+			hook(source,project,f1Head);//f1Head å½“å‰sourceè·¯å¾„åŠ ä¸Šé¡¹ç›®å
 		}
 
 	}
@@ -48,10 +48,10 @@ public class DearYimo {
 
 
 	/**
-	 * ±éÀúÒª×ö²¹¶¡µÄÎÄ¼ş
-	 * °Ñf2ÖĞµÄ ¿½µ½f1ÖĞ...
-	 * @param f1 Òª´ò²¹¶¡ÎÄ¼şËùÔÚÄ¿Â¼
-	 * @param f2 ÏîÄ¿ËùÔÚÄ¿Â¼
+	 * éå†è¦åšè¡¥ä¸çš„æ–‡ä»¶
+	 * æŠŠf2ä¸­çš„ æ‹·åˆ°f1ä¸­...
+	 * @param f1 è¦æ‰“è¡¥ä¸æ–‡ä»¶æ‰€åœ¨ç›®å½•
+	 * @param f2 é¡¹ç›®æ‰€åœ¨ç›®å½•
 	 * @param f1Head 
 	 * @throws FileNotFoundException
 	 */
@@ -63,13 +63,13 @@ public class DearYimo {
 			}
 		}
 		else if(f1.isFile()){
-			//ÊÇÎÄ¼şµÄ»°¾ÍÇ¿±©f2
-			//»ñÈ¡Â·¾¢Î²Êı
+			//æ˜¯æ–‡ä»¶çš„è¯å°±å¼ºæš´f2
+			//è·å–è·¯åŠ²å°¾æ•°
 			String f1Name=f1.getName();
-			//ÊÇjavaÎÄ¼şÂğ
+			//æ˜¯javaæ–‡ä»¶å—
 			if(f1Name.endsWith(".java")){
 				String head=(f2.getAbsolutePath()+"\\src").replaceAll("\\\\", "/");
-				String f2Head=f2.getAbsolutePath()+"/WebRoot/WEB-INF/classes";//ÏîÄ¿µÄÂ·¾¶Í·
+				String f2Head=f2.getAbsolutePath()+"/WebRoot/WEB-INF/classes";//é¡¹ç›®çš„è·¯å¾„å¤´
 				compare(f1,new File(head),head);
 				
 				String sad=f1Head+"/WEB-INF/classes"+tail;
@@ -87,15 +87,15 @@ public class DearYimo {
 			
 		}
 		else{
-			throw new RuntimeException("²»ÊÇÎÄ¼ş»òÕßÎÄ¼ş¼ĞµÄ Ê²Ã´¹í?");
+			throw new RuntimeException("ä¸æ˜¯æ–‡ä»¶æˆ–è€…æ–‡ä»¶å¤¹çš„ ä»€ä¹ˆé¬¼?");
 		}
 		
 	}
 
 	/**
-	 * ¿½±´ÄäÃûÄÚ²¿Àà
-	 * @param fs1 Òª¿½µÄÎÄ¼ş(º¬Ä¿Â¼)
-	 * @param fs2 ¿½±´µ½µÄÎÄ¼ş(º¬Ä¿Â¼)
+	 * æ‹·è´åŒ¿åå†…éƒ¨ç±»
+	 * @param fs1 è¦æ‹·çš„æ–‡ä»¶(å«ç›®å½•)
+	 * @param fs2 æ‹·è´åˆ°çš„æ–‡ä»¶(å«ç›®å½•)
 	 * @throws Exception 
 	 */
 	private static void copyAnonymous(String fs1, String fs2) throws Exception {
@@ -117,8 +117,8 @@ public class DearYimo {
 		
 	}
 	/**
-	 * ²»ÊÇjavaÎÄ¼ş Ö±½Ó¿½
-	 * È¥f2ÖĞÕÒºÍf1Í¬ÃûÍ¬md5ÖµµÄÎÄ¼ş ¿½µ½f1ËùÔÚÄ¿Â¼¶ÔÓ¦Î»ÖÃ
+	 * ä¸æ˜¯javaæ–‡ä»¶ ç›´æ¥æ‹·
+	 * å»f2ä¸­æ‰¾å’Œf1åŒååŒmd5å€¼çš„æ–‡ä»¶ æ‹·åˆ°f1æ‰€åœ¨ç›®å½•å¯¹åº”ä½ç½®
 	 * f2-->f1
 	 * @param f1
 	 * @param f2
@@ -155,7 +155,7 @@ public class DearYimo {
 
 	static String tail=null;
 	/**
-	 * ´ÓÎÄ¼ş¼Ğf2ÖĞÕÒ³ö Óëf1 ÏàÍ¬µÄÎÄ¼şµÄÂ·¾¶ºó×º
+	 * ä»æ–‡ä»¶å¤¹f2ä¸­æ‰¾å‡º ä¸f1 ç›¸åŒçš„æ–‡ä»¶çš„è·¯å¾„åç¼€
 	 * @param f1
 	 * @param f2
 	 * @param head
@@ -172,9 +172,9 @@ public class DearYimo {
 			}
 		}
 		else if(f2.isFile()){
-			//ÊÇÎÄ¼şµÄ»°¾ÍºÍf1¶Ô±È
-			//»ñÈ¡Â·¾¢Î²Êı   
-			//ÎÄ¼şmd5ÖµÒ»Ñù ÊÇÍ¬Ò»¸öÎÄ¼ş
+			//æ˜¯æ–‡ä»¶çš„è¯å°±å’Œf1å¯¹æ¯”
+			//è·å–è·¯åŠ²å°¾æ•°   
+			//æ–‡ä»¶md5å€¼ä¸€æ · æ˜¯åŒä¸€ä¸ªæ–‡ä»¶
 			String name2=f2.getName();
 			System.out.println(name2);
 			if(f1.getName().equals(f2.getName())){
@@ -194,7 +194,7 @@ public class DearYimo {
 	
 	
 	/**
-	 * »ñÈ¡md5Öµ
+	 * è·å–md5å€¼
 	 * @param file
 	 * @return
 	 * @throws FileNotFoundException
@@ -223,7 +223,7 @@ public class DearYimo {
     } 
 	
 	/**
-	 * ÎÄ¼şÊÇ²»ÊÇÎª¿Õ »òÕß´æÔÚ²» »òÕß²»ÊÇÄ¿Â¼
+	 * æ–‡ä»¶æ˜¯ä¸æ˜¯ä¸ºç©º æˆ–è€…å­˜åœ¨ä¸ æˆ–è€…ä¸æ˜¯ç›®å½•
 	 * @param source
 	 * @return
 	 */
@@ -233,8 +233,8 @@ public class DearYimo {
 	
 	
 	/**
-	 * ¿½±´ÎÄ¼ş 
-	 * Í¨¹ı¹ÜµÀ
+	 * æ‹·è´æ–‡ä»¶ 
+	 * é€šè¿‡ç®¡é“
 	 * @param f1
 	 * @param f2
 	 * @return

@@ -1,6 +1,6 @@
 package com.celestial.meek.realTest_2016_03.de.shoot;
-/** µÐÈË */
+/** æ•Œäºº */
 public interface Enemy {
-	/** µÃ·Ö */
+	/** å¾—åˆ† */
 	public int getScore();
 }

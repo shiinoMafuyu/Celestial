@@ -1,9 +1,9 @@
 /******************************************************************
  * UtilDate.java
  * Copyright ${year} by WZG. All Rights Reserved.
- * CreateDate£º2017Äê9ÔÂ14ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´9æœˆ14æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.agniRadiance.EzUtil;
@@ -15,15 +15,15 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê9ÔÂ14ÈÕ
+ *                        ---- wangzg 2017å¹´9æœˆ14æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
  * 
  * </p>
@@ -31,9 +31,9 @@ import java.util.List;
 public class UtilDate {
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡yearÄêmonthÔÂÓĞ¶àÉÙÌì.<br/>
+	 * è·å–yearå¹´monthæœˆæœ‰å¤šå°‘å¤©.<br/>
 	 * </ul>
 	 * @param year
 	 * @param month
@@ -42,7 +42,7 @@ public class UtilDate {
 	public static int getDays(int year, int month) {
 		int days = 0;
 		if(month > 12 || month<0)
-			throw new RuntimeException("- -ÎÒ²»ÏëºÍÄãËµ»°.");
+			throw new RuntimeException("- -æˆ‘ä¸æƒ³å’Œä½ è¯´è¯.");
 		if(UtilCollection.inArr(new Integer[]{1,3,5,7,8,10,12}, month))
 			days = 31;
 		else if(UtilCollection.inArr(new Integer[]{4,6,9,11},month))
@@ -62,12 +62,12 @@ public class UtilDate {
 	}
 	
 	/**
-	 * ÅĞ¶ÏÒ»¸öÊ±¼äÊÇ·ñÔÚ¸ø¶¨µÄÊ±¼äÖ®ÄÚ ;<br/>
-	 * Èç¹ûÊı×éÎªË«ÊıÔò,ÅĞ¶ÏÊÇ²»ÊÇÁ½Á½×é³ÉµÄÇø¼äÖ®ÄÚ;<br/>
-	 * Èç¹ûÎªµ¥ÊıÔòÄ¬ÈÏ×îºóÊ±¼äµ½ÎŞÇî´ó;<br/>
-	 * ÅĞ¶ÏÊÇÄ³Ê±¼äÖ®Ç°ÎŞÇî´ó,È¡·Ç¼´¿É.<br/>
-	 * @param date ÈÕÆÚ
-	 * @param dates Ê±¼äÇø¼ä
+	 * åˆ¤æ–­ä¸€ä¸ªæ—¶é—´æ˜¯å¦åœ¨ç»™å®šçš„æ—¶é—´ä¹‹å†… ;<br/>
+	 * å¦‚æœæ•°ç»„ä¸ºåŒæ•°åˆ™,åˆ¤æ–­æ˜¯ä¸æ˜¯ä¸¤ä¸¤ç»„æˆçš„åŒºé—´ä¹‹å†…;<br/>
+	 * å¦‚æœä¸ºå•æ•°åˆ™é»˜è®¤æœ€åæ—¶é—´åˆ°æ— ç©·å¤§;<br/>
+	 * åˆ¤æ–­æ˜¯æŸæ—¶é—´ä¹‹å‰æ— ç©·å¤§,å–éå³å¯.<br/>
+	 * @param date æ—¥æœŸ
+	 * @param dates æ—¶é—´åŒºé—´
 	 * @throws Exception 
 	 */
 	public static boolean inTime(Date date, Date[] dates) throws Exception {
@@ -90,17 +90,17 @@ public class UtilDate {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new RuntimeException("ÈÕÆÚ±È½ÏÒì³£");
+			throw new RuntimeException("æ—¥æœŸæ¯”è¾ƒå¼‚å¸¸");
 		}
 		
 		return b;
 	}
 	
 	/**
-	 * ±È½Ï×Ö·û´®¸ñÊ½µÄÈÕÆÚ<br/>
-	 * Ö§³Öyyyy-MM-dd ºÍ yyyy-MM-dd hh:mm:ss Á½ÖÖ¸ñÊ½<br/>
-	 * @param date ×Ö·ûÈÕÆÚ
-	 * @param dates ×Ö·ûÈÕÆÚÊı×é
+	 * æ¯”è¾ƒå­—ç¬¦ä¸²æ ¼å¼çš„æ—¥æœŸ<br/>
+	 * æ”¯æŒyyyy-MM-dd å’Œ yyyy-MM-dd hh:mm:ss ä¸¤ç§æ ¼å¼<br/>
+	 * @param date å­—ç¬¦æ—¥æœŸ
+	 * @param dates å­—ç¬¦æ—¥æœŸæ•°ç»„
 	 * @return 
 	 */
 	public static boolean inTime(String date, String[] dates) {
@@ -114,17 +114,17 @@ public class UtilDate {
 			}
 			return inTime(dt,dts);
 		}catch(RuntimeException e1){
-			throw new RuntimeException("ÈÕÆÚ±È½ÏÒì³£!");
+			throw new RuntimeException("æ—¥æœŸæ¯”è¾ƒå¼‚å¸¸!");
 		}
 		catch (Exception e) {
-			throw new RuntimeException("×Ö·û´®ÈÕÆÚ¸ñÊ½²»¶Ô!");
+			throw new RuntimeException("å­—ç¬¦ä¸²æ—¥æœŸæ ¼å¼ä¸å¯¹!");
 		}
 	}
 	
 	/**
-	 * Í¨¹ı¼¸ÖÖÑùÊ½µÄÈÎÒâÒ»ÖÖ»ñÈ¡ÈÕÆÚ
-	 * @param stringDate ×Ö·û´®ÈÕÆÚ
-	 * @param stringsDatePattern ÈÕÆÚÑùÊ½
+	 * é€šè¿‡å‡ ç§æ ·å¼çš„ä»»æ„ä¸€ç§è·å–æ—¥æœŸ
+	 * @param stringDate å­—ç¬¦ä¸²æ—¥æœŸ
+	 * @param stringsDatePattern æ—¥æœŸæ ·å¼
 	 * @return
 	 */
 	public static Date getDatePatterns(String stringDate, String[] stringsDatePattern) {
@@ -142,21 +142,21 @@ public class UtilDate {
 				continue;
 			}
 		}
-		throw new RuntimeException("Ã»ÓĞÊÊºÏµÄ×Ö·ûÈÕÆÚ¸ñÊ½Æ¥Åä,»ñÈ¡Date¶ÔÏóÊ§°Ü!");
+		throw new RuntimeException("æ²¡æœ‰é€‚åˆçš„å­—ç¬¦æ—¥æœŸæ ¼å¼åŒ¹é…,è·å–Dateå¯¹è±¡å¤±è´¥!");
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡listÖĞ¶ÔÏóµÄ³ÉÔ±±äÁ¿variableNameµÄ×î´óÖµ(Ê±¼äÀàĞÍ)£¬list²»´æÔÚÔò·µ»Ønew Date(0)<br/>
-	 * Ö§³ÖTimestampºÍDateÁ½ÖÖÀàĞÍ.<br/>
+	 * è·å–listä¸­å¯¹è±¡çš„æˆå‘˜å˜é‡variableNameçš„æœ€å¤§å€¼(æ—¶é—´ç±»å‹)ï¼Œlistä¸å­˜åœ¨åˆ™è¿”å›new Date(0)<br/>
+	 * æ”¯æŒTimestampå’ŒDateä¸¤ç§ç±»å‹.<br/>
 	 * </ul>
 	 * @param list
 	 * @param variableName
 	 * @return 
 	 */
 	public static <T> Date getMaxDate(List<T> list, String variableName) {
-		//DateÎªTimestampµÄ¸¸ÀàĞÍ£¬ÔÚÏÂÃæÔËËãÖĞ±£Áô¡£¼æÈİÁ½ÖÖ·½Ê½µÄ±È½ÏÁËÊ±¼ä´óĞ¡£¬Ã»ÓĞÏà»¥×ªĞÍ£¬±£ÁôÁË×Ô¼ºµÄ¾«¶È¡£·µ»ØDateÀàĞÍ£¬ÈôÔÚºóĞøÖĞÒªÊ¹ÓÃTimestamp¿É×Ô¼ºÇ¿ÖÆ×ªĞÍ»òÕß×ªĞÍ¡£
+		//Dateä¸ºTimestampçš„çˆ¶ç±»å‹ï¼Œåœ¨ä¸‹é¢è¿ç®—ä¸­ä¿ç•™ã€‚å…¼å®¹ä¸¤ç§æ–¹å¼çš„æ¯”è¾ƒäº†æ—¶é—´å¤§å°ï¼Œæ²¡æœ‰ç›¸äº’è½¬å‹ï¼Œä¿ç•™äº†è‡ªå·±çš„ç²¾åº¦ã€‚è¿”å›Dateç±»å‹ï¼Œè‹¥åœ¨åç»­ä¸­è¦ä½¿ç”¨Timestampå¯è‡ªå·±å¼ºåˆ¶è½¬å‹æˆ–è€…è½¬å‹ã€‚
 		if(!UtilCollection.notNullEmpty(list))
 			return null;
 		Date date = new Date(0);
@@ -185,9 +185,9 @@ public class UtilDate {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡longÊ±¼ä
+	 * è·å–longæ—¶é—´
 	 * </ul>
 	 * @param date
 	 * @return 
@@ -201,10 +201,10 @@ public class UtilDate {
 	
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡ÏÖÔÚµÄÊ±¼äÖ®ºó¾­¹ıaddYearÄê£¬addMonthÔÂ£¬addDayÈÕºóµÄºóµÄÄÇÌìµÄtime¡£<br/>
-	 * Ìí¼ÓË³ĞòÄêÔÂÈÕ
+	 * è·å–ç°åœ¨çš„æ—¶é—´ä¹‹åç»è¿‡addYearå¹´ï¼ŒaddMonthæœˆï¼ŒaddDayæ—¥åçš„åçš„é‚£å¤©çš„timeã€‚<br/>
+	 * æ·»åŠ é¡ºåºå¹´æœˆæ—¥
 	 * </ul>
 	 * @param addYear
 	 * @param addMonth
@@ -223,16 +223,16 @@ public class UtilDate {
 		try {
 			return new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(strDate);
 		} catch (Exception e) {
-			System.out.println(String.format("[UtilDate]»ñÈ¡Ê±¼ä³ö´í¡£addYear = %s , addMonth = %s , addDay = %s , time = %s ", addYear,addMonth,addDay,time));
+			System.out.println(String.format("[UtilDate]è·å–æ—¶é—´å‡ºé”™ã€‚addYear = %s , addMonth = %s , addDay = %s , time = %s ", addYear,addMonth,addDay,time));
 		}
 		
 		return null;
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÅĞ¶ÏobjÊÇ·ñÎªÈÕÆÚ£¬null²»Ëã<br/>
+	 * åˆ¤æ–­objæ˜¯å¦ä¸ºæ—¥æœŸï¼Œnullä¸ç®—<br/>
 	 * </ul>
 	 * @param obj
 	 * @return 

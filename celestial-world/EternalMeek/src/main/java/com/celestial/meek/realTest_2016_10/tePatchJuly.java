@@ -46,7 +46,7 @@ public class tePatchJuly {
 	}
 
 	public boolean teReflectMethod1(String bool){
-		System.out.println("如花美眷,似水流年~~");
+		System.out.println("濡傝姳缇庣湻,浼兼按娴佸勾~~");
 		return "true".equals((String)bool);
 	}
 

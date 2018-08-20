@@ -1,9 +1,9 @@
 /******************************************************************
  * UtilReflect.java
  * Copyright ${year} by WZG. All Rights Reserved.
- * CreateDate£º2017Äê9ÔÂ14ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´9æœˆ14æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.agniRadiance.EzUtil;
@@ -11,15 +11,15 @@ package com.celestial.agniRadiance.EzUtil;
 import java.lang.reflect.Method;
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê9ÔÂ14ÈÕ
+ *                        ---- wangzg 2017å¹´9æœˆ14æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
  * 
  * </p>
@@ -27,18 +27,18 @@ import java.lang.reflect.Method;
 public class UtilReflect {
 	
 
-	/**==============================================·´ÉäºËĞÄ wangzg 2016Äê7ÔÂ21ÈÕ14:34:48  ¡ı==========================================================*/
+	/**==============================================åå°„æ ¸å¿ƒ wangzg 2016å¹´7æœˆ21æ—¥14:34:48  â†“==========================================================*/
 	
 
 	/**
-	 * Ö´ĞĞ·´Éä·½·¨ <br/>
-	 * @param obj ÒªÖ´ĞĞµÄ·½·¨ºÍÆä²ÎÊı ; Ô¼¶¨¸ñÊ½ : [¶ÔÏó,·½·¨Ãû,param0,param1,param2..]
-	 * @param me  ÊµÀı×ÔÉí
-	 * @return ·½·¨µ÷ÓÃ½á¹û
+	 * æ‰§è¡Œåå°„æ–¹æ³• <br/>
+	 * @param obj è¦æ‰§è¡Œçš„æ–¹æ³•å’Œå…¶å‚æ•° ; çº¦å®šæ ¼å¼ : [å¯¹è±¡,æ–¹æ³•å,param0,param1,param2..]
+	 * @param me  å®ä¾‹è‡ªèº«
+	 * @return æ–¹æ³•è°ƒç”¨ç»“æœ
 	 */
 	@SuppressWarnings("rawtypes")
 	public static Object excuteReflectObject(Object obj) throws Exception{
-		//¾ÍËãÊÇClassÒ²¿ÉÒÔÏÖ³ÉÌí¼Ó !
+		//å°±ç®—æ˜¯Classä¹Ÿå¯ä»¥ç°æˆæ·»åŠ  !
 		Object[] objs =(Object[])obj;
 		Class[] cArr = new Class[objs.length -2];
 		for(int i =0; i < objs.length -2 ; i++){
@@ -54,14 +54,14 @@ public class UtilReflect {
 		
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * **¾¿¼«µÄ·½·¨**<br/>
-	 * Ê¹ÓÃ×Ô¶¨ÒåÀàµÄ»°,»ñÈ¡·½·¨µÄÊ±ºò²»ÄÜÏòÉÏÔìĞÍ.(¾ÍËãÊÇÒÔ×ÓÀàÀ´getClass()Ò²»ñÈ¡²»µ½¸¸ÀàĞÍÎª²ÎÊıµÄ·½·¨.)<br/>
-	 * ËùÒÔĞ´ÁË,Õâ¸ö·½·¨.°Ñ²ÎÊıµÄÀà¶ÔÏó´«Èë.<br/>
+	 * **ç©¶æçš„æ–¹æ³•**<br/>
+	 * ä½¿ç”¨è‡ªå®šä¹‰ç±»çš„è¯,è·å–æ–¹æ³•çš„æ—¶å€™ä¸èƒ½å‘ä¸Šé€ å‹.(å°±ç®—æ˜¯ä»¥å­ç±»æ¥getClass()ä¹Ÿè·å–ä¸åˆ°çˆ¶ç±»å‹ä¸ºå‚æ•°çš„æ–¹æ³•.)<br/>
+	 * æ‰€ä»¥å†™äº†,è¿™ä¸ªæ–¹æ³•.æŠŠå‚æ•°çš„ç±»å¯¹è±¡ä¼ å…¥.<br/>
 	 * 
 	 * </ul>
-	 * @param obj Ô¼¶¨¸ñÊ½[¶ÔÏó,·½·¨Ãû,Class[],params[]]
+	 * @param obj çº¦å®šæ ¼å¼[å¯¹è±¡,æ–¹æ³•å,Class[],params[]]
 	 * @return
 	 * @throws Exception
 	 */
@@ -77,13 +77,13 @@ public class UtilReflect {
 		Method m = girlFriend.getClass().getDeclaredMethod(name, cArr);
 		return m.invoke(objs[0], params);
 	}
-	/**==============================================·´ÉäºËĞÄ wangzg 2016Äê7ÔÂ21ÈÕ14:34:48 ¡ü==========================================================*/
+	/**==============================================åå°„æ ¸å¿ƒ wangzg 2016å¹´7æœˆ21æ—¥14:34:48 â†‘==========================================================*/
 
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¼ÓÔØÀàqualifiedName,»ñÈ¡Ò»¸öÊµÀı.<br/>
+	 * åŠ è½½ç±»qualifiedName,è·å–ä¸€ä¸ªå®ä¾‹.<br/>
 	 * </ul>
 	 * @param qualifiedName
 	 * @return
@@ -94,16 +94,16 @@ public class UtilReflect {
 			obj = ClassFor(qualifiedName).newInstance();
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new RuntimeException("·´Éä»ñÈ¡ÊµÀıÊ§°Ü:"+qualifiedName);
+			throw new RuntimeException("åå°„è·å–å®ä¾‹å¤±è´¥:"+qualifiedName);
 		} 
 		return obj;
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¼ÓÔØÀàqualifiedName,»ñÈ¡Ò»¸öÊµÀı.<br/>
-	 * Ïë±ÈgetReflectObject,´Ë·½·¨ÔÚÄÜÊ¹ÓÃÄ¬ÈÏ¹¹Ôìº¯ÊıÊµÀı»¯Ê±,¾ÍÊ¹ÓÃÄ¬ÈÏ¹¹Ôìº¯Êı(new)<br/>
+	 * åŠ è½½ç±»qualifiedName,è·å–ä¸€ä¸ªå®ä¾‹.<br/>
+	 * æƒ³æ¯”getReflectObject,æ­¤æ–¹æ³•åœ¨èƒ½ä½¿ç”¨é»˜è®¤æ„é€ å‡½æ•°å®ä¾‹åŒ–æ—¶,å°±ä½¿ç”¨é»˜è®¤æ„é€ å‡½æ•°(new)<br/>
 	 * </ul>
 	 * @param qualifiedName
 	 * @return
@@ -127,9 +127,9 @@ public class UtilReflect {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¼ÓÔØÀà.
+	 * åŠ è½½ç±».
 	 * </ul>
 	 * @param qualifiedName
 	 */
@@ -139,7 +139,7 @@ public class UtilReflect {
 			return Class.forName(qualifiedName);
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new RuntimeException("Àà¼ÓÔØÊ§°Ü:"+qualifiedName);
+			throw new RuntimeException("ç±»åŠ è½½å¤±è´¥:"+qualifiedName);
 		}
 	}
 	

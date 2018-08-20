@@ -12,18 +12,18 @@ import com.celestial.butterflystorm.butterfly2017.mybatisHelper.depender.XMLdepe
 
 public class Util_ASOReader {
 	
-	/**ÖĞÓ¢¶ÔÕÕ×¢ÊÍ*/
+	/**ä¸­è‹±å¯¹ç…§æ³¨é‡Š*/
 	private static Map<String,String> annotionMap = new HashMap<String, String>();
 	
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ³õÊ¼»¯×¢ÊÍmap£¬µôÓÃ´Ë¹¤¾ßÀàÖ®Ç°±ØĞëÏÈ×ßÕâ²½¡£
+	 * åˆå§‹åŒ–æ³¨é‡Šmapï¼Œæ‰ç”¨æ­¤å·¥å…·ç±»ä¹‹å‰å¿…é¡»å…ˆèµ°è¿™æ­¥ã€‚
 	 * </ul>
 	 */
 	public static void init_annotionMapInfo(String mapPath) {
-		//³õÊ¼»¯×¢ÊÍĞÅÏ¢map¡£
+		//åˆå§‹åŒ–æ³¨é‡Šä¿¡æ¯mapã€‚
 		FileReader f_annotion = new FileReader(mapPath,true,"gbk");
 		while(f_annotion.hasNext()){
 			String s = f_annotion.readLine();
@@ -36,7 +36,7 @@ public class Util_ASOReader {
 
 	public static FileReader readASONoAnnotion(String path) {
 		FileReader f = new FileReader(path);
-		f = f.selectLineExcludeRegex(".*--.*");//È¥µô×¢ÊÍĞÅÏ¢
+		f = f.selectLineExcludeRegex(".*--.*");//å»æ‰æ³¨é‡Šä¿¡æ¯
 		return f;
 	}
 	
@@ -44,8 +44,8 @@ public class Util_ASOReader {
 
 	public static List<String[]> getClassPropertiesList(FileReader f) {
 		List<String[]> classList = new ArrayList<String[]>();
-		//±í×Ö¶ÎĞÅÏ¢¡¢Àà×Ö¶ÎĞÅÏ¢
-		f.setIndex(3);//Ç°Ãæ²¿·ÖÊÇĞÅÏ¢ Ö®ºó²ÅÊÇ±äÁ¿¡£
+		//è¡¨å­—æ®µä¿¡æ¯ã€ç±»å­—æ®µä¿¡æ¯
+		f.setIndex(3);//å‰é¢éƒ¨åˆ†æ˜¯ä¿¡æ¯ ä¹‹åæ‰æ˜¯å˜é‡ã€‚
 		while(f.hasNext()){
 			String s= f.readLine();
 			if("".equals(s)){
@@ -54,7 +54,7 @@ public class Util_ASOReader {
 				String[] sArr = s.split(" ");
 				String annotion = annotionMap.get(sArr[0]);
 				if(null == annotion)
-					System.out.println(sArr[0]+" È±ÉÙ×¢ÊÍ£¡");
+					System.out.println(sArr[0]+" ç¼ºå°‘æ³¨é‡Šï¼");
 				if(sArr[1].contains("int")){
 					classList.add(new String[]{sArr[0],"Integer",annotion});
 				}
@@ -66,7 +66,7 @@ public class Util_ASOReader {
 				}
 				else if(sArr[1].startsWith("ref")){
 					String[] refArr = UtilString.getLineParam(sArr[1], "ref").split(",");
-					//ÉèÖÃÒıÓÃÀàĞÍ³ÉÔ±±äÁ¿µÄÀàĞÍºÍ×¢ÊÍ¡£
+					//è®¾ç½®å¼•ç”¨ç±»å‹æˆå‘˜å˜é‡çš„ç±»å‹å’Œæ³¨é‡Šã€‚
 					String refClassName = UtilString.getStrAfterLast(refArr[1], ".");
 					if(SQLcreator.ONE_TO_MANY.equals(refArr[0])){
 						classList.add(new String[]{sArr[0],"List<" + refClassName +">",annotion });
@@ -77,16 +77,16 @@ public class Util_ASOReader {
 					
 			}
 		}
-		System.out.println("Àà³ÉÔ±±äÁ¿Êı£º"+classList.size());
+		System.out.println("ç±»æˆå‘˜å˜é‡æ•°ï¼š"+classList.size());
 		return classList;
 	}
 
 
 	public static List<String[]> getSQLPropertiesList(FileReader f) {
 		List<String[]> sqlList = new ArrayList<String[]>();
-		//±í×Ö¶ÎĞÅÏ¢¡¢Àà×Ö¶ÎĞÅÏ¢
+		//è¡¨å­—æ®µä¿¡æ¯ã€ç±»å­—æ®µä¿¡æ¯
 		int kongge = 0;
-		f.setIndex(3);//Ç°Ãæ²¿·ÖÊÇĞÅÏ¢ Ö®ºó²ÅÊÇ±äÁ¿¡£
+		f.setIndex(3);//å‰é¢éƒ¨åˆ†æ˜¯ä¿¡æ¯ ä¹‹åæ‰æ˜¯å˜é‡ã€‚
 		while(f.hasNext()){
 			
 			String s= f.readLine();
@@ -109,22 +109,22 @@ public class Util_ASOReader {
 			}
 		}
 		
-		System.out.println("SQL×Ö¶ÎÊı£º"+(sqlList.size()-kongge));
+		System.out.println("SQLå­—æ®µæ•°ï¼š"+(sqlList.size()-kongge));
 		return sqlList;
 	}
 	
 	/**
-	 * ¶ÁÈ¡asoÖĞ¶ÔÆäËû±íµÄÒıÓÃĞÅÏ¢£¬Ò»¸öÒıÓÃ·â×°³ÉÒ»¸ö×Ö·û´®£¬×é³ÉÊı×é·µ»Ø<br/>
-	 * ·â×°³ÉĞÎÈç£º<br/>
+	 * è¯»å–asoä¸­å¯¹å…¶ä»–è¡¨çš„å¼•ç”¨ä¿¡æ¯ï¼Œä¸€ä¸ªå¼•ç”¨å°è£…æˆä¸€ä¸ªå­—ç¬¦ä¸²ï¼Œç»„æˆæ•°ç»„è¿”å›<br/>
+	 * å°è£…æˆå½¢å¦‚ï¼š<br/>
 	 * strengthenKind=strengthenKind,level=level,goodslevel=goodslevel|strengthen|strengthenList|com.dn.entity.Strengthen<br/>
-	 * ĞÎÊ½¡£|·Ö¿ªµÄ4²¿·Ö·Ö±ğÎª£ºÁ¬½Ó²éÑ¯Ìõ¼ş|¹ØÁªµÄ±í|¶ÔÓ¦±íµÄ×Ö¶Î|×Ö¶ÎËù¶ÔÓ¦µÄÀà(ÄÇ¸ö±í¶ÔÓ¦µÄÀà)<br/>
-	 * @param f ¶ÁÈ¡ÁËasoÎÄ¼şµÄÎÄ¼ş¶ÁÈ¡Àà(ÒÑÎŞ×¢ÊÍĞÅÏ¢)¡£
+	 * å½¢å¼ã€‚|åˆ†å¼€çš„4éƒ¨åˆ†åˆ†åˆ«ä¸ºï¼šè¿æ¥æŸ¥è¯¢æ¡ä»¶|å…³è”çš„è¡¨|å¯¹åº”è¡¨çš„å­—æ®µ|å­—æ®µæ‰€å¯¹åº”çš„ç±»(é‚£ä¸ªè¡¨å¯¹åº”çš„ç±»)<br/>
+	 * @param f è¯»å–äº†asoæ–‡ä»¶çš„æ–‡ä»¶è¯»å–ç±»(å·²æ— æ³¨é‡Šä¿¡æ¯)ã€‚
 	 * @return
 	 */
 	public static List<String[]> createRefInfo(FileReader f) {
 		List<String[]> l = new ArrayList<String[]>();
-		//±í×Ö¶ÎĞÅÏ¢¡¢Àà×Ö¶ÎĞÅÏ¢
-		f.setIndex(3);//Ç°Ãæ²¿·ÖÊÇĞÅÏ¢ Ö®ºó²ÅÊÇ±äÁ¿¡£
+		//è¡¨å­—æ®µä¿¡æ¯ã€ç±»å­—æ®µä¿¡æ¯
+		f.setIndex(3);//å‰é¢éƒ¨åˆ†æ˜¯ä¿¡æ¯ ä¹‹åæ‰æ˜¯å˜é‡ã€‚
 		while(f.hasNext()){
 			String s= f.readLine();
 			if("".equals(s)){
@@ -138,7 +138,7 @@ public class Util_ASOReader {
 				l.add(new String[]{tableInfoArr[0],tableInfoArr[1],refProperty,refInfos[1],refInfos[0]});
 			}
 		}
-		System.out.println("ref×Ö¶ÎÊı£º"+l.size());
+		System.out.println("refå­—æ®µæ•°ï¼š"+l.size());
 		
 		return l;
 	}
@@ -146,7 +146,7 @@ public class Util_ASOReader {
 
 	public static Map<String, String> getInfoMap(FileReader f) {
 		Map<String,String> createInfoMap = new HashMap<String, String>();
-		//ÀàÃû ±íÃû daoÃûµÈĞÅÏ¢
+		//ç±»å è¡¨å daoåç­‰ä¿¡æ¯
 		String fullClassName = UtilString.getLineParam(f.readLine(0),"fullClassName");
 		String fullDaoName = UtilString.getLineParam(f.readLine(1),"fullDaoName");
 		
@@ -165,11 +165,11 @@ public class Util_ASOReader {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¸ù¾İasoÎÄ¼şÂ·¾¶»ñÈ¡Ò»¸öXMLdepender¶ÔÏó(°üº¬Æäµİ¹é½á¹¹µÄ¹ØÁª±í¡¢¹ØÁª×Ö¶ÎµÄÉèÖÃ)<br/>
+	 * æ ¹æ®asoæ–‡ä»¶è·¯å¾„è·å–ä¸€ä¸ªXMLdependerå¯¹è±¡(åŒ…å«å…¶é€’å½’ç»“æ„çš„å…³è”è¡¨ã€å…³è”å­—æ®µçš„è®¾ç½®)<br/>
 	 * </ul>
-	 * @param path asoÎÄ¼şÂ·¾¶
+	 * @param path asoæ–‡ä»¶è·¯å¾„
 	 * @return
 	 */
 	public static XMLdepender createXMLdepernder(String path) {
@@ -178,11 +178,11 @@ public class Util_ASOReader {
 		Map<String,String> m = getInfoMap(f);
 		List<String[]> sqlPropertiesList = getSQLPropertiesList(f);
 		XMLdepender xMLdepender = new XMLdepender(m.get("fullDaoName"),m.get("fullClassName"),m.get("tableName"),sqlPropertiesList);
-		//ÒıÓÃ£¡
+		//å¼•ç”¨ï¼
 		List<String[]> joinOnArr = createRefInfo(f);
 		if(joinOnArr.size() >0){
 			xMLdepender.setJoinOnArr(joinOnArr);
-			//µİ¹é¿ªÊ¼
+			//é€’å½’å¼€å§‹
 			String directory = UtilString.getStrBeforeLast(path, "/");
 			setXMLdependerMap(xMLdepender,directory);
 		}
@@ -191,15 +191,15 @@ public class Util_ASOReader {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´ÓÄ¿Â¼directoryÀïµİ¹é²éÕÒxMLdependerËùÒÀÀµµÄ±íÎÄ¼ş£¬»ñÈ¡ÒÀÀµĞÅÏ¢¡£<br/>
-	 * ÒÀÀµ²éÕÒÌõ¼şÊÇxMLdependerµÄÁ¬½Ó²éÑ¯Ìõ¼şÊı×éjoinOnArr.<br/>
-	 * ÒÀÀµ½á¹û·Åµ½<tableName,ÒÀÀµ±í±íÊ¾ÀàXMLdepender> mapÖĞ.<br/>
-	 * ÓÉÓÚÊÇµİ¹éËùÒÔ±È½ÏÖ±¹ÛµÄ´«Öµ·½Ê½²»ºÃÅª£¬Ê¹ÓÃÒıÓÃ´«µİµÄ·½Ê½½øĞĞ½á¹û¶¨Öµ.
+	 * ä»ç›®å½•directoryé‡Œé€’å½’æŸ¥æ‰¾xMLdependeræ‰€ä¾èµ–çš„è¡¨æ–‡ä»¶ï¼Œè·å–ä¾èµ–ä¿¡æ¯ã€‚<br/>
+	 * ä¾èµ–æŸ¥æ‰¾æ¡ä»¶æ˜¯xMLdependerçš„è¿æ¥æŸ¥è¯¢æ¡ä»¶æ•°ç»„joinOnArr.<br/>
+	 * ä¾èµ–ç»“æœæ”¾åˆ°<tableName,ä¾èµ–è¡¨è¡¨ç¤ºç±»XMLdepender> mapä¸­.<br/>
+	 * ç”±äºæ˜¯é€’å½’æ‰€ä»¥æ¯”è¾ƒç›´è§‚çš„ä¼ å€¼æ–¹å¼ä¸å¥½å¼„ï¼Œä½¿ç”¨å¼•ç”¨ä¼ é€’çš„æ–¹å¼è¿›è¡Œç»“æœå®šå€¼.
 	 * </ul>
-	 * @param xMLdepender ĞèÒª²éÕÒÒÀÀµµÄXMLdepender¶ÔÏó£¬ÆäjoinOnArrĞèÒÑÉèÖÃºÃ¡£
-	 * @param directory ²éÕÒÒÀÀµ¹ØÏµµÄasoÎÄ¼şÄ¿Â¼¡£
+	 * @param xMLdepender éœ€è¦æŸ¥æ‰¾ä¾èµ–çš„XMLdependerå¯¹è±¡ï¼Œå…¶joinOnArréœ€å·²è®¾ç½®å¥½ã€‚
+	 * @param directory æŸ¥æ‰¾ä¾èµ–å…³ç³»çš„asoæ–‡ä»¶ç›®å½•ã€‚
 	 */
 	private static void setXMLdependerMap(XMLdepender xMLdepender,
 			String directory) {
@@ -222,7 +222,7 @@ public class Util_ASOReader {
 		
 	}
 
-	/** xmlÄ£°åÎÄ¼şÎ»ÖÃ */
+	/** xmlæ¨¡æ¿æ–‡ä»¶ä½ç½® */
 	public static String XML_TEMPLATE_FILEPATH = "";
 
 

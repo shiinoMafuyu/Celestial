@@ -25,7 +25,7 @@ public class TestMyBatisHelper {
 	
 	@Test
 	public void _01_MyBatisHelper_normal(){
-		Util_ASOReader.init_annotionMapInfo("src/main/java/com/celestial/butterflystorm/butterfly2017/mybatisHelper/test/srcFile/ÖÐÓ¢¶ÔÕÕ.txt");
+		Util_ASOReader.init_annotionMapInfo("src/main/java/com/celestial/butterflystorm/butterfly2017/mybatisHelper/test/srcFile/ä¸­è‹±å¯¹ç…§.txt");
 		Util_ASOReader.XML_TEMPLATE_FILEPATH = "src/main/java/com/celestial/butterflystorm/butterfly2017/mybatisHelper/test/srcFile/MybatisXML_template.xml";
 		
 		String[] asoFilesPathes = new String[]{
@@ -54,7 +54,7 @@ public class TestMyBatisHelper {
 	
 	@Test
 	public void _02_MyBatisHelper_recursive(){
-		Util_ASOReader.init_annotionMapInfo("src/main/java/com/celestial/butterflystorm/butterfly2017/mybatisHelper/test/srcFile/ÖÐÓ¢¶ÔÕÕ.txt");
+		Util_ASOReader.init_annotionMapInfo("src/main/java/com/celestial/butterflystorm/butterfly2017/mybatisHelper/test/srcFile/ä¸­è‹±å¯¹ç…§.txt");
 		Util_ASOReader.XML_TEMPLATE_FILEPATH = "src/main/java/com/celestial/butterflystorm/butterfly2017/mybatisHelper/test/srcFile/MybatisXML_template.xml";
 		
 		String[] asoFilesPathes = new String[]{

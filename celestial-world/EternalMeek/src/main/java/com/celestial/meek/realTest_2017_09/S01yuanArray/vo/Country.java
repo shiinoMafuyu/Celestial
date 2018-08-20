@@ -1,23 +1,23 @@
 /******************************************************************
  * Country.java
  * Copyright 2017 by WZG. All Rights Reserved.
- * CreateDate£º2017Äê9ÔÂ13ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´9æœˆ13æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.meek.realTest_2017_09.S01yuanArray.vo;
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê9ÔÂ13ÈÕ
+ *                        ---- wangzg 2017å¹´9æœˆ13æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
  * 
  * </p>
@@ -36,9 +36,9 @@ public class Country {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡
+	 * è·å–
 	 * </ul>
 	 * @return the name
 	 */
@@ -47,9 +47,9 @@ public class Country {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡
+	 * è·å–
 	 * </ul>
 	 * @return the capital
 	 */
@@ -58,9 +58,9 @@ public class Country {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃ
+	 * è®¾ç½®
 	 * </ul>
 	 * name
 	 */
@@ -70,9 +70,9 @@ public class Country {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃ
+	 * è®¾ç½®
 	 * </ul>
 	 * capital
 	 */

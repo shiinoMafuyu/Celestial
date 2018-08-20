@@ -3,7 +3,7 @@ package com.celestial.meek.reaLTest_2017_01;
 public class createVariable {
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜Žï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>

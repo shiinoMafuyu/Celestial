@@ -16,10 +16,10 @@ import net.sf.json.JSONObject;
 public class UtilJson {
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ½«java¶ÔÏó×ªÎªjson×Ö·û´®£¬<br/>
-	 * ³ÉÔ±±äÁ¿ÏŞ»ù´¡ÀàĞÍ¡£
+	 * å°†javaå¯¹è±¡è½¬ä¸ºjsonå­—ç¬¦ä¸²ï¼Œ<br/>
+	 * æˆå‘˜å˜é‡é™åŸºç¡€ç±»å‹ã€‚
 	 * </ul>
 	 * @param obj
 	 * @return
@@ -40,9 +40,9 @@ public class UtilJson {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Ç¿Ò»¸öList<Object> ×ªÎªjsonÊı×é.
+	 * å¼ºä¸€ä¸ªList<Object> è½¬ä¸ºjsonæ•°ç»„.
 	 * </ul>
 	 * @param list
 	 * @return
@@ -58,14 +58,14 @@ public class UtilJson {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¸ù¾İjson×Ö·û´®Éú³ÉjavaÀà¡£<br/>
-	 * Ê¹ÓÃset·½·¨¸³Öµ<br/>
-	 * ³ÉÔ±±äÁ¿ÏŞ»ù´¡ÀàĞÍ¡£
+	 * æ ¹æ®jsonå­—ç¬¦ä¸²ç”Ÿæˆjavaç±»ã€‚<br/>
+	 * ä½¿ç”¨setæ–¹æ³•èµ‹å€¼<br/>
+	 * æˆå‘˜å˜é‡é™åŸºç¡€ç±»å‹ã€‚
 	 * </ul>
-	 * @param jsonStr json×Ö·û´®
-	 * @param clazz Àà
+	 * @param jsonStr jsonå­—ç¬¦ä¸²
+	 * @param clazz ç±»
 	 * @return
 	 */
 	public static <T> T stringToObject(String jsonStr, Class<T> clazz) {
@@ -77,7 +77,7 @@ public class UtilJson {
 			
 			String key=null,value=null,methodName=null;
 			
-			//±éÀújsonStrÀïµÄkey£¬ÕÒµ½clazzÀï¶ÔÓ¦µÄset·½·¨£¬·Ö±ğµ÷ÓÃ£¬¸ø¸÷ÊôĞÔ¸³ÉÏkey¶ÔÓ¦µÄÖµ¡£
+			//éå†jsonStré‡Œçš„keyï¼Œæ‰¾åˆ°clazzé‡Œå¯¹åº”çš„setæ–¹æ³•ï¼Œåˆ†åˆ«è°ƒç”¨ï¼Œç»™å„å±æ€§èµ‹ä¸Škeyå¯¹åº”çš„å€¼ã€‚
 			for(Iterator<String>  it = js.keys() ;it.hasNext();){
 				try {
 					StringBuffer sb = new StringBuffer().append("set");
@@ -104,9 +104,9 @@ public class UtilJson {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¸ù¾İÃû×ÖÕÒ·½·¨¡£
+	 * æ ¹æ®åå­—æ‰¾æ–¹æ³•ã€‚
 	 * </ul>
 	 * @param methodArr
 	 * @param methodName
@@ -122,9 +122,9 @@ public class UtilJson {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ½«map<String,List<Object>> ÀàĞÍ×ªÎªjsonÊı¾İ¡£
+	 * å°†map<String,List<Object>> ç±»å‹è½¬ä¸ºjsonæ•°æ®ã€‚
 	 * </ul>
 	 * @param map
 	 * @return
@@ -142,9 +142,9 @@ public class UtilJson {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * json×ªMap
+	 * jsonè½¬Map
 	 * </ul>
 	 * @param json
 	 * @return
@@ -161,9 +161,9 @@ public class UtilJson {
 
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * map×ªjson
+	 * mapè½¬json
 	 * </ul>
 	 * @param m
 	 * @return

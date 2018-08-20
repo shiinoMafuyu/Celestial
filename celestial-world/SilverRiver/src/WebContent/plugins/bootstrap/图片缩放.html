@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
 <!-- 
-	localhost:8080/SilverRiver/plugins/bootstrap/ͼƬ����.html
+	localhost:8080/SilverRiver/plugins/bootstrap/图片缩放.html
  -->
 <head>
 <title>boostrap</title>
-<!-- �� Bootstrap ���� CSS �ļ� -->
+<!-- 新 Bootstrap 核心 CSS 文件 -->
 <link rel="stylesheet" href="css/bootstrap.min.css">
-<!-- ��ѡ��Bootstrap�����ļ���һ�㲻�����룩 -->
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
 <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
-<!-- jQuery�ļ��������bootstrap.min.js ֮ǰ���� -->
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
 <script src="js/jquery.min.js"></script>
-<!-- ���µ� Bootstrap ���� JavaScript �ļ� -->
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="js/bootstrap.min.js"></script>
 
 <script src="js/jqthumb.js"></script>
@@ -25,11 +25,11 @@
 	{
 	    $(hotimg).jqthumb({
 	    classname      : 'jqthumb',
-	            width          : '100%',//����
-	            height         : '300px',//�߶�
-	            position       : { y: '50%', x: '50%'},//��ͼƬ���м俪ʼ��������ͼ
-	            zoom           : '1',//���ű���
-	            method         : 'auto',//�ύ���������ڲ�ͬ�������������Ĭ��Ϊ��auto��
+	            width          : '100%',//宽度
+	            height         : '300px',//高度
+	            position       : { y: '50%', x: '50%'},//从图片的中间开始产生缩略图
+	            zoom           : '1',//缩放比例
+	            method         : 'auto',//提交方法，用于不同的浏览器环境，默认为‘auto’
 	    });
 	}
 </script>
@@ -42,10 +42,10 @@
 			<div class="item active">
 				<a href="javascript:void(0)"> <img
 					src = "img/2 (2).jpg"
-					alt="ͼƬһ" onload="DrawImage(this)" /></a>
+					alt="图片一" onload="DrawImage(this)" /></a>
 				<div class="carousel-caption">
 					<h4 class="alpha">
-						<a style="color: white;" href="javascript:void(0)">ɺ��</a>
+						<a style="color: white;" href="javascript:void(0)">珊瑚</a>
 					</h4>
 				</div>
 
@@ -53,7 +53,7 @@
 			<div class="item">
 				<a href="javascript:void(0)"> <img
 					src = "img/4.jpg"
-					onload="DrawImage(this)" alt="ͼƬ��" />
+					onload="DrawImage(this)" alt="图片二" />
 				</a>
 				<div class="carousel-caption">
 					<h4 class="alpha">
@@ -64,7 +64,7 @@
 			<div class="item">
 				<a href="javascript:void(0)"> <img
 					src = "img/timg.jpg"
-					onload="DrawImage(this)" alt="ͼƬ��" />
+					onload="DrawImage(this)" alt="图片三" />
 				</a>
 				<div class="carousel-caption">
 					<h4 class="alpha">
@@ -76,16 +76,16 @@
 			<div class="item">
 				<a href="javascript:void(0)"> <img
 					src = "img/s.jpg"
-					onload="DrawImage(this)" alt="ͼƬ��" />
+					onload="DrawImage(this)" alt="图片三" />
 				</a>
 				<div class="carousel-caption">
 					<h4 class="alpha">
-						<a style="color: white;" href="javascript:void(0)">ex��ର���</a>
+						<a style="color: white;" href="javascript:void(0)">ex咖喱棒！</a>
 					</h4>
 				</div>
 			</div>
 			
-			<!-- ���ư�ť -->
+			<!-- 控制按钮 -->
 			<a class="left carousel-control" href="#carousel-example-generic"
 				role="button" data-slide="prev"> <span
 				class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -100,7 +100,7 @@
 </body>
 </html>
 <!-- 
-	˵����
-	ʹ�ã�
+	说明：
+	使用：
 		
  -->

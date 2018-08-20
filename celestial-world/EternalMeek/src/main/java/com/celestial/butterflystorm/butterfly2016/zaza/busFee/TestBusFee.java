@@ -47,41 +47,41 @@ public class TestBusFee extends TestCase {
 	
 	public void testResult(){
 		/*for(int year = 2016; year <= 2016 +50 ; year++){
-			System.out.println(year+"Äê:---------------------");
+			System.out.println(year+"å¹´:---------------------");
 			for(int month = 1 ; month <= 12 ; month++){
-				System.out.println(month + "ÔÂ : " + bf.getRecharge(year, month, 0) +"Ôª");
+				System.out.println(month + "æœˆ : " + bf.getRecharge(year, month, 0) +"å…ƒ");
 			}
 		}*/
 		for(int month = 10 ; month <= 12 ; month++){
-			System.out.println(month + "ÔÂ : " + bf.getRecharge(2016, month, 0) +"Ôª");
+			System.out.println(month + "æœˆ : " + bf.getRecharge(2016, month, 0) +"å…ƒ");
 		}
 	}
 }
 /**
 	0:
-	10ÔÂ : 42Ôª
-	11ÔÂ : 44Ôª
-	12ÔÂ : 44Ôª
+	10æœˆ : 42å…ƒ
+	11æœˆ : 44å…ƒ
+	12æœˆ : 44å…ƒ
 	
 	50:
-	10ÔÂ : 52Ôª
-	11ÔÂ : 52Ôª
-	12ÔÂ : 52Ôª
+	10æœˆ : 52å…ƒ
+	11æœˆ : 52å…ƒ
+	12æœˆ : 52å…ƒ
 	
 	60:
-	10ÔÂ : 54Ôª
-	11ÔÂ : 52Ôª
-	12ÔÂ : 54Ôª
+	10æœˆ : 54å…ƒ
+	11æœˆ : 52å…ƒ
+	12æœˆ : 54å…ƒ
 	
 	65:
-	10ÔÂ : 54Ôª
-	11ÔÂ : 54Ôª
-	12ÔÂ : 54Ôª
+	10æœˆ : 54å…ƒ
+	11æœˆ : 54å…ƒ
+	12æœˆ : 54å…ƒ
 	
 	100:
-	10ÔÂ : 62Ôª
-	11ÔÂ : 60Ôª
-	12ÔÂ : 62Ôª
+	10æœˆ : 62å…ƒ
+	11æœˆ : 60å…ƒ
+	12æœˆ : 62å…ƒ
 	
 	
  */

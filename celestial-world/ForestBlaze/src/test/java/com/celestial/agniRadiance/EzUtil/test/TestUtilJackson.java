@@ -1,9 +1,9 @@
 /******************************************************************
  * TestUtil_Jackson.java
  * Copyright 2017 by WZG. All Rights Reserved.
- * CreateDate£º2017Äê9ÔÂ7ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´9æœˆ7æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.agniRadiance.EzUtil.test;
@@ -19,15 +19,15 @@ import org.junit.Test;
 import com.celestial.agniRadiance.EzUtil.test.jackson.JacksonMapper;
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê9ÔÂ7ÈÕ
+ *                        ---- wangzg 2017å¹´9æœˆ7æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
  * 
  * </p>
@@ -37,7 +37,7 @@ public class TestUtilJackson {
 	@Test
 	public void _01_01_jacksonte() throws JsonGenerationException, JsonMappingException, IOException{
 		Person p = new Person().setName("kurise").setAge(17);
-		p.setHome(new Home().setAddress("°ëÈËÂí×ù°¢¶û·¨ĞÇ").setArea(3432432342.365));
+		p.setHome(new Home().setAddress("åŠäººé©¬åº§é˜¿å°”æ³•æ˜Ÿ").setArea(3432432342.365));
 		String s = JacksonMapper.getInstance().writeValueAsString(p);
 		
 		System.out.println(s);

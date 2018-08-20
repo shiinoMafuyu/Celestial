@@ -25,7 +25,7 @@ public class EquipmentsCombineImpl implements EquipmentsCombine {
 	protected Map<String,NumericDouble> propertyFixedPCTMap = new LinkedHashMap<String, NumericDouble>();
 	
 	public EquipmentsCombineImpl(String equipmentsPath) {
-		//-1.³õÊ¼»¯»°×°±¸
+		//-1.åˆå§‹åŒ–è¯è£…å¤‡
 		initEquipments(equipmentsPath);
 		gather();
 		System.out.println(1);
@@ -44,14 +44,14 @@ public class EquipmentsCombineImpl implements EquipmentsCombine {
 
 	private void gather() {
 		for(Equipment ei : equipmentsList){
-			//±éÀúÒ»¸ö×°±¸µÄ¹Ì¶¨°Ù·Ö±ÈÊôĞÔ
+			//éå†ä¸€ä¸ªè£…å¤‡çš„å›ºå®šç™¾åˆ†æ¯”å±æ€§
 			Map<String, NumericDouble> fixedPCTMap = ei.MapPropertyFixedPCT();
 			for(Entry<String, NumericDouble> i : fixedPCTMap.entrySet()){
 				String key = i.getKey();
 				if(PropertySpace.propertyFixedPCTMap.get(key) != null)
 					NumericDouble.put(propertyFixedPCTMap, key, i.getValue());
 			}
-			//±éÀúÒ»¸ö×°±¸µÄÊôĞÔ(Ò»¼¶ÊôĞÔ + ¶ş¼¶ÊôĞÔ)
+			//éå†ä¸€ä¸ªè£…å¤‡çš„å±æ€§(ä¸€çº§å±æ€§ + äºŒçº§å±æ€§)
 			Map<String,NumericInteger> map = ei.MapProperty();
 			for(Entry<String, NumericInteger> i : map.entrySet()){
 				String key = i.getKey();
@@ -60,7 +60,7 @@ public class EquipmentsCombineImpl implements EquipmentsCombine {
 				else if(null != PropertySpace.propertyListLV2Map.get(key))
 					NumericInteger.put(propertyLV2Map, key, i.getValue());
 			}
-			//±éÀúÒ»¸ö×°±¸µÄ³Ë»ıÊôĞÔ
+			//éå†ä¸€ä¸ªè£…å¤‡çš„ä¹˜ç§¯å±æ€§
 			Map<String,NumericDouble> mulMap = ei.MapPropertyMul();
 			for(Entry<String, NumericDouble> i : mulMap.entrySet()){
 				String key = i.getKey();

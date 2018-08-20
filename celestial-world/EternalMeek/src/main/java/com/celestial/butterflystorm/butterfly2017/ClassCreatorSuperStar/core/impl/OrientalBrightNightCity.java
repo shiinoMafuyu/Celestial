@@ -1,9 +1,9 @@
 /******************************************************************
  * CoreCreator.java
  * Copyright 2017 by WZG. All Rights Reserved.
- * CreateDate£º2017Äê6ÔÂ11ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´6æœˆ11æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.butterflystorm.butterfly2017.ClassCreatorSuperStar.core.impl;
@@ -22,15 +22,15 @@ import com.celestial.butterflystorm.butterfly2017.ClassCreatorSuperStar.core.IOr
 import com.celestial.butterflystorm.butterfly2017.ClassCreatorSuperStar.vo.AClass;
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê6ÔÂ11ÈÕ
+ *                        ---- wangzg 2017å¹´6æœˆ11æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
  * 
  * </p>
@@ -45,17 +45,17 @@ public class OrientalBrightNightCity implements IOrientalBrightNightCity{
 	private String name;
 	private String superName;
 	
-	private String classAnnotion = "Î÷·½ÊÀ½ç£¬½ü´úÀúÊ·£¬ÎªÖ¹µÄÔÆ¡£";
+	private String classAnnotion = "è¥¿æ–¹ä¸–ç•Œï¼Œè¿‘ä»£å†å²ï¼Œä¸ºæ­¢çš„äº‘ã€‚";
 	private String author = "wangzg";
 	
 	private String[] interfaces;
 	private AClass[] innerClass;
-	private String[][] variables;//String[] = [³ÉÔ±±äÁ¿Ãû£¬ÀàĞÍ£¬×¢ÊÍ¡¢È«Ãû]
+	private String[][] variables;//String[] = [æˆå‘˜å˜é‡åï¼Œç±»å‹ï¼Œæ³¨é‡Šã€å…¨å]
 	
 	IAliceWonderLand alc = new AliceWonderLand();
 	
 	/**
-	 * <b>¹¹Ôì·½·¨</b>
+	 * <b>æ„é€ æ–¹æ³•</b>
 	 * <br/>
 	 */
 	public OrientalBrightNightCity() {
@@ -75,7 +75,7 @@ public class OrientalBrightNightCity implements IOrientalBrightNightCity{
 				List<String> lx = (List<String>)UtilReflect.excuteReflectObject(new Object[]{this,ei.getValue()});
 				l.addAll(l.size() - 2,UtilNormal.table(lx));
 			} catch (Exception e) {
-				System.out.println(String.format("·½·¨:%s() Î´µ÷ÓÃ³É¹¦.", ei.getValue()));
+				System.out.println(String.format("æ–¹æ³•:%s() æœªè°ƒç”¨æˆåŠŸ.", ei.getValue()));
 				e.printStackTrace();
 			}
 		}
@@ -84,7 +84,7 @@ public class OrientalBrightNightCity implements IOrientalBrightNightCity{
 	
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>

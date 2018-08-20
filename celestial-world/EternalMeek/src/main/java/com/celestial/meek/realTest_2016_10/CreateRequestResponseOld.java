@@ -11,7 +11,7 @@ import com.celestial.agniRadiance.EzUtil.UtilString;
 public class CreateRequestResponseOld {
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -28,39 +28,39 @@ public class CreateRequestResponseOld {
 	@SuppressWarnings("unused")
 	public static void tePart2_responseOver() {
 		List<String> lx =new ArrayList<String>();
-		String[] sArr = new String[]{"CHF","CheckHistoryFlag","Double","µ±Ç°ÀúÊ·²éÑ¯±êÖ¾   0£ºµ±Ç°¼ÇÂ¼; 1: ÀúÊ·¼ÇÂ¼"};
+		String[] sArr = new String[]{"CHF","CheckHistoryFlag","Double","å½“å‰å†å²æŸ¥è¯¢æ ‡å¿—   0ï¼šå½“å‰è®°å½•; 1: å†å²è®°å½•"};
 		List<String[]> ls2 = new ArrayList<String[]>();
-		/*ls2.add(new String[]{"RETCODE","RETCODE","String","·µ»Ø´úÂë"});
-		ls2.add(new String[]{"MESSAGE","MESSAGE","String","·µ»ØĞÅÏ¢"});*/
-		ls2.add(new String[]{"U","UserID","String","ÓÃ»§id"});
-		ls2.add(new String[]{"SI","SessionID","Long","ÓÃ»§»á»°id"});
-		ls2.add(new String[]{"TTLREC","TotalRecords","Integer","×Ü¼ÇÂ¼Êı"});
-		ls2.add(new String[]{"PRI","Price","Double","×Ê½ğ×Ü¶î"});
+		/*ls2.add(new String[]{"RETCODE","RETCODE","String","è¿”å›ä»£ç "});
+		ls2.add(new String[]{"MESSAGE","MESSAGE","String","è¿”å›ä¿¡æ¯"});*/
+		ls2.add(new String[]{"U","UserID","String","ç”¨æˆ·id"});
+		ls2.add(new String[]{"SI","SessionID","Long","ç”¨æˆ·ä¼šè¯id"});
+		ls2.add(new String[]{"TTLREC","TotalRecords","Integer","æ€»è®°å½•æ•°"});
+		ls2.add(new String[]{"PRI","Price","Double","èµ„é‡‘æ€»é¢"});
 		String className ="SubOrderQueryResponseVO";
 		
 		List<String> linfo = new ArrayList<String>();
-		linfo.add("update by wangzg 2016Äê8ÔÂ3ÈÕ00:02:56");
+		linfo.add("update by wangzg 2016å¹´8æœˆ3æ—¥00:02:56");
 
 		String qualifiedName = "gnnt.MEBS.MobileServer.vo.micro.trade.TradeQueryResponseVO";
 		
 		List<String[]> lz = new ArrayList<String[]>();
-		lz.add(new String[]{"CT","CreateTime","Date","´´½¨Ê±¼ä"});
-		lz.add(new String[]{"PRI","Price","Double","¼Û¸ñ"});
-		lz.add(new String[]{"FN","FirmName","String","½»Ò×ÉÌÃû³Æ"});
+		lz.add(new String[]{"CT","CreateTime","Date","åˆ›å»ºæ—¶é—´"});
+		lz.add(new String[]{"PRI","Price","Double","ä»·æ ¼"});
+		lz.add(new String[]{"FN","FirmName","String","äº¤æ˜“å•†åç§°"});
 		
-		//²âÊÔ´´½¨ĞÅÏ¢Àà (×Ô´ø×¢ÊÍ)
+		//æµ‹è¯•åˆ›å»ºä¿¡æ¯ç±» (è‡ªå¸¦æ³¨é‡Š)
 //		lx = DBUtil2_class.create2InfoClass(ls2,className);
-		//²âÊÔ´´½¨¼¯ºÏÀà
+		//æµ‹è¯•åˆ›å»ºé›†åˆç±»
 //		lx = DBUtil2_class.create2ListClass(className);
-		//²âÊÔ´´½¨ ResponseÖĞµÄ resultListºÍÆäget set·½·¨
+		//æµ‹è¯•åˆ›å»º Responseä¸­çš„ resultListå’Œå…¶get setæ–¹æ³•
 //		lx = DBUtil2_class.create2ResultList(className);
-		//²âÊÔ´´½¨ResponseÖĞµÄ½á¹ûĞÅÏ¢Àà(×Ô´ø×¢ÊÍ)
+		//æµ‹è¯•åˆ›å»ºResponseä¸­çš„ç»“æœä¿¡æ¯ç±»(è‡ªå¸¦æ³¨é‡Š)
 //		lx = DBUtil2_class.create2ResultInfoClass(ls2,className);
-		//²âÊÔ´´½¨Response°üĞÅÏ¢
+		//æµ‹è¯•åˆ›å»ºResponseåŒ…ä¿¡æ¯
 //		lx = DBUtil2_class.createPackageInfo2(qualifiedName, ls2, null);
-		//²âÊÔ´´½¨´ø×¢ÊÍµÄResponseÀà ´´½¨µÄResponseÀà»ù±¾Ã»ÎÊÌâÁË ²»±¨´í!
+		//æµ‹è¯•åˆ›å»ºå¸¦æ³¨é‡Šçš„Responseç±» åˆ›å»ºçš„Responseç±»åŸºæœ¬æ²¡é—®é¢˜äº† ä¸æŠ¥é”™!
 //		lx = DBUtil2_class.createreResponseClass(qualifiedName,ls2,lz,linfo);
-		//ÔÙ²âÊÔÏÂrequestÀà
+		//å†æµ‹è¯•ä¸‹requestç±»
 		String qualifiedNameRequest = "gnnt.MEBS.MobileServer.vo.micro.trade.TemplateQueryRequestVO";
 		lx = CreateRequestResponseOld.createRequestClass(qualifiedNameRequest,ls2,linfo);
 		for(String si : lx){
@@ -70,14 +70,14 @@ public class CreateRequestResponseOld {
 
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨ResponseÀà(´ø×¢ÊÍ)
+	 * åˆ›å»ºResponseç±»(å¸¦æ³¨é‡Š)
 	 * </ul>
-	 * @param qualifiedName ÀàÈ«Ãû
-	 * @param ls ·µ»ØĞÅÏ¢Àà×Ö¶ÎÊı×élist
-	 * @param lz ·µ»ØĞÅÏ¢ÄÚ²¿Àà×Ö¶ÎÊı×élist
-	 * @param linfo ×¢ÊÍĞÅÏ¢
+	 * @param qualifiedName ç±»å…¨å
+	 * @param ls è¿”å›ä¿¡æ¯ç±»å­—æ®µæ•°ç»„list
+	 * @param lz è¿”å›ä¿¡æ¯å†…éƒ¨ç±»å­—æ®µæ•°ç»„list
+	 * @param linfo æ³¨é‡Šä¿¡æ¯
 	 * @return
 	 */
 	public static List<String> createreResponseClass(String qualifiedName,
@@ -86,22 +86,22 @@ public class CreateRequestResponseOld {
 		checkParamArr(ls);
 		checkParamArr(lz);
 		String className = qualifiedName.substring(qualifiedName.lastIndexOf(".")+1);
-		//1.Ìí¼ÓResponse°üĞÅÏ¢
+		//1.æ·»åŠ ResponseåŒ…ä¿¡æ¯
 		l.addAll(CreateRequestResponseOld.createPackageInfo2(qualifiedName, ls, lz));
-		//2.Ìí¼ÓResponseÀà×¢ÊÍ
+		//2.æ·»åŠ Responseç±»æ³¨é‡Š
 		l.addAll(CreateRequestResponseOld.createClassAnnotation(linfo,qualifiedName));
 		l.add("public class "+className+" extends ResponseVO{");
 		
-		//3.Ìí¼ÓresultList 
+		//3.æ·»åŠ resultList 
 		if(lz != null && lz.size() > 0){
 			l.addAll(UtilNormal.table(CreateRequestResponseOld.create2ResultList(className)));
 		}
-		//4.Ìí¼Ó½á¹ûĞÅÏ¢Àà
+		//4.æ·»åŠ ç»“æœä¿¡æ¯ç±»
 		l.addAll(UtilNormal.table(CreateRequestResponseOld.create2ResultInfoClass(ls, className)));
 		if(lz != null && lz.size() > 0){
-			//5.Ìí¼Ó²éÑ¯½á¹û¼¯ºÏÀà
+			//5.æ·»åŠ æŸ¥è¯¢ç»“æœé›†åˆç±»
 			l.addAll(UtilNormal.table(CreateRequestResponseOld.create2ListClass(className)));
-			//6.Ìí¼Ó²éÑ¯½á¹ûĞÅÏ¢ÄÚ²¿Àà
+			//6.æ·»åŠ æŸ¥è¯¢ç»“æœä¿¡æ¯å†…éƒ¨ç±»
 			l.addAll(UtilNormal.table(CreateRequestResponseOld.create2InfoClass(lz, className)));
 		}
 		l.add("");
@@ -114,10 +114,10 @@ public class CreateRequestResponseOld {
 
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨×Ô´ø×¢ÊÍµÄ½á¹ûĞÅÏ¢Àà<br/>
-	 * Ö÷ÒªĞÅÏ¢·µ»ØÓÃµÄ<br/>
+	 * åˆ›å»ºè‡ªå¸¦æ³¨é‡Šçš„ç»“æœä¿¡æ¯ç±»<br/>
+	 * ä¸»è¦ä¿¡æ¯è¿”å›ç”¨çš„<br/>
 	 * </ul>
 	 * @param ls
 	 * @param className
@@ -128,7 +128,7 @@ public class CreateRequestResponseOld {
 		List<String> l =new ArrayList<String>();
 		String head = className.substring(0, className.indexOf("ResponseVO"));
 		l.add("/**");
-		l.add(" * ·µ»Ø½á¹ûĞÅÏ¢Àà");
+		l.add(" * è¿”å›ç»“æœä¿¡æ¯ç±»");
 		l.add(" */");
 		l.add("public class "+head+"ResultVO extends ResultVO{");
 
@@ -142,9 +142,9 @@ public class CreateRequestResponseOld {
 
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Response·½·¨´´½¨ĞÅÏ¢¼¯ºÏÀà(×Ô´ø×¢ÊÍ) <br/>
+	 * Responseæ–¹æ³•åˆ›å»ºä¿¡æ¯é›†åˆç±»(è‡ªå¸¦æ³¨é‡Š) <br/>
 	 * get set RESULTLIST <br/>
 	 * </ul>
 	 * @param className
@@ -153,12 +153,12 @@ public class CreateRequestResponseOld {
 	public static List<String> create2ResultList(String className) {
 		List<String> l =new ArrayList<String>();
 		String head = getResponseVOHead(className);
-		l.add("/** ¼¯ºÏÀà */");
+		l.add("/** é›†åˆç±» */");
 		l.add("private "+head+"List RESULTLIST;");
 		l.add("");
 		l.add("/**");
 		l.add(" * ");
-		l.add(" * »ñÈ¡¼¯ºÏÀà");
+		l.add(" * è·å–é›†åˆç±»");
 		l.add(" * <br/><br/>");
 		l.add(" * @return");
 		l.add(" */");
@@ -168,7 +168,7 @@ public class CreateRequestResponseOld {
 		l.add("");
 		l.add("/**");
 		l.add(" * ");
-		l.add(" * ÉèÖÃ¼¯ºÏÀà");
+		l.add(" * è®¾ç½®é›†åˆç±»");
 		l.add(" * <br/><br/>");
 		l.add(" * @param resultList");
 		l.add(" */");
@@ -186,7 +186,7 @@ public class CreateRequestResponseOld {
 			head = className.substring(0, className.indexOf("ResponseVO"));
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new RuntimeException("ÀàÃû´íÎó: " + className);
+			throw new RuntimeException("ç±»åé”™è¯¯: " + className);
 		}
 		return head;
 	}
@@ -194,9 +194,9 @@ public class CreateRequestResponseOld {
 
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Response·½·¨´´½¨ĞÅÏ¢Àà(×Ô´ø×¢ÊÍ)<br/>
+	 * Responseæ–¹æ³•åˆ›å»ºä¿¡æ¯ç±»(è‡ªå¸¦æ³¨é‡Š)<br/>
 	 * </ul>
 	 * @param linfo
 	 * @return
@@ -205,15 +205,15 @@ public class CreateRequestResponseOld {
 		List<String> l =new ArrayList<String>();
 		String head = className.substring(0, className.indexOf("ResponseVO"));
 		l.add("/**");
-		l.add(" * ¼¯ºÏÀà");
+		l.add(" * é›†åˆç±»");
 		l.add(" */");
 		l.add("public class "+head+"List{");
-		l.add("	/** ĞÅÏ¢¼¯ºÏ */");
+		l.add("	/** ä¿¡æ¯é›†åˆ */");
 		l.add("	private List<"+head+"Obj> REC;");
 		l.add("");
 		l.add("	/**");
 		l.add("	 * ");
-		l.add("	 * »ñÈ¡ĞÅÏ¢¼¯ºÏ");
+		l.add("	 * è·å–ä¿¡æ¯é›†åˆ");
 		l.add("	 * <br/><br/>");
 		l.add("	 * @return");
 		l.add("	 */");
@@ -223,7 +223,7 @@ public class CreateRequestResponseOld {
 		l.add("");
 		l.add("	/**");
 		l.add("	 * ");
-		l.add("	 * ÉèÖÃĞÅÏ¢¼¯ºÏ");
+		l.add("	 * è®¾ç½®ä¿¡æ¯é›†åˆ");
 		l.add("	 * <br/><br/>");
 		l.add("	 * @param list");
 		l.add("	 */");
@@ -238,19 +238,19 @@ public class CreateRequestResponseOld {
 
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Response·½·¨´´½¨ĞÅÏ¢Àà(×Ô´ø×¢ÊÍ)
+	 * Responseæ–¹æ³•åˆ›å»ºä¿¡æ¯ç±»(è‡ªå¸¦æ³¨é‡Š)
 	 * </ul>
-	 * @param ls ×Ö¶ÎÊı×é
-	 * @param className ÀàÃû
+	 * @param ls å­—æ®µæ•°ç»„
+	 * @param className ç±»å
 	 * @return
 	 */
 	public static List<String> create2InfoClass(List<String[]> ls,String className) {
 		List<String> l =new ArrayList<String>();
 		String head = className.substring(0, className.indexOf("ResponseVO"));
 		l.add("/**");
-		l.add(" * ĞÅÏ¢Àà");
+		l.add(" * ä¿¡æ¯ç±»");
 		l.add(" */");
 		l.add("public class "+head+"Obj{");
 		l.addAll(UtilNormal.table(CreateRequestResponseOld.createAllVariables(ls)));
@@ -263,81 +263,81 @@ public class CreateRequestResponseOld {
 
 
 	/**
-	 * ²âÊÔ²¿·Ö1 RequestÀàÉú³ÉÍê±Ï
+	 * æµ‹è¯•éƒ¨åˆ†1 Requestç±»ç”Ÿæˆå®Œæ¯•
 	 */
 	protected static void tePart1_requestOver() {
 //		List<String> lx =new ArrayList<String>();
-//		String[] sArr = new String[]{"CHF","CheckHistoryFlag","Double","µ±Ç°ÀúÊ·²éÑ¯±êÖ¾   0£ºµ±Ç°¼ÇÂ¼; 1: ÀúÊ·¼ÇÂ¼"};
-		//²âÊÔÉú³Éget·½·¨
+//		String[] sArr = new String[]{"CHF","CheckHistoryFlag","Double","å½“å‰å†å²æŸ¥è¯¢æ ‡å¿—   0ï¼šå½“å‰è®°å½•; 1: å†å²è®°å½•"};
+		//æµ‹è¯•ç”Ÿæˆgetæ–¹æ³•
 		/*List<String> lget = DBUtil2_class.createGetMethod(sArr);
 		for(String i : lget){
 			System.out.println(i);
 		}*/
 		
-		//²âÊÔÉú³Éset·½·¨
+		//æµ‹è¯•ç”Ÿæˆsetæ–¹æ³•
 //		List<String> lset = CreateRequestResponseOld.createSetMethod(sArr);
 		/*for(String i : lset){
 			System.out.println(i);
 		}*/
 		
-		//²âÊÔÉú³Éget×¢ÊÍ
+		//æµ‹è¯•ç”Ÿæˆgetæ³¨é‡Š
 //		List<String> lannotateSet = CreateRequestResponseOld.createGetAnnotate(sArr);
 		/*for(String i : lannotateSet){
 			System.out.println(i);
 		}*/
-		//²âÊÔÉú³Éset×¢ÊÍ
+		//æµ‹è¯•ç”Ÿæˆsetæ³¨é‡Š
 //		List<String> lannotateGet = CreateRequestResponseOld.createSetAnnotate(sArr);
 		/*for(String i : lannotateGet){
 			System.out.println(i);
 		}*/
-		//²âÊÔset×¢½âºÍset·½·¨´´½¨Ğ§¹û
+		//æµ‹è¯•setæ³¨è§£å’Œsetæ–¹æ³•åˆ›å»ºæ•ˆæœ
 		/*lx.addAll(lannotateSet);
 		lx.addAll(lset);
 		for(String i : lx){
 			System.out.println(i);
 		}*/
 		
-		//²âÊÔÖ±½ÓÉú³ÉÒ»¸ösetµÄ·½·¨ºÍ×¢½â¼¯
+		//æµ‹è¯•ç›´æ¥ç”Ÿæˆä¸€ä¸ªsetçš„æ–¹æ³•å’Œæ³¨è§£é›†
 		/*lx.addAll(DBUtil2_class.createSet(sArr));
 		for(String i : lx){
 			System.out.println(i);
 		}*/
 		
-		//²âÊÔÉú³ÉËùÓĞµÄset·½·¨¼¯
+		//æµ‹è¯•ç”Ÿæˆæ‰€æœ‰çš„setæ–¹æ³•é›†
 		/*List<String[]> ls = new ArrayList<String[]>();
 		ls.add(sArr);
-		ls.add(new String[]{"RETCODE","CheckHistoryFlag","Double","µ±Ç°ÀúÊ·²éÑ¯±êÖ¾   0£ºµ±Ç°¼ÇÂ¼; 1: ÀúÊ·¼ÇÂ¼"});
-		ls.add(new String[]{"MESSAGE","CheckHistoryFlag","Double","µ±Ç°ÀúÊ·²éÑ¯±êÖ¾   0£ºµ±Ç°¼ÇÂ¼; 1: ÀúÊ·¼ÇÂ¼"});
-		ls.add(new String[]{"TTLREC","TotalRecords","Integer","×Ü¼ÇÂ¼Êı"});
-		ls.add(new String[]{"PRI","Price","Double","×Ê½ğ×Ü¶î"});
-		ls.add(new String[]{"FI","FirmID","String","½»Ò×ÉÌID"});*/
-		//²âÊÔÉú³ÉËùÓĞset·½·¨¼¯
+		ls.add(new String[]{"RETCODE","CheckHistoryFlag","Double","å½“å‰å†å²æŸ¥è¯¢æ ‡å¿—   0ï¼šå½“å‰è®°å½•; 1: å†å²è®°å½•"});
+		ls.add(new String[]{"MESSAGE","CheckHistoryFlag","Double","å½“å‰å†å²æŸ¥è¯¢æ ‡å¿—   0ï¼šå½“å‰è®°å½•; 1: å†å²è®°å½•"});
+		ls.add(new String[]{"TTLREC","TotalRecords","Integer","æ€»è®°å½•æ•°"});
+		ls.add(new String[]{"PRI","Price","Double","èµ„é‡‘æ€»é¢"});
+		ls.add(new String[]{"FI","FirmID","String","äº¤æ˜“å•†ID"});*/
+		//æµ‹è¯•ç”Ÿæˆæ‰€æœ‰setæ–¹æ³•é›†
 		/*lx = DBUtil2_class.createAllSet(ls);
 		
 		for(String s : lx){
 			System.out.println(s);
 		}*/
 		
-		//²âÊÔÉú³Éset·½·¨¼¯
+		//æµ‹è¯•ç”Ÿæˆsetæ–¹æ³•é›†
 		/*lx = DBUtil2_class.createGet(sArr);
 		for(String s : lx){
 			System.out.println(s);
 		}*/
 		
-		//²âÊÔÉú³ÉËùÓĞget·½·¨¼¯
+		//æµ‹è¯•ç”Ÿæˆæ‰€æœ‰getæ–¹æ³•é›†
 		/*List<String[]> ls2 = new ArrayList<String[]>();
-		ls2.add(new String[]{"U","UserID","String","ÓÃ»§id"});
-		ls2.add(new String[]{"SI","SessionID","Long","ÓÃ»§»á»°id"});
-		ls2.add(new String[]{"TTLREC","TotalRecords","Integer","×Ü¼ÇÂ¼Êı"});
-		ls2.add(new String[]{"PRI","Price","Double","×Ê½ğ×Ü¶î"});
-		ls2.add(new String[]{"FI","FirmID","String","½»Ò×ÉÌID"});
+		ls2.add(new String[]{"U","UserID","String","ç”¨æˆ·id"});
+		ls2.add(new String[]{"SI","SessionID","Long","ç”¨æˆ·ä¼šè¯id"});
+		ls2.add(new String[]{"TTLREC","TotalRecords","Integer","æ€»è®°å½•æ•°"});
+		ls2.add(new String[]{"PRI","Price","Double","èµ„é‡‘æ€»é¢"});
+		ls2.add(new String[]{"FI","FirmID","String","äº¤æ˜“å•†ID"});
 		lx = DBUtil2_class.createAllGet(ls2,"TemplateQueryRequestVO");
 		
 		for(String i : lx){
 			System.out.println(i);
 		}*/
 		
-		//²âÊÔÉú³É×Ö¶Î¼°Æä×¢½â
+		//æµ‹è¯•ç”Ÿæˆå­—æ®µåŠå…¶æ³¨è§£
 		/*List<String> lz = new ArrayList<String>();
 //		lz.addAll(DBUtil2_class.createVariableAnnotate(sArr));
 //		lz.addAll(DBUtil2_class.createVariable(sArr));
@@ -345,68 +345,68 @@ public class CreateRequestResponseOld {
 		for(String i : lz ){
 			System.out.println(i);
 		}*/
-		//´´½¨ËùÓĞ×Ö¶Î¼°Æä×¢½â
+		//åˆ›å»ºæ‰€æœ‰å­—æ®µåŠå…¶æ³¨è§£
 		List<String> lz = new ArrayList<String>();
 		List<String[]> ls2 = new ArrayList<String[]>();
-		ls2.add(new String[]{"RETCODE","RETCODE","String","·µ»Ø´úÂë"});
-		ls2.add(new String[]{"MESSAGE","MESSAGE","String","·µ»ØĞÅÏ¢"});
-		ls2.add(new String[]{"U","UserID","String","ÓÃ»§id"});
-		ls2.add(new String[]{"SI","SessionID","Long","ÓÃ»§»á»°id"});
-		ls2.add(new String[]{"TTLREC","TotalRecords","Integer","×Ü¼ÇÂ¼Êı"});
-		ls2.add(new String[]{"PRI","Price","Double","×Ê½ğ×Ü¶î"});
-//		ls2.add(new String[]{"FI","FirmID","String","½»Ò×ÉÌID"});
+		ls2.add(new String[]{"RETCODE","RETCODE","String","è¿”å›ä»£ç "});
+		ls2.add(new String[]{"MESSAGE","MESSAGE","String","è¿”å›ä¿¡æ¯"});
+		ls2.add(new String[]{"U","UserID","String","ç”¨æˆ·id"});
+		ls2.add(new String[]{"SI","SessionID","Long","ç”¨æˆ·ä¼šè¯id"});
+		ls2.add(new String[]{"TTLREC","TotalRecords","Integer","æ€»è®°å½•æ•°"});
+		ls2.add(new String[]{"PRI","Price","Double","èµ„é‡‘æ€»é¢"});
+//		ls2.add(new String[]{"FI","FirmID","String","äº¤æ˜“å•†ID"});
 //		lz.addAll(DBUtil2_class.createAllVariables(ls2));
 		for(String i : lz ){
 			System.out.println(i);
 		}
 		
-		//²âÊÔ´´½¨requestµÄ¹¹Ôì·½·¨
+		//æµ‹è¯•åˆ›å»ºrequestçš„æ„é€ æ–¹æ³•
 		/*List<String> lg = new ArrayList<String>();
 		lg = DBUtil2_class.createConstructor("TemplateQueryRequestVO");
 		for(String i : lg){
 			System.out.println(i);
 		}*/
 		
-		//²âÊÔÒªµ¼ÈëµÄ°üºÍËùÊôµÄ°ü
+		//æµ‹è¯•è¦å¯¼å…¥çš„åŒ…å’Œæ‰€å±çš„åŒ…
 		/*String qualifiedName = "gnnt.MEBS.MobileServer.vo.micro.trade.TemplateQueryRequestVO";
 		List<String> lb = DBUtil2_class.createPackageInfo(qualifiedName,ls2);
 		for(String i : lb){
 			System.out.println(i);
 		}*/
-		/**======================================RequestÀàok!================================================*/
-		//´´½¨requestÀà
+		/**======================================Requestç±»ok!================================================*/
+		//åˆ›å»ºrequestç±»
 		/*String qualifiedName = "gnnt.MEBS.MobileServer.vo.micro.trade.TemplateQueryRequestVO";
 		List<String> lb = DBUtil2_class.createRequestClass(qualifiedName,ls2);
 		for(String i : lb){
 			System.out.println(i);
 		}*/
-		//´´½¨ÀàµÄ×¢ÊÍ
+		//åˆ›å»ºç±»çš„æ³¨é‡Š
 		/*String qualifiedName = "gnnt.MEBS.MobileServer.vo.micro.trade.TemplateQueryRequestVO";
 		List<String> linfo = new ArrayList<String>();
-		linfo.add("update by wangzg 2016Äê8ÔÂ3ÈÕ00:02:56");
+		linfo.add("update by wangzg 2016å¹´8æœˆ3æ—¥00:02:56");
 		List<String> lb = DBUtil2_class.createClassAnnotation(linfo);
 		for(String i : lb){
 			System.out.println(i);
 		}*/
-		//´´½¨´ø×¢½âµÄrequestÀà
+		//åˆ›å»ºå¸¦æ³¨è§£çš„requestç±»
 		String qualifiedName = "gnnt.MEBS.MobileServer.vo.micro.trade.TemplateQueryRequestVO";
 		List<String> linfo = new ArrayList<String>();
-		linfo.add("update by wangzg 2016Äê8ÔÂ3ÈÕ00:02:56");
+		linfo.add("update by wangzg 2016å¹´8æœˆ3æ—¥00:02:56");
 		
 		
 		List<String> lb = CreateRequestResponseOld.createRequestClass(qualifiedName,ls2,linfo);
 		for(String i : lb){
 			System.out.println(i);
 		}
-		/**======================================RequestÀàok!================================================*/
+		/**======================================Requestç±»ok!================================================*/
 		
 	}
 
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨ÀàµÄ×¢ÊÍ
+	 * åˆ›å»ºç±»çš„æ³¨é‡Š
 	 * </ul>
 	 * @param linfo
 	 * @param qualifiedName 
@@ -416,7 +416,7 @@ public class CreateRequestResponseOld {
 		List<String> l = new ArrayList<String>();
 		l.add("/**");
 		l.add(" * ");
-		l.add(" * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> ");
+		l.add(" * <b>ä¿®æ”¹è®°å½•ï¼š</b> ");
 		l.add(" * <p>");
 		l.add(" * <li>");
 		l.add(" * ");
@@ -427,7 +427,7 @@ public class CreateRequestResponseOld {
 		l.add(" * </li>");
 		l.add(" * </p>");
 		l.add(" * ");
-		l.add(" * <b>ÀàËµÃ÷£º</b>");
+		l.add(" * <b>ç±»è¯´æ˜ï¼š</b>");
 		l.add(" * <p> ");
 		l.add(" * ");
 		l.add(" * </p>");
@@ -439,31 +439,31 @@ public class CreateRequestResponseOld {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨RequestÀà(´ø×¢ÊÍ)
+	 * åˆ›å»ºRequestç±»(å¸¦æ³¨é‡Š)
 	 * </ul>
-	 * @param qualifiedName ÀàµÄÈ«Ãû
-	 * @param varsList ±äÁ¿Êı×é
-	 * @param linfo ×¢ÊÍĞÅÏ¢
+	 * @param qualifiedName ç±»çš„å…¨å
+	 * @param varsList å˜é‡æ•°ç»„
+	 * @param linfo æ³¨é‡Šä¿¡æ¯
 	 * @return
 	 */
 	public static List<String> createRequestClass(String qualifiedName,
 			List<String[]> varsList ,List<String> linfo) {
-		//¼ìÑé²ÎÊıÊı×éÊı¾İÍêÕûĞÔ
+		//æ£€éªŒå‚æ•°æ•°ç»„æ•°æ®å®Œæ•´æ€§
 		CreateRequestResponseOld.checkParamArr(varsList);
 		List<String> l = new ArrayList<String>();
 		String className = qualifiedName.substring(qualifiedName.lastIndexOf(".")+1);
-		//1.Ìí¼Ó°üÃûÍ·²¿ĞÅÏ¢
+		//1.æ·»åŠ åŒ…åå¤´éƒ¨ä¿¡æ¯
 		l.addAll(CreateRequestResponseOld.createPackageInfo(qualifiedName, varsList));
-		//2.Ìí¼ÓÀàµÄ×¢ÊÍ
+		//2.æ·»åŠ ç±»çš„æ³¨é‡Š
 		l.addAll(CreateRequestResponseOld.createClassAnnotation(linfo,qualifiedName));
 		l.add("public class "+className+" extends RequestVO{");
-		//3.Ìí¼ÓËùÓĞ±äÁ¿¼°Æä×¢ÊÍ
+		//3.æ·»åŠ æ‰€æœ‰å˜é‡åŠå…¶æ³¨é‡Š
 		l.addAll(UtilNormal.table(CreateRequestResponseOld.createAllVariables(varsList),1));
-		//4.Ìí¼Ó¹¹Ôì·½·¨¼°Æä×¢ÊÍ
+		//4.æ·»åŠ æ„é€ æ–¹æ³•åŠå…¶æ³¨é‡Š
 		l.addAll(UtilNormal.table(CreateRequestResponseOld.createConstructor(className)));
-		//5.Ìí¼ÓËùÓĞget·½·¨¼°Æä×¢ÊÍ
+		//5.æ·»åŠ æ‰€æœ‰getæ–¹æ³•åŠå…¶æ³¨é‡Š
 		l.addAll(UtilNormal.table(CreateRequestResponseOld.createAllGet(varsList, className)));
 		l.add("}");
 		l.add("");
@@ -471,10 +471,10 @@ public class CreateRequestResponseOld {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¼ìÑé²ÎÊıÊı×éÊı¾İÍêÕûĞÔ <br/>
-	 * Èç¹ûÄãÏ²»¶¿ÉÒÔÔÚÕâÀïÌí¼ÓÆäËûÑéÖ¤~<br/>
+	 * æ£€éªŒå‚æ•°æ•°ç»„æ•°æ®å®Œæ•´æ€§ <br/>
+	 * å¦‚æœä½ å–œæ¬¢å¯ä»¥åœ¨è¿™é‡Œæ·»åŠ å…¶ä»–éªŒè¯~<br/>
 	 * </ul>
 	 * @param varsList
 	 */
@@ -484,7 +484,7 @@ public class CreateRequestResponseOld {
 			n++;
 			for(int i = 0 ;i < 4 ; i++){
 				if(null == sArr[i] || "".equals(sArr[i])){
-					StringBuffer sb =new StringBuffer("²ÎÊı µÚ " + n + "ĞĞ Êı¾İÍêÕûĞÔĞ£ÑéÊ§°Ü ,ÇëÎğÎªnullÎª¿Õ! --> ");
+					StringBuffer sb =new StringBuffer("å‚æ•° ç¬¬ " + n + "è¡Œ æ•°æ®å®Œæ•´æ€§æ ¡éªŒå¤±è´¥ ,è¯·å‹¿ä¸ºnullä¸ºç©º! --> ");
 					for(String si : sArr){
 						if(si != null)
 							sb.append(si + "   ");
@@ -500,9 +500,9 @@ public class CreateRequestResponseOld {
 
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨°üµÄĞÅÏ¢(Request)
+	 * åˆ›å»ºåŒ…çš„ä¿¡æ¯(Request)
 	 * </ul>
 	 * @param qualifiedName
 	 * @param varsList
@@ -533,13 +533,13 @@ public class CreateRequestResponseOld {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨°üµÄĞÅÏ¢(Response)
+	 * åˆ›å»ºåŒ…çš„ä¿¡æ¯(Response)
 	 * </ul>
-	 * @param qualifiedName ÀàÈ«Ãû
-	 * @param varsList Response½á¹ûĞÅÏ¢²ÎÊıÁĞ±í
-	 * @param varsListInner Response½á¹ûĞÅÏ¢ÄÚ²¿Àà²ÎÊıÁĞ±í
+	 * @param qualifiedName ç±»å…¨å
+	 * @param varsList Responseç»“æœä¿¡æ¯å‚æ•°åˆ—è¡¨
+	 * @param varsListInner Responseç»“æœä¿¡æ¯å†…éƒ¨ç±»å‚æ•°åˆ—è¡¨
 	 * @return
 	 */
 	public static List<String> createPackageInfo2(String qualifiedName, List<String[]> varsList ,List<String[]> varsListInner) {
@@ -549,13 +549,13 @@ public class CreateRequestResponseOld {
 		l.add("");
 		
 		l.add("import gnnt.MEBS.MobileServer.vo.ResponseVO;");
-		//¸ù¾İÊÇ·ñÓĞ²éÑ¯½á¹û¼¯resultListÅĞ¶ÏÊÇ·ñimport java.util.List;
+		//æ ¹æ®æ˜¯å¦æœ‰æŸ¥è¯¢ç»“æœé›†resultListåˆ¤æ–­æ˜¯å¦import java.util.List;
 		if(varsListInner != null && varsListInner.size() > 0){
 			l.add("import java.util.List;");
 		}else{
 			varsListInner = new ArrayList<String[]>();
 		}
-		//ÈÕÆÚ Date
+		//æ—¥æœŸ Date
 		if(checkContainType(varsList,"Date") || checkContainType(varsListInner,"Date")){
 			l.add("import java.util.Date;");
 			l.add("import gnnt.util.date.DateFormat;");
@@ -568,9 +568,9 @@ public class CreateRequestResponseOld {
 		return l;
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÅĞ¶ÏvarsListÊÇ·ñ°üº¬Êı×éÖĞËùº¬ÈÎÒ»ÀàĞÍ
+	 * åˆ¤æ–­varsListæ˜¯å¦åŒ…å«æ•°ç»„ä¸­æ‰€å«ä»»ä¸€ç±»å‹
 	 * </ul>
 	 * @param varsList
 	 * @param typeArr
@@ -594,11 +594,11 @@ public class CreateRequestResponseOld {
 
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÅĞ¶Ï×Ö¶ÎÊı×é¼¯ºÏÀïÊÇ·ñ°üº¬Ä³Ò»±äÁ¿
+	 * åˆ¤æ–­å­—æ®µæ•°ç»„é›†åˆé‡Œæ˜¯å¦åŒ…å«æŸä¸€å˜é‡
 	 * </ul>
-	 * @param varsList ×Ö¶ÎÊı×é¼¯ºÏ
+	 * @param varsList å­—æ®µæ•°ç»„é›†åˆ
 	 * @param type Date,Double,Integer  and so on
 	 * @return
 	 */
@@ -616,9 +616,9 @@ public class CreateRequestResponseOld {
 
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨¹¹Ôì·½·¨
+	 * åˆ›å»ºæ„é€ æ–¹æ³•
 	 * </ul>
 	 * @param string
 	 * @return
@@ -628,7 +628,7 @@ public class CreateRequestResponseOld {
 		String head = className.substring(0, className.indexOf("RequestVO"));
 		//TemplateQueryRequestVO
 		l.add("/**");
-		l.add(" * <b>¹¹Ôì·½·¨</b>");
+		l.add(" * <b>æ„é€ æ–¹æ³•</b>");
 		l.add(" * <br/>");
 		l.add(" */");
 		l.add("public "+head+"RequestVO() {");
@@ -636,7 +636,7 @@ public class CreateRequestResponseOld {
 		l.add("}");
 		l.add("");
 		l.add("/**");
-		l.add(" * <b>¹¹Ôì·½·¨</b>");
+		l.add(" * <b>æ„é€ æ–¹æ³•</b>");
 		l.add(" * <br/>");
 		l.add(" * @param userID");
 		l.add(" * @param sessionID");
@@ -651,9 +651,9 @@ public class CreateRequestResponseOld {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨ËùÓĞ×Ö¶ÎµÄ¶¨ÒåºÍ×¢½â
+	 * åˆ›å»ºæ‰€æœ‰å­—æ®µçš„å®šä¹‰å’Œæ³¨è§£
 	 * </ul>
 	 * @param ls2
 	 * @return
@@ -668,9 +668,9 @@ public class CreateRequestResponseOld {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨±äÁ¿ºÍÆä×¢½â
+	 * åˆ›å»ºå˜é‡å’Œå…¶æ³¨è§£
 	 * </ul>
 	 * @param sArr
 	 * @return
@@ -687,9 +687,9 @@ public class CreateRequestResponseOld {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨×Ö¶ÎµÄ×¢½â
+	 * åˆ›å»ºå­—æ®µçš„æ³¨è§£
 	 * </ul>
 	 * @param sArr
 	 * @return
@@ -704,9 +704,9 @@ public class CreateRequestResponseOld {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨³ÉÔ±±äÁ¿
+	 * åˆ›å»ºæˆå‘˜å˜é‡
 	 * </ul>
 	 * @param sArr
 	 * @return
@@ -720,23 +720,23 @@ public class CreateRequestResponseOld {
 
 	/**
 	 * 
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Éú³ÉÈ«²¿get·½·¨
+	 * ç”Ÿæˆå…¨éƒ¨getæ–¹æ³•
 	 * </ul>
 	 * @param ls
 	 * @return
 	 */
 	public static List<String> createAllGet(List<String[]> ls,String className) {
 		List<String> l = new ArrayList<String>();
-		//Éú³Épublic ResponseVO getResponseVO()·½·¨ ¼°Æä×¢½â
+		//ç”Ÿæˆpublic ResponseVO getResponseVO()æ–¹æ³• åŠå…¶æ³¨è§£
 		String head = className.substring(0, className.indexOf("RequestVO"));
 		l.add("@Override");
 		l.add("public ResponseVO getResponseVO() {");
 		l.add("	return new "+head+"ResponseVO();");
 		l.add("}");
 		l.add("");
-		//¸ù¾İRequestÀïÃæµÄÄÚÈİÉú³ÉÆäËûget·½·¨ºÍÆä×¢½â
+		//æ ¹æ®Requesté‡Œé¢çš„å†…å®¹ç”Ÿæˆå…¶ä»–getæ–¹æ³•å’Œå…¶æ³¨è§£
 		for(String[] sArr : ls){
 			l.addAll(CreateRequestResponseOld.createGet(sArr));
 		}
@@ -745,16 +745,16 @@ public class CreateRequestResponseOld {
 
 	/**
 	 * 
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨Get·½·¨Ìå ¼°Æä×¢ÊÍ
+	 * åˆ›å»ºGetæ–¹æ³•ä½“ åŠå…¶æ³¨é‡Š
 	 * </ul>
 	 * @param sArr
 	 * @return
 	 */
 	public static List<String> createGet(String[] sArr) {
 		List<String> l = new ArrayList<String>();
-		//Èç¹ûÊÇ@OverrideµÄover¾ÍÊÇÁË O(¡É_¡É)O¹ş¹ş~
+		//å¦‚æœæ˜¯@Overrideçš„overå°±æ˜¯äº† O(âˆ©_âˆ©)Oå“ˆå“ˆ~
 		if("SessionID".equals(sArr[1])){
 			l.add("@Override");
 			l.add("public long getSessionID() {");
@@ -776,9 +776,9 @@ public class CreateRequestResponseOld {
 
 	/**
 	 * 
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨ËùÓĞset·½·¨,¸ù¾İRESULTÀïµÄ·µ»ØÖµÀ´
+	 * åˆ›å»ºæ‰€æœ‰setæ–¹æ³•,æ ¹æ®RESULTé‡Œçš„è¿”å›å€¼æ¥
 	 * </ul>
 	 * @param ls
 	 * @return
@@ -792,16 +792,16 @@ public class CreateRequestResponseOld {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Ö±½Ó´´½¨Ò»¸öº¬ÓĞset·½·¨ºÍ×¢½âµÄset¼¯<br/>
-	 * Ã»Ê²Ã´ÓÃ´¦,ËãºÍget¶ÔÓ¦°É
+	 * ç›´æ¥åˆ›å»ºä¸€ä¸ªå«æœ‰setæ–¹æ³•å’Œæ³¨è§£çš„seté›†<br/>
+	 * æ²¡ä»€ä¹ˆç”¨å¤„,ç®—å’Œgetå¯¹åº”å§
 	 * </ul>
 	 * @param sArr
 	 * @return
 	 */
 	public static Collection<? extends String> createSet(String[] sArr) {
-		//Èç¹ûÊÇRETCODE ºÍ MESSAGEµÄ»°¾Í²»ÓÃ·µ»Ø·½·¨ÁË
+		//å¦‚æœæ˜¯RETCODE å’Œ MESSAGEçš„è¯å°±ä¸ç”¨è¿”å›æ–¹æ³•äº†
 		List<String> l = new ArrayList<String>();
 		if("RETCODE".equals(sArr[0]) || "MESSAGE".equals(sArr[0])){
 		}else{
@@ -813,9 +813,9 @@ public class CreateRequestResponseOld {
 
 	/**
 	 * 
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨set·½·¨×¢ÊÍ
+	 * åˆ›å»ºsetæ–¹æ³•æ³¨é‡Š
 	 * </ul>
 	 * @param sArr
 	 * @return
@@ -823,9 +823,9 @@ public class CreateRequestResponseOld {
 	public static List<String> createSetAnnotate(String[] sArr) {
 		List<String> l = new ArrayList<String>();
 		l.add("/**");
-		l.add(" * <b>·½·¨ËµÃ÷£º</b>");
+		l.add(" * <b>æ–¹æ³•è¯´æ˜ï¼š</b>");
 		l.add(" * <ul>");
-		l.add(" * ÉèÖÃ"+sArr[3]+"");
+		l.add(" * è®¾ç½®"+sArr[3]+"");
 		
 		l.add(" * </ul>");
 		l.add(" * @param");
@@ -835,9 +835,9 @@ public class CreateRequestResponseOld {
 
 	/**
 	 * 
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨get×¢ÊÍ
+	 * åˆ›å»ºgetæ³¨é‡Š
 	 * </ul>
 	 * @param sArr
 	 * @return
@@ -845,9 +845,9 @@ public class CreateRequestResponseOld {
 	public static List<String> createGetAnnotate(String[] sArr) {
 		List<String> l = new ArrayList<String>();
 		l.add("/**");
-		l.add(" * <b>·½·¨ËµÃ÷£º</b>");
+		l.add(" * <b>æ–¹æ³•è¯´æ˜ï¼š</b>");
 		l.add(" * <ul>");
-		l.add(" * »ñÈ¡"+sArr[3]+"");
+		l.add(" * è·å–"+sArr[3]+"");
 		
 		l.add(" * </ul>");
 		l.add(" * @return");
@@ -858,9 +858,9 @@ public class CreateRequestResponseOld {
 
 	/**
 	 * 
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Éú³Éset·½·¨
+	 * ç”Ÿæˆsetæ–¹æ³•
 	 * </ul>
 	 * @param sArr
 	 * @return
@@ -884,7 +884,7 @@ public class CreateRequestResponseOld {
 			ret = "	"+sArr[0]+" = "+param+".toString() ;";
 		}else{
 //			ret = "	"+sArr[0]+" = "+param+" ;";
-//			²»ÊÇÉÏÃæ¼¸ÖÖÇé¿öÅ×³öÔËĞĞÊ±Òì³£ ; ÒªÂïÌí¼Ó¶ÔÓ¦ÀàĞÍ;ÒªÃ´¾ÍÊÇÊı¾İÀàĞÍ´íÎó;
+//			ä¸æ˜¯ä¸Šé¢å‡ ç§æƒ…å†µæŠ›å‡ºè¿è¡Œæ—¶å¼‚å¸¸ ; è¦å˜›æ·»åŠ å¯¹åº”ç±»å‹;è¦ä¹ˆå°±æ˜¯æ•°æ®ç±»å‹é”™è¯¯;
 			throw new RuntimeException("Set Param is not Excepted!");
 		}
 		l.add(ret);
@@ -897,9 +897,9 @@ public class CreateRequestResponseOld {
 
 	/**
 	 * 
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Éú³Éget·½·¨
+	 * ç”Ÿæˆgetæ–¹æ³•
 	 * </ul>
 	 * @param sArr
 	 * @return
@@ -922,7 +922,7 @@ public class CreateRequestResponseOld {
 			ret = "	return StringUtil.strToInt("+sArr[0]+",0);";
 		}else{
 //			ret = "	return "+sArr[0]+";";
-//			²»ÊÇÉÏÃæ¼¸ÖÖÇé¿öÅ×³öÔËĞĞÊ±Òì³£ ; ÒªÂïÌí¼Ó¶ÔÓ¦ÀàĞÍ;ÒªÃ´¾ÍÊÇÊı¾İÀàĞÍ´íÎó;
+//			ä¸æ˜¯ä¸Šé¢å‡ ç§æƒ…å†µæŠ›å‡ºè¿è¡Œæ—¶å¼‚å¸¸ ; è¦å˜›æ·»åŠ å¯¹åº”ç±»å‹;è¦ä¹ˆå°±æ˜¯æ•°æ®ç±»å‹é”™è¯¯;
 			throw new RuntimeException("Set Param is not Excepted!Find Here And add Type or Check your varaible type!");
 		}
 		l.add(ret);

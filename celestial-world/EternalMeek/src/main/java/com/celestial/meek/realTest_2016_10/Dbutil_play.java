@@ -16,7 +16,7 @@ import com.celestial.agniRadiance.entity.FileReader;
 public class Dbutil_play {
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -24,23 +24,23 @@ public class Dbutil_play {
 	 * @throws FileNotFoundException 
 	 */
 	public static void main(String[] args) throws FileNotFoundException {
-//		²âÊÔÎÄ¼ş¶ÁÈ¡
+//		æµ‹è¯•æ–‡ä»¶è¯»å–
 //		teFileReader();
 		
-		/**---------task01 ¸¨ÖúĞ´RequestVO ResponseVOÀà ;½âÎöÎÄ±¾,²¢ÇÒ°ÑËûÃÇ°´ËùĞè¸ñÊ½´òÓ¡³öÀ´;------------*/
-		//½âÎöeÏÖ»õ
-		/*DBUtil3_parseTxt.paresSimpleAndShow("C:/Users/Administrator/Desktop/parese2/eÏÖ»õ.txt","",
+		/**---------task01 è¾…åŠ©å†™RequestVO ResponseVOç±» ;è§£ææ–‡æœ¬,å¹¶ä¸”æŠŠä»–ä»¬æŒ‰æ‰€éœ€æ ¼å¼æ‰“å°å‡ºæ¥;------------*/
+		//è§£æeç°è´§
+		/*DBUtil3_parseTxt.paresSimpleAndShow("C:/Users/Administrator/Desktop/parese2/eç°è´§.txt","",
 				"9. ","^[0-9]+\\.\\s{1}.*");*/
-		//½âÎö¾º¼Û
+		//è§£æç«ä»·
 		/*DBUtil3_parseTxt.paresSimpleAndShow("C:/Users/Administrator/Desktop/parese2/copyHere.txt","",
 				"17 ","^[0-9]+\\s{1}.*");*/
-		/**---------task02 ¸¨ÖúĞ´RowMapperÀà ¸ù¾İ:POÀà ------------*/
-		//Éú³ÉRowMapperµÄset·½·¨
+		/**---------task02 è¾…åŠ©å†™RowMapperç±» æ ¹æ®:POç±» ------------*/
+		//ç”ŸæˆRowMapperçš„setæ–¹æ³•
 		readFilePrintWhat("propertyPO","C:/Users/Administrator/Desktop/kimo`/f/" + "MyCmdQueryPO" 
 				+ ".java");
 		
-		/**---------task03 Éú³ÉPOÀà ¸ù¾İ:ResponseVOÀà------------*/
-		//Éú³É POÀàÏµÁĞ °ÑResponseÀà·Åµ½C:/Users/Administrator/Desktop/kimo`/PO/ÏÂ ;È«ÃûÌîÈëÏÂÃæ¾ÍĞĞ;
+		/**---------task03 ç”ŸæˆPOç±» æ ¹æ®:ResponseVOç±»------------*/
+		//ç”Ÿæˆ POç±»ç³»åˆ— æŠŠResponseç±»æ”¾åˆ°C:/Users/Administrator/Desktop/kimo`/PO/ä¸‹ ;å…¨åå¡«å…¥ä¸‹é¢å°±è¡Œ;
 		/*String filePath = "C:/Users/Administrator/Desktop/kimo`/vendo_response/MyCmdQueryResponseVO.java";
 		String className = filePath.substring(filePath.lastIndexOf("/")+1, filePath.lastIndexOf("."));
 		createPoClass(filePath,"gnnt.MEBS.MobileServer.vo.micro.trade." + className,"xxxx");*/
@@ -75,26 +75,26 @@ public class Dbutil_play {
 
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * µ÷ÓÃ·½·¨Éú³ÉVOÀà  <br/>
-	 * ÕıÈ·µÄ´ò¿ª·½Ê½: <br/>
-	 * 1)°Ñ¶ÔÓ¦µÄResponseÀà·Åµ½ C:/Users/Administrator/Desktop/kimo`/vendo_response/ ÏÂÃæ <br/>
-	 * 2)°ÑÀàµÄÈ«Ãû´«Èë  <br/>
-	 * Áí : Èç¹ûÄÚ²¿ÀàµÄÃû×Ö²»ÊÇ¹æ·¶µÄĞÎÊ½,ÇëÊÖ¶¯ÌîÈëÄÇ¸öÀàµÄÃû×Ö,¼´²ÎÊıInnerClassName <br/>
-	 * Æ½Ê±µÄ»°Ëæ±ãÌîÎŞÓ°Ïì <br/>
+	 * è°ƒç”¨æ–¹æ³•ç”ŸæˆVOç±»  <br/>
+	 * æ­£ç¡®çš„æ‰“å¼€æ–¹å¼: <br/>
+	 * 1)æŠŠå¯¹åº”çš„Responseç±»æ”¾åˆ° C:/Users/Administrator/Desktop/kimo`/vendo_response/ ä¸‹é¢ <br/>
+	 * 2)æŠŠç±»çš„å…¨åä¼ å…¥  <br/>
+	 * å¦ : å¦‚æœå†…éƒ¨ç±»çš„åå­—ä¸æ˜¯è§„èŒƒçš„å½¢å¼,è¯·æ‰‹åŠ¨å¡«å…¥é‚£ä¸ªç±»çš„åå­—,å³å‚æ•°InnerClassName <br/>
+	 * å¹³æ—¶çš„è¯éšä¾¿å¡«æ— å½±å“ <br/>
 	 * </ul>
-	 * @param qualifiedName ÀàµÄÈ«Ãû(ÒÀ¾İÎÄ¼şµÄÀàµÄÈ«Ãû)
-	 * @param InnerClassName ÄÚ²¿ÀàµÄ±¸ÓÃÃû
+	 * @param qualifiedName ç±»çš„å…¨å(ä¾æ®æ–‡ä»¶çš„ç±»çš„å…¨å)
+	 * @param InnerClassName å†…éƒ¨ç±»çš„å¤‡ç”¨å
 	 * @throws FileNotFoundException 
 	 */
 	@SuppressWarnings("unused")
 	private static void createPoClass(String filePath,String qualifiedName, String InnerClassName) throws FileNotFoundException {
 
 		String fileName = qualifiedName.substring(qualifiedName.lastIndexOf(".")+1);
-		//½âÎöÎÄ¼ş»ñÈ¡±äÁ¿Êı×é
+		//è§£ææ–‡ä»¶è·å–å˜é‡æ•°ç»„
 		List<String[]> l = voCreateHelper(filePath,InnerClassName);/**  --  2  --     */
-		//¸ù¾İ±äÁ¿Êı¾İÉú³ÉPOÀà
+		//æ ¹æ®å˜é‡æ•°æ®ç”ŸæˆPOç±»
 		
 	}
 
@@ -147,12 +147,12 @@ public class Dbutil_play {
 					
 				}
 			}
-			System.out.println("set·½·¨: " + n);
-			System.out.println("±äÁ¿: " + bl);
+			System.out.println("setæ–¹æ³•: " + n);
+			System.out.println("å˜é‡: " + bl);
 			
 			for(String si : bs){
 				if(map.get(si) != null){
-//					System.out.println("È±Ê§     -------->  " + si);
+//					System.out.println("ç¼ºå¤±     -------->  " + si);
 					System.out.println(si + "----------->" + map.get(si));
 				}
 			}
@@ -167,14 +167,14 @@ public class Dbutil_play {
 		
 	}
 
-	//Éú³É POÀàÏµÁĞ
+	//ç”Ÿæˆ POç±»ç³»åˆ—
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * °Ñ¶ÔÎÄ¼şµÄ½âÎö½á¹û·Åµ½List<String>ÖĞ <br/>
+	 * æŠŠå¯¹æ–‡ä»¶çš„è§£æç»“æœæ”¾åˆ°List<String>ä¸­ <br/>
 	 * </ul>
-	 * @param filePath ÎÄ¼şÂ·¾¶
-	 * @param bf ±¸ÓÃÀàÃû
+	 * @param filePath æ–‡ä»¶è·¯å¾„
+	 * @param bf å¤‡ç”¨ç±»å
 	 * @return
 	 */
 	public static List<String[]> voCreateHelper(String filePath,String bf) {
@@ -199,8 +199,8 @@ public class Dbutil_play {
 					
 				if(nextLineIsZhuShi){
 					zhuShi = s.substring(s.indexOf("*")+1).trim();
-					if(zhuShi.contains("ÉèÖÃ")){
-						zhuShi = zhuShi.substring(zhuShi.indexOf("ÉèÖÃ")+2);
+					if(zhuShi.contains("è®¾ç½®")){
+						zhuShi = zhuShi.substring(zhuShi.indexOf("è®¾ç½®")+2);
 					}
 					nextLineIsZhuShi = false;
 				}
@@ -210,13 +210,13 @@ public class Dbutil_play {
 				}
 				if(!flag)
 					continue;
-				//{"TotalRecords","Integer","×Ü¼ÇÂ¼Êı"}
+				//{"TotalRecords","Integer","æ€»è®°å½•æ•°"}
 				String[] temp = s.split(" ");
 				if(temp.length <3)
 					continue;
 				if(start[0].equals(temp[0]) && start[1].equals(temp[1]) && temp[2].startsWith(start[2])){
-					s0 = s.substring(s.indexOf("set") , s.indexOf("("));//·½·¨Ãû
-					String[] sArr = s.substring(s.indexOf("(")+1, s.indexOf(")")).split(" ");//ÀàĞÍ + ±äÁ¿Ãû(À¨ºÅÖĞÄÚÈİ)
+					s0 = s.substring(s.indexOf("set") , s.indexOf("("));//æ–¹æ³•å
+					String[] sArr = s.substring(s.indexOf("(")+1, s.indexOf(")")).split(" ");//ç±»å‹ + å˜é‡å(æ‹¬å·ä¸­å†…å®¹)
 					l.add(new String[]{s0.substring(s0.indexOf("set")+3),sArr[0],zhuShi});
 					
 				}
@@ -232,13 +232,13 @@ public class Dbutil_play {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¿´ÏÂÕÒµ½ÀàÁËÂğ
+	 * çœ‹ä¸‹æ‰¾åˆ°ç±»äº†å—
 	 * </ul>
-	 * @param s ÒªÑéÖ¤µÄ×Ö·û´®
-	 * @param classObj ÀàÃû
-	 * @param bf ÀàÃû±¸·İ
+	 * @param s è¦éªŒè¯çš„å­—ç¬¦ä¸²
+	 * @param classObj ç±»å
+	 * @param bf ç±»åå¤‡ä»½
 	 * @return
 	 */
 	private static boolean hasFindClass(String s, String classObj, String bf) {
@@ -269,13 +269,13 @@ public class Dbutil_play {
 
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨RowMapperÀàÊ±,ÀïÃæĞèÒªĞ©´óÁ¿setXXX(request.getParamter("XXX"))
-	 * Õâ¸ö·½·¨ÓÃÀ´»ñÈ¡ÄÇĞ©Óï¾ä<br/>
+	 * åˆ›å»ºRowMapperç±»æ—¶,é‡Œé¢éœ€è¦äº›å¤§é‡setXXX(request.getParamter("XXX"))
+	 * è¿™ä¸ªæ–¹æ³•ç”¨æ¥è·å–é‚£äº›è¯­å¥<br/>
 	 * </ul>
-	 * @param objName ÊµÀıÃû×Ö
-	 * @param filePath RequestVOÂ·¾¶
+	 * @param objName å®ä¾‹åå­—
+	 * @param filePath RequestVOè·¯å¾„
 	 */
 	public static void readFilePrintWhat(String objName, String filePath) {
 		BufferedReader br = null;

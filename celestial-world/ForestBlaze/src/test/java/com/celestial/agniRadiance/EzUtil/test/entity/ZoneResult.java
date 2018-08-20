@@ -1,23 +1,23 @@
 /******************************************************************
  * ZoneResult.java
  * Copyright 2017 by WZG. All Rights Reserved.
- * CreateDate£º2017Äê9ÔÂ7ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´9æœˆ7æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.agniRadiance.EzUtil.test.entity;
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê9ÔÂ7ÈÕ
+ *                        ---- wangzg 2017å¹´9æœˆ7æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
  * 
  * </p>
@@ -32,9 +32,9 @@ public class ZoneResult {
 	private String ispVid;
 	private String carrier;
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡
+	 * è·å–
 	 * </ul>
 	 * @return the mst
 	 */
@@ -42,9 +42,9 @@ public class ZoneResult {
 		return mst;
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡
+	 * è·å–
 	 * </ul>
 	 * @return the province
 	 */
@@ -52,9 +52,9 @@ public class ZoneResult {
 		return province;
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡
+	 * è·å–
 	 * </ul>
 	 * @return the catName
 	 */
@@ -62,9 +62,9 @@ public class ZoneResult {
 		return catName;
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡
+	 * è·å–
 	 * </ul>
 	 * @return the telString
 	 */
@@ -72,9 +72,9 @@ public class ZoneResult {
 		return telString;
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡
+	 * è·å–
 	 * </ul>
 	 * @return the areaVid
 	 */
@@ -82,9 +82,9 @@ public class ZoneResult {
 		return areaVid;
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡
+	 * è·å–
 	 * </ul>
 	 * @return the ispVid
 	 */
@@ -92,9 +92,9 @@ public class ZoneResult {
 		return ispVid;
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡
+	 * è·å–
 	 * </ul>
 	 * @return the carrier
 	 */
@@ -102,9 +102,9 @@ public class ZoneResult {
 		return carrier;
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃ
+	 * è®¾ç½®
 	 * </ul>
 	 * mst
 	 */
@@ -112,9 +112,9 @@ public class ZoneResult {
 		this.mst = mst;
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃ
+	 * è®¾ç½®
 	 * </ul>
 	 * province
 	 */
@@ -122,9 +122,9 @@ public class ZoneResult {
 		this.province = province;
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃ
+	 * è®¾ç½®
 	 * </ul>
 	 * catName
 	 */
@@ -132,9 +132,9 @@ public class ZoneResult {
 		this.catName = catName;
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃ
+	 * è®¾ç½®
 	 * </ul>
 	 * telString
 	 */
@@ -142,9 +142,9 @@ public class ZoneResult {
 		this.telString = telString;
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃ
+	 * è®¾ç½®
 	 * </ul>
 	 * areaVid
 	 */
@@ -152,9 +152,9 @@ public class ZoneResult {
 		this.areaVid = areaVid;
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃ
+	 * è®¾ç½®
 	 * </ul>
 	 * ispVid
 	 */
@@ -162,9 +162,9 @@ public class ZoneResult {
 		this.ispVid = ispVid;
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃ
+	 * è®¾ç½®
 	 * </ul>
 	 * carrier
 	 */

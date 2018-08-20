@@ -15,10 +15,10 @@ public class Game {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ½ØÖ¹Ä³ÂÖÊ±»ñÈ¡µÄ×Ü·Ö.<br/>
-	 * ×¢Òâ:Èç¹ûÎªstrike »òÕß spareµÄ»°ĞèµÈÏÂÒ»ÂÖÍê³É.<br/>
+	 * æˆªæ­¢æŸè½®æ—¶è·å–çš„æ€»åˆ†.<br/>
+	 * æ³¨æ„:å¦‚æœä¸ºstrike æˆ–è€… spareçš„è¯éœ€ç­‰ä¸‹ä¸€è½®å®Œæˆ.<br/>
 	 * </ul>
 	 * @param n
 	 * @return
@@ -33,7 +33,7 @@ public class Game {
 	
 	public int score(int n){
 		if(n>=11)
-			throw new RuntimeException("»ØºÏÊı×î´óÎª10");
+			throw new RuntimeException("å›åˆæ•°æœ€å¤§ä¸º10");
 		return roundArr[n].score(roundArr[n+1]);
 	}
 	

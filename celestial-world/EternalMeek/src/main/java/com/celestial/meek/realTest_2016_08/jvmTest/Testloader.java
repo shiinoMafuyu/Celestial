@@ -11,20 +11,20 @@ public class Testloader {
 	 */
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public static void main(String[] args) throws ClassNotFoundException ,Exception{
-		//---1---×°ÔØclassLoader
+		//---1---è£…è½½classLoader
 		MyLoader1 ml1=new MyLoader1("D:/tat");
 		Class mc=ml1.loadClass("JvmTest.MyLoader");
 		Constructor cst=mc.getConstructor(String.class);
 		Method md=mc.getMethod("loadClass", new Class[]{String.class,boolean.class});
 		Object loader=cst.newInstance("D:/tat");
-		//---1---×°ÔØclassLoader
+		//---1---è£…è½½classLoader
 		
-		//---2---×°ÔØÊµÀý
+		//---2---è£…è½½å®žä¾‹
 		Class c=(Class)md.invoke(loader, new Object[]{"te2",false});
 		Object oc=c.newInstance();
 		Method m=oc.getClass().getMethod("main", new Class[]{String[].class});
 		m.invoke(oc, new Object[]{new String[]{"xx"}});
-		//---2---×°ÔØÊµÀý
+		//---2---è£…è½½å®žä¾‹
 		
 		
 		/*MyLoader ml=new MyLoader("D:/tat");

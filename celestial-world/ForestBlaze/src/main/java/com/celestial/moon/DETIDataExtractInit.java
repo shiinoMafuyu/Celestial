@@ -20,17 +20,17 @@ import com.celestial.agniRadiance.EzUtil.UtilString;
 
 /**
  * 
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
- * ÈİÆ÷¼ÓÔØÊ±Íê±ÏÊ±£¬»ñÈ¡ÈİÆ÷ĞÅÏ¢£¬½âÎöxmlÎªÈİÆ÷ÀïÔªËØÖØĞÂ¸³Öµ Ê¾ÀıĞ´·¨<br/>
+ * å®¹å™¨åŠ è½½æ—¶å®Œæ¯•æ—¶ï¼Œè·å–å®¹å™¨ä¿¡æ¯ï¼Œè§£æxmlä¸ºå®¹å™¨é‡Œå…ƒç´ é‡æ–°èµ‹å€¼ ç¤ºä¾‹å†™æ³•<br/>
  *                        ---- wangzg 2017-5-24
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
- * ³õÊ¼»¯²éÑ¯sqlÀà¡£
+ * åˆå§‹åŒ–æŸ¥è¯¢sqlç±»ã€‚
  * </p>
  */
 public class DETIDataExtractInit extends ApplicationObjectSupport implements ApplicationListener<ContextRefreshedEvent> {
@@ -49,26 +49,26 @@ public class DETIDataExtractInit extends ApplicationObjectSupport implements App
 		try {
 			ac = getApplicationContext();
 			market = (String)ac.getBean("market");
-			//¸ù¾İÅäÖÃ¼ÓÔØ¶ÔÓ¦sql²éÑ¯ÅäÖÃÎÄ¼ş
+			//æ ¹æ®é…ç½®åŠ è½½å¯¹åº”sqlæŸ¥è¯¢é…ç½®æ–‡ä»¶
 			File f = UtilFile.loadConfigSource(market+".xml");
-			//¸ù¾İÅäÖÃÎÄ¼ş¼ÓÔØ¶ÔÓ¦µÄÊĞ³¡²éÑ¯squall
+			//æ ¹æ®é…ç½®æ–‡ä»¶åŠ è½½å¯¹åº”çš„å¸‚åœºæŸ¥è¯¢squall
 			Document document = new SAXReader().read(f);
-			//½âÎöÎªMap<String,Map<String,String>> Map<daoÃû,Map<sqlÃû,²éÑ¯sql>>µÄĞÎÊ½
+			//è§£æä¸ºMap<String,Map<String,String>> Map<daoå,Map<sqlå,æŸ¥è¯¢sql>>çš„å½¢å¼
 			Map<String,Map<String,String>> daoMap = parseSqlXml(document.getRootElement());
-			//¸ù¾İsqlMapÀïµÄdaoÃûºÍsqlÃû¶¨Î»³ÉÔ±±äÁ¿Î»ÖÃ£¬Ê¹ÓÃ·´Éä½øĞĞ¶¯Ì¬¸³Öµ¡£ÓÃ¶¨ÖÆÄÚÈİ£¬¸²¸Ç¶ÔÓ¦µÄ±ê×¼sql¡£
+			//æ ¹æ®sqlMapé‡Œçš„daoåå’Œsqlåå®šä½æˆå‘˜å˜é‡ä½ç½®ï¼Œä½¿ç”¨åå°„è¿›è¡ŒåŠ¨æ€èµ‹å€¼ã€‚ç”¨å®šåˆ¶å†…å®¹ï¼Œè¦†ç›–å¯¹åº”çš„æ ‡å‡†sqlã€‚
 			inspiritVariable(daoMap);
-			System.out.println(String.format("¼ÓÔØÅäÖÃÎÄ¼ş¡¾%s¡¿£¬×¢Èë³É¹¦£¡",market+".xml"));
+			System.out.println(String.format("åŠ è½½é…ç½®æ–‡ä»¶ã€%sã€‘ï¼Œæ³¨å…¥æˆåŠŸï¼",market+".xml"));
 		} catch (Exception e) {
-			String msg = String.format("Î´³É¹¦¼ÓÔØ¶¨ÖÆÅäÖÃĞÅÏ¢£¬Ê¹ÓÃ±ê×¼°æsql£¡\nÅäÖÃÊĞ³¡£º%1$s\n%2$s ", market,e.getStackTrace());
+			String msg = String.format("æœªæˆåŠŸåŠ è½½å®šåˆ¶é…ç½®ä¿¡æ¯ï¼Œä½¿ç”¨æ ‡å‡†ç‰ˆsqlï¼\né…ç½®å¸‚åœºï¼š%1$s\n%2$s ", market,e.getStackTrace());
 			System.out.println(msg);
 		}
 	}
 	
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¸ù¾İsqlMapÀïµÄdaoÃûºÍsqlÃû¶¨Î»³ÉÔ±±äÁ¿Î»ÖÃ£¬Ê¹ÓÃ·´Éä½øĞĞ¶¯Ì¬¸³Öµ¡£ÓÃ¶¨ÖÆÄÚÈİ£¬¸²¸Ç¶ÔÓ¦µÄ±ê×¼sql¡£<br/>
+	 * æ ¹æ®sqlMapé‡Œçš„daoåå’Œsqlåå®šä½æˆå‘˜å˜é‡ä½ç½®ï¼Œä½¿ç”¨åå°„è¿›è¡ŒåŠ¨æ€èµ‹å€¼ã€‚ç”¨å®šåˆ¶å†…å®¹ï¼Œè¦†ç›–å¯¹åº”çš„æ ‡å‡†sqlã€‚<br/>
 	 * </ul>
 	 * @param daoMap
 	 */
@@ -87,9 +87,9 @@ public class DETIDataExtractInit extends ApplicationObjectSupport implements App
 	}
 
 	 /**
-	  * <b>·½·¨ËµÃ÷£º</b>
+	  * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	  * <ul>
-	  * ¶ÔÒ»¸ödao¸³ÉÏ¶àÓĞmapÀïµÄ¼üÖµ¶Ô£¬¶ÔÓ¦µÄ³ÉÔ±±äÁ¿Öµ¡£
+	  * å¯¹ä¸€ä¸ªdaoèµ‹ä¸Šå¤šæœ‰mapé‡Œçš„é”®å€¼å¯¹ï¼Œå¯¹åº”çš„æˆå‘˜å˜é‡å€¼ã€‚
 	  * </ul>
 	  * @param dao
 	  * @param sqlMap
@@ -107,7 +107,7 @@ public class DETIDataExtractInit extends ApplicationObjectSupport implements App
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -128,7 +128,7 @@ public class DETIDataExtractInit extends ApplicationObjectSupport implements App
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>

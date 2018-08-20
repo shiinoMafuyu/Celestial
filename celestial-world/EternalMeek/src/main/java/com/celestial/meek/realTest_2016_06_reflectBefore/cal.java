@@ -16,12 +16,12 @@ public class cal {
 	}
 
 	/**
-	 * 反射方式调用方法
+	 * 鍙嶅皠鏂瑰紡璋冪敤鏂规硶
 	 * 
 	 * @throws Exception
 	 */
 	private static void te3() throws Exception {
-		String s = "void evl(){System.out.println(\"计算结果: \"+(5+6*10+21.44/5+998));}";
+		String s = "void evl(){System.out.println(\"璁＄畻缁撴灉: \"+(5+6*10+21.44/5+998));}";
 		PrintWriter pw = new PrintWriter(new OutputStreamWriter(
 				new FileOutputStream("D:/workspace/test/src/test/realTest_2016_06_20_reflectBefore/EVA.java"),
 				"gbk"), false);

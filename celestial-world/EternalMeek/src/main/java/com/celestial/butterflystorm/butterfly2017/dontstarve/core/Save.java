@@ -29,8 +29,8 @@ public class Save {
 	
 	
 	/**
-	 * ¸ù¾ÝÅäÖÃÐÅÏ¢½øÐÐ±¸·Ý²Ù×÷
-	 * @param configVO ÅäÖÃÐÅÏ¢vo
+	 * æ ¹æ®é…ç½®ä¿¡æ¯è¿›è¡Œå¤‡ä»½æ“ä½œ
+	 * @param configVO é…ç½®ä¿¡æ¯vo
 	 */
 	public Save(ConfigVO configVO) {
 		interval = configVO.getInterval();
@@ -44,7 +44,7 @@ public class Save {
 	public void start() {
 		
 		if(!new File(srcPath).exists()){
-			System.out.println("Ö¸¶¨Ô´ÎÄ¼þÂ·¾¶²»´æÔÚ¡£srcPath£º" + srcPath);
+			System.out.println("æŒ‡å®šæºæ–‡ä»¶è·¯å¾„ä¸å­˜åœ¨ã€‚srcPathï¼š" + srcPath);
 			return;
 		}
 			
@@ -77,7 +77,7 @@ public class Save {
 			@Override
 			public void run() {
 				
-				//»ñÈ¡Òª¿½±´µÄÎÄ¼þÁÐ±í
+				//èŽ·å–è¦æ‹·è´çš„æ–‡ä»¶åˆ—è¡¨
 				File srcFile = new File(srcPath);
 				File[] files = new File[]{srcFile};
 				if(srcFile.isDirectory()){
@@ -86,14 +86,14 @@ public class Save {
 				}
 				
 				String fiDesDirectory = desPath+"/"+sm.format(new Date());
-				//¿½±´ÎÄ¼þ
+				//æ‹·è´æ–‡ä»¶
 				for(File fi : files){
 					String fiSrcPath = UtilString.fmtPathStr(fi.getAbsolutePath());
 					String fileName = UtilString.getStrAfterLast(fiSrcPath, "/");
 					String fiDesPath = fiDesDirectory + "/" + fileName;
 					
 					UtilFile.copyByCmdDRS(new File(fiSrcPath), new File(fiDesPath));
-					System.out.println(String.format("¿½±´ÎÄ¼þ£º\n		%s\n---->%s", fiSrcPath,fiDesPath));
+					System.out.println(String.format("æ‹·è´æ–‡ä»¶ï¼š\n		%s\n---->%s", fiSrcPath,fiDesPath));
 				}
 				
 				
@@ -127,7 +127,7 @@ public class Save {
 			return;
 		for(int i =0;i< fArr.length - least;i++){
 			UtilFile.deleteFile(fArr[i]);
-			System.out.println("É¾³ýÎÄ¼þ:" + fArr[i].getName());
+			System.out.println("åˆ é™¤æ–‡ä»¶:" + fArr[i].getName());
 		}
 			
 			

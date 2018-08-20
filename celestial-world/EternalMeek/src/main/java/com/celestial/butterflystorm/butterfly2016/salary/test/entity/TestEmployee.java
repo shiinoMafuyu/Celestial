@@ -16,8 +16,8 @@ public class TestEmployee extends TestCase {
 	}
 	
 	public void testStructor() {
-		String name = "Î¢É³",age = "998",gender = "0",salary = "24000",union = "»Ê¼Òµ³,¿Û·Ñµ³,Ãñ½øµ³";
-//		Tag t = new Tag("<Employee><name></name><age>998</age><gender>0</gender><salary>24000</salary><union>»Ê¼Òµ³,¿Û·Ñµ³,Ãñ½øµ³</union></Employee>");
+		String name = "å¾®æ²™",age = "998",gender = "0",salary = "24000",union = "çš‡å®¶å…š,æ‰£è´¹å…š,æ°‘è¿›å…š";
+//		Tag t = new Tag("<Employee><name></name><age>998</age><gender>0</gender><salary>24000</salary><union>çš‡å®¶å…š,æ‰£è´¹å…š,æ°‘è¿›å…š</union></Employee>");
 		Tag t = new Tag("<Employee><name>"+name+"</name><age>"+age+"</age><gender>"+gender+"</gender><salary>"+salary+"</salary><union>"+union+"</union></Employee>");
 		Employee e = new EmployeeFixed(t);
 		assertEquals(name, e.getName());

@@ -14,7 +14,7 @@ import com.celestial.agniRadiance.EzUtil.UtilString;
 public class DBUtil3_parseTxt {
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -31,14 +31,14 @@ public class DBUtil3_parseTxt {
 	
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¼òµ¥(Õæ)½âÎöÎÄ±¾<br/>
-	 * andÕ¹Ê¾ĞÅÏ¢~ÕâÑù¿½¹ıÈ¥¾ÍĞĞÀ²
+	 * ç®€å•(çœŸ)è§£ææ–‡æœ¬<br/>
+	 * andå±•ç¤ºä¿¡æ¯~è¿™æ ·æ‹·è¿‡å»å°±è¡Œå•¦
 	 * </ul>
-	 * @param filePath ÎÄ¼şÎ»ÖÃ
-	 * @param startFlag ¿ªÊ¼²¿·Ö
-	 * @param showPart ÒªÕ¹Ê¾µÄ²¿·Ö
+	 * @param filePath æ–‡ä»¶ä½ç½®
+	 * @param startFlag å¼€å§‹éƒ¨åˆ†
+	 * @param showPart è¦å±•ç¤ºçš„éƒ¨åˆ†
 	 */
 	public static void paresSimpleAndShow(String filePath, String startFlag,
 			String showPart,String titleRegex) {
@@ -47,17 +47,17 @@ public class DBUtil3_parseTxt {
 
 	/**
 	 * 
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Õ¹Ê¾½âÎö´¦ÀíºÃÁËµÄĞÅÏ¢~<br/>
-	 * Ö÷ÒªÊÇ´òÓ¡³öÀ´,¸´ÖÆÕ³ÌùÓÃµÄ<br/>
-	 * ÓÃÓÚcopy~ 
+	 * å±•ç¤ºè§£æå¤„ç†å¥½äº†çš„ä¿¡æ¯~<br/>
+	 * ä¸»è¦æ˜¯æ‰“å°å‡ºæ¥,å¤åˆ¶ç²˜è´´ç”¨çš„<br/>
+	 * ç”¨äºcopy~ 
 	 * </ul>
 	 * @param lm
 	 * @param part
 	 */
 	public static void print(List<List<Object>> lm, String part) {
-		//{"SI","SessionID","Long","ÓÃ»§»á»°id"},
+		//{"SI","SessionID","Long","ç”¨æˆ·ä¼šè¯id"},
 		String[] sArr = null;
 		String st = null;
 		for(List<Object> i : lm){
@@ -79,13 +79,13 @@ public class DBUtil3_parseTxt {
 
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ±éÀúlpÖĞµÄÃ¿Ò»¸öList<String><br/>
-	 * Èç¹û¸ÃList<String>ÖĞµÄÒ»¸öStringÒ»ĞĞº¬ÓĞÍêÕûµÄ±êÇ©¿ªÍ·ºÍ½áÎ²,Ôò½«Ö®×ªÎª³¤¶ÈÎª4µÄ×Ö·û´®Êı×é´æÈëÒ»¸öList<Object>ÖĞ,·ñÔòÉáÆú<br/>
-	 * ·µ»Ø½á¹ûÊµÎªList<List<String[]>>ĞÎÊ½<br/>
+	 * éå†lpä¸­çš„æ¯ä¸€ä¸ªList<String><br/>
+	 * å¦‚æœè¯¥List<String>ä¸­çš„ä¸€ä¸ªStringä¸€è¡Œå«æœ‰å®Œæ•´çš„æ ‡ç­¾å¼€å¤´å’Œç»“å°¾,åˆ™å°†ä¹‹è½¬ä¸ºé•¿åº¦ä¸º4çš„å­—ç¬¦ä¸²æ•°ç»„å­˜å…¥ä¸€ä¸ªList<Object>ä¸­,å¦åˆ™èˆå¼ƒ<br/>
+	 * è¿”å›ç»“æœå®ä¸ºList<List<String[]>>å½¢å¼<br/>
 	 * </ul>
-	 * @param »¹ÓĞÍêÕûxml±êÇ©µÄĞèÒª½âÎö³öÀ´µÄList<String>µÄ¼¯ºÏ
+	 * @param è¿˜æœ‰å®Œæ•´xmlæ ‡ç­¾çš„éœ€è¦è§£æå‡ºæ¥çš„List<String>çš„é›†åˆ
 	 * @return
 	 */
 	public static List<List<Object>> gentleParse(
@@ -110,16 +110,16 @@ public class DBUtil3_parseTxt {
 
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´«ÈëÒ»ĞĞº¬ÓĞÍêÕû±êÇ©µÄ×Ö·û´®<UI>ÓÃ»§Ãû</UI>UserID,°ÑËü·â×°³ÉÒ»¸öÊı×é·µ»Ø<br/>
-	 * ĞÎÊ½{"UI","UserID","","ÓÃ»§Ãû"}<br/>
+	 * ä¼ å…¥ä¸€è¡Œå«æœ‰å®Œæ•´æ ‡ç­¾çš„å­—ç¬¦ä¸²<UI>ç”¨æˆ·å</UI>UserID,æŠŠå®ƒå°è£…æˆä¸€ä¸ªæ•°ç»„è¿”å›<br/>
+	 * å½¢å¼{"UI","UserID","","ç”¨æˆ·å"}<br/>
 	 * </ul>
 	 * @param line
 	 * @return
 	 */
 	private static String[] getArr(String line , String tag) {
-		//{"SI","SessionID","Long","ÓÃ»§»á»°id"},
+		//{"SI","SessionID","Long","ç”¨æˆ·ä¼šè¯id"},
 		String[] sArr = new String[4];
 		sArr[0] = tag ;
 		String tagStart = "<" + tag + ">";
@@ -132,9 +132,9 @@ public class DBUtil3_parseTxt {
 
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´«ÈëÒ»ĞĞ×Ö·û´®,Èç¹û¸ÃĞĞº¬ÓĞ<UI></UI>ÕâÑù³É¶ÔµÄ±êÇ©·µ»Ø±êÇ©ÃûUI;<br/>
+	 * ä¼ å…¥ä¸€è¡Œå­—ç¬¦ä¸²,å¦‚æœè¯¥è¡Œå«æœ‰<UI></UI>è¿™æ ·æˆå¯¹çš„æ ‡ç­¾è¿”å›æ ‡ç­¾åUI;<br/>
 	 * </ul>
 	 * @param si
 	 * @return
@@ -152,14 +152,14 @@ public class DBUtil3_parseTxt {
 	static Map<String,List<String>> mps = new HashMap<String, List<String>>();
 	static List<List<String>> lps = new ArrayList<List<String>>();
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ½âÎöfilePathÖ¸ÏòµÄÎÄ¼ş,°Ñ´ÓµÚÁãĞĞ¿ªÊ¼µÄÄÚÈİ,ÒÔtitleRegexÖ¸Ê¾µÄ±êÌâ·Ö¿ª<br/>
-	 * ·ÅÈëList<String>ÖĞ,ÔÙ°ÑÕâĞ©List<String>·ÅÈëÒ»¸ö¸¸ListÖĞ·µ»Ø<br/>
+	 * è§£æfilePathæŒ‡å‘çš„æ–‡ä»¶,æŠŠä»ç¬¬é›¶è¡Œå¼€å§‹çš„å†…å®¹,ä»¥titleRegexæŒ‡ç¤ºçš„æ ‡é¢˜åˆ†å¼€<br/>
+	 * æ”¾å…¥List<String>ä¸­,å†æŠŠè¿™äº›List<String>æ”¾å…¥ä¸€ä¸ªçˆ¶Listä¸­è¿”å›<br/>
 	 * 
 	 * </ul>
-	 * @param filePath ÎÄ¼şÂ·¾¶
-	 * @param titleRegex ±êÌâĞÎÊ½ÕıÔòÊ½
+	 * @param filePath æ–‡ä»¶è·¯å¾„
+	 * @param titleRegex æ ‡é¢˜å½¢å¼æ­£åˆ™å¼
 	 * @return
 	 */
 	public static List<List<String>> getTxtList(String filePath, String titleRegex) {
@@ -167,15 +167,15 @@ public class DBUtil3_parseTxt {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ½âÎöfilePathÖ¸ÏòµÄÎÄ¼ş,°Ñ´ÓflagString¿ªÊ¼ºóµÄÄÚÈİ,ÒÔtitleRegexÖ¸Ê¾µÄ±êÌâ·Ö¿ª<br/>
-	 * ·ÅÈëList<String>ÖĞ,ÔÙ°ÑÕâĞ©List<String>·ÅÈëÒ»¸ö¸¸ListÖĞ·µ»Ø<br/>
+	 * è§£æfilePathæŒ‡å‘çš„æ–‡ä»¶,æŠŠä»flagStringå¼€å§‹åçš„å†…å®¹,ä»¥titleRegexæŒ‡ç¤ºçš„æ ‡é¢˜åˆ†å¼€<br/>
+	 * æ”¾å…¥List<String>ä¸­,å†æŠŠè¿™äº›List<String>æ”¾å…¥ä¸€ä¸ªçˆ¶Listä¸­è¿”å›<br/>
 	 * 
 	 * </ul>
-	 * @param filePath ÎÄ¼şÂ·¾¶
-	 * @param flagString ¿ªÊ¼Î»ÖÃ
-	 * @param titleRegex ±êÌâĞÎÊ½ÕıÔòÊ½
+	 * @param filePath æ–‡ä»¶è·¯å¾„
+	 * @param flagString å¼€å§‹ä½ç½®
+	 * @param titleRegex æ ‡é¢˜å½¢å¼æ­£åˆ™å¼
 	 * @return
 	 */
 	@SuppressWarnings("resource")
@@ -202,7 +202,7 @@ public class DBUtil3_parseTxt {
 			}
 		} catch (Exception e) {
 			UtilFile.close(br);
-			throw new RuntimeException("ÎÄ¼ş¶ÁÈ¡Á÷´íÎó~");
+			throw new RuntimeException("æ–‡ä»¶è¯»å–æµé”™è¯¯~");
 		}
 		
 		return l;
@@ -213,11 +213,11 @@ public class DBUtil3_parseTxt {
 
 	
 	/**===================================================================================================
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¼ì²é±êÇ©ÍêÕûĞÔ<br/>
-	 * Ò»¸ö±êÇ©µÄ¿ªÊ¼<TName>»ò½áÊø</TName>Ö»ÄÜÔÚÒ»ĞĞ<br/>
-	 * Ö§³Ö<TName />ĞÎÊ½<br/>
+	 * æ£€æŸ¥æ ‡ç­¾å®Œæ•´æ€§<br/>
+	 * ä¸€ä¸ªæ ‡ç­¾çš„å¼€å§‹<TName>æˆ–ç»“æŸ</TName>åªèƒ½åœ¨ä¸€è¡Œ<br/>
+	 * æ”¯æŒ<TName />å½¢å¼<br/>
 	 * </ul>
 	 * @param txtString
 	 * @param tag 
@@ -231,9 +231,9 @@ public class DBUtil3_parseTxt {
 	}*/
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * µİ¹é¼ì²é
+	 * é€’å½’æ£€æŸ¥
 	 * </ul>
 	 * @param txtString
 	 * @param tagStart
@@ -243,7 +243,7 @@ public class DBUtil3_parseTxt {
 /*	private static String matchAndReduce(String txtString, String tagStart,
 			String tagEnd) {
 		if(txtString.contains(tagStart)){
-			//<FBACALL><ff/>POLICE<MEBS_MOBILE ref="ÕÒ²»µ½ÒıÓÃ" sub="µç»°ºÅÂë" ><REQ ref="qqq" sub=-"ppp"><I sub="Information" type="String">ĞÅÏ¢</I><FI sub="FirmID" type="String" >½»Ò×ÉÌID</FI><PRI sub="Price" type="Double">¼Û¸ñ</PRI></REQ></MEBS_MOBILE>ooooooooooooooo
+			//<FBACALL><ff/>POLICE<MEBS_MOBILE ref="æ‰¾ä¸åˆ°å¼•ç”¨" sub="ç”µè¯å·ç " ><REQ ref="qqq" sub=-"ppp"><I sub="Information" type="String">ä¿¡æ¯</I><FI sub="FirmID" type="String" >äº¤æ˜“å•†ID</FI><PRI sub="Price" type="Double">ä»·æ ¼</PRI></REQ></MEBS_MOBILE>ooooooooooooooo
 			String s = "";
 			int index1 = txtString.lastIndexOf(tagStart);
 //			int index2 = txtString.
@@ -252,11 +252,11 @@ public class DBUtil3_parseTxt {
 	}*/
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * µ±Ê±ÊÇÓÃÀ´½âÎöÎÄ±¾»ñÈ¡Ã¿¸öÒÔn.x¿ªÍ·µÄ±êÌâµÄºÍ<MEBS_MOBILE></MEBS_MOBILE>Ö®¼äµÄÄÚÈİµÄ<br/>
-	 * ¿ÉÒÔËµÏÖÔÚÃ»ÓĞÈÎºÎÂÑÓÃ<br/>
-	 * Õâ¸ö¹¦ÄÜ²»ÊÇ¿ÉÍ¨ÓÃĞÔµÄÔªËØÆ´½ÓÆğÀ´µÄ,ÓÃÒ»´Î¾Í¶ªÁËµÄÀ¬»ø<br/>
+	 * å½“æ—¶æ˜¯ç”¨æ¥è§£ææ–‡æœ¬è·å–æ¯ä¸ªä»¥n.xå¼€å¤´çš„æ ‡é¢˜çš„å’Œ<MEBS_MOBILE></MEBS_MOBILE>ä¹‹é—´çš„å†…å®¹çš„<br/>
+	 * å¯ä»¥è¯´ç°åœ¨æ²¡æœ‰ä»»ä½•åµç”¨<br/>
+	 * è¿™ä¸ªåŠŸèƒ½ä¸æ˜¯å¯é€šç”¨æ€§çš„å…ƒç´ æ‹¼æ¥èµ·æ¥çš„,ç”¨ä¸€æ¬¡å°±ä¸¢äº†çš„åƒåœ¾<br/>
 	 * </ul>
 	 * @throws Exception
 	 */
@@ -265,12 +265,12 @@ public class DBUtil3_parseTxt {
 		String[] filterString =new String[]{"?xml","version"};
 		
 		List<String[]> ls2 = new ArrayList<String[]>();
-		ls2.add(new String[]{"U","UserID","String","ÓÃ»§id"});
-		//×ÔÓÉÈ¡µÃ ÊôĞÔ  ²»¶Ï´«Èë×Ö·û´®
+		ls2.add(new String[]{"U","UserID","String","ç”¨æˆ·id"});
+		//è‡ªç”±å–å¾— å±æ€§  ä¸æ–­ä¼ å…¥å­—ç¬¦ä¸²
 		
-		PrintWriter pw = new PrintWriter(new OutputStreamWriter(new FileOutputStream(new File("F:/ÔÆÅÌÍ¬²½ÎÄ¼ş¼Ğ/ÔÆÅÌÍ¬²½ÎÄ¼ş¼Ğ/00sentence/parse/r1.txt"))));
+		PrintWriter pw = new PrintWriter(new OutputStreamWriter(new FileOutputStream(new File("F:/äº‘ç›˜åŒæ­¥æ–‡ä»¶å¤¹/äº‘ç›˜åŒæ­¥æ–‡ä»¶å¤¹/00sentence/parse/r1.txt"))));
 		
-		BufferedReader br =new BufferedReader(new InputStreamReader(new FileInputStream("F:/ÔÆÅÌÍ¬²½ÎÄ¼ş¼Ğ/ÔÆÅÌÍ¬²½ÎÄ¼ş¼Ğ/00sentence/parse/parse3.txt"),"gbk"));
+		BufferedReader br =new BufferedReader(new InputStreamReader(new FileInputStream("F:/äº‘ç›˜åŒæ­¥æ–‡ä»¶å¤¹/äº‘ç›˜åŒæ­¥æ–‡ä»¶å¤¹/00sentence/parse/parse3.txt"),"gbk"));
 		String s = null;
 		String title = null;
 		int MEBS_MOBILE_num = 2 ;
@@ -286,7 +286,7 @@ public class DBUtil3_parseTxt {
 				i++;
 				title = s ;
 			}
-			if(title != null){//title !=null ±íÊ¾ÕıÔÚÈ¡Á½¸öMEBS_MOBILE ;
+			if(title != null){//title !=null è¡¨ç¤ºæ­£åœ¨å–ä¸¤ä¸ªMEBS_MOBILE ;
 				if(s.contains("<MEBS_MOBILE>")){
 					inMEBS_MOBILE = true;
 					s = "<MEBS_MOBILE title=\""+title+"\">";
@@ -312,9 +312,9 @@ public class DBUtil3_parseTxt {
 
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * stringListÖĞ¼ì²é±êÇ©ÊÇ·ñÍêÕû<br/>
+	 * stringListä¸­æ£€æŸ¥æ ‡ç­¾æ˜¯å¦å®Œæ•´<br/>
 	 * </ul>
 	 * @param stringList
 	 * @return
@@ -333,12 +333,12 @@ public class DBUtil3_parseTxt {
 	}*/
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¼ì²é±êÇ©ÊÇ²»ÊÇÒÔ<FUCk />ÕâÖÖĞÎÊ½ĞĞÄÚÍêÕû<br/>
-	 * ÕâÖÖËã<  FUCK sub="fuckyou"  /  ><br/>
-	 * ÕâÖÖ²»Ëã<  FU CK sub = "fuckyou" / ><br/>
-	 * ÀïÃæÖ»ÄÜº¬ÓĞÒ»¸ö²»Óë"="Æ¥ÅäµÄ×Ö·û´®,ÇÒÖ»ÄÜÊÇ"<"Ö®ºóµÚÒ»¸ö<br/>
+	 * æ£€æŸ¥æ ‡ç­¾æ˜¯ä¸æ˜¯ä»¥<FUCk />è¿™ç§å½¢å¼è¡Œå†…å®Œæ•´<br/>
+	 * è¿™ç§ç®—<  FUCK sub="fuckyou"  /  ><br/>
+	 * è¿™ç§ä¸ç®—<  FU CK sub = "fuckyou" / ><br/>
+	 * é‡Œé¢åªèƒ½å«æœ‰ä¸€ä¸ªä¸ä¸"="åŒ¹é…çš„å­—ç¬¦ä¸²,ä¸”åªèƒ½æ˜¯"<"ä¹‹åç¬¬ä¸€ä¸ª<br/>
 	 * </ul>
 	 * @param si
 	 * @return
@@ -353,12 +353,12 @@ public class DBUtil3_parseTxt {
 //	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÅĞ¶ÏÒ»¸öStringÖĞÊÇ·ñ°üº¬Ò»¸ö±êÇ©Í·<FUCK > <br/>
-	 * ÅĞ¶ÏÒÀ¾İË³Ğò°üº¬"<"ºÍ">",ÖĞ¼ä²»°üº¬1"?"ºÍ"<"(È¡µÄÊ±ºòÒÔµÚÒ»¸ö">"Îª×¼ËùÒÔ²»ÓÃÅĞ¶ÏÀïÃæÊÇ·ñº¬ÓĞ¶àÓàµÄ">"ÁË)<br/>
-	 * Ò»ĞĞÄÚ²»Òªº¬ÓĞ¶à¸ö±êÇ©<br/>
-	 * ×¢:<FUCK />ÕâÖÖĞÎÊ½½«»áÔÚ
+	 * åˆ¤æ–­ä¸€ä¸ªStringä¸­æ˜¯å¦åŒ…å«ä¸€ä¸ªæ ‡ç­¾å¤´<FUCK > <br/>
+	 * åˆ¤æ–­ä¾æ®é¡ºåºåŒ…å«"<"å’Œ">",ä¸­é—´ä¸åŒ…å«1"?"å’Œ"<"(å–çš„æ—¶å€™ä»¥ç¬¬ä¸€ä¸ª">"ä¸ºå‡†æ‰€ä»¥ä¸ç”¨åˆ¤æ–­é‡Œé¢æ˜¯å¦å«æœ‰å¤šä½™çš„">"äº†)<br/>
+	 * ä¸€è¡Œå†…ä¸è¦å«æœ‰å¤šä¸ªæ ‡ç­¾<br/>
+	 * æ³¨:<FUCK />è¿™ç§å½¢å¼å°†ä¼šåœ¨
 	 * </ul>
 	 * @param readLine
 	 * @return 
@@ -367,7 +367,7 @@ public class DBUtil3_parseTxt {
 		String sb = null;
 		if(Util_String.matchAllSameRegx(str, ".*<{1}.*>{1}.*") && !Util_String.matchAllSameRegx(str, ".*<{1}.*(\\?|<).*>{1}.*") ){
 			String s = str.substring(str.indexOf('<')+1, str.indexOf('>'));
-			//µÈºÅÎÊÌâ
+			//ç­‰å·é—®é¢˜
 			
 //			sb = ___checkAndGetTheFirstWord(s);
 			
@@ -377,10 +377,10 @@ public class DBUtil3_parseTxt {
 	}*/
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * ref = "queryAction" sub = "joker" type ="String"<br/>
-	 * ÒÔ¿Õ¸ñºÍµÈºÅ´ò¶ÏÈ¥µôÎª¿ÕµÄ×Ö·û´®.
+	 * ä»¥ç©ºæ ¼å’Œç­‰å·æ‰“æ–­å»æ‰ä¸ºç©ºçš„å­—ç¬¦ä¸².
 	 * </ul>
 	 * @param st
 	 * @return
@@ -388,7 +388,7 @@ public class DBUtil3_parseTxt {
 /*	public static Map<String, String> __getPropertyMap(String st) {
 		String[] sArr = DBUtil3_parseTxt.split(st, new String[]{"="," "});
 		if(sArr.length%2!=0){
-			throw new RuntimeException("±êÇ©ÊôĞÔ´íÎó~");
+			throw new RuntimeException("æ ‡ç­¾å±æ€§é”™è¯¯~");
 		}
 		Map<String,String> map = new LinkedHashMap<String, String>();
 		for(int i = 0 ; i + 2 < sArr.length ; i+=2){
@@ -398,9 +398,9 @@ public class DBUtil3_parseTxt {
 	}*/
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * È¾Ò»¸ö×Ö·û´®±»¶àÖÖ·ûºÅ´ò¶Ï
+	 * æŸ“ä¸€ä¸ªå­—ç¬¦ä¸²è¢«å¤šç§ç¬¦å·æ‰“æ–­
 	 * </ul>
 	 * @param s
 	 * @param regexArr

@@ -8,10 +8,10 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Properties;
 
-public class te¶ÁÈ¡propertiesÎÄ¼ş {
+public class teè¯»å–propertiesæ–‡ä»¶ {
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -19,7 +19,7 @@ public class te¶ÁÈ¡propertiesÎÄ¼ş {
 	 */
 	public static void main(String[] args) {
 		Properties ps = new Properties();
-		te¶ÁÈ¡propertiesÎÄ¼ş t = new te¶ÁÈ¡propertiesÎÄ¼ş();
+		teè¯»å–propertiesæ–‡ä»¶ t = new teè¯»å–propertiesæ–‡ä»¶();
 		URL url = t.getClass().getResource("/common1.properties");
 		try {
 			System.out.println(url);

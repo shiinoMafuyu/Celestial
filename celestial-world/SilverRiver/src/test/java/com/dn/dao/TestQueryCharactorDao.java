@@ -37,7 +37,7 @@ public class TestQueryCharactorDao {
 	@Test
 	public void _01_insert(){
 		entity = new Charactor();
-		entity.setName("ÔÂ¹â");entity.setHp(152222);
+		entity.setName("æœˆå…‰");entity.setHp(152222);
 		int re = theDao.insert(entity);
 		Assert.assertTrue(re >=0);
 	}
@@ -54,7 +54,7 @@ public class TestQueryCharactorDao {
 	@Test
 	public void _02_select02_vague(){
 		List<Charactor> entityList = theDao.selectByVague(entity);
-		System.out.println("Ä£ºý²éÑ¯£º");
+		System.out.println("æ¨¡ç³ŠæŸ¥è¯¢ï¼š");
 		for(Charactor i:entityList){
 			System.out.println(i);
 		}

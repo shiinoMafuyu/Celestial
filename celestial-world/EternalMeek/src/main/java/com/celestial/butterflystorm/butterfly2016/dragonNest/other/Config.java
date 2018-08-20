@@ -7,7 +7,7 @@ public class Config {
 	
 	public static final String SEPARATE_REGEX_WORD = ".*#.*";
 	
-	//匹配百分比Double的字符串
+	//鍖归厤鐧惧垎姣擠ouble鐨勫瓧绗︿覆
 	public static final String REGEX_DOUBLE_1 = "(\\d*\\.\\d*)+%";
 	public static final String REGEX_DOUBLE_2 = "(\\d*\\.\\d*)+%~(\\d*\\.\\d*)+%";
 	

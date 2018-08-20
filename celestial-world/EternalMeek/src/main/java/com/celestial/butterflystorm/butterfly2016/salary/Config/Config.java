@@ -8,7 +8,7 @@ import com.celestial.agniRadiance.EzUtil.UtilDB;
 
 public class Config {
 	
-	/**Êı¾İ¿âÁ¬½ÓÅäÖÃ*/
+	/**æ•°æ®åº“è¿æ¥é…ç½®*/
 	private static String userName = "root",passWord = "123",url = "jdbc:mysql://localhost/typemoon";
 	
 
@@ -20,7 +20,7 @@ public class Config {
 	}};
 	
 	
-	/**¸ù¾İÅäÖÃ»ñÈ¡ÊµÀıµÄ·½·¨.*/
+	/**æ ¹æ®é…ç½®è·å–å®ä¾‹çš„æ–¹æ³•.*/
 	
 	public static Connection getConnection() {
 		return UtilDB.getConnectionMySQL(userName, passWord, url);

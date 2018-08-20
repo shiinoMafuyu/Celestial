@@ -1,7 +1,7 @@
 package com.celestial.meek.realTest_2016_10.variableExtend;
 
 public class Child extends Father {
-	protected String sArr = "ÔÂ¹â³ØÌÁ";
+	protected String sArr = "æœˆå…‰æ± å¡˜";
 	
 	public static void main(String[] args) {
 		Child c = new Child();

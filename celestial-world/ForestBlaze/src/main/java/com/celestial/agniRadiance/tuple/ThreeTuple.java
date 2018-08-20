@@ -1,23 +1,23 @@
 /******************************************************************
  * ThreeTuple.java
  * Copyright ${year} by WZG. All Rights Reserved.
- * CreateDate£º2017Äê9ÔÂ13ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´9æœˆ13æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.agniRadiance.tuple;
 
 /**
- * <b>ÐÞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê9ÔÂ13ÈÕ
+ *                        ---- wangzg 2017å¹´9æœˆ13æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜Žï¼š</b>
  * <p> 
  * 
  * </p>
@@ -27,7 +27,7 @@ public class ThreeTuple<T1,T2,T3> extends TwoTuple<T1, T2> {
 	public final T3 t3;
 	
 	/**
-	 * <b>¹¹Ôì·½·¨</b>
+	 * <b>æž„é€ æ–¹æ³•</b>
 	 * <br/>
 	 * @param t1
 	 * @param t2

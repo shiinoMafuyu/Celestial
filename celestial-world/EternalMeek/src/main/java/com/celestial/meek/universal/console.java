@@ -14,11 +14,11 @@ public static Map<Long,Long> payErrorMap = new HashMap<Long, Long>();
 		String sql = new StringBuffer("")
 				.append("select *")
 				.append("  from (select t.*, ")
-				.append("               decode(gl.receiveindate,null,-1,(sysdate - to_date(to_char(t.UpdateTime, 'YYYY-MM-DD HH24:MI:SS')) - gl.receiveIndate)) overTime ") //µ±Ç°ÏµÍ³Ê±¼ä - ¸üÐÂÊ±¼ä - ÓÐÐ§ÆÚ Ôò¹ýÆÚ;Ã»ÉèÓÐÐ§ÆÚÔòÓÀÔ¶²»»á¹ýÆÚ
+				.append("               decode(gl.receiveindate,null,-1,(sysdate - to_date(to_char(t.UpdateTime, 'YYYY-MM-DD HH24:MI:SS')) - gl.receiveIndate)) overTime ") //å½“å‰ç³»ç»Ÿæ—¶é—´ - æ›´æ–°æ—¶é—´ - æœ‰æ•ˆæœŸ åˆ™è¿‡æœŸ;æ²¡è®¾æœ‰æ•ˆæœŸåˆ™æ°¸è¿œä¸ä¼šè¿‡æœŸ
 				.append("          from ft_game_records t, ft_game_level gl ")
 				.append("         where 1 = 1 ")
 				.append("           and gl.typeID = t.typeID ")
-				.append("           and gl.no = t.currentLevelNO - 1) ")//µ±Ç°¹Ø¿¨µÄÍ¨¹ØÖ®ºó²Å»ñµÃµ±Ç°¹Ø¿¨µÄ½±Æ·£¬ÓÎÏ·¼ÇÂ¼±íÀïµÄµ±Ç°¹Ø¿¨ÊÇ½ÓÏÂÀ´µÄ´³¹Ø¹Ø¿¨¡£ËùÒÔ½±Æ·Ö»ÄÜÁìÈ¡µ±Ç°¹Ø¿¨-1µÄ¡£
+				.append("           and gl.no = t.currentLevelNO - 1) ")//å½“å‰å…³å¡çš„é€šå…³ä¹‹åŽæ‰èŽ·å¾—å½“å‰å…³å¡çš„å¥–å“ï¼Œæ¸¸æˆè®°å½•è¡¨é‡Œçš„å½“å‰å…³å¡æ˜¯æŽ¥ä¸‹æ¥çš„é—¯å…³å…³å¡ã€‚æ‰€ä»¥å¥–å“åªèƒ½é¢†å–å½“å‰å…³å¡-1çš„ã€‚
 				.append(" where overTime > 0 ")
 				.toString();
 		

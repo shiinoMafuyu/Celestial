@@ -25,7 +25,7 @@ public class AntReadFile extends Task {
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
-			throw new RuntimeException("读取文件异常.");
+			throw new RuntimeException("璇诲彇鏂囦欢寮傚父.");
 		}
 		finally{
 			if(br != null)

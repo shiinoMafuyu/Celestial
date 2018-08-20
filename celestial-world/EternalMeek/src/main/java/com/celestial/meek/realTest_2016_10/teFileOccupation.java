@@ -12,7 +12,7 @@ import com.celestial.agniRadiance.EzUtil.UtilFile;
 public class teFileOccupation {
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜Žï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>

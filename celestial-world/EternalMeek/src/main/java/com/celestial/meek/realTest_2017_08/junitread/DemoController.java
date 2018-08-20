@@ -1,9 +1,9 @@
 /******************************************************************
  * DemoController.java
  * Copyright 2017 by WZG. All Rights Reserved.
- * CreateDate£º2017Äê8ÔÂ10ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´8æœˆ10æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.meek.realTest_2017_08.junitread;
@@ -23,15 +23,15 @@ import com.celestial.meek.realTest_2017_08.junitread.entity.FieldComparisonFailu
 import com.celestial.meek.realTest_2017_08.junitread.service.TestProjectService;
 
 /**
- * <b>ÐÞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê8ÔÂ10ÈÕ
+ *                        ---- wangzg 2017å¹´8æœˆ10æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜Žï¼š</b>
  * <p> 
  * 
  * </p>

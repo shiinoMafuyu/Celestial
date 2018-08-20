@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.celestial.butterflystorm.butterfly2016.salary.Interface.entity.Employee;
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
@@ -12,9 +12,9 @@ import com.celestial.butterflystorm.butterfly2016.salary.Interface.entity.Employ
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
- * Õâ¸ö½Ó¿ÚµÄÊµÏÖÀï¿ÉÒÔÌí¼ÓÊÂÎï¿ØÖÆÖ®ÀàµÄ.Ïàµ±ÓÚservice,¶øManagerEmployeeDaoÔò×÷Îªdao°É.<br/>
+ * è¿™ä¸ªæ¥å£çš„å®ç°é‡Œå¯ä»¥æ·»åŠ äº‹ç‰©æ§åˆ¶ä¹‹ç±»çš„.ç›¸å½“äºservice,è€ŒManagerEmployeeDaoåˆ™ä½œä¸ºdaoå§.<br/>
  * </p>
  */
 public interface ManageEmployee {

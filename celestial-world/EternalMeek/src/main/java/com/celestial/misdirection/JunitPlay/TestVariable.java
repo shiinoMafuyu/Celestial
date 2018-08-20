@@ -26,7 +26,7 @@ public class TestVariable {
 	@Test
 	public void test1m() {
 		System.out.println("-- 1 --");
-		a.setName("ÒÚÍòË¹Äê");
+		a.setName("äº¿ä¸‡æ–¯å¹´");
 		System.out.println(a);
 		Assert.assertNotNull(a);
 		
@@ -34,7 +34,7 @@ public class TestVariable {
 	@Test
 	public void test2m() {
 		
-		Beautiful b = () -> {System.out.println("ÄãÎªÊ²Ã´Òª³ÔÒ©£¿£¡¶¼²»ÃÈÃÈßÕÁË£¡");return "¸Ã³ÔÒ©ÁË£¬¸øÄãÁôÁË´óÆ¿µÄ";};
+		Beautiful b = () -> {System.out.println("ä½ ä¸ºä»€ä¹ˆè¦åƒè¯ï¼Ÿï¼éƒ½ä¸èŒèŒå“’äº†ï¼");return "è¯¥åƒè¯äº†ï¼Œç»™ä½ ç•™äº†å¤§ç“¶çš„";};
 		System.out.println(b.show());
 //		new Thread(() -> System.out.println("In Java8, Lambda expression rocks !!") ).start();
 	}

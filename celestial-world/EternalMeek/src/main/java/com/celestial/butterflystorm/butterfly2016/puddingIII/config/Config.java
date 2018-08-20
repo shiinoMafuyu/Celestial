@@ -2,22 +2,22 @@ package com.celestial.butterflystorm.butterfly2016.puddingIII.config;
 
 public class Config {
 	/**
-	 �������ɲ���:
+	 补丁生成策略:
 	 
-	 1.java�ļ���ȥԴ���ļ�(һ����src)��Ѱ�Һ�׼���ļ���ȫһ�µ�Դ���ļ�,�ٸ���src�µ�·��ȥWebRoot/WEB-INF/classes���Ҷ�Ӧ��.class�ļ�.
-	   	ע�������Ŀ�Ƿ��Ѿ�����������.class�ļ�.;��ȫһ��ָ����һ��,md5ֵһ��.
+	 1.java文件是去源码文件(一般是src)里寻找和准备文件完全一致的源码文件,再根据src下的路径去WebRoot/WEB-INF/classes里找对应的.class文件.
+	   	注意你的项目是否已经编译生成了.class文件.;完全一致指名字一样,md5值一样.
 	   	
-	 2.jsp .xml .jsp .avi .js ...�ȵȷ�java���͵��ļ�ȫ����WebRoot��������� ׼���ļ�һ�����ļ���
-	 	Ȼ�����һ������,������Config.puddingPath���潨������Ŀ����Ŀ¼��,��ɲ�������.
+	 2.jsp .xml .jsp .avi .js ...等等非java类型的文件全部从WebRoot下面查找与 准备文件一样的文件，
+	 	然后就是一样的了,拷贝到Config.puddingPath下面建立的项目补丁目录内,完成补丁生成.
 	 	
-	 	ע:java�ļ�������ȫ��srcĿ¼,�ҳ�ȫ������ȫһ���ļ�;ͬ�����������ļ�Ҳ����WebRoot�ҳ�ȫ����ȫһ���ļ�.�������������ҵ��ĵ�һ������λ��Ϊ׼,
-	 	����������ʾ"�ҵ�����ȫһ���ļ���ֹһ��".(��˵�����Բ���Ϊ��ֻ����һ��,��ԭ�������������ִ��ڵ�.)
+	 	注:java文件会搜索全部src目录,找出全部的完全一样文件;同样其他类型文件也会在WebRoot找出全部完全一致文件.制作补丁会以找到的第一个所在位置为准,
+	 	其他给出提示"找到的完全一致文件不止一个".(话说这种脑残行为我只见过一次,我原本不相信有这种存在的.)
 	*/
 	
-	/**���ɺõĲ����ļ�����λ��,Ĭ������.*/
+	/**生成好的补丁文件保存位置,默认桌面.*/
 	public static String puddingPath = "E:/t/t26_myToolDevelopTestDataArea/puddingIII/res";
 	
-	/**��ӡ��ʾ��Ϣ���,Ĭ����*/
+	/**打印提示信息与否,默认是*/
 	public static  boolean isPrint = true;
 	
 	public static  COPY_METHOD CopyMethod = COPY_METHOD.COPY_BY_CMD;
@@ -25,20 +25,20 @@ public class Config {
 	
 	
 	/**
-	 * ���ɲ����ļ�ʱ�õĿ���������<br/>
+	 * 生成补丁文件时用的拷贝方法。<br/>
 	 */
 	public enum COPY_METHOD{
 		
 		/**
-		 * ����Windows��CMD������п���<br/>
-		 * ���ı���ļ��������޸�ʱ��<br/>
-		 * Ĭ��<br/>
+		 * 调用Windows的CMD命令进行拷贝<br/>
+		 * 不改变变文件创建、修改时间<br/>
+		 * 默认<br/>
 		 */
 		COPY_BY_CMD("copyByCmd"),
 		/**
-		 * java���������ļ����ơ�<br/>
-		 * �ļ��޸Ĵ���ʱ���ΪΪ��ǰ<br/>
-		 * ����<br/>
+		 * java的流操作文件复制。<br/>
+		 * 文件修改创建时间变为为当前<br/>
+		 * 备用<br/>
 		 */
 		COPY_BY_TRANSFER("copyByTransfer");
 		
@@ -53,16 +53,16 @@ public class Config {
 		
 	}
 	/**
-	 * ������Ŀ����ѡ���Ӧÿ�����͡�
+	 * 根据项目类型选择对应每局类型。
 	 */
 	public enum PUDDING_TYPE{
 		
 		/**
-		 * web��Ŀ
+		 * web项目
 		 */
 		WEB("web"),
 		/**
-		 * java��Ŀ
+		 * java项目
 		 */
 		JAVA("java");
 		

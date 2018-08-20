@@ -11,14 +11,14 @@ public class Counter {
 	
 	
 	public static void main(String[] args) {
-		List<String> files = UtilFile.findFile( ".*\\.java",new File("H:\\baiduyundownload\\Îå¹ØÁù½«"));
+		List<String> files = UtilFile.findFile( ".*\\.java",new File("H:\\baiduyundownload\\äº”å…³å…­å°†"));
 		FileReader fr = null;
 		int lineNum =0;
 		for(String fi:files) {
 			fr = new FileReader(fi);
 			lineNum += fr.getLineList().size();
 		}
-		System.out.println("ÎÄ¼þÊý£º" + files.size()+"  ÐÐÊý£º"+lineNum);
+		System.out.println("æ–‡ä»¶æ•°ï¼š" + files.size()+"  è¡Œæ•°ï¼š"+lineNum);
 		
 		InputStream is;
 	}

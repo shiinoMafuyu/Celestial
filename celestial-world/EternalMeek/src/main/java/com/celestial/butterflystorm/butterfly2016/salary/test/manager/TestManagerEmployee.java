@@ -10,7 +10,7 @@ public class TestManagerEmployee extends TestCase{
 	
 	@SuppressWarnings("unused")
 	public void testVariableCreate() {
-		ManageEmployee me = new ManagerEmployeeImpl();//ÒÔgetIMPL(newInstance)·½Ê½³õÊ¼»¯µÄ³ÉÔ±±äÁ¿±»³õÊ¼»¯ÁË
-		ManageEmployee me2 = (ManageEmployee)Container.getRealizationObject("ManageEmployee");//Ã»ÓĞ
+		ManageEmployee me = new ManagerEmployeeImpl();//ä»¥getIMPL(newInstance)æ–¹å¼åˆå§‹åŒ–çš„æˆå‘˜å˜é‡è¢«åˆå§‹åŒ–äº†
+		ManageEmployee me2 = (ManageEmployee)Container.getRealizationObject("ManageEmployee");//æ²¡æœ‰
 	}
 }

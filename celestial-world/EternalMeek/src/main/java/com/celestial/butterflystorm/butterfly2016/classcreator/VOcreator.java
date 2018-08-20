@@ -18,76 +18,76 @@ import com.celestial.butterflystorm.butterfly2016.classcreator.silence.Conf;
 public abstract class VOcreator {
 	
 	/**
-	 * ÒÑÉú³ÉµÄVOÀà´úÂë
+	 * å·²ç”Ÿæˆçš„VOç±»ä»£ç 
 	 */
 	protected List<String> voClassStringList = new ArrayList<String>(); 
 	
 	/**
-	 * ÀàµÄÃû×Ö
+	 * ç±»çš„åå­—
 	 */
 	protected String className;
 	
 	/**
-	 * °üµÄÃû×Ö,Ğ­ÒéÀïÓĞµÄ»°´ÓĞ­ÒéÀï»ñÈ¡.²»È»ÎªÄ¬ÈÏ
+	 * åŒ…çš„åå­—,åè®®é‡Œæœ‰çš„è¯ä»åè®®é‡Œè·å–.ä¸ç„¶ä¸ºé»˜è®¤
 	 */
 	protected String packageName = "gnnt";
 	
 	/**
-	 * ÀàµÄ×¢ÊÍ
+	 * ç±»çš„æ³¨é‡Š
 	 */
 	protected String annotation;
 	
 	/**
-	 * ÀàÏÂÃæ·Ç¼Ì³ĞµÄÖ±½Ó±êÇ©
+	 * ç±»ä¸‹é¢éç»§æ‰¿çš„ç›´æ¥æ ‡ç­¾
 	 */
 	protected List<Tag> directTagList = new ArrayList<Tag>();
 	
 	/**
-	 * º¬ÓĞ×Ó±êÇ©µÄÖ±½Ó±êÇ©,ÓÃÀ´Éú³ÉÄÚ²¿ÀàÏà¹ØÄÚÈİµÄ
-	 * °üÀ¨:ÄÚ²¿ÀàµÄget set ·½·¨,ºÍÆä¶¨Òå(º¬ÄÚ²¿Àà³ÉÔ±±äÁ¿ºÍ³ÉÔ±±äÁ¿µÄÄÇÉ¶ÄÚ²¿Ààget set·½·¨)
+	 * å«æœ‰å­æ ‡ç­¾çš„ç›´æ¥æ ‡ç­¾,ç”¨æ¥ç”Ÿæˆå†…éƒ¨ç±»ç›¸å…³å†…å®¹çš„
+	 * åŒ…æ‹¬:å†…éƒ¨ç±»çš„get set æ–¹æ³•,å’Œå…¶å®šä¹‰(å«å†…éƒ¨ç±»æˆå‘˜å˜é‡å’Œæˆå‘˜å˜é‡çš„é‚£å•¥å†…éƒ¨ç±»get setæ–¹æ³•)
 	 */
 	protected List<Tag> layerTagList = new ArrayList<Tag>();
 	
 	/**
-	 * ¼Ì³Ğ¸¸ÀàµÄÖ±½Ó×Ó±êÇ©
+	 * ç»§æ‰¿çˆ¶ç±»çš„ç›´æ¥å­æ ‡ç­¾
 	 */
 	protected List<Tag> directTagListPa = new ArrayList<Tag>();
 	
 	/**
-	 * º¬ÓĞµÄÀàĞÍ¼¯ºÏ
+	 * å«æœ‰çš„ç±»å‹é›†åˆ
 	 */
 	protected List<String> typeList = new ArrayList<String>();
 
 	/**
-	 * Ã¿¸öÀà¶¼ÒªÒıÈëµÄ°ü.
+	 * æ¯ä¸ªç±»éƒ½è¦å¼•å…¥çš„åŒ….
 	 */
 	protected  List<String> mustImport = new ArrayList<String>();
 	
 	/**
-	 * ¶ÔÓ¦ÌØÊâÀàĞÍµÄ³ÉÔ±±äÁ¿¶ÔÓ¦ĞèÒªµ¼ÈëµÄ°ü.ÔÚ×ÓÀàÖĞ³õÊ¼»¯~
+	 * å¯¹åº”ç‰¹æ®Šç±»å‹çš„æˆå‘˜å˜é‡å¯¹åº”éœ€è¦å¯¼å…¥çš„åŒ….åœ¨å­ç±»ä¸­åˆå§‹åŒ–~
 	 */
 	protected Map<String,String[]> importMap = new HashMap<String, String[]>();
 	
 	/**
-	 * RequestVo ResponseVO¼Ì³ĞµÄ¸¸ÀàÊÇÄÄÖ»?×ÓÀàÖĞ³õÊ¼»¯~
+	 * RequestVo ResponseVOç»§æ‰¿çš„çˆ¶ç±»æ˜¯å“ªåª?å­ç±»ä¸­åˆå§‹åŒ–~
 	 */
 	protected String extendClass = "";
 	
 	/**
-	 * Õâ¸öÀàÊÇRequestVo»¹ÊÇResponseVO ? ×ÓÀàÖĞ³õÊ¼»¯~
+	 * è¿™ä¸ªç±»æ˜¯RequestVoè¿˜æ˜¯ResponseVO ? å­ç±»ä¸­åˆå§‹åŒ–~
 	 */
 	protected String voType = "";
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * RequestVOºÍResponseVO¹«ÓÃµÄ³õÊ¼»¯·½·¨.<br/>
-	 * ³õÊ¼»¯className packageName ºÍ annotation<br/>
+	 * RequestVOå’ŒResponseVOå…¬ç”¨çš„åˆå§‹åŒ–æ–¹æ³•.<br/>
+	 * åˆå§‹åŒ–className packageName å’Œ annotation<br/>
 	 * </ul>
 	 * @param initTag
 	 */
 	protected void __init_0(Tag initTag) {
-		__initVar();//ËäÈ»Ëµ·ÅÕâÀïÓĞµãÆæ¹Ö..²»¹ıÒª·ÅÔÚÒ»¸ö¸¸ÀàÖĞÓĞÊµÌåµÄ·½·¨ÀïÕâÊÇÔİÊ±±È½ÏºÏÀí..µÈÖØ¹¹Íê³ÉÖ®ºóÔÙ»»Î»ÖÃ°É
+		__initVar();//è™½ç„¶è¯´æ”¾è¿™é‡Œæœ‰ç‚¹å¥‡æ€ª..ä¸è¿‡è¦æ”¾åœ¨ä¸€ä¸ªçˆ¶ç±»ä¸­æœ‰å®ä½“çš„æ–¹æ³•é‡Œè¿™æ˜¯æš‚æ—¶æ¯”è¾ƒåˆç†..ç­‰é‡æ„å®Œæˆä¹‹åå†æ¢ä½ç½®å§
 		this.className = transName(initTag.getPropertyMap().get("name"));
 		String pkg = initTag.getPropertyMap().get("pkg");
 		if(pkg != null && !"".equals(pkg))
@@ -99,9 +99,9 @@ public abstract class VOcreator {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * °Ñcmd_order_query×ªÎªCmdOrderQueryRequestVOÕâÑùµÄ<br/>
+	 * æŠŠcmd_order_queryè½¬ä¸ºCmdOrderQueryRequestVOè¿™æ ·çš„<br/>
 	 * </ul>
 	 * @param str
 	 * @return
@@ -116,9 +116,9 @@ public abstract class VOcreator {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ½«ÊôÓÚ¸¸ÀàµÄ³ÉÔ±±äÁ¿ºÍÆÕÍ¨µÄ³ÉÔ±±äÁ¿·Ö¿ª.<br/>
+	 * å°†å±äºçˆ¶ç±»çš„æˆå‘˜å˜é‡å’Œæ™®é€šçš„æˆå‘˜å˜é‡åˆ†å¼€.<br/>
 	 * </ul>
 	 * @param t
 	 * @param paVariablemap
@@ -135,10 +135,10 @@ public abstract class VOcreator {
 	
 	/**
 	 * 
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ³ÉÔ±±äÁ¿,ÃèÊö,ÀàĞÍ,×¢ÊÍ È±Ò»Å×Òì³£<br/>
-	 * ²»Ğ£Ñé·½·¨ÃûÖØ¸´ºÍ±äÁ¿ÃûÖØ¸´<br/>
+	 * æˆå‘˜å˜é‡,æè¿°,ç±»å‹,æ³¨é‡Š ç¼ºä¸€æŠ›å¼‚å¸¸<br/>
+	 * ä¸æ ¡éªŒæ–¹æ³•åé‡å¤å’Œå˜é‡åé‡å¤<br/>
 	 * </ul>
 	 * @param directTagList2
 	 */
@@ -152,14 +152,14 @@ public abstract class VOcreator {
 			
 			boolean b4 = UtilString.notNullEmpty(t.getValue());
 			if(!(b1 && b2 && b3 && b4))
-				throw new RuntimeException("±êÇ© : <" + t.getTagName() + "> ²»ÍêÕû,Çë¼ì²éÆäref,typeÊôĞÔºÍÆäÖµÊÇ·ñÍêÕû.");
+				throw new RuntimeException("æ ‡ç­¾ : <" + t.getTagName() + "> ä¸å®Œæ•´,è¯·æ£€æŸ¥å…¶ref,typeå±æ€§å’Œå…¶å€¼æ˜¯å¦å®Œæ•´.");
 		}
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ½«ÀàĞÍÌí¼Óµ½typeListÀïÃæ.
+	 * å°†ç±»å‹æ·»åŠ åˆ°typeListé‡Œé¢.
 	 * </ul>
 	 * @param type
 	 */
@@ -176,33 +176,33 @@ public abstract class VOcreator {
 	
 	/**
 	 * 
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Ğ£ÑéÊı¾İÍêÕûĞÔ<br/>
-	 * ¼ì²éÀàĞÍÓĞÎÊÌâÃ»ÓĞ<br/>
+	 * æ ¡éªŒæ•°æ®å®Œæ•´æ€§<br/>
+	 * æ£€æŸ¥ç±»å‹æœ‰é—®é¢˜æ²¡æœ‰<br/>
 	 * </ul>
 	 */
 	protected abstract void checkParamArr();
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * µ¼°üĞÅÏ¢
+	 * å¯¼åŒ…ä¿¡æ¯
 	 * </ul>
 	 * @return
 	 */
 	protected Collection<? extends String> _createPackageInfo() {
 		List<String> l = new ArrayList<String>();
-		//--¡ı--°ü
+		//--â†“--åŒ…
 		l.add("package "+this.packageName+";");
 		l.add("");
-		//--¡ü--
-		//--¡ı--ÕâÖ®¼äÎª±ØĞëÒªµ¼µÄ°ü.Èç¹ûÖ®ºó¸´ÔÓÁË¿ÉÒÔĞ´³ÉÅäÖÃĞÎÊ½.
+		//--â†‘--
+		//--â†“--è¿™ä¹‹é—´ä¸ºå¿…é¡»è¦å¯¼çš„åŒ….å¦‚æœä¹‹åå¤æ‚äº†å¯ä»¥å†™æˆé…ç½®å½¢å¼.
 		
 		for(String si : this.mustImport){
 			l.add("import " + si + ";");
 		}
 		l.add("");
-		//--¡ü--
+		//--â†‘--
 		for(String i: this.typeList){
 			String[] importString = this.importMap.get(i);
 			if(importString == null)
@@ -220,32 +220,32 @@ public abstract class VOcreator {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÔÚ×ÓÀàÖĞÊµÏÖ<br/>
-	 * Íê³ÉmustImport ºÍ  importMapµÄ×ÓÀàÊµÏÖ.ÎÒÒ²ÊÇ×íÁË<br/>
+	 * åœ¨å­ç±»ä¸­å®ç°<br/>
+	 * å®ŒæˆmustImport å’Œ  importMapçš„å­ç±»å®ç°.æˆ‘ä¹Ÿæ˜¯é†‰äº†<br/>
 	 * </ul>
 	 */
 	protected abstract void __initVar();
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¹«ÓÃµÄ¼ìÑé±êÇ©ÍêÕûĞÔ.
+	 * å…¬ç”¨çš„æ£€éªŒæ ‡ç­¾å®Œæ•´æ€§.
 	 * </ul>
 	 */
 	protected void __checkParamArr_0() {
-		//Ğ£ÑéÖ±½Ó×Ó±êÇ©ÍêÕû ²¢ÇÒ°ÑÀàĞÍÌí¼Óµ½typeListÀïÃæ
+		//æ ¡éªŒç›´æ¥å­æ ‡ç­¾å®Œæ•´ å¹¶ä¸”æŠŠç±»å‹æ·»åŠ åˆ°typeListé‡Œé¢
 		checkTagList(this.directTagList);
-		//¼ì²é¸¸ÀàÖ±½Ó×Ó±êÇ©
+		//æ£€æŸ¥çˆ¶ç±»ç›´æ¥å­æ ‡ç­¾
 		checkTagList(this.directTagListPa);
 		
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Ìí¼ÓÀàµÄ×¢ÊÍ
+	 * æ·»åŠ ç±»çš„æ³¨é‡Š
 	 * </ul>
 	 * @return
 	 */
@@ -253,7 +253,7 @@ public abstract class VOcreator {
 		List<String> l = new ArrayList<String>();
 		l.add("/**");
 		l.add(" * ");
-		l.add(" * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> ");
+		l.add(" * <b>ä¿®æ”¹è®°å½•ï¼š</b> ");
 		l.add(" * <p>");
 		l.add(" * <li>");
 		l.add(" * ");
@@ -261,7 +261,7 @@ public abstract class VOcreator {
 		l.add(" * </li>");
 		l.add(" * </p>");
 		l.add(" * ");
-		l.add(" * <b>ÀàËµÃ÷£º" + this.annotation + "</b>");
+		l.add(" * <b>ç±»è¯´æ˜ï¼š" + this.annotation + "</b>");
 		l.add(" * <p> ");
 		l.add(" * ");
 		l.add(" * </p>");
@@ -273,25 +273,25 @@ public abstract class VOcreator {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Èç¹û²ÎÊıÀàĞÍ²»º¬ÔÚÅäÖÃÀï,Å×³öÒì³£.ĞèÒªÖ§³ÖµÄ»°×Ô¼ºÌí¼Ó.<br/>
-	 * Éæ¼°¶ÔÀàĞÍµÄ²Ù×÷·½Ê½transTypeWaysMap <br/>
-	 * ºÍĞèÒªÒıÈëµÄ°üimportMap <br/>
+	 * å¦‚æœå‚æ•°ç±»å‹ä¸å«åœ¨é…ç½®é‡Œ,æŠ›å‡ºå¼‚å¸¸.éœ€è¦æ”¯æŒçš„è¯è‡ªå·±æ·»åŠ .<br/>
+	 * æ¶‰åŠå¯¹ç±»å‹çš„æ“ä½œæ–¹å¼transTypeWaysMap <br/>
+	 * å’Œéœ€è¦å¼•å…¥çš„åŒ…importMap <br/>
 	 * </ul>
 	 */
 	protected void checkType() {
 		for(String i : this.typeList){
 			if(Conf.supportMap.get(i) == null)
-				throw new RuntimeException("ÀàĞÍ " + i + "²»Ö§³Ö!Çë¼ì²é»òÌí¼Ó ");
+				throw new RuntimeException("ç±»å‹ " + i + "ä¸æ”¯æŒ!è¯·æ£€æŸ¥æˆ–æ·»åŠ  ");
 		}
 		
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡Éú³ÉºÃÁËµÄRequestVOÀà×Ö·û´®¼¯ºÏ.
+	 * è·å–ç”Ÿæˆå¥½äº†çš„RequestVOç±»å­—ç¬¦ä¸²é›†åˆ.
 	 * </ul>
 	 * @return
 	 */
@@ -300,26 +300,26 @@ public abstract class VOcreator {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨ÀàµÄ²Ù×÷µÄµÚÒ»²¿·Ö.<br/>
-	 * ¿É¹²ÓÃÌáÈ¡<br/>
+	 * åˆ›å»ºç±»çš„æ“ä½œçš„ç¬¬ä¸€éƒ¨åˆ†.<br/>
+	 * å¯å…±ç”¨æå–<br/>
 	 * </ul>
 	 */
 	protected void _createClass_p1() {
-		//0.Ğ£Ñé±äÁ¿ÍêÕûĞÔ
+		//0.æ ¡éªŒå˜é‡å®Œæ•´æ€§
 		checkParamArr();
-		//1.Ìí¼ÓÍ·²¿ĞÅÏ¢ (°üÃû µ¼°üÉ¶µÄ)
+		//1.æ·»åŠ å¤´éƒ¨ä¿¡æ¯ (åŒ…å å¯¼åŒ…å•¥çš„)
 		this.voClassStringList.addAll(_createPackageInfo());
-		//2.Ìí¼ÓÀàµÄ×¢ÊÍ
+		//2.æ·»åŠ ç±»çš„æ³¨é‡Š
 		this.voClassStringList.addAll(_createClassAnnotation());
 		this.voClassStringList.add("public class " + this.className + " extends "+this.extendClass+"{");
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ³õÊ¼»¯,²¢Íê³ÉÀàµÄ´´½¨.<br/>
+	 * åˆå§‹åŒ–,å¹¶å®Œæˆç±»çš„åˆ›å»º.<br/>
 	 * </ul>
 	 * @param tag 
 	 */

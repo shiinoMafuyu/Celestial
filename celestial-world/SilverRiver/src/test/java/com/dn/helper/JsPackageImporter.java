@@ -13,7 +13,7 @@ public class JsPackageImporter {
 	static String srcFile = "src/test/resources/helper/02JSimport.txt";
 	static List<String> lineList = null;
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -26,9 +26,9 @@ public class JsPackageImporter {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¸øËùÓĞfileArrÖĞµÄÎÄ¼şÀïµÄ<!-- auto import start--><!-- auto import end-->Ö®¼ä²åÈëjsµ¼ÈëĞÅÏ¢¡£
+	 * ç»™æ‰€æœ‰fileArrä¸­çš„æ–‡ä»¶é‡Œçš„<!-- auto import start--><!-- auto import end-->ä¹‹é—´æ’å…¥jså¯¼å…¥ä¿¡æ¯ã€‚
 	 * </ul>
 	 * @param fArr
 	 */
@@ -46,9 +46,9 @@ public class JsPackageImporter {
 		if(start>=0 && end > start){
 			List l_res = UtilCollection.replaceList(f.getLineList(), start, end, lineList);
 			UtilFile.printFile(l_res, f.getFilePath(),"utf-8");
-			System.out.println("²åÈëÒıÓÃ³É¹¦£º" + f.getFileName());
+			System.out.println("æ’å…¥å¼•ç”¨æˆåŠŸï¼š" + f.getFileName());
 		}else{
-			System.out.println("Î´ÕÒµ½µÄÍ·²åÈë±êÖ¾£¬Ìø¹ı£º" + f.getFileName());
+			System.out.println("æœªæ‰¾åˆ°çš„å¤´æ’å…¥æ ‡å¿—ï¼Œè·³è¿‡ï¼š" + f.getFileName());
 		}
 		
 	}

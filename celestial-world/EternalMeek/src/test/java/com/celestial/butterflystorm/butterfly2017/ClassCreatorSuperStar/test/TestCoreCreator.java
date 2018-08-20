@@ -1,9 +1,9 @@
 /******************************************************************
  * TestCoreCreator.java
  * Copyright 2017 by WZG. All Rights Reserved.
- * CreateDate£º2017Äê6ÔÂ11ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´6æœˆ11æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.butterflystorm.butterfly2017.ClassCreatorSuperStar.test;
@@ -21,15 +21,15 @@ import com.celestial.butterflystorm.butterfly2017.ClassCreatorSuperStar.core.imp
 import com.celestial.butterflystorm.butterfly2017.ClassCreatorSuperStar.vo.AClass;
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê6ÔÂ11ÈÕ
+ *                        ---- wangzg 2017å¹´6æœˆ11æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
  * 
  * </p>
@@ -49,8 +49,8 @@ public class TestCoreCreator {
 				.setVariables(new String[][]{
 					new String[]{"U","String","pinscode","Pinscode"},
 					new String[]{"SID","long","sessionID","sessionID"},
-					new String[]{"GID","String","ÓÎÏ·±àºÅ","gameId"},
-					new String[]{"LNO","Integer","¹Ø¿¨ĞòºÅ","LunaNum"}
+					new String[]{"GID","String","æ¸¸æˆç¼–å·","gameId"},
+					new String[]{"LNO","Integer","å…³å¡åºå·","LunaNum"}
 				});
 		
 		cc = new OrientalBrightNightCity();

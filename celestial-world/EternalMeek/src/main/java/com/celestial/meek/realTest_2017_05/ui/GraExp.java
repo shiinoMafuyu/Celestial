@@ -18,8 +18,8 @@ public class GraExp extends JFrame {
 	private static final long serialVersionUID = 1L;
 	CInstead c1 = new CInstead();
 	Container c;
-	JLabel lbl1 = new JLabel("ĞÕÃû£º");
-	JLabel lbl2 = new JLabel("ÃÜÂë£º");
+	JLabel lbl1 = new JLabel("å§“åï¼š");
+	JLabel lbl2 = new JLabel("å¯†ç ï¼š");
 	JTextField tf1 = new JTextField(10), tf2 = new JTextField(10);
 
 	public GraExp() {

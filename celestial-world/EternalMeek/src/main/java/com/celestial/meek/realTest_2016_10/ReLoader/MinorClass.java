@@ -2,6 +2,6 @@ package com.celestial.meek.realTest_2016_10.ReLoader;
 
 public class MinorClass {
 	static{
-		System.out.println("Âþ³¤Ñ§ÆÚµÄÔ¤¸æ");
+		System.out.println("æ¼«é•¿å­¦æœŸçš„é¢„å‘Š");
 	}
 }

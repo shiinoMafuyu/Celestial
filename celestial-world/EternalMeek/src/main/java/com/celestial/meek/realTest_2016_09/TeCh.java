@@ -6,10 +6,10 @@ import java.util.List;
 
 public class TeCh extends TeFa {
 
-	protected List<String> l = new ArrayList<String>(Arrays.asList(new String[]{"Íş·ç","ÌÃÌÃ"}));
-	protected String s = "¿ñ·çÌÃÌÃ";
+	protected List<String> l = new ArrayList<String>(Arrays.asList(new String[]{"å¨é£","å ‚å ‚"}));
+	protected String s = "ç‹‚é£å ‚å ‚";
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>

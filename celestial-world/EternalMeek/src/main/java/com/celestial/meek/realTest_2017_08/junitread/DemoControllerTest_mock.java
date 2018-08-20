@@ -1,9 +1,9 @@
 /******************************************************************
  * TestJunitUser.java
  * Copyright 2017 by WZG. All Rights Reserved.
- * CreateDate£º2017Äê8ÔÂ10ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´8æœˆ10æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.meek.realTest_2017_08.junitread;

@@ -15,7 +15,7 @@ import com.celestial.agniRadiance.EzUtil.UtilCollection;
 import com.google.common.collect.Sets;
 
 /**
- * ¶Ôºº×ÖÊı×é½øĞĞ°´Æ´ÒôÅÅĞò
+ * å¯¹æ±‰å­—æ•°ç»„è¿›è¡ŒæŒ‰æ‹¼éŸ³æ’åº
  * @author wangzg
  *
  */
@@ -33,8 +33,8 @@ public class ArrangeChinaChar {
 
 	//
 	public static void main(String[] args) {
-//		String[] newArray={"ÉÏº£","Ìì½ò","¹ãÖİ","º¼Öİ","ÁÉÄş","ÄÏ¾©","Îäºº","±±¾©","ÏÃÃÅ","ÄÚÃÉ"}; 
-		String[] newArray="ÑÎ´×½´ÓÍÎ¶¾«¼¦¾«ÜÍ·Û»¨½·ºú½·ÀÏ³éÉú³é×ÎÈ»¸ÉÀ±½·À±½··Û°×ÌÇÃ×´×°×´×ÀÏ½ª×Ğ½ªÅİ½·»¨ÉúÓÍÖ²ÎïÓÍºÄÓÍ²Ë×ÑÓÍéÏé­ÓÍÁÏ¾Æ±ùÌÇµ÷¾Æ·¬ÇÑ½´¶¹ôù¶¹°ê½´¿§à¬·ÛÎåÏã·ÛÊ®ÈıÏã½æÄ©Ö¥Âé½´ÀÏ¸ÉÂè".split("");
+//		String[] newArray={"ä¸Šæµ·","å¤©æ´¥","å¹¿å·","æ­å·","è¾½å®","å—äº¬","æ­¦æ±‰","åŒ—äº¬","å¦é—¨","å†…è’™"}; 
+		String[] newArray="ç›é†‹é…±æ²¹å‘³ç²¾é¸¡ç²¾èŠ¡ç²‰èŠ±æ¤’èƒ¡æ¤’è€æŠ½ç”ŸæŠ½å­œç„¶å¹²è¾£æ¤’è¾£æ¤’ç²‰ç™½ç³–ç±³é†‹ç™½é†‹è€å§œä»”å§œæ³¡æ¤’èŠ±ç”Ÿæ²¹æ¤ç‰©æ²¹è€—æ²¹èœç±½æ²¹æ©„æ¦„æ²¹æ–™é…’å†°ç³–è°ƒé…’ç•ªèŒ„é…±è±†è±‰è±†ç“£é…±å’–å–±ç²‰äº”é¦™ç²‰åä¸‰é¦™èŠ¥æœ«èŠéº»é…±è€å¹²å¦ˆ".split("");
 		ArrangeChinaChar ac = new ArrangeChinaChar(newArray);
 		String[] sortedArr = ac.getSortedArr();
 		System.out.println(Arrays.toString(sortedArr));

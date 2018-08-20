@@ -10,13 +10,13 @@ import java.util.List;
 
 import com.celestial.agniRadiance.EzUtil.UtilFile;
 
-public class Í¼Áé»úÆ÷ÈË {
+public class å›¾çµæœºå™¨äºº {
 	
 	private static String savePath = UtilFile.getDesktopPath()+"/sb/";
-	private static String however = "È»¶øÎÒÔçÒÑ¿´´©ÁËÒ»ÇĞ£¡";
+	private static String however = "ç„¶è€Œæˆ‘æ—©å·²çœ‹ç©¿äº†ä¸€åˆ‡ï¼";
     public static void main(String[] args) throws IOException {
     	
-    	String[] sArr = new String[]{"ÀÏ×ÓÉÏÀ´¾ÍÊÇÒ»Ì×ËØÖÊÈıÁ¬£¡",however,"ÎÒ°®Äã£¡","Ô¼Âğ£¡","ÄãÕâÃ´ŒÅ£¬Ìì°²ÃÅÉÏÔõÃ´Ã»¹ÒÄãµÄÔíÆ¬£¡"};
+    	String[] sArr = new String[]{"è€å­ä¸Šæ¥å°±æ˜¯ä¸€å¥—ç´ è´¨ä¸‰è¿ï¼",however,"æˆ‘çˆ±ä½ ï¼","çº¦å—ï¼","ä½ è¿™ä¹ˆï¿½ç‰›ï¿½å¤©å®‰é—¨ä¸Šæ€ä¹ˆæ²¡æŒ‚ä½ çš„çš‚ç‰‡ï¼"};
     	executeRecycleChart(sArr);
     } 
     
@@ -29,12 +29,12 @@ public class Í¼Áé»úÆ÷ÈË {
         	req = sArr[i];
         	for(int j = 0 ; j < 100 ; j++){
         		
-            	list.add("Ñ©¸â£º" + req);
-            	System.out.println("Ñ©¸â£º" + req);
+            	list.add("é›ªç³•ï¼š" + req);
+            	System.out.println("é›ªç³•ï¼š" + req);
             	res = machine(req);
             	
-            	list.add("Äê¸â£º" + res);
-            	System.out.println("Äê¸â£º" + res);
+            	list.add("å¹´ç³•ï¼š" + res);
+            	System.out.println("å¹´ç³•ï¼š" + res);
             	
             	req = getReq(req,res);
             }
@@ -52,15 +52,15 @@ public class Í¼Áé»úÆ÷ÈË {
 	}
 
 	private static String machine(String quesiton) throws IOException {
-        //½ÓÈë»úÆ÷ÈË£¬ÊäÈëÎÊÌâ
+        //æ¥å…¥æœºå™¨äººï¼Œè¾“å…¥é—®é¢˜
         String APIKEY = "76d5ae7ab3954428ad765fe5a06c3021";
-        String INFO = URLEncoder.encode(quesiton, "utf-8");//ÕâÀï¿ÉÒÔÊäÈëÎÊÌâ
+        String INFO = URLEncoder.encode(quesiton, "utf-8");//è¿™é‡Œå¯ä»¥è¾“å…¥é—®é¢˜
         String getURL = "http://www.tuling123.com/openapi/api?key=" + APIKEY + "&info=" + INFO;
         URL getUrl = new URL(getURL);
         HttpURLConnection connection = (HttpURLConnection) getUrl.openConnection();
         connection.connect();
 
-        // È¡µÃÊäÈëÁ÷£¬²¢Ê¹ÓÃReader¶ÁÈ¡
+        // å–å¾—è¾“å…¥æµï¼Œå¹¶ä½¿ç”¨Readerè¯»å–
         BufferedReader reader = new BufferedReader(new InputStreamReader( connection.getInputStream(), "utf-8"));
         StringBuffer sb = new StringBuffer();
         String line = "";
@@ -68,7 +68,7 @@ public class Í¼Áé»úÆ÷ÈË {
             sb.append(line);
         }
         reader.close();
-        // ¶Ï¿ªÁ¬½Ó
+        // æ–­å¼€è¿æ¥
         connection.disconnect();
         String[] ss = new String[10];
         String s = sb.toString();

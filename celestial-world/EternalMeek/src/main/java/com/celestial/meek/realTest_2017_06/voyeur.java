@@ -1,9 +1,9 @@
 /******************************************************************
  * afd.java
  * Copyright 2017 by WZG. All Rights Reserved.
- * CreateDate£º2017-6-14
- * Author£ºwanzg
- * Version£º1.0.0
+ * CreateDateï¼š2017-6-14
+ * Authorï¼šwanzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.meek.realTest_2017_06;
@@ -12,7 +12,7 @@ import java.util.Observable;
 import java.util.Observer;
 
 /**
- * <b>ÐÞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
@@ -20,7 +20,7 @@ import java.util.Observer;
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜Žï¼š</b>
  * <p> 
  * 
  * </p>

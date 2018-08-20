@@ -9,9 +9,9 @@ import java.util.Map;
 public class UtilNormal {
 	/**
 	 * 
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ½øĞĞn´ËtableÍË¸ñ
+	 * è¿›è¡Œnæ­¤tableé€€æ ¼
 	 * </ul>
 	 * @param createAllVariables
 	 * @param i
@@ -32,14 +32,14 @@ public class UtilNormal {
 	
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡µ±Ç°²ã´ÎÀïµÄÏÂÒ»¸öÊı¡£<br/>
-	 * ÓÃÒ»¸ö¾²Ì¬±äÁ¿±£´æĞòÁĞ£¬³õÊ¼»¯Çëµ÷ÓÃ·½·¨initGradationTree<br/>
+	 * è·å–å½“å‰å±‚æ¬¡é‡Œçš„ä¸‹ä¸€ä¸ªæ•°ã€‚<br/>
+	 * ç”¨ä¸€ä¸ªé™æ€å˜é‡ä¿å­˜åºåˆ—ï¼Œåˆå§‹åŒ–è¯·è°ƒç”¨æ–¹æ³•initGradationTree<br/>
 	 * 
-	 * Õâ¸öÊÇÓÃÀ´¶Ô±éÀúÊ÷½øĞĞ±àºÅÓÃµÄ¡£<br/>
-	 * Ã¿¶ÔÒ»ĞĞ»ñÈ¡Ò»´Î£¬µ±Ç°ĞĞÊıÖµ¾ÍÔö´ó1.<br/>
-	 * Èç:getGradationTreeNum(1) = 0;getGradationTreeNum(1) =1;getGradationTreeNum(1) =2 ...<br/>
+	 * è¿™ä¸ªæ˜¯ç”¨æ¥å¯¹éå†æ ‘è¿›è¡Œç¼–å·ç”¨çš„ã€‚<br/>
+	 * æ¯å¯¹ä¸€è¡Œè·å–ä¸€æ¬¡ï¼Œå½“å‰è¡Œæ•°å€¼å°±å¢å¤§1.<br/>
+	 * å¦‚:getGradationTreeNum(1) = 0;getGradationTreeNum(1) =1;getGradationTreeNum(1) =2 ...<br/>
 	 * </ul>
 	 * @param talbelLevel
 	 * @return
@@ -63,9 +63,9 @@ public class UtilNormal {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ½«partList´Óµ¹ÊıµÚnĞĞ²åÈëlistÖĞ
+	 * å°†partListä»å€’æ•°ç¬¬nè¡Œæ’å…¥listä¸­
 	 * </ul>
 	 * @param list
 	 * @param partList
@@ -78,9 +78,9 @@ public class UtilNormal {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Ïß³ÌĞİÃß
+	 * çº¿ç¨‹ä¼‘çœ 
 	 * </ul>
 	 * @param sleepPeriod
 	 */
@@ -92,11 +92,11 @@ public class UtilNormal {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ½âÎö·µ»ØµÄxml<br/>
-	 * ½âÎöÎªMap,Ò»ÖÖ·Ç³£´Ö²ÚµÄ·½Ê½<br/>
-	 * ÓĞ¿ÉÈ¡Ö®´¦
+	 * è§£æè¿”å›çš„xml<br/>
+	 * è§£æä¸ºMap,ä¸€ç§éå¸¸ç²—ç³™çš„æ–¹å¼<br/>
+	 * æœ‰å¯å–ä¹‹å¤„
 	 * </ul>
 	 * @param resStr
 	 * @return 

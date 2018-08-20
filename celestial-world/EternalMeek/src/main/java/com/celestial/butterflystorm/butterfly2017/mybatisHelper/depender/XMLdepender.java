@@ -9,12 +9,12 @@ import com.celestial.agniRadiance.EzUtil.UtilString;
 
 public class XMLdepender {
 	/**
-	±¾±í È«²¿×Ö¶Î ÀàÃû
-	Ëû±í È«²¿×Ö¶Î ÀàÃû
+	æœ¬è¡¨ å…¨éƒ¨å­—æ®µ ç±»å
+	ä»–è¡¨ å…¨éƒ¨å­—æ®µ ç±»å
 
-	Á¬½ÓÌõ¼ş¡¢¶ÔÓ¦×Ö¶Î
+	è¿æ¥æ¡ä»¶ã€å¯¹åº”å­—æ®µ
 	
-	Á¬½Ó  + ±íÃû   StrengthKind=StrengthKind,level=level|strengthen
+	è¿æ¥  + è¡¨å   StrengthKind=StrengthKind,level=level|strengthen
 	*/
 	
 	private String fullDaoName ="";
@@ -22,7 +22,7 @@ public class XMLdepender {
 	private String tableName ="";
 	private String className ="";
 	
-	/**ºÍÏÂÒ»¼¶±íµÄ¹ØÁª×Ö¶Î*/
+	/**å’Œä¸‹ä¸€çº§è¡¨çš„å…³è”å­—æ®µ*/
 	private List<String[]> joinOnList = new ArrayList<String[]>();//"level=level,strengthenKind=strengthenKind|strengthen|strengthenList|com.dn.entity.Strengthen|many"
 	
 	private List<String[]> columnList = new ArrayList<String[]>();
@@ -121,8 +121,8 @@ public class XMLdepender {
 	}
 
 	
-	//ÔõÃ´±éÀú»ñÈ¡? ¶¼ÊÇÍ¨¹ıDependerContainer»ñÈ¡µÄ¡£ÃÈ´óÄÌ£¡
-	//¹ØÁª×Ö¶Î·ÅÄÄ¶ù? ok!
+	//æ€ä¹ˆéå†è·å–? éƒ½æ˜¯é€šè¿‡DependerContainerè·å–çš„ã€‚èŒå¤§å¥¶ï¼
+	//å…³è”å­—æ®µæ”¾å“ªå„¿? ok!
 	
 	
 	

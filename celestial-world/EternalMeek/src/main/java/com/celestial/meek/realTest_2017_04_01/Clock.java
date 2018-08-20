@@ -11,11 +11,11 @@ import java.util.TimeZone;
 import javax.swing.JFrame;
 import javax.swing.Timer;
 /**
-* <p>Title: Ê±ÖÓ</p>
-* <p>Description: ±¾ÊµÀıÑİÊ¾Ê¹ÓÃÍ¼ĞÎ»æÖÆÒ»¸öÍ¼ĞÎÊ±ÖÓ</p>
+* <p>Title: æ—¶é’Ÿ</p>
+* <p>Description: æœ¬å®ä¾‹æ¼”ç¤ºä½¿ç”¨å›¾å½¢ç»˜åˆ¶ä¸€ä¸ªå›¾å½¢æ—¶é’Ÿ</p>
 * <p>Copyright: Copyright (c) 2003</p>
 * <p>Filename: Clock.java</p>
-* @author ¶Å½­
+* @author æœæ±Ÿ
 * @version 1.0
 */
 public class Clock extends JFrame implements ActionListener{ 
@@ -30,17 +30,17 @@ Timer timer;
  public static void main(String[] args){
  }
 /**
-*<br>·½·¨ËµÃ÷£ºÊµÏÖActionListenerÀà±ØĞë¹ıÔØµÄ·½·¨
-*<br>ÊäÈë²ÎÊı£º
-*<br>·µ»ØÀàĞÍ£º
+*<br>æ–¹æ³•è¯´æ˜ï¼šå®ç°ActionListenerç±»å¿…é¡»è¿‡è½½çš„æ–¹æ³•
+*<br>è¾“å…¥å‚æ•°ï¼š
+*<br>è¿”å›ç±»å‹ï¼š
 */ 
  public void actionPerformed(ActionEvent e) {
            timer.restart();
    }
 /**
-*<br>·½·¨ËµÃ÷£º¹¹ÔìÆ÷£¬ÏÔÊ¾´°Ìå£¬²¢Ìí¼ÓÁËÒ»¸öÃë±í
-*<br>ÊäÈë²ÎÊı£º
-*<br>·µ»ØÀàĞÍ£º
+*<br>æ–¹æ³•è¯´æ˜ï¼šæ„é€ å™¨ï¼Œæ˜¾ç¤ºçª—ä½“ï¼Œå¹¶æ·»åŠ äº†ä¸€ä¸ªç§’è¡¨
+*<br>è¾“å…¥å‚æ•°ï¼š
+*<br>è¿”å›ç±»å‹ï¼š
 */ 
  Clock(){
    super("Clock");
@@ -48,7 +48,7 @@ Timer timer;
    setBackground(new Color(0,0,192));
    setSize(300,300);
    int delay = 1000;
-   //´°ÌåÌí¼ÓÊÂ¼ş¼àÌı£¬¼àÌıÃë±íµÄ´¥·¢
+   //çª—ä½“æ·»åŠ äº‹ä»¶ç›‘å¬ï¼Œç›‘å¬ç§’è¡¨çš„è§¦å‘
    ActionListener taskPerformer = new ActionListener() {
      public void actionPerformed(ActionEvent evt) {
         repaint();
@@ -57,9 +57,9 @@ Timer timer;
    new Timer(delay, taskPerformer).start();
  }
 /**
-*<br>·½·¨ËµÃ÷£º»æÖÆÍ¼ĞÎ
-*<br>ÊäÈë²ÎÊı£º
-*<br>·µ»ØÀàĞÍ£º
+*<br>æ–¹æ³•è¯´æ˜ï¼šç»˜åˆ¶å›¾å½¢
+*<br>è¾“å…¥å‚æ•°ï¼š
+*<br>è¿”å›ç±»å‹ï¼š
 */
  public void paint( Graphics g ) { 
  	 Insets insets = getInsets();
@@ -67,7 +67,7 @@ Timer timer;
     int hh,mm,ss; 
     String st; 
     h=getSize().height;
-    //»æÖÆÔ²ĞÎ
+    //ç»˜åˆ¶åœ†å½¢
     g.setColor(Color.white); 
     g.drawOval(L0+30,T0+30,h-60,h-60);
     g.drawOval(L0+32,T0+32,h-64,h-64);
@@ -82,23 +82,23 @@ Timer timer;
        ang-=30;
     } 
     x0=30+r+L0; y0=30+r+T0;
-    //»ñÈ¡Ê±¼ä
+    //è·å–æ—¶é—´
     Calendar now=Calendar.getInstance();
-    hh=now.get(Calendar.HOUR_OF_DAY);//Ğ¡Ê±
-    mm=now.get(Calendar.MINUTE);//·ÖÖÓ
-    ss=now.get(Calendar.SECOND);// Ãë
+    hh=now.get(Calendar.HOUR_OF_DAY);//å°æ—¶
+    mm=now.get(Calendar.MINUTE);//åˆ†é’Ÿ
+    ss=now.get(Calendar.SECOND);// ç§’
     g.setColor(Color.pink); 
-    g.fillRect(L0,T0,60,28);//Ìî³äµÄ¾ØĞÎ
+    g.fillRect(L0,T0,60,28);//å¡«å……çš„çŸ©å½¢
     g.setColor(Color.blue); 
     if (hh < 10) st="0"+hh;     else st=""+hh; 
     if (mm < 10) st=st+":0"+mm; else st=st+":"+mm; 
     if (ss < 10) st=st+":0"+ss; else st=st+":"+ss; 
     g.drawString(st,L0,T0+25);
-    //¼ÆËãÊ±¼äºÍÍ¼ĞÎµÄ¹ØÏµ
+    //è®¡ç®—æ—¶é—´å’Œå›¾å½¢çš„å…³ç³»
     sdo=90-ss*6;
     mdo=90-mm*6;
     hdo=90-hh*30-mm/2;
-    //²Á³ıÃëÕë
+    //æ“¦é™¤ç§’é’ˆ
     if (old_X > 0) {
        g.setColor(getBackground());
        g.drawLine(x0,y0,old_X,(h-old_Y));
@@ -106,7 +106,7 @@ Timer timer;
        old_M=mdo;
        old_H=hdo;
     } 
-    //»æÖÆÃëÕë
+    //ç»˜åˆ¶ç§’é’ˆ
     g.setColor(Color.yellow); 
     x=(int)((r-8)*Math.cos(RAD*sdo)+x0); 
     y=(int)((r-8)*Math.sin(RAD*sdo)+y0)-2*T0; 
@@ -114,7 +114,7 @@ Timer timer;
     
     old_X=x; 
     old_Y=y; 
-    //²Á³ı·ÖÕëºÍÊ±Õë
+    //æ“¦é™¤åˆ†é’ˆå’Œæ—¶é’ˆ
     if (mdo != old_M) {
       line(g,old_M,(int)(r*0.7),getBackground());
       old_M=mdo;
@@ -123,15 +123,15 @@ Timer timer;
       line(g,old_H,(int)(r*0.5),getBackground());
       old_H=hdo;
     } 
-    //»æÖÆ·ÖÕë
+    //ç»˜åˆ¶åˆ†é’ˆ
     line(g,mdo,(int)(r*0.7),Color.green);
-    //»æÖÆÊ±Õë
+    //ç»˜åˆ¶æ—¶é’ˆ
     line(g,hdo,(int)(r*0.5),Color.red);
  } // end paint 
 /**
-*<br>·½·¨ËµÃ÷£º»æÖÆÏß£¬ÓÃÓÚ»æÖÆÊ±ÕëºÍ·ÖÕë
-*<br>ÊäÈë²ÎÊı£º
-*<br>·µ»ØÀàĞÍ£º
+*<br>æ–¹æ³•è¯´æ˜ï¼šç»˜åˆ¶çº¿ï¼Œç”¨äºç»˜åˆ¶æ—¶é’ˆå’Œåˆ†é’ˆ
+*<br>è¾“å…¥å‚æ•°ï¼š
+*<br>è¿”å›ç±»å‹ï¼š
 */
   public void line(Graphics g, int t, int n, Color c) { 
      int [] xp = new int[4];

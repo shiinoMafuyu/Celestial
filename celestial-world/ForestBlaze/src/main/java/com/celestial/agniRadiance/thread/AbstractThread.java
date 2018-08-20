@@ -1,9 +1,9 @@
 /******************************************************************
  * ISocketRead.java
  * Copyright ${year} by WZG. All Rights Reserved.
- * CreateDate£º2017Äê9ÔÂ18ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´9æœˆ18æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.agniRadiance.thread;
@@ -12,15 +12,15 @@ import com.celestial.agniRadiance.EzUtil.UtilNormal;
 import com.celestial.agniRadiance.log.EZLogUtil;
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê9ÔÂ18ÈÕ
+ *                        ---- wangzg 2017å¹´9æœˆ18æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
  * 
  * </p>
@@ -35,7 +35,7 @@ public abstract class AbstractThread extends Thread {
 		try {
 			interrupt();
 		} catch (Exception e) {
-			EZLogUtil.operationLogger.seriousWarn("Í£Ö¹[" + getClass().getName() + "]Ïß³ÌÒì³£" + e);
+			EZLogUtil.operationLogger.seriousWarn("åœæ­¢[" + getClass().getName() + "]çº¿ç¨‹å¼‚å¸¸" + e);
 			EZLogUtil.systemLogger.debug("", e);
 		}
 	}
@@ -71,7 +71,7 @@ public abstract class AbstractThread extends Thread {
 	}
 
 	protected void doExceptionWork(Exception e) {
-		EZLogUtil.operationLogger.error("Ö´ĞĞ[" + getClass().getName() + "]Ïß³ÌÒì³£: " + e);
+		EZLogUtil.operationLogger.error("æ‰§è¡Œ[" + getClass().getName() + "]çº¿ç¨‹å¼‚å¸¸: " + e);
 		EZLogUtil.systemLogger.debug("", e);
 	}
 

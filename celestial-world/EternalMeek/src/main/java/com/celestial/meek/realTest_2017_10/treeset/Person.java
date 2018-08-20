@@ -1,9 +1,9 @@
 /******************************************************************
  * Person.java
  * Copyright 2017 by WZG. All Rights Reserved.
- * CreateDate£º2017Äê7ÔÂ23ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´7æœˆ23æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.meek.realTest_2017_10.treeset;
@@ -11,15 +11,15 @@ package com.celestial.meek.realTest_2017_10.treeset;
 import java.io.Serializable;
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê7ÔÂ23ÈÕ
+ *                        ---- wangzg 2017å¹´7æœˆ23æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
  * 
  * </p>
@@ -30,11 +30,11 @@ public class Person implements Serializable {
 	private static final long serialVersionUID = 1516766358834382649L;
 	
 	/**
-     * ĞÕÃû
+     * å§“å
      */
     private String name;
     /**
-     * ÄêÁä
+     * å¹´é¾„
      */
     private int age;
 

@@ -25,7 +25,7 @@ public class ConfigVO {
 
 	public ConfigVO(Map<String, String> map) {
 		try{
-			//ÅäÖÃÖµ
+			//é…ç½®å€¼
 			this.setDeleteInterval(Long.valueOf(map.get("deleteInterval")) * 1000)
 			.setDesPath(map.get("desPath"))
 			.setInterval(Long.valueOf(map.get("interval")) * 1000)
@@ -33,8 +33,8 @@ public class ConfigVO {
 			.setSrcPath(map.get("srcPath"));
 			
 		}catch (Exception e) {
-			System.out.println("¶ÁÈ¡ÅäÖÃ·¢ÉúÒì³££¬Ê¹ÓÃÄ¬ÈÏÖµ");
-			//Ä¬ÈÏÖµ
+			System.out.println("è¯»å–é…ç½®å‘ç”Ÿå¼‚å¸¸ï¼Œä½¿ç”¨é»˜è®¤å€¼");
+			//é»˜è®¤å€¼
 			String desktopPath = UtilFile.getAbsolutePath(UtilFile.getDesktopPath());
 			this.setDeleteInterval(1000*60L)
 			.setDesPath(desktopPath)

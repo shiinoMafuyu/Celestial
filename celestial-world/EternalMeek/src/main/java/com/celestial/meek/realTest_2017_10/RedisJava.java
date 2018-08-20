@@ -1,9 +1,9 @@
 /******************************************************************
  * RedisJava.java
  * Copyright 2017 by WZG. All Rights Reserved.
- * CreateDate£º2017Äê10ÔÂ17ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´10æœˆ17æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.meek.realTest_2017_10;
@@ -13,15 +13,15 @@ import org.junit.Test;
 import redis.clients.jedis.Jedis;
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê10ÔÂ17ÈÕ
+ *                        ---- wangzg 2017å¹´10æœˆ17æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
  * 
  * </p>
@@ -31,24 +31,24 @@ public class RedisJava {
 	@Test
 	@SuppressWarnings("resource")
 	public void _01_(){
-		//Á¬½Ó±¾µØµÄ Redis ·şÎñ
+		//è¿æ¥æœ¬åœ°çš„ Redis æœåŠ¡
 		Jedis jedis = new Jedis("localhost");
-		System.out.println("Á¬½Ó³É¹¦");
-		//²é¿´·şÎñÊÇ·ñÔËĞĞ
-		System.out.println("·şÎñÕıÔÚÔËĞĞ: " + jedis.ping());
+		System.out.println("è¿æ¥æˆåŠŸ");
+		//æŸ¥çœ‹æœåŠ¡æ˜¯å¦è¿è¡Œ
+		System.out.println("æœåŠ¡æ­£åœ¨è¿è¡Œ: " + jedis.ping());
 
 	}
 	
 	@SuppressWarnings("resource")
 	@Test
 	public void _02_(){
-		//Á¬½Ó±¾µØµÄ Redis ·şÎñ
+		//è¿æ¥æœ¬åœ°çš„ Redis æœåŠ¡
 		Jedis jedis = new Jedis("localhost");
-		System.out.println("Á¬½Ó³É¹¦");
-		//ÉèÖÃ redis ×Ö·û´®Êı¾İ
+		System.out.println("è¿æ¥æˆåŠŸ");
+		//è®¾ç½® redis å­—ç¬¦ä¸²æ•°æ®
 		jedis.set("name3", "mooncake");
-		// »ñÈ¡´æ´¢µÄÊı¾İ²¢Êä³ö
-		System.out.println("redis ´æ´¢µÄ×Ö·û´®Îª: " + jedis.get("name3"));
+		// è·å–å­˜å‚¨çš„æ•°æ®å¹¶è¾“å‡º
+		System.out.println("redis å­˜å‚¨çš„å­—ç¬¦ä¸²ä¸º: " + jedis.get("name3"));
 		
 		
 	}
@@ -64,7 +64,7 @@ public class RedisJava {
 					Jedis jedis = new Jedis("localhost");
 					String namet = "namet"+m;
 		            jedis.set(namet, "mooncake"+m);
-		            System.out.println("redis ´æ´¢µÄ×Ö·û´®"+namet+"Îª: "+ jedis.get(namet));
+		            System.out.println("redis å­˜å‚¨çš„å­—ç¬¦ä¸²"+namet+"ä¸º: "+ jedis.get(namet));
 				}
 			}).start();;
         	

@@ -22,16 +22,16 @@ public class TestUtil_Japnese {
 	@Test
 	public void _01_wordTransToRoman() {
 		
-		String s = "¥³¥ó¥Ô¥å©`¥¿©`";
+		String s = "ã‚³ãƒ³ãƒ”ãƒ¥ï¿½ã‚¿ï¿½";
 		String res = Util_Japanese.wordTransToRoman(s);
-		//ko n pyu ©` ta ©`
-		Assert.assertTrue("ko n pyu ©` ta ©` ".equals(res));
+		//ko n pyu ï¿½ ta ï¿½
+		Assert.assertTrue("ko n pyu ï¿½ ta ï¿½ ".equals(res));
 //		
 		
-		String re2 = Util_Japanese.wordTransToRoman("1£©¤ï¤¿¤·¡¡¤Ï¡¡¤Ó¤·¤ç¤¦¤Í¤ó¡¡¤Ç¤¹¡£");
+		String re2 = Util_Japanese.wordTransToRoman("1ï¿½ã‚ãŸã—ã€€ã¯ã€€ã³ã—ã‚‡ã†ã­ã‚“ã€€ã§ã™ã€‚");
 		System.out.println(re2);
-		Assert.assertEquals(re2, "1 £© wa ta shi ¡¡ ha ¡¡ bi sho u ne n ¡¡ de su ¡£ ");
-		System.out.println(Util_Japanese.wordTransToRoman("¤­¤Ç¤¯¤À¤µ¤¤¤¤"));
+		Assert.assertEquals(re2, "1 ï¿½ wa ta shi ã€€ ha ã€€ bi sho u ne n ã€€ de su ã€‚ ");
+		System.out.println(Util_Japanese.wordTransToRoman("ãã§ãã ã•ã„ã„"));
 	}
 	
 	

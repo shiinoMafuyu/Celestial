@@ -11,9 +11,9 @@ public class TestEquipmentsCombine extends TestCase {
 		super.setUp();
 	}
 	public void testInit(){
-		eps = new EquipmentsCombineImpl("src/com/dragonNest/other/equipment/Ò»Ì××°±¸/Ò»Ì××°±¸00.txt");
+		eps = new EquipmentsCombineImpl("src/com/dragonNest/other/equipment/ä¸€å¥—è£…å¤‡/ä¸€å¥—è£…å¤‡00.txt");
 		Double d = eps.getPropertyFixedPCTMap().get("typeLight").getValue();
-		assertEquals(43.92, d);//¹â¹¥43.92
+		assertEquals(43.92, d);//å…‰æ”»43.92
 		assertEquals(13.96, eps.getPropertyFixedPCTMap().get("typeDarkness").getValue());
 		assertEquals(29.96, eps.getPropertyFixedPCTMap().get("typeFire").getValue());
 		assertEquals(29.96, eps.getPropertyFixedPCTMap().get("typeWater").getValue());

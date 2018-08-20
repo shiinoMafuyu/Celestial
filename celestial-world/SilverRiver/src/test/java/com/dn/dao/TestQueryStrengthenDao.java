@@ -41,7 +41,7 @@ public class TestQueryStrengthenDao {
 	@Test
 	public void _01_insert(){
 		entity = new Strengthen();
-		entity.setRepresentId("009300010001");entity.setStrengthenKind("90S-±ùÁú-Í·¿ø");entity.setStrengthenLevel(14);entity.setLevel(90);entity.setAf(2.33);entity.setAg(8.43);entity.setMg("16000~16000");
+		entity.setRepresentId("009300010001");entity.setStrengthenKind("90S-å†°é¾™-å¤´ç›”");entity.setStrengthenLevel(14);entity.setLevel(90);entity.setAf(2.33);entity.setAg(8.43);entity.setMg("16000~16000");
 		int re = theDao.insert(entity);
 		Assert.assertTrue(re >=0);
 	}
@@ -49,7 +49,7 @@ public class TestQueryStrengthenDao {
 	@Test
 	public void _02_select(){
 		List<Strengthen> entityList = theDao.selectByCondition(entity);
-		System.out.println("Ìõ¼ş²éÑ¯£º");
+		System.out.println("æ¡ä»¶æŸ¥è¯¢ï¼š");
 		for(Strengthen i:entityList){
 			System.out.println(i);
 		}
@@ -59,7 +59,7 @@ public class TestQueryStrengthenDao {
 	@Test
 	public void _02_select02_vague(){
 		List<Strengthen> entityList = theDao.selectByVague(entity);
-		System.out.println("Ä£ºı²éÑ¯£º");
+		System.out.println("æ¨¡ç³ŠæŸ¥è¯¢ï¼š");
 		for(Strengthen i:entityList){
 			System.out.println(i);
 		}

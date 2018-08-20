@@ -4,7 +4,7 @@ import com.celestial.meek.realTest_2016_06_reflectBefore.Fly;
 
 public class x implements Fly{
 public void evl(){System.out.println(5+6*10+21.44/5+998);
-System.out.println("Ç°ºó×óÓÒµÄ1ÅóÓÑÄãÃÇ¶¼ºÃÂğ?!");
+System.out.println("å‰åå·¦å³çš„1æœ‹å‹ä½ ä»¬éƒ½å¥½å—?!");
 }
 
 @Override

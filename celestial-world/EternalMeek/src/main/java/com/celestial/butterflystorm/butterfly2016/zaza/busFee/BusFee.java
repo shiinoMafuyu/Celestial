@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class BusFee {
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -14,7 +14,7 @@ public class BusFee {
 	 */
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
-		String[] msg = new String[]{"²ÎÊı´íÎó,","ÇëÊäÈëÈçÏÂĞÎÊ½²ÎÊı:\n  (int year, int month)\n  (int year, int month, int percent)\n  (int year, int month, int percent , double price)"};
+		String[] msg = new String[]{"å‚æ•°é”™è¯¯,","è¯·è¾“å…¥å¦‚ä¸‹å½¢å¼å‚æ•°:\n  (int year, int month)\n  (int year, int month, int percent)\n  (int year, int month, int percent , double price)"};
 		boolean isContinue = true;
 		Scanner sc = new Scanner(System.in);
 		if(args == null)
@@ -23,7 +23,7 @@ public class BusFee {
 			try {
 				BusFee bf = new BusFee();
 				int n = args.length;
-				if(n>=2)System.out.print(args[0]+"Äê"+args[1]+"ÔÂ,Ó¦³å¹«½»·ÑÓÃ:");
+				if(n>=2)System.out.print(args[0]+"å¹´"+args[1]+"æœˆ,åº”å†²å…¬äº¤è´¹ç”¨:");
 				switch(n){
 					case 1:System.out.println(msg[1]);
 					break;
@@ -45,17 +45,17 @@ public class BusFee {
 		
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡Ã¿ÔÂ¹¤¶àÉÙÌì,ĞİÏ¢¶àÉÙÌì.<br/>
+	 * è·å–æ¯æœˆå·¥å¤šå°‘å¤©,ä¼‘æ¯å¤šå°‘å¤©.<br/>
 	 * </ul>
 	 * @param year
 	 * @param money (1~12)
-	 * @return iArr[0] : ¸ÃÔÂ¹¤×÷ÈÕ,iArr[1] : ¸ÃÔÂĞİÏ¢ÈÕ
+	 * @return iArr[0] : è¯¥æœˆå·¥ä½œæ—¥,iArr[1] : è¯¥æœˆä¼‘æ¯æ—¥
 	 */
 	public int[] getDayScattered(int year, int month) {
 		if(month > Calendar.DECEMBER || month < Calendar.JANUARY)
-			throw new RuntimeException("Óã·Û");
+			throw new RuntimeException("é±¼ç²‰");
 		month -= 1;
 		int[] iArr = new int[]{0,0};
 		Calendar cd = Calendar.getInstance();
@@ -73,11 +73,11 @@ public class BusFee {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Õâ¸öÔÂ³å¶àÉÙÇ®.<br/>
-	 * ÖÜÄ©ÖÜÈÕ²»ÉÏ°à<br/>
-	 * Ä¬ÈÏ·ÑÓÃÒ»ÌìÀ´»Ø2¿é.<br/>
+	 * è¿™ä¸ªæœˆå†²å¤šå°‘é’±.<br/>
+	 * å‘¨æœ«å‘¨æ—¥ä¸ä¸Šç­<br/>
+	 * é»˜è®¤è´¹ç”¨ä¸€å¤©æ¥å›2å—.<br/>
 	 * </ul>
 	 * @param year
 	 * @param money (1~12)
@@ -88,32 +88,32 @@ public class BusFee {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
 	 * @param year
 	 * @param month (1~12)
-	 * @param percent ÖÜÄ©È¥µÄ±ÈÀı(%)¿ÉÒÔÎª¸º,×Ô¼ºÌå»áº¬Òå<br/>
+	 * @param percent å‘¨æœ«å»çš„æ¯”ä¾‹(%)å¯ä»¥ä¸ºè´Ÿ,è‡ªå·±ä½“ä¼šå«ä¹‰<br/>
 	 * @return
 	 */
 	public double getRecharge(int year, int month, int percent) {
 		return getRecharge(year,month,percent,2);
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
 	 * @param year
 	 * @param month
 	 * @param percent
-	 * @param price Ò»ÌìÀ´»ØºÏ¼Æ¼Û¸ñ<br/>
+	 * @param price ä¸€å¤©æ¥å›åˆè®¡ä»·æ ¼<br/>
 	 * @return
 	 */
 	public double getRecharge(int year, int month, int percent,double price) {
 		if(percent  > 100)
-			throw new RuntimeException("±ÈÀı·¶Î§´íÎó,ÇëÏŞ¶¨ÔÚĞ¡ÓÚ100·¶Î§.");
+			throw new RuntimeException("æ¯”ä¾‹èŒƒå›´é”™è¯¯,è¯·é™å®šåœ¨å°äº100èŒƒå›´.");
 		int[] iArr = getDayScattered(year, month);
 		double fee = (iArr[0]  + Math.round(iArr[1] * percent/100)) * price;
 		return fee;

@@ -1,9 +1,9 @@
 /******************************************************************
  * QueryThread.java
  * Copyright 2017 by WZG. All Rights Reserved.
- * CreateDate£º2017Äê6ÔÂ27ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´6æœˆ27æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.meek.realTest_2017_06.testSelectSpeed;
@@ -11,15 +11,15 @@ package com.celestial.meek.realTest_2017_06.testSelectSpeed;
 import java.util.List;
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê6ÔÂ27ÈÕ
+ *                        ---- wangzg 2017å¹´6æœˆ27æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
  * 
  * </p>
@@ -31,7 +31,7 @@ public class QueryThread extends Thread{
 	List<Entity> list ;
 	
 	/**
-	 * <b>¹¹Ôì·½·¨</b>
+	 * <b>æ„é€ æ–¹æ³•</b>
 	 * <br/>
 	 * @param queryDAO
 	 * @param range
@@ -51,9 +51,9 @@ public class QueryThread extends Thread{
 
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡
+	 * è·å–
 	 * </ul>
 	 * @return the list
 	 */
@@ -63,9 +63,9 @@ public class QueryThread extends Thread{
 
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃ
+	 * è®¾ç½®
 	 * </ul>
 	 * list
 	 */
@@ -75,9 +75,9 @@ public class QueryThread extends Thread{
 
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡
+	 * è·å–
 	 * </ul>
 	 * @return the queryDAO
 	 */

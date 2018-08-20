@@ -1,9 +1,9 @@
 /******************************************************************
  * TestArr.java
  * Copyright 2017 by WZG. All Rights Reserved.
- * CreateDate£º2017Äê9ÔÂ13ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´9æœˆ13æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.meek.realTest_2017_09.S01yuanArray.test;
@@ -21,15 +21,15 @@ import com.celestial.meek.realTest_2017_09.S01yuanArray.vo.Person;
 
 
 /**
- * <b>ÐÞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê9ÔÂ13ÈÕ
+ *                        ---- wangzg 2017å¹´9æœˆ13æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜Žï¼š</b>
  * <p> 
  * 
  * </p>
@@ -38,7 +38,7 @@ public class TestArr {
 	
 //	@Test
 //	public void _01_Duplicated(){
-//		String personName = "shiino",countryName = "ÈÕ±¾",capital = "¶«¾©¶¼";
+//		String personName = "shiino",countryName = "æ—¥æœ¬",capital = "ä¸œäº¬éƒ½";
 //		Duplicated<Person, Country> d = getMsg(personName,countryName);
 //		Assert.assertEquals(personName, d.a.getName());
 //		Assert.assertEquals(countryName, d.b.getName());
@@ -49,7 +49,7 @@ public class TestArr {
 //	}
 //	@Test
 //	public void _02_FiveTuple(){
-//		String personName = "shiino",countryName = "ÈÕ±¾",capital = "¶«¾©¶¼";
+//		String personName = "shiino",countryName = "æ—¥æœ¬",capital = "ä¸œäº¬éƒ½";
 //		FourTuple<Person,Integer,Country,String> five = new FourTuple<>(new Person().setName(personName), 15, new Country().setName(countryName), capital);
 //		
 //		Assert.assertEquals(five.c.setCapital(capital).getCapital(), capital);

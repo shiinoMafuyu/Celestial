@@ -12,9 +12,9 @@ public class a2 {
 		System.out.println(b+"222222");
 		String tail = "com/celestial/butterflystorm/butterfly2016/zaza/busFee/BusFee.class";
 		UtilFile.copyByCmdDRS(new File("D:/GitHub/Celestial/celestial-world/EternalMeek/target/classes/"+tail),
-				new File("E:/t/t29 ¹¤¾ß¿ª·¢/02²¹¶¡ºÏ²¢¹¤¾ß/04 ¹«½»·Ñ/"+tail));
+				new File("E:/t/t29 å·¥å…·å¼€å‘/02è¡¥ä¸åˆå¹¶å·¥å…·/04 å…¬äº¤è´¹/"+tail));
 		System.out.println("https://172.18.3.3/svn/PI/%E8%B5%84%E6%BA%90%E5%85%B1%E4%BA%AB/%E5%BC%80%E5%8F%91%E4%B8%89%E9%83%A8/%E6%BA%90%E4%BB%A3%E7%A0%81%E5%BA%93");
-//		System.out.println(String.format("md5ÖµÒ»Ñù£º%s", "a16cddc192534b263cceea57850b5288".equals(Util_File.getMd5ByFile(new File("E:/BaiduYunDownload/site-1.10.13-1.9.x.zip")))));
-//		System.out.println(String.format("md5ÖµÒ»Ñù£º%s", "a16cddc192534b263cceea57850b5288".equals(Util_File.getMd5ByFile(new File("E:/Download/site-1.10.13-1.9.x.zip")))));
+//		System.out.println(String.format("md5å€¼ä¸€æ ·ï¼š%s", "a16cddc192534b263cceea57850b5288".equals(Util_File.getMd5ByFile(new File("E:/BaiduYunDownload/site-1.10.13-1.9.x.zip")))));
+//		System.out.println(String.format("md5å€¼ä¸€æ ·ï¼š%s", "a16cddc192534b263cceea57850b5288".equals(Util_File.getMd5ByFile(new File("E:/Download/site-1.10.13-1.9.x.zip")))));
 	}
 }

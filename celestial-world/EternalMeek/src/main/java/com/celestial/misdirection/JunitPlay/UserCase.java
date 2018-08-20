@@ -8,7 +8,7 @@ import com.celestial.agniRadiance.entity.FileReader;
 import com.celestial.agniRadiance.entity.Tag;
 /**
  * 
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
@@ -16,47 +16,47 @@ import com.celestial.agniRadiance.entity.Tag;
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
- * Ò»¸öºÚºĞ×Ô¶¯²âÊÔĞ­Òé¹¦ÄÜµÄÀà.<br/>
- * ÒªÇó±àĞ´²âÊÔÎÄµµ<br/>
- * ÏÖÔÚÕâ¸öÀàÀïº¬ÓĞµÄÄ³Ğ©·½·¨Ö»ÄÜÓÃÓÚÕâ¸öÇé¾°ÏÂµÄ²âÊÔ,ÓĞµÄÔò¿ÉÓÃÓÚÍ¨ÓÃµÄ²âÊÔ.<br/>
- * Ä¿Ç°»¹Ã»ÓĞ²âÊÔÆäËû,Èç¹ûÓĞµÄ»°ÔÙÒÔ¼Ì³ĞµÄ·½Ê½À´ÊµÏÖ¶àÌ¬ºÍÖØÓÃ¾ÍĞĞ.<br/>
+ * ä¸€ä¸ªé»‘ç›’è‡ªåŠ¨æµ‹è¯•åè®®åŠŸèƒ½çš„ç±».<br/>
+ * è¦æ±‚ç¼–å†™æµ‹è¯•æ–‡æ¡£<br/>
+ * ç°åœ¨è¿™ä¸ªç±»é‡Œå«æœ‰çš„æŸäº›æ–¹æ³•åªèƒ½ç”¨äºè¿™ä¸ªæƒ…æ™¯ä¸‹çš„æµ‹è¯•,æœ‰çš„åˆ™å¯ç”¨äºé€šç”¨çš„æµ‹è¯•.<br/>
+ * ç›®å‰è¿˜æ²¡æœ‰æµ‹è¯•å…¶ä»–,å¦‚æœæœ‰çš„è¯å†ä»¥ç»§æ‰¿çš„æ–¹å¼æ¥å®ç°å¤šæ€å’Œé‡ç”¨å°±è¡Œ.<br/>
  * </p>
  */
 public class UserCase {
 	/**
-	 * ÇëÇóµÄÁ¬½Ó
+	 * è¯·æ±‚çš„è¿æ¥
 	 */
 	private String url;
 	/**
-	 * ÓÃÀıÃû
+	 * ç”¨ä¾‹å
 	 */
 	private String userCaseName;
 	/**
-	 * ÓÃÀıÊäÈë±êÇ©
+	 * ç”¨ä¾‹è¾“å…¥æ ‡ç­¾
 	 */
 	private Tag tagInput;
 	/**
-	 * ÓÃÀıÇëÇóĞÅÏ¢(ÅäºÏurlÊ³ÓÃ)
+	 * ç”¨ä¾‹è¯·æ±‚ä¿¡æ¯(é…åˆurlé£Ÿç”¨)
 	 */
 	private String requestMessage;
 	/**
-	 * ÑéÖ¤±êÇ©
+	 * éªŒè¯æ ‡ç­¾
 	 */
 	private Tag tagVerify;
 	/**
-	 * ÇëÇóºó·µ»ØµÄĞÅÏ¢.
+	 * è¯·æ±‚åè¿”å›çš„ä¿¡æ¯.
 	 */
 	private Tag tagOutput;
 	/**
-	 * ÊÇ·ñÒÑ¾­³É¹¦·¢ËÍÇëÇó»ñÈ¡µ½Êı¾İ±êÖ¾.
+	 * æ˜¯å¦å·²ç»æˆåŠŸå‘é€è¯·æ±‚è·å–åˆ°æ•°æ®æ ‡å¿—.
 	 */
 	private boolean successLinked;
 	
 	private String[] depArr;
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -88,16 +88,16 @@ public class UserCase {
 
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÑéÖ¤ÓÃÀıÊÇ·ñ³É¹¦Æ¥Åä.
+	 * éªŒè¯ç”¨ä¾‹æ˜¯å¦æˆåŠŸåŒ¹é….
 	 * </ul>
 	 * @return
 	 */
 	private boolean policeTeaTime() {
 		if(!this.successLinked)
-			throw new RuntimeException(this.userCaseName + "Ã»ÓĞ³É¹¦»ñÈ¡·µ»ØĞÅÏ¢.Çë½øĞĞcallPolice()²Ù×÷Á¬½Ó·şÎñÆ÷»ñÈ¡ĞÅÏ¢.");
-		System.out.println("¿ªÊ¼ÑéÖ¤ÓÃÀı :" + this.userCaseName);
+			throw new RuntimeException(this.userCaseName + "æ²¡æœ‰æˆåŠŸè·å–è¿”å›ä¿¡æ¯.è¯·è¿›è¡ŒcallPolice()æ“ä½œè¿æ¥æœåŠ¡å™¨è·å–ä¿¡æ¯.");
+		System.out.println("å¼€å§‹éªŒè¯ç”¨ä¾‹ :" + this.userCaseName);
 		boolean b = true;
 		try {
 			for(String si : this.tagVerify.getMapColor()){
@@ -107,28 +107,28 @@ public class UserCase {
 				String regxValue = verify.getValue();
 				regxValue = ___getVariableFromINPUT(regxValue,verify);
 				if(UtilString.matchAllSameRegx(output.getValue(), regxValue)){
-					System.out.println("	±êÇ©:" + verify.getTagName() + "	sucessed!");
+					System.out.println("	æ ‡ç­¾:" + verify.getTagName() + "	sucessed!");
 				}else{
-					System.out.println("	±êÇ©:" + verify.getTagName() + "	faild!");
+					System.out.println("	æ ‡ç­¾:" + verify.getTagName() + "	faild!");
 				}
 			}
 		} catch (Exception e) {
 			b = false;
 			e.printStackTrace();
-			throw new RuntimeException("ÓÃÀı : " + this.userCaseName + "Êä³ö½á¹ûÓëÔ¤ÆÚ¶Ô±ÈÊ§°Ü!");
+			throw new RuntimeException("ç”¨ä¾‹ : " + this.userCaseName + "è¾“å‡ºç»“æœä¸é¢„æœŸå¯¹æ¯”å¤±è´¥!");
 		}
 		if(b)
-			System.out.println("ÓÃÀı : " + this.userCaseName + "  Æ¥ÅäÑéÖ¤³É¹¦!");
+			System.out.println("ç”¨ä¾‹ : " + this.userCaseName + "  åŒ¹é…éªŒè¯æˆåŠŸ!");
 		else
-			System.out.println("ÓÃÀı : " + this.userCaseName + "  Æ¥ÅäÑéÖ¤Ê§°Ü!");
+			System.out.println("ç”¨ä¾‹ : " + this.userCaseName + "  åŒ¹é…éªŒè¯å¤±è´¥!");
 		return b;
 	}
 
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * outputÖĞÓĞĞèÒªÓÃµ½inputµÄÊäÈëÖµµÄÇé¿ö,È¢¹ıÀ´.<br/>
+	 * outputä¸­æœ‰éœ€è¦ç”¨åˆ°inputçš„è¾“å…¥å€¼çš„æƒ…å†µ,å¨¶è¿‡æ¥.<br/>
 	 * </ul>
 	 * @param regxValue
 	 * @param verify 
@@ -149,7 +149,7 @@ public class UserCase {
 				return regxValue;
 			String[] valueMap = verify.getPropertyMap().get("cite").split(",");
 			if(valueMap.length != n+1)
-				throw new RuntimeException("verifyÖĞ±êÇ© :" + verify.getTagName() + "cite²ÎÊı¸öÊı²»Æ¥Åä!");
+				throw new RuntimeException("verifyä¸­æ ‡ç­¾ :" + verify.getTagName() + "citeå‚æ•°ä¸ªæ•°ä¸åŒ¹é…!");
 			
 			for(int j = 0 ; j <= n ; j++){
 				String[] colorMap = valueMap[j].split("\\.");
@@ -158,7 +158,7 @@ public class UserCase {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new RuntimeException("verifyÖĞ±êÇ© :" + verify.getTagName() +"ÑéÖ¤×Ö·û´® : " + regxValue + "citeÖµÌæ»»Ê§°Ü");
+			throw new RuntimeException("verifyä¸­æ ‡ç­¾ :" + verify.getTagName() +"éªŒè¯å­—ç¬¦ä¸² : " + regxValue + "citeå€¼æ›¿æ¢å¤±è´¥");
 		}
 		return regxValue;
 	}
@@ -168,9 +168,9 @@ public class UserCase {
 
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Ïò·şÎñÆ÷·¢ËÍÇëÇó,»ñÈ¡·µ»ØĞÅÏ¢.
+	 * å‘æœåŠ¡å™¨å‘é€è¯·æ±‚,è·å–è¿”å›ä¿¡æ¯.
 	 * </ul>
 	 * @return
 	 */
@@ -182,7 +182,7 @@ public class UserCase {
 			this.successLinked = true;
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new RuntimeException("ÓÃÀı : " + this.userCaseName + "Ïò·şÎñÆ÷·¢ËÍÇëÇóÊ§°Ü!");
+			throw new RuntimeException("ç”¨ä¾‹ : " + this.userCaseName + "å‘æœåŠ¡å™¨å‘é€è¯·æ±‚å¤±è´¥!");
 		}
 		
 		return this.successLinked;
@@ -190,17 +190,17 @@ public class UserCase {
 
 
 	/**
-	 * ÓÃ°üº¬USERCASEµÄxml listÉú³ÉUSERCASE¶ÔÏó.
-	 * <b>¹¹Ôì·½·¨</b>
+	 * ç”¨åŒ…å«USERCASEçš„xml listç”ŸæˆUSERCASEå¯¹è±¡.
+	 * <b>æ„é€ æ–¹æ³•</b>
 	 * <br/>
-	 * @param xmlineList °üº¬USERCASEµÄxml list
+	 * @param xmlineList åŒ…å«USERCASEçš„xml list
 	 */
 	public UserCase(List<String> xmlineList){
 		init(UtilCollection.transListToLine(xmlineList));
 	}
 	/**
-	 * ÓÃ°üº¬USERCASE xmlµÄstring¶ÔÏóÉú³ÉUSERCASE¶ÔÏó.
-	 * <b>¹¹Ôì·½·¨</b>
+	 * ç”¨åŒ…å«USERCASE xmlçš„stringå¯¹è±¡ç”ŸæˆUSERCASEå¯¹è±¡.
+	 * <b>æ„é€ æ–¹æ³•</b>
 	 * <br/>
 	 * @param xmlString
 	 */
@@ -210,9 +210,9 @@ public class UserCase {
 
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ³õÊ¼»¯
+	 * åˆå§‹åŒ–
 	 * </ul>
 	 * @param xmlString
 	 */
@@ -229,9 +229,9 @@ public class UserCase {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡ÒÀÀµÓÃÀıÃûsArr[]
+	 * è·å–ä¾èµ–ç”¨ä¾‹åsArr[]
 	 * </ul>
 	 * @param string
 	 * @return
@@ -248,7 +248,7 @@ public class UserCase {
 
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * test method .. to be deleted...
 	 * </ul>

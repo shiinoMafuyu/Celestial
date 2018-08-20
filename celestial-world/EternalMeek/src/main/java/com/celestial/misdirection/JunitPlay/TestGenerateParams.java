@@ -25,7 +25,7 @@ public class TestGenerateParams {
     } 
     
     /** 
-     * ÕâÀïµÄ·µ»ØÖÁÉÙÊÇ¶şÎ¬Êı×é 
+     * è¿™é‡Œçš„è¿”å›è‡³å°‘æ˜¯äºŒç»´æ•°ç»„ 
      * @return 
      */  
     @Parameters  
@@ -38,19 +38,19 @@ public class TestGenerateParams {
                         {"how are you"}});  
     }
 }
-/** Ô­ÎÄ£º
+/** åŸæ–‡ï¼š
 	
-	ÔÚÖ´ĞĞTestSuitMain --> ¡°Run As JUnit Test"µÄÊ±ºò»á°ÑComplexFunctionTestºÍSimpleFunctionTestµÄÓÃÀıÈ«²¿Ö´ĞĞÒ»±é¡£
-	Parameterized£ºParameterized¼Ì³Ğ×ÔSuit£¬´ÓÕâ¸öÉíÊÀºÍÃû×ÖÓ¦¸Ã¿ÉÒÔ²Âµ½Ò»Ğ©Òò¹ûÁË¡£
-	ParameterizedÊÇÔÚ²ÎÊıÉÏÊµÏÖÁËSuit¡ª¡ªĞŞÊÎÒ»¸ö²âÊÔÀà£¬µ«ÊÇ¿ÉÒÔÌá¹©¶à×é¹¹Ôìº¯ÊıµÄ²ÎÊıÓÃÓÚ²âÊÔ²»Í¬³¡¾°¡£ÂÔÎ¢ÓĞµã³éÏó£¬ÓÃ´úÂëËµ»°£º
+	åœ¨æ‰§è¡ŒTestSuitMain --> â€œRun As JUnit Test"çš„æ—¶å€™ä¼šæŠŠComplexFunctionTestå’ŒSimpleFunctionTestçš„ç”¨ä¾‹å…¨éƒ¨æ‰§è¡Œä¸€éã€‚
+	Parameterizedï¼šParameterizedç»§æ‰¿è‡ªSuitï¼Œä»è¿™ä¸ªèº«ä¸–å’Œåå­—åº”è¯¥å¯ä»¥çŒœåˆ°ä¸€äº›å› æœäº†ã€‚
+	Parameterizedæ˜¯åœ¨å‚æ•°ä¸Šå®ç°äº†Suitâ€•â€•ä¿®é¥°ä¸€ä¸ªæµ‹è¯•ç±»ï¼Œä½†æ˜¯å¯ä»¥æä¾›å¤šç»„æ„é€ å‡½æ•°çš„å‚æ•°ç”¨äºæµ‹è¯•ä¸åŒåœºæ™¯ã€‚ç•¥å¾®æœ‰ç‚¹æŠ½è±¡ï¼Œç”¨ä»£ç è¯´è¯ï¼š
  */
 
-/** ×Ü½á£º
-	Òª²âÊÔÒ»¸öÀàÊ¹ÓÃ²»Í¬¹¹Ôìº¯ÊıµÄÔËĞĞ½á¹û£¬(¿ÉÒÔÒıÉêÎª²»Í¬ÔËĞĞ²ÎÊı)
-	¿ÉÒÔÔÚ¿ªÍ·Ğ´ÉÏ@RunWith(Parameterized.class)
-	¼ÓÉÏ²ÎÊıÊäÈë£º
+/** æ€»ç»“ï¼š
+	è¦æµ‹è¯•ä¸€ä¸ªç±»ä½¿ç”¨ä¸åŒæ„é€ å‡½æ•°çš„è¿è¡Œç»“æœï¼Œ(å¯ä»¥å¼•ç”³ä¸ºä¸åŒè¿è¡Œå‚æ•°)
+	å¯ä»¥åœ¨å¼€å¤´å†™ä¸Š@RunWith(Parameterized.class)
+	åŠ ä¸Šå‚æ•°è¾“å…¥ï¼š
 		@Parameters  
     	public static List<String[]> getParams()
-	ÔÙÔÚ¹¹Ôìº¯ÊıÉÏĞ´ÉÏ£ºpublic TestGenerateParams(String greeting)
+	å†åœ¨æ„é€ å‡½æ•°ä¸Šå†™ä¸Šï¼špublic TestGenerateParams(String greeting)
 	
 */

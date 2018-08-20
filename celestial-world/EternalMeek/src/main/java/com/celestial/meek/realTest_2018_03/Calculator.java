@@ -55,7 +55,7 @@ public class Calculator {
 
 	
 	private void calSpecialAdd(Calculator other) {
-		//¿ÉÄÜÎª¼Ó ¿ÉÄÜÎª¼õÈ¥ ¿ÉÄÜ½øÎ» ¿ÉÄÜÍËÎ»
+		//å¯èƒ½ä¸ºåŠ  å¯èƒ½ä¸ºå‡å» å¯èƒ½è¿›ä½ å¯èƒ½é€€ä½
 		if(simp.equals(other.simp)) {
 			low = low + other.low;
 			high = high + other.high + low/LOWMAX;

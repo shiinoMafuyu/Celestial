@@ -1,9 +1,9 @@
 /******************************************************************
  * AliceWonderLand.java
  * Copyright 2017 by WZG. All Rights Reserved.
- * CreateDate£º2017Äê6ÔÂ11ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´6æœˆ11æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.butterflystorm.butterfly2017.ClassCreatorSuperStar.core.impl;
@@ -22,15 +22,15 @@ import com.celestial.butterflystorm.butterfly2017.ClassCreatorSuperStar.core.IAl
 import com.celestial.butterflystorm.butterfly2017.ClassCreatorSuperStar.vo.AClass;
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê6ÔÂ11ÈÕ
+ *                        ---- wangzg 2017å¹´6æœˆ11æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
  * 
  * </p>
@@ -51,7 +51,7 @@ public class AliceWonderLandNormal implements IAliceWonderLand {
 		for(Entry<String, String> ei : mustImportMap.entrySet()){
 			l = UtilCollection.addToList(l,ei.getValue());
 		}
-		//String[] = [³ÉÔ±±äÁ¿Ãû£¬ÀàĞÍ£¬×¢ÊÍ¡¢È«Ãû]
+		//String[] = [æˆå‘˜å˜é‡åï¼Œç±»å‹ï¼Œæ³¨é‡Šã€å…¨å]
 		for(String sai[] : variables){
 			String importSe = UtilCollection.getValue(variableImportMap,sai[1],"");
 			l = UtilCollection.addToList(l,importSe);
@@ -76,7 +76,7 @@ public class AliceWonderLandNormal implements IAliceWonderLand {
 		List<String> l = new ArrayList<String>();
 		l.add("/**");
 		l.add(" * ");
-		l.add(" * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> ");
+		l.add(" * <b>ä¿®æ”¹è®°å½•ï¼š</b> ");
 		l.add(" * <p>");
 		l.add(" * <li>");
 		l.add(" * ");
@@ -98,7 +98,7 @@ public class AliceWonderLandNormal implements IAliceWonderLand {
 	@Override
 	public List<String> createVariables(String[][] variables) {
 		List<String> l = new ArrayList<String>();
-		//String[] = [³ÉÔ±±äÁ¿Ãû£¬ÀàĞÍ£¬×¢ÊÍ£¬È«Ãû]
+		//String[] = [æˆå‘˜å˜é‡åï¼Œç±»å‹ï¼Œæ³¨é‡Šï¼Œå…¨å]
 		for(String[] sai : variables){
 			l.add("/** "+sai[2]+" */");
 			l.add("private "+sai[1]+" "+sai[0]+";");
@@ -110,15 +110,15 @@ public class AliceWonderLandNormal implements IAliceWonderLand {
 	@Override
 	public List<String> createSetters(String[][] variables) {
 		List<String> l = new ArrayList<String>();
-		//String[] = [³ÉÔ±±äÁ¿Ãû£¬ÀàĞÍ£¬×¢ÊÍ£¬È«Ãû]
+		//String[] = [æˆå‘˜å˜é‡åï¼Œç±»å‹ï¼Œæ³¨é‡Šï¼Œå…¨å]
 		for(String[] sai : variables){
 			String ref = sai[3];
 			String var = UtilString.transHeadToLowerCase(ref);
 			String type = sai[1];
 			l.add("/**");
-			l.add(" * <b>·½·¨ËµÃ÷£º</b>");
+			l.add(" * <b>æ–¹æ³•è¯´æ˜ï¼š</b>");
 			l.add(" * <ul>");
-			l.add(" * ÉèÖÃ" + sai[2]);
+			l.add(" * è®¾ç½®" + sai[2]);
 			l.add(" * </ul>");
 			l.add(" * @param " + var +" " + sai[2]);
 			l.add(" */");
@@ -134,12 +134,12 @@ public class AliceWonderLandNormal implements IAliceWonderLand {
 	public List<String> createGetters(String[][] variables) {
 		
 		List<String> l = new ArrayList<String>();
-		//String[] = [³ÉÔ±±äÁ¿Ãû£¬ÀàĞÍ£¬×¢ÊÍ£¬È«Ãû]
+		//String[] = [æˆå‘˜å˜é‡åï¼Œç±»å‹ï¼Œæ³¨é‡Šï¼Œå…¨å]
 		for(String[] sai : variables){
 			l.add("/**");
-			l.add(" * <b>·½·¨ËµÃ÷£º</b>");
+			l.add(" * <b>æ–¹æ³•è¯´æ˜ï¼š</b>");
 			l.add(" * <ul>");
-			l.add(" * »ñÈ¡" + sai[2] + "");
+			l.add(" * è·å–" + sai[2] + "");
 			l.add(" * </ul>");
 			l.add(" * @return " + sai[2]);
 			l.add(" */");
@@ -163,7 +163,7 @@ public class AliceWonderLandNormal implements IAliceWonderLand {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>

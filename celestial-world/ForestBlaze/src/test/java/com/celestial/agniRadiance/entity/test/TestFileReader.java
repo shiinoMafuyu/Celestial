@@ -32,8 +32,8 @@ public class TestFileReader {
 		
 		l = UtilCollection.deepCopyList(l0);
 		
-		l.add(1,"qaq--蒸的！！");
-		l.add(4,"--蒸的！！");
+		l.add(1,"qaq--钂哥殑锛侊紒");
+		l.add(4,"--钂哥殑锛侊紒");
 		f = new FileReader(l);
 	}
 	
@@ -62,11 +62,11 @@ public class TestFileReader {
 	@Test
 	public void _03_replaceList(){
 		FileReader f2 = new FileReader(f.getLineList());
-		FileReader fend = f2.replaceList(0, 1, Arrays.asList(new String[]{"如花美眷","似水流年","空渡年华","暮影消沉"}));
-		Assert.assertEquals(fend.readLine(1), "如花美眷");
-		Assert.assertEquals(fend.readLine(2), "似水流年");
-		Assert.assertEquals(fend.readLine(3), "空渡年华");
-		Assert.assertEquals(fend.readLine(4), "暮影消沉");
+		FileReader fend = f2.replaceList(0, 1, Arrays.asList(new String[]{"濡傝姳缇庣湻","浼兼按娴佸勾","绌烘浮骞村崕","鏆奖娑堟矇"}));
+		Assert.assertEquals(fend.readLine(1), "濡傝姳缇庣湻");
+		Assert.assertEquals(fend.readLine(2), "浼兼按娴佸勾");
+		Assert.assertEquals(fend.readLine(3), "绌烘浮骞村崕");
+		Assert.assertEquals(fend.readLine(4), "鏆奖娑堟矇");
 	}
 	
 	

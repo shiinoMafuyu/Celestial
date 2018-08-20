@@ -1,8 +1,8 @@
 package com.celestial.meek.realTest_2016_03.de.shoot;
-/** ½±Àø */
+/** å¥–åŠ± */
 public interface Award {
-	int DOUBLE_FIRE = 0; //»ğÁ¦Öµ
-	int LIFE = 1;        //Ãü
-	/** »ñÈ¡½±ÀøÀàĞÍ(ÉÏÃæµÄ0»ò1) */
+	int DOUBLE_FIRE = 0; //ç«åŠ›å€¼
+	int LIFE = 1;        //å‘½
+	/** è·å–å¥–åŠ±ç±»å‹(ä¸Šé¢çš„0æˆ–1) */
 	public int getType();
 }

@@ -36,7 +36,7 @@ public class HttpUtils {
 	public static int CONNECT_TIMEOUT = 30000;
 
 	/**
-	 * postÇëÇóÊı¾İ
+	 * postè¯·æ±‚æ•°æ®
 	 * 
 	 * @param connectURL
 	 * @param param
@@ -94,7 +94,7 @@ public class HttpUtils {
 	}
 
 	/**
-	 * postÇëÇóÊı¾İ
+	 * postè¯·æ±‚æ•°æ®
 	 * 
 	 * @param connectURL
 	 * @param param
@@ -163,7 +163,7 @@ public class HttpUtils {
 	}
 
 	/**
-	 * GetÇëÇóÊı¾İ
+	 * Getè¯·æ±‚æ•°æ®
 	 * 
 	 * @param connectURL
 	 * @param param
@@ -226,7 +226,7 @@ public class HttpUtils {
 	};
 
 	/**
-	 * ºöÂÔSSL
+	 * å¿½ç•¥SSL
 	 */
 	private static void _ignoreSSL() {
 		try {
@@ -266,9 +266,9 @@ public class HttpUtils {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ²âÊÔ
+	 * æµ‹è¯•
 	 * </ul>
 	 * @param args
 	 */
@@ -277,7 +277,7 @@ public class HttpUtils {
 		String requestInfo = "<?xml version=\"1.0\" encoding = \"GBK\"?><MEBS_MT><REQ name=\"user_login\"><U>wzgjys01</U><PASSWORD>wzgjys01</PASSWORD><RANDOM_KEY></RANDOM_KEY></REQ></MEBS_MT>";
 		String s = HttpUtils.doPost("http://172.18.1.56:16503/mobile_svr_espt/communicateServlet",requestInfo , GBK);
 		System.out.println("----------->" + s);
-		//<?xml version="1.0" encoding = "GBK"?><MEBS_MT><REP name="user_login"><RESULT><NAME>wzgjys01</NAME><MODULE_ID>23</MODULE_ID><LAST_TIME>2016-08-20 16:08:40</LAST_TIME><LAST_IP>172.18.1.56</LAST_IP><CHG_PWD>0</CHG_PWD><RANDOM_KEY>20160820162612675wzgjys0116590.055199965238</RANDOM_KEY><RETCODE>2812979319091425908</RETCODE><MESSAGE>µÇÂ½³É¹¦£¡</MESSAGE></RESULT></REP></MEBS_MT>
+		//<?xml version="1.0" encoding = "GBK"?><MEBS_MT><REP name="user_login"><RESULT><NAME>wzgjys01</NAME><MODULE_ID>23</MODULE_ID><LAST_TIME>2016-08-20 16:08:40</LAST_TIME><LAST_IP>172.18.1.56</LAST_IP><CHG_PWD>0</CHG_PWD><RANDOM_KEY>20160820162612675wzgjys0116590.055199965238</RANDOM_KEY><RETCODE>2812979319091425908</RETCODE><MESSAGE>ç™»é™†æˆåŠŸï¼</MESSAGE></RESULT></REP></MEBS_MT>
 
 	}
 }

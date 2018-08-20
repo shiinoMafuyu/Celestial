@@ -9,10 +9,10 @@ public interface PuddingCreator {
 	
 	public List<File> getPrepareFile(String prepareFilePath);
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÕÒµ½Òª¿½±´ÎÄ¼şµÄÎ»ÖÃ,·Ö³ÉÁ½²¿·Ö±íÊ¾:<br/>
-	 * ÏîÄ¿Â·¾¶ + Î²Â·¾¶<br/>
+	 * æ‰¾åˆ°è¦æ‹·è´æ–‡ä»¶çš„ä½ç½®,åˆ†æˆä¸¤éƒ¨åˆ†è¡¨ç¤º:<br/>
+	 * é¡¹ç›®è·¯å¾„ + å°¾è·¯å¾„<br/>
 	 * </ul>
 	 * @param typeFile
 	 * @return

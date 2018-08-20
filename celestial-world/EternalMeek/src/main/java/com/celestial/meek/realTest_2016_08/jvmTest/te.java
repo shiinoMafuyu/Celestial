@@ -8,7 +8,7 @@ import com.celestial.agniRadiance.entity.FileReader;
 import com.celestial.agniRadiance.entity.Tag;
 /**
  * 
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
@@ -16,7 +16,7 @@ import com.celestial.agniRadiance.entity.Tag;
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£ºÃ»ÓĞÂÑÓÃÀà 555</b>
+ * <b>ç±»è¯´æ˜ï¼šæ²¡æœ‰åµç”¨ç±» 555</b>
  * <p> 
  * 
  * </p>
@@ -42,8 +42,8 @@ public class te {
 		FileReader f = new FileReader("C:/Users/Administrator/Desktop/c.xml");
 		String headRegex = ".*<USERCASE.*";
 		String tailRegex = ".*</USERCASE>.*";
-		//  ±àĞ´²âÊÔ Tag t = test_And_Verify(input,out); input outÎªxml±êÇ©   (²»ĞèÒªÓÃÊ± ²»ÓÃ) 
-		// »ñÈ¡×Ó±êÇ©·½Ê½²»ÓÃÕıÔò±í´ïÊ½
+		//  ç¼–å†™æµ‹è¯• Tag t = test_And_Verify(input,out); input outä¸ºxmlæ ‡ç­¾   (ä¸éœ€è¦ç”¨æ—¶ ä¸ç”¨) 
+		// è·å–å­æ ‡ç­¾æ–¹å¼ä¸ç”¨æ­£åˆ™è¡¨è¾¾å¼
 	}
 
 	private static void teTagHelper2() {

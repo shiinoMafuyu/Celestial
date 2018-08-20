@@ -5,7 +5,7 @@ import com.celestial.agniRadiance.EzUtil.UtilReflect;
 public class MainClass {
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜Žï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>

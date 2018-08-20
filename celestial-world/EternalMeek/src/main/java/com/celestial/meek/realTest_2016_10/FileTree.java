@@ -5,35 +5,35 @@ import java.io.FileFilter;
 import java.util.ArrayList;
 import java.util.List;
 /**
- * ÎÄ¼şÊ÷ <br/>
- * ²»¿ÉĞŞ¸Ä¿ÉÀ©Õ¹µÄÔ­Ôò <br/>
- * ÉÙµÄÏò¶àµÄ´«µİ (0 0ºÍÉÏÃæµÄ¾ÓÈ»´îÉÏÁË!)
+ * æ–‡ä»¶æ ‘ <br/>
+ * ä¸å¯ä¿®æ”¹å¯æ‰©å±•çš„åŸåˆ™ <br/>
+ * å°‘çš„å‘å¤šçš„ä¼ é€’ (0 0å’Œä¸Šé¢çš„å±…ç„¶æ­ä¸Šäº†!)
  * @author Administrator
  *
  */
 public class FileTree {
 	/**
-	 * Ò»¸öÊ÷Ö¦
+	 * ä¸€ä¸ªæ ‘æ
 	 */
 	private File treeBoot;
 	/**
-	 * Ê÷Ö¦ÉÏµÄÒ¶×Ó
+	 * æ ‘æä¸Šçš„å¶å­
 	 */
 	private File[] treeLeaves;
 	
 	/**
-	 * Ê÷Ö¦Â·¾¶
+	 * æ ‘æè·¯å¾„
 	 */
 	private String bootPath;
 	/**
-	 * Ê÷Ò¶Â·¾¶s
+	 * æ ‘å¶è·¯å¾„s
 	 */
 	private String[] leavesPaths;
 	
 	/**
-	 * ÊÇ·ñ°üº¬ÎÄ¼ş
-	 * ÊÇµÄ»°,Ä¿Â¼ ÎÄ¼şÈ«°üº¬
-	 * ²»°üº¬ÎÄ¼ş¾ÍÊÇÈ«¶¼ÊÇÄ¿Â¼ÁË
+	 * æ˜¯å¦åŒ…å«æ–‡ä»¶
+	 * æ˜¯çš„è¯,ç›®å½• æ–‡ä»¶å…¨åŒ…å«
+	 * ä¸åŒ…å«æ–‡ä»¶å°±æ˜¯å…¨éƒ½æ˜¯ç›®å½•äº†
 	 */
 	private boolean isContainGreen = true;
 	
@@ -42,14 +42,14 @@ public class FileTree {
 	
 	/**
 	 * 
-	 * @param bootPath Ê÷µÄ¸ùÂ·¾¶
+	 * @param bootPath æ ‘çš„æ ¹è·¯å¾„
 	 */
 	public FileTree(String bootPath) {
 		init(bootPath);
 	}
 	/**
 	 * @param bootPath
-	 * @param isContainGreen ÊÇ·ñ°üº¬ÎÄ¼ş
+	 * @param isContainGreen æ˜¯å¦åŒ…å«æ–‡ä»¶
 	 */
 	public FileTree(String bootPath ,boolean isContainGreen) {
 		init(bootPath,isContainGreen);
@@ -58,7 +58,7 @@ public class FileTree {
 		init(bootPath,this.isContainGreen);
 	}
 	/**
-	 * Ö»»ñÈ¡Ê÷µÄµ±Ç°¸ùºÍµ±Ç°Ò¶×Ó;ĞèÒªµÄÊ±ºòÔÙÈ¥±éÀú;
+	 * åªè·å–æ ‘çš„å½“å‰æ ¹å’Œå½“å‰å¶å­;éœ€è¦çš„æ—¶å€™å†å»éå†;
 	 * @param bootPath
 	 * @param isContainGreen
 	 */
@@ -72,7 +72,7 @@ public class FileTree {
 		this.treeLeaves = this.treeBoot.listFiles(new FileFilter() {
 			@Override
 			public boolean accept(File pathname) {
-				//Èç¹û²»ÒªÎÄ¼şÇÒµ±Ç°fileÊÇÎÄ¼şÊ±·µ»Øfalse
+				//å¦‚æœä¸è¦æ–‡ä»¶ä¸”å½“å‰fileæ˜¯æ–‡ä»¶æ—¶è¿”å›false
 				return needFile || pathname.isDirectory();
 			}
 		});
@@ -99,7 +99,7 @@ public class FileTree {
 		return isContainGreen;
 	}
 	/**
-	 * ¸Ã¶ÔÏóÊÇ·ñÊôÓÚt1µÄÒ»²¿·Ö
+	 * è¯¥å¯¹è±¡æ˜¯å¦å±äºt1çš„ä¸€éƒ¨åˆ†
 	 * @param t1
 	 * @return
 	 */
@@ -107,8 +107,8 @@ public class FileTree {
 		return t1.isContain(this);
 	}
 	/**
-	 * ¸Ã¶ÔÏóÊÇ·ñ°üº¬t2<br/>
-	 * ÍêÈ«°üº¬
+	 * è¯¥å¯¹è±¡æ˜¯å¦åŒ…å«t2<br/>
+	 * å®Œå…¨åŒ…å«
 	 * @param t2
 	 * @return
 	 */
@@ -120,9 +120,9 @@ public class FileTree {
 	List<String> perhapsNodesList = new ArrayList<String>();
 	private boolean checkContain(String bootPathPiece, String bootPathMain) {
 		String bootPathPieceName = bootPathPiece.substring(bootPathPiece.lastIndexOf("/")+1);
-		//ÕÒµ½È«²¿Í¬ÃûÎÄ¼ş¼Ğ ½á¹û´æ·ÅÔÚlist perhapsNodesListÖĞ
+		//æ‰¾åˆ°å…¨éƒ¨åŒåæ–‡ä»¶å¤¹ ç»“æœå­˜æ”¾åœ¨list perhapsNodesListä¸­
 		getPerhapsNodes(bootPathPieceName,new File(bootPathMain));
-		//´ÓlistÖĞÕÒÍêÈ«Ò»Ñù
+		//ä»listä¸­æ‰¾å®Œå…¨ä¸€æ ·
 		System.out.println("xxx");
 		return false;
 	}

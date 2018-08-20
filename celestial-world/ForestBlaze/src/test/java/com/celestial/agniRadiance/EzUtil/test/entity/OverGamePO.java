@@ -1,9 +1,9 @@
 /******************************************************************
  * OverGame.java
  * Copyright ${year} by WZG. All Rights Reserved.
- * CreateDate£º2017-6-12
- * Author£ºwanzg
- * Version£º1.0.0
+ * CreateDateï¼š2017-6-12
+ * Authorï¼šwanzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.agniRadiance.EzUtil.test.entity;
@@ -12,7 +12,7 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
@@ -20,9 +20,9 @@ import java.sql.Timestamp;
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
- * ÒÑ½áÊøÓÎÏ·²éÑ¯PO
+ * å·²ç»“æŸæ¸¸æˆæŸ¥è¯¢PO
  * </p>
  */
 public class OverGamePO implements Serializable{
@@ -30,37 +30,37 @@ public class OverGamePO implements Serializable{
 	/**  */
 	private static final long serialVersionUID = 1L;
 	
-	/** ÓÃ»§ID */
+	/** ç”¨æˆ·ID */
 	private String userID;
 	
-	/** ÓÎÏ·±àºÅ */
+	/** æ¸¸æˆç¼–å· */
 	private Long gameID;
 
-	/** Àà±ğÃû³Æ */
+	/** ç±»åˆ«åç§° */
 	private String name;
 	
-	/** Àà±ğ±àºÅ */
+	/** ç±»åˆ«ç¼–å· */
 	private Long typeID;
 
-	/** ×îºó¹Ø¿¨ĞòºÅ(ÓÎÏ·½áÊøÊ±ËùÔÚ¹Ø¿¨ĞòºÅ) */
+	/** æœ€åå…³å¡åºå·(æ¸¸æˆç»“æŸæ—¶æ‰€åœ¨å…³å¡åºå·) */
 	private Integer currentLevelNO;
 
-	/** ¿ªÊ¼ÈÕÆÚ */
+	/** å¼€å§‹æ—¥æœŸ */
 	private Timestamp startTime;
 	
-	/** ½áÊøÈÕÆÚ */
+	/** ç»“æŸæ—¥æœŸ */
 	private Timestamp finishTime;
 	
-	/** ÊÇ·ñ¹ıÆÚ(1ÊÇ2·ñ) */
+	/** æ˜¯å¦è¿‡æœŸ(1æ˜¯2å¦) */
 	private Integer isOverdue;
 	
-	/** µ¼ÈëÊ±¼ä */
+	/** å¯¼å…¥æ—¶é—´ */
 	private Timestamp importTime;
 	
-	/** ¸üĞÂÊ±¼ä */
+	/** æ›´æ–°æ—¶é—´ */
 	private Timestamp updateTime;
 	
-	/** ×´Ì¬ 1½øĞĞÖĞ2ÒÑÁìÈ¡3Ê§°Ü½áÊø4´ıÁìÈ¡5¹ıÆÚÎ´ÁìÈ¡6µÈ´ı¿ª½± */
+	/** çŠ¶æ€ 1è¿›è¡Œä¸­2å·²é¢†å–3å¤±è´¥ç»“æŸ4å¾…é¢†å–5è¿‡æœŸæœªé¢†å–6ç­‰å¾…å¼€å¥– */
 	private Integer status;
 
 
@@ -73,232 +73,232 @@ public class OverGamePO implements Serializable{
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃÓÃ»§ID
+	 * è®¾ç½®ç”¨æˆ·ID
 	 * </ul>
-	 * @param userID ÓÃ»§ID
+	 * @param userID ç”¨æˆ·ID
 	 */
 	public void setUserID(String userID) {
 		this.userID = userID;
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃÓÎÏ·±àºÅ
+	 * è®¾ç½®æ¸¸æˆç¼–å·
 	 * </ul>
-	 * @param gameID ÓÎÏ·±àºÅ
+	 * @param gameID æ¸¸æˆç¼–å·
 	 */
 	public void setGameID(Long gameID) {
 		this.gameID = gameID;
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃÀà±ğÃû³Æ
+	 * è®¾ç½®ç±»åˆ«åç§°
 	 * </ul>
-	 * @param name Àà±ğÃû³Æ
+	 * @param name ç±»åˆ«åç§°
 	 */
 	public void setName(String name) {
 		this.name = name;
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃÀà±ğ±àºÅ
+	 * è®¾ç½®ç±»åˆ«ç¼–å·
 	 * </ul>
-	 * @param typeID Àà±ğ±àºÅ
+	 * @param typeID ç±»åˆ«ç¼–å·
 	 */
 	public void setTypeID(Long typeID) {
 		this.typeID = typeID;
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃ×îºó¹Ø¿¨ĞòºÅ(ÓÎÏ·½áÊøÊ±ËùÔÚ¹Ø¿¨ĞòºÅ)
+	 * è®¾ç½®æœ€åå…³å¡åºå·(æ¸¸æˆç»“æŸæ—¶æ‰€åœ¨å…³å¡åºå·)
 	 * </ul>
-	 * @param currentLevelNO ×îºó¹Ø¿¨ĞòºÅ(ÓÎÏ·½áÊøÊ±ËùÔÚ¹Ø¿¨ĞòºÅ)
+	 * @param currentLevelNO æœ€åå…³å¡åºå·(æ¸¸æˆç»“æŸæ—¶æ‰€åœ¨å…³å¡åºå·)
 	 */
 	public void setCurrentLevelNO(Integer currentLevelNO) {
 		this.currentLevelNO = currentLevelNO;
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃ¿ªÊ¼ÈÕÆÚ
+	 * è®¾ç½®å¼€å§‹æ—¥æœŸ
 	 * </ul>
-	 * @param startTime ¿ªÊ¼ÈÕÆÚ
+	 * @param startTime å¼€å§‹æ—¥æœŸ
 	 */
 	public void setStartTime(Timestamp startTime) {
 		this.startTime = startTime;
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃ½áÊøÈÕÆÚ
+	 * è®¾ç½®ç»“æŸæ—¥æœŸ
 	 * </ul>
-	 * @param finishTime ½áÊøÈÕÆÚ
+	 * @param finishTime ç»“æŸæ—¥æœŸ
 	 */
 	public void setFinishTime(Timestamp finishTime) {
 		this.finishTime = finishTime;
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃÊÇ·ñ¹ıÆÚ(1ÊÇ2·ñ)
+	 * è®¾ç½®æ˜¯å¦è¿‡æœŸ(1æ˜¯2å¦)
 	 * </ul>
-	 * @param isOverdue ÊÇ·ñ¹ıÆÚ(1ÊÇ2·ñ)
+	 * @param isOverdue æ˜¯å¦è¿‡æœŸ(1æ˜¯2å¦)
 	 */
 	public void setIsOverdue(Integer isOverdue) {
 		this.isOverdue = isOverdue;
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃµ¼ÈëÊ±¼ä
+	 * è®¾ç½®å¯¼å…¥æ—¶é—´
 	 * </ul>
-	 * @param importTime µ¼ÈëÊ±¼ä
+	 * @param importTime å¯¼å…¥æ—¶é—´
 	 */
 	public void setImportTime(Timestamp importTime) {
 		this.importTime = importTime;
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡ÓÃ»§ID
+	 * è·å–ç”¨æˆ·ID
 	 * </ul>
-	 * @return ÓÃ»§ID
+	 * @return ç”¨æˆ·ID
 	 */
 	public String getUserID(){
 		return userID;
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡ÓÎÏ·±àºÅ
+	 * è·å–æ¸¸æˆç¼–å·
 	 * </ul>
-	 * @return ÓÎÏ·±àºÅ
+	 * @return æ¸¸æˆç¼–å·
 	 */
 	public Long getGameID(){
 		return gameID;
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡Àà±ğÃû³Æ
+	 * è·å–ç±»åˆ«åç§°
 	 * </ul>
-	 * @return Àà±ğÃû³Æ
+	 * @return ç±»åˆ«åç§°
 	 */
 	public String getName(){
 		return name;
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡Àà±ğ±àºÅ
+	 * è·å–ç±»åˆ«ç¼–å·
 	 * </ul>
-	 * @return Àà±ğ±àºÅ
+	 * @return ç±»åˆ«ç¼–å·
 	 */
 	public Long getTypeID(){
 		return typeID;
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡×îºó¹Ø¿¨ĞòºÅ(ÓÎÏ·½áÊøÊ±ËùÔÚ¹Ø¿¨ĞòºÅ)
+	 * è·å–æœ€åå…³å¡åºå·(æ¸¸æˆç»“æŸæ—¶æ‰€åœ¨å…³å¡åºå·)
 	 * </ul>
-	 * @return ×îºó¹Ø¿¨ĞòºÅ(ÓÎÏ·½áÊøÊ±ËùÔÚ¹Ø¿¨ĞòºÅ)
+	 * @return æœ€åå…³å¡åºå·(æ¸¸æˆç»“æŸæ—¶æ‰€åœ¨å…³å¡åºå·)
 	 */
 	public Integer getCurrentLevelNO(){
 		return currentLevelNO;
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡¿ªÊ¼ÈÕÆÚ
+	 * è·å–å¼€å§‹æ—¥æœŸ
 	 * </ul>
-	 * @return ¿ªÊ¼ÈÕÆÚ
+	 * @return å¼€å§‹æ—¥æœŸ
 	 */
 	public Timestamp getStartTime(){
 		return startTime;
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡½áÊøÈÕÆÚ
+	 * è·å–ç»“æŸæ—¥æœŸ
 	 * </ul>
-	 * @return ½áÊøÈÕÆÚ
+	 * @return ç»“æŸæ—¥æœŸ
 	 */
 	public Timestamp getFinishTime(){
 		return finishTime;
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡ÊÇ·ñ¹ıÆÚ(1ÊÇ2·ñ)
+	 * è·å–æ˜¯å¦è¿‡æœŸ(1æ˜¯2å¦)
 	 * </ul>
-	 * @return ÊÇ·ñ¹ıÆÚ(1ÊÇ2·ñ)
+	 * @return æ˜¯å¦è¿‡æœŸ(1æ˜¯2å¦)
 	 */
 	public Integer getIsOverdue(){
 		return isOverdue;
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡µ¼ÈëÊ±¼ä
+	 * è·å–å¯¼å…¥æ—¶é—´
 	 * </ul>
-	 * @return µ¼ÈëÊ±¼ä
+	 * @return å¯¼å…¥æ—¶é—´
 	 */
 	public Timestamp getImportTime(){
 		return importTime;
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃ¸üĞÂÊ±¼ä
+	 * è®¾ç½®æ›´æ–°æ—¶é—´
 	 * </ul>
-	 * @param updateTime ¸üĞÂÊ±¼ä
+	 * @param updateTime æ›´æ–°æ—¶é—´
 	 */
 	public void setUpdateTime(Timestamp updateTime) {
 		this.updateTime = updateTime;
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡¸üĞÂÊ±¼ä
+	 * è·å–æ›´æ–°æ—¶é—´
 	 * </ul>
-	 * @return ¸üĞÂÊ±¼ä
+	 * @return æ›´æ–°æ—¶é—´
 	 */
 	public Timestamp getUpdateTime(){
 		return updateTime;
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃ¸üĞÂÊ±¼ä<br/>
-	 * ·µ»Ø±¾¶ÔÏó
+	 * è®¾ç½®æ›´æ–°æ—¶é—´<br/>
+	 * è¿”å›æœ¬å¯¹è±¡
 	 * </ul>
-	 * @param updateTime ¸üĞÂÊ±¼ä
+	 * @param updateTime æ›´æ–°æ—¶é—´
 	 */
 	public OverGamePO setUpdateTime2(Timestamp updateTime){
 		this.updateTime = updateTime;
@@ -306,22 +306,22 @@ public class OverGamePO implements Serializable{
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃ×´Ì¬1½øĞĞÖĞ2ÒÑÁìÈ¡3Ê§°Ü½áÊø4´ıÁìÈ¡5¹ıÆÚÎ´ÁìÈ¡6µÈ´ı¿ª½±
+	 * è®¾ç½®çŠ¶æ€1è¿›è¡Œä¸­2å·²é¢†å–3å¤±è´¥ç»“æŸ4å¾…é¢†å–5è¿‡æœŸæœªé¢†å–6ç­‰å¾…å¼€å¥–
 	 * </ul>
-	 * @param status ×´Ì¬1½øĞĞÖĞ2ÒÑÁìÈ¡3Ê§°Ü½áÊø4´ıÁìÈ¡5¹ıÆÚÎ´ÁìÈ¡6µÈ´ı¿ª½±
+	 * @param status çŠ¶æ€1è¿›è¡Œä¸­2å·²é¢†å–3å¤±è´¥ç»“æŸ4å¾…é¢†å–5è¿‡æœŸæœªé¢†å–6ç­‰å¾…å¼€å¥–
 	 */
 	public void setStatus(Integer status) {
 		this.status = status;
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡×´Ì¬1½øĞĞÖĞ2ÒÑÁìÈ¡3Ê§°Ü½áÊø4´ıÁìÈ¡5¹ıÆÚÎ´ÁìÈ¡6µÈ´ı¿ª½±
+	 * è·å–çŠ¶æ€1è¿›è¡Œä¸­2å·²é¢†å–3å¤±è´¥ç»“æŸ4å¾…é¢†å–5è¿‡æœŸæœªé¢†å–6ç­‰å¾…å¼€å¥–
 	 * </ul>
-	 * @return ×´Ì¬1½øĞĞÖĞ2ÒÑÁìÈ¡3Ê§°Ü½áÊø4´ıÁìÈ¡5¹ıÆÚÎ´ÁìÈ¡6µÈ´ı¿ª½±
+	 * @return çŠ¶æ€1è¿›è¡Œä¸­2å·²é¢†å–3å¤±è´¥ç»“æŸ4å¾…é¢†å–5è¿‡æœŸæœªé¢†å–6ç­‰å¾…å¼€å¥–
 	 */
 	public Integer getStatus(){
 		return status;

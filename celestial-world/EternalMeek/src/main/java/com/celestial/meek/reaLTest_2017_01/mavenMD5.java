@@ -36,7 +36,7 @@ public class mavenMD5 {
 	@Ignore
 	@Test
 	public void _02showJsonCreator(){
-		/**°ïÖúÉú³ÉÒ»Ìõjson¶ÔÏóÊı¾İ*/
+		/**å¸®åŠ©ç”Ÿæˆä¸€æ¡jsonå¯¹è±¡æ•°æ®*/
 		FileReader f = new FileReader("C:/Users/Administrator/Desktop/2.txt");
 		while(f.hasNext()){
 			String s = f.readLine();
@@ -53,7 +53,7 @@ public class mavenMD5 {
 	public void _03classVariableHelper(){
 //		li double(11,2) default 0,
 //		wg double(11,2),
-		/**¸ù¾İsql×Ô¶¯Éú³ÉÀàµÄ*/
+		/**æ ¹æ®sqlè‡ªåŠ¨ç”Ÿæˆç±»çš„*/
 		FileReader f = new FileReader("C:/Users/Administrator/Desktop/1.sql");
 		while(f.hasNext()){
 			String s = f.readLine();
@@ -96,13 +96,13 @@ public class mavenMD5 {
 			System.out.println(new File(f).getAbsolutePath());
 		}
 		
-		//E:/t/t19Util³ÖĞø¿ª·¢/t01FileReaderÔªËØÌæ»»/1.txt
-		//E:/t/t19Util³ÖĞø¿ª·¢/t01FileReaderÔªËØÌæ»»/1.txt
+		//E:/t/t19UtilæŒç»­å¼€å‘/t01FileReaderå…ƒç´ æ›¿æ¢/1.txt
+		//E:/t/t19UtilæŒç»­å¼€å‘/t01FileReaderå…ƒç´ æ›¿æ¢/1.txt
 	}
 	
 	@Test
 	public void _04fileReaderReplace(){
-		FileReader f = new FileReader("E:/t/t19Util³ÖĞø¿ª·¢/t01FileReaderÔªËØÌæ»»/1.txt");
+		FileReader f = new FileReader("E:/t/t19UtilæŒç»­å¼€å‘/t01FileReaderå…ƒç´ æ›¿æ¢/1.txt");
 		while(f.hasNext()){
 			System.out.println(f.readLine());
 		}

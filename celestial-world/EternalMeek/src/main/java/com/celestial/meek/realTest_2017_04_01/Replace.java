@@ -9,20 +9,20 @@ public class Replace {
 
 	public static void main(String[] args) {
 		FileReader f = new FileReader("D:/workspace4/db/c_right.sql", false, "gbk");//("D:/workspace4/db/c_right.sql")
-		String save = "E:/t/t25_OTCÏÖ»õ/t18ĞŞ¸Ämember¡¢exchange/08¸üĞÂ±¸·İ2017-04-07/c_right.sql";
+		String save = "E:/t/t25_OTCç°è´§/t18ä¿®æ”¹memberã€exchange/08æ›´æ–°å¤‡ä»½2017-04-07/c_right.sql";
 		StringBuffer sb = new StringBuffer("");
 		while(f.hasNext()){
 			sb.append(f.readLine()).append("\n");
 		}
 		String send = sb.toString();
 		send = send.substring(0, send.length()-1)
-						.replaceAll("Õ¼ÓÃ±£Ö¤½ğ","Õ¼ÓÃ½»Ò×ÂÄÔ¼±£Ö¤½ğ")
-						.replaceAll("ÊÍ·Å±£Ö¤½ğ","ÊÍ·Å½»Ò×ÂÄÔ¼±£Ö¤½ğ")
-						.replaceAll("½»ÊÕ±£Ö¤½ğ","½»ÊÕÂÄÔ¼±£Ö¤½ğ")
-						.replaceAll("¿ÉÓÃ±£Ö¤½ğ","¿ÉÓÃ½»Ò×ÂÄÔ¼±£Ö¤½ğ")
-						.replaceAll("¶³½á±£Ö¤½ğ","¶³½á½»Ò×ÂÄÔ¼±£Ö¤½ğ");
+						.replaceAll("å ç”¨ä¿è¯é‡‘","å ç”¨äº¤æ˜“å±¥çº¦ä¿è¯é‡‘")
+						.replaceAll("é‡Šæ”¾ä¿è¯é‡‘","é‡Šæ”¾äº¤æ˜“å±¥çº¦ä¿è¯é‡‘")
+						.replaceAll("äº¤æ”¶ä¿è¯é‡‘","äº¤æ”¶å±¥çº¦ä¿è¯é‡‘")
+						.replaceAll("å¯ç”¨ä¿è¯é‡‘","å¯ç”¨äº¤æ˜“å±¥çº¦ä¿è¯é‡‘")
+						.replaceAll("å†»ç»“ä¿è¯é‡‘","å†»ç»“äº¤æ˜“å±¥çº¦ä¿è¯é‡‘");
 		UtilFile.printFile(Arrays.asList(new String[]{send}), save,"gbk");
-		System.out.println("Íê³É£¡");
+		System.out.println("å®Œæˆï¼");
 		System.out.println(send);
 	}
 

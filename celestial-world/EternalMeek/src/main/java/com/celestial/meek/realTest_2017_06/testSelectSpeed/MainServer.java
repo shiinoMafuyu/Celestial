@@ -1,9 +1,9 @@
 /******************************************************************
  * MainServer.java
  * Copyright 2017 by WZG. All Rights Reserved.
- * CreateDate£º2017Äê6ÔÂ27ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´6æœˆ27æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.meek.realTest_2017_06.testSelectSpeed;
@@ -20,15 +20,15 @@ import javax.sql.DataSource;
 import com.celestial.agniRadiance.EzUtil.UtilDB;
 
 /**
- * <b>ÐÞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê6ÔÂ27ÈÕ
+ *                        ---- wangzg 2017å¹´6æœˆ27æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜Žï¼š</b>
  * <p> 
  * 
  * </p>
@@ -36,7 +36,7 @@ import com.celestial.agniRadiance.EzUtil.UtilDB;
 public class MainServer {
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜Žï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -50,7 +50,7 @@ public class MainServer {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜Žï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul> 
@@ -73,13 +73,13 @@ public class MainServer {
 		List<Entity> all = new ArrayList<Entity>();
 		all = addAll(all,map);
 		
-		System.out.println("ÓÃÊ±£º "+(new Date().getTime() - d.getTime())/1000 + " Ãë");
+		System.out.println("ç”¨æ—¶ï¼š "+(new Date().getTime() - d.getTime())/1000 + " ç§’");
 		System.out.println(all.size());
 		
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜Žï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -98,7 +98,7 @@ public class MainServer {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜Žï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -115,7 +115,7 @@ public class MainServer {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜Žï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -143,7 +143,7 @@ public class MainServer {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜Žï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -159,7 +159,7 @@ public class MainServer {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜Žï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>

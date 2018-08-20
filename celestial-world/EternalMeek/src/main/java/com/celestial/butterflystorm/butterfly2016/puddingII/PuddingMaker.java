@@ -4,7 +4,7 @@ import java.io.File;
 
 import com.celestial.agniRadiance.EzUtil.UtilFile;
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
@@ -12,71 +12,71 @@ import com.celestial.agniRadiance.EzUtil.UtilFile;
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
  * 
  * </p>
  */
 public class PuddingMaker {
-	/**--------------Ò»µ©Éú³É²»¸Ä±äÆäÖµ---------------*/
+	/**--------------ä¸€æ—¦ç”Ÿæˆä¸æ”¹å˜å…¶å€¼---------------*/
 	/**
-	 * ´«Èë×Ö·û´®s1¶ÔÓ¦µÄÎÄ¼ş
+	 * ä¼ å…¥å­—ç¬¦ä¸²s1å¯¹åº”çš„æ–‡ä»¶
 	 */
 	File s1File;
 	/**
-	 * Ô´ÎÄ¼şhome
-	 * javaÔÚsrcÏÂ
-	 * Ò»°ãÎÄ¼şÔÚwebRootÏÂ
+	 * æºæ–‡ä»¶home
+	 * javaåœ¨srcä¸‹
+	 * ä¸€èˆ¬æ–‡ä»¶åœ¨webRootä¸‹
 	 */
 	String sourceHome; 
 	/**
-	 * Òª¿½±´µÄÎÄ¼şµÄhome
-	 * Ò»°ãÎÄ¼şwebRootÏÂ
-	 * javaÎÄ¼ş¿½Æä¶ÔÓ¦µÄ.classÎÄ¼ş ÔÚwebRoot/web-inf/classesÏÂ
+	 * è¦æ‹·è´çš„æ–‡ä»¶çš„home
+	 * ä¸€èˆ¬æ–‡ä»¶webRootä¸‹
+	 * javaæ–‡ä»¶æ‹·å…¶å¯¹åº”çš„.classæ–‡ä»¶ åœ¨webRoot/web-inf/classesä¸‹
 	 */
 	String srcFileHome;
 	/**
-	 * Ä¿±êÂ·¾¶home
-	 * Ò»°ãÎÄ¼şÏîÄ¿ÃûÏÂ
-	 * java¶ÔÓ¦µÄclassÎÄ¼ş ÏîÄ¿Ãû + web-inf + classes
+	 * ç›®æ ‡è·¯å¾„home
+	 * ä¸€èˆ¬æ–‡ä»¶é¡¹ç›®åä¸‹
+	 * javaå¯¹åº”çš„classæ–‡ä»¶ é¡¹ç›®å + web-inf + classes
 	 */
 	String destinationHome ;
 	/**
-	 * ÎÄ¼şÃû
+	 * æ–‡ä»¶å
 	 */
 	String fileName;
 	/**
-	 * ÏîÄ¿Ãû
+	 * é¡¹ç›®å
 	 */
 	String projectName;
 	/**
-	 * ÊÇ·ñÊÇjavaÎÄ¼ş
+	 * æ˜¯å¦æ˜¯javaæ–‡ä»¶
 	 */
 	boolean isJava;
 	
-	/**--------------Ò»µ©Éú³É²»¸Ä±äÆäÖµ---------------*/
+	/**--------------ä¸€æ—¦ç”Ÿæˆä¸æ”¹å˜å…¶å€¼---------------*/
 	File srcFile ;
 	File desFile ;
 	 
 	String tail = null;
 	/**
 	 * 
-	 * @param s1   Ò»¸öÎÄ¼ş
-	 * @param s2   ÏîÄ¿Ä¿Â¼
+	 * @param s1   ä¸€ä¸ªæ–‡ä»¶
+	 * @param s2   é¡¹ç›®ç›®å½•
 	 */
 	public PuddingMaker(String s1,String s2) {
 		this.s1File = new File(s1);
 		this.projectName = s2.substring(s2.lastIndexOf("/")+1, s2.length());
 		this.fileName = s1.substring(s1.lastIndexOf("/")+1, s1.length());
-		//Éú³Éº¬ÏîÄ¿ÃûµÄÄ¿±ê¸ùÂ·¾¶
+		//ç”Ÿæˆå«é¡¹ç›®åçš„ç›®æ ‡æ ¹è·¯å¾„
 		this.destinationHome = s1.substring(0, s1.lastIndexOf("/"))+"/"+projectName;
 		
-		//Éú³É²éÕÒÂ·¾¶
+		//ç”ŸæˆæŸ¥æ‰¾è·¯å¾„
 		this.isJava = fileName.endsWith(".java");
 		if(isJava){
 			this.sourceHome = s2+"/src";
 			this.srcFileHome = s2+"/WebRoot/WEB-INF/classes";
-			//Èô¹ûÊÇjavaÎÄ¼ş Ä¿±êÎÄ¼şÂ·¾¶ÔÚ¸ùÄ¿Â¼µÄ/WEB-INF/classesÏÂÃæ
+			//è‹¥æœæ˜¯javaæ–‡ä»¶ ç›®æ ‡æ–‡ä»¶è·¯å¾„åœ¨æ ¹ç›®å½•çš„/WEB-INF/classesä¸‹é¢
 			this.destinationHome += "/WEB-INF/classes";
 			
 		}else{
@@ -85,36 +85,36 @@ public class PuddingMaker {
 		}
 	}
 	/**
-	 *  1 :¿½±´³É¹¦
-	 * -1 :ÎÄ¼şÎ´ÕÒµ½
-	 * -2 :´´½¨Ä¿±êÎÄ¼şÊ§°Ü
-	 * -3 :¿½±´Ê§°Ü
-	 * -4 :ÆäËûÊ§°Ü
-	 * @return ½á¹û
+	 *  1 :æ‹·è´æˆåŠŸ
+	 * -1 :æ–‡ä»¶æœªæ‰¾åˆ°
+	 * -2 :åˆ›å»ºç›®æ ‡æ–‡ä»¶å¤±è´¥
+	 * -3 :æ‹·è´å¤±è´¥
+	 * -4 :å…¶ä»–å¤±è´¥
+	 * @return ç»“æœ
 	 */
 	public int makePudding(){
-		//ÕÒµ½ÎÄ¼ş
+		//æ‰¾åˆ°æ–‡ä»¶
 		if(!findGelatin()){
 			return -1;
 		}
-		//´´½¨ÆğÔ´ºÍÄ¿±êÂ·¾¶
+		//åˆ›å»ºèµ·æºå’Œç›®æ ‡è·¯å¾„
 		if(!prepareFood()){
 			return -2;
 		}
-		//¿½±´
+		//æ‹·è´
 		if(!cookDinner()){
 			return -3;
 		}
-		//¼ì²é
+		//æ£€æŸ¥
 		if(isJava){
 			foodIngredients();
 		}
-		System.out.println("ÎÄ¼şÉú³É²¹¶¡³É¹¦ : " + this.fileName );
+		System.out.println("æ–‡ä»¶ç”Ÿæˆè¡¥ä¸æˆåŠŸ : " + this.fileName );
 		return 1;
 	}
 	/**
-	 * ¿´ÓĞÃ»ÓĞÄÚ²¿Àà ÓĞµÄ»°¿½±´
-	 * ±ğÈ¥¸Ä±ä¼ÈÓĞµÄÖµ
+	 * çœ‹æœ‰æ²¡æœ‰å†…éƒ¨ç±» æœ‰çš„è¯æ‹·è´
+	 * åˆ«å»æ”¹å˜æ—¢æœ‰çš„å€¼
 	 * @return
 	 */
 	private boolean foodIngredients() {
@@ -137,7 +137,7 @@ public class PuddingMaker {
 		return b;
 	}
 	/**
-	 * ¿½±´ÎÄ¼ş
+	 * æ‹·è´æ–‡ä»¶
 	 * @return
 	 */
 	private boolean cookDinner() {
@@ -151,7 +151,7 @@ public class PuddingMaker {
 		return b;
 	}
 	/**
-	 * ´´Ôì×¼±¸ÎÄ¼ş
+	 * åˆ›é€ å‡†å¤‡æ–‡ä»¶
 	 * @return
 	 */
 	private boolean prepareFood() {
@@ -164,7 +164,7 @@ public class PuddingMaker {
 				desFile.getParentFile().mkdirs();
 				desFile.createNewFile();
 			}else{
-				System.out.println("Ô´ÎÄ¼ş²»´æÔÚ!ÎŞ·¨¿½±´Éú³É²¹¶¡!");
+				System.out.println("æºæ–‡ä»¶ä¸å­˜åœ¨!æ— æ³•æ‹·è´ç”Ÿæˆè¡¥ä¸!");
 			}
 //			srcFile = 
 		} catch (Exception e) {
@@ -174,8 +174,8 @@ public class PuddingMaker {
 		return b;
 	}
 	/**
-	 * È¥sourceHomeÖĞ²éÕÒĞèÒªµÄÎÄ¼ş,
-	 * @return ÕÒµ½·µ»Øtrue,·ñÔòfalse
+	 * å»sourceHomeä¸­æŸ¥æ‰¾éœ€è¦çš„æ–‡ä»¶,
+	 * @return æ‰¾åˆ°è¿”å›true,å¦åˆ™false
 	 */
 	private boolean findGelatin() {
 		boolean b =true;
@@ -190,8 +190,8 @@ public class PuddingMaker {
 		return b;
 	}
 	/**
-	 * ´ÓÊôÓÚfindGelatin()µÄµİ¹é²éÕÒ·½·¨
-	 * ÓÃµİ¹é·µ»Ø×Ö·û´®Ò²¿ÉÒÔ,µ«ÊÇ²»ÄÜ²é¿´È«²¿ÎÄ¼şÁË
+	 * ä»å±äºfindGelatin()çš„é€’å½’æŸ¥æ‰¾æ–¹æ³•
+	 * ç”¨é€’å½’è¿”å›å­—ç¬¦ä¸²ä¹Ÿå¯ä»¥,ä½†æ˜¯ä¸èƒ½æŸ¥çœ‹å…¨éƒ¨æ–‡ä»¶äº†
 	 * @param file
 	 */
 	private void find(File file) {
@@ -204,7 +204,7 @@ public class PuddingMaker {
 		else if(file.isFile()){
 			if(UtilFile.compareFile(file,this.s1File)){
 				if(this.tail !=null ){
-					System.out.println("¾¯¸æ : ÕÒµ½µÄ "+this.fileName+" ÎÄ¼ş²»Ö¹Ò»¸ö,Çë×¢Òâ!");
+					System.out.println("è­¦å‘Š : æ‰¾åˆ°çš„ "+this.fileName+" æ–‡ä»¶ä¸æ­¢ä¸€ä¸ª,è¯·æ³¨æ„!");
 				}
 				String sFile = file.getAbsolutePath();
 				this.tail = sFile.substring(this.sourceHome.length(),sFile.length());
@@ -213,7 +213,7 @@ public class PuddingMaker {
 				}
 			}
 		}else{
-			throw new RuntimeException("²»ÊÇÎÄ¼ş,²»ÊÇÄ¿Â¼Òì³£");
+			throw new RuntimeException("ä¸æ˜¯æ–‡ä»¶,ä¸æ˜¯ç›®å½•å¼‚å¸¸");
 		}
 		
 	}

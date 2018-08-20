@@ -46,10 +46,10 @@ public class TestUtilCollection {
 	
 	@Test
 	public void _02_put(){
-		Equip e = new Equip().setRepresentId("01").setName("Õæ°×");
-		Equip[] eArr = new Equip[]{e,new Equip().setRepresentId("02").setName("Õæ¶¬"),
-									new Equip().setRepresentId("01").setName("ÕæÃû"),
-									new Equip().setRepresentId("02").setName("ÕæËª")};
+		Equip e = new Equip().setRepresentId("01").setName("çœŸç™½");
+		Equip[] eArr = new Equip[]{e,new Equip().setRepresentId("02").setName("çœŸå†¬"),
+									new Equip().setRepresentId("01").setName("çœŸå"),
+									new Equip().setRepresentId("02").setName("çœŸéœœ")};
 		List<Equip> l = new ArrayList<Equip>();for(Equip ei:eArr){l.add(ei);}
 		List<Equip> l2 = new ArrayList<Equip>();l2.add(e);
 		
@@ -125,7 +125,7 @@ public class TestUtilCollection {
 	
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul> 
@@ -196,7 +196,7 @@ public class TestUtilCollection {
 		Assert.assertTrue(resList.get(0).equals(list.get(4)));
 		
 		
-		/** dateÀàĞÍ */
+		/** dateç±»å‹ */
 		list = Arrays.asList(new  Person[]{
 				new Person().setBirthday(new Date(time+2000)),
 				new Person().setBirthday(new Date(time+1000)),
@@ -358,8 +358,8 @@ public class TestUtilCollection {
 	public void testDeepCopyArr() {
 		String[] sarr = new String[]{"1","2","3"};
 		String[] sarr2 = UtilCollection.deepCopyArr(sarr);
-		sarr[1] = "ÎÒ";
-		Assert.assertTrue("ÎÒ".equals(sarr[1]));
+		sarr[1] = "æˆ‘";
+		Assert.assertTrue("æˆ‘".equals(sarr[1]));
 		Assert.assertTrue("2".equals(sarr2[1]));
 	}
 }

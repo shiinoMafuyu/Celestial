@@ -1,9 +1,9 @@
 /******************************************************************
  * ChangeRetcode.java
  * Copyright 2017 by WZG. All Rights Reserved.
- * CreateDate£º2017Äê8ÔÂ24ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´8æœˆ24æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.butterflystorm.butterfly2017.codeSynchronous.use;
@@ -19,15 +19,15 @@ import com.celestial.agniRadiance.abstracte.RecursiveDealFile;
 import com.celestial.agniRadiance.entity.FileReader;
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê8ÔÂ24ÈÕ
+ *                        ---- wangzg 2017å¹´8æœˆ24æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
  * 
  * </p>
@@ -35,7 +35,7 @@ import com.celestial.agniRadiance.entity.FileReader;
 public class ChangeRetcode {
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -82,8 +82,8 @@ public class ChangeRetcode {
 		String[] types = new String[]{"java","xml"};
 		
 		List<String> direcotorys = Arrays.asList(new String[]{
-				"D:/workspace_final/02MyEclipse2013/05¹ıÎå¹ØÕ¶Áù½±/forecast-core-service",
-				"D:/workspace_final/02MyEclipse2013/05¹ıÎå¹ØÕ¶Áù½±/forecast-frontend"
+				"D:/workspace_final/02MyEclipse2013/05è¿‡äº”å…³æ–©å…­å¥–/forecast-core-service",
+				"D:/workspace_final/02MyEclipse2013/05è¿‡äº”å…³æ–©å…­å¥–/forecast-frontend"
 		});
 		
 		for(String dir : direcotorys){
@@ -116,7 +116,7 @@ public class ChangeRetcode {
 				}
 				
 				UtilFile.printFile(send, path2 + UtilString.fmtPathStr(file.getAbsolutePath()).substring(path1.length()),"gbk");
-				System.out.println("ĞŞ¸Ä±£´æÍê³É£º" + file.getName());
+				System.out.println("ä¿®æ”¹ä¿å­˜å®Œæˆï¼š" + file.getName());
 			}
 		};
 		

@@ -9,12 +9,12 @@ import java.util.List;
 import com.celestial.agniRadiance.EzUtil.UtilFile;
 
 
-public class ÏÈ²»½âÎöÎÄ±¾ÁËÖ±½ÓÓÃÉú³É {
+public class å…ˆä¸è§£ææ–‡æœ¬äº†ç›´æ¥ç”¨ç”Ÿæˆ {
 
 	static List<List<Object>> lreq = new ArrayList<List<Object>>();
 	static List<List<Object>> lres = new ArrayList<List<Object>>();
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -47,19 +47,19 @@ public class ÏÈ²»½âÎöÎÄ±¾ÁËÖ±½ÓÓÃÉú³É {
 	@SuppressWarnings("unused")
 	private static void get_TemplateCancelResponseVO() {
 		/**=============================== =========================================*/
-		//requestÌí¼Óp1
+		//requestæ·»åŠ p1
 		
 		//String Double Integer Date Long
-		//responseÌí¼Óp2
+		//responseæ·»åŠ p2
 		lres.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.TemplateCancelResponseVO",//È«Ãû3
-				new String[][]{//Êä³öĞÅÏ¢4
-						{"RETCODE","RETCODE","String","·µ»ØÂë  =0³É¹¦, ÆäËûÎªÊ§°Ü£¬´íÎóÃèÊöÔÚMESSAGE ÖĞ"},
-						{"MESSAGE","MESSAGE","String","·µ»ØµÄÌáÊ¾ÏûÏ¢ÄÚÈİ"},
-						{"N","TemplateNo","String","³·ÏúÄ£°åID"}
+				"gnnt.MEBS.MobileServer.vo.micro.trade.TemplateCancelResponseVO",//å…¨å3
+				new String[][]{//è¾“å‡ºä¿¡æ¯4
+						{"RETCODE","RETCODE","String","è¿”å›ç   =0æˆåŠŸ, å…¶ä»–ä¸ºå¤±è´¥ï¼Œé”™è¯¯æè¿°åœ¨MESSAGE ä¸­"},
+						{"MESSAGE","MESSAGE","String","è¿”å›çš„æç¤ºæ¶ˆæ¯å†…å®¹"},
+						{"N","TemplateNo","String","æ’¤é”€æ¨¡æ¿ID"}
 						
 						},
-				new String[][]{//Êä³ö²éÑ¯5
+				new String[][]{//è¾“å‡ºæŸ¥è¯¢5
 						
 						
 						
@@ -71,1221 +71,1221 @@ public class ÏÈ²»½âÎöÎÄ±¾ÁËÖ±½ÓÓÃÉú³É {
 	}
 
 	private static void getListRequestResponse_Espot() {
-		/**===============================8. ÏµÍ³ĞÅÏ¢²éÑ¯ =========================================*/
-		//requestÌí¼Óp1
+		/**===============================8. ç³»ç»Ÿä¿¡æ¯æŸ¥è¯¢ =========================================*/
+		//requestæ·»åŠ p1
 		lreq.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.SysInfoRequestVO",//È«Ãû1
-				new String[][]{//ÊäÈëĞÅÏ¢2
-						{"U","UserID","String","ÓÃ»§id"},
-						{"SI","SessionID","Long","ÓÃ»§»á»°id"}
+				"gnnt.MEBS.MobileServer.vo.micro.trade.SysInfoRequestVO",//å…¨å1
+				new String[][]{//è¾“å…¥ä¿¡æ¯2
+						{"U","UserID","String","ç”¨æˆ·id"},
+						{"SI","SessionID","Long","ç”¨æˆ·ä¼šè¯id"}
 						
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
 		//String Double Integer Date Long
-		//responseÌí¼Óp2
+		//responseæ·»åŠ p2
 		lres.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.SysInfoResponseVO",//È«Ãû3
-				new String[][]{//Êä³öĞÅÏ¢4
-						{"RETCODE","RETCODE","String","·µ»ØÂë  =0³É¹¦, ÆäËûÎªÊ§°Ü£¬´íÎóÃèÊöÔÚMESSAGE ÖĞ"},
-						{"MESSAGE","MESSAGE","String","·µ»ØµÄÌáÊ¾ÏûÏ¢ÄÚÈİ"},
+				"gnnt.MEBS.MobileServer.vo.micro.trade.SysInfoResponseVO",//å…¨å3
+				new String[][]{//è¾“å‡ºä¿¡æ¯4
+						{"RETCODE","RETCODE","String","è¿”å›ç   =0æˆåŠŸ, å…¶ä»–ä¸ºå¤±è´¥ï¼Œé”™è¯¯æè¿°åœ¨MESSAGE ä¸­"},
+						{"MESSAGE","MESSAGE","String","è¿”å›çš„æç¤ºæ¶ˆæ¯å†…å®¹"},
 						
-						{"D","TradeDate","Date","µ±Ç°½»Ò×ÈÕ£¨yyyy-MM-dd£©"}
+						{"D","TradeDate","Date","å½“å‰äº¤æ˜“æ—¥ï¼ˆyyyy-MM-ddï¼‰"}
 						
 						},
-				new String[][]{//Êä³ö²éÑ¯5
+				new String[][]{//è¾“å‡ºæŸ¥è¯¢5
 						
-						{"WI","WarehouseId","String","²Ö¿âID"},
-						{"WN","WarehouseName","String","²Ö¿âÃû³Æ"},
+						{"WI","WarehouseId","String","ä»“åº“ID"},
+						{"WN","WarehouseName","String","ä»“åº“åç§°"},
 						
-						{"LSP","LowestRiskRate","Double","×îµÍ·çÏÕ½ğ"},
-						{"TPT","TradeMarginTime","Integer","Ä¬ÈÏ±£Ö¤½ğÖ§¸¶ÆÚÏŞ(Ğ¡Ê±)"},
-						{"DPT","DeliveryTime","Integer","Ä¬ÈÏ½»ÊÕ×¼±¸ÆÚÏŞ(Ğ¡Ê±)"},
+						{"LSP","LowestRiskRate","Double","æœ€ä½é£é™©é‡‘"},
+						{"TPT","TradeMarginTime","Integer","é»˜è®¤ä¿è¯é‡‘æ”¯ä»˜æœŸé™(å°æ—¶)"},
+						{"DPT","DeliveryTime","Integer","é»˜è®¤äº¤æ”¶å‡†å¤‡æœŸé™(å°æ—¶)"},
 						
-						{"OVT","OrderValidTime","Integer","Ä¬ÈÏÎ¯ÍĞÓĞĞ§ÆÚÏŞ(Ğ¡Ê±)"},
-						{"OTM","OrderTradeMargin","Double","µ¥±Ê³ÏĞÅ±£ÕÏ½ğ"},
-						{"TMM","GuaranteeMagnify","Double","³ÏĞÅ±£ÕÏ½ğ·Å´óÂÊ"},
+						{"OVT","OrderValidTime","Integer","é»˜è®¤å§”æ‰˜æœ‰æ•ˆæœŸé™(å°æ—¶)"},
+						{"OTM","OrderTradeMargin","Double","å•ç¬”è¯šä¿¡ä¿éšœé‡‘"},
+						{"TMM","GuaranteeMagnify","Double","è¯šä¿¡ä¿éšœé‡‘æ”¾å¤§ç‡"},
 						
-						{"FPR","FirstRate","Double","Ê×¿î±ÈÀı"},
-						{"SPR","SecondRate","Double","µÚ¶ş±Ê»õ¿î±ÈÀı"},
-						{"OFS","OverFlowShort","Double","Òç¶Ì±ÈÀı"},
+						{"FPR","FirstRate","Double","é¦–æ¬¾æ¯”ä¾‹"},
+						{"SPR","SecondRate","Double","ç¬¬äºŒç¬”è´§æ¬¾æ¯”ä¾‹"},
+						{"OFS","OverFlowShort","Double","æº¢çŸ­æ¯”ä¾‹"},
 						
-						{"TFM","TradeFeeMode","Integer","½»Ò×ÊÖĞø·ÑÄ£Ê½£º 1£º¹Ì¶¨Öµ£» 2£º°Ù·Ö±È"},
-						{"TFR","TradeFeeRate","Double","½»Ò×ÊÖĞø·ÑÂÊ"},
-						{"DFM","DeliveryFeeMode","Double","½»ÊÕÊÖĞø·ÑÄ£Ê½£º 1£º¹Ì¶¨Öµ£» 2£º°Ù·Ö±È"},
+						{"TFM","TradeFeeMode","Integer","äº¤æ˜“æ‰‹ç»­è´¹æ¨¡å¼ï¼š 1ï¼šå›ºå®šå€¼ï¼› 2ï¼šç™¾åˆ†æ¯”"},
+						{"TFR","TradeFeeRate","Double","äº¤æ˜“æ‰‹ç»­è´¹ç‡"},
+						{"DFM","DeliveryFeeMode","Double","äº¤æ”¶æ‰‹ç»­è´¹æ¨¡å¼ï¼š 1ï¼šå›ºå®šå€¼ï¼› 2ï¼šç™¾åˆ†æ¯”"},
 						
-						{"DFR","DeliveryFeeRate","Double","½»ÊÕÊÖĞø·ÑÂÊ"},
-						{"DMM","DeliveryMarginMode","Integer","½»ÊÕ±£Ö¤½ğÄ£Ê½£º 1£º¹Ì¶¨Öµ£» 2£º°Ù·Ö±È"},
-						{"DMR","DeliveryMargin","Double","½»ÊÕ±£Ö¤½ğÂÊ"},
+						{"DFR","DeliveryFeeRate","Double","äº¤æ”¶æ‰‹ç»­è´¹ç‡"},
+						{"DMM","DeliveryMarginMode","Integer","äº¤æ”¶ä¿è¯é‡‘æ¨¡å¼ï¼š 1ï¼šå›ºå®šå€¼ï¼› 2ï¼šç™¾åˆ†æ¯”"},
+						{"DMR","DeliveryMargin","Double","äº¤æ”¶ä¿è¯é‡‘ç‡"},
 						
-						{"PTS","PayTimes","Integer","¸¶¿î´ÎÊı£¬Ö»ÄÜÎª2¡¢3"},
-						{"OAB","OrderAuthBuy","Integer","Âò¹ÒÅÆÊÇ·ñĞèÒªÉóºË£º 0£ºĞèÒª£» 1£º²»ĞèÒª"},
-						{"OAS","OrderAuthSell","Integer","Âô¹ÒÅÆÊÇ·ñĞèÒªÉóºË£º 0£ºĞèÒª£» 1£º²»ĞèÒª"},
+						{"PTS","PayTimes","Integer","ä»˜æ¬¾æ¬¡æ•°ï¼Œåªèƒ½ä¸º2ã€3"},
+						{"OAB","OrderAuthBuy","Integer","ä¹°æŒ‚ç‰Œæ˜¯å¦éœ€è¦å®¡æ ¸ï¼š 0ï¼šéœ€è¦ï¼› 1ï¼šä¸éœ€è¦"},
+						{"OAS","OrderAuthSell","Integer","å–æŒ‚ç‰Œæ˜¯å¦éœ€è¦å®¡æ ¸ï¼š 0ï¼šéœ€è¦ï¼› 1ï¼šä¸éœ€è¦"},
 						
-						{"PAS","PayBillAuthSell","Integer","Âô²Öµ¥ÊÇ·ñĞèÒªÉóºË£º 0£ºĞèÒª£» 1£º²»ĞèÒª"},
+						{"PAS","PayBillAuthSell","Integer","å–ä»“å•æ˜¯å¦éœ€è¦å®¡æ ¸ï¼š 0ï¼šéœ€è¦ï¼› 1ï¼šä¸éœ€è¦"},
 						
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
-		/**===============================8. ÏµÍ³ĞÅÏ¢²éÑ¯ =========================================*/
+		/**===============================8. ç³»ç»Ÿä¿¡æ¯æŸ¥è¯¢ =========================================*/
 
 	}
 
 	public static void getListRequestJIngJia2() {
-		/**===============================8 ÉÌÆ·ÏêÇé²éÑ¯ =========================================*/
-		//requestÌí¼Óp1
+		/**===============================8 å•†å“è¯¦æƒ…æŸ¥è¯¢ =========================================*/
+		//requestæ·»åŠ p1
 		lreq.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.CommodityInfoQueryRequestVO",//È«Ãû1
-				new String[][]{//ÊäÈëĞÅÏ¢2
-						{"U","UserID","String","ÓÃ»§id"},
-						{"SI","SessionID","Long","ÓÃ»§»á»°id"},
+				"gnnt.MEBS.MobileServer.vo.micro.trade.CommodityInfoQueryRequestVO",//å…¨å1
+				new String[][]{//è¾“å…¥ä¿¡æ¯2
+						{"U","UserID","String","ç”¨æˆ·id"},
+						{"SI","SessionID","Long","ç”¨æˆ·ä¼šè¯id"},
 						
-						{"C","commodityId","String","ÉÌÆ·´úÂë"}
+						{"C","commodityId","String","å•†å“ä»£ç "}
 						
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
 		//String Double Integer Date Long
-		//responseÌí¼Óp2
+		//responseæ·»åŠ p2
 		lres.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.CommodityInfoQueryResponseVO",//È«Ãû3
-				new String[][]{//Êä³öĞÅÏ¢4
-						{"RETCODE","RETCODE","String","·µ»ØÂë  =0³É¹¦, ÆäËûÎªÊ§°Ü£¬´íÎóÃèÊöÔÚMESSAGE ÖĞ"},
-						{"MESSAGE","MESSAGE","String","·µ»ØµÄÌáÊ¾ÏûÏ¢ÄÚÈİ"},
+				"gnnt.MEBS.MobileServer.vo.micro.trade.CommodityInfoQueryResponseVO",//å…¨å3
+				new String[][]{//è¾“å‡ºä¿¡æ¯4
+						{"RETCODE","RETCODE","String","è¿”å›ç   =0æˆåŠŸ, å…¶ä»–ä¸ºå¤±è´¥ï¼Œé”™è¯¯æè¿°åœ¨MESSAGE ä¸­"},
+						{"MESSAGE","MESSAGE","String","è¿”å›çš„æç¤ºæ¶ˆæ¯å†…å®¹"},
 						
-						{"TRD","TotalRecord","Integer","×Ü¼ÇÂ¼Êı"}
+						{"TRD","TotalRecord","Integer","æ€»è®°å½•æ•°"}
 						
 						},
-				new String[][]{//Êä³ö²éÑ¯5
-						{"I","Code","String","±êµÄÂë"},
-						{"C","CommodityCode","String","ÉÌÆ·Âë"},
-						{"SP","StartPrice","Double","Æğ±¨¼Û"},
+				new String[][]{//è¾“å‡ºæŸ¥è¯¢5
+						{"I","Code","String","æ ‡çš„ç "},
+						{"C","CommodityCode","String","å•†å“ç "},
+						{"SP","StartPrice","Double","èµ·æŠ¥ä»·"},
 						
-						{"AP","AlertPrice","Double","±¨¾¯¼Û"},
-						{"AD","AddPrice","Double","¼Ó¼Û·ù¶È"},
-						{"Q","Qty","Integer","½»Ò××ÜÊı"},
+						{"AP","AlertPrice","Double","æŠ¥è­¦ä»·"},
+						{"AD","AddPrice","Double","åŠ ä»·å¹…åº¦"},
+						{"Q","Qty","Integer","äº¤æ˜“æ€»æ•°"},
 						
-						{"IQ","MinQty","Integer","×îĞ¡±¨µ¥ÊıÁ¿"},
-						{"XQ","MaxQty","Integer","×î´ó±¨µ¥ÊıÁ¿"},
-						{"MAR","Margin","Double","½»Ò×±£Ö¤½ğ"},
+						{"IQ","MinQty","Integer","æœ€å°æŠ¥å•æ•°é‡"},
+						{"XQ","MaxQty","Integer","æœ€å¤§æŠ¥å•æ•°é‡"},
+						{"MAR","Margin","Double","äº¤æ˜“ä¿è¯é‡‘"},
 						
-						{"FEE","Fee","Double","ÊÖĞø·Ñ"}
+						{"FEE","Fee","Double","æ‰‹ç»­è´¹"}
 						
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
-		/**===============================8 ÉÌÆ·ÏêÇé²éÑ¯ =========================================*/
+		/**===============================8 å•†å“è¯¦æƒ…æŸ¥è¯¢ =========================================*/
 
 	}
 
 	public static void getListRequestJIngJia() {
-		/**===============================9 ÏÂµ¥²Ù×÷ =========================================*/
-		//requestÌí¼Óp1
+		/**===============================9 ä¸‹å•æ“ä½œ =========================================*/
+		//requestæ·»åŠ p1
 		lreq.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.OrderRequestVO",//  <<--------  È«Ãû1  ---------
-				new String[][]{//ÊäÈëĞÅÏ¢2
-						{"U","UserID","String","ÓÃ»§id"},
-						{"SI","SessionID","Long","ÓÃ»§»á»°id"},
+				"gnnt.MEBS.MobileServer.vo.micro.trade.OrderRequestVO",//  <<--------  å…¨å1  ---------
+				new String[][]{//è¾“å…¥ä¿¡æ¯2
+						{"U","UserID","String","ç”¨æˆ·id"},
+						{"SI","SessionID","Long","ç”¨æˆ·ä¼šè¯id"},
 						
-						{"I","Code","String","±êµÄºÅ"},
-						{"C","CommodityCode","String","ÉÌÆ·´úÂë"},
-						{"M","Module","Integer","½»Ò×°å¿é"},
-						{"P","Price","Double","ÏÂµ¥¼Û¸ñ"},
-						{"Q","Qty","Integer","ÏÂµ¥ÊıÁ¿"},
+						{"I","Code","String","æ ‡çš„å·"},
+						{"C","CommodityCode","String","å•†å“ä»£ç "},
+						{"M","Module","Integer","äº¤æ˜“æ¿å—"},
+						{"P","Price","Double","ä¸‹å•ä»·æ ¼"},
+						{"Q","Qty","Integer","ä¸‹å•æ•°é‡"},
 						
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
 		//String Double Integer Date Long
-		//responseÌí¼Óp2
+		//responseæ·»åŠ p2
 		lres.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.OrderResponseVO",//  <<--------  È«Ãû3  ---------
-				new String[][]{//Êä³öĞÅÏ¢4
-						{"RETCODE","RETCODE","String","·µ»ØÂë  =0³É¹¦, ÆäËûÎªÊ§°Ü£¬´íÎóÃèÊöÔÚMESSAGE ÖĞ"},
-						{"MESSAGE","MESSAGE","String","·µ»ØµÄÌáÊ¾ÏûÏ¢ÄÚÈİ"}
+				"gnnt.MEBS.MobileServer.vo.micro.trade.OrderResponseVO",//  <<--------  å…¨å3  ---------
+				new String[][]{//è¾“å‡ºä¿¡æ¯4
+						{"RETCODE","RETCODE","String","è¿”å›ç   =0æˆåŠŸ, å…¶ä»–ä¸ºå¤±è´¥ï¼Œé”™è¯¯æè¿°åœ¨MESSAGE ä¸­"},
+						{"MESSAGE","MESSAGE","String","è¿”å›çš„æç¤ºæ¶ˆæ¯å†…å®¹"}
 						
 						},
-				new String[][]{//Êä³ö²éÑ¯5
+				new String[][]{//è¾“å‡ºæŸ¥è¯¢5
 
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
-		/**===============================9 ÏÂµ¥²Ù×÷ =========================================*/
+		/**===============================9 ä¸‹å•æ“ä½œ =========================================*/
 		
-		/**===============================10 ½»Ò×°å¿é²éÑ¯ =========================================*/
-		//requestÌí¼Óp1
+		/**===============================10 äº¤æ˜“æ¿å—æŸ¥è¯¢ =========================================*/
+		//requestæ·»åŠ p1
 		lreq.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.TradePlateQueryRequestVO",//  <<--------  È«Ãû1  ---------
-				new String[][]{//ÊäÈëĞÅÏ¢2
-						{"U","UserID","String","ÓÃ»§id"},
-						{"SI","SessionID","Long","ÓÃ»§»á»°id"}
+				"gnnt.MEBS.MobileServer.vo.micro.trade.TradePlateQueryRequestVO",//  <<--------  å…¨å1  ---------
+				new String[][]{//è¾“å…¥ä¿¡æ¯2
+						{"U","UserID","String","ç”¨æˆ·id"},
+						{"SI","SessionID","Long","ç”¨æˆ·ä¼šè¯id"}
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
 		//String Double Integer Date Long
-		//responseÌí¼Óp2
+		//responseæ·»åŠ p2
 		lres.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.TradePlateQueryResponseVO",//  <<--------  È«Ãû3  ---------
-				new String[][]{//Êä³öĞÅÏ¢4
-						{"RETCODE","RETCODE","String","·µ»ØÂë  =0³É¹¦, ÆäËûÎªÊ§°Ü£¬´íÎóÃèÊöÔÚMESSAGE ÖĞ"},
-						{"MESSAGE","MESSAGE","String","·µ»ØµÄÌáÊ¾ÏûÏ¢ÄÚÈİ"},
+				"gnnt.MEBS.MobileServer.vo.micro.trade.TradePlateQueryResponseVO",//  <<--------  å…¨å3  ---------
+				new String[][]{//è¾“å‡ºä¿¡æ¯4
+						{"RETCODE","RETCODE","String","è¿”å›ç   =0æˆåŠŸ, å…¶ä»–ä¸ºå¤±è´¥ï¼Œé”™è¯¯æè¿°åœ¨MESSAGE ä¸­"},
+						{"MESSAGE","MESSAGE","String","è¿”å›çš„æç¤ºæ¶ˆæ¯å†…å®¹"},
 						
-						{"TRD","TotalRecord","Integer","×Ü¼ÇÂ¼Êı"}
+						{"TRD","TotalRecord","Integer","æ€»è®°å½•æ•°"}
 						
 						},
-				new String[][]{//Êä³ö²éÑ¯5
-						{"N","TradeModuleName","String","½»Ò×°æ¿éÃû³Æ"},
-						{"M","TradeMode","Integer","½»Ò×Ä£Ê½"},
-						{"S","TradeStatus","Integer","½»Ò××´Ì¬"}
+				new String[][]{//è¾“å‡ºæŸ¥è¯¢5
+						{"N","TradeModuleName","String","äº¤æ˜“ç‰ˆå—åç§°"},
+						{"M","TradeMode","Integer","äº¤æ˜“æ¨¡å¼"},
+						{"S","TradeStatus","Integer","äº¤æ˜“çŠ¶æ€"}
 						
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
-		/**===============================10 ½»Ò×°å¿é²éÑ¯ =========================================*/
+		/**===============================10 äº¤æ˜“æ¿å—æŸ¥è¯¢ =========================================*/
 		
-		/**===============================11 ×ÔÑ¡ÉÌÆ·Ìí¼Ó/É¾³ı =========================================*/
-		//requestÌí¼Óp1
+		/**===============================11 è‡ªé€‰å•†å“æ·»åŠ /åˆ é™¤ =========================================*/
+		//requestæ·»åŠ p1
 		lreq.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.SelectedCommodityOperateRequestVO",//  <<--------  È«Ãû1  ---------
-				new String[][]{//ÊäÈëĞÅÏ¢2
-						{"U","UserID","String","ÓÃ»§id"},
-						{"SI","SessionID","Long","ÓÃ»§»á»°id"},
+				"gnnt.MEBS.MobileServer.vo.micro.trade.SelectedCommodityOperateRequestVO",//  <<--------  å…¨å1  ---------
+				new String[][]{//è¾“å…¥ä¿¡æ¯2
+						{"U","UserID","String","ç”¨æˆ·id"},
+						{"SI","SessionID","Long","ç”¨æˆ·ä¼šè¯id"},
 						
-						{"I","Code","String","±êµÄºÅ"},
-						{"C","CommodityCode","String","ÉÌÆ·Âë"},
-						{"M","Module","Integer","½»Ò×°æ¿é"},
-						{"S","Status","Integer","×´Ì¬"}
+						{"I","Code","String","æ ‡çš„å·"},
+						{"C","CommodityCode","String","å•†å“ç "},
+						{"M","Module","Integer","äº¤æ˜“ç‰ˆå—"},
+						{"S","Status","Integer","çŠ¶æ€"}
 						
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
 		//String Double Integer Date Long
-		//responseÌí¼Óp2
+		//responseæ·»åŠ p2
 		lres.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.SelectedCommodityOperateResponseVO",//  <<--------  È«Ãû3  ---------
-				new String[][]{//Êä³öĞÅÏ¢4
-						{"RETCODE","RETCODE","String","·µ»ØÂë  =0³É¹¦, ÆäËûÎªÊ§°Ü£¬´íÎóÃèÊöÔÚMESSAGE ÖĞ"},
-						{"MESSAGE","MESSAGE","String","·µ»ØµÄÌáÊ¾ÏûÏ¢ÄÚÈİ"}
+				"gnnt.MEBS.MobileServer.vo.micro.trade.SelectedCommodityOperateResponseVO",//  <<--------  å…¨å3  ---------
+				new String[][]{//è¾“å‡ºä¿¡æ¯4
+						{"RETCODE","RETCODE","String","è¿”å›ç   =0æˆåŠŸ, å…¶ä»–ä¸ºå¤±è´¥ï¼Œé”™è¯¯æè¿°åœ¨MESSAGE ä¸­"},
+						{"MESSAGE","MESSAGE","String","è¿”å›çš„æç¤ºæ¶ˆæ¯å†…å®¹"}
 
 						},
-				new String[][]{//Êä³ö²éÑ¯5
+				new String[][]{//è¾“å‡ºæŸ¥è¯¢5
 						
 						
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
-		/**===============================11 ×ÔÑ¡ÉÌÆ·Ìí¼Ó/É¾³ı =========================================*/
+		/**===============================11 è‡ªé€‰å•†å“æ·»åŠ /åˆ é™¤ =========================================*/
 		
-		/**===============================13 ¸öÈËĞÅÏ¢²éÑ¯ =========================================*/
-		//requestÌí¼Óp1
+		/**===============================13 ä¸ªäººä¿¡æ¯æŸ¥è¯¢ =========================================*/
+		//requestæ·»åŠ p1
 		lreq.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.UserInfoQueryRequestVO",//  <<--------  È«Ãû1  ---------
-				new String[][]{//ÊäÈëĞÅÏ¢2
-						{"U","UserID","String","ÓÃ»§id"},
-						{"SI","SessionID","Long","ÓÃ»§»á»°id"}
+				"gnnt.MEBS.MobileServer.vo.micro.trade.UserInfoQueryRequestVO",//  <<--------  å…¨å1  ---------
+				new String[][]{//è¾“å…¥ä¿¡æ¯2
+						{"U","UserID","String","ç”¨æˆ·id"},
+						{"SI","SessionID","Long","ç”¨æˆ·ä¼šè¯id"}
 						
 						
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
 		//String Double Integer Date Long
-		//responseÌí¼Óp2
+		//responseæ·»åŠ p2
 		lres.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.UserInfoQueryResponseVO",//  <<--------  È«Ãû3  ---------
-				new String[][]{//Êä³öĞÅÏ¢4
-						{"RETCODE","RETCODE","String","·µ»ØÂë  =0³É¹¦, ÆäËûÎªÊ§°Ü£¬´íÎóÃèÊöÔÚMESSAGE ÖĞ"},
-						{"MESSAGE","MESSAGE","String","·µ»ØµÄÌáÊ¾ÏûÏ¢ÄÚÈİ"}
+				"gnnt.MEBS.MobileServer.vo.micro.trade.UserInfoQueryResponseVO",//  <<--------  å…¨å3  ---------
+				new String[][]{//è¾“å‡ºä¿¡æ¯4
+						{"RETCODE","RETCODE","String","è¿”å›ç   =0æˆåŠŸ, å…¶ä»–ä¸ºå¤±è´¥ï¼Œé”™è¯¯æè¿°åœ¨MESSAGE ä¸­"},
+						{"MESSAGE","MESSAGE","String","è¿”å›çš„æç¤ºæ¶ˆæ¯å†…å®¹"}
 						
 						},
-				new String[][]{//Êä³ö²éÑ¯5
-						{"BF","BalanceFunds","Double","×Ê½ğÓà¶î"},
-						{"UF","UsableFunds","Double","¿ÉÓÃ×Ê½ğ"},
-						{"FF","FrozenFunds","Double","¶³½á×Ê½ğ"},
-						{"OP","Option","Boolean","ÊÇ·ñÓĞ¹Òµ¥È¨ÏŞ"},
-						{"NP","NewOption","Boolean","ÊÇ·ñÓĞÖØĞÂÏÂµ¥È¨ÏŞ"},
-						{"AD","Address","String","µØÖ·"},
-						{"PH","Phone","String","µç»°"},
-						{"IF","PersonInfo","String","¸öÈË¼ò½é"},
+				new String[][]{//è¾“å‡ºæŸ¥è¯¢5
+						{"BF","BalanceFunds","Double","èµ„é‡‘ä½™é¢"},
+						{"UF","UsableFunds","Double","å¯ç”¨èµ„é‡‘"},
+						{"FF","FrozenFunds","Double","å†»ç»“èµ„é‡‘"},
+						{"OP","Option","Boolean","æ˜¯å¦æœ‰æŒ‚å•æƒé™"},
+						{"NP","NewOption","Boolean","æ˜¯å¦æœ‰é‡æ–°ä¸‹å•æƒé™"},
+						{"AD","Address","String","åœ°å€"},
+						{"PH","Phone","String","ç”µè¯"},
+						{"IF","PersonInfo","String","ä¸ªäººç®€ä»‹"},
 						
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
-		/**===============================13 ¸öÈËĞÅÏ¢²éÑ¯ =========================================*/
+		/**===============================13 ä¸ªäººä¿¡æ¯æŸ¥è¯¢ =========================================*/
 		
-		/**===============================14 ×ÔÑ¡ÉÌÆ·²éÑ¯ =========================================*/
-		//requestÌí¼Óp1
+		/**===============================14 è‡ªé€‰å•†å“æŸ¥è¯¢ =========================================*/
+		//requestæ·»åŠ p1
 		lreq.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.SelectedCommodityQueryRequestVO",//  <<--------  È«Ãû1  ---------
-				new String[][]{//ÊäÈëĞÅÏ¢2
-						{"U","UserID","String","ÓÃ»§id"},
-						{"SI","SessionID","Long","ÓÃ»§»á»°id"},
+				"gnnt.MEBS.MobileServer.vo.micro.trade.SelectedCommodityQueryRequestVO",//  <<--------  å…¨å1  ---------
+				new String[][]{//è¾“å…¥ä¿¡æ¯2
+						{"U","UserID","String","ç”¨æˆ·id"},
+						{"SI","SessionID","Long","ç”¨æˆ·ä¼šè¯id"},
 						
-						{"M","Module","Integer","½»Ò×°å¿é"}
+						{"M","Module","Integer","äº¤æ˜“æ¿å—"}
 						
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
 		//String Double Integer Date Long
-		//responseÌí¼Óp2
+		//responseæ·»åŠ p2
 		lres.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.SelectedCommodityQueryResponseVO",//  <<--------  È«Ãû3  ---------
-				new String[][]{//Êä³öĞÅÏ¢4
-						{"RETCODE","RETCODE","String","·µ»ØÂë  =0³É¹¦, ÆäËûÎªÊ§°Ü£¬´íÎóÃèÊöÔÚMESSAGE ÖĞ"},
-						{"MESSAGE","MESSAGE","String","·µ»ØµÄÌáÊ¾ÏûÏ¢ÄÚÈİ"},
+				"gnnt.MEBS.MobileServer.vo.micro.trade.SelectedCommodityQueryResponseVO",//  <<--------  å…¨å3  ---------
+				new String[][]{//è¾“å‡ºä¿¡æ¯4
+						{"RETCODE","RETCODE","String","è¿”å›ç   =0æˆåŠŸ, å…¶ä»–ä¸ºå¤±è´¥ï¼Œé”™è¯¯æè¿°åœ¨MESSAGE ä¸­"},
+						{"MESSAGE","MESSAGE","String","è¿”å›çš„æç¤ºæ¶ˆæ¯å†…å®¹"},
 						
-						{"TRD","TotalRecord","Integer","×Ü¼ÇÂ¼Êı"},
-						{"M","Module","Integer","½»Ò×°å¿é"},
+						{"TRD","TotalRecord","Integer","æ€»è®°å½•æ•°"},
+						{"M","Module","Integer","äº¤æ˜“æ¿å—"},
 						
 						
 						},
-				new String[][]{//Êä³ö²éÑ¯5
-						{"I","Code","String","±êµÄºÅ"},
-						{"C","CommodityCode","String","ÉÌÆ·Âë"}
+				new String[][]{//è¾“å‡ºæŸ¥è¯¢5
+						{"I","Code","String","æ ‡çš„å·"},
+						{"C","CommodityCode","String","å•†å“ç "}
 						
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
-		/**===============================14 ×ÔÑ¡ÉÌÆ·²éÑ¯ =========================================*/
+		/**===============================14 è‡ªé€‰å•†å“æŸ¥è¯¢ =========================================*/
 		
-		/**===============================15 ÏûÏ¢ÌáĞÑ£¨Î¯ÍĞ×´Ì¬±ä¶¯¡¢³·µ¥¡¢²¿·Ö³·µ¥£© =========================================*/
-		//requestÌí¼Óp1
+		/**===============================15 æ¶ˆæ¯æé†’ï¼ˆå§”æ‰˜çŠ¶æ€å˜åŠ¨ã€æ’¤å•ã€éƒ¨åˆ†æ’¤å•ï¼‰ =========================================*/
+		//requestæ·»åŠ p1
 		lreq.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.VendueMessageRequestVO",//  <<--------  È«Ãû1  ---------
-				new String[][]{//ÊäÈëĞÅÏ¢2
-						{"U","UserID","String","ÓÃ»§id"},
-						{"SI","SessionID","Long","ÓÃ»§»á»°id"},
+				"gnnt.MEBS.MobileServer.vo.micro.trade.VendueMessageRequestVO",//  <<--------  å…¨å1  ---------
+				new String[][]{//è¾“å…¥ä¿¡æ¯2
+						{"U","UserID","String","ç”¨æˆ·id"},
+						{"SI","SessionID","Long","ç”¨æˆ·ä¼šè¯id"},
 						
-						{"T","LastTime","Date","ÉÏ´Î²éÑ¯Ê±¼ä"}
-
-						},
-				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
-		//String Double Integer Date Long
-		//responseÌí¼Óp2
-		lres.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.VendueMessageResponseVO",//  <<--------  È«Ãû3  ---------
-				new String[][]{//Êä³öĞÅÏ¢4
-						{"RETCODE","RETCODE","String","·µ»ØÂë  =0³É¹¦, ÆäËûÎªÊ§°Ü£¬´íÎóÃèÊöÔÚMESSAGE ÖĞ"},
-						{"MESSAGE","MESSAGE","String","·µ»ØµÄÌáÊ¾ÏûÏ¢ÄÚÈİ"},
-
-						{"TRD","TotalRecord","Integer","×Ü¼ÇÂ¼Êı"},
-						{"TI","timestamp","Date","±¾´Î²éÑ¯Ê±¼ä"}
-						
-						},
-				new String[][]{//Êä³ö²éÑ¯5
-						{"I","ModuleId","Integer","½»Ò×°å¿éID"}
-						
-						},
-				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
-		/**===============================15 ÏûÏ¢ÌáĞÑ£¨Î¯ÍĞ×´Ì¬±ä¶¯¡¢³·µ¥¡¢²¿·Ö³·µ¥£© =========================================*/
-		
-		/**===============================16 ¹Òµ¥¹¦ÄÜ =========================================*/
-		//requestÌí¼Óp1
-		lreq.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.CommodityAddRequestVO",//  <<--------  È«Ãû1  ---------
-				new String[][]{//ÊäÈëĞÅÏ¢2
-						{"U","UserID","String","ÓÃ»§id"},
-						{"SI","SessionID","Long","ÓÃ»§»á»°id"},
-						
-						
-						{"C","CommdoityId","String","ÉÌÆ·´úÂë"},
-						{"COD","CommodityCode","String","ÉÌÆ·Âë"},
-						{"AA","AuctionAlgr","String","Á÷ÅÄËã·¨"},
-						
-						{"AQ","AuctionQty","String","Á÷ÅÄÁ¿"},
-						{"SP","StartPrice","Double","ÆğÅÄ¼Û"},
-						{"AP","AlertPrice","Double","±¨¾¯¼Û"},
-						
-						{"Q","Qty","Integer","ÊıÁ¿"},
-						{"UN","TradeUnit","Integer","½»Ò×ÊıÁ¿µ¥Î»"},
-						{"IA","MinAmount","Integer","×îĞ¡±¨µ¥ÊıÁ¿"},
-						
-						{"XA","MaxAmount","Integer","×î´ó±¨µ¥ÊıÁ¿"},
-						{"AD","AddPrice","Double","¼Ó¼Û·ù¶È"},
-						
-						{"BPI","BreedPropertyId","String","Æ·ÖÖÊôĞÔ´úÂë"},
-						{"PID","PropertyId","String","ÉÌÆ·ÊôĞÔ´úÂë"},
-						{"PNM","PropertyName","String","ÉÌÆ·ÊôĞÔÃû³Æ"}
-						
-						},
-				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
-		//String Double Integer Date Long
-		//responseÌí¼Óp2
-		lres.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.CommodityAddResponseVO",//  <<--------  È«Ãû3  ---------
-				new String[][]{//Êä³öĞÅÏ¢4
-						{"RETCODE","RETCODE","String","·µ»ØÂë  =0³É¹¦, ÆäËûÎªÊ§°Ü£¬´íÎóÃèÊöÔÚMESSAGE ÖĞ"},
-						{"MESSAGE","MESSAGE","String","·µ»ØµÄÌáÊ¾ÏûÏ¢ÄÚÈİ"}
-						
-						},
-				new String[][]{//Êä³ö²éÑ¯5
+						{"T","LastTime","Date","ä¸Šæ¬¡æŸ¥è¯¢æ—¶é—´"}
 
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
-		/**===============================16 ¹Òµ¥¹¦ÄÜ =========================================*/
-		
-		/**===============================17 ¹Òµ¥¿ÉÑ¡ÉÌÆ·²éÑ¯ =========================================*/
-		//requestÌí¼Óp1
-		lreq.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.AddCommodityQueryRequestVO",//  <<--------  È«Ãû1  ---------
-				new String[][]{//ÊäÈëĞÅÏ¢2
-						{"U","UserID","String","ÓÃ»§id"},
-						{"SI","SessionID","Long","ÓÃ»§»á»°id"}
-						
-						},
-				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
 		//String Double Integer Date Long
-		//responseÌí¼Óp2
+		//responseæ·»åŠ p2
 		lres.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.AddCommodityQueryResponseVO",//  <<--------  È«Ãû3  ---------
-				new String[][]{//Êä³öĞÅÏ¢4
-						{"RETCODE","RETCODE","String","·µ»ØÂë  =0³É¹¦, ÆäËûÎªÊ§°Ü£¬´íÎóÃèÊöÔÚMESSAGE ÖĞ"},
-						{"MESSAGE","MESSAGE","String","·µ»ØµÄÌáÊ¾ÏûÏ¢ÄÚÈİ"}
-						
-						
-						},
-				new String[][]{//Êä³ö²éÑ¯5
-						{"C","CommodityCode","String","ÉÌÆ·´úÂë"},
-						{"CN","CommodityName","String","ÉÌÆ·Ãû³Æ"}
-						
-						},
-				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
-		/**===============================17 ¹Òµ¥¿ÉÑ¡ÉÌÆ·²éÑ¯ =========================================*/
-		
-		/**===============================18 ¹Òµ¥ÉÌÆ·½»ÊÕÊôĞÔ²éÑ¯ =========================================*/
-		//requestÌí¼Óp1
-		lreq.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.CommodityPropQueryRequestVO",//  <<--------  È«Ãû1  ---------
-				new String[][]{//ÊäÈëĞÅÏ¢2
-						{"U","UserID","String","ÓÃ»§id"},
-						{"SI","SessionID","Long","ÓÃ»§»á»°id"},
-						
-						
-						{"C","CommodityCode","String","ÉÌÆ·´úÂë"}
-						
-						},
-				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
-		//String Double Integer Date Long
-		//responseÌí¼Óp2
-		lres.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.CommodityPropQueryResponseVO",//  <<--------  È«Ãû3  ---------
-				new String[][]{//Êä³öĞÅÏ¢4
-						{"RETCODE","RETCODE","String","·µ»ØÂë  =0³É¹¦, ÆäËûÎªÊ§°Ü£¬´íÎóÃèÊöÔÚMESSAGE ÖĞ"},
-						{"MESSAGE","MESSAGE","String","·µ»ØµÄÌáÊ¾ÏûÏ¢ÄÚÈİ"},
-						
-						
-						{"AP","AlertPrice","Double","Ä¬ÈÏ±¨¾¯¼Û"},
-						{"AQ","AlertQty","Integer","Ä¬ÈÏÉÌÆ·ÊıÁ¿"},
-						{"TU","TradeUnit","Integer","Ä¬ÈÏ½»Ò×ÊıÁ¿µ¥Î»"},
-						
-						{"IA","MinAmount","Integer","Ä¬ÈÏ×îĞ¡±¨µ¥ÊıÁ¿"},
-						{"XA","MaxAmount","Integer","Ä¬ÈÏ×î´ó±¨µ¥ÊıÁ¿"},
-						{"TRD","TotalRecord","Integer","×Ü¼ÇÂ¼Êı"},
+				"gnnt.MEBS.MobileServer.vo.micro.trade.VendueMessageResponseVO",//  <<--------  å…¨å3  ---------
+				new String[][]{//è¾“å‡ºä¿¡æ¯4
+						{"RETCODE","RETCODE","String","è¿”å›ç   =0æˆåŠŸ, å…¶ä»–ä¸ºå¤±è´¥ï¼Œé”™è¯¯æè¿°åœ¨MESSAGE ä¸­"},
+						{"MESSAGE","MESSAGE","String","è¿”å›çš„æç¤ºæ¶ˆæ¯å†…å®¹"},
 
+						{"TRD","TotalRecord","Integer","æ€»è®°å½•æ•°"},
+						{"TI","timestamp","Date","æœ¬æ¬¡æŸ¥è¯¢æ—¶é—´"}
+						
 						},
-				new String[][]{//Êä³ö²éÑ¯5
-						{"BPI","BreedPropertyId","String","Æ·ÖÖÊôĞÔ´úÂë"},
-						{"BPN","BreedPropertyName","String","Æ·ÖÖÊôĞÔÃû³Æ"},
+				new String[][]{//è¾“å‡ºæŸ¥è¯¢5
+						{"I","ModuleId","Integer","äº¤æ˜“æ¿å—ID"}
 						
-						{"CPS","CommodityPropertyList","String","Æ·ÖÖÊôĞÔÃû³Æ"},
-						{"CPI","CommodityPropertyId","String","ÊôĞÔ´úÂë"},
-						{"CPN","CommodityPropertyName","String","ÊôĞÔÃû³Æ"}
+						},
+				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
+		/**===============================15 æ¶ˆæ¯æé†’ï¼ˆå§”æ‰˜çŠ¶æ€å˜åŠ¨ã€æ’¤å•ã€éƒ¨åˆ†æ’¤å•ï¼‰ =========================================*/
+		
+		/**===============================16 æŒ‚å•åŠŸèƒ½ =========================================*/
+		//requestæ·»åŠ p1
+		lreq.add(Arrays.asList(new Object[]{
+				"gnnt.MEBS.MobileServer.vo.micro.trade.CommodityAddRequestVO",//  <<--------  å…¨å1  ---------
+				new String[][]{//è¾“å…¥ä¿¡æ¯2
+						{"U","UserID","String","ç”¨æˆ·id"},
+						{"SI","SessionID","Long","ç”¨æˆ·ä¼šè¯id"},
 						
+						
+						{"C","CommdoityId","String","å•†å“ä»£ç "},
+						{"COD","CommodityCode","String","å•†å“ç "},
+						{"AA","AuctionAlgr","String","æµæ‹ç®—æ³•"},
+						
+						{"AQ","AuctionQty","String","æµæ‹é‡"},
+						{"SP","StartPrice","Double","èµ·æ‹ä»·"},
+						{"AP","AlertPrice","Double","æŠ¥è­¦ä»·"},
+						
+						{"Q","Qty","Integer","æ•°é‡"},
+						{"UN","TradeUnit","Integer","äº¤æ˜“æ•°é‡å•ä½"},
+						{"IA","MinAmount","Integer","æœ€å°æŠ¥å•æ•°é‡"},
+						
+						{"XA","MaxAmount","Integer","æœ€å¤§æŠ¥å•æ•°é‡"},
+						{"AD","AddPrice","Double","åŠ ä»·å¹…åº¦"},
+						
+						{"BPI","BreedPropertyId","String","å“ç§å±æ€§ä»£ç "},
+						{"PID","PropertyId","String","å•†å“å±æ€§ä»£ç "},
+						{"PNM","PropertyName","String","å•†å“å±æ€§åç§°"}
+						
+						},
+				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
+		//String Double Integer Date Long
+		//responseæ·»åŠ p2
+		lres.add(Arrays.asList(new Object[]{
+				"gnnt.MEBS.MobileServer.vo.micro.trade.CommodityAddResponseVO",//  <<--------  å…¨å3  ---------
+				new String[][]{//è¾“å‡ºä¿¡æ¯4
+						{"RETCODE","RETCODE","String","è¿”å›ç   =0æˆåŠŸ, å…¶ä»–ä¸ºå¤±è´¥ï¼Œé”™è¯¯æè¿°åœ¨MESSAGE ä¸­"},
+						{"MESSAGE","MESSAGE","String","è¿”å›çš„æç¤ºæ¶ˆæ¯å†…å®¹"}
+						
+						},
+				new String[][]{//è¾“å‡ºæŸ¥è¯¢5
 
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
-		/**===============================18 ¹Òµ¥ÉÌÆ·½»ÊÕÊôĞÔ²éÑ¯ =========================================*/
+		/**===============================16 æŒ‚å•åŠŸèƒ½ =========================================*/
 		
-		/**===============================19 µ±Ç°Î¯ÍĞ²éÑ¯ =========================================*/
-		//requestÌí¼Óp1
+		/**===============================17 æŒ‚å•å¯é€‰å•†å“æŸ¥è¯¢ =========================================*/
+		//requestæ·»åŠ p1
 		lreq.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.OrdersQueryRequestVO",//  <<--------  È«Ãû1  ---------
-				new String[][]{//ÊäÈëĞÅÏ¢2
-						{"U","UserID","String","ÓÃ»§id"},
-						{"SI","SessionID","Long","ÓÃ»§»á»°id"},
-						
-						{"M","Module","Integer","½»Ò×°å¿é"},
-						{"TI","LastTime","Date","ÉÏ´Î²éÑ¯Ê±¼ä"}
+				"gnnt.MEBS.MobileServer.vo.micro.trade.AddCommodityQueryRequestVO",//  <<--------  å…¨å1  ---------
+				new String[][]{//è¾“å…¥ä¿¡æ¯2
+						{"U","UserID","String","ç”¨æˆ·id"},
+						{"SI","SessionID","Long","ç”¨æˆ·ä¼šè¯id"}
 						
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
 		//String Double Integer Date Long
-		//responseÌí¼Óp2
+		//responseæ·»åŠ p2
 		lres.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.OrdersQueryResponseVO",//  <<--------  È«Ãû3  ---------
-				new String[][]{//Êä³öĞÅÏ¢4
-						{"RETCODE","RETCODE","String","·µ»ØÂë  =0³É¹¦, ÆäËûÎªÊ§°Ü£¬´íÎóÃèÊöÔÚMESSAGE ÖĞ"},
-						{"MESSAGE","MESSAGE","String","·µ»ØµÄÌáÊ¾ÏûÏ¢ÄÚÈİ"},
+				"gnnt.MEBS.MobileServer.vo.micro.trade.AddCommodityQueryResponseVO",//  <<--------  å…¨å3  ---------
+				new String[][]{//è¾“å‡ºä¿¡æ¯4
+						{"RETCODE","RETCODE","String","è¿”å›ç   =0æˆåŠŸ, å…¶ä»–ä¸ºå¤±è´¥ï¼Œé”™è¯¯æè¿°åœ¨MESSAGE ä¸­"},
+						{"MESSAGE","MESSAGE","String","è¿”å›çš„æç¤ºæ¶ˆæ¯å†…å®¹"}
 						
-						{"NEW","NewOrder","Boolean","ÊÇ·ñÓĞĞÂÎ¯ÍĞ"}
 						
 						},
-				new String[][]{//Êä³ö²éÑ¯5
-						{"O","OrderId","String","Î¯ÍĞºÅ"},
-						{"I","CmdCode","String","±êµÄºÅ"},
-						{"P","Price","Double","ÎÒµÄ±¨¼Û"},
-						
-						{"CP","CurPrice","Double","µ±Ç°±¨¼Û"},
-						{"Q","Qty","Integer","ÊıÁ¿"},
-						{"ST","SubmitTime","Date","Ìá½»Ê±¼ä"},
-						
-						{"MT","ModifyTime","Date","ĞŞ¸ÄÊ±¼ä"},
-						{"UQ","ValidQty","Integer","ÓĞĞ§ÊıÁ¿"},
-						{"FM","FrozenMargin","Double","¶³½á±£Ö¤½ğ"},
-						
-						{"FF","FrozenFee","Double","¶³½áÊÖĞø·Ñ"},
-						{"RM","ReleaseMargin","Double","ÊÍ·Å±£Ö¤½ğ"},
-						{"RF","ReleaseFee","Double","ÊÍ·ÅÊÖĞø·Ñ"}
+				new String[][]{//è¾“å‡ºæŸ¥è¯¢5
+						{"C","CommodityCode","String","å•†å“ä»£ç "},
+						{"CN","CommodityName","String","å•†å“åç§°"}
 						
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
-		/**===============================19 µ±Ç°Î¯ÍĞ²éÑ¯ =========================================*/
+		/**===============================17 æŒ‚å•å¯é€‰å•†å“æŸ¥è¯¢ =========================================*/
 		
-		/**===============================20 ÎÒµÄ¹Òµ¥²éÑ¯ =========================================*/
-		//requestÌí¼Óp1
+		/**===============================18 æŒ‚å•å•†å“äº¤æ”¶å±æ€§æŸ¥è¯¢ =========================================*/
+		//requestæ·»åŠ p1
 		lreq.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.MyCmdQueryRequestVO",//  <<--------  È«Ãû1  ---------
-				new String[][]{//ÊäÈëĞÅÏ¢2
-						{"U","UserID","String","ÓÃ»§id"},
-						{"SI","SessionID","Long","ÓÃ»§»á»°id"},
+				"gnnt.MEBS.MobileServer.vo.micro.trade.CommodityPropQueryRequestVO",//  <<--------  å…¨å1  ---------
+				new String[][]{//è¾“å…¥ä¿¡æ¯2
+						{"U","UserID","String","ç”¨æˆ·id"},
+						{"SI","SessionID","Long","ç”¨æˆ·ä¼šè¯id"},
 						
 						
-						{"ST","StartTime","Date","¿ªÊ¼Ê±¼ä"},
-						{"ET","EndTime","Date","½áÊøÊ±¼ä"},
-						{"M","Module","Integer","½»Ò×°å¿é"},
-						{"PN","PageNo","Integer","Ò³Ãæ´óĞ¡"},
-						{"PS","PageSzie","Integer","Ò³Ãæ´óĞ¡"}
+						{"C","CommodityCode","String","å•†å“ä»£ç "}
 						
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
 		//String Double Integer Date Long
-		//responseÌí¼Óp2
+		//responseæ·»åŠ p2
 		lres.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.MyCmdQueryResponseVO",//  <<--------  È«Ãû3  ---------
-				new String[][]{//Êä³öĞÅÏ¢4
-						{"RETCODE","RETCODE","String","·µ»ØÂë  =0³É¹¦, ÆäËûÎªÊ§°Ü£¬´íÎóÃèÊöÔÚMESSAGE ÖĞ"},
-						{"MESSAGE","MESSAGE","String","·µ»ØµÄÌáÊ¾ÏûÏ¢ÄÚÈİ"},
-						
-						{"TRD","TotalRecord","Integer","×Ü¼ÇÂ¼´óĞ¡"}
+				"gnnt.MEBS.MobileServer.vo.micro.trade.CommodityPropQueryResponseVO",//  <<--------  å…¨å3  ---------
+				new String[][]{//è¾“å‡ºä¿¡æ¯4
+						{"RETCODE","RETCODE","String","è¿”å›ç   =0æˆåŠŸ, å…¶ä»–ä¸ºå¤±è´¥ï¼Œé”™è¯¯æè¿°åœ¨MESSAGE ä¸­"},
+						{"MESSAGE","MESSAGE","String","è¿”å›çš„æç¤ºæ¶ˆæ¯å†…å®¹"},
 						
 						
+						{"AP","AlertPrice","Double","é»˜è®¤æŠ¥è­¦ä»·"},
+						{"AQ","AlertQty","Integer","é»˜è®¤å•†å“æ•°é‡"},
+						{"TU","TradeUnit","Integer","é»˜è®¤äº¤æ˜“æ•°é‡å•ä½"},
 						
+						{"IA","MinAmount","Integer","é»˜è®¤æœ€å°æŠ¥å•æ•°é‡"},
+						{"XA","MaxAmount","Integer","é»˜è®¤æœ€å¤§æŠ¥å•æ•°é‡"},
+						{"TRD","TotalRecord","Integer","æ€»è®°å½•æ•°"},
+
 						},
-				new String[][]{//Êä³ö²éÑ¯5
-						{"I","CmdCode","String","±êµÄºÅ"},
-						{"C","CommodityCode","String","ÉÌÆ·Âë"},
-						{"P","Price","Double","Æğ±¨¼Û"},
+				new String[][]{//è¾“å‡ºæŸ¥è¯¢5
+						{"BPI","BreedPropertyId","String","å“ç§å±æ€§ä»£ç "},
+						{"BPN","BreedPropertyName","String","å“ç§å±æ€§åç§°"},
 						
-						{"Q","Qty","Integer","ÊıÁ¿"},
-						{"ST","StartQty","Integer","×îĞ¡±¨µ¥Á¿"},
-						{"MT","MaxQty","Integer","×î´ó±¨µ¥Á¿"},
+						{"CPS","CommodityPropertyList","String","å“ç§å±æ€§åç§°"},
+						{"CPI","CommodityPropertyId","String","å±æ€§ä»£ç "},
+						{"CPN","CommodityPropertyName","String","å±æ€§åç§°"}
 						
-						{"AP","AlertPrice","Double","±¨¾¯¼Û"},
-						{"TU","TradeUnit","Integer","½»Ò×µ¥Î»ÊıÁ¿"},
-						{"AD","AddPrice","Double","¼Ó¼Û·ù¶È"},
-						
-						{"AA","AuctionAlgr","String","Á÷ÅÄËã·¨"},
-						{"AQ","AuctionQty","Double","Á÷ÅÄÁ¿"}
-						
+
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
-		/**===============================20 ÎÒµÄ¹Òµ¥²éÑ¯ =========================================*/
+		/**===============================18 æŒ‚å•å•†å“äº¤æ”¶å±æ€§æŸ¥è¯¢ =========================================*/
 		
-		/**===============================21 ÎÒµÄ³É½»²éÑ¯ =========================================*/
-		//requestÌí¼Óp1
+		/**===============================19 å½“å‰å§”æ‰˜æŸ¥è¯¢ =========================================*/
+		//requestæ·»åŠ p1
 		lreq.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.MyTradeQueryRequestVO",//  <<--------  È«Ãû1  ---------
-				new String[][]{//ÊäÈëĞÅÏ¢2
-						{"U","UserID","String","ÓÃ»§id"},
-						{"SI","SessionID","Long","ÓÃ»§»á»°id"},
+				"gnnt.MEBS.MobileServer.vo.micro.trade.OrdersQueryRequestVO",//  <<--------  å…¨å1  ---------
+				new String[][]{//è¾“å…¥ä¿¡æ¯2
+						{"U","UserID","String","ç”¨æˆ·id"},
+						{"SI","SessionID","Long","ç”¨æˆ·ä¼šè¯id"},
 						
-						{"ST","StartTime","Date","¿ªÊ¼Ê±¼ä"},
-						{"ET","EndTime","Date","½áÊøÊ±¼ä"},
-						{"M","Module","Integer","½»Ò×°å¿é"},
-						
-						{"PN","PageNo","Integer","Ò³Ãæ´óĞ¡"},
-						{"PS","PageSize","Integer","Ò³Ãæ´óĞ¡"}
+						{"M","Module","Integer","äº¤æ˜“æ¿å—"},
+						{"TI","LastTime","Date","ä¸Šæ¬¡æŸ¥è¯¢æ—¶é—´"}
 						
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
 		//String Double Integer Date Long
-		//responseÌí¼Óp2
+		//responseæ·»åŠ p2
 		lres.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.MyTradeQueryResponseVO",//  <<--------  È«Ãû3  ---------
-				new String[][]{//Êä³öĞÅÏ¢4
-						{"RETCODE","RETCODE","String","·µ»ØÂë  =0³É¹¦, ÆäËûÎªÊ§°Ü£¬´íÎóÃèÊöÔÚMESSAGE ÖĞ"},
-						{"MESSAGE","MESSAGE","String","·µ»ØµÄÌáÊ¾ÏûÏ¢ÄÚÈİ"},
+				"gnnt.MEBS.MobileServer.vo.micro.trade.OrdersQueryResponseVO",//  <<--------  å…¨å3  ---------
+				new String[][]{//è¾“å‡ºä¿¡æ¯4
+						{"RETCODE","RETCODE","String","è¿”å›ç   =0æˆåŠŸ, å…¶ä»–ä¸ºå¤±è´¥ï¼Œé”™è¯¯æè¿°åœ¨MESSAGE ä¸­"},
+						{"MESSAGE","MESSAGE","String","è¿”å›çš„æç¤ºæ¶ˆæ¯å†…å®¹"},
 						
-						{"TRD","TotalRecord","Integer","×Ü¼ÇÂ¼´óĞ¡"}
+						{"NEW","NewOrder","Boolean","æ˜¯å¦æœ‰æ–°å§”æ‰˜"}
 						
 						},
-				new String[][]{//Êä³ö²éÑ¯5
-						{"C","ContractNo","String","ºÏÍ¬ºÅ"},
-						{"I","CmdCode","String","±êµÄºÅ"},
-						{"P","Price","Double","³É½»¼Û"},
+				new String[][]{//è¾“å‡ºæŸ¥è¯¢5
+						{"O","OrderId","String","å§”æ‰˜å·"},
+						{"I","CmdCode","String","æ ‡çš„å·"},
+						{"P","Price","Double","æˆ‘çš„æŠ¥ä»·"},
 						
-						{"Q","TradeQty","Integer","³É½»Á¿"},
-						{"M","Margin","Double","½»Ò×±£Ö¤½ğ"},
-						{"F","Fee","Double","ÊÖĞø·Ñ"},
+						{"CP","CurPrice","Double","å½“å‰æŠ¥ä»·"},
+						{"Q","Qty","Integer","æ•°é‡"},
+						{"ST","SubmitTime","Date","æäº¤æ—¶é—´"},
 						
-						{"T","TradeTime","Date","³É½»Ê±¼ä"}
+						{"MT","ModifyTime","Date","ä¿®æ”¹æ—¶é—´"},
+						{"UQ","ValidQty","Integer","æœ‰æ•ˆæ•°é‡"},
+						{"FM","FrozenMargin","Double","å†»ç»“ä¿è¯é‡‘"},
+						
+						{"FF","FrozenFee","Double","å†»ç»“æ‰‹ç»­è´¹"},
+						{"RM","ReleaseMargin","Double","é‡Šæ”¾ä¿è¯é‡‘"},
+						{"RF","ReleaseFee","Double","é‡Šæ”¾æ‰‹ç»­è´¹"}
 						
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
-		/**===============================21 ÎÒµÄ³É½»²éÑ¯ =========================================*/
+		/**===============================19 å½“å‰å§”æ‰˜æŸ¥è¯¢ =========================================*/
+		
+		/**===============================20 æˆ‘çš„æŒ‚å•æŸ¥è¯¢ =========================================*/
+		//requestæ·»åŠ p1
+		lreq.add(Arrays.asList(new Object[]{
+				"gnnt.MEBS.MobileServer.vo.micro.trade.MyCmdQueryRequestVO",//  <<--------  å…¨å1  ---------
+				new String[][]{//è¾“å…¥ä¿¡æ¯2
+						{"U","UserID","String","ç”¨æˆ·id"},
+						{"SI","SessionID","Long","ç”¨æˆ·ä¼šè¯id"},
+						
+						
+						{"ST","StartTime","Date","å¼€å§‹æ—¶é—´"},
+						{"ET","EndTime","Date","ç»“æŸæ—¶é—´"},
+						{"M","Module","Integer","äº¤æ˜“æ¿å—"},
+						{"PN","PageNo","Integer","é¡µé¢å¤§å°"},
+						{"PS","PageSzie","Integer","é¡µé¢å¤§å°"}
+						
+						},
+				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
+		//String Double Integer Date Long
+		//responseæ·»åŠ p2
+		lres.add(Arrays.asList(new Object[]{
+				"gnnt.MEBS.MobileServer.vo.micro.trade.MyCmdQueryResponseVO",//  <<--------  å…¨å3  ---------
+				new String[][]{//è¾“å‡ºä¿¡æ¯4
+						{"RETCODE","RETCODE","String","è¿”å›ç   =0æˆåŠŸ, å…¶ä»–ä¸ºå¤±è´¥ï¼Œé”™è¯¯æè¿°åœ¨MESSAGE ä¸­"},
+						{"MESSAGE","MESSAGE","String","è¿”å›çš„æç¤ºæ¶ˆæ¯å†…å®¹"},
+						
+						{"TRD","TotalRecord","Integer","æ€»è®°å½•å¤§å°"}
+						
+						
+						
+						},
+				new String[][]{//è¾“å‡ºæŸ¥è¯¢5
+						{"I","CmdCode","String","æ ‡çš„å·"},
+						{"C","CommodityCode","String","å•†å“ç "},
+						{"P","Price","Double","èµ·æŠ¥ä»·"},
+						
+						{"Q","Qty","Integer","æ•°é‡"},
+						{"ST","StartQty","Integer","æœ€å°æŠ¥å•é‡"},
+						{"MT","MaxQty","Integer","æœ€å¤§æŠ¥å•é‡"},
+						
+						{"AP","AlertPrice","Double","æŠ¥è­¦ä»·"},
+						{"TU","TradeUnit","Integer","äº¤æ˜“å•ä½æ•°é‡"},
+						{"AD","AddPrice","Double","åŠ ä»·å¹…åº¦"},
+						
+						{"AA","AuctionAlgr","String","æµæ‹ç®—æ³•"},
+						{"AQ","AuctionQty","Double","æµæ‹é‡"}
+						
+						},
+				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
+		/**===============================20 æˆ‘çš„æŒ‚å•æŸ¥è¯¢ =========================================*/
+		
+		/**===============================21 æˆ‘çš„æˆäº¤æŸ¥è¯¢ =========================================*/
+		//requestæ·»åŠ p1
+		lreq.add(Arrays.asList(new Object[]{
+				"gnnt.MEBS.MobileServer.vo.micro.trade.MyTradeQueryRequestVO",//  <<--------  å…¨å1  ---------
+				new String[][]{//è¾“å…¥ä¿¡æ¯2
+						{"U","UserID","String","ç”¨æˆ·id"},
+						{"SI","SessionID","Long","ç”¨æˆ·ä¼šè¯id"},
+						
+						{"ST","StartTime","Date","å¼€å§‹æ—¶é—´"},
+						{"ET","EndTime","Date","ç»“æŸæ—¶é—´"},
+						{"M","Module","Integer","äº¤æ˜“æ¿å—"},
+						
+						{"PN","PageNo","Integer","é¡µé¢å¤§å°"},
+						{"PS","PageSize","Integer","é¡µé¢å¤§å°"}
+						
+						},
+				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
+		//String Double Integer Date Long
+		//responseæ·»åŠ p2
+		lres.add(Arrays.asList(new Object[]{
+				"gnnt.MEBS.MobileServer.vo.micro.trade.MyTradeQueryResponseVO",//  <<--------  å…¨å3  ---------
+				new String[][]{//è¾“å‡ºä¿¡æ¯4
+						{"RETCODE","RETCODE","String","è¿”å›ç   =0æˆåŠŸ, å…¶ä»–ä¸ºå¤±è´¥ï¼Œé”™è¯¯æè¿°åœ¨MESSAGE ä¸­"},
+						{"MESSAGE","MESSAGE","String","è¿”å›çš„æç¤ºæ¶ˆæ¯å†…å®¹"},
+						
+						{"TRD","TotalRecord","Integer","æ€»è®°å½•å¤§å°"}
+						
+						},
+				new String[][]{//è¾“å‡ºæŸ¥è¯¢5
+						{"C","ContractNo","String","åˆåŒå·"},
+						{"I","CmdCode","String","æ ‡çš„å·"},
+						{"P","Price","Double","æˆäº¤ä»·"},
+						
+						{"Q","TradeQty","Integer","æˆäº¤é‡"},
+						{"M","Margin","Double","äº¤æ˜“ä¿è¯é‡‘"},
+						{"F","Fee","Double","æ‰‹ç»­è´¹"},
+						
+						{"T","TradeTime","Date","æˆäº¤æ—¶é—´"}
+						
+						},
+				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
+		/**===============================21 æˆ‘çš„æˆäº¤æŸ¥è¯¢ =========================================*/
 
 		
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * EÏÖ»õµÄÊÖ»úĞ­Òé
+	 * Eç°è´§çš„æ‰‹æœºåè®®
 	 * </ul>
 	 */
 	public static void getListRequest() {
 //		List<List<Object>> lreq = new ArrayList<List<Object>>();
-		//ls2.add(new String[]{"U","UserID","String","ÓÃ»§id"});
-		//ls2.add(new String[]{"SI","SessionID","Long","ÓÃ»§»á»°id"});
+		//ls2.add(new String[]{"U","UserID","String","ç”¨æˆ·id"});
+		//ls2.add(new String[]{"SI","SessionID","Long","ç”¨æˆ·ä¼šè¯id"});
 		//{"","","",""},
 		//String Double Integer Date
-		/*List<String> linfo = Arrays.asList(new String[]{"update by wangzg 2016Äê8ÔÂ3ÈÕ14:29:29"});
+		/*List<String> linfo = Arrays.asList(new String[]{"update by wangzg 2016å¹´8æœˆ3æ—¥14:29:29"});
 		
 		String qualifiedName19 = "gnnt.MEBS.MobileServer.vo.micro.trade.FirmInfoRequestVO";
 		String[][] sArrArrRequest19 = new String[][]{
-				{"U","UserID","String","ÓÃ»§id"},
-				{"SI","SessionID","Long","ÓÃ»§»á»°id"},
+				{"U","UserID","String","ç”¨æˆ·id"},
+				{"SI","SessionID","Long","ç”¨æˆ·ä¼šè¯id"},
 				};
 		List<String[]> ls = Arrays.asList(sArrArrRequest19);*/
 		
 		
 		
-		/**===============================19. ½»Ò×ÉÌĞÅÏ¢=========================================*/
-		//requestÌí¼Ó
+		/**===============================19. äº¤æ˜“å•†ä¿¡æ¯=========================================*/
+		//requestæ·»åŠ 
 		/*lreq.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.FirmInfoRequestVO",//È«Ãû
-				new String[][]{//ÊäÈëĞÅÏ¢
-						{"U","UserID","String","ÓÃ»§id"},
-						{"SI","SessionID","Long","ÓÃ»§»á»°id"}
+				"gnnt.MEBS.MobileServer.vo.micro.trade.FirmInfoRequestVO",//å…¨å
+				new String[][]{//è¾“å…¥ä¿¡æ¯
+						{"U","UserID","String","ç”¨æˆ·id"},
+						{"SI","SessionID","Long","ç”¨æˆ·ä¼šè¯id"}
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
 		//String Double Integer Date
-		//responseÌí¼Ó
+		//responseæ·»åŠ 
 		lres.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.FirmInfoResponseVO",//È«Ãû
-				new String[][]{//Êä³öĞÅÏ¢
-						{"RETCODE","RETCODE","String","·µ»ØÂë  =0³É¹¦, ÆäËûÎªÊ§°Ü£¬´íÎóÃèÊöÔÚMESSAGE ÖĞ"},
-						{"MESSAGE","MESSAGE","String","·µ»ØµÄÌáÊ¾ÏûÏ¢ÄÚÈİ"},
-						{"TI","TraderID","String","½»Ò×Ô±ID"},
-						{"UI","UserID","String","ÓÃ»§Ãû"},
-						{"TN","TraderName","String","½»Ò×Ô±Ãû³Æ"},
+				"gnnt.MEBS.MobileServer.vo.micro.trade.FirmInfoResponseVO",//å…¨å
+				new String[][]{//è¾“å‡ºä¿¡æ¯
+						{"RETCODE","RETCODE","String","è¿”å›ç   =0æˆåŠŸ, å…¶ä»–ä¸ºå¤±è´¥ï¼Œé”™è¯¯æè¿°åœ¨MESSAGE ä¸­"},
+						{"MESSAGE","MESSAGE","String","è¿”å›çš„æç¤ºæ¶ˆæ¯å†…å®¹"},
+						{"TI","TraderID","String","äº¤æ˜“å‘˜ID"},
+						{"UI","UserID","String","ç”¨æˆ·å"},
+						{"TN","TraderName","String","äº¤æ˜“å‘˜åç§°"},
 						
-						{"FI","FirmID","String","½»Ò×ÉÌID"},
-						{"FN","FirmName","String","½»Ò×ÉÌÃû³Æ"},
-						{"FT","FirmType","String","½»Ò×ÉÌÀàĞÍ"},
+						{"FI","FirmID","String","äº¤æ˜“å•†ID"},
+						{"FN","FirmName","String","äº¤æ˜“å•†åç§°"},
+						{"FT","FirmType","String","äº¤æ˜“å•†ç±»å‹"},
 						
-						{"AD","Address","String","½»Ò×µØÖ·"},
-						{"CM","ContactMan","String","ÁªÏµÈË"},
-						{"PH","Phone","String","ÁªÏµÈËµç»°"}
+						{"AD","Address","String","äº¤æ˜“åœ°å€"},
+						{"CM","ContactMan","String","è”ç³»äºº"},
+						{"PH","Phone","String","è”ç³»äººç”µè¯"}
 						},
-				new String[][]{//Êä³ö²éÑ¯
+				new String[][]{//è¾“å‡ºæŸ¥è¯¢
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));*/
-		/**===============================19. ½»Ò×ÉÌĞÅÏ¢=========================================*/
+		/**===============================19. äº¤æ˜“å•†ä¿¡æ¯=========================================*/
 		
-		/**===============================18. Òé¼ÛÎ¯ÍĞÏêÇé²éÑ¯=========================================*/
-		//requestÌí¼Óp1
+		/**===============================18. è®®ä»·å§”æ‰˜è¯¦æƒ…æŸ¥è¯¢=========================================*/
+		//requestæ·»åŠ p1
 		/*lreq.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.SubOrderInfoQueryRequestVO",//  <<--------  È«Ãû1  ---------
-				new String[][]{//ÊäÈëĞÅÏ¢2
-						{"U","UserID","String","ÓÃ»§id"},
-						{"SI","SessionID","Long","ÓÃ»§»á»°id"},
-						{"CHF","CheckHistoryFlag","String","µ±Ç°ÀúÊ·²éÑ¯±êÖ¾     0£ºµ±Ç°¼ÇÂ¼;  1: ÀúÊ·¼ÇÂ¼"}
+				"gnnt.MEBS.MobileServer.vo.micro.trade.SubOrderInfoQueryRequestVO",//  <<--------  å…¨å1  ---------
+				new String[][]{//è¾“å…¥ä¿¡æ¯2
+						{"U","UserID","String","ç”¨æˆ·id"},
+						{"SI","SessionID","Long","ç”¨æˆ·ä¼šè¯id"},
+						{"CHF","CheckHistoryFlag","String","å½“å‰å†å²æŸ¥è¯¢æ ‡å¿—     0ï¼šå½“å‰è®°å½•;  1: å†å²è®°å½•"}
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
 		//String Double Integer Date Long
-		//responseÌí¼Óp2
+		//responseæ·»åŠ p2
 		lres.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.SubOrderInfoQueryResponseVO",//  <<--------  È«Ãû3  ---------
-				new String[][]{//Êä³öĞÅÏ¢4
-						{"RETCODE","RETCODE","String","·µ»ØÂë  =0³É¹¦, ÆäËûÎªÊ§°Ü£¬´íÎóÃèÊöÔÚMESSAGE ÖĞ"},
-						{"MESSAGE","MESSAGE","String","·µ»ØµÄÌáÊ¾ÏûÏ¢ÄÚÈİ"},
-						{"CHF","CheckHistoryFlag","String","µ±Ç°ÀúÊ·²éÑ¯±êÖ¾     0£ºµ±Ç°¼ÇÂ¼;  1: ÀúÊ·¼ÇÂ¼"},
+				"gnnt.MEBS.MobileServer.vo.micro.trade.SubOrderInfoQueryResponseVO",//  <<--------  å…¨å3  ---------
+				new String[][]{//è¾“å‡ºä¿¡æ¯4
+						{"RETCODE","RETCODE","String","è¿”å›ç   =0æˆåŠŸ, å…¶ä»–ä¸ºå¤±è´¥ï¼Œé”™è¯¯æè¿°åœ¨MESSAGE ä¸­"},
+						{"MESSAGE","MESSAGE","String","è¿”å›çš„æç¤ºæ¶ˆæ¯å†…å®¹"},
+						{"CHF","CheckHistoryFlag","String","å½“å‰å†å²æŸ¥è¯¢æ ‡å¿—     0ï¼šå½“å‰è®°å½•;  1: å†å²è®°å½•"},
 						
-						{"SOI","AsOrderId","String","Òé¼ÛÎ¯ÍĞµ¥ºÅ"},
-						{"STA","Status","String","Î¯ÍĞÒé¼Û×´Ì¬£º0£ºµÈ´ı´ğ¸´ 1£ºÎ¯ÍĞ·½½ÓÊÜ 2£ºÎ¯ÍĞ·½¾Ü¾ø 3£ºÒé¼Û·½³·µ¥ 4£ºÏµÍ³×Ô¶¯³·µ¥ 5: ¹ÜÀíÔ±³·µ¥"},
+						{"SOI","AsOrderId","String","è®®ä»·å§”æ‰˜å•å·"},
+						{"STA","Status","String","å§”æ‰˜è®®ä»·çŠ¶æ€ï¼š0ï¼šç­‰å¾…ç­”å¤ 1ï¼šå§”æ‰˜æ–¹æ¥å— 2ï¼šå§”æ‰˜æ–¹æ‹’ç» 3ï¼šè®®ä»·æ–¹æ’¤å• 4ï¼šç³»ç»Ÿè‡ªåŠ¨æ’¤å• 5: ç®¡ç†å‘˜æ’¤å•"},
 						
-						{"PRI","Price","Double","¼Û¸ñ"},
-						{"QTY","Qty","Integer","Òé¼ÛÊıÁ¿"},
-						{"U","Unit","String","ÉÌÆ·µ¥Î»"},
+						{"PRI","Price","Double","ä»·æ ¼"},
+						{"QTY","Qty","Integer","è®®ä»·æ•°é‡"},
+						{"U","Unit","String","å•†å“å•ä½"},
 						
-						{"WHI","WarehouseId","String","½»ÊÕ²Ö¿â"},
-						{"CT","CreateTime","Date","Ìá³öÊ±¼ä"},
+						{"WHI","WarehouseId","String","äº¤æ”¶ä»“åº“"},
+						{"CT","CreateTime","Date","æå‡ºæ—¶é—´"},
 						
-						{"RT","ReplyTime","Date","´ğ¸´Ê±¼ä"},
-						{"RM","ReplyMessage","String","´ğ¸´ĞÅÏ¢"},
-						{"DMB","BuyerPerformMargin","Double","Âò·½ÂÄÔ¼±£Ö¤½ğ"},
+						{"RT","ReplyTime","Date","ç­”å¤æ—¶é—´"},
+						{"RM","ReplyMessage","String","ç­”å¤ä¿¡æ¯"},
+						{"DMB","BuyerPerformMargin","Double","ä¹°æ–¹å±¥çº¦ä¿è¯é‡‘"},
 						
-						{"DMS","SellerPerformMargin","Double","Âô·½ÂÄÔ¼±£Ö¤½ğ"},
-						{"DDT","DeliveryDateType","String","½»ÊÕÈÕÀàĞÍ£º0£ºÖ¸¶¨ÆÚÏŞ£»1£ºÖ¸¶¨ÈÕÆÚ"},
-						{"DPH","DeliveryTime","Integer","½»»õÆÚÏŞ£¨µ¥Î»£ºĞ¡Ê±£©ÏŞÖÆÌõ¼şÏÔÊ¾£¬½»ÊÕÈÕÀàĞÍ£º£¨0£©Ö¸¶¨ÆÚÏŞ"},
-						{"DD","DeliveryDate","Date","½»»õÈÕÆÚÏŞÖÆÌõ¼şÏÔÊ¾£¬½»ÊÕÈÕÀàĞÍ£º£¨1£©Ö¸¶¨ÈÕÆÚ"},
+						{"DMS","SellerPerformMargin","Double","å–æ–¹å±¥çº¦ä¿è¯é‡‘"},
+						{"DDT","DeliveryDateType","String","äº¤æ”¶æ—¥ç±»å‹ï¼š0ï¼šæŒ‡å®šæœŸé™ï¼›1ï¼šæŒ‡å®šæ—¥æœŸ"},
+						{"DPH","DeliveryTime","Integer","äº¤è´§æœŸé™ï¼ˆå•ä½ï¼šå°æ—¶ï¼‰é™åˆ¶æ¡ä»¶æ˜¾ç¤ºï¼Œäº¤æ”¶æ—¥ç±»å‹ï¼šï¼ˆ0ï¼‰æŒ‡å®šæœŸé™"},
+						{"DD","DeliveryDate","Date","äº¤è´§æ—¥æœŸé™åˆ¶æ¡ä»¶æ˜¾ç¤ºï¼Œäº¤æ”¶æ—¥ç±»å‹ï¼šï¼ˆ1ï¼‰æŒ‡å®šæ—¥æœŸ"},
 						
-						{"RMK","Remark","String","¸½¼ÓÌõ¿î"},
-						{"SFI","PerformFirmID","String","Òé¼ÛÎ¯ÍĞ½»Ò×ÉÌID"},
-						{"OFI","OrderFirmID","String","Î¯ÍĞ½»Ò×ÉÌID"},
+						{"RMK","Remark","String","é™„åŠ æ¡æ¬¾"},
+						{"SFI","PerformFirmID","String","è®®ä»·å§”æ‰˜äº¤æ˜“å•†ID"},
+						{"OFI","OrderFirmID","String","å§”æ‰˜äº¤æ˜“å•†ID"},
 						
-						{"ORI","OrderID","String","Î¯ÍĞµ¥ºÅ"}
+						{"ORI","OrderID","String","å§”æ‰˜å•å·"}
 						},
-				new String[][]{//Êä³ö²éÑ¯5
+				new String[][]{//è¾“å‡ºæŸ¥è¯¢5
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));*/
-		/**===============================18. Òé¼ÛÎ¯ÍĞÏêÇé²éÑ¯=========================================*/
+		/**===============================18. è®®ä»·å§”æ‰˜è¯¦æƒ…æŸ¥è¯¢=========================================*/
 		
-		/**===============================17. Òé¼ÛÎ¯ÍĞ²éÑ¯=========================================*/
-		//requestÌí¼Óp1
+		/**===============================17. è®®ä»·å§”æ‰˜æŸ¥è¯¢=========================================*/
+		//requestæ·»åŠ p1
 		/*lreq.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.SubOrderQueryRequestVO",//  <<--------  È«Ãû1  ---------
-				new String[][]{//ÊäÈëĞÅÏ¢2
-						{"U","UserID","String","ÓÃ»§id"},
-						{"SI","SessionID","Long","ÓÃ»§»á»°id"},
-						{"CHF","CheckHistoryFlag","String","µ±Ç°ÀúÊ·²éÑ¯±êÖ¾     0£ºµ±Ç°¼ÇÂ¼;  1: ÀúÊ·¼ÇÂ¼"},
+				"gnnt.MEBS.MobileServer.vo.micro.trade.SubOrderQueryRequestVO",//  <<--------  å…¨å1  ---------
+				new String[][]{//è¾“å…¥ä¿¡æ¯2
+						{"U","UserID","String","ç”¨æˆ·id"},
+						{"SI","SessionID","Long","ç”¨æˆ·ä¼šè¯id"},
+						{"CHF","CheckHistoryFlag","String","å½“å‰å†å²æŸ¥è¯¢æ ‡å¿—     0ï¼šå½“å‰è®°å½•;  1: å†å²è®°å½•"},
 						
-						{"UT","LastTimestamp","Long","×î´ó¸üĞÂÊ±¼ä,Î¢Ãî±íÊ¾"},
-						{"PN","PageNo","Integer","µ±Ç°Ò³Âë"},
-						{"PS","PageSize","Integer","Ã¿Ò³ÏÔÊ¾ÌõÊı"},
-						{"T","AsOrderType","String","½»Ò×ÉÌÎ¯ÍĞÒé¼ÛµÄÀàĞÍ±êÖ¾£º1£º·¢ÆğµÄÒé¼Û 2£º½ÓÊÜµÄÒé¼Û"},
+						{"UT","LastTimestamp","Long","æœ€å¤§æ›´æ–°æ—¶é—´,å¾®å¦™è¡¨ç¤º"},
+						{"PN","PageNo","Integer","å½“å‰é¡µç "},
+						{"PS","PageSize","Integer","æ¯é¡µæ˜¾ç¤ºæ¡æ•°"},
+						{"T","AsOrderType","String","äº¤æ˜“å•†å§”æ‰˜è®®ä»·çš„ç±»å‹æ ‡å¿—ï¼š1ï¼šå‘èµ·çš„è®®ä»· 2ï¼šæ¥å—çš„è®®ä»·"},
 						
-						{"STA","Status","String","Î¯ÍĞÒé¼Û×´Ì¬£º0£ºµÈ´ı´ğ¸´ 1£ºÎ¯ÍĞ·½½ÓÊÜ 2£ºÎ¯ÍĞ·½¾Ü¾ø 3£ºÒé¼Û·½³·µ¥ 4£ºÏµÍ³×Ô¶¯³·µ¥ 5: ¹ÜÀíÔ±³·µ¥"}
+						{"STA","Status","String","å§”æ‰˜è®®ä»·çŠ¶æ€ï¼š0ï¼šç­‰å¾…ç­”å¤ 1ï¼šå§”æ‰˜æ–¹æ¥å— 2ï¼šå§”æ‰˜æ–¹æ‹’ç» 3ï¼šè®®ä»·æ–¹æ’¤å• 4ï¼šç³»ç»Ÿè‡ªåŠ¨æ’¤å• 5: ç®¡ç†å‘˜æ’¤å•"}
 						
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
 		//String Double Integer Date Long
-		//responseÌí¼Óp2
+		//responseæ·»åŠ p2
 		lres.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.SubOrderQueryResponseVO",//  <<--------  È«Ãû3  ---------
-				new String[][]{//Êä³öĞÅÏ¢4
-						{"RETCODE","RETCODE","String","·µ»ØÂë  =0³É¹¦, ÆäËûÎªÊ§°Ü£¬´íÎóÃèÊöÔÚMESSAGE ÖĞ"},
-						{"MESSAGE","MESSAGE","String","·µ»ØµÄÌáÊ¾ÏûÏ¢ÄÚÈİ"},
+				"gnnt.MEBS.MobileServer.vo.micro.trade.SubOrderQueryResponseVO",//  <<--------  å…¨å3  ---------
+				new String[][]{//è¾“å‡ºä¿¡æ¯4
+						{"RETCODE","RETCODE","String","è¿”å›ç   =0æˆåŠŸ, å…¶ä»–ä¸ºå¤±è´¥ï¼Œé”™è¯¯æè¿°åœ¨MESSAGE ä¸­"},
+						{"MESSAGE","MESSAGE","String","è¿”å›çš„æç¤ºæ¶ˆæ¯å†…å®¹"},
 						
-						{"TTLREC","TotalRecord","Integer","×Ü¼ÇÂ¼Êı"},
-						{"PN","PageNo","Integer","µ±Ç°Ò³Âë"},
-						{"PS","PageSize","Integer","Ã¿Ò³ÏÔÊ¾ÌõÊı"}
+						{"TTLREC","TotalRecord","Integer","æ€»è®°å½•æ•°"},
+						{"PN","PageNo","Integer","å½“å‰é¡µç "},
+						{"PS","PageSize","Integer","æ¯é¡µæ˜¾ç¤ºæ¡æ•°"}
 
 						},
-				new String[][]{//Êä³ö²éÑ¯5
-						{"SI","AsOrderId","String","Òé¼ÛÎ¯ÍĞµ¥ºÅ"},
-						{"ORT","OrderTitle","String","Î¯ÍĞ±êÌâ"},
-						{"PRI","Price","Double","µ¥¼Û"},
+				new String[][]{//è¾“å‡ºæŸ¥è¯¢5
+						{"SI","AsOrderId","String","è®®ä»·å§”æ‰˜å•å·"},
+						{"ORT","OrderTitle","String","å§”æ‰˜æ ‡é¢˜"},
+						{"PRI","Price","Double","å•ä»·"},
 						
-						{"QTY","Qty","Integer","ÊıÁ¿"},
-						{"U","Unit","String","ÉÌÆ·µ¥Î»"},
-						{"T","Type","String","½»ÊÕÀàĞÍ:0: Ğ­Òé½»ÊÕ1£º×ÔÖ÷½»ÊÕ"},
+						{"QTY","Qty","Integer","æ•°é‡"},
+						{"U","Unit","String","å•†å“å•ä½"},
+						{"T","Type","String","äº¤æ”¶ç±»å‹:0: åè®®äº¤æ”¶1ï¼šè‡ªä¸»äº¤æ”¶"},
 						
-						{"STA","Status","String","Î¯ÍĞÒé¼Û×´Ì¬£º0£ºµÈ´ı´ğ¸´ 1£ºÎ¯ÍĞ·½½ÓÊÜ 2£ºÎ¯ÍĞ·½¾Ü¾ø 3£ºÒé¼Û·½³·µ¥ 4£ºÏµÍ³×Ô¶¯³·µ¥ 5: ¹ÜÀíÔ±³·µ¥"},
-						{"SFI","PerformFirmID","String","Òé¼ÛÎ¯ÍĞ½»Ò×ÉÌID"},
-						{"CT","CreateTime","Date","Òé¼ÛÌá³öÊ±¼ä"}
+						{"STA","Status","String","å§”æ‰˜è®®ä»·çŠ¶æ€ï¼š0ï¼šç­‰å¾…ç­”å¤ 1ï¼šå§”æ‰˜æ–¹æ¥å— 2ï¼šå§”æ‰˜æ–¹æ‹’ç» 3ï¼šè®®ä»·æ–¹æ’¤å• 4ï¼šç³»ç»Ÿè‡ªåŠ¨æ’¤å• 5: ç®¡ç†å‘˜æ’¤å•"},
+						{"SFI","PerformFirmID","String","è®®ä»·å§”æ‰˜äº¤æ˜“å•†ID"},
+						{"CT","CreateTime","Date","è®®ä»·æå‡ºæ—¶é—´"}
 						
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));*/
-		/**===============================17. Òé¼ÛÎ¯ÍĞ²éÑ¯=========================================*/
+		/**===============================17. è®®ä»·å§”æ‰˜æŸ¥è¯¢=========================================*/
 		
-		/**===============================16. ÕªÅÆ=========================================*/
-		//requestÌí¼Óp1
+		/**===============================16. æ‘˜ç‰Œ=========================================*/
+		//requestæ·»åŠ p1
 		/*lreq.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.PickOffOrderRequestVO",//  <<--------  È«Ãû1  ---------
-				new String[][]{//ÊäÈëĞÅÏ¢2
-						{"U","UserID","String","ÓÃ»§id"},
-						{"SI","SessionID","Long","ÓÃ»§»á»°id"},
+				"gnnt.MEBS.MobileServer.vo.micro.trade.PickOffOrderRequestVO",//  <<--------  å…¨å1  ---------
+				new String[][]{//è¾“å…¥ä¿¡æ¯2
+						{"U","UserID","String","ç”¨æˆ·id"},
+						{"SI","SessionID","Long","ç”¨æˆ·ä¼šè¯id"},
 						
-						{"ORI","OrderID","String","Î¯ÍĞµ¥ºÅ"}
+						{"ORI","OrderID","String","å§”æ‰˜å•å·"}
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
 		//String Double Integer Date Long
-		//responseÌí¼Óp2
+		//responseæ·»åŠ p2
 		lres.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.PickOffOrderResponseVO",//  <<--------  È«Ãû3  ---------
-				new String[][]{//Êä³öĞÅÏ¢4
-						{"RETCODE","RETCODE","String","·µ»ØÂë  =0³É¹¦, ÆäËûÎªÊ§°Ü£¬´íÎóÃèÊöÔÚMESSAGE ÖĞ"},
-						{"MESSAGE","MESSAGE","String","·µ»ØµÄÌáÊ¾ÏûÏ¢ÄÚÈİ"}
+				"gnnt.MEBS.MobileServer.vo.micro.trade.PickOffOrderResponseVO",//  <<--------  å…¨å3  ---------
+				new String[][]{//è¾“å‡ºä¿¡æ¯4
+						{"RETCODE","RETCODE","String","è¿”å›ç   =0æˆåŠŸ, å…¶ä»–ä¸ºå¤±è´¥ï¼Œé”™è¯¯æè¿°åœ¨MESSAGE ä¸­"},
+						{"MESSAGE","MESSAGE","String","è¿”å›çš„æç¤ºæ¶ˆæ¯å†…å®¹"}
 						
 						},
-				new String[][]{//Êä³ö²éÑ¯5
+				new String[][]{//è¾“å‡ºæŸ¥è¯¢5
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));*/
-		/**===============================16. ÕªÅÆ=========================================*/
+		/**===============================16. æ‘˜ç‰Œ=========================================*/
 		
-		/**===============================15. ³·ÏúÎ¯ÍĞ=========================================*/
-		//requestÌí¼Óp1
+		/**===============================15. æ’¤é”€å§”æ‰˜=========================================*/
+		//requestæ·»åŠ p1
 		/*lreq.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.OrderCancelRequestVO",//  <<--------  È«Ãû1  ---------
-				new String[][]{//ÊäÈëĞÅÏ¢2
-						{"U","UserID","String","ÓÃ»§id"},
-						{"SI","SessionID","Long","ÓÃ»§»á»°id"},
-						{"ORI","OrderID","String","Î¯ÍĞµ¥ºÅ"}
+				"gnnt.MEBS.MobileServer.vo.micro.trade.OrderCancelRequestVO",//  <<--------  å…¨å1  ---------
+				new String[][]{//è¾“å…¥ä¿¡æ¯2
+						{"U","UserID","String","ç”¨æˆ·id"},
+						{"SI","SessionID","Long","ç”¨æˆ·ä¼šè¯id"},
+						{"ORI","OrderID","String","å§”æ‰˜å•å·"}
 						
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
 		//String Double Integer Date Long
-		//responseÌí¼Óp2
+		//responseæ·»åŠ p2
 		lres.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.OrderCancelResponseVO",//  <<--------  È«Ãû3  ---------
-				new String[][]{//Êä³öĞÅÏ¢4
-						{"RETCODE","RETCODE","String","·µ»ØÂë  =0³É¹¦, ÆäËûÎªÊ§°Ü£¬´íÎóÃèÊöÔÚMESSAGE ÖĞ"},
-						{"MESSAGE","MESSAGE","String","·µ»ØµÄÌáÊ¾ÏûÏ¢ÄÚÈİ"}
+				"gnnt.MEBS.MobileServer.vo.micro.trade.OrderCancelResponseVO",//  <<--------  å…¨å3  ---------
+				new String[][]{//è¾“å‡ºä¿¡æ¯4
+						{"RETCODE","RETCODE","String","è¿”å›ç   =0æˆåŠŸ, å…¶ä»–ä¸ºå¤±è´¥ï¼Œé”™è¯¯æè¿°åœ¨MESSAGE ä¸­"},
+						{"MESSAGE","MESSAGE","String","è¿”å›çš„æç¤ºæ¶ˆæ¯å†…å®¹"}
 						},
-				new String[][]{//Êä³ö²éÑ¯5
+				new String[][]{//è¾“å‡ºæŸ¥è¯¢5
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));*/
-		/**===============================15. ³·ÏúÎ¯ÍĞ=========================================*/
+		/**===============================15. æ’¤é”€å§”æ‰˜=========================================*/
 		
 
-		/**===============================33. ²Öµ¥ÏêÏ¸ĞÅÏ¢ =========================================*/
-		//requestÌí¼Óp1
+		/**===============================33. ä»“å•è¯¦ç»†ä¿¡æ¯ =========================================*/
+		//requestæ·»åŠ p1
 		/*lreq.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.BillDetailQueryRequestVO",//  <<--------  È«Ãû1  ---------
-				new String[][]{//ÊäÈëĞÅÏ¢2
-						{"U","UserID","String","ÓÃ»§id"},
-						{"SI","SessionID","Long","ÓÃ»§»á»°id"},
+				"gnnt.MEBS.MobileServer.vo.micro.trade.BillDetailQueryRequestVO",//  <<--------  å…¨å1  ---------
+				new String[][]{//è¾“å…¥ä¿¡æ¯2
+						{"U","UserID","String","ç”¨æˆ·id"},
+						{"SI","SessionID","Long","ç”¨æˆ·ä¼šè¯id"},
 						
-						{"N","BillNo","String","²Öµ¥ºÅ"}
+						{"N","BillNo","String","ä»“å•å·"}
 						
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
 		//String Double Integer Date Long
-		//responseÌí¼Óp2
+		//responseæ·»åŠ p2
 		lres.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.BillDetailQueryResponseVO",//  <<--------  È«Ãû3  ---------
-				new String[][]{//Êä³öĞÅÏ¢4
-						{"RETCODE","RETCODE","String","·µ»ØÂë  =0³É¹¦, ÆäËûÎªÊ§°Ü£¬´íÎóÃèÊöÔÚMESSAGE ÖĞ"},
-						{"MESSAGE","MESSAGE","String","·µ»ØµÄÌáÊ¾ÏûÏ¢ÄÚÈİ"},
+				"gnnt.MEBS.MobileServer.vo.micro.trade.BillDetailQueryResponseVO",//  <<--------  å…¨å3  ---------
+				new String[][]{//è¾“å‡ºä¿¡æ¯4
+						{"RETCODE","RETCODE","String","è¿”å›ç   =0æˆåŠŸ, å…¶ä»–ä¸ºå¤±è´¥ï¼Œé”™è¯¯æè¿°åœ¨MESSAGE ä¸­"},
+						{"MESSAGE","MESSAGE","String","è¿”å›çš„æç¤ºæ¶ˆæ¯å†…å®¹"},
 						
-						{"B","BreedId","String","·ÖÀà´úÂë"},
-						{"C","CommodityId","String","Æ·Ãû´úÂë"},
-						{"T","CommodityTitle","String","ÉÌÆ·±êÌâ"},
+						{"B","BreedId","String","åˆ†ç±»ä»£ç "},
+						{"C","CommodityId","String","å“åä»£ç "},
+						{"T","CommodityTitle","String","å•†å“æ ‡é¢˜"},
 						
-						{"Q","Qty","Integer","ÊıÁ¿"},
-						{"P","Price","Double","¼Û¸ñ"},
-						{"S","StartTradeQty","Integer","Æğ¶¨Á¿"},
+						{"Q","Qty","Integer","æ•°é‡"},
+						{"P","Price","Double","ä»·æ ¼"},
+						{"S","StartTradeQty","Integer","èµ·å®šé‡"},
 						
-						{"U","TradeUnit","String","½»Ò×µ¥Î»"},
-						{"W","WarehouseId","String","½»ÊÕ²Ö¿â´úÂë"},
+						{"U","TradeUnit","String","äº¤æ˜“å•ä½"},
+						{"W","WarehouseId","String","äº¤æ”¶ä»“åº“ä»£ç "},
 						
 						},
-				new String[][]{//Êä³ö²éÑ¯5
-						{"PT","PropertyType","String","ÊôĞÔÀàĞÍ £¨»ù±¾ÊôĞÔ ÖÊÁ¿Ö¸±ê£©"},
-						{"PN","PropertyName","String","Æ·ÖÖÊôĞÔÃû³Æ"},
-						{"PV","PropertyValue","String","Æ·ÃûÊôĞÔÖµ"}
+				new String[][]{//è¾“å‡ºæŸ¥è¯¢5
+						{"PT","PropertyType","String","å±æ€§ç±»å‹ ï¼ˆåŸºæœ¬å±æ€§ è´¨é‡æŒ‡æ ‡ï¼‰"},
+						{"PN","PropertyName","String","å“ç§å±æ€§åç§°"},
+						{"PV","PropertyValue","String","å“åå±æ€§å€¼"}
 						
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));*/
-		/**===============================33. ²Öµ¥ÏêÏ¸ĞÅÏ¢=========================================*/
+		/**===============================33. ä»“å•è¯¦ç»†ä¿¡æ¯=========================================*/
 		
-		/**===============================31. Ä£°åÏêÇé²éÑ¯ =========================================*/
-		//requestÌí¼Óp1
+		/**===============================31. æ¨¡æ¿è¯¦æƒ…æŸ¥è¯¢ =========================================*/
+		//requestæ·»åŠ p1
 		/*lreq.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.TemplateDetailQueryRequestVO",//  <<--------  È«Ãû1  ---------
-				new String[][]{//ÊäÈëĞÅÏ¢2
-						{"U","UserID","String","ÓÃ»§id"},
-						{"SI","SessionID","Long","ÓÃ»§»á»°id"},
+				"gnnt.MEBS.MobileServer.vo.micro.trade.TemplateDetailQueryRequestVO",//  <<--------  å…¨å1  ---------
+				new String[][]{//è¾“å…¥ä¿¡æ¯2
+						{"U","UserID","String","ç”¨æˆ·id"},
+						{"SI","SessionID","Long","ç”¨æˆ·ä¼šè¯id"},
 						
-						{"N","TemplateNo","String","Ä£°åID"}
+						{"N","TemplateNo","String","æ¨¡æ¿ID"}
 						
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
 		//String Double Integer Date Long
-		//responseÌí¼Óp2
+		//responseæ·»åŠ p2
 		lres.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.TemplateDetailQueryResponseVO",//  <<--------  È«Ãû3  ---------
-				new String[][]{//Êä³öĞÅÏ¢4
-						{"RETCODE","RETCODE","String","·µ»ØÂë  =0³É¹¦, ÆäËûÎªÊ§°Ü£¬´íÎóÃèÊöÔÚMESSAGE ÖĞ"},
-						{"MESSAGE","MESSAGE","String","·µ»ØµÄÌáÊ¾ÏûÏ¢ÄÚÈİ"},
+				"gnnt.MEBS.MobileServer.vo.micro.trade.TemplateDetailQueryResponseVO",//  <<--------  å…¨å3  ---------
+				new String[][]{//è¾“å‡ºä¿¡æ¯4
+						{"RETCODE","RETCODE","String","è¿”å›ç   =0æˆåŠŸ, å…¶ä»–ä¸ºå¤±è´¥ï¼Œé”™è¯¯æè¿°åœ¨MESSAGE ä¸­"},
+						{"MESSAGE","MESSAGE","String","è¿”å›çš„æç¤ºæ¶ˆæ¯å†…å®¹"},
 						
-						{"ORI","OrderID","String","Î¯ÍĞµ¥ºÅ"},
-						{"ORT","OrderTitle","String","Î¯ÍĞ±êÌâ"},
-						{"BN","BreedName","String","Æ·ÖÖÃû³Æ"},
+						{"ORI","OrderID","String","å§”æ‰˜å•å·"},
+						{"ORT","OrderTitle","String","å§”æ‰˜æ ‡é¢˜"},
+						{"BN","BreedName","String","å“ç§åç§°"},
 						
-						{"BCN","BreedCmdName","String","ËùÊô·ÖÀàÃû³Æ"},
-						{"BS","BsFlag","Integer","ÂòÂô·½Ïò:  1: Âò£»2£ºÂô"},
-						{"T","TemplateType","String","Ä£°åÀàĞÍ  1ÏµÍ³Ä£°å 2×Ô¶¨ÒåÄ£°å 3ÏµÍ³Ä£°å+×Ô¶¨ÒåÄ£°å"},
+						{"BCN","BreedCmdName","String","æ‰€å±åˆ†ç±»åç§°"},
+						{"BS","BsFlag","Integer","ä¹°å–æ–¹å‘:  1: ä¹°ï¼›2ï¼šå–"},
+						{"T","TemplateType","String","æ¨¡æ¿ç±»å‹  1ç³»ç»Ÿæ¨¡æ¿ 2è‡ªå®šä¹‰æ¨¡æ¿ 3ç³»ç»Ÿæ¨¡æ¿+è‡ªå®šä¹‰æ¨¡æ¿"},
 						
-						{"STA","Status","Integer","Î¯ÍĞ×´Ì¬£º0£ºÎ´³É½»1£º²¿·Ö³É½»2£ºÈ«²¿³É½»3£ºÒÑÏÂ¼Ü11£º´ı¹ÜÀíÔ±ÉóºË"},
-						{"PRI","Price","Double","µ¥Î»¼Û¸ñ"},
-						{"QTY","Qty","Integer","ÉÌÆ·ÊıÁ¿"},
+						{"STA","Status","Integer","å§”æ‰˜çŠ¶æ€ï¼š0ï¼šæœªæˆäº¤1ï¼šéƒ¨åˆ†æˆäº¤2ï¼šå…¨éƒ¨æˆäº¤3ï¼šå·²ä¸‹æ¶11ï¼šå¾…ç®¡ç†å‘˜å®¡æ ¸"},
+						{"PRI","Price","Double","å•ä½ä»·æ ¼"},
+						{"QTY","Qty","Integer","å•†å“æ•°é‡"},
 						
-						{"TQ","TradeQty","Integer","ÒÑ³É½»ÊıÁ¿"},
-						{"U","Unit","String","ÉÌÆ·µ¥Î»"},
-						{"OT","OrderTime","Date","Î¯ÍĞÊ±¼ä"},
+						{"TQ","TradeQty","Integer","å·²æˆäº¤æ•°é‡"},
+						{"U","Unit","String","å•†å“å•ä½"},
+						{"OT","OrderTime","Date","å§”æ‰˜æ—¶é—´"},
 						
-						{"ET","EffectiveTime","Date","ÉúĞ§Ê±¼ä£¬Îª¿ÕÏÔÊ¾¡°--¡±"},
-						{"RMK","Remark","String","¸½¼ÓÌõ¿î"},
-						{"VH","ValidateHours","Integer","ĞÅÏ¢ÓĞĞ§ÆÚ£¨µ¥Î»£ºĞ¡Ê±£©£º-1£º³¤ÆÚÓĞĞ§£»ÆäËûÖµÕûÊıĞ¡Ê±"},
+						{"ET","EffectiveTime","Date","ç”Ÿæ•ˆæ—¶é—´ï¼Œä¸ºç©ºæ˜¾ç¤ºâ€œ--â€"},
+						{"RMK","Remark","String","é™„åŠ æ¡æ¬¾"},
+						{"VH","ValidateHours","Integer","ä¿¡æ¯æœ‰æ•ˆæœŸï¼ˆå•ä½ï¼šå°æ—¶ï¼‰ï¼š-1ï¼šé•¿æœŸæœ‰æ•ˆï¼›å…¶ä»–å€¼æ•´æ•°å°æ—¶"},
 						
-						{"TF","TradeFlag","Integer","³É½»·½Ê½£º1£ºÖ±½Ó³É½»£»2£º¿ÉÒé¼Û³É½»£»3£º±ØĞëÒé¼Û³É½»"},
-						{"TPH","MarginDeadLine","String","±£Ö¤½ğÖ§¸¶ÆÚÏŞ(Ğ¡Ê±)£¬ÏŞÖÆÌõ¼şÏÔÊ¾,Æ·ÖÖ½»Ò×Ä£Ê½£º£¨1£©³ÏĞÅ±£ÕÏ½ğÄ£Ê½"},
-						{"TMB","TradeMarginBuyer","String","Âò·½³ÏĞÅ±£ÕÏ½ğÏŞÖÆÌõ¼şÏÔÊ¾,Æ·ÖÖ½»Ò×Ä£Ê½£º£¨1£©³ÏĞÅ±£ÕÏ½ğÄ£Ê½"},
+						{"TF","TradeFlag","Integer","æˆäº¤æ–¹å¼ï¼š1ï¼šç›´æ¥æˆäº¤ï¼›2ï¼šå¯è®®ä»·æˆäº¤ï¼›3ï¼šå¿…é¡»è®®ä»·æˆäº¤"},
+						{"TPH","MarginDeadLine","String","ä¿è¯é‡‘æ”¯ä»˜æœŸé™(å°æ—¶)ï¼Œé™åˆ¶æ¡ä»¶æ˜¾ç¤º,å“ç§äº¤æ˜“æ¨¡å¼ï¼šï¼ˆ1ï¼‰è¯šä¿¡ä¿éšœé‡‘æ¨¡å¼"},
+						{"TMB","TradeMarginBuyer","String","ä¹°æ–¹è¯šä¿¡ä¿éšœé‡‘é™åˆ¶æ¡ä»¶æ˜¾ç¤º,å“ç§äº¤æ˜“æ¨¡å¼ï¼šï¼ˆ1ï¼‰è¯šä¿¡ä¿éšœé‡‘æ¨¡å¼"},
 						
-						{"TMS","TradeMarginSeller","String","Âô·½³ÏĞÅ±£ÕÏ½ğÏŞÖÆÌõ¼şÏÔÊ¾,Æ·ÖÖ½»Ò×Ä£Ê½£º£¨1£©³ÏĞÅ±£ÕÏ½ğÄ£Ê½"},
-						{"IPM","IsPayMargin","String","ÊÇ·ñÒÑÖ§¸¶ÂÄÔ¼±£Ö¤½ğ£º  Y:ÊÇ£»N:·ñÏŞÖÆÌõ¼şÏÔÊ¾,Æ·ÖÖ½»Ò×Ä£Ê½£º£¨1£©³ÏĞÅ±£ÕÏ½ğÄ£Ê½"},
-						//{"PF","PayFlag","Integer",">ÊÇ·ñÂô²Öµ¥£º0£º·ñ£»1£ºÊÇ"},
+						{"TMS","TradeMarginSeller","String","å–æ–¹è¯šä¿¡ä¿éšœé‡‘é™åˆ¶æ¡ä»¶æ˜¾ç¤º,å“ç§äº¤æ˜“æ¨¡å¼ï¼šï¼ˆ1ï¼‰è¯šä¿¡ä¿éšœé‡‘æ¨¡å¼"},
+						{"IPM","IsPayMargin","String","æ˜¯å¦å·²æ”¯ä»˜å±¥çº¦ä¿è¯é‡‘ï¼š  Y:æ˜¯ï¼›N:å¦é™åˆ¶æ¡ä»¶æ˜¾ç¤º,å“ç§äº¤æ˜“æ¨¡å¼ï¼šï¼ˆ1ï¼‰è¯šä¿¡ä¿éšœé‡‘æ¨¡å¼"},
+						//{"PF","PayFlag","Integer",">æ˜¯å¦å–ä»“å•ï¼š0ï¼šå¦ï¼›1ï¼šæ˜¯"},
 						
-						{"STI","SellBillId","Integer","ÏŞÖÆÌõ¼şÏÔÊ¾£¬ÊÇ·ñÂô²Öµ¥£º£¨1£©ÊÇ"},
-						{"OWI","OrderWithdrawId","Integer","³·µ¥ÈËÏŞÖÆÌõ¼şÏÔÊ¾£¬Î¯ÍĞ×´Ì¬£º£¨3£©ÒÑÏÂ¼Ü"},
-						{"OWT","OrderWithdrawType","Integer","³·µ¥Ê±¼äÏŞÖÆÌõ¼şÏÔÊ¾£¬Î¯ÍĞ×´Ì¬£º£¨3£©ÒÑÏÂ¼Ü"},
+						{"STI","SellBillId","Integer","é™åˆ¶æ¡ä»¶æ˜¾ç¤ºï¼Œæ˜¯å¦å–ä»“å•ï¼šï¼ˆ1ï¼‰æ˜¯"},
+						{"OWI","OrderWithdrawId","Integer","æ’¤å•äººé™åˆ¶æ¡ä»¶æ˜¾ç¤ºï¼Œå§”æ‰˜çŠ¶æ€ï¼šï¼ˆ3ï¼‰å·²ä¸‹æ¶"},
+						{"OWT","OrderWithdrawType","Integer","æ’¤å•æ—¶é—´é™åˆ¶æ¡ä»¶æ˜¾ç¤ºï¼Œå§”æ‰˜çŠ¶æ€ï¼šï¼ˆ3ï¼‰å·²ä¸‹æ¶"},
 						
-						{"MTQ","MinTradeQty","Integer","×îĞ¡½»Ò×ÊıÁ¿"},
-						{"TU","TradeUnit","String","½»Ò×µ¥Î»"},
-						{"DET","DeliveryType","String","½»ÊÕµØÀàĞÍ£º1£ºÖ¸¶¨²Ö¿â£»2£ºÖ¸¶¨½»ÊÕµØ"},
+						{"MTQ","MinTradeQty","Integer","æœ€å°äº¤æ˜“æ•°é‡"},
+						{"TU","TradeUnit","String","äº¤æ˜“å•ä½"},
+						{"DET","DeliveryType","String","äº¤æ”¶åœ°ç±»å‹ï¼š1ï¼šæŒ‡å®šä»“åº“ï¼›2ï¼šæŒ‡å®šäº¤æ”¶åœ°"},
 						
-						{"DWI","DeliveryWarehouseId","String","½»ÊÕ²Ö¿âºÅ£¬Îª¿ÕÏÔÊ¾¡°--¡± ÏŞÖÆÌõ¼şÏÔÊ¾£¬½»ÊÕµØÀàĞÍ£º£¨1£©Ö¸¶¨²Ö¿â"},
-						{"DEA","DeliveryAddress","String","½»ÊÕµØ£¬Îª¿ÕÏÔÊ¾¡°--¡± ÏŞÖÆÌõ¼şÏÔÊ¾£¬½»ÊÕµØÀàĞÍ£º£¨2£©Ö¸¶¨½»ÊÕµØ"},
-						{"DMB","BuyerPerformMargin","Double","Âò·½ÂÄÔ¼±£Ö¤½ğ"},
+						{"DWI","DeliveryWarehouseId","String","äº¤æ”¶ä»“åº“å·ï¼Œä¸ºç©ºæ˜¾ç¤ºâ€œ--â€ é™åˆ¶æ¡ä»¶æ˜¾ç¤ºï¼Œäº¤æ”¶åœ°ç±»å‹ï¼šï¼ˆ1ï¼‰æŒ‡å®šä»“åº“"},
+						{"DEA","DeliveryAddress","String","äº¤æ”¶åœ°ï¼Œä¸ºç©ºæ˜¾ç¤ºâ€œ--â€ é™åˆ¶æ¡ä»¶æ˜¾ç¤ºï¼Œäº¤æ”¶åœ°ç±»å‹ï¼šï¼ˆ2ï¼‰æŒ‡å®šäº¤æ”¶åœ°"},
+						{"DMB","BuyerPerformMargin","Double","ä¹°æ–¹å±¥çº¦ä¿è¯é‡‘"},
 						
-						{"DMS","SellerPerformMargin","Double","Âô·½ÂÄÔ¼±£Ö¤½ğ"},
-						{"TY","SettleType","Integer","½»ÊÕÀàĞÍ: 0: Ğ­Òé½»ÊÕ£» 1£º×ÔÖ÷½»ÊÕ"},
-						{"PT","PayType","Integer","¸¶¿îÀàĞÍ£º0£ºÏÈ¿îºó»õ£»1£ºÏÈ»õºó¿î£»2£ºÎŞÏŞÖÆÏŞÖÆÌõ¼şÏÔÊ¾£¬½»ÊÕÀàĞÍ£º£¨1£©×ÔÖ÷½»ÊÕ"},
+						{"DMS","SellerPerformMargin","Double","å–æ–¹å±¥çº¦ä¿è¯é‡‘"},
+						{"TY","SettleType","Integer","äº¤æ”¶ç±»å‹: 0: åè®®äº¤æ”¶ï¼› 1ï¼šè‡ªä¸»äº¤æ”¶"},
+						{"PT","PayType","Integer","ä»˜æ¬¾ç±»å‹ï¼š0ï¼šå…ˆæ¬¾åè´§ï¼›1ï¼šå…ˆè´§åæ¬¾ï¼›2ï¼šæ— é™åˆ¶é™åˆ¶æ¡ä»¶æ˜¾ç¤ºï¼Œäº¤æ”¶ç±»å‹ï¼šï¼ˆ1ï¼‰è‡ªä¸»äº¤æ”¶"},
 						
-						{"DDT","DeliveryDateType","String","½»ÊÕÈÕÀàĞÍ£º0£ºÖ¸¶¨ÆÚÏŞ£»1£ºÖ¸¶¨ÈÕÆÚ"},
-						{"DPH","DeliveryTime","Date","½»»õÆÚÏŞ£¨µ¥Î»£ºĞ¡Ê±£©ÏŞÖÆÌõ¼şÏÔÊ¾£¬½»ÊÕÈÕÀàĞÍ£º£¨0£©Ö¸¶¨ÆÚÏŞ"},
-						{"DD","DeliveryDate","Date","½»»õÈÕÆÚÏŞÖÆÌõ¼şÏÔÊ¾£¬½»ÊÕÈÕÀàĞÍ£º£¨1£©Ö¸¶¨ÈÕÆÚ"},
+						{"DDT","DeliveryDateType","String","äº¤æ”¶æ—¥ç±»å‹ï¼š0ï¼šæŒ‡å®šæœŸé™ï¼›1ï¼šæŒ‡å®šæ—¥æœŸ"},
+						{"DPH","DeliveryTime","Date","äº¤è´§æœŸé™ï¼ˆå•ä½ï¼šå°æ—¶ï¼‰é™åˆ¶æ¡ä»¶æ˜¾ç¤ºï¼Œäº¤æ”¶æ—¥ç±»å‹ï¼šï¼ˆ0ï¼‰æŒ‡å®šæœŸé™"},
+						{"DD","DeliveryDate","Date","äº¤è´§æ—¥æœŸé™åˆ¶æ¡ä»¶æ˜¾ç¤ºï¼Œäº¤æ”¶æ—¥ç±»å‹ï¼šï¼ˆ1ï¼‰æŒ‡å®šæ—¥æœŸ"},
 						
 						
 						},
-				new String[][]{//Êä³ö²éÑ¯5
-						{"PT","PropertyType","String","ÊôĞÔÀàĞÍ £¨»ù±¾ÊôĞÔ ÖÊÁ¿Ö¸±ê£©"},
-						{"PN","PropertyName","String","Æ·ÖÖÊôĞÔÃû³Æ"},
-						{"PV","PropertyValue","String","Æ·ÃûÊôĞÔÖµ"}
+				new String[][]{//è¾“å‡ºæŸ¥è¯¢5
+						{"PT","PropertyType","String","å±æ€§ç±»å‹ ï¼ˆåŸºæœ¬å±æ€§ è´¨é‡æŒ‡æ ‡ï¼‰"},
+						{"PN","PropertyName","String","å“ç§å±æ€§åç§°"},
+						{"PV","PropertyValue","String","å“åå±æ€§å€¼"}
 						
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));*/
-		/**===============================31. Ä£°åÏêÇé²éÑ¯ =========================================*/
+		/**===============================31. æ¨¡æ¿è¯¦æƒ…æŸ¥è¯¢ =========================================*/
 		
 		
-		/**===============================14. ·¢²¼Î¯ÍĞ  =========================================*/
-		//requestÌí¼Óp1
+		/**===============================14. å‘å¸ƒå§”æ‰˜  =========================================*/
+		//requestæ·»åŠ p1
 		/*lreq.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.OrderSubmitRequestVO",//  <<--------  È«Ãû1  ---------
-				new String[][]{//ÊäÈëĞÅÏ¢2
-						{"U","UserID","String","ÓÃ»§id"},
-						{"SI","SessionID","Long","ÓÃ»§»á»°id"},
+				"gnnt.MEBS.MobileServer.vo.micro.trade.OrderSubmitRequestVO",//  <<--------  å…¨å1  ---------
+				new String[][]{//è¾“å…¥ä¿¡æ¯2
+						{"U","UserID","String","ç”¨æˆ·id"},
+						{"SI","SessionID","Long","ç”¨æˆ·ä¼šè¯id"},
 						
-						{"BS","BsFlag","Integer","ÂòÂô·½Ïò:  1: Âò£»2£ºÂô"},
-						{"PF","PayFlag","Integer",">ÊÇ·ñÂô²Öµ¥£º0£º·ñ£»1£ºÊÇ"},
-						{"ORT","OrderTitle","String","Î¯ÍĞ±êÌâ"},
+						{"BS","BsFlag","Integer","ä¹°å–æ–¹å‘:  1: ä¹°ï¼›2ï¼šå–"},
+						{"PF","PayFlag","Integer",">æ˜¯å¦å–ä»“å•ï¼š0ï¼šå¦ï¼›1ï¼šæ˜¯"},
+						{"ORT","OrderTitle","String","å§”æ‰˜æ ‡é¢˜"},
 						
-						{"CI","CommodityId","String","ËùÊô·ÖÀàID"},
-						{"BI","BreedId","String","Æ·ÖÖID"},
-						{"B","BillId","String","¹ØÁª²Öµ¥ID"},
+						{"CI","CommodityId","String","æ‰€å±åˆ†ç±»ID"},
+						{"BI","BreedId","String","å“ç§ID"},
+						{"B","BillId","String","å…³è”ä»“å•ID"},
 						
-						{"T","PropertyType","String","ÊôĞÔÀà±ğ (»ù±¾ÊôĞÔ¡¢ÖÊÁ¿Ö¸±ê) "},
-						{"P","PropertyId","String","Æ·ÖÖÊôĞÔ´úÂë"},
-						{"N","PropertyName","String","ÉÌÆ·ÊôĞÔ´úÂë/Ãû³Æ"},
+						{"T","PropertyType","String","å±æ€§ç±»åˆ« (åŸºæœ¬å±æ€§ã€è´¨é‡æŒ‡æ ‡) "},
+						{"P","PropertyId","String","å“ç§å±æ€§ä»£ç "},
+						{"N","PropertyName","String","å•†å“å±æ€§ä»£ç /åç§°"},
 						
-						{"PRI","Price","Double","Î¯ÍĞ¼Û¸ñ"},
-						{"QTY","Qty","Integer","Î¯ÍĞÊıÁ¿"},
-						{"MTQ","MinTradeQty","Integer","×îĞ¡½»Ò×ÊıÁ¿"},
+						{"PRI","Price","Double","å§”æ‰˜ä»·æ ¼"},
+						{"QTY","Qty","Integer","å§”æ‰˜æ•°é‡"},
+						{"MTQ","MinTradeQty","Integer","æœ€å°äº¤æ˜“æ•°é‡"},
 						
-						{"TU","TradeUnit","String","½»Ò×µ¥Î»"},
-						{"TF","TradeFlag","Integer","³É½»·½Ê½£º1£ºÖ±½Ó³É½»£»2£º¿ÉÒé¼Û³É½»£»3£º±ØĞëÒé¼Û³É½»"},
-						{"VH","ValidateHours","Integer","ĞÅÏ¢ÓĞĞ§ÆÚ£¨µ¥Î»£ºĞ¡Ê±£©£º-1£º³¤ÆÚÓĞĞ§£»ÆäËûÖµÕûÊıĞ¡Ê±"},
+						{"TU","TradeUnit","String","äº¤æ˜“å•ä½"},
+						{"TF","TradeFlag","Integer","æˆäº¤æ–¹å¼ï¼š1ï¼šç›´æ¥æˆäº¤ï¼›2ï¼šå¯è®®ä»·æˆäº¤ï¼›3ï¼šå¿…é¡»è®®ä»·æˆäº¤"},
+						{"VH","ValidateHours","Integer","ä¿¡æ¯æœ‰æ•ˆæœŸï¼ˆå•ä½ï¼šå°æ—¶ï¼‰ï¼š-1ï¼šé•¿æœŸæœ‰æ•ˆï¼›å…¶ä»–å€¼æ•´æ•°å°æ—¶"},
 						
-						{"MT","MarginType","Integer","ÂÄÔ¼±£Ö¤½ğÖ§¸¶·½Ê½  1Ö§¸¶  2²»Ö§¸¶ "},
-						{"TY","SettleType","Integer","½»ÊÕÀàĞÍ: 0: Ğ­Òé½»ÊÕ£» 1£º×ÔÖ÷½»ÊÕ"},
-						{"PT","PropertyType","String","ÊôĞÔÀàĞÍ £¨»ù±¾ÊôĞÔ ÖÊÁ¿Ö¸±ê£©"},
+						{"MT","MarginType","Integer","å±¥çº¦ä¿è¯é‡‘æ”¯ä»˜æ–¹å¼  1æ”¯ä»˜  2ä¸æ”¯ä»˜ "},
+						{"TY","SettleType","Integer","äº¤æ”¶ç±»å‹: 0: åè®®äº¤æ”¶ï¼› 1ï¼šè‡ªä¸»äº¤æ”¶"},
+						{"PT","PropertyType","String","å±æ€§ç±»å‹ ï¼ˆåŸºæœ¬å±æ€§ è´¨é‡æŒ‡æ ‡ï¼‰"},
 						
-						{"DET","DeliveryType","String","½»ÊÕµØÀàĞÍ£º1£ºÖ¸¶¨²Ö¿â£»2£ºÖ¸¶¨½»ÊÕµØ"},
-						{"DWI","DeliveryWarehouseId","String","½»ÊÕ²Ö¿âºÅ."},
-						{"DEA","DeliveryAddress","String","½»ÊÕµØ"},
+						{"DET","DeliveryType","String","äº¤æ”¶åœ°ç±»å‹ï¼š1ï¼šæŒ‡å®šä»“åº“ï¼›2ï¼šæŒ‡å®šäº¤æ”¶åœ°"},
+						{"DWI","DeliveryWarehouseId","String","äº¤æ”¶ä»“åº“å·."},
+						{"DEA","DeliveryAddress","String","äº¤æ”¶åœ°"},
 						
-						{"DPH","DeliveryTime","Integer","½»»õÆÚÏŞ£¨µ¥Î»£ºĞ¡Ê±£©ÏŞÖÆÌõ¼şÏÔÊ¾£¬½»ÊÕÈÕÀàĞÍ."},
-						{"DD","DeliveryDate","Date","½»»õÈÕÆÚÏŞÖÆÌõ¼şÏÔÊ¾£¬½»ÊÕÈÕÀàĞÍ."},
-						{"DMB","BuyerPerformMargin","Double","Âò·½ÂÄÔ¼±£Ö¤½ğ"},
+						{"DPH","DeliveryTime","Integer","äº¤è´§æœŸé™ï¼ˆå•ä½ï¼šå°æ—¶ï¼‰é™åˆ¶æ¡ä»¶æ˜¾ç¤ºï¼Œäº¤æ”¶æ—¥ç±»å‹."},
+						{"DD","DeliveryDate","Date","äº¤è´§æ—¥æœŸé™åˆ¶æ¡ä»¶æ˜¾ç¤ºï¼Œäº¤æ”¶æ—¥ç±»å‹."},
+						{"DMB","BuyerPerformMargin","Double","ä¹°æ–¹å±¥çº¦ä¿è¯é‡‘"},
 						
-						{"DMS","SellerPerformMargin","Double","Âô·½ÂÄÔ¼±£Ö¤½ğ"},
-						{"RMK","Remark","String","¸½¼ÓÌõ¿î"}
+						{"DMS","SellerPerformMargin","Double","å–æ–¹å±¥çº¦ä¿è¯é‡‘"},
+						{"RMK","Remark","String","é™„åŠ æ¡æ¬¾"}
 						
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
 		//String Double Integer Date Long
-		//responseÌí¼Óp2
+		//responseæ·»åŠ p2
 		lres.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.OrderSubmitResponseVO",//  <<--------  È«Ãû3  ---------
-				new String[][]{//Êä³öĞÅÏ¢4
-						{"RETCODE","RETCODE","String","·µ»ØÂë  =0³É¹¦, ÆäËûÎªÊ§°Ü£¬´íÎóÃèÊöÔÚMESSAGE ÖĞ"},
-						{"MESSAGE","MESSAGE","String","·µ»ØµÄÌáÊ¾ÏûÏ¢ÄÚÈİ"},
+				"gnnt.MEBS.MobileServer.vo.micro.trade.OrderSubmitResponseVO",//  <<--------  å…¨å3  ---------
+				new String[][]{//è¾“å‡ºä¿¡æ¯4
+						{"RETCODE","RETCODE","String","è¿”å›ç   =0æˆåŠŸ, å…¶ä»–ä¸ºå¤±è´¥ï¼Œé”™è¯¯æè¿°åœ¨MESSAGE ä¸­"},
+						{"MESSAGE","MESSAGE","String","è¿”å›çš„æç¤ºæ¶ˆæ¯å†…å®¹"},
 						},
-				new String[][]{//Êä³ö²éÑ¯5
+				new String[][]{//è¾“å‡ºæŸ¥è¯¢5
 						
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));*/
-		/**===============================14. ·¢²¼Î¯ÍĞ =========================================*/
+		/**===============================14. å‘å¸ƒå§”æ‰˜ =========================================*/
 		
-		/**===============================13. ¸öÈËÎ¯ÍĞÏêÇé²éÑ¯ =========================================*/
-		//requestÌí¼Óp1
+		/**===============================13. ä¸ªäººå§”æ‰˜è¯¦æƒ…æŸ¥è¯¢ =========================================*/
+		//requestæ·»åŠ p1
 		/*lreq.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.OrderInfoQueryRequestVO",//  <<--------  È«Ãû1  ---------
-				new String[][]{//ÊäÈëĞÅÏ¢2
-						{"U","UserID","String","ÓÃ»§id"},
-						{"SI","SessionID","Long","ÓÃ»§»á»°id"},
+				"gnnt.MEBS.MobileServer.vo.micro.trade.OrderInfoQueryRequestVO",//  <<--------  å…¨å1  ---------
+				new String[][]{//è¾“å…¥ä¿¡æ¯2
+						{"U","UserID","String","ç”¨æˆ·id"},
+						{"SI","SessionID","Long","ç”¨æˆ·ä¼šè¯id"},
 						
-						{"ORI","OrderID","String","Î¯ÍĞµ¥ºÅ"}
+						{"ORI","OrderID","String","å§”æ‰˜å•å·"}
 						
 						
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
 		//String Double Integer Date Long
-		//responseÌí¼Óp2
+		//responseæ·»åŠ p2
 		lres.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.OrderInfoQueryResponseVO",//  <<--------  È«Ãû3  ---------
-				new String[][]{//Êä³öĞÅÏ¢4
-						{"RETCODE","RETCODE","String","·µ»ØÂë  =0³É¹¦, ÆäËûÎªÊ§°Ü£¬´íÎóÃèÊöÔÚMESSAGE ÖĞ"},
-						{"MESSAGE","MESSAGE","String","·µ»ØµÄÌáÊ¾ÏûÏ¢ÄÚÈİ"},
+				"gnnt.MEBS.MobileServer.vo.micro.trade.OrderInfoQueryResponseVO",//  <<--------  å…¨å3  ---------
+				new String[][]{//è¾“å‡ºä¿¡æ¯4
+						{"RETCODE","RETCODE","String","è¿”å›ç   =0æˆåŠŸ, å…¶ä»–ä¸ºå¤±è´¥ï¼Œé”™è¯¯æè¿°åœ¨MESSAGE ä¸­"},
+						{"MESSAGE","MESSAGE","String","è¿”å›çš„æç¤ºæ¶ˆæ¯å†…å®¹"},
 						
-						{"ORI","OrderID","String","Î¯ÍĞµ¥ºÅ"},
-						{"ORT","OrderTitle","String","Î¯ÍĞ±êÌâ"},//=============
-						{"BN","BreedName","String","Æ·ÖÖÃû³Æ"},
+						{"ORI","OrderID","String","å§”æ‰˜å•å·"},
+						{"ORT","OrderTitle","String","å§”æ‰˜æ ‡é¢˜"},//=============
+						{"BN","BreedName","String","å“ç§åç§°"},
 						
-						{"BCN","BreedCmdName","String","Æ·ÃûÃû³Æ"},
-						{"BS","BsFlag","Integer","ÂòÂô·½Ïò:  1: Âò£»2£ºÂô"},
-						{"STA","Status","String","Î¯ÍĞ×´Ì¬£º0£ºÎ´³É½»1£º²¿·Ö³É½»2£ºÈ«²¿³É½»3£ºÒÑÏÂ¼Ü11£º´ı¹ÜÀíÔ±ÉóºË"},
+						{"BCN","BreedCmdName","String","å“ååç§°"},
+						{"BS","BsFlag","Integer","ä¹°å–æ–¹å‘:  1: ä¹°ï¼›2ï¼šå–"},
+						{"STA","Status","String","å§”æ‰˜çŠ¶æ€ï¼š0ï¼šæœªæˆäº¤1ï¼šéƒ¨åˆ†æˆäº¤2ï¼šå…¨éƒ¨æˆäº¤3ï¼šå·²ä¸‹æ¶11ï¼šå¾…ç®¡ç†å‘˜å®¡æ ¸"},
 						
-						{"PRI","Price","Double","µ¥Î»¼Û¸ñ"},
-						{"QTY","Qty","Integer","ÉÌÆ·ÊıÁ¿"},
-						{"TQ","TradeQty","Integer","ÒÑ³É½»ÊıÁ¿"},
+						{"PRI","Price","Double","å•ä½ä»·æ ¼"},
+						{"QTY","Qty","Integer","å•†å“æ•°é‡"},
+						{"TQ","TradeQty","Integer","å·²æˆäº¤æ•°é‡"},
 						
-						{"U","Unit","String","ÉÌÆ·µ¥Î»"},
-						{"OT","OrderTime","String","Î¯ÍĞÊ±¼ä"},//=============
-						{"ET","EffectiveTime","Date","ÉúĞ§Ê±¼ä£¬Îª¿ÕÏÔÊ¾¡°--¡±"},
+						{"U","Unit","String","å•†å“å•ä½"},
+						{"OT","OrderTime","String","å§”æ‰˜æ—¶é—´"},//=============
+						{"ET","EffectiveTime","Date","ç”Ÿæ•ˆæ—¶é—´ï¼Œä¸ºç©ºæ˜¾ç¤ºâ€œ--â€"},
 						
-						{"RMK","Remark","String","¸½¼ÓÌõ¿î"},
-						{"VH","ValidateHours","Integer","ĞÅÏ¢ÓĞĞ§ÆÚ£¨µ¥Î»£ºĞ¡Ê±£©£º-1£º³¤ÆÚÓĞĞ§£»ÆäËûÖµÕûÊıĞ¡Ê±"},
-						{"TF","TradeFlag","Integer","³É½»·½Ê½£º1£ºÖ±½Ó³É½»£»2£º¿ÉÒé¼Û³É½»£»3£º±ØĞëÒé¼Û³É½»"},
+						{"RMK","Remark","String","é™„åŠ æ¡æ¬¾"},
+						{"VH","ValidateHours","Integer","ä¿¡æ¯æœ‰æ•ˆæœŸï¼ˆå•ä½ï¼šå°æ—¶ï¼‰ï¼š-1ï¼šé•¿æœŸæœ‰æ•ˆï¼›å…¶ä»–å€¼æ•´æ•°å°æ—¶"},
+						{"TF","TradeFlag","Integer","æˆäº¤æ–¹å¼ï¼š1ï¼šç›´æ¥æˆäº¤ï¼›2ï¼šå¯è®®ä»·æˆäº¤ï¼›3ï¼šå¿…é¡»è®®ä»·æˆäº¤"},
 						
-						{"TPH","MarginDeadLine","String","±£Ö¤½ğÖ§¸¶ÆÚÏŞ(Ğ¡Ê±)£¬"},
-						{"TMB","TradeMarginBuyer","String","Âò·½³ÏĞÅ±£ÕÏ½ğ"},
-						{"TMS","TradeMarginSeller","String","Âô·½³ÏĞÅ±£ÕÏ½ğ"},
+						{"TPH","MarginDeadLine","String","ä¿è¯é‡‘æ”¯ä»˜æœŸé™(å°æ—¶)ï¼Œ"},
+						{"TMB","TradeMarginBuyer","String","ä¹°æ–¹è¯šä¿¡ä¿éšœé‡‘"},
+						{"TMS","TradeMarginSeller","String","å–æ–¹è¯šä¿¡ä¿éšœé‡‘"},
 						
-						{"IPM","IsPayMargin","String","ÊÇ·ñÒÑÖ§¸¶ÂÄÔ¼±£Ö¤½ğ£º  Y:ÊÇ£»N:·ñ"},
-						{"PF","PayFlag","Integer",">ÊÇ·ñÂô²Öµ¥£º0£º·ñ£»1£ºÊÇ"},
+						{"IPM","IsPayMargin","String","æ˜¯å¦å·²æ”¯ä»˜å±¥çº¦ä¿è¯é‡‘ï¼š  Y:æ˜¯ï¼›N:å¦"},
+						{"PF","PayFlag","Integer",">æ˜¯å¦å–ä»“å•ï¼š0ï¼šå¦ï¼›1ï¼šæ˜¯"},
 						
-						{"STI","SellBillId","Integer","Âô²Öµ¥ºÅ"},
-						{"OWI","OrderWithdrawId","Integer","³·µ¥ÈË"},
-						{"OWT","OrderWithdrawType","Integer","³·µ¥Ê±¼ä"},
+						{"STI","SellBillId","Integer","å–ä»“å•å·"},
+						{"OWI","OrderWithdrawId","Integer","æ’¤å•äºº"},
+						{"OWT","OrderWithdrawType","Integer","æ’¤å•æ—¶é—´"},
 						
-						{"MTQ","MinTradeQty","Integer","×îĞ¡½»Ò×ÊıÁ¿"},
-						{"TU","TradeUnit","String","½»Ò×µ¥Î»"},
-						{"DET","DeliveryType","String","½»ÊÕµØÀàĞÍ£º1£ºÖ¸¶¨²Ö¿â£»2£ºÖ¸¶¨½»ÊÕµØ"},
+						{"MTQ","MinTradeQty","Integer","æœ€å°äº¤æ˜“æ•°é‡"},
+						{"TU","TradeUnit","String","äº¤æ˜“å•ä½"},
+						{"DET","DeliveryType","String","äº¤æ”¶åœ°ç±»å‹ï¼š1ï¼šæŒ‡å®šä»“åº“ï¼›2ï¼šæŒ‡å®šäº¤æ”¶åœ°"},
 						
-						{"DWI","DeliveryWarehouseId","String","½»ÊÕ²Ö¿âºÅ£¬Îª¿ÕÏÔÊ¾¡°--¡±"},
-						{"DEA","DeliveryAddress","String","½»ÊÕµØ£¬Îª¿ÕÏÔÊ¾¡°--¡±"},
-						{"DMB","BuyerPerformMargin","Double","Âò·½ÂÄÔ¼±£Ö¤½ğ"},
+						{"DWI","DeliveryWarehouseId","String","äº¤æ”¶ä»“åº“å·ï¼Œä¸ºç©ºæ˜¾ç¤ºâ€œ--â€"},
+						{"DEA","DeliveryAddress","String","äº¤æ”¶åœ°ï¼Œä¸ºç©ºæ˜¾ç¤ºâ€œ--â€"},
+						{"DMB","BuyerPerformMargin","Double","ä¹°æ–¹å±¥çº¦ä¿è¯é‡‘"},
 						
-						{"DMS","SellerPerformMargin","Double","Âô·½ÂÄÔ¼±£Ö¤½ğ"},
-						{"TY","SettleType","Integer","½»ÊÕÀàĞÍ: 0: Ğ­Òé½»ÊÕ£» 1£º×ÔÖ÷½»ÊÕ"},
-						{"PT","PayType","Integer","¸¶¿îÀàĞÍ£º0£ºÏÈ¿îºó»õ£»1£ºÏÈ»õºó¿î£»2£ºÎŞÏŞÖÆÏŞÖÆÌõ¼şÏÔÊ¾£¬½»ÊÕÀàĞÍ£º£¨1£©×ÔÖ÷½»ÊÕ"},
+						{"DMS","SellerPerformMargin","Double","å–æ–¹å±¥çº¦ä¿è¯é‡‘"},
+						{"TY","SettleType","Integer","äº¤æ”¶ç±»å‹: 0: åè®®äº¤æ”¶ï¼› 1ï¼šè‡ªä¸»äº¤æ”¶"},
+						{"PT","PayType","Integer","ä»˜æ¬¾ç±»å‹ï¼š0ï¼šå…ˆæ¬¾åè´§ï¼›1ï¼šå…ˆè´§åæ¬¾ï¼›2ï¼šæ— é™åˆ¶é™åˆ¶æ¡ä»¶æ˜¾ç¤ºï¼Œäº¤æ”¶ç±»å‹ï¼šï¼ˆ1ï¼‰è‡ªä¸»äº¤æ”¶"},
 						
-						{"DDT","DeliveryDateType","String","½»ÊÕÈÕÀàĞÍ£º0£ºÖ¸¶¨ÆÚÏŞ£»1£ºÖ¸¶¨ÈÕÆÚ"},
-						{"DPH","DeliveryTime","Date","½»»õÆÚÏŞ£¨µ¥Î»£ºĞ¡Ê±£©"},
-						{"DD","DeliveryDate","Date","½»»õÈÕÆÚÏŞÖÆÌõ¼şÏÔÊ¾£¬½»ÊÕÈÕÀàĞÍ£º£¨1£©Ö¸¶¨ÈÕÆÚ"}
+						{"DDT","DeliveryDateType","String","äº¤æ”¶æ—¥ç±»å‹ï¼š0ï¼šæŒ‡å®šæœŸé™ï¼›1ï¼šæŒ‡å®šæ—¥æœŸ"},
+						{"DPH","DeliveryTime","Date","äº¤è´§æœŸé™ï¼ˆå•ä½ï¼šå°æ—¶ï¼‰"},
+						{"DD","DeliveryDate","Date","äº¤è´§æ—¥æœŸé™åˆ¶æ¡ä»¶æ˜¾ç¤ºï¼Œäº¤æ”¶æ—¥ç±»å‹ï¼šï¼ˆ1ï¼‰æŒ‡å®šæ—¥æœŸ"}
 						
 						
 						},
-				new String[][]{//Êä³ö²éÑ¯5
-						{"PT","PropertyType","String","ÊôĞÔÀàĞÍ £¨»ù±¾ÊôĞÔ ÖÊÁ¿Ö¸±ê£©"},
-						{"PN","PropertyName","String","Æ·ÖÖÊôĞÔÃû³Æ"},
-						{"PV","PropertyValue","String","Æ·ÃûÊôĞÔÖµ"}
+				new String[][]{//è¾“å‡ºæŸ¥è¯¢5
+						{"PT","PropertyType","String","å±æ€§ç±»å‹ ï¼ˆåŸºæœ¬å±æ€§ è´¨é‡æŒ‡æ ‡ï¼‰"},
+						{"PN","PropertyName","String","å“ç§å±æ€§åç§°"},
+						{"PV","PropertyValue","String","å“åå±æ€§å€¼"}
 						
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));*/
-		/**===============================13. ¸öÈËÎ¯ÍĞÏêÇé²éÑ¯ =========================================*/
+		/**===============================13. ä¸ªäººå§”æ‰˜è¯¦æƒ…æŸ¥è¯¢ =========================================*/
 
-		/**===============================12. ¸öÈËÎ¯ÍĞ²éÑ¯ =========================================*/
-		//requestÌí¼Óp1
+		/**===============================12. ä¸ªäººå§”æ‰˜æŸ¥è¯¢ =========================================*/
+		//requestæ·»åŠ p1
 		/*lreq.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.OrderQueryRequestVO",//  <<--------  È«Ãû1  ---------
-				new String[][]{//ÊäÈëĞÅÏ¢2
-						{"U","UserID","String","ÓÃ»§id"},
-						{"SI","SessionID","Long","ÓÃ»§»á»°id"},
+				"gnnt.MEBS.MobileServer.vo.micro.trade.OrderQueryRequestVO",//  <<--------  å…¨å1  ---------
+				new String[][]{//è¾“å…¥ä¿¡æ¯2
+						{"U","UserID","String","ç”¨æˆ·id"},
+						{"SI","SessionID","Long","ç”¨æˆ·ä¼šè¯id"},
 						
-						{"B","BreedId","String","Æ·ÖÖ´úÂë"},
-						{"C","CommodityId","String","Æ·Ãû´úÂë"},
-						{"X","MaxPrice","Double","×î¸ß¼Û"},
+						{"B","BreedId","String","å“ç§ä»£ç "},
+						{"C","CommodityId","String","å“åä»£ç "},
+						{"X","MaxPrice","Double","æœ€é«˜ä»·"},
 						
-						{"I","MinPrice","Double","×îµÍ¼Û"},
-						{"M","TradeMode","Integer","½»Ò×Ä£Ê½"},
-						{"R","SortType","String","ÅÅĞò·½Ê½"},
+						{"I","MinPrice","Double","æœ€ä½ä»·"},
+						{"M","TradeMode","Integer","äº¤æ˜“æ¨¡å¼"},
+						{"R","SortType","String","æ’åºæ–¹å¼"},
 						
-						{"T","CommodityTitle","Integer","ÉÌÆ·±êÌâ"},
-						{"N","NewOrderId","String","×îĞÂÎ¯ÍĞµ¥ºÅ"},
-						{"S","Size","Integer","²éÑ¯ÌõÊı       ´óÓÚÁã ²éÑ¯´óÓÚ×îĞÂÎ¯ÍĞºÅµÄNÌõÊı¾İ  	Ğ¡ÓÚÁã ²éÑ¯Ğ¡ÓÚ×îĞÂÎ¯ÍĞºÅµÄNÌõÊı¾İ"},
+						{"T","CommodityTitle","Integer","å•†å“æ ‡é¢˜"},
+						{"N","NewOrderId","String","æœ€æ–°å§”æ‰˜å•å·"},
+						{"S","Size","Integer","æŸ¥è¯¢æ¡æ•°       å¤§äºé›¶ æŸ¥è¯¢å¤§äºæœ€æ–°å§”æ‰˜å·çš„Næ¡æ•°æ®  	å°äºé›¶ æŸ¥è¯¢å°äºæœ€æ–°å§”æ‰˜å·çš„Næ¡æ•°æ®"},
 						
-						{"BS","BsFlag","Integer","²éÑ¯ÂòÂôÎ¯ÍĞ±êÖ¾£º     1£ºÂòÎ¯ÍĞ    2£ºÂôÎ¯ÍĞ	 3£ºËùÓĞÎ¯ÍĞ"},
-						{"STA","Status","String","Î¯ÍĞ×´Ì¬£º0£ºÎ´³É½» 1£º²¿·Ö³É½»2£ºÈ«²¿³É½»3£ºÒÑÏÂ¼Ü11£º´ı¹ÜÀíÔ±ÉóºË"},
+						{"BS","BsFlag","Integer","æŸ¥è¯¢ä¹°å–å§”æ‰˜æ ‡å¿—ï¼š     1ï¼šä¹°å§”æ‰˜    2ï¼šå–å§”æ‰˜	 3ï¼šæ‰€æœ‰å§”æ‰˜"},
+						{"STA","Status","String","å§”æ‰˜çŠ¶æ€ï¼š0ï¼šæœªæˆäº¤ 1ï¼šéƒ¨åˆ†æˆäº¤2ï¼šå…¨éƒ¨æˆäº¤3ï¼šå·²ä¸‹æ¶11ï¼šå¾…ç®¡ç†å‘˜å®¡æ ¸"},
 						
-						{"BP","BreedProperty","String","Æ·ÖÖÊôĞÔ´úÂë"},
-						{"CP","CommodityPropValue","String","ÉÌÆ·ÊôĞÔÖµ"},
+						{"BP","BreedProperty","String","å“ç§å±æ€§ä»£ç "},
+						{"CP","CommodityPropValue","String","å•†å“å±æ€§å€¼"},
 						
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
 		//String Double Integer Date Long
-		//responseÌí¼Óp2
+		//responseæ·»åŠ p2
 		lres.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.OrderQueryResponseVO",//  <<--------  È«Ãû3  ---------
-				new String[][]{//Êä³öĞÅÏ¢4
-						{"RETCODE","RETCODE","String","·µ»ØÂë  =0³É¹¦, ÆäËûÎªÊ§°Ü£¬´íÎóÃèÊöÔÚMESSAGE ÖĞ"},
-						{"MESSAGE","MESSAGE","String","·µ»ØµÄÌáÊ¾ÏûÏ¢ÄÚÈİ"},
+				"gnnt.MEBS.MobileServer.vo.micro.trade.OrderQueryResponseVO",//  <<--------  å…¨å3  ---------
+				new String[][]{//è¾“å‡ºä¿¡æ¯4
+						{"RETCODE","RETCODE","String","è¿”å›ç   =0æˆåŠŸ, å…¶ä»–ä¸ºå¤±è´¥ï¼Œé”™è¯¯æè¿°åœ¨MESSAGE ä¸­"},
+						{"MESSAGE","MESSAGE","String","è¿”å›çš„æç¤ºæ¶ˆæ¯å†…å®¹"},
 						
-						{"TTLREC","TotalRecord","Integer","×Ü¼ÇÂ¼Êı"}
+						{"TTLREC","TotalRecord","Integer","æ€»è®°å½•æ•°"}
 						},
-				new String[][]{//Êä³ö²éÑ¯5
-						{"PID","PictureId","String","Í¼Æ¬Î¨Ò»±êÊ¶"},
-						{"ORI","OrderID","String","Î¯ÍĞµ¥ºÅ"},
-						{"ORT","OrderTitle","String","Î¯ÍĞ±êÌâ"},
+				new String[][]{//è¾“å‡ºæŸ¥è¯¢5
+						{"PID","PictureId","String","å›¾ç‰‡å”¯ä¸€æ ‡è¯†"},
+						{"ORI","OrderID","String","å§”æ‰˜å•å·"},
+						{"ORT","OrderTitle","String","å§”æ‰˜æ ‡é¢˜"},
 						
-						{"BN","BreedName","String","Æ·Ãû"},
-						{"TM","TradeMode","Integer"," 1: ³ÏĞÅ±£ÕÏ½ğÄ£Ê½£» 2£º±£Ö¤½ğÄ£Ê½"},
-						{"BS","BsFlag","Integer","ÂòÂô·½Ïò:  1: Âò£»2£ºÂô"},
+						{"BN","BreedName","String","å“å"},
+						{"TM","TradeMode","Integer"," 1: è¯šä¿¡ä¿éšœé‡‘æ¨¡å¼ï¼› 2ï¼šä¿è¯é‡‘æ¨¡å¼"},
+						{"BS","BsFlag","Integer","ä¹°å–æ–¹å‘:  1: ä¹°ï¼›2ï¼šå–"},
 						
-						{"STA","Status","Integer","Î¯ÍĞ×´Ì¬£º0£ºÎ´³É½»    1£º²¿·Ö³É½»  2£ºÈ«²¿³É½»   3£ºÒÑÏÂ¼Ü  11£º´ı¹ÜÀíÔ±ÉóºË"},
-						{"PRI","Price","Double","µ¥Î»¼Û¸ñ"},
-						{"QTY","Qty","Integer","ÒÑ³É½»ÊıÁ¿"},
+						{"STA","Status","Integer","å§”æ‰˜çŠ¶æ€ï¼š0ï¼šæœªæˆäº¤    1ï¼šéƒ¨åˆ†æˆäº¤  2ï¼šå…¨éƒ¨æˆäº¤   3ï¼šå·²ä¸‹æ¶  11ï¼šå¾…ç®¡ç†å‘˜å®¡æ ¸"},
+						{"PRI","Price","Double","å•ä½ä»·æ ¼"},
+						{"QTY","Qty","Integer","å·²æˆäº¤æ•°é‡"},
 						
-						{"TQ","TradeQty","Integer","ÒÑ³É½»ÊıÁ¿"},
-						{"U","Unit","String","ÉÌÆ·µ¥Î»"},
-						{"OT","OrderTime","Date","Î¯ÍĞÊ±¼ä"},
+						{"TQ","TradeQty","Integer","å·²æˆäº¤æ•°é‡"},
+						{"U","Unit","String","å•†å“å•ä½"},
+						{"OT","OrderTime","Date","å§”æ‰˜æ—¶é—´"},
 						
 						
-						{"TY","SettleType","Integer","½»ÊÕÀàĞÍ: 0: Ğ­Òé½»ÊÕ£» 1£º×ÔÖ÷½»ÊÕ"}
+						{"TY","SettleType","Integer","äº¤æ”¶ç±»å‹: 0: åè®®äº¤æ”¶ï¼› 1ï¼šè‡ªä¸»äº¤æ”¶"}
 						
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));*/
-		/**===============================12. ¸öÈËÎ¯ÍĞ²éÑ¯ =========================================*/
+		/**===============================12. ä¸ªäººå§”æ‰˜æŸ¥è¯¢ =========================================*/
 		
-		/**===============================11. ÉÌÆ·Î¯ÍĞÏêÇé²éÑ¯ =========================================*/
-		//requestÌí¼Óp1
+		/**===============================11. å•†å“å§”æ‰˜è¯¦æƒ…æŸ¥è¯¢ =========================================*/
+		//requestæ·»åŠ p1
 		/*lreq.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.CmdOrderInfoQueryRequestVO",//  <<--------  È«Ãû1  ---------
-				new String[][]{//ÊäÈëĞÅÏ¢2
-						{"U","UserID","String","ÓÃ»§id"},
-						{"SI","SessionID","Long","ÓÃ»§»á»°id"},
+				"gnnt.MEBS.MobileServer.vo.micro.trade.CmdOrderInfoQueryRequestVO",//  <<--------  å…¨å1  ---------
+				new String[][]{//è¾“å…¥ä¿¡æ¯2
+						{"U","UserID","String","ç”¨æˆ·id"},
+						{"SI","SessionID","Long","ç”¨æˆ·ä¼šè¯id"},
 						
-						{"ORI","OrderID","String","Î¯ÍĞµ¥ºÅ"}
+						{"ORI","OrderID","String","å§”æ‰˜å•å·"}
 						
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));*/
 		//String Double Integer Date Long
-		//responseÌí¼Óp2
+		//responseæ·»åŠ p2
 		/*lres.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.CmdOrderInfoQueryResponseVO",//  <<--------  È«Ãû3  ---------
-				new String[][]{//Êä³öĞÅÏ¢4
-						{"RETCODE","RETCODE","String","·µ»ØÂë  =0³É¹¦, ÆäËûÎªÊ§°Ü£¬´íÎóÃèÊöÔÚMESSAGE ÖĞ"},
-						{"MESSAGE","MESSAGE","String","·µ»ØµÄÌáÊ¾ÏûÏ¢ÄÚÈİ"},
+				"gnnt.MEBS.MobileServer.vo.micro.trade.CmdOrderInfoQueryResponseVO",//  <<--------  å…¨å3  ---------
+				new String[][]{//è¾“å‡ºä¿¡æ¯4
+						{"RETCODE","RETCODE","String","è¿”å›ç   =0æˆåŠŸ, å…¶ä»–ä¸ºå¤±è´¥ï¼Œé”™è¯¯æè¿°åœ¨MESSAGE ä¸­"},
+						{"MESSAGE","MESSAGE","String","è¿”å›çš„æç¤ºæ¶ˆæ¯å†…å®¹"},
 						
-						{"ORI","OrderID","String","Î¯ÍĞµ¥ºÅ"},
-						{"ORT","OrderTitle","String","Î¯ÍĞÉÌÆ·±êÌâ"},
-						{"BN","BreedName","String","Æ·ÖÖÃû³Æ"},
+						{"ORI","OrderID","String","å§”æ‰˜å•å·"},
+						{"ORT","OrderTitle","String","å§”æ‰˜å•†å“æ ‡é¢˜"},
+						{"BN","BreedName","String","å“ç§åç§°"},
 						
-						{"BCN","BreedCmdName","String","Æ·ÃûÃû³Æ"},
-						{"BS","BsFlag","Integer","ÂòÂô·½Ïò:  1: Âò£»2£ºÂô"},
-						{"PRI","Price","Double","µ¥Î»¼Û¸ñ"},
+						{"BCN","BreedCmdName","String","å“ååç§°"},
+						{"BS","BsFlag","Integer","ä¹°å–æ–¹å‘:  1: ä¹°ï¼›2ï¼šå–"},
+						{"PRI","Price","Double","å•ä½ä»·æ ¼"},
 						
-						{"QTY","Qty","Integer","ÉÌÆ·ÊıÁ¿"},
-						{"TQ","TradeQty","Integer","ÒÑ³É½»ÊıÁ¿"},
-						{"U","Unit","String","ÉÌÆ·µ¥Î»"},
+						{"QTY","Qty","Integer","å•†å“æ•°é‡"},
+						{"TQ","TradeQty","Integer","å·²æˆäº¤æ•°é‡"},
+						{"U","Unit","String","å•†å“å•ä½"},
 						
 						
 						
-						{"OT","OrderTime","Date","Î¯ÍĞÊ±¼ä"},
+						{"OT","OrderTime","Date","å§”æ‰˜æ—¶é—´"},
 						
-						{"ET","EffectiveTime","Date","ÉúĞ§Ê±¼ä£¬Îª¿ÕÏÔÊ¾¡°--¡±"},
-						{"RMK","Remark","String","¸½¼ÓÌõ¿î"},
-						{"VH","ValidateHours","Integer","ĞÅÏ¢ÓĞĞ§ÆÚ£¨µ¥Î»£ºĞ¡Ê±£©£º-1£º³¤ÆÚÓĞĞ§£»ÆäËûÖµÕûÊıĞ¡Ê±"},
+						{"ET","EffectiveTime","Date","ç”Ÿæ•ˆæ—¶é—´ï¼Œä¸ºç©ºæ˜¾ç¤ºâ€œ--â€"},
+						{"RMK","Remark","String","é™„åŠ æ¡æ¬¾"},
+						{"VH","ValidateHours","Integer","ä¿¡æ¯æœ‰æ•ˆæœŸï¼ˆå•ä½ï¼šå°æ—¶ï¼‰ï¼š-1ï¼šé•¿æœŸæœ‰æ•ˆï¼›å…¶ä»–å€¼æ•´æ•°å°æ—¶"},
 						
-						{"TF","TradeFlag","Integer","³É½»·½Ê½£º1£ºÖ±½Ó³É½»£»2£º¿ÉÒé¼Û³É½»£»3£º±ØĞëÒé¼Û³É½»"},
-						{"TPH","MarginDeadLine","String","±£Ö¤½ğÖ§¸¶ÆÚÏŞ(Ğ¡Ê±)£¬"},
-						{"TMB","TradeMarginBuyer","String","Âò·½³ÏĞÅ±£ÕÏ½ğÏŞ"},
+						{"TF","TradeFlag","Integer","æˆäº¤æ–¹å¼ï¼š1ï¼šç›´æ¥æˆäº¤ï¼›2ï¼šå¯è®®ä»·æˆäº¤ï¼›3ï¼šå¿…é¡»è®®ä»·æˆäº¤"},
+						{"TPH","MarginDeadLine","String","ä¿è¯é‡‘æ”¯ä»˜æœŸé™(å°æ—¶)ï¼Œ"},
+						{"TMB","TradeMarginBuyer","String","ä¹°æ–¹è¯šä¿¡ä¿éšœé‡‘é™"},
 						
-						{"TMS","TradeMarginSeller","String","Âô·½³ÏĞÅ±£ÕÏ½ğ"},
-						{"IPM","IsPayMargin","String","ÊÇ·ñÒÑÖ§¸¶ÂÄÔ¼±£Ö¤½ğ£º  Y:ÊÇ£»N:·ñ"},
-						{"PF","PayFlag","Integer",">ÊÇ·ñÂô²Öµ¥£º0£º·ñ£»1£ºÊÇ"},
+						{"TMS","TradeMarginSeller","String","å–æ–¹è¯šä¿¡ä¿éšœé‡‘"},
+						{"IPM","IsPayMargin","String","æ˜¯å¦å·²æ”¯ä»˜å±¥çº¦ä¿è¯é‡‘ï¼š  Y:æ˜¯ï¼›N:å¦"},
+						{"PF","PayFlag","Integer",">æ˜¯å¦å–ä»“å•ï¼š0ï¼šå¦ï¼›1ï¼šæ˜¯"},
 						
-						{"STI","SellBillId","Integer","ÏŞÖÆÌõ¼şÏÔÊ¾£¬ÊÇ·ñÂô²Öµ¥£º£¨1£©ÊÇ"},
-						{"OWI","OrderWithdrawId","Integer","³·µ¥ÈË"},
-						{"OWT","OrderWithdrawType","Integer","³·µ¥Ê±¼ä"},
+						{"STI","SellBillId","Integer","é™åˆ¶æ¡ä»¶æ˜¾ç¤ºï¼Œæ˜¯å¦å–ä»“å•ï¼šï¼ˆ1ï¼‰æ˜¯"},
+						{"OWI","OrderWithdrawId","Integer","æ’¤å•äºº"},
+						{"OWT","OrderWithdrawType","Integer","æ’¤å•æ—¶é—´"},
 						
-						{"MTQ","MinTradeQty","Integer","×îĞ¡½»Ò×ÊıÁ¿"},
-						{"TU","TradeUnit","String","½»Ò×µ¥Î»"},
-						{"DET","DeliveryType","String","½»ÊÕµØÀàĞÍ£º1£ºÖ¸¶¨²Ö¿â£»2£ºÖ¸¶¨½»ÊÕµØ"},
+						{"MTQ","MinTradeQty","Integer","æœ€å°äº¤æ˜“æ•°é‡"},
+						{"TU","TradeUnit","String","äº¤æ˜“å•ä½"},
+						{"DET","DeliveryType","String","äº¤æ”¶åœ°ç±»å‹ï¼š1ï¼šæŒ‡å®šä»“åº“ï¼›2ï¼šæŒ‡å®šäº¤æ”¶åœ°"},
 						
-						{"DWI","DeliveryWarehouseId","String","½»ÊÕ²Ö¿âºÅ£¬Îª¿ÕÏÔÊ¾¡°--¡± ¿â"},
-						{"DEA","DeliveryAddress","String","½»ÊÕµØ£¬Îª¿ÕÏÔÊ¾¡°--¡± "},
-						{"DMB","BuyerPerformMargin","Double","Âò·½ÂÄÔ¼±£Ö¤½ğ"},
+						{"DWI","DeliveryWarehouseId","String","äº¤æ”¶ä»“åº“å·ï¼Œä¸ºç©ºæ˜¾ç¤ºâ€œ--â€ åº“"},
+						{"DEA","DeliveryAddress","String","äº¤æ”¶åœ°ï¼Œä¸ºç©ºæ˜¾ç¤ºâ€œ--â€ "},
+						{"DMB","BuyerPerformMargin","Double","ä¹°æ–¹å±¥çº¦ä¿è¯é‡‘"},
 						
-						{"DMS","SellerPerformMargin","Double","Âô·½ÂÄÔ¼±£Ö¤½ğ"},
-						{"TY","SettleType","Integer","½»ÊÕÀàĞÍ: 0: Ğ­Òé½»ÊÕ£» 1£º×ÔÖ÷½»ÊÕ"},
-						{"PT","PayType","Integer","¸¶¿îÀàĞÍ£º0£ºÏÈ¿îºó»õ£»1£ºÏÈ»õºó¿î£»2£ºÎŞ"},
+						{"DMS","SellerPerformMargin","Double","å–æ–¹å±¥çº¦ä¿è¯é‡‘"},
+						{"TY","SettleType","Integer","äº¤æ”¶ç±»å‹: 0: åè®®äº¤æ”¶ï¼› 1ï¼šè‡ªä¸»äº¤æ”¶"},
+						{"PT","PayType","Integer","ä»˜æ¬¾ç±»å‹ï¼š0ï¼šå…ˆæ¬¾åè´§ï¼›1ï¼šå…ˆè´§åæ¬¾ï¼›2ï¼šæ— "},
 						
-						{"DDT","DeliveryDateType","String","½»ÊÕÈÕÀàĞÍ£º0£ºÖ¸¶¨ÆÚÏŞ£»1£ºÖ¸¶¨ÈÕÆÚ"},
-						{"DPH","DeliveryTime","Date","½»»õÆÚÏŞ£¨µ¥Î»£ºĞ¡Ê±£©"},
-						{"DD","DeliveryDate","Date","½»»õÈÕÆÚ"},
+						{"DDT","DeliveryDateType","String","äº¤æ”¶æ—¥ç±»å‹ï¼š0ï¼šæŒ‡å®šæœŸé™ï¼›1ï¼šæŒ‡å®šæ—¥æœŸ"},
+						{"DPH","DeliveryTime","Date","äº¤è´§æœŸé™ï¼ˆå•ä½ï¼šå°æ—¶ï¼‰"},
+						{"DD","DeliveryDate","Date","äº¤è´§æ—¥æœŸ"},
 						
 						},
-				new String[][]{//Êä³ö²éÑ¯5
-						{"PT","PropertyType","String","ÊôĞÔÀàĞÍ £¨»ù±¾ÊôĞÔ ÖÊÁ¿Ö¸±ê£©"},
-						{"PN","PropertyName","String","Æ·ÖÖÊôĞÔÃû³Æ"},
-						{"PV","PropertyValue","String","Æ·ÃûÊôĞÔÖµ"}
+				new String[][]{//è¾“å‡ºæŸ¥è¯¢5
+						{"PT","PropertyType","String","å±æ€§ç±»å‹ ï¼ˆåŸºæœ¬å±æ€§ è´¨é‡æŒ‡æ ‡ï¼‰"},
+						{"PN","PropertyName","String","å“ç§å±æ€§åç§°"},
+						{"PV","PropertyValue","String","å“åå±æ€§å€¼"}
 						
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));*/
-		/**===============================11. ÉÌÆ·Î¯ÍĞÏêÇé²éÑ¯ =========================================*/
+		/**===============================11. å•†å“å§”æ‰˜è¯¦æƒ…æŸ¥è¯¢ =========================================*/
 
-		/**===============================10. ÉÌÆ·Î¯ÍĞ²éÑ¯ =========================================*/
-		/*//requestÌí¼Óp1
+		/**===============================10. å•†å“å§”æ‰˜æŸ¥è¯¢ =========================================*/
+		/*//requestæ·»åŠ p1
 		lreq.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.CmdOrderQueryRequestVO",//  <<--------  È«Ãû1  ---------
-				new String[][]{//ÊäÈëĞÅÏ¢2
-						{"U","UserID","String","ÓÃ»§id"},
-						{"SI","SessionID","Long","ÓÃ»§»á»°id"},
+				"gnnt.MEBS.MobileServer.vo.micro.trade.CmdOrderQueryRequestVO",//  <<--------  å…¨å1  ---------
+				new String[][]{//è¾“å…¥ä¿¡æ¯2
+						{"U","UserID","String","ç”¨æˆ·id"},
+						{"SI","SessionID","Long","ç”¨æˆ·ä¼šè¯id"},
 						
-						{"B","BreedId","String","Æ·ÖÖ´úÂë"},
-						{"C","CommodityId","String","Æ·Ãû´úÂë"},
-						{"X","MaxPrice","Double","×î¸ß¼Û"},
+						{"B","BreedId","String","å“ç§ä»£ç "},
+						{"C","CommodityId","String","å“åä»£ç "},
+						{"X","MaxPrice","Double","æœ€é«˜ä»·"},
 						
-						{"I","MinPrice","Double","×îµÍ¼Û"},
-						{"M","TradeMode","Integer","½»Ò×Ä£Ê½  1±£Ö¤½ğ   2³ÏĞÅ±£ÕÏ½ğ   3»òÎª¿Õ ËùÓĞ"},
-						{"R","SortType","String","ÅÅĞò·½Ê½"},
+						{"I","MinPrice","Double","æœ€ä½ä»·"},
+						{"M","TradeMode","Integer","äº¤æ˜“æ¨¡å¼  1ä¿è¯é‡‘   2è¯šä¿¡ä¿éšœé‡‘   3æˆ–ä¸ºç©º æ‰€æœ‰"},
+						{"R","SortType","String","æ’åºæ–¹å¼"},
 						
-						{"T","CommodityTitle","Integer","ÉÌÆ·±êÌâ"},
-						{"N","NewOrderId","String","×îĞÂÎ¯ÍĞµ¥ºÅ"},
-						{"S","Size","Integer","²éÑ¯ÌõÊı       ´óÓÚÁã ²éÑ¯´óÓÚ×îĞÂÎ¯ÍĞºÅµÄNÌõÊı¾İ  	Ğ¡ÓÚÁã ²éÑ¯Ğ¡ÓÚ×îĞÂÎ¯ÍĞºÅµÄNÌõÊı¾İ"},
+						{"T","CommodityTitle","Integer","å•†å“æ ‡é¢˜"},
+						{"N","NewOrderId","String","æœ€æ–°å§”æ‰˜å•å·"},
+						{"S","Size","Integer","æŸ¥è¯¢æ¡æ•°       å¤§äºé›¶ æŸ¥è¯¢å¤§äºæœ€æ–°å§”æ‰˜å·çš„Næ¡æ•°æ®  	å°äºé›¶ æŸ¥è¯¢å°äºæœ€æ–°å§”æ‰˜å·çš„Næ¡æ•°æ®"},
 						
-						{"BS","BsFlag","Integer","²éÑ¯ÂòÂôÎ¯ÍĞ±êÖ¾£º     1£ºÂòÎ¯ÍĞ    2£ºÂôÎ¯ÍĞ	 3£ºËùÓĞÎ¯ÍĞ"},
+						{"BS","BsFlag","Integer","æŸ¥è¯¢ä¹°å–å§”æ‰˜æ ‡å¿—ï¼š     1ï¼šä¹°å§”æ‰˜    2ï¼šå–å§”æ‰˜	 3ï¼šæ‰€æœ‰å§”æ‰˜"},
 						
-						{"BP","BreedPropertyId","String","Æ·ÖÖÊôĞÔ´úÂë"},
-						{"CP","CommodityPropertyValue","String","ÉÌÆ·ÊôĞÔÖµ"}
+						{"BP","BreedPropertyId","String","å“ç§å±æ€§ä»£ç "},
+						{"CP","CommodityPropertyValue","String","å•†å“å±æ€§å€¼"}
 						
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));
 		//String Double Integer Date Long
-		//responseÌí¼Óp2
+		//responseæ·»åŠ p2
 		lres.add(Arrays.asList(new Object[]{
-				"gnnt.MEBS.MobileServer.vo.micro.trade.CmdOrderQueryResponseVO",//  <<--------  È«Ãû3  ---------
-				new String[][]{//Êä³öĞÅÏ¢4
-						{"RETCODE","RETCODE","String","·µ»ØÂë  =0³É¹¦, ÆäËûÎªÊ§°Ü£¬´íÎóÃèÊöÔÚMESSAGE ÖĞ"},
-						{"MESSAGE","MESSAGE","String","·µ»ØµÄÌáÊ¾ÏûÏ¢ÄÚÈİ"},
+				"gnnt.MEBS.MobileServer.vo.micro.trade.CmdOrderQueryResponseVO",//  <<--------  å…¨å3  ---------
+				new String[][]{//è¾“å‡ºä¿¡æ¯4
+						{"RETCODE","RETCODE","String","è¿”å›ç   =0æˆåŠŸ, å…¶ä»–ä¸ºå¤±è´¥ï¼Œé”™è¯¯æè¿°åœ¨MESSAGE ä¸­"},
+						{"MESSAGE","MESSAGE","String","è¿”å›çš„æç¤ºæ¶ˆæ¯å†…å®¹"},
 						
-						{"TTLREC","TotalRecord","Integer","×Ü¼ÇÂ¼Êı"},
-						{"S","Size","Integer","²éÑ¯ÌõÊı"}
+						{"TTLREC","TotalRecord","Integer","æ€»è®°å½•æ•°"},
+						{"S","Size","Integer","æŸ¥è¯¢æ¡æ•°"}
 						
 						},
-				new String[][]{//Êä³ö²éÑ¯5
-						{"PID","PictureId","String","Í¼Æ¬Î¨Ò»±êÊ¶"},
-						{"ORI","OrderID","String","Î¯ÍĞµ¥ºÅ"},
-						{"ORT","OrderTitle","String","Î¯ÍĞ±êÌâ"},
+				new String[][]{//è¾“å‡ºæŸ¥è¯¢5
+						{"PID","PictureId","String","å›¾ç‰‡å”¯ä¸€æ ‡è¯†"},
+						{"ORI","OrderID","String","å§”æ‰˜å•å·"},
+						{"ORT","OrderTitle","String","å§”æ‰˜æ ‡é¢˜"},
 						
-						{"BN","BreedName","String","Æ·Ãû"},
-						{"TM","TradeMode","Integer"," 1: ³ÏĞÅ±£ÕÏ½ğÄ£Ê½£» 2£º±£Ö¤½ğÄ£Ê½"},
-						{"BS","BsFlag","Integer","ÂòÂô·½Ïò:  1: Âò£»2£ºÂô"},
+						{"BN","BreedName","String","å“å"},
+						{"TM","TradeMode","Integer"," 1: è¯šä¿¡ä¿éšœé‡‘æ¨¡å¼ï¼› 2ï¼šä¿è¯é‡‘æ¨¡å¼"},
+						{"BS","BsFlag","Integer","ä¹°å–æ–¹å‘:  1: ä¹°ï¼›2ï¼šå–"},
 						
-						{"PRI","Price","Double","µ¥Î»¼Û¸ñ"},
-						{"QTY","Qty","Integer","ÉÌÆ·ÊıÁ¿"},
-						{"TQ","TradeQty","Integer","ÒÑ³É½»ÊıÁ¿"},
-						{"U","Unit","String","ÉÌÆ·µ¥Î»"},
+						{"PRI","Price","Double","å•ä½ä»·æ ¼"},
+						{"QTY","Qty","Integer","å•†å“æ•°é‡"},
+						{"TQ","TradeQty","Integer","å·²æˆäº¤æ•°é‡"},
+						{"U","Unit","String","å•†å“å•ä½"},
 						
-						{"TU","TradeUnit","String","½»Ò×µ¥Î»"},
-						{"SQ","StartOrderQty","Integer","Æğ¶©ÊıÁ¿"},
-						{"OT","OrderTime","Date","Î¯ÍĞÊ±¼ä"},
-						{"TY","SettleType","Integer","½»ÊÕÀàĞÍ: 0: Ğ­Òé½»ÊÕ£» 1£º×ÔÖ÷½»ÊÕ"},
+						{"TU","TradeUnit","String","äº¤æ˜“å•ä½"},
+						{"SQ","StartOrderQty","Integer","èµ·è®¢æ•°é‡"},
+						{"OT","OrderTime","Date","å§”æ‰˜æ—¶é—´"},
+						{"TY","SettleType","Integer","äº¤æ”¶ç±»å‹: 0: åè®®äº¤æ”¶ï¼› 1ï¼šè‡ªä¸»äº¤æ”¶"},
 						
-						{"TR","TraderId","String","·¢²¼½»Ò×ÉÌID"}
+						{"TR","TraderId","String","å‘å¸ƒäº¤æ˜“å•†ID"}
 						},
 				Arrays.asList(new String[]{"update by wangzg "+new SimpleDateFormat("yyyy-MM-dd").format(new Date())})}));*/
-		/**===============================10. ÉÌÆ·Î¯ÍĞ²éÑ¯ =========================================*/
+		/**===============================10. å•†å“å§”æ‰˜æŸ¥è¯¢ =========================================*/
 
 		
 		return ;

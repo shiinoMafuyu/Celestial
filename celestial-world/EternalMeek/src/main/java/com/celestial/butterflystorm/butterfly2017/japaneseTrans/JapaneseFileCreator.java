@@ -13,7 +13,7 @@ public class JapaneseFileCreator {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		JapaneseFileCreator.createStudyFile("H:/ÎÒµÄ¼á¹ûÔÆ/09temp/03JP/01ÎÒ×ÔÑ¡µÄ³£ÓÃ¾ä×Ó.txt");
+		JapaneseFileCreator.createStudyFile("H:/æˆ‘çš„åšæœäº‘/09temp/03JP/01æˆ‘è‡ªé€‰çš„å¸¸ç”¨å¥å­.txt");
 	}
 
 	private static void createStudyFile(String path) {
@@ -37,9 +37,9 @@ public class JapaneseFileCreator {
 			
 		}
 		String saveDirectory = UtilString.getStrBeforeLast(path, "/");
-		UtilFile.printFile(l_no_annotion, saveDirectory+"/StudyFile/01ÈÕÓïÎŞ×¢ÊÍ.txt");
-		UtilFile.printFile(l_no_fanyi, saveDirectory+"/StudyFile/02ÈÕÓïÎŞ·­Òë.txt");
-		UtilFile.printFile(f.getLineList(), saveDirectory+"/StudyFile/03ÈÕÓïÈ«ÓĞ.txt");
+		UtilFile.printFile(l_no_annotion, saveDirectory+"/StudyFile/01æ—¥è¯­æ— æ³¨é‡Š.txt");
+		UtilFile.printFile(l_no_fanyi, saveDirectory+"/StudyFile/02æ—¥è¯­æ— ç¿»è¯‘.txt");
+		UtilFile.printFile(f.getLineList(), saveDirectory+"/StudyFile/03æ—¥è¯­å…¨æœ‰.txt");
 		
 	}
 	

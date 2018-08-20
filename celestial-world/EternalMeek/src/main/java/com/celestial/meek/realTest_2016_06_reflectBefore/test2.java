@@ -30,7 +30,7 @@ public class test2 {
 	private static void outOfMemory(List l,int i) {
 		List l2=new ArrayList();
 		l2.add(l);
-		System.out.println("µÚ "+i+" ´Î~");
+		System.out.println("ç¬¬ "+i+" æ¬¡~");
 		outOfMemory(l2,++i);
 	}
 
@@ -42,7 +42,7 @@ public class test2 {
 	}
 
 	/**
-	 * ·´Éä·½Ê½µ÷ÓÃ·½·¨
+	 * åå°„æ–¹å¼è°ƒç”¨æ–¹æ³•
 
 	 * @throws Exception
 	 */
@@ -69,7 +69,7 @@ public class test2 {
 	}
 
 	/**
-	 * ÓÃ·´Éä»úÖÆµ÷ÓÃ¶ÔÏó·½·¨
+	 * ç”¨åå°„æœºåˆ¶è°ƒç”¨å¯¹è±¡æ–¹æ³•
 	 */
 	private static void te2() throws Exception {
 		Class Xclass=Class.forName("test.JOJO");

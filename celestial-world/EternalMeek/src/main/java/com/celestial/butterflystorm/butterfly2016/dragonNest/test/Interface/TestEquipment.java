@@ -10,7 +10,7 @@ import com.celestial.butterflystorm.butterfly2016.dragonNest.other.Config;
 import junit.framework.TestCase;
 
 public class TestEquipment extends TestCase {
-	String path = "src/com/dragonNest/other/equipment/²ÓÀÃµÄ°¢¶û½ÜËş½äÖ¸/²ÓÀÃµÄ°¢¶û½ÜËş½äÖ¸.txt";
+	String path = "src/com/dragonNest/other/equipment/ç¿çƒ‚çš„é˜¿å°”æ°å¡”æˆ’æŒ‡/ç¿çƒ‚çš„é˜¿å°”æ°å¡”æˆ’æŒ‡.txt";
 	
 	public void testBuild() {
 		FileReader f = new FileReader(path);

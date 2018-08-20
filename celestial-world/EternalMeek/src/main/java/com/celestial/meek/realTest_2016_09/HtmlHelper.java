@@ -5,14 +5,14 @@ import com.celestial.agniRadiance.entity.FileReader;
 public class HtmlHelper {
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜Žï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
 	 * @param args 
 	 */
 	public static void main(String[] args) {
-		FileReader f = new FileReader("E:/anotherDeskTop/ÀëÉ§.txt",false,"utf-8");
+		FileReader f = new FileReader("E:/anotherDeskTop/ç¦»éªš.txt",false,"utf-8");
 		while(f.hasNext()){
 			System.out.println("<p>"+f.readLine()+"<br/></p>");
 		}

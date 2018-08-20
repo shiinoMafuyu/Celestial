@@ -27,7 +27,7 @@ public class Synchronous_reverse {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -60,7 +60,7 @@ public class Synchronous_reverse {
 							.replaceAll("SU_", "sa_")
 							.replaceAll("Su_", "sa_");
 				UtilFile.printFile(send, path2 + UtilString.fmtPathStr(file.getAbsolutePath()).substring(path1.length()),charset);
-				System.out.println("ĞŞ¸Ä±£´æÍê³É£º" + file.getName());
+				System.out.println("ä¿®æ”¹ä¿å­˜å®Œæˆï¼š" + file.getName());
 			}
 
 			

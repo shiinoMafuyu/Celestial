@@ -7,6 +7,6 @@ import org.junit.runners.Suite;
 @Suite.SuiteClasses({TestQueryCharactorDao.class, TestQueryEquipmentDao.class,TestQueryStrengthenDao.class})
 public class RunAllTest {
 	
-	//Ö÷²âÊÔÀà£¬ÔËĞĞËùÓĞjunitµ¥Ôª²âÊÔ¡£
+	//ä¸»æµ‹è¯•ç±»ï¼Œè¿è¡Œæ‰€æœ‰junitå•å…ƒæµ‹è¯•ã€‚
 	
 }

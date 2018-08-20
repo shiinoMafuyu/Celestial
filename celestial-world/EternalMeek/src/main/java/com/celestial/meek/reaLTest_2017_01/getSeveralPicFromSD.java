@@ -10,7 +10,7 @@ import com.celestial.agniRadiance.remote.UtilHttp;
 public class getSeveralPicFromSD {
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -34,7 +34,7 @@ public class getSeveralPicFromSD {
 			String name = url.substring(url.lastIndexOf("/")+1);
 			String save = savePath + "/" + name;
 			int re = UtilHttp.sendGetAndSaveFile(url, null, save);
-			String msg = re==0?"  ÏÂÔØ³É¹¦!":" ÏÂÔØÊ§°Ü";
+			String msg = re==0?"  ä¸‹è½½æˆåŠŸ!":" ä¸‹è½½å¤±è´¥";
 			System.out.println(name+msg);
 		}
 	}

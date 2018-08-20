@@ -1,9 +1,9 @@
 /******************************************************************
  * CoreCreatorConfig.java
  * Copyright 2017 by WZG. All Rights Reserved.
- * CreateDate£º2017Äê6ÔÂ11ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´6æœˆ11æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.butterflystorm.butterfly2017.ClassCreatorSuperStar;
@@ -13,15 +13,15 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê6ÔÂ11ÈÕ
+ *                        ---- wangzg 2017å¹´6æœˆ11æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
  * 
  * </p>
@@ -49,23 +49,23 @@ public class CoreCreatorConfig {
 	}};
 	
 	/**
-	 * ÏìÓ¦°üÖĞ×Ö¶Î¶ÔÓ¦Òªµ¼µÄ°ü.
+	 * å“åº”åŒ…ä¸­å­—æ®µå¯¹åº”è¦å¯¼çš„åŒ….
 	 */
 	@SuppressWarnings({ "serial", "rawtypes" })
 	public static final Map importMapResponse = new HashMap<String, String[]>(){{
 		put("List",new String[]{"import java.util.List;","import java.util.ArrayList;"});
 		put("ToStringStyle",new String[]{"import org.apache.commons.lang3.builder.ToStringBuilder;","import org.apache.commons.lang3.builder.ToStringStyle;"});
 		
-		put("Double",new String[]{"import gnnt.util.number.NUMFormat;"/*,"import gnnt.MEBS.MobileServer.constant.Constant;"*/});//Double×ª×Ö·û´®¾«¶È¾Í²»¿ØÖÆÁË.ĞèÒªµÄ×Ô¼ºÀàÉú³ÉºóÌí¼Ó.
+		put("Double",new String[]{"import gnnt.util.number.NUMFormat;"/*,"import gnnt.MEBS.MobileServer.constant.Constant;"*/});//Doubleè½¬å­—ç¬¦ä¸²ç²¾åº¦å°±ä¸æ§åˆ¶äº†.éœ€è¦çš„è‡ªå·±ç±»ç”Ÿæˆåæ·»åŠ .
 		put("Date",new String[]{"import gnnt.util.date.DateFormat;","import java.util.Date;"});
 	}};
 	
 	/**
-	 * ResponseVOÊ¹ÓÃ.
-	 * Ö§³ÖµÄÀàĞÍºÍÒªÒıµÄ°üºÍ´¦Àí·½Ê½·ÅÔÚÕâÀï.<br/>
-	 * Îª""±íÊ¾Ö§³Ö,µ«²»ĞèÒªÒıÈë°ü»òÕß½øĞĞÌØ±ğ²Ù×÷.<br/>
-	 * ÆäËûµÄÌæ»»ÀïÃæµÄX <br/>
-	 * ÒªÔö¼ÓÆäËûÀàĞÍµÄÖ§³ÖÔÚÕâÀïÌí¼Ó,XÊÇÓÃÀ´±»±äÁ¿Ìæ»»µÄ<br/>
+	 * ResponseVOä½¿ç”¨.
+	 * æ”¯æŒçš„ç±»å‹å’Œè¦å¼•çš„åŒ…å’Œå¤„ç†æ–¹å¼æ”¾åœ¨è¿™é‡Œ.<br/>
+	 * ä¸º""è¡¨ç¤ºæ”¯æŒ,ä½†ä¸éœ€è¦å¼•å…¥åŒ…æˆ–è€…è¿›è¡Œç‰¹åˆ«æ“ä½œ.<br/>
+	 * å…¶ä»–çš„æ›¿æ¢é‡Œé¢çš„X <br/>
+	 * è¦å¢åŠ å…¶ä»–ç±»å‹çš„æ”¯æŒåœ¨è¿™é‡Œæ·»åŠ ,Xæ˜¯ç”¨æ¥è¢«å˜é‡æ›¿æ¢çš„<br/>
 	 */
 	@SuppressWarnings("serial")
 	public static final Map<String,String> supportMapResponse = new HashMap<String, String>(){{
@@ -83,11 +83,11 @@ public class CoreCreatorConfig {
 	}};
 	
 	/**
-	 * RequestVOÊ¹ÓÃ.
-	 * Ö§³ÖµÄÀàĞÍºÍÒªÒıµÄ°üºÍ´¦Àí·½Ê½·ÅÔÚÕâÀï.<br/>
-	 * Îª""±íÊ¾Ö§³Ö,µ«²»ĞèÒªÒıÈë°ü»òÕß½øĞĞÌØ±ğ²Ù×÷.<br/>
-	 * ÆäËûµÄÌæ»»ÀïÃæµÄX <br/>
-	 * ÒªÔö¼ÓÆäËûÀàĞÍµÄÖ§³ÖÔÚÕâÀïÌí¼Ó,XÊÇÓÃÀ´±»±äÁ¿Ìæ»»µÄ<br/>
+	 * RequestVOä½¿ç”¨.
+	 * æ”¯æŒçš„ç±»å‹å’Œè¦å¼•çš„åŒ…å’Œå¤„ç†æ–¹å¼æ”¾åœ¨è¿™é‡Œ.<br/>
+	 * ä¸º""è¡¨ç¤ºæ”¯æŒ,ä½†ä¸éœ€è¦å¼•å…¥åŒ…æˆ–è€…è¿›è¡Œç‰¹åˆ«æ“ä½œ.<br/>
+	 * å…¶ä»–çš„æ›¿æ¢é‡Œé¢çš„X <br/>
+	 * è¦å¢åŠ å…¶ä»–ç±»å‹çš„æ”¯æŒåœ¨è¿™é‡Œæ·»åŠ ,Xæ˜¯ç”¨æ¥è¢«å˜é‡æ›¿æ¢çš„<br/>
 	 */
 	@SuppressWarnings("serial")
 	public static final Map<String,String> supportMap = new HashMap<String, String>(){{

@@ -25,13 +25,13 @@ public class InterfaceHolder {
 	private String OTHER_originalPath = "";
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¿ªÊ¼Éú³É²¹¶¡
+	 * å¼€å§‹ç”Ÿæˆè¡¥ä¸
 	 * </ul>
 	 */
 	public void excute() {
-		p.println("¿ªÊ¼Éú³É²¹¶¡...");
+		p.println("å¼€å§‹ç”Ÿæˆè¡¥ä¸...");
 		PuddingCreator pc = new PuddingCreatorImpl();
 		List<File> fArr = pc.getPrepareFile(preparedFilePath);
 		List<File> heartFailure = new ArrayList<File>();
@@ -49,20 +49,20 @@ public class InterfaceHolder {
 				heartFailure.add(f);
 			}
 		}
-		p.println("¹²¼Æ: " + fArr.size()+"\n³É¹¦:" + (fArr.size() - heartFailure.size()) + "\nÊ§°Ü:" + heartFailure.size());
+		p.println("å…±è®¡: " + fArr.size()+"\næˆåŠŸ:" + (fArr.size() - heartFailure.size()) + "\nå¤±è´¥:" + heartFailure.size());
 		for(File f : heartFailure){
 			p.println(f.getName());
 		}
 	}
 
 	/**
-	 * <b>¹¹Ôì·½·¨</b>
-	 * ½Ó¿Ú¿ØÖÆ³ÖÓĞÀà£¬ÓÃÓÚµ÷ÓÃ½Ó¿ÚÉú³É²¹¶¡¡£
+	 * <b>æ„é€ æ–¹æ³•</b>
+	 * æ¥å£æ§åˆ¶æŒæœ‰ç±»ï¼Œç”¨äºè°ƒç”¨æ¥å£ç”Ÿæˆè¡¥ä¸ã€‚
 	 * <br/>
-	 * @param preparedFilePath Òª×ö²¹¶¡µÄÎÄ¼şÂ·¾¶<br/>
-	 * (Ö§³Ö¶à¼¶Ä¿Â¼,µİ¹é±éÀú¸ÄpathÏÂËùÓĞÎÄ¼ş£¬¿ÉÓÃÓÚ´¦ÀíÍ¬ÃûÎÄ¼şÎÊÌâ)
-	 * @param projectPath ÏîÄ¿Â·¾¶
-	 * @param ÏîÄ¿ÀàĞÍ java or web
+	 * @param preparedFilePath è¦åšè¡¥ä¸çš„æ–‡ä»¶è·¯å¾„<br/>
+	 * (æ”¯æŒå¤šçº§ç›®å½•,é€’å½’éå†æ”¹pathä¸‹æ‰€æœ‰æ–‡ä»¶ï¼Œå¯ç”¨äºå¤„ç†åŒåæ–‡ä»¶é—®é¢˜)
+	 * @param projectPath é¡¹ç›®è·¯å¾„
+	 * @param é¡¹ç›®ç±»å‹ java or web
 	 */
 	public InterfaceHolder(String preparedFilePath , String projectPath,PUDDING_TYPE type) {
 		this.preparedFilePath = preparedFilePath ;
@@ -79,7 +79,7 @@ public class InterfaceHolder {
 			JAVA_originalPath = projectPath+"/bin";
 			OTHER_originalPath = projectPath+"/bin";
 		}else{
-			throw new RuntimeException("ÇëÅäÖÃÀàĞÍÖ§³Ö.");
+			throw new RuntimeException("è¯·é…ç½®ç±»å‹æ”¯æŒ.");
 		}
 	}
 

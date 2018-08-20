@@ -45,7 +45,7 @@ public class te1 {
 	}
 	
 	private static void teTagHelp() {
-		FileReader f = new FileReader("C:/Users/Administrator/Desktop/parese2/eÏÖ»õ.txt");
+		FileReader f = new FileReader("C:/Users/Administrator/Desktop/parese2/eç°è´§.txt");
 		String head=".*<MEBS_MOBILE.*>.*",tail = ".*</MEBS_MOBILE>.*";
 		List<Map<Integer,String>> lm = f.selectAllLineBetweenRegex(head,tail);
 		List<String> li = UtilCollection.transMaptoList(lm.get(0));
@@ -122,7 +122,7 @@ public class te1 {
 //		System.out.println(!DBUtil3_parseTxt.matchAllSameRegx("<x_?x>", ".*<{1}.*(\\?|<).*>{1}.*"));
 		
 		
-//		String s = "ref = \"queryAction\" sub = \"joker\" type =\"String\"";//ÕâÑùµÄ»°ÄÇÉ¶Àï¾Í²»ÄÜ°üº¬" ",²»ÄÜ¾Í²»ÄÜ~
+//		String s = "ref = \"queryAction\" sub = \"joker\" type =\"String\"";//è¿™æ ·çš„è¯é‚£å•¥é‡Œå°±ä¸èƒ½åŒ…å«" ",ä¸èƒ½å°±ä¸èƒ½~
 		String s =" futrue <   MUXI   ref = \"queryAction\" sub  =  \"joker\" type =\"String  ui\"  >yig<io ref = \"fvg\">yukino</io>< / MUXI > pop";
 		int index1 = s.indexOf(">");
 		int index2 = s.indexOf("<", index1);
@@ -139,14 +139,14 @@ public class te1 {
 			if(sR.length == 2 && UtilString.notNullEmpty(sR[0]) && UtilString.notNullEmpty(sR[1])){
 				l.add(sR);
 			}else{
-				throw new RuntimeException(new StringBuffer("ÊôĞÔ×Ö·û´®").append(s).append("ÊôĞÔÓĞÎÊÌâ!").toString());
+				throw new RuntimeException(new StringBuffer("å±æ€§å­—ç¬¦ä¸²").append(s).append("å±æ€§æœ‰é—®é¢˜!").toString());
 			}
 		}
 		System.out.println(s);
 	}
 
 	/**
-	 * ÅĞ¶Ï×Ö·û´®ÊÇ·ñÊÇÊı×Ö
+	 * åˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦æ˜¯æ•°å­—
 	 * @param str
 	 * @return
 	 */
@@ -168,17 +168,17 @@ public class te1 {
 
 	private static void te4_LinkedHashMap() {
 		Map<String,String> m = new LinkedHashMap<String, String>();
-		m.put("¿Õ¼ä", "hello");
-		m.put("Ê±¼ä", "darkness");
-		m.put("·ÏĞæ", "my");
-		m.put("Éú³É", "old");
+		m.put("ç©ºé—´", "hello");
+		m.put("æ—¶é—´", "darkness");
+		m.put("åºŸå¢Ÿ", "my");
+		m.put("ç”Ÿæˆ", "old");
 		m.put("head", "friend");
-		m.put("ÎŞ¾¡", "come");
+		m.put("æ— å°½", "come");
 		m.put("dio", "to");
-		m.put("ÌåÁ¦", "talk");
-		m.put("ÌÉ×Å", "with");
-		m.put("ÔÙ¼û", "I");
-		m.put("¹æ", "again");		
+		m.put("ä½“åŠ›", "talk");
+		m.put("èººç€", "with");
+		m.put("å†è§", "I");
+		m.put("è§„", "again");		
 		
 		StringBuffer sb = new StringBuffer();
 		Set<Entry<String, String>> it = m.entrySet();
@@ -186,13 +186,13 @@ public class te1 {
 //			System.out.println(ei.getKey() + "  -->  " + ei.getValue());
 			sb.append(ei.getValue()).append(' ');
 		}
-		System.out.println(sb.append('ÎÒ').toString());
+		System.out.println(sb.append('æˆ‘').toString());
 	}
 
 
 	@SuppressWarnings("resource")
 	public static void te3() throws Exception {
-		BufferedReader br =new BufferedReader(new InputStreamReader(new FileInputStream("F:/ÔÆÅÌÍ¬²½ÎÄ¼ş¼Ğ/ÔÆÅÌÍ¬²½ÎÄ¼ş¼Ğ/00sentence/parse/33²Öµ¥ĞÅÏ¢.txt"),"utf-8"));
+		BufferedReader br =new BufferedReader(new InputStreamReader(new FileInputStream("F:/äº‘ç›˜åŒæ­¥æ–‡ä»¶å¤¹/äº‘ç›˜åŒæ­¥æ–‡ä»¶å¤¹/00sentence/parse/33ä»“å•ä¿¡æ¯.txt"),"utf-8"));
 		StringBuffer sb = new StringBuffer();
 		String s= null;
 		while((s=br.readLine())!=null){
@@ -204,7 +204,7 @@ public class te1 {
 
 	//ayase is here
 	public static void t2() throws Exception {
-		BufferedReader br =new BufferedReader(new InputStreamReader(new FileInputStream("F:/ÔÆÅÌÍ¬²½ÎÄ¼ş¼Ğ/ÔÆÅÌÍ¬²½ÎÄ¼ş¼Ğ/00sentence/parse/×¢ÊÍ.txt"),"gbk"));
+		BufferedReader br =new BufferedReader(new InputStreamReader(new FileInputStream("F:/äº‘ç›˜åŒæ­¥æ–‡ä»¶å¤¹/äº‘ç›˜åŒæ­¥æ–‡ä»¶å¤¹/00sentence/parse/æ³¨é‡Š.txt"),"gbk"));
 		String s= null;
 		while((s=br.readLine())!=null){
 			System.out.println("l.add(\""+s+"\");");
@@ -214,14 +214,14 @@ public class te1 {
 	}
 
 	public static void t1() {
-		String[] sArr = new String[]{"2016-07-26  hao1 dhhhei 40.83  0.00  0.00  ","2016-07-26  000100000007 ºÇºÇ 10,000.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  10,000.00  0.00  0.00  10,000.00  0.00  ",
-				"2016-07-26  000100000013 ²âÊÔ 999,855.97  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  999,855.97  0.00  0.00  1,000,119.97  264.00  ",
+		String[] sArr = new String[]{"2016-07-26  hao1 dhhhei 40.83  0.00  0.00  ","2016-07-26  000100000007 å‘µå‘µ 10,000.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  10,000.00  0.00  0.00  10,000.00  0.00  ",
+				"2016-07-26  000100000013 æµ‹è¯• 999,855.97  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  999,855.97  0.00  0.00  1,000,119.97  264.00  ",
 				"2016-07-26  000100000099 sad 9,979,966.70  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  9,979,966.70  0.00  0.00  9,979,966.70  0.00  ",
 				"2016-07-26  000100000100 ces 9,983,119.20  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  9,983,119.20  0.00  0.00  9,983,185.20  66.00  ",
-				"2016-07-26  000100000035 ²âÊÔÒ» 10,000,000.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  10,000,000.00  0.00  0.00  10,000,000.00  0.00  ",
+				"2016-07-26  000100000035 æµ‹è¯•ä¸€ 10,000,000.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  10,000,000.00  0.00  0.00  10,000,000.00  0.00  ",
 				"2016-07-26  000100000015 hanhan 10,007,317.30  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  10,007,317.30  0.00  0.00  10,007,317.30  0.00  ",
 				"2016-07-26  000100000027 12456 100,000,000.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  100,000,000.00  0.00  0.00  100,000,000.00  0.00  ",
-				"2016-07-26  000100009063 ²âÊÔ 1,000,000,000.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  "};
+				"2016-07-26  000100009063 æµ‹è¯• 1,000,000,000.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  "};
 
 		Double d = 0.0;
 		for(int i = 0 ; i < sArr.length ; i++ ){

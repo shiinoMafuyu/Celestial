@@ -8,7 +8,7 @@ import com.celestial.butterflystorm.butterfly2016.classcreator.silence.Conf;
 public class te {
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -17,10 +17,10 @@ public class te {
 	
 	public static void main(String[] args) {
 //		System.out.println(" = +".replaceAll("\\+", "\"+\""));
-//		DBUtil.forCMD(new File("E:/anotherDeskTop/parese2/fall/te/EÏÖ»õ--ÊÖ»ú¿Í»§¶ËÓë·şÎñÆ÷Í¨ĞÅĞ­Òé.docx"), new File("E:/anotherDeskTop/parese2/fall/te/1"));
-		//E:\HackingGate\03_2016-08-20_¿ª·¢Ò»²¿Ê±µÄ²¹¶¡ÎÄ¼ş\²¹¶¡°ü\=0001ÄşÏÄÂÌ¾ŞÈË
-//		DBUtil.findFile("jquery.validationEngine-zh_CN.js",new File("E:/HackingGate/03_2016-08-20_¿ª·¢Ò»²¿Ê±µÄ²¹¶¡ÎÄ¼ş/²¹¶¡°ü/=0001ÄşÏÄÂÌ¾ŞÈË"));
-//		DBUtil.findFile("jquery.validationEngine-zh_CN.js",new File("C:/Users/Administrator/Documents/ĞÂÏîÄ¿¿ª·¢/02¶à¼¶·µÓ¶/"));
+//		DBUtil.forCMD(new File("E:/anotherDeskTop/parese2/fall/te/Eç°è´§--æ‰‹æœºå®¢æˆ·ç«¯ä¸æœåŠ¡å™¨é€šä¿¡åè®®.docx"), new File("E:/anotherDeskTop/parese2/fall/te/1"));
+		//E:\HackingGate\03_2016-08-20_å¼€å‘ä¸€éƒ¨æ—¶çš„è¡¥ä¸æ–‡ä»¶\è¡¥ä¸åŒ…\=0001å®å¤ç»¿å·¨äºº
+//		DBUtil.findFile("jquery.validationEngine-zh_CN.js",new File("E:/HackingGate/03_2016-08-20_å¼€å‘ä¸€éƒ¨æ—¶çš„è¡¥ä¸æ–‡ä»¶/è¡¥ä¸åŒ…/=0001å®å¤ç»¿å·¨äºº"));
+//		DBUtil.findFile("jquery.validationEngine-zh_CN.js",new File("C:/Users/Administrator/Documents/æ–°é¡¹ç›®å¼€å‘/02å¤šçº§è¿”ä½£/"));
 		
 		/*DBUtil3_parseTxt.matchAllSameRegx(" ref=\"MESSAGE\" type=\" String\"", "");
 		String[] sArr = " ref=\"MESSAGE\" type=\" String\"".split("[^=]{1}\"{1}\\s+");
@@ -30,7 +30,7 @@ public class te {
 		System.out.println(map.get("ref"));*/
 		
 		
-		/*Tag t = new Tag("<FFF ×Ü»á = \"´óÖĞ»ªÇø\" ·Ö»á=\"´óÈÕ±¾Çø ´óÑÇÃÀÀû¼áÇø\">ÆûÓÍÓë»ğ°Ñ<QAQ>²×ÀËÖ®Ë®,ÇåÙâ<LIK>¿ÉÒÔÕñÎáÒÂ<F yi=\"Òş²ØµÃºÜÉî\">²×ÀËÖ®Ë®×ÇÙâ,¿ÉÒÔµÓÎá×ã</F><HH></HH></LIK></QAQ></FFF>");
+		/*Tag t = new Tag("<FFF æ€»ä¼š = \"å¤§ä¸­ååŒº\" åˆ†ä¼š=\"å¤§æ—¥æœ¬åŒº å¤§äºšç¾åˆ©åšåŒº\">æ±½æ²¹ä¸ç«æŠŠ<QAQ>æ²§æµªä¹‹æ°´,æ¸…å…®<LIK>å¯ä»¥æŒ¯å¾è¡£<F yi=\"éšè—å¾—å¾ˆæ·±\">æ²§æµªä¹‹æ°´æµŠå…®,å¯ä»¥æ¶¤å¾è¶³</F><HH></HH></LIK></QAQ></FFF>");
 		System.out.println(t.getTagName());*/
 		
 //		teDeepCopyMap();
@@ -49,9 +49,9 @@ public class te {
 		//ORP=OrderPictureList
 		
 		mx.put("frozen", "Summer");
-		mx.put("ORP", "ÄãºÃÊ²Ã´¹í!");
+		mx.put("ORP", "ä½ å¥½ä»€ä¹ˆé¬¼!");
 		System.out.println(mx.get("ORP"));
-		//key value ¶ÔÏó±»ÖØĞÂ´´½¨ÁË.
+		//key value å¯¹è±¡è¢«é‡æ–°åˆ›å»ºäº†.
 		System.out.println(Conf.responseInnerClassNameMap.get("ORP"));
 	}
 

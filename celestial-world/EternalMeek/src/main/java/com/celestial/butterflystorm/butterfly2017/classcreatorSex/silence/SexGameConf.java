@@ -21,7 +21,7 @@ public class SexGameConf {
 	}};
 	
 	/**
-	 * RequestVOÖĞ¼Ì³Ğ¸¸ÀàµÄ³ÉÔ±±äÁ¿.
+	 * RequestVOä¸­ç»§æ‰¿çˆ¶ç±»çš„æˆå‘˜å˜é‡.
 	 */
 	@SuppressWarnings("serial")
 	public static final Map<String,String> requestPaVariableMap = new HashMap<String, String>(){{
@@ -29,11 +29,11 @@ public class SexGameConf {
 	}};
 		
 	/**
-	 * RequestVOÊ¹ÓÃ.
-	 * Ö§³ÖµÄÀàĞÍºÍÒªÒıµÄ°üºÍ´¦Àí·½Ê½·ÅÔÚÕâÀï.<br/>
-	 * Îª""±íÊ¾Ö§³Ö,µ«²»ĞèÒªÒıÈë°ü»òÕß½øĞĞÌØ±ğ²Ù×÷.<br/>
-	 * ÆäËûµÄÌæ»»ÀïÃæµÄX <br/>
-	 * ÒªÔö¼ÓÆäËûÀàĞÍµÄÖ§³ÖÔÚÕâÀïÌí¼Ó,XÊÇÓÃÀ´±»±äÁ¿Ìæ»»µÄ<br/>
+	 * RequestVOä½¿ç”¨.
+	 * æ”¯æŒçš„ç±»å‹å’Œè¦å¼•çš„åŒ…å’Œå¤„ç†æ–¹å¼æ”¾åœ¨è¿™é‡Œ.<br/>
+	 * ä¸º""è¡¨ç¤ºæ”¯æŒ,ä½†ä¸éœ€è¦å¼•å…¥åŒ…æˆ–è€…è¿›è¡Œç‰¹åˆ«æ“ä½œ.<br/>
+	 * å…¶ä»–çš„æ›¿æ¢é‡Œé¢çš„X <br/>
+	 * è¦å¢åŠ å…¶ä»–ç±»å‹çš„æ”¯æŒåœ¨è¿™é‡Œæ·»åŠ ,Xæ˜¯ç”¨æ¥è¢«å˜é‡æ›¿æ¢çš„<br/>
 	 */
 	@SuppressWarnings("serial")
 	public static final Map<String,String> supportMap = new HashMap<String, String>(){{
@@ -52,8 +52,8 @@ public class SexGameConf {
 	}};
 	
 	/**
-	 * µ¼°ümap<br/>
-	 * RequestVOÖĞĞèÒªµ¼ÈëµÄ°üË÷Òı.<br/>
+	 * å¯¼åŒ…map<br/>
+	 * RequestVOä¸­éœ€è¦å¯¼å…¥çš„åŒ…ç´¢å¼•.<br/>
 	 */
 	@SuppressWarnings({ "serial", "rawtypes" })
 	public static final Map importMap = new HashMap<String, String[]>(){{
@@ -71,7 +71,7 @@ public class SexGameConf {
 	}};
 	
 	/**
-	 * ±ØĞëÒªÒıÈëµÄ°ü.
+	 * å¿…é¡»è¦å¼•å…¥çš„åŒ….
 	 */
 	public static final List<String> mustImport_request = new ArrayList<String>(Arrays.asList(new String[]{
 			"gnnt.framework.frontend.base.enums.ECheckLogonType",
@@ -80,13 +80,13 @@ public class SexGameConf {
 	}));
 	
 	/**
-	 * =======================================================¡ü RequestVOÅäÖÃ=================¡ı ResponseVOÅäÖÃ=======================================================
+	 * =======================================================â†‘ RequestVOé…ç½®=================â†“ ResponseVOé…ç½®=======================================================
 	 */
 	
 	public static final String RESPONSEVO = "ResponseVO";
 	
 	/**
-	 * ResponseVOÖĞ¼Ì³Ğ¸¸ÀàµÄ³ÉÔ±±äÁ¿.
+	 * ResponseVOä¸­ç»§æ‰¿çˆ¶ç±»çš„æˆå‘˜å˜é‡.
 	 */
 	@SuppressWarnings("serial")
 	public static final Map<String,String> responsePaVariableMap = new HashMap<String, String>(){{
@@ -95,23 +95,23 @@ public class SexGameConf {
 	}};
 	
 	/**
-	 * ÏìÓ¦°üÖĞ×Ö¶Î¶ÔÓ¦Òªµ¼µÄ°ü.
+	 * å“åº”åŒ…ä¸­å­—æ®µå¯¹åº”è¦å¯¼çš„åŒ….
 	 */
 	@SuppressWarnings({ "serial", "rawtypes" })
 	public static final Map importMapResponse = new HashMap<String, String[]>(){{
 		put("List",new String[]{"import java.util.List;","import java.util.ArrayList;"});
 		put("ToStringStyle",new String[]{"import org.apache.commons.lang3.builder.ToStringBuilder;","import org.apache.commons.lang3.builder.ToStringStyle;"});
 		
-		put("Double",new String[]{"import gnnt.util.number.NUMFormat;"/*,"import gnnt.MEBS.MobileServer.constant.Constant;"*/});//Double×ª×Ö·û´®¾«¶È¾Í²»¿ØÖÆÁË.ĞèÒªµÄ×Ô¼ºÀàÉú³ÉºóÌí¼Ó.
+		put("Double",new String[]{"import gnnt.util.number.NUMFormat;"/*,"import gnnt.MEBS.MobileServer.constant.Constant;"*/});//Doubleè½¬å­—ç¬¦ä¸²ç²¾åº¦å°±ä¸æ§åˆ¶äº†.éœ€è¦çš„è‡ªå·±ç±»ç”Ÿæˆåæ·»åŠ .
 		put("Date",new String[]{"import gnnt.util.date.DateFormat;","import java.util.Date;"});
 	}};
 	
 	/**
-	 * ResponseVOÊ¹ÓÃ.
-	 * Ö§³ÖµÄÀàĞÍºÍÒªÒıµÄ°üºÍ´¦Àí·½Ê½·ÅÔÚÕâÀï.<br/>
-	 * Îª""±íÊ¾Ö§³Ö,µ«²»ĞèÒªÒıÈë°ü»òÕß½øĞĞÌØ±ğ²Ù×÷.<br/>
-	 * ÆäËûµÄÌæ»»ÀïÃæµÄX <br/>
-	 * ÒªÔö¼ÓÆäËûÀàĞÍµÄÖ§³ÖÔÚÕâÀïÌí¼Ó,XÊÇÓÃÀ´±»±äÁ¿Ìæ»»µÄ<br/>
+	 * ResponseVOä½¿ç”¨.
+	 * æ”¯æŒçš„ç±»å‹å’Œè¦å¼•çš„åŒ…å’Œå¤„ç†æ–¹å¼æ”¾åœ¨è¿™é‡Œ.<br/>
+	 * ä¸º""è¡¨ç¤ºæ”¯æŒ,ä½†ä¸éœ€è¦å¼•å…¥åŒ…æˆ–è€…è¿›è¡Œç‰¹åˆ«æ“ä½œ.<br/>
+	 * å…¶ä»–çš„æ›¿æ¢é‡Œé¢çš„X <br/>
+	 * è¦å¢åŠ å…¶ä»–ç±»å‹çš„æ”¯æŒåœ¨è¿™é‡Œæ·»åŠ ,Xæ˜¯ç”¨æ¥è¢«å˜é‡æ›¿æ¢çš„<br/>
 	 */
 	@SuppressWarnings("serial")
 	public static final Map<String,String> supportMapResponse = new HashMap<String, String>(){{
@@ -129,15 +129,15 @@ public class SexGameConf {
 	}};
 	
 	/**
-	 * ResponseVOÀàÖĞ¶¼ÒªÒıÈëµÄ°ü.
+	 * ResponseVOç±»ä¸­éƒ½è¦å¼•å…¥çš„åŒ….
 	 */
 	public static final List<String> mustImport_response = new ArrayList<String>(Arrays.asList(new String[]{
 			"gnnt.framework.frontend.base.vo.ResponseVO"
 	}));
 	
 	/**
-	 * ReponseVOÖĞ,ResultListÀïÃæµÄ×Ó±êÇ©ËõĞ´¶ÔÓ¦µÄÀàÃû.<br/>
-	 * XXX×÷Îª±»Ìæ»»µÄ±ê¼Ç.<br/>
+	 * ReponseVOä¸­,ResultListé‡Œé¢çš„å­æ ‡ç­¾ç¼©å†™å¯¹åº”çš„ç±»å.<br/>
+	 * XXXä½œä¸ºè¢«æ›¿æ¢çš„æ ‡è®°.<br/>
 	 */
 	@SuppressWarnings("serial")
 	public static final Map<String,String> responseInnerClassNameMap = new HashMap<String, String>(){{

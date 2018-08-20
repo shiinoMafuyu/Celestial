@@ -11,7 +11,7 @@ import java.net.URL;
 public class MyHttpRequest {
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -22,7 +22,7 @@ public class MyHttpRequest {
 		String s = doPost2("https://www.baidu.com","","gbk");
 		System.out.println(s);
 	}
-//	setRequestPropertyÖ÷ÒªÊÇÉèÖÃHttpURLConnectionÇëÇóÍ·ÀïÃæµÄÊôĞÔ ±ÈÈçCookie¡¢User-Agent£¨ä¯ÀÀÆ÷ÀàĞÍ£©µÈµÈ,²»ÉèÖÃ×ÔÈ»ÓĞÄ¬ÈÏµÄ£¬Ò»°ãµÄÇëÇóµ¹²»ĞèÒªÈ¥ÉèÖÃ
+//	setRequestPropertyä¸»è¦æ˜¯è®¾ç½®HttpURLConnectionè¯·æ±‚å¤´é‡Œé¢çš„å±æ€§ æ¯”å¦‚Cookieã€User-Agentï¼ˆæµè§ˆå™¨ç±»å‹ï¼‰ç­‰ç­‰,ä¸è®¾ç½®è‡ªç„¶æœ‰é»˜è®¤çš„ï¼Œä¸€èˆ¬çš„è¯·æ±‚å€’ä¸éœ€è¦å»è®¾ç½®
 //	connection.setRequestProperty("Connection", "Keep-Alive");
 //	connection.setRequestProperty("Content-Type", "multipart/form-data;boundary="+boundary);
 //	Connection.setRequestProperty("Content-Type", "text/plain; charset=utf-8");
@@ -60,7 +60,7 @@ public class MyHttpRequest {
 			return new String(byteArrayOut.toByteArray(), charest);
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new RuntimeException("Á¬½ÓÍøÂç»ñÈ¡ÇëÇóÊ§°Ü.");
+			throw new RuntimeException("è¿æ¥ç½‘ç»œè·å–è¯·æ±‚å¤±è´¥.");
 		}
 		finally{
 			close(byteArrayOut);

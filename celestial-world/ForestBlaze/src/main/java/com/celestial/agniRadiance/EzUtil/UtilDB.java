@@ -9,7 +9,7 @@ import javax.sql.DataSource;
 import org.apache.commons.dbcp.BasicDataSource;
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
@@ -17,7 +17,7 @@ import org.apache.commons.dbcp.BasicDataSource;
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
  * String userName ="trade_3400drh",password="password",url="jdbc:oracle:thin:@172.18.3.1:1521/abc";<br/>
  * </p>
@@ -28,10 +28,10 @@ public class UtilDB {
 		return getConnection(userName, password, url, "com.mysql.jdbc.Driver");
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÒÔ³£ÓÃÃÜÂë¡¢ÓÃ»§Ãû»ñÈ¡MySQLÁ¬½Ó<br/>
-	 * ×¢ÒâÇø·ÖÊ¹ÓÃ<br/>
+	 * ä»¥å¸¸ç”¨å¯†ç ã€ç”¨æˆ·åè·å–MySQLè¿æ¥<br/>
+	 * æ³¨æ„åŒºåˆ†ä½¿ç”¨<br/>
 	 * </ul>
 	 * @return
 	 */
@@ -40,7 +40,7 @@ public class UtilDB {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -53,9 +53,9 @@ public class UtilDB {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡Êı¾İ¿âÁ¬½Ó.MySQLµÄ»òÕßOracleµÄ.<br/>
+	 * è·å–æ•°æ®åº“è¿æ¥.MySQLçš„æˆ–è€…Oracleçš„.<br/>
 	 * </ul>
 	 * @param userName
 	 * @param password
@@ -70,7 +70,7 @@ public class UtilDB {
 			conn = DriverManager.getConnection(url, userName, password);
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new RuntimeException("Á¬½ÓÊı¾İ¿âÊ§°Ü~");
+			throw new RuntimeException("è¿æ¥æ•°æ®åº“å¤±è´¥~");
 		}
 		return conn;
 	}
@@ -100,7 +100,7 @@ public class UtilDB {
 		}
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>

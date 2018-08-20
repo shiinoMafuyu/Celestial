@@ -1,9 +1,9 @@
 /******************************************************************
  * ThenCreateClass.java
  * Copyright 2017 by WZG. All Rights Reserved.
- * CreateDate£º2017Äê6ÔÂ9ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´6æœˆ9æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.meek.realTest_2017_06;
@@ -20,15 +20,15 @@ import com.celestial.butterflystorm.butterfly2017.classcreatorSex.CreateSexRespo
 import com.celestial.butterflystorm.butterfly2017.classcreatorSex.CreateSimpleResponse;
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê6ÔÂ9ÈÕ
+ *                        ---- wangzg 2017å¹´6æœˆ9æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
  * 
  * </p>
@@ -37,26 +37,26 @@ import com.celestial.butterflystorm.butterfly2017.classcreatorSex.CreateSimpleRe
 public class ThenCreateClass {
 	
 	public static String[][] sArr = new String[][]{
-		new String[]{"1\\.\\sÓÎÏ·Àà±ğ²éÑ¯","2\\.\\s½±Æ·ÏêÇé²éÑ¯"},
-		new String[]{"2\\.\\s½±Æ·ÏêÇé²éÑ¯","3\\.\\sĞÒÔË°ñ²éÑ¯"},
-		new String[]{"3\\.\\sĞÒÔË°ñ²éÑ¯","4\\.\\sÓ¢ĞÛ°ñ²éÑ¯"},
-		new String[]{"4\\.\\sÓ¢ĞÛ°ñ²éÑ¯","5\\.\\s¿ÉÁìÈ¡½±Æ·²éÑ¯"},
-		new String[]{"5\\.\\s¿ÉÁìÈ¡½±Æ·²éÑ¯","6\\.\\sÒÑÁìÈ¡½±Æ·²éÑ¯"},
+		new String[]{"1\\.\\sæ¸¸æˆç±»åˆ«æŸ¥è¯¢","2\\.\\så¥–å“è¯¦æƒ…æŸ¥è¯¢"},
+		new String[]{"2\\.\\så¥–å“è¯¦æƒ…æŸ¥è¯¢","3\\.\\så¹¸è¿æ¦œæŸ¥è¯¢"},
+		new String[]{"3\\.\\så¹¸è¿æ¦œæŸ¥è¯¢","4\\.\\sè‹±é›„æ¦œæŸ¥è¯¢"},
+		new String[]{"4\\.\\sè‹±é›„æ¦œæŸ¥è¯¢","5\\.\\så¯é¢†å–å¥–å“æŸ¥è¯¢"},
+		new String[]{"5\\.\\så¯é¢†å–å¥–å“æŸ¥è¯¢","6\\.\\så·²é¢†å–å¥–å“æŸ¥è¯¢"},
 		
-		new String[]{"6\\.\\sÒÑÁìÈ¡½±Æ·²éÑ¯","7\\.\\sÒÑ¹ıÆÚ½±Æ·²éÑ¯"},
-		new String[]{"7\\.\\sÒÑ¹ıÆÚ½±Æ·²éÑ¯","8\\.\\s½øĞĞÖĞÓÎÏ·²éÑ¯"},
-		new String[]{"8\\.\\s½øĞĞÖĞÓÎÏ·²éÑ¯","9\\.\\sÒÑ½áÊøÓÎÏ·²éÑ¯"},
-		new String[]{"9\\.\\sÒÑ½áÊøÓÎÏ·²éÑ¯","10\\.\\sÓÎÏ·¹Ø¿¨ĞÅÏ¢²éÑ¯"},
-		new String[]{"10\\.\\sÓÎÏ·¹Ø¿¨ĞÅÏ¢²éÑ¯","11\\.\\s¾º²Â"},
+		new String[]{"6\\.\\så·²é¢†å–å¥–å“æŸ¥è¯¢","7\\.\\så·²è¿‡æœŸå¥–å“æŸ¥è¯¢"},
+		new String[]{"7\\.\\så·²è¿‡æœŸå¥–å“æŸ¥è¯¢","8\\.\\sè¿›è¡Œä¸­æ¸¸æˆæŸ¥è¯¢"},
+		new String[]{"8\\.\\sè¿›è¡Œä¸­æ¸¸æˆæŸ¥è¯¢","9\\.\\så·²ç»“æŸæ¸¸æˆæŸ¥è¯¢"},
+		new String[]{"9\\.\\så·²ç»“æŸæ¸¸æˆæŸ¥è¯¢","10\\.\\sæ¸¸æˆå…³å¡ä¿¡æ¯æŸ¥è¯¢"},
+		new String[]{"10\\.\\sæ¸¸æˆå…³å¡ä¿¡æ¯æŸ¥è¯¢","11\\.\\sç«çŒœ"},
 		
-		new String[]{"11\\.\\s¾º²Â","12\\.\\sÓÎÏ·Ö§¸¶"},
-		new String[]{"12\\.\\sÓÎÏ·Ö§¸¶","13\\.\\sÁìÈ¡½±Æ·"},
-		new String[]{"13\\.\\sÁìÈ¡½±Æ·","14\\.\\send"}
+		new String[]{"11\\.\\sç«çŒœ","12\\.\\sæ¸¸æˆæ”¯ä»˜"},
+		new String[]{"12\\.\\sæ¸¸æˆæ”¯ä»˜","13\\.\\sé¢†å–å¥–å“"},
+		new String[]{"13\\.\\sé¢†å–å¥–å“","14\\.\\send"}
 	};
 
-	public static String resultPath = "D:/workspace_final/02MyEclipse2013/05¹ıÎå¹ØÕ¶Áù½±/forecast-frontend/src/gnnt/mobile/forecast/frontend/vo/";
+	public static String resultPath = "D:/workspace_final/02MyEclipse2013/05è¿‡äº”å…³æ–©å…­å¥–/forecast-frontend/src/gnnt/mobile/forecast/frontend/vo/";
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -65,7 +65,7 @@ public class ThenCreateClass {
 	public static void main(String[] args) {
 		
 		
-		FileReader f1 = new FileReader("E:/t/t34 ¹ıÎå¹ØÕ¶Áù½±ÓÎÏ·/00ÎÄµµ/02Ğ­Òé ½âÎö/¹ı¹ØÕ´½´Ğ­Òé½âÎö.txt"); //new FileReader("E:/t/t34 ¹ıÎå¹ØÕ¶Áù½±ÓÎÏ·/00ÎÄµµ/Ğ­Òé.txt");
+		FileReader f1 = new FileReader("E:/t/t34 è¿‡äº”å…³æ–©å…­å¥–æ¸¸æˆ/00æ–‡æ¡£/02åè®® è§£æ/è¿‡å…³æ²¾é…±åè®®è§£æ.txt"); //new FileReader("E:/t/t34 è¿‡äº”å…³æ–©å…­å¥–æ¸¸æˆ/00æ–‡æ¡£/åè®®.txt");
 //		String[][] sArr = new String[][]{
 //			
 //		};
@@ -80,7 +80,7 @@ public class ThenCreateClass {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -91,16 +91,16 @@ public class ThenCreateClass {
 		for(String[] sai : sArr){
 			try {
 				responseCreatorWarp(f1,sai[0],sai[1]);
-				System.out.println(sai[0]+" ResponseÉú³É¹¦£¡");
+				System.out.println(sai[0]+" Responseç”ŸæˆåŠŸï¼");
 			} catch (Exception e) {
-				System.out.println(sai[0]+" --------------->ResponseÎ´Éú³É³É¹¦£¡");
+				System.out.println(sai[0]+" --------------->Responseæœªç”ŸæˆæˆåŠŸï¼");
 				e.printStackTrace();
 			}
 		}
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -110,7 +110,7 @@ public class ThenCreateClass {
 	 */
 	private static void responseCreatorWarp(FileReader f1, String select1P1, String select1P2) {
 		FileReader fx = f1.selectAllLineBetweenRegex2(select1P1, select1P2);
-		List<List<String>> responseReader = fx.selectAllLineBetweenRegexList(".*·µ»Ø°ü.*", ".*<.*/.*MEBS_MOBILE>.*");
+		List<List<String>> responseReader = fx.selectAllLineBetweenRegexList(".*è¿”å›åŒ….*", ".*<.*/.*MEBS_MOBILE>.*");
 		
 		Tag responseTag = new Tag(UtilCollection.transListToLine(responseReader.get(0)));
 		Tag res = responseTag.getTagByNamesReal("REP");
@@ -124,7 +124,7 @@ public class ThenCreateClass {
 	
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -135,9 +135,9 @@ public class ThenCreateClass {
 		for(String[] sai : sArr){
 			try {
 				requestCreatorWarp(f1,sai[0],sai[1]);
-				System.out.println(sai[0]+" RequestÉú³É³É¹¦£¡");
+				System.out.println(sai[0]+" Requestç”ŸæˆæˆåŠŸï¼");
 			} catch (Exception e) {
-				System.out.println(sai[0]+" --------------->RequestÎ´Éú³É³É¹¦£¡");
+				System.out.println(sai[0]+" --------------->Requestæœªç”ŸæˆæˆåŠŸï¼");
 				e.printStackTrace();
 			}
 		}
@@ -146,7 +146,7 @@ public class ThenCreateClass {
 
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * ReceivePrizeRequestVO
 	 * </ul>
@@ -158,7 +158,7 @@ public class ThenCreateClass {
 	 */
 	private static void requestCreatorWarp(FileReader f1, String select1P1, String select1P2) {
 		FileReader fx = f1.selectAllLineBetweenRegex2(select1P1,select1P2);
-		List<List<String>> requestReader = fx.selectAllLineBetweenRegexList(".*Ìá½»°ü.*", ".*·µ»Ø°ü.*");
+		List<List<String>> requestReader = fx.selectAllLineBetweenRegexList(".*æäº¤åŒ….*", ".*è¿”å›åŒ….*");
 		Tag requestTag = new Tag(UtilCollection.transListToLine(requestReader.get(0)));
 		Tag req = requestTag.getTagByNamesReal("REQ");
 		

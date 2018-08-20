@@ -33,7 +33,7 @@ public class FileReadAndOP {
 	
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜Žï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul> 
@@ -52,7 +52,7 @@ public class FileReadAndOP {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜Žï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul> 
@@ -123,11 +123,11 @@ public class FileReadAndOP {
 	
 
 	
-	//json´®
+	//jsonä¸²
 	@Ignore
 	@Test
 	public void _06_() {
-		FileReader f = new FileReader("src/test/resources/helper/ÖÐÓ¢¶ÔÕÕ.txt",false,"gbk");
+		FileReader f = new FileReader("src/test/resources/helper/ä¸­è‹±å¯¹ç…§.txt",false,"gbk");
 		String s="";
 		while(f.hasNext()){
 			s = f.readLine();
@@ -165,7 +165,7 @@ public class FileReadAndOP {
 			}
 			
 		}
-		System.out.println("¹²¼Æ£º" +n);
+		System.out.println("å…±è®¡ï¼š" +n);
 		
 		printDivide("_07_readVariable");
 	}
@@ -194,12 +194,12 @@ public class FileReadAndOP {
 			}
 			
 		}
-		System.out.println("¹²¼Æ£º" +n);
+		System.out.println("å…±è®¡ï¼š" +n);
 		
 		printDivide("_08_createSetVariable");
 	}
 
-	//json´®
+	//jsonä¸²
 	@Test
 	public void _09_addAnnotion() {
 		FileReader f = new FileReader("src/test/resources/helper/01tempUse.txt",false,"gbk");
@@ -212,7 +212,7 @@ public class FileReadAndOP {
 		printDivide("_09_addAnnotion");
 	}
 
-	//È¥Î²
+	//åŽ»å°¾
 	@Test
 	public void _10_() {
 		FileReader f = new FileReader("src/test/resources/helper/01tempUse.txt",false,"gbk");
@@ -248,7 +248,7 @@ public class FileReadAndOP {
 			}
 			
 		}
-		System.out.println("¹²¼Æ£º" +n);
+		System.out.println("å…±è®¡ï¼š" +n);
 		
 		printDivide("_11_readVariableTas");
 	}
@@ -284,7 +284,7 @@ public class FileReadAndOP {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜Žï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul> 

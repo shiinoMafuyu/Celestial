@@ -11,9 +11,9 @@ public class Container {
 	private static Map<String, Class> REALIZATION_CLASS_MAP = new HashMap<String, Class>();
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ³õÊ¼»¯
+	 * åˆå§‹åŒ–
 	 * </ul>
 	 * @param realizationMap
 	 */
@@ -35,9 +35,9 @@ public class Container {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¸ù¾İ²ÎÊıµ÷ÓÃÀàµÄ¹¹Ôì·½·¨,»ñÈ¡ÆäÊµÀı.<br/>
+	 * æ ¹æ®å‚æ•°è°ƒç”¨ç±»çš„æ„é€ æ–¹æ³•,è·å–å…¶å®ä¾‹.<br/>
 	 * </ul>
 	 * @param interfaceName
 	 * @param params
@@ -56,13 +56,13 @@ public class Container {
 			return ct.newInstance(params);
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new RuntimeException("»ñÈ¡ÊµÀıÊ§°Ü,Çë¼ì²é½Ó¿ÚÃûºÍ²ÎÊıÊÇ·ñÕıÈ·.");
+			throw new RuntimeException("è·å–å®ä¾‹å¤±è´¥,è¯·æ£€æŸ¥æ¥å£åå’Œå‚æ•°æ˜¯å¦æ­£ç¡®.");
 		}
 		
 	}
 
 	private static void check() {
 		if(null == REALIZATION_CLASS_MAP)
-			throw new RuntimeException("ÇëÏÈµ÷ÓÃ³õÊ¼»¯·½·¨");
+			throw new RuntimeException("è¯·å…ˆè°ƒç”¨åˆå§‹åŒ–æ–¹æ³•");
 	}
 }

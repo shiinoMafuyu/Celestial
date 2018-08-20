@@ -7,8 +7,8 @@ public class ChangeCharCode {
 	public static void main(String[] args) throws UnsupportedEncodingException {
 		
 		System.out.println(ChangeCharEncode("EA!","ISO-8859-1","UTF-8"));
-		System.out.println(ChangeCharEncode("EA!ÎÒ","UTF-8","ISO-8859-1"));
-		System.out.println(ChangeCharEncode(ChangeCharEncode("EA!ÎÒ","UTF-8","ISO-8859-1"),"ISO-8859-1","UTF-8"));
+		System.out.println(ChangeCharEncode("EA!æˆ‘","UTF-8","ISO-8859-1"));
+		System.out.println(ChangeCharEncode(ChangeCharEncode("EA!æˆ‘","UTF-8","ISO-8859-1"),"ISO-8859-1","UTF-8"));
 	}
 
 	private static String ChangeCharEncode(String str,String encode1,String encode2) throws UnsupportedEncodingException {

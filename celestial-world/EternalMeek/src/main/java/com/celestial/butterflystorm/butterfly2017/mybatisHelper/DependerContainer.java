@@ -25,7 +25,7 @@ public class DependerContainer {
 	private List<String[]> sqlList = new ArrayList<String[]>();
 	private List<String[]> classList = new ArrayList<String[]>();
 	
-	/**Àà´´½¨ĞÅÏ¢*/
+	/**ç±»åˆ›å»ºä¿¡æ¯*/
 	private Map<String,String> createInfoMap = new HashMap<String, String>();
 	
 	public DependerContainer(String path){

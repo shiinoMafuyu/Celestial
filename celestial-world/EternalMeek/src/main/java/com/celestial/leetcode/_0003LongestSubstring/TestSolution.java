@@ -26,7 +26,7 @@ public class TestSolution {
 	
 	@Test
 	public void _02_(){
-		String s = "ÎÒÊÇË­";
+		String s = "æˆ‘æ˜¯è°";
 		for(int i=0;i<s.length();i++){
 			int in = (int)s.charAt(i);
 			System.out.println(in);

@@ -14,41 +14,41 @@ import com.celestial.butterflystorm.butterfly2017.classcreatorSex.silence.SexGam
 
 public class CreateSexResponseVO extends SexVOcreator{
 	/**
-	 * ²ã¼¶Îª1µÄ<RESULTLIST>±êÇ©
+	 * å±‚çº§ä¸º1çš„<RESULTLIST>æ ‡ç­¾
 	 */
 	private List<Tag> layerTagList1 = new ArrayList<Tag>();
 	
 	/**
-	 * ²ã¼¶Îª2µÄ<RESULTLIST>±êÇ©
+	 * å±‚çº§ä¸º2çš„<RESULTLIST>æ ‡ç­¾
 	 */
 	private List<Tag> layerTagList2 = new ArrayList<Tag>();
 	
 
 	
 	/**
-	 * RESULTLIST³ÉÔ±±äÁ¿µÄÀàĞÍ.(Ö÷Òª¼¯ºÏÀàµÄÃû×Ö)
+	 * RESULTLISTæˆå‘˜å˜é‡çš„ç±»å‹.(ä¸»è¦é›†åˆç±»çš„åå­—)
 	 */
 	private String resultClassName = "";
 	
 	/**
-	 * Ö÷ÒªĞÅÏ¢ÀàµÄÃû×Ö.
+	 * ä¸»è¦ä¿¡æ¯ç±»çš„åå­—.
 	 */
 	private String objClassName = "";
 	
 	/**
-	 * ´ËÀàÊÇ·ñº¬ÓĞResultList
+	 * æ­¤ç±»æ˜¯å¦å«æœ‰ResultList
 	 */
 	private boolean hasResultList = false;
 	
 	/**
-	 * ½á¹ûĞÅÏ¢ÀàÀàÃû
+	 * ç»“æœä¿¡æ¯ç±»ç±»å
 	 */
 	private String resultVOName = "";
 	
 	
 	/**
-	 * ReponseVOÖĞ,ResultListÀïÃæµÄ×Ó±êÇ©ËõĞ´¶ÔÓ¦µÄÀàÃû.<br/>
-	 * XXX×÷Îª±»Ìæ»»µÄ±ê¼Ç.<br/>
+	 * ReponseVOä¸­,ResultListé‡Œé¢çš„å­æ ‡ç­¾ç¼©å†™å¯¹åº”çš„ç±»å.<br/>
+	 * XXXä½œä¸ºè¢«æ›¿æ¢çš„æ ‡è®°.<br/>
 	 */
 	@SuppressWarnings("serial")
 	private Map<String,String> responseInnerClassNameMap = new HashMap<String, String>(){{
@@ -60,8 +60,8 @@ public class CreateSexResponseVO extends SexVOcreator{
 	}};
 	
 	/**
-	 * ¸ù¾İ·µ»Ø±êÇ©Éú³É·µ»ØÀà.
-	 * <b>¹¹Ôì·½·¨</b>
+	 * æ ¹æ®è¿”å›æ ‡ç­¾ç”Ÿæˆè¿”å›ç±».
+	 * <b>æ„é€ æ–¹æ³•</b>
 	 * <br/>
 	 * @param resTag
 	 */
@@ -71,21 +71,21 @@ public class CreateSexResponseVO extends SexVOcreator{
 
 	/**
 	 * 
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨Àà
+	 * åˆ›å»ºç±»
 	 * </ul>
 	 */
 	protected int createClass() {
 		super._createClass_p1();
-		//3.5Ìí¼ÓÇëÇóÊôĞÔ 4.Ìí¼Ó¹¹Ôì·½·¨¼°Æä×¢ÊÍ
+		//3.5æ·»åŠ è¯·æ±‚å±æ€§ 4.æ·»åŠ æ„é€ æ–¹æ³•åŠå…¶æ³¨é‡Š
 		this.voClassStringList.addAll(UtilNormal.table(_createProperty_pa_constructor_response()));
 		
-		//4.´´½¨Ö÷Òª¼¯ºÏÀà.
+		//4.åˆ›å»ºä¸»è¦é›†åˆç±».
 		this.voClassStringList.addAll(UtilNormal.table(_createMainList()));
-		//5.´´½¨Ö÷ÒªResultVOÊµÏÖÀà.
+		//5.åˆ›å»ºä¸»è¦ResultVOå®ç°ç±».
 		this.voClassStringList.addAll(UtilNormal.table(_createResultVO_impl()));
-		//6.´´½¨Ê£ÏÂµÄ¼¯ºÏÀàºÍĞÅÏ¢Àà.¼òµ¥µÄ¹¤×÷ÁËO(¡É_¡É)O¹ş¹ş~
+		//6.åˆ›å»ºå‰©ä¸‹çš„é›†åˆç±»å’Œä¿¡æ¯ç±».ç®€å•çš„å·¥ä½œäº†O(âˆ©_âˆ©)Oå“ˆå“ˆ~
 		this.voClassStringList.addAll(UtilNormal.table(_createInnerCollection_Info()));
 		this.voClassStringList.add("}");
 		this.voClassStringList.add("");
@@ -94,7 +94,7 @@ public class CreateSexResponseVO extends SexVOcreator{
 	
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -103,7 +103,7 @@ public class CreateSexResponseVO extends SexVOcreator{
 	private Collection<? extends String> _createResultVO_impl() {
 		List<String> l = new ArrayList<String>();
 		l.add("/**");
-		l.add(" * ·µ»Ø½á¹ûĞÅÏ¢Àà");
+		l.add(" * è¿”å›ç»“æœä¿¡æ¯ç±»");
 		l.add(" */");
 		l.add("public class "+this.resultVOName+"{");
 		this.directTagList.get(0);
@@ -114,9 +114,9 @@ public class CreateSexResponseVO extends SexVOcreator{
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨Ò»°ã±äÁ¿µÄ¶¨ÒåºÍSetter·½·¨<br/>
+	 * åˆ›å»ºä¸€èˆ¬å˜é‡çš„å®šä¹‰å’ŒSetteræ–¹æ³•<br/>
 	 * </ul>
 	 * @param tagList
 	 * @return
@@ -130,9 +130,9 @@ public class CreateSexResponseVO extends SexVOcreator{
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Éú³ÉÒ»°ã±äÁ¿µÄSetter·½·¨.<br/>
+	 * ç”Ÿæˆä¸€èˆ¬å˜é‡çš„Setteræ–¹æ³•.<br/>
 	 * </ul>
 	 * @param tagList
 	 * @return
@@ -146,9 +146,9 @@ public class CreateSexResponseVO extends SexVOcreator{
 			String type = t.getPropertyMap().get("type");
 			String op = SexGameConf.supportMapResponse.get(type).replace("X", var);
 			l.add("/**");
-			l.add(" * <b>·½·¨ËµÃ÷£º</b>");
+			l.add(" * <b>æ–¹æ³•è¯´æ˜ï¼š</b>");
 			l.add(" * <ul>");
-			l.add(" * ÉèÖÃ"+t.getValue());
+			l.add(" * è®¾ç½®"+t.getValue());
 			l.add(" * </ul>");
 			l.add(" * @param");
 			l.add(" */");
@@ -161,9 +161,9 @@ public class CreateSexResponseVO extends SexVOcreator{
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Éú³ÉÒ»°ã±äÁ¿.<br/>
+	 * ç”Ÿæˆä¸€èˆ¬å˜é‡.<br/>
 	 * </ul>
 	 * @param tagList
 	 * @return
@@ -181,20 +181,20 @@ public class CreateSexResponseVO extends SexVOcreator{
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨layerTagList1 layerTagList2 ÀïÃæ¶ÔÓ¦µÄ¼¯ºÏÀàºÍĞÅÏ¢Àà.<br/>
-	 * ¾Í´ó¹¦¸æ³ÉÁË.<br/>
+	 * åˆ›å»ºlayerTagList1 layerTagList2 é‡Œé¢å¯¹åº”çš„é›†åˆç±»å’Œä¿¡æ¯ç±».<br/>
+	 * å°±å¤§åŠŸå‘Šæˆäº†.<br/>
 	 * </ul>
 	 * @return
 	 */
 	private Collection<? extends String> _createInnerCollection_Info() {
 		List<String> l = new ArrayList<String>();
-		//´´½¨¼¯ºÏÀà
+		//åˆ›å»ºé›†åˆç±»
 		for(Tag t : this.layerTagList2){
 			l.addAll(__create_collectionClass(t));
 		}
-		//ÏÂÃæ´´½¨ĞÅÏ¢Àà
+		//ä¸‹é¢åˆ›å»ºä¿¡æ¯ç±»
 		for(Tag t : this.layerTagList1){
 			l.addAll(__create_infoClass(t));
 		}
@@ -207,9 +207,9 @@ public class CreateSexResponseVO extends SexVOcreator{
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Éú³ÉĞÅÏ¢Àà.<br/>
+	 * ç”Ÿæˆä¿¡æ¯ç±».<br/>
 	 * </ul>
 	 * @param tag
 	 * @return
@@ -227,9 +227,9 @@ public class CreateSexResponseVO extends SexVOcreator{
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÓĞÁ½²ã±êÇ©µÄ´´½¨¼¯ºÏÀà.<br/>
+	 * æœ‰ä¸¤å±‚æ ‡ç­¾çš„åˆ›å»ºé›†åˆç±».<br/>
 	 * </ul>
 	 * @param t
 	 * @return
@@ -243,12 +243,12 @@ public class CreateSexResponseVO extends SexVOcreator{
 		l.add(" * "+ano);
 		l.add(" */");
 		l.add("public class "+collectionClassName+"{");
-		l.add("	/** ĞÅÏ¢¼¯ºÏ */");
+		l.add("	/** ä¿¡æ¯é›†åˆ */");
 		l.add("	private List<"+collectionClassName+"> "+tagName+";");
 		l.add("");
 		l.add("	/**");
 		l.add("	 * ");
-		l.add("	 * »ñÈ¡ĞÅÏ¢¼¯ºÏ");
+		l.add("	 * è·å–ä¿¡æ¯é›†åˆ");
 		l.add("	 * <br/><br/>");
 		l.add("	 * @return");
 		l.add("	 */");
@@ -258,7 +258,7 @@ public class CreateSexResponseVO extends SexVOcreator{
 		l.add("");
 		l.add("	/**");
 		l.add("	 * ");
-		l.add("	 * ÉèÖÃĞÅÏ¢¼¯ºÏ");
+		l.add("	 * è®¾ç½®ä¿¡æ¯é›†åˆ");
 		l.add("	 * <br/><br/>");
 		l.add("	 * @param list");
 		l.add("	 */");
@@ -271,9 +271,9 @@ public class CreateSexResponseVO extends SexVOcreator{
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨Ö÷ÒªµÄ½á¹û¼¯ºÏÀà.
+	 * åˆ›å»ºä¸»è¦çš„ç»“æœé›†åˆç±».
 	 * </ul>
 	 * @return
 	 */
@@ -282,14 +282,14 @@ public class CreateSexResponseVO extends SexVOcreator{
 		if(!this.hasResultList)
 			return l;
 		l.add("/**");
-		l.add(" * ºËĞÄ¼¯ºÏÀà");
+		l.add(" * æ ¸å¿ƒé›†åˆç±»");
 		l.add(" */");
 		l.add("public class "+this.resultClassName+"{");
 		
-		l.addAll(UtilNormal.table(__create_1_p1()));//PRS ORPÖ®Àà private PropertyList PRS; ÕâÒ»²ã
+		l.addAll(UtilNormal.table(__create_1_p1()));//PRS ORPä¹‹ç±» private PropertyList PRS; è¿™ä¸€å±‚
 		
 		for(Tag t : this.layerTagList1){
-			l.addAll(UtilNormal.table(__create_2_p1(t)));//private List<SubOrderQueryObj> REC; ÕâÒ»²ã
+			l.addAll(UtilNormal.table(__create_2_p1(t)));//private List<SubOrderQueryObj> REC; è¿™ä¸€å±‚
 		}
 		l.add("");
 		l.addAll(UtilNormal.table(__create_1_p2()));
@@ -303,9 +303,9 @@ public class CreateSexResponseVO extends SexVOcreator{
 
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨Ò»²ãp2²¿·Ö:Ìì¸öÌå³ÉÔ±±äÁ¿µÄget set·½·¨.
+	 * åˆ›å»ºä¸€å±‚p2éƒ¨åˆ†:å¤©ä¸ªä½“æˆå‘˜å˜é‡çš„get setæ–¹æ³•.
 	 * </ul>
 	 * @param t
 	 * @return
@@ -314,7 +314,7 @@ public class CreateSexResponseVO extends SexVOcreator{
 		List<String> l = new ArrayList<String>();
 		String innerClassName = this.responseInnerClassNameMap.get(t.getTagName());
 		l.add("/**");
-		l.add(" * »ñÈ¡ĞÅÏ¢¼¯ºÏ");
+		l.add(" * è·å–ä¿¡æ¯é›†åˆ");
 		l.add(" * <br/><br/>");
 		l.add(" * @return");
 		l.add(" */");
@@ -323,7 +323,7 @@ public class CreateSexResponseVO extends SexVOcreator{
 		l.add("}");
 		l.add("");
 		l.add("/**");
-		l.add(" * ÉèÖÃĞÅÏ¢¼¯ºÏ");
+		l.add(" * è®¾ç½®ä¿¡æ¯é›†åˆ");
 		l.add(" * <br/><br/>");
 		l.add(" * @param list");
 		l.add(" */");
@@ -336,9 +336,9 @@ public class CreateSexResponseVO extends SexVOcreator{
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨µÚ¶ş²ã¼¶µÄp2²¿·Ö:Ìí¼Ó³ÉÔ±±äÁ¿µÄget set·½·¨.<br/>
+	 * åˆ›å»ºç¬¬äºŒå±‚çº§çš„p2éƒ¨åˆ†:æ·»åŠ æˆå‘˜å˜é‡çš„get setæ–¹æ³•.<br/>
 	 * </ul>
 	 * @return
 	 */
@@ -347,7 +347,7 @@ public class CreateSexResponseVO extends SexVOcreator{
 		for(Tag t : this.layerTagList2){
 			String innerClassName = this.responseInnerClassNameMap.get(t.getTagName());
 			l.add("/**");
-			l.add(" * »ñÈ¡"+t.getValue());
+			l.add(" * è·å–"+t.getValue());
 			l.add(" * <br/><br/>");
 			l.add(" * @return");
 			l.add(" */");
@@ -356,7 +356,7 @@ public class CreateSexResponseVO extends SexVOcreator{
 			l.add("}");
 			l.add("");
 			l.add("/**");
-			l.add(" * ÉèÖÃ"+t.getValue());
+			l.add(" * è®¾ç½®"+t.getValue());
 			l.add(" * <br/><br/>");
 			l.add(" * @param resultList");
 			l.add(" */");
@@ -369,24 +369,24 @@ public class CreateSexResponseVO extends SexVOcreator{
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨µÚ¶ş²ã¼¶p1²¿·Ö:Ìí¼Ó³ÉÔ±±äÁ¿<br/>
+	 * åˆ›å»ºç¬¬äºŒå±‚çº§p1éƒ¨åˆ†:æ·»åŠ æˆå‘˜å˜é‡<br/>
 	 * </ul>
 	 * @param t
 	 * @return
 	 */
 	private List<String> __create_2_p1(Tag t) {
 		List<String> l = new ArrayList<String>();
-		l.add("/** ĞÅÏ¢Àà¼¯ºÏ */");
+		l.add("/** ä¿¡æ¯ç±»é›†åˆ */");
 		l.add("private List<"+this.responseInnerClassNameMap.get(t.getTagName())+"> "+t.getTagName()+";");
 		return l;
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Á½²ãµÄ×¢²áµÚÒ»²ã¼¶ p1²¿·Ö:Ìí¼Ó³ÉÔ±±äÁ¿.(Ò»²ãµÄÃ»ÓĞÕâ¸ö)<br/>
+	 * ä¸¤å±‚çš„æ³¨å†Œç¬¬ä¸€å±‚çº§ p1éƒ¨åˆ†:æ·»åŠ æˆå‘˜å˜é‡.(ä¸€å±‚çš„æ²¡æœ‰è¿™ä¸ª)<br/>
 	 * </ul>
 	 * @return
 	 */
@@ -404,40 +404,40 @@ public class CreateSexResponseVO extends SexVOcreator{
 
 	protected void checkParamArr() {
 		super.__checkParamArr_0();
-		//1.¼ìÑéRESULTLIST×Ó±êÇ©ÖĞÄÚÈİÍêÕûĞÔ.
-		//1)1²ãµÄ
+		//1.æ£€éªŒRESULTLISTå­æ ‡ç­¾ä¸­å†…å®¹å®Œæ•´æ€§.
+		//1)1å±‚çš„
 		for(Tag t : this.layerTagList1){
 			super.checkTagList(t.getChildTagList());
 		}
-		//2)2²ãµÄ
+		//2)2å±‚çš„
 		for(Tag t : this.layerTagList2){
 			for(Tag i : t.getChildTagList()){
 				super.checkTagList(i.getChildTagList());
 			}
 		}
 		
-		//¼ì²é²ÎÊıÀàĞÍÓĞÎÊÌâÃ».
+		//æ£€æŸ¥å‚æ•°ç±»å‹æœ‰é—®é¢˜æ²¡.
 		checkType();
 		
 	}
 
 	protected void init(Tag resTag) {
 		super.__init_0(resTag);
-		//ResultList class µÄÃû×Ö
+		//ResultList class çš„åå­—
 		String shortName = this.className.substring(0, this.className.lastIndexOf(this.voType)) ;
 		this.resultClassName = shortName + "List";
 		this.objClassName = shortName + "Obj";
 		this.resultVOName = shortName + "ResultVO";
-		//Result±êÇ©.ÔİÊ±Ã»¿´µ½ÀïÃæµÄ×Ó±êÇ©»¹ÓĞ×Ó±êÇ©µÄ~ÓĞÌí¼Ó´¦Àí°É~~
+		//Resultæ ‡ç­¾.æš‚æ—¶æ²¡çœ‹åˆ°é‡Œé¢çš„å­æ ‡ç­¾è¿˜æœ‰å­æ ‡ç­¾çš„~æœ‰æ·»åŠ å¤„ç†å§~~
 		for(Tag t : resTag.getTagByNamesReal("RESULT").getChildTagList()){
 			super.__init_1_separateVariable(t, SexGameConf.responsePaVariableMap);
 		}
 		
-		//<RESULTLIST>µÄ×Ó¼¶±êÇ©.¸ù¾İ²ã¼¶·ÖÀà,Èç:<REC>Ö»ÓĞ×Ó±êÇ©,¶ø<PRS> <ORP>º¬ÓĞ×Ó×Ó±êÇ©.
+		//<RESULTLIST>çš„å­çº§æ ‡ç­¾.æ ¹æ®å±‚çº§åˆ†ç±»,å¦‚:<REC>åªæœ‰å­æ ‡ç­¾,è€Œ<PRS> <ORP>å«æœ‰å­å­æ ‡ç­¾.
 		Tag resusltListTag = resTag.getTagByNamesReal("RESULTLIST");
 		if(null != resusltListTag && null != resusltListTag.getChildTagList())
 		for(Tag t : resusltListTag.getChildTagList()){
-			//Ò»°ãÀ´ËµÖ»ÓĞ1²ã»òÕß2²ã
+			//ä¸€èˆ¬æ¥è¯´åªæœ‰1å±‚æˆ–è€…2å±‚
 			int repeat = t.getMapColor().get(0).split(" ").length;
 			if(repeat == 1){
 				if("RESULTLIST".equals(t.getTagName())){
@@ -448,49 +448,49 @@ public class CreateSexResponseVO extends SexVOcreator{
 			else if(repeat == 2){
 				this.layerTagList2.add(t);
 			}else{
-				throw new RuntimeException("ÉĞ²»Ö§³ÖµÄRESULTLIST²ã¼¶Ç¶Ì×,ÇëÔÚ´Ë´¦Ìí¼Ó.");
+				throw new RuntimeException("å°šä¸æ”¯æŒçš„RESULTLISTå±‚çº§åµŒå¥—,è¯·åœ¨æ­¤å¤„æ·»åŠ .");
 			}
 		}
-		//Èç¹û±êÇ©<RESULTLIST>ÀïÃæÓĞ×Ó±êÇ©Ôò
+		//å¦‚æœæ ‡ç­¾<RESULTLIST>é‡Œé¢æœ‰å­æ ‡ç­¾åˆ™
 		if(this.layerTagList1.size() > 0 || this.layerTagList2.size() > 0){
 			this.hasResultList = true;
 			this.typeList.add("List");
 		}
-		//ÉèÖÃÄÚ²¿ÀàËõĞ´¶ÔÓ¦µÄÈ«ÃûºÍ×¢ÊÍ.
+		//è®¾ç½®å†…éƒ¨ç±»ç¼©å†™å¯¹åº”çš„å…¨åå’Œæ³¨é‡Š.
 		_init_innerClass();
 	}
 	
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÉèÖÃÄÚ²¿ÀàËõĞ´¶ÔÓ¦µÄÈ«Ãû.
+	 * è®¾ç½®å†…éƒ¨ç±»ç¼©å†™å¯¹åº”çš„å…¨å.
 	 * </ul>
 	 */
 	private void _init_innerClass() {
-		//1²ãµÄ
+		//1å±‚çš„
 		_init_innerClass_op(this.layerTagList1);
-		//2²ãµÄ
+		//2å±‚çš„
 		_init_innerClass_op(this.layerTagList2);
 		for(Tag t : this.layerTagList2){
 			_init_innerClass_op(t.getChildTagList());
 		}
-		/**------×¢ÊÍ²»ĞèÒªÄ¬ÈÏ!×Ô¼º²»ÌîÃ»ÓĞ¾ÍËãÁË!------*/
+		/**------æ³¨é‡Šä¸éœ€è¦é»˜è®¤!è‡ªå·±ä¸å¡«æ²¡æœ‰å°±ç®—äº†!------*/
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * °ÑresponseInnerClassNameMapÀï°üº¬XXXµÄvalueÖĞµÄXXXÌæ»»Îªthis.objClassName.<br/>
-	 * Ö÷ÒªÊÇÒòÎªRECµÄÀàÃûÊÇ¶¯Ì¬Éú³ÉµÄ,ÎªÁËÄÜºÍÆäËû±êÇ©Ò»ÑùÍ¬Ñù·½·¨,ÕâÀï×öÁËREC¶ÔÓ¦ÀàÃûµÄĞŞÊÎ.<br/>
-	 * ·½·¨Ö÷ÒªÊÇ__create_infoClass(Tag tag)Õâ¸ö<br/>
+	 * æŠŠresponseInnerClassNameMapé‡ŒåŒ…å«XXXçš„valueä¸­çš„XXXæ›¿æ¢ä¸ºthis.objClassName.<br/>
+	 * ä¸»è¦æ˜¯å› ä¸ºRECçš„ç±»åæ˜¯åŠ¨æ€ç”Ÿæˆçš„,ä¸ºäº†èƒ½å’Œå…¶ä»–æ ‡ç­¾ä¸€æ ·åŒæ ·æ–¹æ³•,è¿™é‡Œåšäº†RECå¯¹åº”ç±»åçš„ä¿®é¥°.<br/>
+	 * æ–¹æ³•ä¸»è¦æ˜¯__create_infoClass(Tag tag)è¿™ä¸ª<br/>
 	 * </ul>
 	 * @param tagList
 	 */
 	private void _init_innerClass_op(List<Tag> tagList) {
 		for(Tag t : tagList){
 			String key = t.getTagName();
-			//Ö÷ÒªÊÇ¶Ô¸¶RECÄÇÖÖÀàÃûÊÇ¶¯Ì¬µÄ.ÓĞĞèÒªµÄ»°È¥responseInnerClassNameMapÀïÌí¼Ó,XXXÊÇ±»Ìæ»»ÄÚÈİ.
+			//ä¸»è¦æ˜¯å¯¹ä»˜RECé‚£ç§ç±»åæ˜¯åŠ¨æ€çš„.æœ‰éœ€è¦çš„è¯å»responseInnerClassNameMapé‡Œæ·»åŠ ,XXXæ˜¯è¢«æ›¿æ¢å†…å®¹.
 			String value = this.responseInnerClassNameMap.get(key).replace("XXX", this.objClassName);
 			this.responseInnerClassNameMap.put(key, value);
 		}
@@ -508,17 +508,17 @@ public class CreateSexResponseVO extends SexVOcreator{
 	}
 
 	/**
-	 * ´´½¨Ö÷ÀàÖĞresultListµÄget set·½·¨.
+	 * åˆ›å»ºä¸»ç±»ä¸­resultListçš„get setæ–¹æ³•.
 	 */
 	protected Collection<? extends String> _createProperty_pa_constructor_response() {
 		List<String> l = new ArrayList<String>();
 		if(this.hasResultList){
 			l.add("");
-			l.add("/** ¼¯ºÏÀà */");
+			l.add("/** é›†åˆç±» */");
 			l.add("private "+this.resultClassName+" RESULTLIST;");
 			l.add("");
 			l.add("/**");
-			l.add(" * »ñÈ¡¼¯ºÏÀà");
+			l.add(" * è·å–é›†åˆç±»");
 			l.add(" * <br/><br/>");
 			l.add(" * @return");
 			l.add(" */");
@@ -527,7 +527,7 @@ public class CreateSexResponseVO extends SexVOcreator{
 			l.add("}");
 			l.add("");
 			l.add("/**");
-			l.add(" * ÉèÖÃ¼¯ºÏÀà");
+			l.add(" * è®¾ç½®é›†åˆç±»");
 			l.add(" * <br/><br/>");
 			l.add(" * @param resultList");
 			l.add(" */");

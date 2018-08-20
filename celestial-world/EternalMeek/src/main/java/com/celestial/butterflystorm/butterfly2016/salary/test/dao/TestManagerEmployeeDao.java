@@ -26,7 +26,7 @@ public class TestManagerEmployeeDao extends TestCase{
 	}
 	
 	public void tes1tAddEmployee() {
-		String information = "<Employee><name>LongTerm</name><age>998</age><gender>0</gender><salary>24000</salary><union>»Ê¼Òµ³,¿Û·Ñµ³,Ãñ½øµ³</union></Employee>";
+		String information = "<Employee><name>LongTerm</name><age>998</age><gender>0</gender><salary>24000</salary><union>çš‡å®¶å…š,æ‰£è´¹å…š,æ°‘è¿›å…š</union></Employee>";
 		Tag t = new Tag(information);
 		Employee employee =  new EmployeeFixed(t);
 		managerEmployeeDao.addEmployee(employee);
@@ -43,7 +43,7 @@ public class TestManagerEmployeeDao extends TestCase{
 	}
 	
 	public void testFindAllEmployee(){
-		List<Employee> l = managerEmployeeDao.findAllEmployees("Î¢");
+		List<Employee> l = managerEmployeeDao.findAllEmployees("å¾®");
 		System.out.println(l.size());
 	}
 	

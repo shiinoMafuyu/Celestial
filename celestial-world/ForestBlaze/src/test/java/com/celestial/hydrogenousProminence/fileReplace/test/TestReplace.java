@@ -30,15 +30,15 @@ public class TestReplace {
 		final String commonEnd = ".*poem end.*";
 		final String commonPath = "src/test/java/com/celestial/hydrogenousProminence/fileReplace/test/";
 		RepDependency dep = new RepDependency()
-				.setSourceFilePath(commonPath + "ʫ.txt")
+				.setSourceFilePath(commonPath + "诗.txt")
 				.setRepMap(new HashMap<String,String[]>(){{
-					put("rep1",new String[]{"poem1 start-+","poem1 end-+",commonStart,commonEnd,commonPath + "չʾ1.txt"});
-					put("rep2",new String[]{"poem2 start-+","poem2 end-+",commonStart,commonEnd,commonPath + "չʾ2.txt"});
+					put("rep1",new String[]{"poem1 start-+","poem1 end-+",commonStart,commonEnd,commonPath + "展示1.txt"});
+					put("rep2",new String[]{"poem2 start-+","poem2 end-+",commonStart,commonEnd,commonPath + "展示2.txt"});
 				}});
 		Replace rep = new Replace(dep,"gbk");
 		rep.executeReplace();
-		String p1 = dep.getRepMap().get("rep1")[4] , f1 = commonPath + "չʾ1Ԥ��.txt";
-		String p2 = dep.getRepMap().get("rep2")[4] , f2 = commonPath + "չʾ2Ԥ��.txt";
+		String p1 = dep.getRepMap().get("rep1")[4] , f1 = commonPath + "展示1预期.txt";
+		String p2 = dep.getRepMap().get("rep2")[4] , f2 = commonPath + "展示2预期.txt";
 		boolean b1 = UtilFile.compareFileContent(p1,f1);
 		boolean b2 = UtilFile.compareFileContent(p2,f2);
 		Assert.assertTrue(b1);

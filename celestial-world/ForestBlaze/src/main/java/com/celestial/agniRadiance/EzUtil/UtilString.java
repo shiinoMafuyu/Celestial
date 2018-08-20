@@ -11,7 +11,7 @@ import java.util.Map.Entry;
 import java.util.regex.Pattern;
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
@@ -19,20 +19,20 @@ import java.util.regex.Pattern;
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
- * ×Ö·û´®Ïà¹Ø´¦Àí<br/>
- * ·Ö3¼¶__Á½¸ö±íÊ¾ºÜÏ¸<br/>
- * _±íÊ¾ÖĞ¼äÏ¸<br/>
- * Ã»ÓĞ_±íÊ¾Á£¶È×î´Ö.
+ * å­—ç¬¦ä¸²ç›¸å…³å¤„ç†<br/>
+ * åˆ†3çº§__ä¸¤ä¸ªè¡¨ç¤ºå¾ˆç»†<br/>
+ * _è¡¨ç¤ºä¸­é—´ç»†<br/>
+ * æ²¡æœ‰_è¡¨ç¤ºç²’åº¦æœ€ç²—.
  * </p>
  */
 public class UtilString {
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * °ÑiµÄÊÖĞ´×ÖÄ¸±ä³É´óĞ´
+	 * æŠŠiçš„æ‰‹å†™å­—æ¯å˜æˆå¤§å†™
 	 * </ul>
 	 * @param str
 	 * @return
@@ -44,9 +44,9 @@ public class UtilString {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * sÊÇ·ñÎªDouble
+	 * sæ˜¯å¦ä¸ºDouble
 	 * </ul>
 	 * @param s
 	 * @return
@@ -62,9 +62,9 @@ public class UtilString {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * sÊÇ·ñÎªInteger
+	 * sæ˜¯å¦ä¸ºInteger
 	 * </ul>
 	 * @param s
 	 * @return
@@ -81,9 +81,9 @@ public class UtilString {
 	
 	/**
 	 * 
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * °ÑÊ×Ğ´×ÖÄ¸´óĞ´±äĞ¡Ğ´
+	 * æŠŠé¦–å†™å­—æ¯å¤§å†™å˜å°å†™
 	 * </ul>
 	 * @param str
 	 * @return
@@ -95,9 +95,9 @@ public class UtilString {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡ÊôĞÔ.
+	 * è·å–å±æ€§.
 	 * </ul>
 	 * @param substring
 	 * @return
@@ -120,14 +120,14 @@ public class UtilString {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new RuntimeException(new StringBuffer("ÊôĞÔ×Ö·û´®").append(sb).append("ÊôĞÔÓĞÎÊÌâ!").toString());
+			throw new RuntimeException(new StringBuffer("å±æ€§å­—ç¬¦ä¸²").append(sb).append("å±æ€§æœ‰é—®é¢˜!").toString());
 		}
 		
 		return map;
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>
@@ -139,9 +139,9 @@ public class UtilString {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡sÖĞµÚÒ»¸ö×Ö·û´® ; Èç"  ko ff xx" ·µ»Øko;
+	 * è·å–sä¸­ç¬¬ä¸€ä¸ªå­—ç¬¦ä¸² ; å¦‚"  ko ff xx" è¿”å›ko;
 	 * </ul>
 	 * @param s
 	 * @return
@@ -154,10 +154,10 @@ public class UtilString {
 		return st.substring(0, index);
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¼ì²éÒ»ĞĞ×Ö·û´®ÀïÊÇ·ñº¬ÓĞÒ»¸öÍêÕûµÄ¼òµ¥±êÇ©.<br/>
-	 * Õâ¸ö±êÇ©²»°üº¬ÊôĞÔ<br/>
+	 * æ£€æŸ¥ä¸€è¡Œå­—ç¬¦ä¸²é‡Œæ˜¯å¦å«æœ‰ä¸€ä¸ªå®Œæ•´çš„ç®€å•æ ‡ç­¾.<br/>
+	 * è¿™ä¸ªæ ‡ç­¾ä¸åŒ…å«å±æ€§<br/>
 	 * </ul>
 	 * @param s
 	 * @return
@@ -179,9 +179,9 @@ public class UtilString {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÕıÔò±í´ïÊ½Æ¥Åä¿ªÍ·°üº¬;
+	 * æ­£åˆ™è¡¨è¾¾å¼åŒ¹é…å¼€å¤´åŒ…å«;
 	 * </ul>
 	 * @param s
 	 * @param regex
@@ -192,9 +192,9 @@ public class UtilString {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÕıÔò±í´ïÊ½Æ¥Åä½áÎ²½áÎ²°üº¬;
+	 * æ­£åˆ™è¡¨è¾¾å¼åŒ¹é…ç»“å°¾ç»“å°¾åŒ…å«;
 	 * </ul>
 	 * @param s
 	 * @param regex
@@ -205,9 +205,9 @@ public class UtilString {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÕıÔò±í´ïÊ½ÈÎÒâÎ»ÖÃ°üº¬;
+	 * æ­£åˆ™è¡¨è¾¾å¼ä»»æ„ä½ç½®åŒ…å«;
 	 * </ul>
 	 * @param s
 	 * @param regex
@@ -218,34 +218,34 @@ public class UtilString {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ×Ö·û´®±ØĞëºÍÕıÔò±í´ïÊ½ÍêÈ«Ò»ÖÂ;
+	 * å­—ç¬¦ä¸²å¿…é¡»å’Œæ­£åˆ™è¡¨è¾¾å¼å®Œå…¨ä¸€è‡´;
 	 * <br/>
 	 * <br/>
 	 * <br/>
-	 * ÕıÔò±í´ïÊ½Ê¹ÓÃĞ¡ËµÃ÷:<br/>
-	 * 1			Êı×Ö1 <br/>
-	 * . 			ÈÎÒâÒ»¸ö×Ö·û <br/>
-	 * (´ø"\"µÄ×¢Òâ×ªÒâ) <br/>
-	 * \d			Êı×Ö <br/>
-	 * \D			·ÇÊı×Ö <br/>
-	 * \w			µ¥¶À×Ö·û([a-zA-Z_0-9]) <br/>
-	 * \W			·Çµ¥¶À×Ö·û <br/>
-	 * [a-z] a ~ z 	ÖĞÒ»¸ö <br/>
-	 * [^a-z]		·Ç a ~ z ÖĞ <br/>
-	 * [0-9A-Za-z] 	0 ~ 9 , A ~ Z , a ~ z ÖĞÒ»¸ö <br/>
-	 * [a-z]{3} 	a ~ z ÖĞ3¸ö <br/>
-	 * [a-z]* 		a ~ z ÖĞ0¸öÒÔÉÏ <br/>
-	 * [a-z]+ 		a ~ z ÖĞ1¸öÒÔÉÏ <br/>
-	 * [a-z]{3,5}	a ~ z ³öÏÖ3~5¸ö <br/>
-	 * [a-z]{3,}	a ~ z ³öÏÖ3¸öÒÔÉÏ <br/>
-	 * ^a			ÒÔa¿ªÍ· <br/>
-	 * b$			ÒÔb½áÎ² <br/>
-	 * FU?			F´ÖÏÖ»òÕßFU´ÖÏÖ() <br/>
-	 * a|b			a»òÕßbÖĞÈÎÒâÒ»¸ö <br/>
-	 * (J|X){2}		J»òÕßXÖĞÈÎÒâÒ»¸ö´æÔÚ2¸ö,ÈçJJ JX XJ XX <br/>
-	 * ()			ÊÓÎªÒ»¸öÕûÌå <br/>
+	 * æ­£åˆ™è¡¨è¾¾å¼ä½¿ç”¨å°è¯´æ˜:<br/>
+	 * 1			æ•°å­—1 <br/>
+	 * . 			ä»»æ„ä¸€ä¸ªå­—ç¬¦ <br/>
+	 * (å¸¦"\"çš„æ³¨æ„è½¬æ„) <br/>
+	 * \d			æ•°å­— <br/>
+	 * \D			éæ•°å­— <br/>
+	 * \w			å•ç‹¬å­—ç¬¦([a-zA-Z_0-9]) <br/>
+	 * \W			éå•ç‹¬å­—ç¬¦ <br/>
+	 * [a-z] a ~ z 	ä¸­ä¸€ä¸ª <br/>
+	 * [^a-z]		é a ~ z ä¸­ <br/>
+	 * [0-9A-Za-z] 	0 ~ 9 , A ~ Z , a ~ z ä¸­ä¸€ä¸ª <br/>
+	 * [a-z]{3} 	a ~ z ä¸­3ä¸ª <br/>
+	 * [a-z]* 		a ~ z ä¸­0ä¸ªä»¥ä¸Š <br/>
+	 * [a-z]+ 		a ~ z ä¸­1ä¸ªä»¥ä¸Š <br/>
+	 * [a-z]{3,5}	a ~ z å‡ºç°3~5ä¸ª <br/>
+	 * [a-z]{3,}	a ~ z å‡ºç°3ä¸ªä»¥ä¸Š <br/>
+	 * ^a			ä»¥aå¼€å¤´ <br/>
+	 * b$			ä»¥bç»“å°¾ <br/>
+	 * FU?			Fç²—ç°æˆ–è€…FUç²—ç°() <br/>
+	 * a|b			aæˆ–è€…bä¸­ä»»æ„ä¸€ä¸ª <br/>
+	 * (J|X){2}		Jæˆ–è€…Xä¸­ä»»æ„ä¸€ä¸ªå­˜åœ¨2ä¸ª,å¦‚JJ JX XJ XX <br/>
+	 * ()			è§†ä¸ºä¸€ä¸ªæ•´ä½“ <br/>
 	 * </ul>
 	 * @param s
 	 * @param regex
@@ -256,7 +256,7 @@ public class UtilString {
 	}
 	
 	/**
-	 * È¥µô×îºón¸ö×Ö·û¡£
+	 * å»æ‰æœ€ånä¸ªå­—ç¬¦ã€‚
 	 * @param s
 	 * @param n
 	 * @return
@@ -266,7 +266,7 @@ public class UtilString {
 	}
 
 	/**
-	 * È¥µô×îÄ©Î²µÄremoveStr×Ö·û£¬Èç¹ûÃ»ÓĞÔò²»¹Ü¡£
+	 * å»æ‰æœ€æœ«å°¾çš„removeStrå­—ç¬¦ï¼Œå¦‚æœæ²¡æœ‰åˆ™ä¸ç®¡ã€‚
 	 * @param s
 	 * @param removeStr
 	 * @return
@@ -280,7 +280,7 @@ public class UtilString {
 	}
 
 	/**
-	 * ¶ÁÈ¡strÖĞclassNameºóÃæÀ¨ºÅÀïµÄÄÚÈİ
+	 * è¯»å–strä¸­classNameåé¢æ‹¬å·é‡Œçš„å†…å®¹
 	 * @param str "className(com.dn.entity.Equipment)"
 	 * @param paramName "className"
 	 * @return
@@ -302,8 +302,8 @@ public class UtilString {
 	private static List<String> COLLECTION_TYPE_LIST= Arrays.asList(new String[]{"List","Map"});
 
 	/**
-	 * ÅĞ¶Ï±äÁ¿ÀàĞÍvariableTypeÊÇ·ñ¼¯ºÏÀàĞÍ ÈçList ºÍMap<br/>
-	 * (ÆäËûÏëµ½ÔÙËµ¡£¡£)ÊÇµÄ»°·µ»ØÀàĞÍ¡£²»ÊÇµÄ»°·µ»Ø¿Õ×Ö·û´®¡£
+	 * åˆ¤æ–­å˜é‡ç±»å‹variableTypeæ˜¯å¦é›†åˆç±»å‹ å¦‚List å’ŒMap<br/>
+	 * (å…¶ä»–æƒ³åˆ°å†è¯´ã€‚ã€‚)æ˜¯çš„è¯è¿”å›ç±»å‹ã€‚ä¸æ˜¯çš„è¯è¿”å›ç©ºå­—ç¬¦ä¸²ã€‚
 	 * @param variableType
 	 * @return
 	 */
@@ -319,10 +319,10 @@ public class UtilString {
 	}
 
 	/**
-	 * È¥µôlist×îºóµÄÒ»¸ö·ûºÅremoveStr Èç","<br/>
-	 * Èç¹û×îºóÒ»ĞĞÊÇ²»º¬","µÄ£¬ÔòÍùÇ°ÕÒÖ±µ½È¥µôÒ»¸ö","ºó·µ»Ø<br/>
-	 * É¾³ı½áÎ²ÊÇremoveStrµÄ£¬Èç¹û¾äÖĞº¬ÓĞÔò²»¹Ü<br/>
-	 * ÉáÆúÄ©Î²ÊÇremoveStrÖ®ºóµÄlistÔªËØ
+	 * å»æ‰listæœ€åçš„ä¸€ä¸ªç¬¦å·removeStr å¦‚","<br/>
+	 * å¦‚æœæœ€åä¸€è¡Œæ˜¯ä¸å«","çš„ï¼Œåˆ™å¾€å‰æ‰¾ç›´åˆ°å»æ‰ä¸€ä¸ª","åè¿”å›<br/>
+	 * åˆ é™¤ç»“å°¾æ˜¯removeStrçš„ï¼Œå¦‚æœå¥ä¸­å«æœ‰åˆ™ä¸ç®¡<br/>
+	 * èˆå¼ƒæœ«å°¾æ˜¯removeSträ¹‹åçš„listå…ƒç´ 
 	 * @param list
 	 * @param removeStr
 	 * @return
@@ -348,10 +348,10 @@ public class UtilString {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÔÚsÖĞÈ¡µÃ×îºóµÄsignÖ®ºóµÄ²¿·Ö¡£<br/>
-	 * Èç£ºez.EzUtil.Util_StringÈ¡µÃ×îºóµÄ.Ö®ºóµÄ£¬¼´ÎªUtil_String¡£
+	 * åœ¨sä¸­å–å¾—æœ€åçš„signä¹‹åçš„éƒ¨åˆ†ã€‚<br/>
+	 * å¦‚ï¼šez.EzUtil.Util_Stringå–å¾—æœ€åçš„.ä¹‹åçš„ï¼Œå³ä¸ºUtil_Stringã€‚
 	 * </ul>
 	 * @param s
 	 * @param sign 
@@ -362,9 +362,9 @@ public class UtilString {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´ÓsÖĞ»ñÈ¡×îºóÒ»¸ösignÖ®Ç°µÄ×Ö·û´®¡£
+	 * ä»sä¸­è·å–æœ€åä¸€ä¸ªsignä¹‹å‰çš„å­—ç¬¦ä¸²ã€‚
 	 * </ul>
 	 * @param s
 	 * @param sign
@@ -375,7 +375,7 @@ public class UtilString {
 	}
 
 	/**
-	 * ·µ»Ø³¤¶ÈÎªnµÄÖÆ±í·û¡£<br/>
+	 * è¿”å›é•¿åº¦ä¸ºnçš„åˆ¶è¡¨ç¬¦ã€‚<br/>
 	 * @param n
 	 * @return
 	 */
@@ -388,7 +388,7 @@ public class UtilString {
 	}
 
 	/**
-	 * ÅĞ¶ÏcÊÇ·ñÊÇÓ¢ÎÄ×ÖÄ¸
+	 * åˆ¤æ–­cæ˜¯å¦æ˜¯è‹±æ–‡å­—æ¯
 	 * @param c
 	 * @return
 	 */
@@ -400,7 +400,7 @@ public class UtilString {
 	}
 
 	/**
-	 * ¸ñÊ½»¯Â·¾¶×Ö·û´®¡£
+	 * æ ¼å¼åŒ–è·¯å¾„å­—ç¬¦ä¸²ã€‚
 	 * @param path
 	 * @return
 	 */
@@ -409,7 +409,7 @@ public class UtilString {
 	}
 
 	/**
-	 * ´´½¨n¸öÖØ¸´µÄstr£¬ºÏ²¢ÎªÒ»¸ö×Ö·û´®¡£
+	 * åˆ›å»ºnä¸ªé‡å¤çš„strï¼Œåˆå¹¶ä¸ºä¸€ä¸ªå­—ç¬¦ä¸²ã€‚
 	 * @param str
 	 * @param n
 	 * @return
@@ -423,8 +423,8 @@ public class UtilString {
 	}
 
 	/**
-	 * ·µ»ØÅä¶Ô×Ö·û´®str³¤¶ÈnÖ®ºóÔÚmatch1ºÍmatch2Ö®¼äµÄ×Ö·û¡£<br/>
-	 * ÀıÈç£º
+	 * è¿”å›é…å¯¹å­—ç¬¦ä¸²stré•¿åº¦nä¹‹ååœ¨match1å’Œmatch2ä¹‹é—´çš„å­—ç¬¦ã€‚<br/>
+	 * ä¾‹å¦‚ï¼š
 	 * getMatchIn("name = 'kurise',name = 'miki'; yesterday once more.","'",";",20)
 	 * --> miki'
 	 * @param str
@@ -441,7 +441,7 @@ public class UtilString {
 	}
 
 	/**
-	 * ÅĞ¶ÏÁ©ÔªËØÊÇ·ñÏàµÈ<br/>
+	 * åˆ¤æ–­ä¿©å…ƒç´ æ˜¯å¦ç›¸ç­‰<br/>
 	 * @param obj1
 	 * @param obj2
 	 * @return
@@ -456,11 +456,11 @@ public class UtilString {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡´Ón¿ªÊ¼£¬match1ºÍÓëÖ®Åä¶ÔµÄmatch2Ö®¼äµÄ×Ö·û´®<br/>
-	 * ²»°üÀ¨match1,match2<br/>
-	 * eg£º
+	 * è·å–ä»nå¼€å§‹ï¼Œmatch1å’Œä¸ä¹‹é…å¯¹çš„match2ä¹‹é—´çš„å­—ç¬¦ä¸²<br/>
+	 * ä¸åŒ…æ‹¬match1,match2<br/>
+	 * egï¼š
 	 * getMatchIn2("0123+(5 * 6 - ( 4* 2 - 3/ (3+1)) + 3 /( 3 * 1))" , "(" , ")" , 6) -- >  " 4* 2 - 3/ (3+1)"
 	 * </ul>
 	 * @param str
@@ -480,7 +480,7 @@ public class UtilString {
 		while(index < str.length()){
 			String minMatch = getMinMatch(str,index,match1,match2);
 			index = str.indexOf(minMatch,index);
-			if(match1.equals(minMatch)){//Èç¹ûºÍmatch1Æ¥ÅäÉî¶È -1,Èç¹ûºÍmatch2Æ¥ÅäÉî¶È +1.Éî¶ÈÎª0Ê±¾ÍÕÒµ½ºÍµÚÒ»¸ömatch1Åä¶ÔµÄmatch2ÁË¡£
+			if(match1.equals(minMatch)){//å¦‚æœå’Œmatch1åŒ¹é…æ·±åº¦ -1,å¦‚æœå’Œmatch2åŒ¹é…æ·±åº¦ +1.æ·±åº¦ä¸º0æ—¶å°±æ‰¾åˆ°å’Œç¬¬ä¸€ä¸ªmatch1é…å¯¹çš„match2äº†ã€‚
 				deepth--;
 			}else{
 				deepth++;
@@ -504,11 +504,11 @@ public class UtilString {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡´Óindex¿ªÊ¼,Æ¥ÅäÆ¥ÅäÖµµ±ÖĞ×î¿¿Ç°µÄ,match<br/>
+	 * è·å–ä»indexå¼€å§‹,åŒ¹é…åŒ¹é…å€¼å½“ä¸­æœ€é å‰çš„,match<br/>
 	 * eg:
-	 * getMinMatch("yuki:{age:17,height:165,home:{jp:'ÉñÄÎ´¨',us:'losAnges'}}","{","}",":") --> ":"
+	 * getMinMatch("yuki:{age:17,height:165,home:{jp:'ç¥å¥ˆå·',us:'losAnges'}}","{","}",":") --> ":"
 	 * </ul>
 	 * @param str
 	 * @param match1
@@ -543,9 +543,9 @@ public class UtilString {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ½ØÈ¡×Ö·û´®£¬Ã»½ØÈ¡µ½·µ»Ønull²»Å×³öÒì³£<br/>
+	 * æˆªå–å­—ç¬¦ä¸²ï¼Œæ²¡æˆªå–åˆ°è¿”å›nullä¸æŠ›å‡ºå¼‚å¸¸<br/>
 	 * </ul>
 	 * @param index1
 	 * @param index2
@@ -560,10 +560,10 @@ public class UtilString {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ½«obj×ªÎªString.´¦ÀíÎªnullµÄÇé¿ö
-	 * °üÀ¨¡¢Long¡¢Integer¡¢µÈÀàĞÍ
+	 * å°†objè½¬ä¸ºString.å¤„ç†ä¸ºnullçš„æƒ…å†µ
+	 * åŒ…æ‹¬ã€Longã€Integerã€ç­‰ç±»å‹
 	 * </ul>
 	 * @param obj
 	 * @return
@@ -576,10 +576,10 @@ public class UtilString {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ×Ö·û´®×ªÎªLong·µ»Ø<br/>
-	 * Ïà¶ÔÓÚStringUtilÀïµÄ·½·¨¿ÉÒÔ·µ»Ønull
+	 * å­—ç¬¦ä¸²è½¬ä¸ºLongè¿”å›<br/>
+	 * ç›¸å¯¹äºStringUtilé‡Œçš„æ–¹æ³•å¯ä»¥è¿”å›null
 	 * </ul>
 	 * @param str
 	 * @param defVal 
@@ -594,9 +594,9 @@ public class UtilString {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ½«ÈÕÆÚ×ªÎªstring¡£´¦ÀíÎªnullµÄÇé¿ö
+	 * å°†æ—¥æœŸè½¬ä¸ºstringã€‚å¤„ç†ä¸ºnullçš„æƒ…å†µ
 	 * </ul>
 	 * @param date
 	 * @return 
@@ -609,9 +609,9 @@ public class UtilString {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ½«str×ªÎªInteger£¬¿É·µ»Ønull
+	 * å°†strè½¬ä¸ºIntegerï¼Œå¯è¿”å›null
 	 * </ul>
 	 * @param str
 	 * @param defval
@@ -626,10 +626,10 @@ public class UtilString {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ½«str¸ñÊ½»¯Îª³¤¶ÈlengthµÄ×Ö·û´®£¬²»×ãµÄ²¿·ÖÔÚÍ·²¿ÓÃn ¸ö append×Ö·û²¹³ä£¬³¬³öÁËµÄ½ØÈ¡Ä©Î²length¸ö<br/>
-	 * eg£ºfmtStr("123","0",5) --> "00123"
+	 * å°†stræ ¼å¼åŒ–ä¸ºé•¿åº¦lengthçš„å­—ç¬¦ä¸²ï¼Œä¸è¶³çš„éƒ¨åˆ†åœ¨å¤´éƒ¨ç”¨n ä¸ª appendå­—ç¬¦è¡¥å……ï¼Œè¶…å‡ºäº†çš„æˆªå–æœ«å°¾lengthä¸ª<br/>
+	 * egï¼šfmtStr("123","0",5) --> "00123"
 	 * </ul>
 	 * @param str
 	 * @param append
@@ -647,9 +647,9 @@ public class UtilString {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨Ò»¸ö³¤¶ÈÎªlength µÄappendµÄÖØ¸´×Ö·û<br/>
+	 * åˆ›å»ºä¸€ä¸ªé•¿åº¦ä¸ºlength çš„appendçš„é‡å¤å­—ç¬¦<br/>
 	 * eg: createNstr("a",5) -->"aaaaa"
 	 * </ul>
 	 * @param append
@@ -666,10 +666,10 @@ public class UtilString {
 	
 	/**
 	 * 
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ÅĞ¶ÏobjÊÇ·ñÎªÊı×Ö£¬nullÒ²²»Ëã<br/>
-	 * °üº¬ÀàĞÍLong,Integer,Double,²»º¬StringÀàĞÍ
+	 * åˆ¤æ–­objæ˜¯å¦ä¸ºæ•°å­—ï¼Œnullä¹Ÿä¸ç®—<br/>
+	 * åŒ…å«ç±»å‹Long,Integer,Double,ä¸å«Stringç±»å‹
 	 * </ul>
 	 * @param obj
 	 * @return
@@ -687,9 +687,9 @@ public class UtilString {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ½«obj×ªÎªDouble£¬obj¿ÉÄÜÊÇString¡¢Double¡¢Integer¡¢Long
+	 * å°†objè½¬ä¸ºDoubleï¼Œobjå¯èƒ½æ˜¯Stringã€Doubleã€Integerã€Long
 	 * </ul>
 	 * @param obj
 	 * @return 

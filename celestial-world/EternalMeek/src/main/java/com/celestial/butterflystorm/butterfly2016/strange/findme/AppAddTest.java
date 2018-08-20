@@ -21,7 +21,7 @@ public class AppAddTest {
     public static void appadd() { 
 
         try { 
-            //´´½¨Á¬½Ó 
+            //åˆ›å»ºè¿æ¥ 
             URL url = new URL(ADD_URL); 
             HttpURLConnection connection = (HttpURLConnection) url 
                     .openConnection(); 
@@ -35,11 +35,11 @@ public class AppAddTest {
 
             connection.connect(); 
 
-            //POSTÇëÇó 
+            //POSTè¯·æ±‚ 
             DataOutputStream out = new DataOutputStream( 
                     connection.getOutputStream()); 
             JSONObject obj = new JSONObject(); 
-//            obj.element("app_name", "asdf");  ÔõÃ´Òª±¨´í 2017Äê3ÔÂ24ÈÕ01:05:26 wangzg
+//            obj.element("app_name", "asdf");  æ€ä¹ˆè¦æŠ¥é”™ 2017å¹´3æœˆ24æ—¥01:05:26 wangzg
 //            obj.element("app_ip", "10.21.243.234"); 
 //            obj.element("app_port", 8080); 
 //            obj.element("app_type", "001"); 
@@ -49,7 +49,7 @@ public class AppAddTest {
             out.flush(); 
             out.close(); 
 
-            //¶ÁÈ¡ÏìÓ¦ 
+            //è¯»å–å“åº” 
             BufferedReader reader = new BufferedReader(new InputStreamReader( 
                     connection.getInputStream())); 
             String lines; 
@@ -60,7 +60,7 @@ public class AppAddTest {
             } 
             System.out.println(sb); 
             reader.close(); 
-            // ¶Ï¿ªÁ¬½Ó 
+            // æ–­å¼€è¿æ¥ 
             connection.disconnect(); 
         } catch (MalformedURLException e) { 
             e.printStackTrace(); 

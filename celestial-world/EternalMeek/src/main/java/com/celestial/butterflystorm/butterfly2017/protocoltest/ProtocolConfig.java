@@ -1,9 +1,9 @@
 /******************************************************************
  * Protocol.java
  * Copyright 2017 by WZG. All Rights Reserved.
- * CreateDate£º2017Äê6ÔÂ17ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´6æœˆ17æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.butterflystorm.butterfly2017.protocoltest;
@@ -12,15 +12,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê6ÔÂ17ÈÕ
+ *                        ---- wangzg 2017å¹´6æœˆ17æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
  * 
  * </p>
@@ -42,7 +42,7 @@ public class ProtocolConfig {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul> 
@@ -76,7 +76,7 @@ public class ProtocolConfig {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul> 
@@ -87,17 +87,17 @@ public class ProtocolConfig {
 						"<MEBS_MOBILE>" + 
 						"	<REP name=\"game_type\">" + 
 						"		<RESULT>" + 
-						"			<RETCODE>·µ»ØÂë0³É¹¦, ÆäËûÎªÊ§°Ü£¬´íÎóÃèÊöÔÚARGSÖĞ</RETCODE>" + 
-						"			<ARGS>ÌáÊ¾ĞÅÏ¢²ÎÊı£¬¶à¸ö²ÎÊıÊ¹ÓÃ·ûºÅ | ·Ö¸ô £¬Ã»ÓĞ²ÎÊıÊ±¸Ã±êÇ©²»·µ»Ø¡£" + 
+						"			<RETCODE>è¿”å›ç 0æˆåŠŸ, å…¶ä»–ä¸ºå¤±è´¥ï¼Œé”™è¯¯æè¿°åœ¨ARGSä¸­</RETCODE>" + 
+						"			<ARGS>æç¤ºä¿¡æ¯å‚æ•°ï¼Œå¤šä¸ªå‚æ•°ä½¿ç”¨ç¬¦å· | åˆ†éš” ï¼Œæ²¡æœ‰å‚æ•°æ—¶è¯¥æ ‡ç­¾ä¸è¿”å›ã€‚" + 
 						"			</ARGS>" + 
-						"			<DID>Ä¬ÈÏÀà±ğ±àºÅ</DID>" + 
+						"			<DID>é»˜è®¤ç±»åˆ«ç¼–å·</DID>" + 
 						"			</RESULT>" + 
 						"		<RESULTLIST>" + 
 						"			<REC>" + 
-						"				<ID>Àà±ğ±àºÅ</ ID >" + 
-						"				<N>Àà±ğÃû³Æ</N>" + 
-						"				<B>ËùĞè×Ú¶¹Êı</B>" + 
-						"				<ICOURL>Í¼±êµØÖ·</ICOURL>" + 
+						"				<ID>ç±»åˆ«ç¼–å·</ ID >" + 
+						"				<N>ç±»åˆ«åç§°</N>" + 
+						"				<B>æ‰€éœ€å®—è±†æ•°</B>" + 
+						"				<ICOURL>å›¾æ ‡åœ°å€</ICOURL>" + 
 						"				</REC>" + 
 						"		</RESULTLIST>" + 
 						"	</REP>" + 

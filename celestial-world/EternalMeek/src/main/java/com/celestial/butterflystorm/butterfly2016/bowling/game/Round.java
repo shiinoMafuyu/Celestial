@@ -24,28 +24,28 @@ public class Round {
 	}
 	
 	private void check(int pins) {
-		String message = "ÇëÖØĞÂÂ¼Èë.";
+		String message = "è¯·é‡æ–°å½•å…¥.";
 		if(pins<0)
-			throw new RuntimeException("»÷µ¹Êı²»ÄÜĞ¡ÓÚÁã" + message);
+			throw new RuntimeException("å‡»å€’æ•°ä¸èƒ½å°äºé›¶" + message);
 		else if(pins >10)
-			throw new RuntimeException("»÷µ¹Êı²»ÄÜ´óÓÚ10" + message);
+			throw new RuntimeException("å‡»å€’æ•°ä¸èƒ½å¤§äº10" + message);
 		else if((scoresArr[0] + scoresArr[1]) > 10)
-			throw new RuntimeException("×Ü¹²»÷µ¹Êı²»ÄÜ³¬¹ı10" + message);
+			throw new RuntimeException("æ€»å…±å‡»å€’æ•°ä¸èƒ½è¶…è¿‡10" + message);
 		
 	}
 
 	public int score(Round nextRound){
 		if(!throwFinish)
-			throw new RuntimeException("ÉĞÎ´Í¶ÖÀÍê³É,ÎŞ·ÖÊı");
+			throw new RuntimeException("å°šæœªæŠ•æ·å®Œæˆ,æ— åˆ†æ•°");
 		calculateScore(nextRound);
 		return score;
 	}
 	
-	private void calculateScore(Round nextRound) {//Òì³£¹ÜÀí¾ÍÃâÁËÂï
+	private void calculateScore(Round nextRound) {//å¼‚å¸¸ç®¡ç†å°±å…äº†å˜›
 		score = scoresArr[0] + scoresArr[1];
 		if(strike || spare){
 			if(!nextRound.isThrowFinish())
-				throw new RuntimeException("´ËÂÖstrike»òÕßspare,ĞèµÈ´ınextRoundÍ¶ÖÀÍê³É.");//ËäÈ»spare²»±ØÍêÈ«µÈ´ıÏÂÒ»ÂÖÍê³É..ÕâÑù±È½Ï¾«¼ò°É..»òÕßËµÕâÑù¿ÉÒÔ¾«¼ò,ÄÇ¸ü´ó³ß¶ÈÉÏÒ²ÄÜ,ÄÇÆñ²»ÊÇ¸´ÔÓ¹¦ÄÜ¶¼²»×öÁË,È«¾«¼ò?No,°ÑÊÇ·ñ±ØĞë(Ó°Ïì½Ï´ó,ÒµÎñĞèÇó»òÕß²Ù×÷ÌåÑé)ÄÉÎª¿¼ÂÇÌõ¼ş¼´¿É.
+				throw new RuntimeException("æ­¤è½®strikeæˆ–è€…spare,éœ€ç­‰å¾…nextRoundæŠ•æ·å®Œæˆ.");//è™½ç„¶spareä¸å¿…å®Œå…¨ç­‰å¾…ä¸‹ä¸€è½®å®Œæˆ..è¿™æ ·æ¯”è¾ƒç²¾ç®€å§..æˆ–è€…è¯´è¿™æ ·å¯ä»¥ç²¾ç®€,é‚£æ›´å¤§å°ºåº¦ä¸Šä¹Ÿèƒ½,é‚£å²‚ä¸æ˜¯å¤æ‚åŠŸèƒ½éƒ½ä¸åšäº†,å…¨ç²¾ç®€?No,æŠŠæ˜¯å¦å¿…é¡»(å½±å“è¾ƒå¤§,ä¸šåŠ¡éœ€æ±‚æˆ–è€…æ“ä½œä½“éªŒ)çº³ä¸ºè€ƒè™‘æ¡ä»¶å³å¯.
 			score += nextRound.getScoresArr()[0];
 			if(strike)
 				score += nextRound.getScoresArr()[1];

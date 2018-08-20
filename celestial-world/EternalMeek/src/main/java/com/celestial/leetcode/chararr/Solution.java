@@ -1,9 +1,9 @@
 /******************************************************************
  * Solution.java
  * Copyright 2017 by WZG. All Rights Reserved.
- * CreateDate£º2017Äê10ÔÂ12ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´10æœˆ12æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.leetcode.chararr;

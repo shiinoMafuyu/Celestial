@@ -18,7 +18,7 @@ import com.celestial.butterflystorm.butterfly2017.mybatisHelper.depender.ENTITYd
 
 /**
  * 
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
@@ -27,16 +27,16 @@ import com.celestial.butterflystorm.butterfly2017.mybatisHelper.depender.ENTITYd
  * </p>
  * 
  * <p> 
- * ÓĞÁ½ÖÖset·½·¨¿ÉÑ¡£º
- * 1¡£ÆÕÍ¨µÄset£»(private Collection<? extends String> createAsetMethod)
- * 2.·µ»Ø¶ÔÏó×ÔÉíµÄset·½·¨¡£(¾Í¿ÉÒÔÕâÃ´ÓÃÁË£¬new object().setXX("").setXY("").setXZ("");) (private Collection<? extends String> createAsetMethod2)
+ * æœ‰ä¸¤ç§setæ–¹æ³•å¯é€‰ï¼š
+ * 1ã€‚æ™®é€šçš„setï¼›(private Collection<? extends String> createAsetMethod)
+ * 2.è¿”å›å¯¹è±¡è‡ªèº«çš„setæ–¹æ³•ã€‚(å°±å¯ä»¥è¿™ä¹ˆç”¨äº†ï¼Œnew object().setXX("").setXY("").setXZ("");) (private Collection<? extends String> createAsetMethod2)
  * </p>
  */
 public class ENTITYcreator {
 
 	private boolean isSpecialsetter = true;
 	/**
-	 * ¸ù¾İÊÇ·ñº¬ÓĞÏàÓ¦µÄÀàĞÍÌí¼Óµ¼Èë°ü
+	 * æ ¹æ®æ˜¯å¦å«æœ‰ç›¸åº”çš„ç±»å‹æ·»åŠ å¯¼å…¥åŒ…
 	 * 
 	 */
 	@SuppressWarnings("serial")
@@ -47,7 +47,7 @@ public class ENTITYcreator {
 		put("List","import java.util.List;");
 	}};
 	/**
-	 * ÌØ¶¨»·¾³ĞèÒªÌí¼ÓµÄ¨r(¨s¨Œ¨t)¨q
+	 * ç‰¹å®šç¯å¢ƒéœ€è¦æ·»åŠ çš„ï¿½r(ï¿½sï¿½ï¿½t)ï¿½q
 	 */
 	@SuppressWarnings("serial")
 	Map<String,String> packageMap2  = new LinkedHashMap<String, String>(){{
@@ -72,15 +72,15 @@ public class ENTITYcreator {
 	List<String> packageInfo = new ArrayList<String>();
 	List<String> annotationInfo = new ArrayList<String>();
 	
-	/**×îÖÕ½á¹û´æ·Å*/
+	/**æœ€ç»ˆç»“æœå­˜æ”¾*/
 	List<String> thisClass = new ArrayList<String>();
 	
 	/**
-	 * <b>¹¹Ôì·½·¨</b>
-	 * ¹¹ÔìÒ»¸öÄÇÉ¶Àà
+	 * <b>æ„é€ æ–¹æ³•</b>
+	 * æ„é€ ä¸€ä¸ªé‚£å•¥ç±»
 	 * <br/>
-	 * @param lsArr ±äÁ¿Êı×é
-	 * @param qualifiedName ÀàµÄÈ«³Æ
+	 * @param lsArr å˜é‡æ•°ç»„
+	 * @param qualifiedName ç±»çš„å…¨ç§°
 	 */
 	public ENTITYcreator(ENTITYdepender entityDepender) {
 		super();
@@ -93,7 +93,7 @@ public class ENTITYcreator {
 		constructors = createConstructorsMethod();
 		toString = createToStringMethod();
 		
-//		ÓÃµÄGet Set»ìºÏÅÅÁĞ Õâ¸öÃ»ÓÃ
+//		ç”¨çš„Get Setæ··åˆæ’åˆ— è¿™ä¸ªæ²¡ç”¨
 //		getMethods = createGetMethods();
 //		setMethods = createSetMethods();
 		
@@ -180,9 +180,9 @@ public class ENTITYcreator {
 		return l;
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Õû¸öÀàµÄËùÓĞĞĞ
+	 * æ•´ä¸ªç±»çš„æ‰€æœ‰è¡Œ
 	 * </ul>
 	 * @return
 	 */
@@ -211,23 +211,23 @@ public class ENTITYcreator {
 		return l;
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * Ò»Ğ©²»ÖØÒªµÄ¶îÍâĞÅÏ¢
+	 * ä¸€äº›ä¸é‡è¦çš„é¢å¤–ä¿¡æ¯
 	 * </ul>
 	 * @return
 	 */
 	private Collection<? extends String> createExtra1() {
 		List<String> l =new ArrayList<String>();
 		l.add("");
-//		l.add("/** ĞòÁĞºÅ */");
+//		l.add("/** åºåˆ—å· */");
 //		l.add("private static final long serialVersionUID = 1L;");
 		return l;
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨×¢½âĞÅÏ¢~
+	 * åˆ›å»ºæ³¨è§£ä¿¡æ¯~
 	 * </ul>
 	 * @return
 	 */
@@ -235,7 +235,7 @@ public class ENTITYcreator {
 		List<String> l = new ArrayList<String>();
 		l.add("/**");
 		l.add(" * ");
-		l.add(" * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> ");
+		l.add(" * <b>ä¿®æ”¹è®°å½•ï¼š</b> ");
 		l.add(" * <p>");
 		l.add(" * <li>");
 		l.add(" * ");
@@ -243,7 +243,7 @@ public class ENTITYcreator {
 		l.add(" * </li>");
 		l.add(" * </p>");
 		l.add(" * ");
-		l.add(" * <b>ÀàËµÃ÷£º</b>");
+		l.add(" * <b>ç±»è¯´æ˜ï¼š</b>");
 		l.add(" * <p> ");
 		l.add(" * ");
 		l.add(" * </p>");
@@ -252,9 +252,9 @@ public class ENTITYcreator {
 		return l;
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨È«²¿set·½·¨
+	 * åˆ›å»ºå…¨éƒ¨setæ–¹æ³•
 	 * </ul>
 	 * @return
 	 */
@@ -271,9 +271,9 @@ public class ENTITYcreator {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨Ò»¸öset·½·¨
+	 * åˆ›å»ºä¸€ä¸ªsetæ–¹æ³•
 	 * </ul>
 	 * @param sArr
 	 * @return
@@ -283,9 +283,9 @@ public class ENTITYcreator {
 		String paramCase = UtilString.transHeadToLowerCase(sArr[0]);
 		String methodCase = UtilString.transHeadToUpperCase(sArr[0]);
 		l.add("/**");
-		l.add(" * <b>·½·¨ËµÃ÷£º</b>");
+		l.add(" * <b>æ–¹æ³•è¯´æ˜ï¼š</b>");
 		l.add(" * <ul>");
-		l.add(" * ÉèÖÃ" + sArr[2]);
+		l.add(" * è®¾ç½®" + sArr[2]);
 		l.add(" * </ul>");
 		l.add(" * @param " + UtilString.transHeadToLowerCase(sArr[0]));
 		l.add(" */");
@@ -301,9 +301,9 @@ public class ENTITYcreator {
 		String paramCase = UtilString.transHeadToLowerCase(sArr[0]);
 		String methodCase = UtilString.transHeadToUpperCase(sArr[0]);
 		l.add("/**");
-		l.add(" * <b>·½·¨ËµÃ÷£º</b>");
+		l.add(" * <b>æ–¹æ³•è¯´æ˜ï¼š</b>");
 		l.add(" * <ul>");
-		l.add(" * ÉèÖÃ" + sArr[2]);
+		l.add(" * è®¾ç½®" + sArr[2]);
 		l.add(" * </ul>");
 		l.add(" * @param " + UtilString.transHeadToLowerCase(sArr[0]));
 		l.add(" */");
@@ -317,9 +317,9 @@ public class ENTITYcreator {
 	
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨get·½·¨
+	 * åˆ›å»ºgetæ–¹æ³•
 	 * </ul>
 	 * @return
 	 */
@@ -332,9 +332,9 @@ public class ENTITYcreator {
 		return l;
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨Ò»¸öget·½·¨
+	 * åˆ›å»ºä¸€ä¸ªgetæ–¹æ³•
 	 * </ul>
 	 * @param sArr
 	 * @return
@@ -342,9 +342,9 @@ public class ENTITYcreator {
 	private Collection<? extends String> createAgetMethod(String[] sArr) {
 		List<String> l = new ArrayList<String>();
 		l.add("/**");
-		l.add(" * <b>·½·¨ËµÃ÷£º</b>");
+		l.add(" * <b>æ–¹æ³•è¯´æ˜ï¼š</b>");
 		l.add(" * <ul>");
-		l.add(" * »ñÈ¡" + sArr[2]  );
+		l.add(" * è·å–" + sArr[2]  );
 		l.add(" * </ul>");
 		l.add(" * @return");
 		l.add(" */");
@@ -356,9 +356,9 @@ public class ENTITYcreator {
 		return l;
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨³ÉÔ±±äÁ¿
+	 * åˆ›å»ºæˆå‘˜å˜é‡
 	 * </ul>
 	 * @return
 	 */
@@ -377,7 +377,7 @@ public class ENTITYcreator {
 			return l;
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new RuntimeException("Éú³É³ÉÔ±±äÁ¿³ö´í£¬¹ØÁªÊı¾İ£º"+sx[0]);
+			throw new RuntimeException("ç”Ÿæˆæˆå‘˜å˜é‡å‡ºé”™ï¼Œå…³è”æ•°æ®ï¼š"+sx[0]);
 		}
 	}
 	
@@ -385,9 +385,9 @@ public class ENTITYcreator {
 	
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¸ù¾İ°üº¬µÄÀàµÄĞÅÏ¢µ¼Èë°ü
+	 * æ ¹æ®åŒ…å«çš„ç±»çš„ä¿¡æ¯å¯¼å…¥åŒ…
 	 * </ul>
 	 * @return
 	 */
@@ -406,7 +406,7 @@ public class ENTITYcreator {
 		return l;
 	}
 	/**
-	 * ¸ù¾İÒ»¸ö±äÁ¿ÀàĞÍ»ñÈ¡Æäµ¼°üĞÅÏ¢
+	 * æ ¹æ®ä¸€ä¸ªå˜é‡ç±»å‹è·å–å…¶å¯¼åŒ…ä¿¡æ¯
 	 * @param string
 	 * @return
 	 */
@@ -417,9 +417,9 @@ public class ENTITYcreator {
 		return this.packageMap.get(impotKey);
 	}
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ´´½¨getºÍset·½·¨½»²æµÄ·½·¨
+	 * åˆ›å»ºgetå’Œsetæ–¹æ³•äº¤å‰çš„æ–¹æ³•
 	 * </ul>
 	 * @return
 	 */

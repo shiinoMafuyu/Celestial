@@ -29,7 +29,7 @@ public class AnotherClassLoader extends ClassLoader {
 	        return theClass;
 	    }
 	    /**
-	     * ±ğÈËÕâÊÇÓÃ¹ÜµÀÁ÷»ñÈ¡µÄ·½Ê½..
+	     * åˆ«äººè¿™æ˜¯ç”¨ç®¡é“æµè·å–çš„æ–¹å¼..
 	     * @param className
 	     * @return
 	     * @throws ClassNotFoundException

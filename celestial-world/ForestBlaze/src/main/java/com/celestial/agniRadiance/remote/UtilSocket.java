@@ -1,9 +1,9 @@
 /******************************************************************
  * UtilSocket.java
  * Copyright ${year} by WZG. All Rights Reserved.
- * CreateDate£º2017Äê9ÔÂ14ÈÕ
- * Author£ºwangzg
- * Version£º1.0.0
+ * CreateDateï¼š2017å¹´9æœˆ14æ—¥
+ * Authorï¼šwangzg
+ * Versionï¼š1.0.0
  ******************************************************************/
 
 package com.celestial.agniRadiance.remote;
@@ -18,15 +18,15 @@ import com.celestial.agniRadiance.thread.AbstractThread;
 import com.celestial.agniRadiance.tuple.ThreeTuple;
 
 /**
- * <b>ĞŞ¸Ä¼ÇÂ¼£º</b> 
+ * <b>ä¿®æ”¹è®°å½•ï¼š</b> 
  * <p>
  * <li>
  * 
- *                        ---- wangzg 2017Äê9ÔÂ14ÈÕ
+ *                        ---- wangzg 2017å¹´9æœˆ14æ—¥
  * </li>
  * </p>
  * 
- * <b>ÀàËµÃ÷£º</b>
+ * <b>ç±»è¯´æ˜ï¼š</b>
  * <p> 
  * 
  * </p>
@@ -35,13 +35,13 @@ public class UtilSocket {
 	
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * »ñÈ¡Ò»¸ösocketÁ¬½Ó
+	 * è·å–ä¸€ä¸ªsocketè¿æ¥
 	 * </ul>
-	 * @param ip µØÖ·
-	 * @param port ¶Ë¿Ú
-	 * @param timeout ³¬Ê±Ê±¼ä
+	 * @param ip åœ°å€
+	 * @param port ç«¯å£
+	 * @param timeout è¶…æ—¶æ—¶é—´
 	 * @return 
 	 * @throws IOException 
 	 * @throws UnknownHostException 
@@ -50,13 +50,13 @@ public class UtilSocket {
 		Socket socket = null;
 		try {
 			socket = new Socket(ip, port);
-			// µ±socket¹Ø±ÕÊ±Ç¿ĞĞ¹Ø±Õµ×²ãsocketÁ¬½Ó
+			// å½“socketå…³é—­æ—¶å¼ºè¡Œå…³é—­åº•å±‚socketè¿æ¥
 			socket.setSoLinger(true, 0);
-			// tcp¼àÊÓ¸ÃÁ¬½ÓÊÇ·ñÓĞĞ§£¬ÎŞĞ§¶Ï¿ªÁ¬½Ó
+			// tcpç›‘è§†è¯¥è¿æ¥æ˜¯å¦æœ‰æ•ˆï¼Œæ— æ•ˆæ–­å¼€è¿æ¥
 			socket.setKeepAlive(true);
-			// ²»²ÉÓÃNegaleËã·¨£¬Á¢¼´·¢ËÍÊı¾İ
+			// ä¸é‡‡ç”¨Negaleç®—æ³•ï¼Œç«‹å³å‘é€æ•°æ®
 			socket.setTcpNoDelay(true);
-			//ÉèÖÃ³¬Ê±Ê±¼ä
+			//è®¾ç½®è¶…æ—¶æ—¶é—´
 			socket.setSoTimeout(timeout);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -66,9 +66,9 @@ public class UtilSocket {
 	}
 	
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
-	 * ¹Ø±Õsocket
+	 * å…³é—­socket
 	 * </ul>
 	 * @param socket
 	 */
@@ -82,7 +82,7 @@ public class UtilSocket {
 	}
 
 	/**
-	 * <b>·½·¨ËµÃ÷£º</b>
+	 * <b>æ–¹æ³•è¯´æ˜ï¼š</b>
 	 * <ul>
 	 * 
 	 * </ul>

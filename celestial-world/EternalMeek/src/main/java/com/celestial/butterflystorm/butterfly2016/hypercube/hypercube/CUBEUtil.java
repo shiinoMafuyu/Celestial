@@ -7,7 +7,7 @@ public class CUBEUtil {
 	public static final Double LENGTH=100.0;
 	public static final Double START=0.0;
 	/**
-	 * »ñÈ¡Á½µã¼äµÄ¾àÀë(ÏßµÄ³¤¶È)
+	 * è·å–ä¸¤ç‚¹é—´çš„è·ç¦»(çº¿çš„é•¿åº¦)
 	 * @param a
 	 * @param b
 	 * @return
@@ -17,8 +17,8 @@ public class CUBEUtil {
 	}
 
 	/**
-	 * ÒÔa,bÎª»ùµã,»ñÈ¡Ä£Á¿,ÔÙÓÉlengthÖØÉèbµÄÎ»ÖÃ
-	 * ÖØÉè
+	 * ä»¥a,bä¸ºåŸºç‚¹,è·å–æ¨¡é‡,å†ç”±lengthé‡è®¾bçš„ä½ç½®
+	 * é‡è®¾
 	 * @param a
 	 * @param b
 	 * @param length
@@ -31,7 +31,7 @@ public class CUBEUtil {
 	}
 
 	/**
-	 * ¸ù¾İÁ½µã»ñÈ¡µ¥Î»Ä£Á¿
+	 * æ ¹æ®ä¸¤ç‚¹è·å–å•ä½æ¨¡é‡
 	 * @param a
 	 * @param b
 	 * @return
@@ -42,7 +42,7 @@ public class CUBEUtil {
 	}
 
 	/**
-	 * ¼ÆËã×éºÏÊı
+	 * è®¡ç®—ç»„åˆæ•°
 	 * @param a
 	 * @param b
 	 * @return
@@ -63,26 +63,26 @@ public class CUBEUtil {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		//´´½¨ nCm  ok!
+		//åˆ›å»º nCm  ok!
 		/*List<List<Double>> lf=createPointZero1(3,2,0);
 		for(List<Double> i:lf){
 			System.out.println(i);
 		}
 		System.out.println(lf.size());*/
-		//´´½¨¿Õ¼äµã¼¯   ok!
+		//åˆ›å»ºç©ºé—´ç‚¹é›†   ok!
 		int n=5;
 		List<List<Double>> l=createPointZero(n);
 		for(List<Double> i:l){
 			System.out.println(i);
 		}
 		/*System.out.println("============================================");
-		//´´½¨¿Õ¼äÏß¼¯ ok!
+		//åˆ›å»ºç©ºé—´çº¿é›† ok!
 		List<List<Double>> l1=createPointZero(n);
 		List<List<List<Double>>> lx=createLineZero(l1);
 		for(List<List<Double>> i:lx){
 			System.out.println(i);
 		}
-		//´´½¨Í¶Ó°Ïß
+		//åˆ›å»ºæŠ•å½±çº¿
 		System.out.println("======================xx====================");
 		List<Line> lineList=CUBEUtil.createLinePlain(lx);
 		for(Line i:lineList){
@@ -94,25 +94,25 @@ public class CUBEUtil {
 	
 
 	/**
-	 * ´´½¨¿Õ¼äÖĞÎ¬¶ÈÎªnµÄËùÓĞµã
+	 * åˆ›å»ºç©ºé—´ä¸­ç»´åº¦ä¸ºnçš„æ‰€æœ‰ç‚¹
 	 * @param n
 	 * @return
 	 */
 	public static List<List<Double>> createPointZero(int n) {
 		List<List<Double>> l=new ArrayList<List<Double>>();
 		for(int i=0;i<=n;i++){
-			l.addAll(createPointZero1(n,i,0));//±ğÄÔ²ĞĞŞ¸ÄºóÃæµÄÄ¬ÈÏÖµ0
+			l.addAll(createPointZero1(n,i,0));//åˆ«è„‘æ®‹ä¿®æ”¹åé¢çš„é»˜è®¤å€¼0
 		}
 		return l;
 	}
 
 	/**
 	 * 
-	 * ·µ»Ø²»ÖØ¸´µÄ×éºÏÁĞ±í5C2 Äã¶®µÄ°É
+	 * è¿”å›ä¸é‡å¤çš„ç»„åˆåˆ—è¡¨5C2 ä½ æ‡‚çš„å§
 	 * 
-	 * @param n Î¬Êı
-	 * @param m	Ñ¡ÔñÖµ
-	 * @param p ³õÊ¼ÖµÊÇ0,ÇëÎğÄÔ²ĞÈ¥ĞŞ¸Ä
+	 * @param n ç»´æ•°
+	 * @param m	é€‰æ‹©å€¼
+	 * @param p åˆå§‹å€¼æ˜¯0,è¯·å‹¿è„‘æ®‹å»ä¿®æ”¹
 	 * @return
 	 */
 	public static List<List<Double>> createPointZero1(int n, int m, int p) {
@@ -142,8 +142,8 @@ public class CUBEUtil {
 	}
 
 	/**
-	 * ½¨Á¢Ò»¸ö³¤¶ÈÎªnµÄ DoubleÀàĞÍList¼¯ºÏ
-	 * Ïàµ±ÓÚÒ»¸öÎ´Éè¶¨µÄÎ¬¶Èµã(nÎ¬¿Õ¼äÔ­µã)
+	 * å»ºç«‹ä¸€ä¸ªé•¿åº¦ä¸ºnçš„ Doubleç±»å‹Listé›†åˆ
+	 * ç›¸å½“äºä¸€ä¸ªæœªè®¾å®šçš„ç»´åº¦ç‚¹(nç»´ç©ºé—´åŸç‚¹)
 	 * @param n
 	 * @return
 	 */
@@ -156,15 +156,15 @@ public class CUBEUtil {
 	}
 
 	/**
-	 * ÓÉ¿Õ¼äµã´´Ôì³öËùÓĞ¿Õ¼äÏß
-	 * hh~Ô­À´ÎÒµÄÏß±¾À´¾ÍÊÇµãµÄÒıÓÃ ¹ş¹ş~
+	 * ç”±ç©ºé—´ç‚¹åˆ›é€ å‡ºæ‰€æœ‰ç©ºé—´çº¿
+	 * hh~åŸæ¥æˆ‘çš„çº¿æœ¬æ¥å°±æ˜¯ç‚¹çš„å¼•ç”¨ å“ˆå“ˆ~
 	 * @param listPointZero
 	 * @return
 	 */
 	public static List<List<List<Double>>> createLineZero(List<List<Double>> lz) {
 		List<List<List<Double>>> l=new ArrayList<List<List<Double>>>();
 		List<List<Double>> line=null;
-		//°´ÕâÖÖÑ­»··½Ê½ºÃÏñÃ¿Á½¸öµã¶¼½öÇÒÖ»Åä¶ÔÁËÒ»´Î  ²»ÓÃ¿¼ÂÇÏßÖØ¸´µÄÎÊÌâ ÄÜ´îÉÏ¾ÍÊÇÒ»ÌõÏß
+		//æŒ‰è¿™ç§å¾ªç¯æ–¹å¼å¥½åƒæ¯ä¸¤ä¸ªç‚¹éƒ½ä»…ä¸”åªé…å¯¹äº†ä¸€æ¬¡  ä¸ç”¨è€ƒè™‘çº¿é‡å¤çš„é—®é¢˜ èƒ½æ­ä¸Šå°±æ˜¯ä¸€æ¡çº¿
 		for(int i=0;i<lz.size();i++){
 			for(int j=i;j<lz.size();j++){
 				if(compare(lz.get(i),lz.get(j))){
@@ -179,10 +179,10 @@ public class CUBEUtil {
 	}
 
 	/**
-	 * ¿´Á½¸öµãÊÇ·ñÊÇ¿Õ¼ä¶àÃæÌåµÄÒ»Ìõ±ß
-	 * ÀíÂÛ·½·¨:Á½¸öµãÖ»ÓĞÒ»¸öÎ¬¶È²»Í¬ÔòÊÇÒ»Ìõ±ß ·ñÔò²»ÊÇ
-	 * @param p1 ¶àÎ¬µã1
-	 * @param p2 ¶àÎ¬µã2
+	 * çœ‹ä¸¤ä¸ªç‚¹æ˜¯å¦æ˜¯ç©ºé—´å¤šé¢ä½“çš„ä¸€æ¡è¾¹
+	 * ç†è®ºæ–¹æ³•:ä¸¤ä¸ªç‚¹åªæœ‰ä¸€ä¸ªç»´åº¦ä¸åŒåˆ™æ˜¯ä¸€æ¡è¾¹ å¦åˆ™ä¸æ˜¯
+	 * @param p1 å¤šç»´ç‚¹1
+	 * @param p2 å¤šç»´ç‚¹2
 	 * @return
 	 */
 	private static boolean compare(List<Double> p1, List<Double> p2) {
@@ -196,10 +196,10 @@ public class CUBEUtil {
 	}
 
 	/**
-	 * ´´½¨Í¶Ó°Ïß¼¯ºÏ
-	 * Í¶Ó°ÏßºÍ¿Õ¼äÎ¬¶ÈÏßÊıÄ¿Ò»Ñù
-	 * @param listLineZero ¿Õ¼äÎ¬¶ÈÏßList
-	 * @return	¶şÎ¬Æ½ÃæÏßList
+	 * åˆ›å»ºæŠ•å½±çº¿é›†åˆ
+	 * æŠ•å½±çº¿å’Œç©ºé—´ç»´åº¦çº¿æ•°ç›®ä¸€æ ·
+	 * @param listLineZero ç©ºé—´ç»´åº¦çº¿List
+	 * @return	äºŒç»´å¹³é¢çº¿List
 	 */
 	public static List<Line> createLinePlain(List<List<List<Double>>> l0) {
 		List<Line> l=new ArrayList<Line>();
@@ -211,11 +211,11 @@ public class CUBEUtil {
 	}
 
 	/**
-	 * ½«Ò»ÌõÎ¬¶ÈÏß½µÎ¬³ÉÒ»Ìõ¶şÎ¬Æ½ÃæÏß
-	 * ÎªºÎÍ¶Ó°µÄµ¥´Ê»áÊÇtraceOnÄØ ºÇºÇ~
-	 * ÕıµÈ²âÏÔÊ¾
-	 * @param lineZero Ò»ÌõÎ¬¶ÈÏß
-	 * @return Ò»ÌõÍ¶Ó°Ïß
+	 * å°†ä¸€æ¡ç»´åº¦çº¿é™ç»´æˆä¸€æ¡äºŒç»´å¹³é¢çº¿
+	 * ä¸ºä½•æŠ•å½±çš„å•è¯ä¼šæ˜¯traceOnå‘¢ å‘µå‘µ~
+	 * æ­£ç­‰æµ‹æ˜¾ç¤º
+	 * @param lineZero ä¸€æ¡ç»´åº¦çº¿
+	 * @return ä¸€æ¡æŠ•å½±çº¿
 	 */
 	private static Line traceOn(List<List<Double>> lineZero) {
 		int size= lineZero.get(0).size();
@@ -230,15 +230,15 @@ public class CUBEUtil {
 	}
 
 	/**
-	 * ½«Ò»¸öÎ¬¶ÈµãÍ¶Ó° ·µ»ØÒ»¸ö¶şÎ¬µã~
+	 * å°†ä¸€ä¸ªç»´åº¦ç‚¹æŠ•å½± è¿”å›ä¸€ä¸ªäºŒç»´ç‚¹~
 	 * @param arr
 	 * @return
 	 */
 	private static Point traceOnPoint(Double[] arr) {
 		int len=arr.length;
 		double temp;
-		for(int i=len,j=0;i>2;i--,j++){//iÖ¸´ÎÊı  Î¬¶ÈÎªn Ö´ĞĞn-2´Î
-			//jÎªÊı×éÆğÊ¼Î»ÖÃ,×îÖÕÎªn-2µÄµØ·½
+		for(int i=len,j=0;i>2;i--,j++){//iæŒ‡æ¬¡æ•°  ç»´åº¦ä¸ºn æ‰§è¡Œn-2æ¬¡
+			//jä¸ºæ•°ç»„èµ·å§‹ä½ç½®,æœ€ç»ˆä¸ºn-2çš„åœ°æ–¹
 			//double temp=-arr[j]/Math.sqrt(i-1);
 			temp=-arr[j]/(i);
 			for(int k=j+1;k<len;k++){

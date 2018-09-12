@@ -22,7 +22,7 @@ public class StartDraw extends JPanel {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		cube=new Cube(350, 180, 6,Cube.ROTATE_TYPE3);
+		cube=new Cube(350, 180, 3,Cube.ROTATE_TYPE3);
 		
 		StartDraw sd=new StartDraw();
 		JFrame frame=new JFrame("超正方体~~");

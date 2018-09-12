@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Date;
 
 public class UtilNetWork {
 	
@@ -67,21 +68,24 @@ public class UtilNetWork {
 		}  
 		bos.close();  
 		return bos.toByteArray();  
+	}
+
+
+
+	/**
+	 * 下载文件默认到用户桌面的"download当前日期里"
+	 * @param url
+	 */
+	public static void normalDownLoad(String url) {
+		String name = url.substring(url.lastIndexOf("/")+1);
+		try {
+			String savePath = new StringBuilder(UtilNormal.getUserDeskTopPath()).append("/downLoad").append(UtilDate.fmtDate(new Date())).toString();
+			UtilNetWork.downLoadFromUrl(url, name, savePath);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}  
  
-	public static void main(String[] args) {
-		
-		int i =1;
-		while(true) {
-			try{
-				downLoadFromUrl("http://www.allhentai.pro/img/wall"+i+".jpg",
-						"wall"+i+".jpg","H:/2图片/5下载/bd/bg/");
-				i++;
-			}catch (Exception e) {
-				break;
-			}
-		}
-	}
 	
 
 }

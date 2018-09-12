@@ -6,6 +6,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.swing.filechooser.FileSystemView;
+
 public class UtilNormal {
 	/**
 	 * 
@@ -122,6 +124,14 @@ public class UtilNormal {
             lastLable = c;
         }
         return map;
+	}
+	private static String deskTop = UtilString.fmtPathStr(FileSystemView.getFileSystemView().getHomeDirectory().getPath());
+	/**
+	 * 获取用户桌面
+	 * @return
+	 */
+	public static String getUserDeskTopPath() {
+		return deskTop;
 	}
 	
 }

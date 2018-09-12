@@ -1,0 +1,8 @@
+<div class="col-md-3">
+	<div class="card shadow-sm">
+		<img class="card-img-top note-cover" alt="" src="" data-holder-rendered="true">
+	</div>
+	<div>
+		<a><p class="note-description-text"></p></a>
+	</div>
+</div>

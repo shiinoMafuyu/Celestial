@@ -92,8 +92,8 @@ public class DownloadPageImage {
 	}
 
 	public static void main(String args[]) {
-		String aimUrl = "http://www.66hyk.com/forum.php?mod=viewthread&tid=7065";
-//		String aimUrl = "";
+//		String aimUrl = "http://www.66hyk.com/forum.php?mod=viewthread&tid=7065";
+		String aimUrl = "http://www.tuyimm.vip/thread-366-1-1.html";
 		String str = GetUrl2(aimUrl);
 		List<String> ouput = GetMatcher(str, "src=\"([\\w\\s./:_-]+?\\.(jpg|gif))\"", aimUrl);
 

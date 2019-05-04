@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Celestial.iml" filepath="$PROJECT_DIR$/Celestial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EternalMeek/EternalMeek.iml" filepath="$PROJECT_DIR$/EternalMeek/EternalMeek.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ForestBlaze/ForestBlaze.iml" filepath="$PROJECT_DIR$/ForestBlaze/ForestBlaze.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SilverRiver/SilverRiver.iml" filepath="$PROJECT_DIR$/SilverRiver/SilverRiver.iml" />
+    </modules>
+  </component>
+</project>

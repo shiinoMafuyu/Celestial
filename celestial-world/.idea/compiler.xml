@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="EternalMeek" />
+        <module name="ForestBlaze" />
+        <module name="SilverRiver" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Celestial" target="1.8" />
+      <module name="EternalMeek" target="1.8" />
+      <module name="ForestBlaze" target="1.8" />
+      <module name="SilverRiver" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

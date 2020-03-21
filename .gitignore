@@ -49,3 +49,4 @@ Temporary Items
 # java's binary file and so on
 *.class
 /target/
+/.idea/

@@ -10,7 +10,7 @@
   <properties>
     <!-- springframe 版本控制 -->
     <spring.version>4.1.1.RELEASE</spring.version>
-    <jackson.version>2.7.3</jackson.version>
+    <jackson.version>2.10.3</jackson.version>
   </properties>
   
   <dependencies>
@@ -91,7 +91,7 @@
 	<dependency>
 		<groupId>com.fasterxml.jackson.core</groupId>
 		<artifactId>jackson-databind</artifactId>
-		<version>2.3.2</version>
+		<version>2.10.3</version>
 	</dependency>
     
     <!--  -->
